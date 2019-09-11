@@ -1,0 +1,827 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Unity developer integration - Unity Manual">
+<title>Unity developer integration - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/https://github.com/Applifier/unity-ads/wiki/unity/BuildTargets.png">
+<meta name="description" content="">
+<meta property="og:description" content="">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UnityAdsUnityIntegration';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityAdsUnityIntegration.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityAdsUnityIntegration.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityAdsUnityIntegration.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityAdsUnityIntegration.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityAdsUnityIntegration.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityAdsUnityIntegration.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityAdsUnityIntegration.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityAdsUnityIntegration.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityAdsUnityIntegration.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityAdsUnityIntegration.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UnityAdsUnityIntegration.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UnityAdsUnityIntegration.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UnityAdsUnityIntegration.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UnityAdsUnityIntegration.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityAdsUnityIntegration.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityAdsUnityIntegration.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityAdsUnityIntegration.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityAdsUnityIntegration.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityAdsUnityIntegration.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityAdsUnityIntegration.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityAdsUnityIntegration.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityAdsUnityIntegration.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityAdsUnityIntegration.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityAdsUnityIntegration.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="UnityAds.html">Unity Ads</a></li>
+<li>Unity developer integration</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAds.html"></a></span><div class="tip">Unity Ads</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalytics.html"></a></span><div class="tip">Unity Analytics</div>
+</div>
+</div></div>
+<h1>Unity developer integration</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><a name="overview"></a></p>
+
+<h2>概述</h2>
+
+<p>This guide covers integration for implementing Unity Ads in your made-with-Unity game.</p>
+
+<ul>
+<li>If you are an iOS developer using Objective-C, <a href="https://unityads.unity3d.com/help/ios/integration-guide-ios">click here</a>.</li>
+<li>If you are an Android developer using Java, <a href="https://unityads.unity3d.com/help/android/integration-guide-android">click here</a>.</li>
+</ul>
+
+<p>Unity’s monetization platform provides you with powerful revenue tools. If your game uses in-app purchases as well as ads, Unity’s machine learning data model can seamlessly blend content types for an optimized monetization strategy. To learn more about how Unity helps you optimize revenue, see documentation on <a href="https://unityads.unity3d.com/help/monetization/placements"><strong>Personalized Placements</strong></a>. </p>
+
+<p>In this guide:</p>
+
+<ul>
+<li>Basic ads implementation</li>
+<li><a href="#implementing-rewarded-ads">Rewarded ads implementation</a></li>
+<li><a href="#implementing-banner-ads">Banner ads implementation</a></li>
+<li><a href="#testing">Testing your implementation</a></li>
+<li><a href="#optimizing-your-revenue">Advanced monetization suggestions</a></li>
+<li><a href="#unity-api-reference">API reference</a></li>
+</ul>
+
+<p><a name="basic-implementation"></a></p>
+
+<h2>Basic implementation</h2>
+
+<p><a name="configuring-your-projects"></a></p>
+
+<h3>Configuring your Project</h3>
+
+<p><a name="Setting-build-targets"></a></p>
+
+<h4>Setting build targets</h4>
+
+<p>Configure your Project for a supported platform using the <a href="https://docs.unity3d.com/2018.1/Documentation/Manual/BuildSettings.html">Build Settings window</a>. Set the platform to <strong>iOS</strong> or <strong>Android</strong>, then click <strong>Switch Platform</strong>.</p>
+
+<figure>
+<img src="https://github.com/Applifier/unity-ads/wiki/unity/BuildTargets.png" alt="Setting build targets in the Unity Editor">
+<figcaption>Setting build targets in the Unity Editor</figcaption>
+</figure>
+
+<p><a name="installing-unity-ads"></a></p>
+
+<h4>Installing Unity Ads</h4>
+
+<p>To ensure the latest version of Unity Ads, <a href="https://assetstore.unity.com/packages/add-ons/services/unity-ads-66123">download</a> it from the Asset store. The Monetization API requires SDK 3.0 or later. For information on downloading and installing Asset packages, see <a href="https://docs.unity3d.com/2018.1/Documentation/Manual/AssetPackages.html">Asset packages documentation</a>.</p>
+
+<p><a name="creating-a-placement"></a></p>
+
+<h3>Creating a Placement</h3>
+
+<p><a href="https://unityads.unity3d.com/help/monetization/placements">Placements</a> are triggered events within your game that display monetization content. Manage Placements from the <strong>Operate</strong> tab of the <a href="https://operate.dashboard.unity3d.com/">Developer Dashboard</a> by selecting your Project, then selecting <strong>Monetization</strong> &gt; <strong>Placements</strong> from the left navigation bar.</p>
+
+<p>Click the <strong>ADD PLACEMENT</strong> button to bring up the Placement creation prompt. Name your Placement and select its type:</p>
+
+<ul>
+<li>Select <strong>Non-rewarded</strong> to show basic interstitial ads or promotional content. Non-rewarded Placements allow players to skip the ad after a specified period of time.</li>
+<li>Select <strong>Rewarded</strong> to allow players to opt-in to viewing ads in exchange for incentives. Rewarded Placements do not allow the player to skip the ad.</li>
+<li>Select <strong>Banner</strong> to create a dedicated Banner ad Placement.</li>
+</ul>
+
+<p>Every Unity Ads-enabled project has a (non-rewarded) ‘<code>video</code>’ and (rewarded) ‘<code>rewardedVideo</code>’ Placement by default. Feel free to use one of these for your first implementation if they suit your needs, or create your own.</p>
+
+<p><a name="initializing-the-sdk"></a></p>
+
+<h3>Initializing the SDK</h3>
+
+<p>To initialize the SDK, you must reference your Project’s Game ID for the appropriate platform. You can locate the ID on the <strong>Operate</strong> tab of the <a href="https://operate.dashboard.unity3d.com/">Developer Dashboard</a> by selecting the Project, then selecting <strong>Monetization</strong> &gt; <strong>Platforms</strong> from the left navigation bar. </p>
+
+<figure>
+<img src="https://github.com/Applifier/unity-ads/wiki/unity/GameID.png" alt="Locating your Game ID in the Developer Dashboard">
+<figcaption>Locating your Game ID in the Developer Dashboard</figcaption>
+</figure>
+
+<p>In your game script header, include the <a href="#monetization"><code>UnityEngine.Monetization</code></a> namespace. Initialize the SDK early in the game’s run-time life cycle, preferably at launch, using the <a href="#initialize"><code>Initialize</code></a> function. For example:</p>
+
+<pre><code>using UnityEngine.Monetization;
+
+public class UnityAdsScript : MonoBehaviour { 
+
+    string gameId = "1234567";
+    bool testMode = true;
+
+    void Start () {
+        Monetization.Initialize (gameId, testMode);
+    }
+}
+</code></pre>
+
+<h3>Implementing basic (non-rewarded) ads</h3>
+
+<p><a href="#placementcontent"><code>PlacementContent</code></a> is an object representing monetization content that your Placement can display (for more information, see documentation on <a href="https://unityads.unity3d.com/help/monetization/content-types">Content types</a> and <a href="https://unityads.unity3d.com/help/monetization/placements#personalized-placements">Personalized Placements</a>). Use the <a href="#getplacementcontent"><code>GetPlacementContent</code></a> function to retrieve content when it’s ready to display, and the <a href="#show"><code>Show</code></a> function to display it. For example:</p>
+
+<pre><code>using UnityEngine.Monetization;
+
+public class UnityAdsPlacement : MonoBehaviour {
+
+    public string placementId = "video";
+
+    public void ShowAd () {
+        StartCoroutine (ShowAdWhenReady ());
+    }
+
+    private IEnumerator ShowAdWhenReady () {
+        while (!Monetization.IsReady (placementId)) {
+            yield return new WaitForSeconds(0.25f);
+        }
+
+        ShowAdPlacementContent ad = null;
+        ad = Monetization.GetPlacementContent (placementId) as ShowAdPlacementContent;
+
+        if(ad != null) {
+            ad.Show ();
+        }
+    }
+}
+</code></pre>
+
+<p>In this example, the coroutine checks the passed Placement ID for available <code>PlacementContent</code> using the <a href="#isready"><code>IsReady</code></a> function. If content is available, it’s stored as a variable and executed with the Show function.
+<a name="implementing-rewarded-ads"></a></p>
+
+<h3>Implementing rewarded ads</h3>
+
+<p>Rewarding players for watching ads increases user engagement, resulting in higher revenue. For example, games may reward players with in-game currency, consumables, additional lives, or experience-multipliers. For more information on how to effectively design your rewarded ads, see documentation on <a href="https://unityads.unity3d.com/help/resources/best-practices">Ads best practices</a>.</p>
+
+<p>To reward players for watching ads, follow the same steps as detailed in the basic implementation section, but show the ad using a reward callback method with custom logic for players completing the ad.</p>
+
+<p><a name="selecting-a-placement"></a></p>
+
+<h4>Selecting a Placement</h4>
+
+<p>You must display rewarded ads through <a href="https://unityads.unity3d.com/help/monetization/placements#placement-types">Rewarded Placements</a>. Every Unity Ads-enabled Project also has a ‘<code>rewardedVideo</code>’ Placement by default. Feel free to use this for your implementation, or <a href="https://unityads.unity3d.com/help/monetization/placements#creating-new-placements">create your own</a> (but make sure your Placement is configured as Rewarded).</p>
+
+<p><a name="adding-a-callback-method-to-your-script"></a></p>
+
+<h4>Adding a callback method to your script</h4>
+
+<p>The <code>Show</code> function accepts a callback that the SDK uses to return a <a href="#showadcallbacks"><code>ShowResult</code></a> enum. This result indicates whether the player finished or skipped the ad. Use this information to write a custom function for how to handle each scenario. For example: </p>
+
+<pre><code>using UnityEngine.Monetization;
+
+public class RewardedAdsPlacement : MonoBehaviour {
+
+    public string placementId = "rewardedVideo";
+
+    public void ShowAd () {
+        StartCoroutine (WaitForAd ());
+    }
+
+    IEnumerator WaitForAd () {
+        while (!Monetization.IsReady (placementId)) {
+            yield return null;
+        }
+
+        ShowAdPlacementContent ad = null;
+        ad = Monetization.GetPlacementContent (placementId) as ShowAdPlacementContent;
+
+        if (ad != null) {
+            ad.Show (AdFinished);
+        }
+    }
+
+    void AdFinished (ShowResult result) {
+        if (result == ShowResult.Finished) {
+            // Reward the player
+        }
+    }
+}
+</code></pre>
+
+<p><a name="rewarded-ads-button-code-example"></a></p>
+
+<h4>Rewarded ads button code example</h4>
+
+<p>Rewarded ads usually use a button that prompts players to opt in to watching the ad. The following describes how to create a rewarded ads button that displays an ad when pressed, as long as content is available.</p>
+
+<ol>
+<li>In the Unity Editor, select <strong>Game Object</strong> &gt; <strong>UI</strong> &gt; <strong>Button</strong> to add a Button to your Scene.</li>
+<li>With the Button selected, in the Inspector, click <strong>Add Component</strong> &gt; <strong>New Script</strong> to add a script component to it. Name the script <em>UnityAdsButton</em> to match the class name.</li>
+<li>Open the script and add the following example code:</li>
+</ol>
+
+<pre><code>using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Monetization;
+
+[RequireComponent (typeof (Button))]
+public class UnityAdsButton : MonoBehaviour {
+
+    public string placementId = "rewardedVideo";
+    private Button adButton;
+
+#if UNITY_IOS
+   private string gameId = "1234567";
+#elif UNITY_ANDROID
+    private string gameId = "7654321";
+#endif
+
+    void Start () {
+        adButton = GetComponent&lt;Button&gt; ();
+        if (adButton) {
+            adButton.onClick.AddListener (ShowAd);
+        }
+
+        if (Monetization.isSupported) {
+            Monetization.Initialize (gameId, true);
+        }
+    }
+  
+    void Update () {
+        if (adButton) {
+            adButton.interactable = Monetization.IsReady (placementId);
+        }
+    }
+
+    void ShowAd () {
+        ShowAdCallbacks options = new ShowAdCallbacks ();
+        options.finishCallback = HandleShowResult;
+        ShowAdPlacementContent ad = Monetization.GetPlacementContent (placementId) as ShowAdPlacementContent;
+        ad.Show (options);
+    }
+
+    void HandleShowResult (ShowResult result) {
+        if (result == ShowResult.Finished) {
+            // Reward the player
+        } else if (result == ShowResult.Skipped) {
+            Debug.LogWarning ("The player skipped the video - DO NOT REWARD!");
+        } else if (result == ShowResult.Failed) {
+            Debug.LogError ("Video failed to show");
+        }
+    }
+}
+</code></pre>
+
+<p><strong>Note</strong>: This example checks at a specific point in the game whether PlacementContent is ready to display. As an alternate method, you can implement a listener to notify you when content is available.</p>
+
+<p><a name="implementing-banner-ads"></a></p>
+
+<h3>Implementing Banner ads</h3>
+
+<p><a name="placement-configuration"></a></p>
+
+<h4>Placement configuration</h4>
+
+<p>Banner ads require a specific type of dedicated banner Placement. Banners currently display anchored on the bottom-center of the screen. </p>
+
+<figure>
+<img src="https://github.com/Applifier/unity-ads/wiki/unity/BannerExample.png" alt="Example of a banner ad in-game">
+<figcaption>Example of a banner ad in-game</figcaption>
+</figure>
+
+<p><a name="script-implementation"></a></p>
+
+<h4>Script implementation</h4>
+
+<p>In your Placement script header, declare the <a href="https://docs.unity3d.com/2018.1/Documentation/ScriptReference/Advertisements.Advertisement.html"><code>UnityEngine.Advertisement</code></a> namespace, which contains the <a href="#banner"><code>Banner</code></a> class. Next, initialize the SDK and use <code>Advertisement.Banner.Show ()</code> to display a banner ad. For example:</p>
+
+<pre><code>using System.Collections;
+using UnityEngine;
+using UnityEngine.Advertisements;
+
+public class BannerAds : MonoBehaviour {
+
+    public string bannerPlacement = "banner";
+    public bool testMode = false;
+
+#if UNITY_IOS
+    public const string gameID = "1234567";
+#elif UNITY_ANDROID
+    public const string gameID = "1234568";
+#elif UNITY_EDITOR
+    public const string gameID = "1111111";
+#endif
+
+    void Start () {
+        Advertisement.Initialize (gameID, testMode);
+        StartCoroutine (ShowBannerWhenReady ());
+    }
+
+    IEnumerator ShowBannerWhenReady () {
+        while (!Advertisement.IsReady ("banner")) {
+            yield return new WaitForSeconds (0.5f);
+        }
+        Advertisement.Banner.Show (bannerPlacement);
+    }
+}
+</code></pre>
+
+<p><a name="testing"></a></p>
+
+<h2>Testing</h2>
+
+<p>Prior to publishing your game, enable test mode by following these steps: </p>
+
+<ol>
+<li>From the <strong>Operate</strong> tab of the <a href="https://operate.dashboard.unity3d.com/">Developer Dashboard</a>, select your Project.</li>
+<li>Select <strong>Monetization</strong> &gt; <strong>Platforms</strong> from the left navigation bar.</li>
+<li>Select the desired platform, then select the <strong>SETTINGS</strong> tab.</li>
+<li>Scroll down to the <strong>TEST MODE</strong> section and toggle override client test mode, then select the <strong>Force test mode ON</strong> radio button.</li>
+</ol>
+
+<p>In the Unity Editor, click the play button to run your Project and test your ads implementation.</p>
+
+<p><strong>Note</strong>: You must enable test mode before testing ads integration, to avoid getting flagged for fraud.</p>
+
+<p><a name="optimizing-your-revenue"></a></p>
+
+<h2>Optimizing your revenue</h2>
+
+<p>Congratulations on implementing Unity Ads! Our goal is to make it easy for you to maximize your revenue. With that in mind, consider these next steps:</p>
+
+<ul>
+<li>Does your game use in-app purchasing (IAP)?
+
+<ul>
+<li>If yes, implement <a href="https://docs.unity3d.com/2018.1/Documentation/Manual/IAPPromo.html">IAP Promo</a> to promote your in-app offers.</li>
+<li>If no, create an in-app store with <a href="https://docs.unity3d.com/2018.1/Documentation/Manual/UnityIAP.html">Unity IAP</a>.</li>
+</ul>
+</li>
+<li>When you have Ads and IAP Promo set up, use <a href="https://unityads.unity3d.com/help/monetization/placements#personalized-placements">Personalized Placements</a> to turbocharge your ads and IAP strategy and provide revenue lift for your entire game.</li>
+<li>Review our <a href="https://unityads.unity3d.com/help/resources/best-practices">Best practices</a> guide for insight on how to design effective ad mechanics.</li>
+</ul>
+
+<p><a href="#overview">Back to top</a></p>
+
+<p><a name="unity-api-reference"></a></p>
+
+<h2>Unity API reference</h2>
+
+<p><a name="monetization"></a></p>
+
+<h3><code>Monetization</code></h3>
+
+<p><a name="initialize"></a></p>
+
+<h4><code>Initialize</code></h4>
+
+<p>Initializes the SDK for your Project.</p>
+
+<pre><code>public static void Initialize (string gameID, bool testMode)
+</code></pre>
+
+<p>The <code>gameId</code> parameter is the Project’s Game ID, which you can <a href="#initializing-the-sdk">find on the Developer Dashboard</a>. The <code>testMode</code> parameter indicates whether the game is in test mode. When <code>testMode</code> is <code>true</code>, you will only see test ads. When <code>testMode</code> is <code>false</code>, you will see live ads. It is important to use test mode prior to launching your game, to avoid being flagged for fraud.</p>
+
+<p><a name="isready"></a></p>
+
+<h4><code>IsReady</code></h4>
+
+<p>Checks if <code>PlacementContent</code> is ready for the given Placement. </p>
+
+<pre><code>public static boolean IsReady (string placementId);
+</code></pre>
+
+<p>The <code>placementId</code> parameter is the <a href="https://unityads.unity3d.com/help/monetization/placements#creating-new-placements">Placement ID as configured in the Developer Dashboard</a>. The function returns <code>true</code> if the <code>PlacementContent</code> is ready, or <code>false</code> if it isn’t.</p>
+
+<p><a name="getplacementcontent"></a></p>
+
+<h4><code>GetPlacementContent</code></h4>
+
+<p>Returns the <code>PlacementContent</code> object for the given Placement.</p>
+
+<pre><code>public static PlacementContent GetPlacementContent (string placementId);
+</code></pre>
+
+<p>The <code>placementId</code> parameter is the <a href="https://unityads.unity3d.com/help/monetization/placements#creating-new-placements">Placement ID as configured in the Developer Dashboard</a>. The function returns a <code>PlacementContent</code> object if one is available, or null if it isn’t.</p>
+
+<p><strong>Note</strong>: When setting the <code>PlacementContent</code> as a variable, you must cast it as the correct type (<a href="#showadplacementcontent"><code>ShowAdPlacementContent</code></a> or <a href="#promoadplacementcontent"><code>PromoAdPlacementContent</code></a>). For more information, see documentation on <a href="https://unityads.unity3d.com/help/monetization/content-types">content types</a>.</p>
+
+<p><a name="imonetizationlistener"></a></p>
+
+<h3><code>IMonetizationListener</code></h3>
+
+<p>An interface that you implements and pass to the SDK.</p>
+
+<pre><code>public interface IMonetizationListener {   
+    void OnPlacementContentReady (string placementId, PlacementContent placementContent);   
+    void OnPlacementContentStateChange (string placementId, PlacementContent placementContent, Monetization.PlacementContentState previousState, Monetization.PlacementContentState newState);
+}
+</code></pre>
+
+<p><a name="onplacementcontentready"></a></p>
+
+<h4><code>OnPlacementContentReady</code></h4>
+
+<p>Takes a Placement ID and <code>PlacementContent</code> object, and dictates how the SDK handles content that is ready to show.</p>
+
+<p><a name="onplacementcontentstatechange"></a></p>
+
+<h4><code>OnPlacementContentStateChange</code></h4>
+
+<p>Dictates how the SDK handles a state change in the passed <code>PlacementContent</code>. </p>
+
+<p><a name="setlistener"></a></p>
+
+<h4><code>SetListener</code></h4>
+
+<p>Sets the listener for <code>PlacementContent</code> events. The listener parameter is the listener for event callbacks.</p>
+
+<pre><code>public static void SetListener (IMonetizationListener listener);
+</code></pre>
+
+<p><a name="getlistener"></a></p>
+
+<h4><code>GetListener</code></h4>
+
+<p>Returns the current Monetization listener. The listener object is the listener for event callbacks.</p>
+
+<pre><code>public static IMonetizationListener GetListener ();
+</code></pre>
+
+<p><a name="placementcontent"></a></p>
+
+<h3><code>PlacementContent</code></h3>
+
+<p>An object representing monetization content that your Placement can display. </p>
+
+<p><a name="rewardableplacementcontent"></a></p>
+
+<h4><code>RewardablePlacementContent</code></h4>
+
+<p>Extends the <code>PlacementContent</code> class, providing extensions for rewardable content.</p>
+
+<p><a name="showadplacementcontent"></a></p>
+
+<h4><code>ShowAdPlacementContent</code></h4>
+
+<p>Extends the <code>RewardablePlacementContent</code> class, providing functionality for video ad content.</p>
+
+<p><a name="show"></a></p>
+
+<h4><code>Show</code></h4>
+
+<p>When <code>PlacementContent</code> is cast as <code>ShowAdPlacementContent</code>, display it using the <code>Show</code> function. You may pass a <a href="#showadcallbacks">callback method</a> indicating whether the ad was finished, skipped, or failed to display, in order to handle in-game rewards.</p>
+
+<pre><code>public void Show (ShowAdCallbacks showAdCallbacks)
+
+public void Show (ShowAdFinishCallback finishCallback)
+</code></pre>
+
+<p>For rewarded <code>PlacementContent</code>, use listeners to check if the content completes and handle the desired behavior.</p>
+
+<p><a name="showadcallbacks"></a></p>
+
+<h4><code>ShowAdCallbacks</code></h4>
+
+<p>A <code>ShowResult</code> enum is passed to <code>[[ShowOptions.resultCallback]]</code> after the ad runs.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">值</th>
+	<th style="text-align:left;">描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>Finished</code></td>
+	<td style="text-align:left;">Indicates that the player watched the ad to completion.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>Skipped</code></td>
+	<td style="text-align:left;">Indicates that the player did not allow the ad to complete.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>Failed</code></td>
+	<td style="text-align:left;">Indicates that the ad failed to display.</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code>public delegate void ShowAdFinishCallback (ShowResult finishState);
+
+public delegate void ShowAdStartCallback ();
+
+public struct ShowAdCallbacks {
+    public ShowAdFinishCallback finishCallback;
+    public ShowAdStartCallback startCallback;
+}
+</code></pre>
+
+<p><a name="promoadplacementcontent"></a></p>
+
+<h4><code>PromoAdPlacementContent</code></h4>
+
+<p>Extends the <code>ShowAdPlacementContent</code> class, providing functionality for <a href="https://docs.unity3d.com/2018.1/Documentation/Manual/IAPPromo.html">IAP Promo</a> content. For more information, see documentation on <a href="https://unityads.unity3d.com/help/beta/native-promo"><strong>Native Promo</strong></a>.</p>
+
+<p><a name="banner"></a></p>
+
+<h3><code>Banner</code></h3>
+
+<p><a name="load"></a></p>
+
+<h4><code>Load</code></h4>
+
+<p>The basic method for loading banner ad content. You can adjust this function with several parameters, depending on your needs.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">方法</th>
+	<th style="text-align:left;">描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>public static void Load ()</code></td>
+	<td style="text-align:left;">Loads the banner ad with the default Placement ID and no callbacks.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>public static void Load (BannerLoadOptions options)</code></td>
+	<td style="text-align:left;">Loads the banner ad with the default Placement ID, but fires the <a href="#bannerloadoptions"><code>loadCallback</code></a> callback on successful load, and the <a href="#bannerloadoptions"><code>errorCallback</code></a> callback on failure to load.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>public static void Load (string placementID)</code></td>
+	<td style="text-align:left;">Loads the banner ad with a specific Placement ID, with no callbacks.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>public static void Load (string placementID, BannerLoadOptions options)</code></td>
+	<td style="text-align:left;">Loads the banner ad with a specific Placement ID, but fires the <a href="#bannerloadoptions"><code>loadCallback</code></a> callback on successful load, and the <a href="#bannerloadoptions"><code>errorCallback</code></a> callback on failure to load.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>public static bool isLoaded ()</code></td>
+	<td style="text-align:left;">Checks to see if the content successfully loaded and is ready to display.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="bannerloadoptions"></a></p>
+
+<h5><code>BannerLoadOptions</code></h5>
+
+<p>Pass these options back to the SDK to notify it of events when loading the banner.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Callback</th>
+	<th style="text-align:left;">描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>public LoadCallback loadCallback { get; set; }</code></td>
+	<td style="text-align:left;">Fires when the banner ad is loaded and available to show.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>public ErrorCallback errorCallback { get; set; }</code></td>
+	<td style="text-align:left;">This callback fires when an error occurs during the banner ad loading process. If this callback is invoked, assume the banner did not load. You may attempt to call Load again at a later time.</td>
+</tr>
+</tbody>
+</table>
+
+<h4><code>Show</code></h4>
+
+<p>The basic method for displaying Banner ad content. You can adjust this function with several parameters, depending on your needs.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">方法</th>
+	<th style="text-align:left;">描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>public static void Show ()</code></td>
+	<td style="text-align:left;">Shows the banner ad with the default Placement ID and no callbacks.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>public static void Show (BannerOptions options)</code></td>
+	<td style="text-align:left;">Shows the banner ad with the default Placement ID, but fires the <a href="#banneroptions"><code>showCallback</code></a> callback when the content is visible, and the [<code>hideCallback</code>]((#banneroptions) callback when the content is hidden.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>public static void Show (string placementID)</code></td>
+	<td style="text-align:left;">Shows the banner ad with a specific Placement ID, with no callbacks.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>public static void Show (string placementID, BannerLoadOptions options)</code></td>
+	<td style="text-align:left;">Shows the banner ad with a specific Placement ID, but fires the <a href="#banneroptions"><code>showCallback</code></a> callback when the content is visible, and the [<code>hideCallback</code>]((#banneroptions) callback when the content is hidden.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="banneroptions"></a></p>
+
+<h5><code>BannerOptions</code></h5>
+
+<p>Pass these options back to the SDK to notify it of events within the banner.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Callback</th>
+	<th style="text-align:left;">描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>public BannerCallback showCallback { get; set; }</code></td>
+	<td style="text-align:left;">This callback fires when the banner ad is visible to the player.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>public BannerCallback hideCallback { get; set; }</code></td>
+	<td style="text-align:left;">This callback fires when the banner ad is hidden from the player.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="hide"></a></p>
+
+<h4><code>Hide</code></h4>
+
+<p>This function allows you to hide a banner ad, instead of destroying it altogether.</p>
+
+<pre><code>public static void Hide (bool destroy = false);
+</code></pre>
+
+<p><a href="#overview">Back to top</a></p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–11–13 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAds.html"></a></span><div class="tip">Unity Ads</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalytics.html"></a></span><div class="tip">Unity Analytics</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

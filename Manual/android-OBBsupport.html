@@ -1,0 +1,222 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="对 APK 扩展文件 (OBB) 的支持 - Unity Manual">
+<title>对 APK 扩展文件 (OBB) 的支持 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/android-OBB-0.png">
+<meta name="description" content="APK 扩展文件用作应对 Google Play 应用商店 100MB 应用大小限制的解决方案。如果应用程序大于 100MB（很可能是大型游戏），必须将输出包拆分为主要部分 (APK) 和扩展文件 (OBB)。请参阅 Android 开发者文档的扩展文件部分以了解更多信息。">
+<meta property="og:description" content="APK 扩展文件用作应对 Google Play 应用商店 100MB 应用大小限制的解决方案。如果应用程序大于 100MB（很可能是大型游戏），必须将输出包拆分为主要部分 (APK) 和扩展文件 (OBB)。请参阅 Android 开发者文档的扩展文件部分以了解更多信息。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'android-OBBsupport';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/android-OBBsupport.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/android-OBBsupport.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/android-OBBsupport.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/android-OBBsupport.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/android-OBBsupport.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/android-OBBsupport.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/android-OBBsupport.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/android-OBBsupport.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/android-OBBsupport.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/android-OBBsupport.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/android-OBBsupport.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/android-OBBsupport.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/android-OBBsupport.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/android-OBBsupport.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/android-OBBsupport.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/android-OBBsupport.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/android-OBBsupport.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/android-OBBsupport.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/android-OBBsupport.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/android-OBBsupport.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/android-OBBsupport.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/android-OBBsupport.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/android-OBBsupport.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/android-OBBsupport.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
+<li><a href="android.html">Android</a></li>
+<li><a href="android-GettingStarted.html">Android 开发入门</a></li>
+<li>对 APK 扩展文件 (OBB) 的支持</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="android-bugreporting.html"></a></span><div class="tip">报告 Android 下的崩溃错误</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="android-API.html"></a></span><div class="tip">Android 脚本</div>
+</div>
+</div></div>
+<h1>对 APK 扩展文件 (OBB) 的支持</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>APK 扩展文件用作应对 Google Play 应用商店 100MB 应用大小限制的解决方案。如果应用程序大于 100MB（很可能是大型游戏），必须将输出包拆分为主要部分 (APK) 和扩展文件 (OBB)。请参阅 Android 开发者文档的<a href="https://developer.android.com/google/play/expansion-files.html">扩展文件</a>部分以了解更多信息。</p>
+
+<p>Unity 会自动将输出包拆分为 APK 和 OBB。这不是拆分应用程序包的唯一方法（其他选项包括第三方插件和 <a href="https://docs.unity3d.com/Manual/AssetBundlesIntro.html">AssetBundle</a>），但却是 Unity 官方支持的唯一自动拆分机制。</p>
+
+<h2>构建带扩展文件的应用程序</h2>
+
+<p>If you want Unity to split the app output package into APK and OBB for you, open the <strong>Player</strong> settings (menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Player</strong> category), and in the <strong>Publishing Settings</strong> panel, enable the <strong>Split Application Binary</strong> property.</p>
+
+<figure>
+<img src="../uploads/Main/android-OBB-0.png" alt="The Publishing Settings panel of the Player settings, with the Split Application Binary checkbox highlighted">
+<figcaption>The Publishing Settings panel of the Player settings, with the Split Application Binary checkbox highlighted</figcaption>
+</figure>
+
+<p>输出包的两个部分（APK 和 OBB）都将复制到构建应用程序时指定的输出目录。例如，如果 APK 的名称为 <em>mygame.apk_，则 OBB 位于同一目录中且命名为 </em>mygame.main.obb_。</p>
+
+<p>如果选择 <strong>Build and Run__，则 Unity 会在设备上安装 APK 和 OBB 文件。如果选择 </strong>Build__ 并希望使用 ADB 实用程序手动安装应用程序，必须先安装 APK，然后将 OBB 复制到设备上的正确位置。OBB 文件名必须符合 Google 要求的格式。请参阅 Android 开发者文档的<a href="https://developer.android.com/google/play/expansion-files.html">扩展文件</a>部分以了解更多信息。</p>
+
+<p>如果应用程序启动时无法找到和加载 OBB，则只有第一个场景可用（有关更多信息，请参阅以下有关如何在 APK 和 OBB 之间拆分数据的文档）。不要单独使用 OBB 的内容，始终应将 APK 和 OBB 视为唯一的捆绑包，与处理单个 APK 的方式相同。</p>
+
+<h2>如何在 APK 和 OBB 之间拆分数据</h2>
+
+<p>启用 <strong>Split Application Binary</strong> 选项后，将按以下方式拆分应用程序：</p>
+
+<ul>
+<li><p><strong>APK</strong> - 由可执行文件（Java 和本机文件）、插件、脚本以及第一个场景（索引为 0）的数据组成。</p></li>
+<li><p><strong>OBB</strong> - 包含其他所有内容，包括所有剩余的场景、资源和流媒体资源。</p></li>
+</ul>
+
+<p>如果 APK 仍然太大而无法在 Google Play 应用商店中发布（超过 100MB），请尝试缩小第一个场景的大小，使其尽可能小。</p>
+
+<h2>下载 OBB 扩展文件</h2>
+
+<p><a href="https://www.assetstore.unity3d.com/en/#!/content/3189">Unity Asset Store 提供了一个插件</a>，让您访问适用于 Unity 的 Google Play <code>market_downloader</code> 库的改编版本，使用该库可从 Google Play 应用商店或外部来源下载 OBB，然后将其移动到正确的目录。</p>
+
+<h2>在 Google Play 应用商店上托管 OBB 文件</h2>
+
+<p>OBB 扩展文件应与 APK 一起发布到 Google Play 应用商店。当用户从 Google Play 应用商店中安装应用程序时，将自动下载随 APK 一起发布的所有 OBB 文件。</p>
+
+<p>您应该在应用程序中提供代码用于在 Google Play 应用商店出错的情况下或用户从其设备中删除 OBB 文件的情况下能够下载缺失的 OBB 文件。有关下载 OBB 文件的更多信息，请参阅 Android 开发者文档的 <a href="https://developer.android.com/google/play/expansion-files.html#DownloadProcess">APK 扩展文件 (APK Expansion file)</a> 部分。</p>
+
+<h2>不使用 Google Play 应用商店托管 OBB 文件</h2>
+
+<p>如果您不想使用 Google Play 应用商店，也可以自己托管 OBB 文件。但是，仅建议高级用户不使用 Google Play 应用商店来托管 OBB 文件。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–05–25 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">5.5 版中的更新功能</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="android-bugreporting.html"></a></span><div class="tip">报告 Android 下的崩溃错误</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="android-API.html"></a></span><div class="tip">Android 脚本</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

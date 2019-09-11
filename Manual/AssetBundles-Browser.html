@@ -1,0 +1,332 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Unity Asset Bundle Browser 工具 - Unity Manual">
+<title>Unity Asset Bundle Browser 工具 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/AssetBundles-Browser-0.png">
+<meta name="description" content="注意：此工具是 Unity 标准功能之外的额外功能。要访问此工具，必须从 GitHub 下载并安装，该过程独立于标准 Unity Editor 的下载和安装。">
+<meta property="og:description" content="注意：此工具是 Unity 标准功能之外的额外功能。要访问此工具，必须从 GitHub 下载并安装，该过程独立于标准 Unity Editor 的下载和安装。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'AssetBundles-Browser';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AssetBundles-Browser.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AssetBundles-Browser.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AssetBundles-Browser.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AssetBundles-Browser.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AssetBundles-Browser.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AssetBundles-Browser.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AssetBundles-Browser.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AssetBundles-Browser.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AssetBundles-Browser.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AssetBundles-Browser.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/AssetBundles-Browser.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/AssetBundles-Browser.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/AssetBundles-Browser.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/AssetBundles-Browser.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AssetBundles-Browser.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AssetBundles-Browser.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AssetBundles-Browser.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AssetBundles-Browser.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AssetBundles-Browser.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AssetBundles-Browser.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AssetBundles-Browser.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AssetBundles-Browser.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AssetBundles-Browser.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AssetBundles-Browser.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="AdvancedDevelopment.html">高级开发</a></li>
+<li><a href="AssetBundlesIntro.html">AssetBundle</a></li>
+<li>Unity Asset Bundle Browser 工具</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetBundles-Troubleshooting.html"></a></span><div class="tip">故障排除</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ReducingFilesize.html"></a></span><div class="tip">减小构建的文件大小</div>
+</div>
+</div></div>
+<h1>Unity Asset Bundle Browser 工具</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><strong>注意</strong>：此工具是 Unity 标准功能之外的额外功能。要访问此工具，必须从 <a href="https://github.com/Unity-Technologies/AssetBundles-Browser">GitHub</a> 下载并安装，该过程独立于标准 Unity Editor 的下载和安装。</p>
+
+<p>此工具使用户能够查看和编辑 Unity 项目的资源包的配置。它将阻止会创建无效捆绑包的编辑，并告知现有捆绑包的任何问题。此外还会提供基本的构建功能。</p>
+
+<p>通过使用此工具，无需选择资源并在 Inspector 中手动设置资源包。它可以放入 5.6 或更高版本的任何 Unity 项目中。此工具将在 <strong>Window</strong> &gt; <strong>AssetBundle Browser</strong> 中创建一个新菜单项。捆绑包的配置和构建功能在新窗口中拆分为两个选项卡。</p>
+
+<figure>
+<img src="../uploads/Main/AssetBundles-Browser-0.png" alt="">
+</figure>
+
+<h3>需要 Unity 5.6+</h3>
+
+<h1>用法 - 配置 (Configure)</h1>
+
+<p>注意：此实用程序处于预发布状态，因此我们建议在使用之前创建项目的备份。</p>
+
+<p>This window provides an explorer like interface to manage and modify asset bundles in your project. When first opened, the tool will parse all bundle data in the background, slowly marking warnings or errors it detects. It does what it can to stay in sync with the project, but cannot always be aware of activity outside the tool. To force a quick pass at error detection, or to update the tool with changes made externally, hit the Refresh button in the upper left.</p>
+
+<p>The window is broken into four sections: Bundle List, Bundle Details, Asset List, and Asset Details. <img src="../uploads/Main/AssetBundles-Browser-1.jpg" alt=""></p>
+
+<h3>捆绑包列表</h3>
+
+<p>左侧面板显示项目中所有捆绑包的列表。可用功能：</p>
+
+<ul>
+<li><p>选择一个或一组捆绑包在资源列表面板中查看捆绑包中的资源列表。</p></li>
+<li><p>带变体的捆绑包为深灰色，可以展开来显示变体列表。</p></li>
+<li><p>右键单击或慢速双击可重命名捆绑包或捆绑包文件夹。</p></li>
+<li><p>如果捆绑包有任何错误、警告或信息消息，则右侧会出现一个图标。将鼠标悬停在图标上可获取更多信息。</p></li>
+<li><p>如果一个捆绑包中至少有一个场景（使其成为一个场景捆绑包）和显式包含的非场景资源，它将被标记为有错误。在修复之前不会构建此捆绑包。</p></li>
+<li><p>具有重复资源的捆绑包将标有警告（下面“资源列表”部分中提供关于重复的更多信息）</p></li>
+<li><p>空捆绑包将标有信息消息。由于多种原因，空捆绑包不是很稳定，有时可能会从此列表中消失。</p></li>
+<li><p>捆绑包的文件夹将使用包含的捆绑包中的最高消息进行标记。</p></li>
+<li>
+<p>要解决捆绑包中包含的重复资源，可以采取以下操作：</p>
+
+<ul>
+<li><p>右键单击单个捆绑包可将确定为重复的所有资源移动到新捆绑包中。</p></li>
+<li><p>右键单击多个捆绑包，将资源从所有选定的重复捆绑包移动到新捆绑包中，或仅移动到选定项中共享的捆绑包。</p></li>
+<li><p>还可以将重复资源从资源列表面板拖到捆绑包列表中，从而将它们显式包含在捆绑包中。如需了解与此相关的更多信息，请参阅下面的资源列表功能集。</p></li>
+</ul>
+</li>
+<li><p>右键单击或按 DEL 键可删除捆绑包。</p></li>
+<li><p>拖动捆绑包可将它们移入和移出文件夹，或合并它们。</p></li>
+<li><p>将资源从 Project Explorer 拖到捆绑包中可添加资源。</p></li>
+<li><p>将资源拖到空白区域可创建新捆绑包。</p></li>
+<li><p>右键单击可创建新捆绑包或捆绑包文件夹。</p></li>
+<li>
+<p>右键单击“Convert to Variant”可转换为变体</p>
+
+<ul>
+<li><p>这将为所选捆绑包添加一个变体（最初称为“newvariant”）。</p></li>
+<li><p>当前处于选定捆绑包中的所有资源都将移至新变体中</p></li>
+<li><p>即将发布：检测变体之间的不匹配。</p></li>
+</ul>
+</li>
+</ul>
+
+<p>图标表示捆绑包是标准捆绑包还是场景捆绑包。</p>
+
+<figure>
+<img src="../uploads/Main/AssetBundles-Browser-2.png" alt="表示标准捆绑包的图标">
+<figcaption>表示标准捆绑包的图标</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/AssetBundles-Browser-3.png" alt="表示场景捆绑包的图标">
+<figcaption>表示场景捆绑包的图标</figcaption>
+</figure>
+
+<h3>捆绑包详细信息</h3>
+
+<p>左下方面板显示捆绑包列表面板中的选定捆绑包的详细信息。此面板将显示以下信息（如果有）：</p>
+
+<ul>
+<li><p>捆绑包总大小。这是所有资源占用的磁盘大小总和。</p></li>
+<li><p>当前捆绑包依赖的捆绑包</p></li>
+<li><p>与当前捆绑包关联的任何消息（错误/警告/信息）。</p></li>
+</ul>
+
+<h3>资源列表</h3>
+
+<p>右上方面板提供捆绑包列表中选择的任何捆绑包中包含的资源列表。可用功能：</p>
+
+<ul>
+<li><p>查看预计包含在捆绑包中的所有资源。按任何列标题对资源列表排序。</p></li>
+<li><p>查看显式包含在捆绑包中的资源。这些是已显式分配给捆绑包的资源。Inspector 将反映包含的捆绑包，在此视图中，它们将在资源名称旁边显示捆绑包名称。</p></li>
+<li>
+<p>查看隐式包含在捆绑包中的资源。这些资源将对资源名称旁边的捆绑包的名称显示 <em>auto</em>。如果在 Inspector 中查看这些资源，它们将对分配的捆绑包显示 <em>None</em>。</p>
+
+<ul>
+<li><p>由于对另一个包含资源的依赖关系，这些资源已经添加到所选捆绑包。只有未显式分配给捆绑包的资源才会隐式包含在捆绑包中。</p></li>
+<li><p>请注意，此隐式包含列表可能不完整。材质和纹理存在并非始终正确显示的已知问题。</p></li>
+<li><p>由于多个资源可以共享依赖关系，因此将给定资源隐式包含在多个捆绑包中是很常见的。如果该工具检测到这种情况，将使用警告图标来标记捆绑包和相关资源。</p></li>
+<li><p>要修复重复包含项的警告，可以手动将资源移动到新捆绑包中，或者右键单击捆绑包并选择“Move duplicate”选项之一。</p></li>
+</ul>
+</li>
+<li><p>将资源从 Project Explorer 拖到此视图中可将它们添加到选定的捆绑包中。仅当选择了一个捆绑包并且资源类型可兼容（将场景拖放到场景捆绑包上等）时，此选项才有效。</p></li>
+<li><p>将资源（显式或隐式）从资源列表拖到捆绑包列表中（将它们添加到不同的捆绑包或新创建的捆绑包）。</p></li>
+<li><p>右键单击或按 DEL 键可从捆绑包中删除资源（不从项目中删除资源）。</p></li>
+<li><p>选择或双击资源可在 Project Explorer 中显示它们。</p></li>
+</ul>
+
+<p>请注意关于在捆绑包中包含文件夹的说明。可以将资源文件夹（从 Project Explorer）分配给捆绑包。在浏览器中查看时，文件夹本身将列为显式，而内容为隐式。这反映了用于将资源分配给捆绑包的优先级系统。例如，假设游戏在 Assets/Prefabs 中有五个预制件，然后将文件夹“Prefabs”标记为一个捆绑包，并将其中一个实际预制件（“PrefabA”）标记为另一个捆绑包。构建后，“PrefabA”将在一个捆绑包中，其他四个预制件将在另一个捆绑包中。</p>
+
+<h3>资源详细信息</h3>
+
+<p>右下方面板可显示在资源列表面板中选择的资源的详细信息。此面板不具有交互性，但会显示以下信息（如果有）：</p>
+
+<ul>
+<li><p>资源的完整路径。</p></li>
+<li><p>隐式包含在捆绑包中的原因（如果为隐式）。</p></li>
+<li><p>警告的原因（如果有警告）。</p></li>
+<li><p>错误的原因（如果有错误）。</p></li>
+</ul>
+
+<h3>故障排除</h3>
+
+<ul>
+<li>
+<em>无法重命名或删除特定的捆绑包。</em>首次将此工具添加到现有项目时偶尔会导致此问题。请通过 Unity 菜单系统强制重新导入资源来刷新数据。</li>
+</ul>
+
+<h3>外部工具集成</h3>
+
+<p>可以将生成资源包数据的其他工具与浏览器集成。目前，主要的例子是<a href="https://bitbucket.org/Unity-Technologies/assetbundlegraphtool">资源包图形工具 (Asset Bundle Graph Tool)</a>。如果检测到集成，则会在浏览器顶部附近显示一个选择栏。在此栏中可以选择默认数据源（Unity 的 AssetDatabase）或集成的工具。如果没有检测到，则选择器不显示，但可以通过右键单击选项卡标题并选择“Custom Sources”来添加工具。</p>
+
+<h1>用法 - 构建 (Build)</h1>
+
+<p>Build 选项卡提供基本构建功能来帮助您开始使用资源包。在大多数专业情况下，用户最后需要更高级的构建设置。如果无法满足需求，任何人都可以使用此工具中的构建代码作为一个起点来编写自己的代码。界面：</p>
+
+<ul>
+<li><p><em>Build Target</em> - 构建捆绑包的目标平台</p></li>
+<li><p><em>Output Path</em> - 用于保存构建的捆绑包的路径。默认为 AssetBundles/。可以手动编辑该路径，也可以选择“Browse”。要恢复默认命名约定，请点击“Reset”。</p></li>
+<li><p><em>Clear Folders</em> - 在构建之前删除构建路径文件夹中的所有数据。</p></li>
+<li><p><em>Copy to StreamingAssets</em> - 构建完成后，将结果复制到 Assets/StreamingAssets。对测试很有用，但不会用于生产。</p></li>
+<li>
+<p><em>Advanced Settings</em></p>
+
+<ul>
+<li><p><em>Compression</em> - 在无压缩、标准 LZMA 压缩或基于块的 LZ4 压缩之间进行选择。</p></li>
+<li><p><em>Exclude Type Information</em> - 在资源包中不包括类型信息</p></li>
+<li><p><em>Force Rebuild</em> - 重新构建需要构建的捆绑包。与“Clear Folders”不同，因为此选项不会删除不再存在的捆绑包。</p></li>
+<li><p><em>Ignore Type Tree Changes</em> - 在执行增量构建检查时忽略类型树更改。</p></li>
+<li><p><em>Append Hash</em> - 将哈希附加到资源包名称。</p></li>
+<li><p><em>Strict Mode</em> - 如果在此期间报告任何错误，则构建无法成功。</p></li>
+<li><p><em>Dry Run Build</em> - 进行干运行构建。</p></li>
+</ul>
+</li>
+<li><p><em>Build</em> - 执行构建。</p></li>
+</ul>
+
+<p><br> </p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2017–05–18 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">5.6 中的新功能</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetBundles-Troubleshooting.html"></a></span><div class="tip">故障排除</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ReducingFilesize.html"></a></span><div class="tip">减小构建的文件大小</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

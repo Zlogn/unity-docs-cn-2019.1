@@ -1,0 +1,262 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="漏斗图 - Unity Manual">
+<title>漏斗图 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/UnityAnalyticsFunnels1.png">
+<meta name="description" content="漏斗图有助于跟踪玩家是否在游戏内完成线性活动序列。漏斗图可显示玩家完成该序列的每一步以及完成整个序列的百分比。用漏斗图跟踪的常见序列包括：">
+<meta property="og:description" content="漏斗图有助于跟踪玩家是否在游戏内完成线性活动序列。漏斗图可显示玩家完成该序列的每一步以及完成整个序列的百分比。用漏斗图跟踪的常见序列包括：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UnityAnalyticsFunnels';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityAnalyticsFunnels.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityAnalyticsFunnels.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityAnalyticsFunnels.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityAnalyticsFunnels.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityAnalyticsFunnels.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityAnalyticsFunnels.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityAnalyticsFunnels.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityAnalyticsFunnels.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityAnalyticsFunnels.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityAnalyticsFunnels.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UnityAnalyticsFunnels.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UnityAnalyticsFunnels.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UnityAnalyticsFunnels.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UnityAnalyticsFunnels.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityAnalyticsFunnels.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityAnalyticsFunnels.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityAnalyticsFunnels.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityAnalyticsFunnels.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityAnalyticsFunnels.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityAnalyticsFunnels.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityAnalyticsFunnels.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityAnalyticsFunnels.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityAnalyticsFunnels.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityAnalyticsFunnels.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="UnityAnalytics.html">Unity Analytics</a></li>
+<li>漏斗图</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsEventLimits.html"></a></span><div class="tip">Analytics Event limits</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsRemoteSettings.html"></a></span><div class="tip">Remote Settings</div>
+</div>
+</div></div>
+<h1>漏斗图</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>漏斗图有助于跟踪玩家是否在游戏内完成线性活动序列。漏斗图可显示玩家完成该序列的每一步以及完成整个序列的百分比。用漏斗图跟踪的常见序列包括：</p>
+
+<ul>
+<li>首次用户体验 — 跟踪新玩家完成游戏入门序列的情况</li>
+<li>游戏进度 — 跟踪玩家通过游戏内重要步骤（例如完成关卡）的情况</li>
+<li>购买 UI — 暴露进行购买时面临的障碍</li>
+</ul>
+
+<p>Funnels are based on <a href="UnityAnalyticsStandardEvents.html">Standard</a> and <a href="UnityAnalyticsCustomEvents.html">Custom</a> events. Unity Analytics evaluates each step in a funnel according to whether the defined standard or custom event has been dispatched with the correct parameter values. In order for users to enter and progress through a funnel, they must complete the funnel steps in the precise order those steps appear in the funnel.</p>
+
+<p>在 Analytics Dashboard 上创建漏斗图。</p>
+
+<p>*<em>重要信息</em>：Unity Analytics 在处理传入数据时会评估漏斗图中定义的规则。新建漏斗图时，不会重新评估现有数据。只有在创建漏斗图后收到的数据才会显示在 Funnel Analyzer 报告中。</p>
+
+<h2>新建漏斗图</h2>
+
+<p>在创建漏斗图之前，应该首先：</p>
+
+<p>1.在游戏中添加必要的__标准事件__或__自定义事件__。
+2.运行游戏，以便将每个事件的至少一个实例分发到 Unity Analytics 系统。您可以在运行游戏时在 Unity Editor 中执行此步骤。
+3.等待 Unity Analytics 处理事件（大约 8–16 小时）。</p>
+
+<p>在分发要包含在漏斗图中的标准事件和自定义事件的至少一个实例并等待处理这些事件之后，请按照以下步骤在 Analytics Dashboard 上创建漏斗图规则：</p>
+
+<ol>
+<li>On the Unity Analytics dashboard, click <strong>Funnel Analyzer</strong>.
+2.单击 <strong>Create Funnel</strong>。
+ <img src="../uploads/Main/UnityAnalyticsFunnels1.png" alt="">
+</li>
+</ol>
+
+<p>3.输入漏斗图的 <strong>Name__（名称）或 </strong>Description__（描述，这是可选字段）。
+4.对于要跟踪和分析的事件的线性序列中的每一步：
+ 1.单击 <strong>+ Funnel Step</strong>。（前两步是自动创建的，因为漏斗图始终需要比较至少两个进展阶段。）
+ 2.选择 <strong>Standard Event__（标准事件）或 </strong>Custom Event__（自定义事件）名称。此处仅列出游戏实例已分发并处理的事件。
+ 3.设置 <strong>Parameters</strong>（参数）规则（可选）。<br>随事件分发的参数必须满足您定义的规则，以便玩家成功完成漏斗图中的该步骤。如果不定义参数规则，只需分发事件即可完成该步骤。
+5.单击 <strong>Save</strong>。</p>
+
+<p>在创建漏斗图步骤时，可使用每个步骤上方的 <strong>Delete</strong>、<strong>Duplicate</strong> 和 <strong>Rearrange</strong> 图标来进行更改。</p>
+
+<p><strong>注意</strong>：在单击 <strong>Save</strong> 之后，无法修改漏斗图步骤。但是，可创建漏斗图副本并修改副本的步骤。此限制的原因是，更改现有漏斗图的规则会使该漏斗图中包含的任何现有数据无效。</p>
+
+<h2>阅读 Funnel Analyzer 报告</h2>
+
+<p>The <strong>Funnel Analyzer</strong> page of your Analytics Dashboard lists the funnels that you have created. </p>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsFunnels2.png" alt="">
+</figure>
+
+<p>检查 <strong>Members</strong> 列可以查看有多少玩家已进入该漏斗图。
+<strong>Funnel Analyzer</strong> 报告有两个部分：__Funnel__ 图表和 <strong>Drilldown</strong> 部分，其中会提供有关漏斗图数据的更多详细信息。</p>
+
+<h3>漏斗图转化图表</h3>
+
+<p>__漏斗图__转化图表可直观地概要显示玩家在漏斗图追踪的步骤序列中的完成进度。步骤之间出现意外的玩家流失表明在此处非常适合研究阻止玩家继续下一步的游戏玩法、用户界面或其他问题。</p>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsFunnels3.png" alt="此漏斗图显示了步骤之间的总体转化情况">
+<figcaption>此漏斗图显示了步骤之间的总体转化情况</figcaption>
+</figure>
+
+<p>以上示例显示了基于 level_complete 事件的漏斗图。此示例表现出在早期关卡中玩家人数大幅下降。该图表无法确切告知具体问题（关卡可能太难，也可能太容易），但可以告知您从何处着手寻找游戏问题。</p>
+
+<h3>漏斗图指标</h3>
+
+<p>通过向图表中添加指标和细分段可以了解有关漏斗图中发生情况的更多详情。可用的指标包括漏斗图使用的任何标准事件或自定义事件随附的参数。</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsDashboardFunnelMetrics.png" alt="此漏斗图显示了1-3 天细分段的玩家的 level_complete 事件参数">
+<figcaption>此漏斗图显示了“1–3 天”细分段的玩家的 level_complete 事件参数</figcaption>
+</figure>
+
+<h3>按日期划分的漏斗图步骤 (Funnel Steps By Date) 图表</h3>
+
+<p>“按日期划分的漏斗图步骤”图表可显示一段时间内的转化率变化。您可以显示进入和完成漏斗图的玩家的整体转化率，也可以显示各个步骤之间的转化率。</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsDashboardFunnelByDate.png" alt="按日期划分的漏斗图步骤图表显示了两个漏斗图步骤之间的转化率">
+<figcaption>“按日期划分的漏斗图步骤”图表显示了两个漏斗图步骤之间的转化率</figcaption>
+</figure>
+
+<p>以上示例显示在接近报告期中间位置发生了转化率下降。转化率在几天后恢复。原因也许是更新中包含的错误使玩家更难完成该步骤，而该错误在后续更新中得到修复。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2017–08–29 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li><span class="page-history">Unity 2017.1 中的新功能</span></li>
+<li><span class="page-history">2017–09–19 更改了漏斗图控制面板 UI</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsEventLimits.html"></a></span><div class="tip">Analytics Event limits</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsRemoteSettings.html"></a></span><div class="tip">Remote Settings</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

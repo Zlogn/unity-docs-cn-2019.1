@@ -1,0 +1,324 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="音频剪辑 - Unity Manual">
+<title>音频剪辑 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/AudioClipImporter50.png">
+<meta name="description" content="__音频剪辑__包含音频源使用的音频数据。Unity 支持单声道、立体声和多声道音频资源（最多八声道）。Unity 可以导入的音频文件格式包括：.aif、.wav、.mp3 和 .ogg。Unity 还能够导入 .xm、.mod、.it 和 .s3m 格式的音轨模块。音轨模块资源的行为与 Unity 中的任何其他音频资源的行为方式相同，但在资源导入检视面板中无法预览波形。">
+<meta property="og:description" content="__音频剪辑__包含音频源使用的音频数据。Unity 支持单声道、立体声和多声道音频资源（最多八声道）。Unity 可以导入的音频文件格式包括：.aif、.wav、.mp3 和 .ogg。Unity 还能够导入 .xm、.mod、.it 和 .s3m 格式的音轨模块。音轨模块资源的行为与 Unity 中的任何其他音频资源的行为方式相同，但在资源导入检视面板中无法预览波形。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-AudioClip';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-AudioClip.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-AudioClip.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-AudioClip.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-AudioClip.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-AudioClip.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-AudioClip.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-AudioClip.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-AudioClip.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-AudioClip.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-AudioClip.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-AudioClip.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-AudioClip.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-AudioClip.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-AudioClip.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-AudioClip.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-AudioClip.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-AudioClip.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-AudioClip.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-AudioClip.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-AudioClip.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-AudioClip.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-AudioClip.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-AudioClip.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-AudioClip.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Audio.html">音频</a></li>
+<li>音频参考</li>
+<li>音频剪辑</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AmbisonicAudio.html"></a></span><div class="tip">立体混响声音频</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-AudioListener.html"></a></span><div class="tip">音频监听器</div>
+</div>
+</div></div>
+<h1>音频剪辑</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>__音频剪辑__包含<a href="class-AudioSource.html">音频源</a>使用的音频数据。Unity 支持单声道、立体声和多声道音频资源（最多八声道）。Unity 可以导入的音频文件格式包括：<strong>.aif</strong>、<strong>.wav</strong>、<strong>.mp3</strong> 和 <strong>.ogg</strong>。Unity 还能够导入 <strong>.xm</strong>、<strong>.mod</strong>、<strong>.it</strong> 和 <strong>.s3m</strong> 格式的<a href="TrackerModules.html">音轨模块</a>。音轨模块资源的行为与 Unity 中的任何其他音频资源的行为方式相同，但在资源导入检视面板中无法预览波形。</p>
+
+<figure>
+<img src="../uploads/Main/AudioClipImporter50.png" alt="音频剪辑检视面板 (Inspector)">
+<figcaption>音频剪辑检视面板 (Inspector)</figcaption>
+</figure>
+
+<h2>选项</h2>
+
+<p><strong>Force To Mono</strong></p>
+
+<p>启用此选项后，多声道音频将在打包前混合为单声道。</p>
+
+<p><strong>Normalize</strong></p>
+
+<p>启用此选项后，音频将在“Force To Mono”（强制为单声道）混合过程中被<a href="https://en.wikipedia.org/wiki/Audio_normalization">标准化</a>。</p>
+
+<p><strong>Load In Background</strong></p>
+
+<p>启用此选项后，剪辑的加载将在单独的线程上延时进行，不会阻止主线程。</p>
+
+<p><strong>Ambisonic</strong></p>
+
+<p>立体混响声 (Ambisonic) 音频源作为一种音频格式，表示可根据听者方向而旋转的声场。它非常适合 360 度视频和 XR 应用程序。如果音频文件包含立体混响声编码的音频，请启用此选项。</p>
+
+<h2>属性</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Load Type</strong></td>
+	<td style="text-align:left;">Unity 在运行时用于加载音频资源的方法。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Decompress On Load</strong></td>
+	<td style="text-align:left;">音频文件加载后将立即解压缩。请对小的压缩过的声音使用此选项，以避免动态解压缩产生性能开销。请注意，在加载时解压缩 Vorbis 编码的声音所使用的内存量是保持压缩状态时内存使用量的 10 倍（ADPCM 编码约为 3.5 倍），因此请勿对大文件使用此选项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Compressed In Memory</strong></td>
+	<td style="text-align:left;">声音在内存中保持压缩状态，播放时解压缩。此选项具有轻微的性能开销（特别是对于 Ogg/Vorbis 压缩文件），因此仅应当将其用于较大的文件（此情况下，加载时解压缩将使用大量的内存）。解压缩发生在混音器线程中，可在性能分析器窗口的音频面板中的“DSP CPU”部分对其进行监控。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Streaming</strong></td>
+	<td style="text-align:left;">即时解码声音。此方法使用最少量的内存来缓冲从磁盘中逐渐读取并即时解码的压缩数据。请注意，解压缩发生在单独的串流线程上；可在性能分析器窗口的音频面板中的“Streaming CPU”部分监控其 CPU 使用率。<strong>注意</strong>：即使没有加载任何音频数据，串流剪辑也有大约 200KB 的过载量。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Compression Format</strong></td>
+	<td style="text-align:left;">在运行时将用于声音的特定格式。请注意，可用选项取决于当前选定的构建目标。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>PCM</strong></td>
+	<td style="text-align:left;">此选项提供高质量，代价是文件内存变大，适合内存小的声音效果。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>ADPCM</strong></td>
+	<td style="text-align:left;">此格式适用于大量噪音和需要大量播放的声音（例如脚步声、撞击声、武器声音）。较之于 PCM，压缩能力提高 3.5 倍，但 CPU 使用率远低于 MP3/Vorbis 格式，因此成为上述声音类别的最佳压缩方案。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Vorbis/MP3</strong></td>
+	<td style="text-align:left;">压缩使文件减小，但与 PCM 音频相比，质量降低。可通过 Quality 滑动条来配置压缩量。此格式最适合中等长度的音效和音乐。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Sample Rate Setting</strong></td>
+	<td style="text-align:left;">PCM 和 ADPCM 压缩格式允许自动优化或手动降低采样率。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Preserve Sample Rate</strong></td>
+	<td style="text-align:left;">此设置可保持采样率不变（默认值）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Optimize Sample Rate</strong></td>
+	<td style="text-align:left;">此设置根据分析的最高频率内容自动优化采样率。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Override Sample Rate</strong></td>
+	<td style="text-align:left;">此设置允许手动覆盖采样率，因此可有效地将其用于丢弃频率内容。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Force To Mono</strong></td>
+	<td style="text-align:left;">如果启用此选项，音频剪辑将在下方混为单声道声音。在混合之后，信号的峰值归一化，因为混合过程通常会产生比原始信号更安静的信号，所以峰值归一化信号通过<a href="class-AudioSource.html">音频源</a>的音量属性调节为后面的调整提供了更好的空间。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Load In Background</strong></td>
+	<td style="text-align:left;">如果启用此选项，音频剪辑将在后台加载，不会导致主线程停顿。默认情况下，此选项为关闭状态以确保 Unity 为标准形式，即：在场景开始播放时所有音频剪辑已完成加载。请注意，针对仍在后台加载的音频剪辑的播放请求将被延迟，直到剪辑完成加载。可通过 AudioClip.loadState 属性来查询加载状态。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Preload Audio Data</strong></td>
+	<td style="text-align:left;">如果启用此选项，则在加载场景时提前加载音频剪辑文件。默认情况下，此选项为开启状态以反映 Unity 标准模式，即：在场景开始播放时所有音频剪辑文件已完成加载。如果未设置此标志，音频数据将加载到第一个 <a href="class-AudioSource.html">AudioSource</a>.Play()/<a href="class-AudioSource.html">AudioSource</a>.PlayOneShot()，或者可通过 <a href="class-AudioSource.html">AudioSource</a>.LoadAudioData() 加载并通过 <a href="class-AudioSource.html">AudioSource</a>.UnloadAudioData() 卸载。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Quality</strong></td>
+	<td style="text-align:left;">确定要应用于__压缩__剪辑的压缩量。不适用于 PCM/ADPCM/HEVAG 格式。可在检视面板中查看有关文件大小的统计信息。要调整此值，建议将滑动条拖动到某个位置让播放质量“足够好”，同时又保持文件足够小以满足发布条件。请注意，原始大小与原始文件有关，因此如果这是一个 MP3 文件并且压缩格式设置为 PCM（即未压缩），则生成的比率将大于 100％，因为该文件是未压缩存储，并占用超过了 MP3 格式文件的原始空间。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>预览窗口</h2>
+
+<p>预览窗口包含三个图标。</p>
+
+<p><img src="../uploads/Main/AudioPreviewAuto.png" alt="开启/关闭自动播放">
+当自动播放开启时，在用户选择剪辑后，剪辑文件将立即播放。</p>
+
+<p><img src="../uploads/Main/AudioPreviewLoop.png" alt="打开/关闭循环播放">
+当循环播放开启时，剪辑将以连续循环方式播放。</p>
+
+<p><img src="../uploads/Main/AudioPreviewPlay.png" alt="播放">
+用于播放剪辑。</p>
+
+<h2>导入音频资源</h2>
+
+<p>Unity 能够读取各种源文件格式。在导入文件之后，文件将立即将被转码为适合构建目标和声音类型的格式。可通过检视面板中的 Compression Format 设置选择此格式。</p>
+
+<p>通常，要保持声音尽可能接近原始声音，PCM 和 Vorbis/MP3 格式是首选。PCM 对于 CPU 要求非常较低，因为声音是未压缩的，直接从内存中读取即可。Vorbis/MP3 允许通过“Quality”滑动条自动适应来丢弃少量听觉信息。</p>
+
+<p>ADPCM 是内存和 CPU 使用率之间的折衷方案，因为它仅使用比未压缩 PCM 选项略多的 CPU，但产生恒定的 3.5 压缩比，与使用 Vorbis 或 MP3 可实现的压缩相比，压缩能力通常是其 1/3。此外，ADPCM（如 PCM）允许自动优化或手动设置要使用的采样率，在声音的频率内容可接受的质量损失范围内，可进一步压缩打包声音资源的大小。</p>
+
+<p>模块文件（.mod、.it、s3m 和 .xm）可以提供极高的质量，但体积却极小。使用模块文件时，除非有特别需求，否则请确保将 Load Type 设置为 <em>Compressed In Memory_，因为如果将其设置为 </em>Decompress On Load_，那么整首歌曲都将被解压缩。这是 Unity 5.0 中的一种新行为，允许对这些类型的剪辑使用 GetData/SetData，但音轨模块的一般和默认用例是将它们压缩在内存中。</p>
+
+<p>作为一般经验法则，_压缩_音频（或模块）最适合内容长的文件（如背景音乐或对话），而 <em>PCM</em> 和 <em>ADPCM</em> 更适合包含一些噪音的短音效，因为 <em>ADPCM</em> 的瑕疵在平滑信号上太明显。您应该使用压缩滑动条来调整压缩量。从高压缩开始，逐渐将设置降低至可感知到音质损失的程度。然后，再稍微增加，直到感知到的质量损失消失。</p>
+
+<h2>特定于平台的详细信息</h2>
+
+<p>Unity 支持导入各种源格式的声音文件。但是，在导入这些文件时（音轨文件除外），它们始终会重新编码为构建目标格式。默认情况下，此格式为 Vorbis，但如果需要，可以根据平台改用其他格式（ADPCM、MP3 等）。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–08–09 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Unity <a href="https://docs.unity3d.com/2017.1/Documentation/Manual/30_search.html?q=newin20171">2017.1</a> 中新增了立体混响声支持复选框<span class="search-words">NewIn20171</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AmbisonicAudio.html"></a></span><div class="tip">立体混响声音频</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-AudioListener.html"></a></span><div class="tip">音频监听器</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

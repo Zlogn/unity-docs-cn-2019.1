@@ -1,0 +1,217 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Unity 5.0 中的音频 - Unity Manual">
+<title>Unity 5.0 中的音频 - Unity Manual</title>
+<meta name="description" content="如果项目使用了音频功能，在将项目从 Unity 4 升级到 Unity 5 时需要注意以下注意事项。">
+<meta property="og:description" content="如果项目使用了音频功能，在将项目从 Unity 4 升级到 Unity 5 时需要注意以下注意事项。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UpgradeGuide5-Audio';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UpgradeGuide5-Audio.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UpgradeGuide5-Audio.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UpgradeGuide5-Audio.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UpgradeGuide5-Audio.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UpgradeGuide5-Audio.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UpgradeGuide5-Audio.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UpgradeGuide5-Audio.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UpgradeGuide5-Audio.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UpgradeGuide5-Audio.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UpgradeGuide5-Audio.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UpgradeGuide5-Audio.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UpgradeGuide5-Audio.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UpgradeGuide5-Audio.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UpgradeGuide5-Audio.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UpgradeGuide5-Audio.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UpgradeGuide5-Audio.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UpgradeGuide5-Audio.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UpgradeGuide5-Audio.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UpgradeGuide5-Audio.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UpgradeGuide5-Audio.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UpgradeGuide5-Audio.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UpgradeGuide5-Audio.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UpgradeGuide5-Audio.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UpgradeGuide5-Audio.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="UpgradeGuides.html">升级指南</a></li>
+<li><a href="UpgradeGuide5.html">升级到 Unity 5.0</a></li>
+<li>Unity 5.0 中的音频</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide5-Animation.html"></a></span><div class="tip">Unity 5.0 中的动画功能</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide5-BakedDataFormats.html"></a></span><div class="tip">Unity 5.0 中的烘焙数据</div>
+</div>
+</div></div>
+<h2>Unity 5.0 中的音频</h2>
+
+<p>如果项目使用了音频功能，在将项目从 Unity 4 升级到 Unity 5 时需要注意以下注意事项。</p>
+
+<h3>音频剪辑 (AudioClip)</h3>
+
+<p>音频剪辑方面存在大量更改。首先，资源上不再有 3D 标志。此标志已经以 Spatial Blend 滑动条的形式移动到音频源 (AudioSource) 中，允许在运行时将声音从 2D 变为 3D。旧项目将以这样的方式导入：场景游戏对象上已分配剪辑的音频源将根据音频剪辑的旧 3D 标志设置其 Spatial Blend 参数。由于显而易见的原因，这对于动态分配剪辑到音频源的脚本是不可能的，因此这需要手动修复。</p>
+
+<p>旧 3D 属性的默认设置为 true，但在新系统中，默认情况下，Spatial Blend 参数的默认设置为 2D。</p>
+
+<p>最后，现在可对音频剪辑进行多重编辑。</p>
+
+<h3>格式</h3>
+
+<p>Format 属性的命名已更改，现在命名中将反映存储数据的方法，而不是因平台而异的特定文件格式。所以从现在开始，Uncompressed 表示原始样本数据，Compressed 表示最适合平台的有损压缩方法，ADPCM 表示一种轻量级（就 CPU 而言）压缩方法，最适合包含大量噪音（脚步声、撞击声、武器声音等）并需要大量播放的自然音频信号。</p>
+
+<h3>在后台预加载和加载音频数据</h3>
+
+<p>音频剪辑有一个新功能，允许通过一个选项决定是否预加载音频数据。音频剪辑的任何属性都与实际音频数据加载状态分离，并可以随时查询，因此现在的按需加载功能有助于减少音频剪辑的内存使用量。此外，音频剪辑可以在后台加载他们的音频数据，而不会阻止主游戏线程以及导致丢帧。当然也可以通过脚本 API 来控制加载过程。</p>
+
+<h3>多重编辑</h3>
+
+<p>所有音频剪辑现在都支持多重编辑。</p>
+
+<h3>Force to Mono</h3>
+
+<p>Force To Mono 选项现在可以对生成的向下混音执行峰值归一化。</p>
+
+<h3>GetData/SetData</h3>
+
+<p>只有将未压缩的音频数据存储为 PCM 或在加载时执行解压缩的剪辑才支持这些 API 调用。以前有更多剪辑支持这些调用，但模式不是很清晰，因为这既依赖于目标平台又在 Editor 和独立平台播放器中具有不同的行为。作为一个新事物，跟踪器文件也可以作为 PCM 数据解压缩到内存中，因此也可以对这些文件使用 GetData/SetData。</p>
+
+<h3>音频源暂停行为</h3>
+
+<p>现在，Unity5 中的暂停行为在 Play 调用和 PlayOneShots 调用之间保持一致。暂停音频源会暂停通过这两种方式播放的语音，而调用 Play 或 PlayOneShot 也会取消暂停 (unpause) 通过这两种方式播放的音频源。</p>
+
+<p>为了方便在不播放指定剪辑的情况下取消暂停音频源（对于播放一次性语音很有用），我们添加了一个新函数 AudioSource.Unpause ()。</p>
+
+<h3>混音器</h3>
+
+<p>混音器 (AudioMixer) 是 Unity 5 的一项新功能，允许将音频源的音频数据以复杂路由方式传送到可以应用效果的混音组。与音频滤波器 (Audio Filter) 组件的一个关键区别在于音频滤波器根据每个音频源进行实例化，因此如果游戏有大量音频源包含滤波器，或者脚本仅用于创建游戏对象的多个实例，则该组件在 CPU 方面的成本会更高。使用混音器后，现在可以设置具有相同效果的组，并只需通过共享效果从音频源路由音频，因此降低了 CPU 使用率。</p>
+
+<p>混音器目前不支持基于脚本的效果，但却有一个新的原生音频插件 API，让开发人员能够编写与其他内置效果无缝集成的高性能效果。</p>
+
+<h3>AudioSettings</h3>
+
+<p>音频系统的配置方式已更改。仍然应该在音频项目设置中配置用于设置扬声器模式和 DSP 缓冲区大小（即延迟）的总体设置，除此之外，现在还可以配置实际和虚拟语音计数。真实的语音计数指定了可以同时听到语音数，因此对游戏的整体 CPU 消耗有很大影响。以前，此数值以硬编码方式设置为 32，但有一些特定于平台的例外情况。当播放的语音数量超过此数量时，声音最小的语音将被暂停，直到这些语音成为主导语音或某些主导语音停止播放为止。这些语音在播放时将被跳过。它们不会停止，只是在没有带宽之前就会处于非活动状态。虚拟语音计数定义了总共可以管理的语音数，因此如果播放的语音数量超过此数量，则将停止声音最小的语音。</p>
+
+<p>仍然可以从 AudioSettings.outputSampleRate 和 AudioSettings.speakerMode 进行读取，但现在已弃用 setter，SetDSPBufferSize 函数也已弃用。为了在运行时进行所需的音频配置更改，现在的替代方法是使用一个称为 AudioConfiguration 的结构。为获得此结构，可执行 AudioSettings.GetConfiguration()，该调用将返回音频输出设备上的有效设置。可以对此结构进行更改并通过 AudioSettings.Reset() 进行应用；此调用将返回布尔结果，具体取决于应用更改的结果是成功还是失败。</p>
+
+<p>每当音频配置发生更改时，无论是由脚本通过 AudioSettings.Reset() 进行的还是由外部事件导致的（如插入带有音频支持的 HDMI 监视器、外部声卡或 USB 耳机），都会调用一个用户定义的回调 AudioSettings.OnAudioConfigurationChanged(bool deviceChanged)。如果更改是由 AudioSettings.Reset() 调用引起的，则参数 deviceChanged 将为 false；如果由外部设备更改引起（这也可能会更改正在使用的音频设备的采样率），则为 true。借助该回调，可以重新创建任何易失性声音（例如生成的 PCM 剪辑）、恢复音频状态或通过调用 AudioSettings.Reset() 来进一步调整音频设置。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide5-Animation.html"></a></span><div class="tip">Unity 5.0 中的动画功能</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide5-BakedDataFormats.html"></a></span><div class="tip">Unity 5.0 中的烘焙数据</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

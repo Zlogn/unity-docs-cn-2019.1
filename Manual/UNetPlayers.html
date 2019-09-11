@@ -1,0 +1,194 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="玩家游戏对象 - Unity Manual">
+<title>玩家游戏对象 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/NetworkLocalPlayers.png">
+<meta name="description" content="| |
+|&amp;#8212;|
+| Note: UNet is deprecated, and will be removed from Unity in the future. A new system is under development. For more information and next steps see this blog post and the FAQ.|
+Unity 的多玩家 HLAPI 系统对玩家游戏对象的处理方式不同于对非玩家游戏对象的处理方式。当新玩家加入游戏时（当新客户端连接到服务器时），该玩家的游戏对象成为该玩家客户端上的&amp;#8220;本地玩家&amp;#8221;游戏对象，并且 Unity 将玩家的连接与玩家的游戏对象相关联。Unity 为每个游戏玩家关联一个玩家游戏对象，并将网络命令路由到这一个游戏对象。一个玩家不能在另一个玩家的游戏对象上调用命令，只能在自己的游戏对象上调用命令。">
+<meta property="og:description" content="| |
+|&amp;#8212;|
+| Note: UNet is deprecated, and will be removed from Unity in the future. A new system is under development. For more information and next steps see this blog post and the FAQ.|
+Unity 的多玩家 HLAPI 系统对玩家游戏对象的处理方式不同于对非玩家游戏对象的处理方式。当新玩家加入游戏时（当新客户端连接到服务器时），该玩家的游戏对象成为该玩家客户端上的&amp;#8220;本地玩家&amp;#8221;游戏对象，并且 Unity 将玩家的连接与玩家的游戏对象相关联。Unity 为每个游戏玩家关联一个玩家游戏对象，并将网络命令路由到这一个游戏对象。一个玩家不能在另一个玩家的游戏对象上调用命令，只能在自己的游戏对象上调用命令。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UNetPlayers';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UNetPlayers.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UNetPlayers.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UNetPlayers.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UNetPlayers.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UNetPlayers.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UNetPlayers.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UNetPlayers.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UNetPlayers.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UNetPlayers.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UNetPlayers.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UNetPlayers.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UNetPlayers.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UNetPlayers.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UNetPlayers.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UNetPlayers.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UNetPlayers.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UNetPlayers.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UNetPlayers.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UNetPlayers.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UNetPlayers.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UNetPlayers.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UNetPlayers.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UNetPlayers.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UNetPlayers.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UNet.html">多玩家和联网</a></li>
+<li><a href="UNetUsingHLAPI.html">多玩家高级 API</a></li>
+<li><a href="UNetGameObjects.html">联网游戏对象</a></li>
+<li>玩家游戏对象</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetGameObjects.html"></a></span><div class="tip">联网游戏对象</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UNetPlayersCustom.html"></a></span><div class="tip">自定义玩家生成</div>
+</div>
+</div></div>
+<h1>玩家游戏对象</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>| |
+|—|
+| <strong>Note</strong>: UNet is deprecated, and will be removed from Unity in the future. A new system is under development. For more information and next steps see this <a href="https://blogs.unity3d.com/2018/08/02/evolving-multiplayer-games-beyond-unet/">blog post</a> and the <a href="https://support.unity3d.com/hc/en-us/articles/360001252086-UNet-Deprecation-FAQ">FAQ</a>.|
+Unity 的多玩家 HLAPI 系统对玩家游戏对象的处理方式不同于对非玩家游戏对象的处理方式。当新玩家加入游戏时（当新客户端连接到服务器时），该玩家的游戏对象成为该玩家客户端上的“本地玩家”游戏对象，并且 Unity 将玩家的连接与玩家的游戏对象相关联。Unity 为每个游戏玩家关联一个玩家游戏对象，并将<a href="UNetActions.html">网络命令</a>路由到这一个游戏对象。一个玩家不能在另一个玩家的游戏对象上调用<a href="UNetActions.html">命令</a>，只能在自己的游戏对象上调用命令。</p>
+
+<p>NetworkBehaviour 类（从该类可创建网络脚本）具有名为 <a href="../ScriptReference/Networking.NetworkBehaviour-isLocalPlayer.html">isLocalPlayer</a> 的属性。在每个客户端的玩家游戏对象上，Unity 在 NetworkBehaviour 脚本上将该属性设置为 true，并调用 <a href="../ScriptReference/Networking.NetworkBehaviour.OnStartLocalPlayer.html">OnStartLocalPlayer()</a> 回调。这意味着每个客户端都像这样设置了一个不同的游戏对象，因为在每个客户端上有一个不同的游戏对象是代表本地玩家的游戏对象。下图显示了两个客户端及其本地玩家。</p>
+
+<figure>
+<img src="../uploads/Main/NetworkLocalPlayers.png" alt="在此图中，圆圈代表在每个客户端上标记为本地玩家的玩家游戏对象">
+<figcaption>在此图中，圆圈代表在每个客户端上标记为本地玩家的玩家游戏对象</figcaption>
+</figure>
+
+<p>只有“您自己”的玩家游戏对象（从您的角度看是玩家身份）才能设置 <code>isLocalPlayer</code>** **标志。通常，应该在脚本中设置此标志来确定是否处理输入，是否使摄像机跟踪游戏对象，或是否执行仅属于该客户端的玩家的任何其他客户端操作。</p>
+
+<p>玩家游戏对象代表服务器上的玩家（即玩游戏的人），并能够从玩家的客户端上运行命令。这些命令是安全的客户端到服务器<a href="UNetActions.html">远程过程调用</a>。在此<a href="UNetAuthority.html">服务器授权系统</a>中，其他非玩家服务器端游戏对象无法直接接收来自客户端游戏对象的命令。这样既是为了安全，也是为了降低构建游戏的复杂性。通过玩家游戏对象来路由用户的所有传入命令，即可确保这些消息来自正确的位置、正确的客户端并可在集中位置进行处理。</p>
+
+<p>每次有客户端连接到服务器时，Network Manager 都会添加一个玩家。但在某些情况下，可能希望在发生输入事件（例如用户在控制器上按“start”按钮）之前不添加玩家。要禁止自动创建玩家，请导航到 Network Manager 组件的 Inspector，然后取消选中 <strong>Auto Create Player</strong> 复选框。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetGameObjects.html"></a></span><div class="tip">联网游戏对象</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UNetPlayersCustom.html"></a></span><div class="tip">自定义玩家生成</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="添加随机游戏元素 - Unity Manual">
+<title>添加随机游戏元素 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/ProbStrip.png">
+<meta name="description" content="随机选择的项或值在许多游戏中都很重要。本部分将介绍如何使用 Unity 的内置随机函数来实现一些常见的游戏机制。">
+<meta property="og:description" content="随机选择的项或值在许多游戏中都很重要。本部分将介绍如何使用 Unity 的内置随机函数来实现一些常见的游戏机制。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'RandomNumbers';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/RandomNumbers.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/RandomNumbers.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/RandomNumbers.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/RandomNumbers.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/RandomNumbers.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/RandomNumbers.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/RandomNumbers.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/RandomNumbers.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/RandomNumbers.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/RandomNumbers.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/RandomNumbers.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/RandomNumbers.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/RandomNumbers.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/RandomNumbers.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/RandomNumbers.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/RandomNumbers.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/RandomNumbers.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/RandomNumbers.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/RandomNumbers.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/RandomNumbers.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/RandomNumbers.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/RandomNumbers.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/RandomNumbers.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/RandomNumbers.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="CreatingGameplay.html">创建游戏玩法</a></li>
+<li>添加随机游戏元素</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Cameras.html"></a></span><div class="tip">摄像机</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="CrossPlatformConsiderations.html"></a></span><div class="tip">跨平台注意事项</div>
+</div>
+</div></div>
+<h1>添加随机游戏元素</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>随机选择的项或值在许多游戏中都很重要。本部分将介绍如何使用 Unity 的内置随机函数来实现一些常见的游戏机制。</p>
+
+<h2>从数组中选择一个随机项</h2>
+
+<p>随机选取一个数组元素归结为选择零和数组最大索引值（等于数组的长度减去 1）之间的一个随机整数。使用内置的 Random.Range 函数可以轻松实现：</p>
+
+<pre><code> var element = myArray[Random.Range(0, myArray.Length)];
+</code></pre>
+
+<p>请注意，Random.Range 从包含第一个参数但不包含第二个参数的范围内返回一个值，因此在此处使用 myArray.Length 会得到正确的结果。</p>
+
+<h2>选择具有不同概率的项</h2>
+
+<p>有时需要随机选择项，但有些项比其他项被选中的几率更高。例如，NPC 在遇到玩家时可能会以几种不同的方式做出反应：</p>
+
+<ul>
+<li>友好问候的几率为 50%</li>
+<li>逃跑的几率为 25%</li>
+<li>立即攻击的几率为 20%</li>
+<li>提供金钱作为礼物的几率为 5%</li>
+</ul>
+
+<p>可将这些不同的结果可视化为一张纸条，该纸条分成几个部分，每个部分占据纸条总长度的一个比例。占据的比例等于选择结果的概率。选择行为相当于沿着纸条的长度选择一个随机点（例如通过投掷飞镖），然后查看该点处于哪个部分。</p>
+
+<figure>
+<img src="../uploads/Main/ProbStrip.png" alt="">
+</figure>
+
+<p>在脚本中，纸条实际上是一个浮点数组，其中的浮点数按顺序包含项的不同概率。随机点是通过将 Random.value 乘以数组中所有浮点数的总和得到的（这些数值不需要加起来等于 1；重点是不同值的相对大小）。要找到该点“位于”哪个数组元素，首先要检查它是否小于第一个元素中的值。如果是，则第一个元素便是选中的元素。否则，从该点值中减去第一个元素的值，然后将其与第二个元素进行比较，依此类推，直到找到正确的元素。在代码中表示为以下所示的内容：</p>
+
+<pre><code>
+//JS
+
+function Choose(probs: float[]) {
+    var total = 0;
+    
+    for (elem in probs) {
+        total += elem;
+    }
+    
+    var randomPoint = Random.value * total;
+    
+    for (i = 0; i &lt; probs.Length; i++) {
+        if (randomPoint &lt; probs[i])
+            return i;
+        else
+            randomPoint -= probs[i];
+    }
+    
+    return probs.Length - 1;
+}
+
+//C#
+
+    float Choose (float[] probs) {
+
+        float total = 0;
+
+        foreach (float elem in probs) {
+            total += elem;
+        }
+
+        float randomPoint = Random.value * total;
+
+        for (int i= 0; i &lt; probs.Length; i++) {
+            if (randomPoint &lt; probs[i]) {
+                return i;
+            }
+            else {
+                randomPoint -= probs[i];
+            }
+        }
+        return probs.Length - 1;
+    }
+
+</code></pre>
+
+<p>请注意，最后的 return 语句是必要的，因为 Random.value 可以返回 1 的结果。在这种情况下，搜索将无法在任何地方找到随机点。将以下行</p>
+
+<pre><code> if (randomPoint &lt; probs[i])
+</code></pre>
+
+<p>…更改为“小于或等于”测试将避免额外的 return 语句，但也会允许偶尔选择某个项，即使其概率为零也是如此。</p>
+
+<h2>加权连续随机值</h2>
+
+<p>如果结果是不连续的，那么浮点数组方法会很有效，但在某些情况下希望产生更连续的结果；比如说，希望随机化一个宝箱中发现的金块数量，并希望能够出现 1 到 100 之间的任何数字，但让更小数字的概率更高。使用浮点数组方法来执行此算法将需要设置一个包含 100 个浮点数（即纸条上的部分）的数组，这是很不实用的方法；如果不局限于整数而是想要在该范围内的任何数字，则不可能使用这种方法。</p>
+
+<p>一种适用于连续结果的更好方法是使用 AnimationCurve 将“原始”随机值转换为“加权”值；通过绘制不同的曲线形状，可产生不同的权重。代码编写起来也更简单：</p>
+
+<pre><code>//JS
+
+function CurveWeightedRandom(curve: AnimationCurve) {
+    return curve.Evaluate(Random.value);
+}
+
+//C#
+
+float CurveWeightedRandom(AnimationCurve curve) {
+    return curve.Evaluate(Random.value);
+}
+</code></pre>
+
+<p>此算法从 <code>Random.value</code> 读取值来选择 0 到 1 之间的“原始”随机值。然后，该值传递给 <code>curve.Evaluate()</code>，在此处将其视为水平坐标，并返回曲线在该水平位置处的相应垂直坐标。曲线较平缓的部分被选取的几率较高，而较陡峭的部分被选取的几率较低。</p>
+
+<figure>
+<img src="../uploads/Main/WeightedRandomCurve-linear.png" alt="线性曲线根本不对值进行加权；曲线上每个点的水平坐标等于垂直坐标。">
+<figcaption>线性曲线根本不对值进行加权；曲线上每个点的水平坐标等于垂直坐标。</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/WeightedRandomCurve-bias-low.png" alt="这条曲线在开始时较平缓，然后在结束时变得越来越陡峭，因此较低值的几率较高，而较高值的几率较低。此处可以看到 x=0.5 时曲线的高度约为 0.25，这意味着有 50% 的几率得到 0 到 0.25 之间的值。">
+<figcaption>这条曲线在开始时较平缓，然后在结束时变得越来越陡峭，因此较低值的几率较高，而较高值的几率较低。此处可以看到 x=0.5 时曲线的高度约为 0.25，这意味着有 50% 的几率得到 0 到 0.25 之间的值。</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/WeightedRandomCurve-bias-lowhigh.png" alt="这条曲线在开始和结束时都很平缓，因此这些值接近极值的几率较高，而中间的陡峭部分表示得到这些值的几率较低。另外请注意，使用此曲线时，高度值已向上移动：曲线底部为 1，曲线顶部为 10，这意味着曲线产生的值将在 1-10 范围内，而不是像以前的曲线那样在 0-1 范围内。">
+<figcaption>这条曲线在开始和结束时都很平缓，因此这些值接近极值的几率较高，而中间的陡峭部分表示得到这些值的几率较低。另外请注意，使用此曲线时，高度值已向上移动：曲线底部为 1，曲线顶部为 10，这意味着曲线产生的值将在 1–10 范围内，而不是像以前的曲线那样在 0–1 范围内。</figcaption>
+</figure>
+
+<p>请注意，这些曲线并非概率论指南中可能介绍的概率分布曲线，而更像是反向累积概率曲线。</p>
+
+<p>通过在一个脚本上定义 AnimationCurve 公共变量，可使用 Inspector 窗口直观查看和编辑曲线，而无需计算值。</p>
+
+<p>这种方法会产生浮点数。如果要计算整数结果（例如，需要 82 个金块，而不是 82.1214 个金块），可将计算值传递给 Mathf.RoundToInt() 之类的函数。</p>
+
+<h2>列表洗牌</h2>
+
+<p>一种常见的游戏机制是从一组已知的项中进行选择，但让这些项以随机顺序到达。例如，一副纸牌通常需要洗牌，因此不会以可预测的顺序绘制。为了对数组中的项进行随机洗牌，可访问每个元素，然后将其与数组中位于随机索引处的另一个元素进行交换：</p>
+
+<pre><code>//JS
+
+function Shuffle(deck: int[]) {
+    for (i = 0; i &lt; deck.Length; i++) {
+        var temp = deck[i];
+        var randomIndex = Random.Range(0, deck.Length);
+        deck[i] = deck[randomIndex];
+        deck[randomIndex] = temp;
+    }
+}
+
+//C#
+
+    void Shuffle (int[] deck) {
+        for (int i = 0; i &lt; deck.Length; i++) {
+            int temp = deck[i];
+            int randomIndex = Random.Range(0, deck.Length);
+            deck[i] = deck[randomIndex];
+            deck[randomIndex] = temp;
+        }
+    }
+
+</code></pre>
+
+<h2>从一组无重复的项中选择</h2>
+
+<p>一种常见的任务是从一组中随机选取一些项，但不可多次选取同一项。例如，可能希望在一些随机生成点生成多个 NPC，但要确保每个点只生成一个 NPC。为实现此目的，可按顺序遍历这些项，随机决定是否将每一项添加到所选集合中。当访问每一项时，该项被选取的概率等于仍然需要的项数除以仍然可供选择的项数。</p>
+
+<p>例如，假设有 10 个可用的生成点，但只能选择其中 5 个。选择第一项的概率为 5/10，即 0.5。如果选择了该项，那么第二项的概率将是 4/9，即 0.44（即仍然需要 4 项，还剩下 9 项可供选择）。但是，如果未选择第一项，那么第二项的概率将是 5/9，即 0.56（即仍然需要 5 项，还剩下 9 项可供选择）。这一直持续到该集合包含所需的 5 项为止。可使用如下所示的代码实现此算法：</p>
+
+<pre><code>
+//JS
+
+
+var spawnPoints: Transform[];
+
+function ChooseSet(numRequired: int) {
+    var result = new Transform[numRequired];
+    
+    var numToChoose = numRequired;
+    
+    for (numLeft = spawnPoints.Length; numLeft &gt; 0; numLeft--) {
+        // 添加 0.0 只是为了将整数转换为浮点数以进行除法运算。
+        var prob = (numToChoose + 0.0) / (numLeft + 0.0);
+        
+        if (Random.value &lt;= prob) {
+            numToChoose--;
+            result[numToChoose] = spawnPoints[numLeft - 1];
+            
+            if (numToChoose == 0)
+                break;
+        }
+    }
+    
+    return result;
+}
+
+
+//C#
+
+    Transform[] spawnPoints;
+
+    Transform[] ChooseSet (int numRequired) {
+        Transform[] result = new Transform[numRequired];
+
+        int numToChoose = numRequired;
+
+        for (int numLeft = spawnPoints.Length; numLeft &gt; 0; numLeft--) {
+
+            float prob = (float)numToChoose/(float)numLeft;
+
+            if (Random.value &lt;= prob) {
+                numToChoose--;
+                result[numToChoose] = spawnPoints[numLeft - 1];
+
+                if (numToChoose == 0) {
+                    break;
+                }
+            }
+        }
+        return result;
+    }
+</code></pre>
+
+<p>请注意，虽然选择是随机的，但所选集合中的项与原始数组中的项具有相同的顺序。如果要按顺序一次使用一项，那么这种排序可能使它们在一定程度上可预测，因此在使用之前可能需要对数组进行洗牌。</p>
+
+<h2>空间中的随机点</h2>
+
+<p>通过将 Vector3 的每个分量设置为 Random.value 返回的值可以选择立方体中的随机点：</p>
+
+<pre><code> var randVec = Vector3(Random.value, Random.value, Random.value);
+</code></pre>
+
+<p>这种算法可在边长为一个单位的立方体内部给出一个点。只需将矢量的 X、Y 和 Z 分量乘以期望的边长即可缩放该立方体。如果其中一个轴设置为零，则该点将始终位于单个平面内。例如，在“地面”上选取随机点通常需要随机设置 X 和 Z 分量并将 Y 分量设置为零。</p>
+
+<p>当体积为球体时（即，希望从原点开始的给定半径内选取随机点时），可使用 Random.insideUnitSphere 乘以所需的半径：</p>
+
+<pre><code> var randWithinRadius = Random.insideUnitSphere * radius;
+</code></pre>
+
+<p>请注意，如果将结果矢量的某个分量设置为零，则<em>不能</em>在圆内获得正确的随机点。尽管该点确实是随机点并且位于正确的半径内，但是概率严重偏向于圆的边缘，因此点分布将非常不均匀。对于此任务，应改用 Random.insideUnitCircle：</p>
+
+<pre><code> var randWithinCircle = Random.insideUnitCircle * radius;
+</code></pre>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Cameras.html"></a></span><div class="tip">摄像机</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="CrossPlatformConsiderations.html"></a></span><div class="tip">跨平台注意事项</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

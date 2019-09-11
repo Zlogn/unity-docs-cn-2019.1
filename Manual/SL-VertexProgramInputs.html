@@ -1,0 +1,526 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="向顶点程序提供顶点数据 - Unity Manual">
+<title>向顶点程序提供顶点数据 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/SL-DebugUV1.png">
+<meta name="description" content="对于 Cg/HLSL 顶点程序，
+网格顶点数据作为输入传递给顶点
+着色器函数。每个输入都需要有指定的语义：例如，POSITION 输入表示顶点位置，NORMAL 表示顶点法线。">
+<meta property="og:description" content="对于 Cg/HLSL 顶点程序，
+网格顶点数据作为输入传递给顶点
+着色器函数。每个输入都需要有指定的语义：例如，POSITION 输入表示顶点位置，NORMAL 表示顶点法线。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'SL-VertexProgramInputs';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-VertexProgramInputs.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-VertexProgramInputs.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-VertexProgramInputs.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-VertexProgramInputs.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-VertexProgramInputs.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-VertexProgramInputs.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-VertexProgramInputs.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-VertexProgramInputs.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-VertexProgramInputs.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-VertexProgramInputs.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/SL-VertexProgramInputs.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/SL-VertexProgramInputs.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/SL-VertexProgramInputs.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/SL-VertexProgramInputs.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-VertexProgramInputs.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-VertexProgramInputs.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-VertexProgramInputs.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-VertexProgramInputs.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-VertexProgramInputs.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-VertexProgramInputs.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-VertexProgramInputs.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-VertexProgramInputs.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-VertexProgramInputs.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-VertexProgramInputs.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="SL-Reference.html">着色器参考</a></li>
+<li><a href="SL-ShaderPrograms.html">编写顶点和片元着色器</a></li>
+<li>向顶点程序提供顶点数据</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-PropertiesInPrograms.html"></a></span><div class="tip">使用 Cg/HLSL 访问着色器属性</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-BuiltinIncludes.html"></a></span><div class="tip">内置着色器 include 文件</div>
+</div>
+</div></div>
+<h1>向顶点程序提供顶点数据</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>对于 Cg/HLSL <a href="SL-ShaderPrograms.html">顶点程序</a>，
+<a href="class-Mesh.html">网格</a>顶点数据作为输入传递给顶点
+着色器函数。每个输入都需要有指定的<a href="SL-ShaderSemantics.html">语义</a>：例如，<code>POSITION</code> 输入表示顶点位置，<code>NORMAL</code> 表示顶点法线。</p>
+
+<p>通常，顶点数据输入在结构中声明，而不是
+逐个列出。在 <a href="SL-BuiltinIncludes.html">UnityCG.cginc include 文件</a>中
+定义了几个常用的顶点结构，在大多数情况下，
+仅使用它们就足够了。这些结构为：</p>
+
+<ul>
+<li>
+<code>appdata_base</code>：位置、法线和一个纹理坐标。</li>
+<li>
+<code>appdata_tan</code>：位置、切线、法线和一个纹理坐标。</li>
+<li>
+<code>appdata_full</code>：位置、切线、法线、四个纹理坐标和颜色。</li>
+</ul>
+
+<p><strong>示例：</strong>以下着色器根据法线为网格着色，并使用 <code>appdata_base</code> 作为顶点程序输入：</p>
+
+<pre><code>Shader "VertexInputSimple" {
+    SubShader {
+        Pass {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #include "UnityCG.cginc"
+         
+            struct v2f {
+                float4 pos : SV_POSITION;
+                fixed4 color : COLOR;
+            };
+            
+            v2f vert (appdata_base v)
+            {
+                v2f o;
+                o.pos = UnityObjectToClipPos(v.vertex);
+                o.color.xyz = v.normal * 0.5 + 0.5;
+                o.color.w = 1.0;
+                return o;
+            }
+
+            fixed4 frag (v2f i) : SV_Target { return i.color; }
+            ENDCG
+        }
+    } 
+}
+</code></pre>
+
+<p>要访问不同的顶点数据，您需要自己声明
+顶点结构，或者将输入参数添加到
+顶点着色器。顶点数据由 Cg/HLSL
+<a href="SL-ShaderSemantics.html">语义</a>标识，并且必须来自
+以下列表：</p>
+
+<ul>
+<li>
+<code>POSITION</code> 是顶点位置，通常为 <code>float3</code> 或 <code>float4</code>。</li>
+<li>
+<code>NORMAL</code> 是顶点法线，通常为 <code>float3</code>。</li>
+<li>
+<code>TEXCOORD0</code> 是第一个 UV 坐标，通常为 <code>float2</code>、<code>float3</code> 或 <code>float4</code>。</li>
+<li>
+<code>TEXCOORD1</code>、<code>TEXCOORD2</code> 和 <code>TEXCOORD3</code> 分别是第 2、第 3 和第 4 个 UV 坐标。</li>
+<li>
+<code>TANGENT</code> 是切线矢量（用于法线贴图），通常为 <code>float4</code>。</li>
+<li>
+<code>COLOR</code> 是每顶点颜色，通常为 <code>float4</code>。</li>
+</ul>
+
+<p>当网格数据包含的分量少于顶点着色器输入所需
+的分量时，其余部分用零填充，但默认值为 1 的 <code>.w</code>
+ 分量除外。例如，网格纹理坐标
+通常是仅包含 x 和 y 分量的 2D 矢量。如果
+顶点着色器使用 <code>TEXCOORD0</code> 语义声明一个 <code>float4</code> 输入，则
+顶点着色器接收的值将包含 (x,y,0,1)。</p>
+
+<h2>示例</h2>
+
+<h3>可视化 UV</h3>
+
+<p>以下着色器示例使用顶点位置和第一个纹理坐标作为顶点着色器输入（在结构 <strong>appdata</strong> 中定义）。此着色器对于调试网格的 UV 坐标非常有用。</p>
+
+<pre><code>Shader "Debug/UV 1" {
+SubShader {
+    Pass {
+        CGPROGRAM
+        #pragma vertex vert
+        #pragma fragment frag
+    #include "UnityCG.cginc"
+
+        // 顶点输入：位置、UV
+        struct appdata {
+            float4 vertex : POSITION;
+            float4 texcoord : TEXCOORD0;
+        };
+
+        struct v2f {
+            float4 pos : SV_POSITION;
+            float4 uv : TEXCOORD0;
+        };
+        
+        v2f vert (appdata v) {
+            v2f o;
+            o.pos = UnityObjectToClipPos(v.vertex );
+            o.uv = float4( v.texcoord.xy, 0, 0 );
+            return o;
+        }
+        
+        half4 frag( v2f i ) : SV_Target {
+            half4 c = frac( i.uv );
+            if (any(saturate(i.uv) - i.uv))
+                c.b = 0.5;
+            return c;
+        }
+        ENDCG
+    }
+}
+}
+</code></pre>
+
+<p>在这里，UV 坐标可视化为红色和绿色，而另外的蓝色色调已应用于 0 到 1 范围之外的坐标：</p>
+
+<figure>
+<img src="../uploads/Main/SL-DebugUV1.png" alt="调试应用于圆环结模型的 UV1 着色器">
+<figcaption>调试应用于圆环结模型的 UV1 着色器</figcaption>
+</figure>
+
+<p>同样，以下着色器可视化该模型的第二个 UV 集：</p>
+
+<pre><code>Shader "Debug/UV 2" {
+SubShader {
+    Pass {
+        CGPROGRAM
+        #pragma vertex vert
+        #pragma fragment frag
+    #include "UnityCG.cginc"
+
+        // 顶点输入：位置、第二个 UV
+        struct appdata {
+            float4 vertex : POSITION;
+            float4 texcoord1 : TEXCOORD1;
+        };
+
+        struct v2f {
+            float4 pos : SV_POSITION;
+            float4 uv : TEXCOORD0;
+        };
+        
+        v2f vert (appdata v) {
+            v2f o;
+            o.pos = UnityObjectToClipPos(v.vertex );
+            o.uv = float4( v.texcoord1.xy, 0, 0 );
+            return o;
+        }
+        
+        half4 frag( v2f i ) : SV_Target {
+            half4 c = frac( i.uv );
+            if (any(saturate(i.uv) - i.uv))
+                c.b = 0.5;
+            return c;
+        }
+        ENDCG
+    }
+}
+}
+</code></pre>
+
+<h3>可视化顶点颜色</h3>
+
+<p>以下着色器使用顶点位置和每顶点颜色作为顶点着色器输入（在结构 <strong>appdata</strong> 中定义）。</p>
+
+<pre><code>Shader "Debug/Vertex color" {
+SubShader {
+    Pass {
+        CGPROGRAM
+        #pragma vertex vert
+        #pragma fragment frag
+    #include "UnityCG.cginc"
+
+        // 顶点输入：位置、颜色
+        struct appdata {
+            float4 vertex : POSITION;
+            fixed4 color : COLOR;
+        };
+
+        struct v2f {
+            float4 pos : SV_POSITION;
+            fixed4 color : COLOR;
+        };
+        
+        v2f vert (appdata v) {
+            v2f o;
+            o.pos = UnityObjectToClipPos(v.vertex );
+            o.color = v.color;
+            return o;
+        }
+        
+        fixed4 frag (v2f i) : SV_Target { return i.color; }
+        ENDCG
+    }
+}
+}
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/SL-DebugColors.png" alt="调试应用于环形结模型的颜色着色器，其中已将光照烘焙成颜色">
+<figcaption>调试应用于环形结模型的颜色着色器，其中已将光照烘焙成颜色</figcaption>
+</figure>
+
+<h3>可视化法线</h3>
+
+<p>以下着色器使用顶点位置和法线作为顶点着色器输入（在结构 <strong>appdata</strong> 中定义）。法线的 X、Y 和 Z 分量可视化为 RGB 颜色。由于法线分量在 –1 到 1 范围内，我们对这些分量进行缩放和偏置，使输出颜色可在 0 到 1 范围内显示。</p>
+
+<pre><code>Shader "Debug/Normals" {
+SubShader {
+    Pass {
+        CGPROGRAM
+        #pragma vertex vert
+        #pragma fragment frag
+    #include "UnityCG.cginc"
+
+        // 顶点输入：位置、法线
+        struct appdata {
+            float4 vertex : POSITION;
+            float3 normal : NORMAL;
+        };
+
+        struct v2f {
+            float4 pos : SV_POSITION;
+            fixed4 color : COLOR;
+        };
+        
+        v2f vert (appdata v) {
+            v2f o;
+            o.pos = UnityObjectToClipPos(v.vertex );
+            o.color.xyz = v.normal * 0.5 + 0.5;
+            o.color.w = 1.0;
+            return o;
+        }
+        
+        fixed4 frag (v2f i) : SV_Target { return i.color; }
+        ENDCG
+    }
+}
+}
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/SL-DebugNormals.png" alt="调试应用于圆环结模型的法线着色器。您可以看到模型具有硬着色边缘。">
+<figcaption>调试应用于圆环结模型的法线着色器。您可以看到模型具有硬着色边缘。</figcaption>
+</figure>
+
+<h3>可视化切线和副法线</h3>
+
+<p>切线和副法线矢量用于法线贴图。在 Unity 中，只有切线矢量存储在顶点中，而副法线是从法线值和切线值中推导出的。</p>
+
+<p>以下着色器使用顶点位置和切线作为顶点着色器输入（在结构 <strong>appdata</strong> 中定义）。切线的 x、y 和 z 分量可视化为 RGB 颜色。由于法线分量在 –1 到 1 范围内，我们对这些分量进行缩放和偏置，使输出颜色可在 0 到 1 范围内显示。</p>
+
+<pre><code>Shader "Debug/Tangents" {
+SubShader {
+    Pass {
+        CGPROGRAM
+        #pragma vertex vert
+        #pragma fragment frag
+    #include "UnityCG.cginc"
+
+        // 顶点输入：位置、切线
+        struct appdata {
+            float4 vertex : POSITION;
+            float4 tangent : TANGENT;
+        };
+
+        struct v2f {
+            float4 pos : SV_POSITION;
+            fixed4 color : COLOR;
+        };
+        
+        v2f vert (appdata v) {
+            v2f o;
+            o.pos = UnityObjectToClipPos(v.vertex );
+            o.color = v.tangent * 0.5 + 0.5;
+            return o;
+        }
+        
+        fixed4 frag (v2f i) : SV_Target { return i.color; }
+        ENDCG
+    }
+}
+}
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/SL-DebugTangents.png" alt="调试应用于圆环结模型的切线着色器。">
+<figcaption>调试应用于圆环结模型的切线着色器。</figcaption>
+</figure>
+
+<p>以下着色器可视化副切线。它使用顶点位置、法线和切线值作为顶点输入。副切线（有时称为
+副法线）是根据法线和切线值计算出的。它需要缩放并偏置到可显示的 0 到 1 范围内。</p>
+
+<pre><code>Shader "Debug/Bitangents" {
+SubShader {
+    Pass {
+        Fog { Mode Off }
+        CGPROGRAM
+        #pragma vertex vert
+        #pragma fragment frag
+    #include "UnityCG.cginc"
+
+        // 顶点输入：位置、法线、切线
+        struct appdata {
+            float4 vertex : POSITION;
+            float3 normal : NORMAL;
+            float4 tangent : TANGENT;
+        };
+
+        struct v2f {
+            float4 pos : SV_POSITION;
+            float4 color : COLOR;
+        };
+        
+        v2f vert (appdata v) {
+            v2f o;
+            o.pos = UnityObjectToClipPos(v.vertex );
+            // 计算双切线
+            float3 bitangent = cross( v.normal, v.tangent.xyz ) * v.tangent.w;
+            o.color.xyz = bitangent * 0.5 + 0.5;
+            o.color.w = 1.0;
+            return o;
+        }
+        
+        fixed4 frag (v2f i) : SV_Target { return i.color; }
+        ENDCG
+    }
+}
+}
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/SL-DebugBinormals.png" alt="调试应用于圆环结模型的副切线着色器。">
+<figcaption>调试应用于圆环结模型的副切线着色器。</figcaption>
+</figure>
+
+<h2>阅读更多信息</h2>
+
+<ul>
+<li><a href="SL-ShaderSemantics.html">着色器语义</a></li>
+<li><a href="SL-VertexFragmentShaderExamples.html">顶点和片元程序示例</a></li>
+<li><a href="SL-BuiltinIncludes.html">内置着色器 Include 文件</a></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-PropertiesInPrograms.html"></a></span><div class="tip">使用 Cg/HLSL 访问着色器属性</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-BuiltinIncludes.html"></a></span><div class="tip">内置着色器 include 文件</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

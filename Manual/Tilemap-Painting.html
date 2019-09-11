@@ -1,0 +1,386 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Painting on Tilemaps - Unity Manual">
+<title>Painting on Tilemaps - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/Tilemap-Painting-13.png">
+<meta name="description" content="The following details the steps and tools for painting Tiles on a Tilemap. However, if you are painting an Isometric Tilemap, refer to Creating a Tile Palette for an Isometric Tilemap for specific steps and information.">
+<meta property="og:description" content="The following details the steps and tools for painting Tiles on a Tilemap. However, if you are painting an Isometric Tilemap, refer to Creating a Tile Palette for an Isometric Tilemap for specific steps and information.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'Tilemap-Painting';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Tilemap-Painting.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Tilemap-Painting.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Tilemap-Painting.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Tilemap-Painting.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Tilemap-Painting.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Tilemap-Painting.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Tilemap-Painting.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Tilemap-Painting.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Tilemap-Painting.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Tilemap-Painting.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/Tilemap-Painting.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/Tilemap-Painting.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/Tilemap-Painting.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/Tilemap-Painting.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Tilemap-Painting.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Tilemap-Painting.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Tilemap-Painting.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Tilemap-Painting.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Tilemap-Painting.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Tilemap-Painting.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Tilemap-Painting.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Tilemap-Painting.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Tilemap-Painting.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Tilemap-Painting.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Unity2D.html">2D</a></li>
+<li><a href="class-Tilemap.html">Tilemap</a></li>
+<li>Painting on Tilemaps</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Tilemap-Isometric-ScriptableBrushes.html"></a></span><div class="tip">可编程画笔</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-TilemapCollider2D.html"></a></span><div class="tip">Tilemap Collider 2D</div>
+</div>
+</div></div>
+<h1>Painting on Tilemaps</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The following details the steps and tools for painting <strong>Tiles</strong> on a <strong>Tilemap</strong>. However, if you are painting an <a href="Tilemap-Isometric.html">Isometric Tilemap</a>, refer to <a href="Tilemap-Isometric-Palette.html">Creating a Tile Palette for an Isometric Tilemap</a> for specific steps and information.</p>
+
+<p>To begin painting Tiles, select the Tilemap to paint on from the <strong>Active Tilemap</strong> dropdown found in the <strong>Tilemap Palette</strong> window. Tilemaps created in the Scene hierarchy are automatically added to the dropdown menu. Only the selected <strong>Active Tilemap</strong> is affected by the <strong>Tile Palette</strong> painting tools.</p>
+
+<figure>
+<img src="../uploads/Main/Tilemap-Painting-13.png" alt="">
+</figure>
+
+<p>Tilemap painting tools are found in a row at the top of the <strong>Tile Palette</strong> window. These tools are also used to edit the <a href="Tilemap-Palette.html">Tile Palette</a> itself.</p>
+
+<figure>
+<img src="../uploads/Main/Tilemap-Painting-14.png" alt="">
+</figure>
+
+<h2>Painting Tool Shortcuts</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Tool</th>
+	<th style="text-align:left;">Shortcut Key</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">
+<img src="../uploads/Main/SelectTool.png" alt=""> <a href="#Select">Select Tool</a>
+</td>
+	<td style="text-align:left;">S</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<img src="../uploads/Main/MoveTool.png" alt=""> <a href="#Move">Move Tool</a>
+</td>
+	<td style="text-align:left;">M</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<img src="../uploads/Main/BrushTool.png" alt=""> <a href="#Brush">Paintbrush Tool</a>
+</td>
+	<td style="text-align:left;">B</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<img src="../uploads/Main/PaintboxTool.png" alt=""> <a href="#Rec">Fill Box Tool</a>
+</td>
+	<td style="text-align:left;">U</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<img src="../uploads/Main/EyedropTool.png" alt=""><a href="#Picker">Picker Tool</a>
+</td>
+	<td style="text-align:left;">I</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<img src="../uploads/Main/EraserTool.png" alt=""> <a href="#Eraser">Eraser Tool</a>
+</td>
+	<td style="text-align:left;">D; or hold Shift while using the <strong>Brush Tool</strong> or <strong>Fill Box Tool</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<img src="../uploads/Main/PaintBucketTool.png" alt=""> <a href="#Fill">Fill Tool</a>
+</td>
+	<td style="text-align:left;">G</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h3>Select Tool<a name="Select"></a>
+</h3>
+
+<p>Use the <strong>Select Tool</strong> to select a Tile on the Active Tilemap or hold and drag over multiple Tiles to select more at once. The property details of selected Tiles are shown in the Inspector Window. Use the <strong><a href="#Move">Move Tool</a></strong> to move selected Tile(s) to a different position on the Tilemap.</p>
+
+<figure>
+<img src="../uploads/Main/Tilemap-Painting-27.png" alt="Selecting a Tile on the Tilemap with the Select Tool">
+<figcaption>Selecting a Tile on the Tilemap with the <strong>Select Tool</strong></figcaption>
+</figure>
+
+<hr>
+
+<h3>Move Tool<a name="Move"></a>
+</h3>
+
+<p>Use the <strong>Move Tool</strong> to hold and drag selected Tiles to another position on the Tilemap.</p>
+
+<figure>
+<img src="../uploads/Main/Tilemap-Painting-29.png" alt="移动工具">
+<figcaption><strong>移动工具</strong></figcaption>
+</figure>
+
+<hr>
+
+<h3>Paintbrush Tool<a name="Brush"></a>
+</h3>
+
+<p>Use the <strong>Paintbrush Tool</strong> to select a Tile in the Tilemap Palette, or hold and drag over multiple Tiles to select more at once. Then click on any location on the Tilemap in the Scene to begin painting with your selected Tiles. Hold Shift while using the <strong>Paintbrush Tool</strong> to toggle to the <strong><a href="#Eraser">Eraser Tool</a></strong></p>
+
+<figure>
+<img src="../uploads/Main/Tilemap-Painting-16.png" alt="The Paintbrush Tool">
+<figcaption>The <strong>Paintbrush Tool</strong></figcaption>
+</figure>
+
+<p>To select and paint with Tiles that are already on the Tilemap instead of the <strong>Tilemap Palette</strong>, hold <strong>Ctrl</strong> as you select Tiles on the Tilemap with the <strong>Paintbrush Tool</strong>. This briefly switches it to the <strong><a href="#Picker">Picker Tool</a></strong> to select the Tiles for painting.</p>
+
+<hr>
+
+<h3>Fill Box Tool<a name="Rec"></a>
+</h3>
+
+<p>Use the Fill Box Tool__ to select a Tile in the Tilemap Palette, or hold and drag over multiple Tiles to select more at once. Selections made with the other painting tools are also valid.</p>
+
+<p>Hold and drag <strong>Rectangle Tool</strong> over the Tilemap to draw a rectangular shape, which is filled with the selected Tile(s).</p>
+
+<figure>
+<img src="../uploads/Main/Tilemap-Painting-20.jpg" alt="矩形工具">
+<figcaption><strong>矩形工具</strong></figcaption>
+</figure>
+
+<hr>
+
+<h3>Picker Tool<a name="Picker"></a>
+</h3>
+
+<p>Use the <strong>Picker Tool</strong> to pick a Tile from the Tilemap or Tilemap palette; hold and drag over multiple Tiles to select more at once. The active tool switches to the <strong>Paintbrush Tool</strong> once a selection is made, to allow you to paint immediately on the Tilemap with the selected Tile(s).</p>
+
+<figure>
+<img src="../uploads/Main/Tilemap-Painting-22.jpg" alt="选取器工具">
+<figcaption><strong>选取器工具</strong></figcaption>
+</figure>
+
+<hr>
+
+<h3>Eraser Tool<a name="Eraser"></a>
+</h3>
+
+<p>Use the <strong>Eraser Tool</strong> to erase Tiles from the Tilemap by selecting them while the tool is enabled. To erase a larger area at once, hold and drag the <strong>Eraser Tool</strong> to the desired size in the Tilemap Palette, then </p>
+
+<figure>
+<img src="../uploads/Main/Tilemap-Painting-18.jpg" alt="The Rectangle Tool">
+<figcaption>The <strong>Rectangle Tool</strong></figcaption>
+</figure>
+
+<hr>
+
+<h3>Fill Tool<a name="Fill"></a>
+</h3>
+
+<p>The <strong>Fill Tool</strong> is used to fill a contiguous area of the same Tile or empty cells with the selected Tile. Select the Tile to use as the Fill by selecting it from the Tilemap Palette. Multiple Tiles cannot be selected for this Tool.</p>
+
+<figure>
+<img src="../uploads/Main/Tilemap-Painting-24.jpg" alt="填充工具">
+<figcaption><strong>填充工具</strong></figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/Tilemap-Painting-25.jpg" alt="Continguous Tiles are replaced by the selected Tile.">
+<figcaption>Continguous Tiles are replaced by the selected Tile.</figcaption>
+</figure>
+
+<hr>
+
+<h2>瓦片地图焦点模式</h2>
+
+<p>Use the Tilemap Focus mode to focus on a specific Tilemap or Grid GameObject, and fade out other GameObjects in the Scene. This is useful when working with mutilple Tilemap layers to avoid confusion and clutter.</p>
+
+<p>First select the target Tilemap from the <strong>Active Target</strong> dropdown in the <strong>Tilemap Palette</strong> window or from the <strong>Hierarchy</strong> window. The Tilmap Focus On dropdown menu is found at the bottom right of the Scene View.</p>
+
+<figure>
+<img src="../uploads/Main/Tilemap-Painting-30.jpg" alt="">
+</figure>
+
+<p>Select the <strong>Focus On</strong> target from the options in the dropdown menu:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Target</th>
+	<th style="text-align:left;">功能</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>无</strong></td>
+	<td style="text-align:left;">No target is selected.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Tilemap</strong></td>
+	<td style="text-align:left;">The selected Tilemap GameObject is focused. All other GameObjects are faded. Select this option to focus solely on a single Tilemap layer.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Grid</strong></td>
+	<td style="text-align:left;">The parent Grid GameObject and all its children is focused. All other GameObjects are faded. Select this option to focus on the entire Tilemap with all layers as a whole.</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<ul>
+<li><span class="page-history">Tilemaps added in <a href="https://docs.unity3d.com/2017.2/Documentation/Manual/30_search.html?q=newin20172">2017.2</a> <span class="search-words">NewIn20172</span></span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Tilemap-Isometric-ScriptableBrushes.html"></a></span><div class="tip">可编程画笔</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-TilemapCollider2D.html"></a></span><div class="tip">Tilemap Collider 2D</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Google VR 快速入门指南 - Unity Manual">
+<title>Google VR 快速入门指南 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/cardboard_settings.jpg">
+<meta name="description" content="本部分将帮助您快速开始使用 Unity 开发 Google VR 应用程序。有关开发 Google VR 内容的大量其他说明，请访问 Google VR 开发者网站。">
+<meta property="og:description" content="本部分将帮助您快速开始使用 Unity 开发 Google VR 应用程序。有关开发 Google VR 内容的大量其他说明，请访问 Google VR 开发者网站。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'googlevr_quick_start';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/googlevr_quick_start.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/googlevr_quick_start.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/googlevr_quick_start.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/googlevr_quick_start.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/googlevr_quick_start.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/googlevr_quick_start.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/googlevr_quick_start.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/googlevr_quick_start.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/googlevr_quick_start.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/googlevr_quick_start.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/googlevr_quick_start.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/googlevr_quick_start.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/googlevr_quick_start.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/googlevr_quick_start.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/googlevr_quick_start.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/googlevr_quick_start.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/googlevr_quick_start.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/googlevr_quick_start.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/googlevr_quick_start.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/googlevr_quick_start.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/googlevr_quick_start.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/googlevr_quick_start.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/googlevr_quick_start.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/googlevr_quick_start.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="XR.html">XR</a></li>
+<li><a href="XR-SDK_overviews.html">XR SDK</a></li>
+<li><a href="googlevr_sdk_overview.html">Google VR</a></li>
+<li>Google VR 快速入门指南</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="googlevr_requirements.html"></a></span><div class="tip">Google VR 硬件和软件要求</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="googlevr_apis_and_sdks.html"></a></span><div class="tip">支持的 API 和 SDK</div>
+</div>
+</div></div>
+<h1>Google VR 快速入门指南</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>本部分将帮助您快速开始使用 Unity 开发 Google VR 应用程序。有关开发 Google VR 内容的大量其他说明，请访问 <a href="https://developers.google.com/vr/">Google VR 开发者网站</a>。</p>
+
+<p>根据以下指南安装 Unity 和 Google VR SDK：</p>
+
+<p>1.请参阅<a href="InstallingUnity.html">下载和安装 Unity</a> 来安装 Unity Editor。</p>
+
+<pre><code>i ) 目标平台为 Android 时，请确保通过 __Unity 安装程序__安装 Unity Android 支持包。
+
+ii ) 目标平台为 iOS 时，请确保通过 __Unity 安装程序__安装 Unity iOS 支持包，并有一台 macOS 机器可编译应用程序并将其部署到设备。
+</code></pre>
+
+<p>2.根据目标平台，遵循<a href="https://developers.google.com/vr/">关于 VR 的 Google 开发者站点</a>的说明进行操作。</p>
+
+<h2>官方 Google VR 指南</h2>
+
+<p>Google 提供了使用 Unity 开发适用于 Android 和 iOS 平台的 Google VR 应用程序的入门指南。具体指南的链接如下：</p>
+
+<ul>
+<li><p><a href="https://developers.google.com/vr/unity/get-started">适用于 Android 的 Google VR SDK for Unity</a> 入门指南。</p></li>
+<li><p><a href="https://developers.google.com/vr/unity/get-started-ios">适用于 iOS 的 Google VR SDK for Unity</a> 入门指南。</p></li>
+</ul>
+
+<h2>Unity 平台配置设置</h2>
+
+<p>本部分将提供配置 Unity 项目以构建 Google VR 应用程序的分步操作指南。</p>
+
+<p>请按照后续部分中的步骤操作，确保 Unity 项目能针对目标 Google VR 设备实现成功构建。</p>
+
+<h3>面向 Cardboard（Android 和 iOS）</h3>
+
+<p>Unity 提供了许多特定于平台的构建选项，确保能将应用程序构建到 Cardboard 支持的设备。</p>
+
+<p>要访问这些设置，请在 Unity Editor 中打开 <strong>Player Settings__（菜单：__Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Player__），然后根据要构建的目标设备单击 iPhone 或 Android 图标。导航到 </strong>XR Settings__，并确保选中 <strong>Virtual Reality Supported</strong>。接下来，导航到 <strong>Virtual Reality SDKs</strong> 列表，并单击加号 <strong>(+)</strong> 按钮。选择 <strong>Cardboard</strong> 将其添加到列表中。</p>
+
+<figure>
+<img src="../uploads/Main/cardboard_settings.jpg" alt="为 iOS/Android 查找特定于 Cardboard 的设置 (Edit &gt; Project Settings &gt; Player &gt; XR Settings)">
+<figcaption>为 iOS/Android 查找特定于 Cardboard 的设置 (Edit &gt; Project Settings &gt; Player &gt; XR Settings)</figcaption>
+</figure>
+
+<p>将 <strong>Cardboard</strong> 添加到 <strong>Virtual Reality SDKs</strong> 列表中后，单击旁边的折叠箭头可查看更多 <strong>Cardboard</strong> 设置。</p>
+
+<figure>
+<img src="../uploads/Main/additional_cardboard_settings.png" alt="VR SDK 列表中特定于 Cardboard 的设置">
+<figcaption>VR SDK 列表中特定于 Cardboard 的设置</figcaption>
+</figure>
+
+<p>下表列出了 <strong>Cardboard</strong> 设置中的可用属性及其功能描述。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>描述<br></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Depth Format</strong></td>
+	<td style="text-align:left;">使用此下拉选单可设置 Z 缓冲区深度。Unity 使用此设置来对可见数据进行排序，并确定实际渲染到屏幕的内容。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Enable Transition View</strong></td>
+	<td style="text-align:left;">过渡视图是 Google VR 提供的视图，用于通知用户必须将其设备放入与 Cardboard 兼容的查看器中。通过启用此功能，可为用户提供一些时间来将其设备插入查看器。默认处于禁用状态。</td>
+</tr>
+</tbody>
+</table>
+
+<p>Cardboard 的最低平台版本要求为 Android 5.0 (Lollipop)（SDK API 级别 21）。</p>
+
+<p>要确保 Unity 使用正确的 APK，并仅在升级到最新版 Android 的设备上运行，必须更改 <strong>Minimum API Level</strong>。</p>
+
+<p>To do this, go to the <strong>Player Settings</strong> and navigate to <strong>Other Settings</strong>. Under <strong>Identification</strong>, use the <strong>Minimum API Level</strong> drop-down to set it to the latest API in the list.</p>
+
+<p>仅在目标为 Cardboard 时，才应将 <strong>Target API Level</strong> 设置为 API 级别 21 或更高级别。如果目标为 Daydream，则需要 24 或更高级别。默认情况下，此属性使用已安装的最高级别。有关 Android API 级别的更多信息，请参阅 <a href="class-PlayerSettingsAndroid.html">Android PlayerSettings</a> 的文档。</p>
+
+<p>现在已经准备好为 Cardboard 创建 Unity 内容了。请遵循与常规 Android 或 iOS 开发相同的工作流程（有关更多信息，请参阅 <a href="android.html">Android 开发</a>或 <a href="iphone.html">iOS 开发</a>文档）。确保在支持 Cardboard 的设备上构建和运行游戏（菜单：__File__ &gt; __Build &amp; Run__）。</p>
+
+<h3><strong>面向 Daydream（仅限 Android）</strong></h3>
+
+<p>Unity 提供了许多特定于平台的构建选项，确保能将应用程序构建到 Daydream 支持的设备。</p>
+
+<p>要访问这些设置，请打开 <strong>Player Settings__（菜单：__Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Player__），然后导航到 Android 部分（单击下图中标记的 Android 图标）。导航到 </strong>XR Settings__，并确保勾选 <strong>Virtual Reality Supported</strong> 复选框。接下来，导航到 <strong>Virtual Reality SDKs</strong> 列表，并单击加号 (+) 按钮。选择 <strong>Daydream</strong> 将其添加到列表中。</p>
+
+<figure>
+<img src="../uploads/Main/Daydream_settings.jpg" alt="为 Android 查找特定于 Daydream 的设置 (Edit &gt; Project Settings &gt; Player &gt; XR Settings)">
+<figcaption>为 Android 查找特定于 Daydream 的设置 (Edit &gt; Project Settings &gt; Player &gt; XR Settings)</figcaption>
+</figure>
+
+<p>将 <strong>Daydream</strong> 添加到 <strong>Virtual Reality SDKs</strong> 列表中后，单击旁边的折叠箭头可查看更多 Daydream 设置。</p>
+
+<figure>
+<img src="../uploads/Main/Daydream_VR_list.png" alt="VR SDK 列表中特定于 Daydream 的设置">
+<figcaption>VR SDK 列表中特定于 Daydream 的设置</figcaption>
+</figure>
+
+<p>下表列出了 Daydream 设置中的可用属性及其功能描述。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>描述<br></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Depth Format</strong></td>
+	<td style="text-align:left;">使用此下拉选单可设置 Z 缓冲区深度。此设置用于对可见数据进行排序，并确定实际渲染到屏幕的内容。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Foreground Icon</strong></td>
+	<td style="text-align:left;">设置要在 Google VR Play 商店中显示的前景图标。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Background Icon</strong></td>
+	<td style="text-align:left;">设置要在 Google VR Play 商店中显示的背景图标。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Use Sustained Performance Mode</strong></td>
+	<td style="text-align:left;">启用 <strong>Sustained Performance Mode</strong> 可获得更长时间的 XR 体验。此设置会降低性能以延长电池续航时间。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Enable Video Surface</strong></td>
+	<td style="text-align:left;">启用 Asynchronous Video Reprojection。请参阅 <a href="VRDevices-GoogleVRVideoAsyncReprojection.html">Asynchronous Video Reprojection</a> 文档以了解更多信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Enable Protected Memory</strong></td>
+	<td style="text-align:left;">Enables memory protection for DRM protected content when using Asynchronous Video Reprojection. This option only appears if <strong>Enable Video Surface</strong> has been selected. For more information, see <a href="VRDevices-GoogleVRVideoAsyncReprojection.html">Asynchronous Video Reprojection</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Positional Head Tracking</strong></td>
+	<td style="text-align:left;">Allows you to specify the minimum level of head tracking you need support for. For more information, see <a href="../ScriptReference/XR.Daydream.SupportedHeadTracking.html">VRDaydream.SupportedHeadTracking</a>.</td>
+</tr>
+</tbody>
+</table>
+
+<p>目标仅为 Daydream 时的最低平台版本要求为 Android 7.0 (Nougat)（SDK API 级别 24）。如果目标为 Cardboard 以及 Daydream，则支持的最低 API 级别为 21。</p>
+
+<p>要确保 Unity 使用正确的 APK，并仅在升级到最新版 Android 的设备上运行，必须更改 <strong>Minimum API Level</strong>。</p>
+
+<p>To do this in the Player Settings, navigate to <strong>Other Settings</strong>. Under <strong>Identification</strong>, use the <strong>Minimum API Level</strong> drop-down to set it to the latest API in the list. </p>
+
+<p>如果目标是 Daydream，则 <strong>Target API Level</strong> 应设置为 API 级别 24。默认情况下，此属性使用已安装的最高级别。有关 Android API 级别的更多信息，请参阅 <a href="class-PlayerSettingsAndroid.html">Android PlayerSettings</a> 的文档。</p>
+
+<p>现在已经准备好为 Daydream 创建 Unity 内容了。请遵循与常规 Android 开发相同的工作流程（有关更多信息，请参阅 <a href="android.html">Android 开发</a>文档）。确保在支持 Daydream 的设备上构建和运行游戏（菜单：__File__ &gt; __Build &amp; Run__）。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–03–27 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 2017.3 版中更新了有关 Unity XR API 的 Google VR 文档</span></p></li>
+<li><p><span class="page-history">Positional head tracking added to Daydream-specific settings in 2017.3</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="googlevr_requirements.html"></a></span><div class="tip">Google VR 硬件和软件要求</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="googlevr_apis_and_sdks.html"></a></span><div class="tip">支持的 API 和 SDK</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

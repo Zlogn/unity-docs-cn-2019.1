@@ -1,0 +1,243 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="导入 - Unity Manual">
+<title>导入 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/ProjectFileStructure.png">
+<meta name="description" content="若要将在 Unity 外部创建的资源导入 Unity 项目，可以将文件直接导出到项目下的 Assets 文件夹中，或将其复制到该文件夹中。对于许多常见格式，可以将源文件直接保存到项目的 Assets 文件夹中，Unity 可以读取它。Unity会检测到被更新的文件并重新导入。">
+<meta property="og:description" content="若要将在 Unity 外部创建的资源导入 Unity 项目，可以将文件直接导出到项目下的 Assets 文件夹中，或将其复制到该文件夹中。对于许多常见格式，可以将源文件直接保存到项目的 Assets 文件夹中，Unity 可以读取它。Unity会检测到被更新的文件并重新导入。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'ImportingAssets';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/ImportingAssets.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/ImportingAssets.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/ImportingAssets.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/ImportingAssets.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/ImportingAssets.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/ImportingAssets.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/ImportingAssets.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/ImportingAssets.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/ImportingAssets.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/ImportingAssets.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/ImportingAssets.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/ImportingAssets.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/ImportingAssets.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/ImportingAssets.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/ImportingAssets.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/ImportingAssets.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/ImportingAssets.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/ImportingAssets.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/ImportingAssets.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/ImportingAssets.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/ImportingAssets.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/ImportingAssets.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/ImportingAssets.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/ImportingAssets.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li>导入</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide3435.html"></a></span><div class="tip">升级到 Unity 3.5</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ImportingModelFiles.html"></a></span><div class="tip">Importing Models</div>
+</div>
+</div></div>
+<h1>导入</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>若要将在 Unity 外部创建的资源导入 Unity 项目，可以将文件直接导出到项目下的 Assets 文件夹中，或将其复制到该文件夹中。对于许多常见格式，可以将源文件直接保存到项目的 Assets 文件夹中，Unity 可以读取它。Unity会检测到被更新的文件并重新导入。</p>
+
+<p>创建 Unity 项目时将创建一个文件夹（以项目命名），其中包含以下子文件夹：</p>
+
+<figure>
+<img src="../uploads/Main/ProjectFileStructure.png" alt="Unity 项目的基本文件结构">
+<figcaption>Unity 项目的基本文件结构</figcaption>
+</figure>
+
+<p>将需要在项目中使用的文件保存或复制到 Assets 文件夹中。可以使用 Unity 内的 __Project 窗口__来查看 Assets 文件夹的内容。因此，如果将文件保存或复制到 Assets 文件夹，Unity 将导入该文件并显示在 Project 窗口中。</p>
+
+<p>Unity 会在文件添加到 Assets 文件夹时自动检测到这些文件，或在修改文件时检测到修改。将任何资源放入 Assets 文件夹时，该资源将显示在 __Project 视图__中。</p>
+
+<figure>
+<img src="../uploads/Main/ProjectBrowser.jpg" alt="The Project Window shows Assets that Unity imported into your Project">
+<figcaption>The Project Window shows Assets that Unity imported into your Project</figcaption>
+</figure>
+
+<p>将计算机中（从 Mac 上的 Finder 或 Windows 上的资源管理器）的文件拖入 Unity 的 Project 窗口，Unity 会将该文件<em>复制</em>到 Assets 文件夹中，然后它将显示在 Project 窗口中。</p>
+
+<p>Project 窗口中显示的项（在大多数情况下）表示计算机上的实际文件，如果在 Unity 中删除它们，则也会从计算机中删除它们。</p>
+
+<figure>
+<img src="../uploads/Main/AssetWorkflowFolderAndProjectWindow.png" alt="计算机上 Unity 项目中的 Assets 文件夹与 Unity 中的 Project 窗口之间的关系">
+<figcaption>计算机上 Unity 项目中的 Assets 文件夹与 Unity 中的 Project 窗口之间的关系</figcaption>
+</figure>
+
+<p>上图显示了 Unity 项目的 Assets 文件夹中的一些文件和文件夹示例。根据需要创建任意数量的文件夹用来组织资源。</p>
+
+<p>上图显示了文件系统中列出的 <strong>.meta</strong> 文件，但这些文件在 Unity 的 Project 窗口中不可见。Unity 会为每个资源和文件夹创建这些 .meta 文件（元文件），但这些文件默认情况下为<a href="https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory">隐藏</a>状态，因此在文件系统中也看不到它们。</p>
+
+<p>元文件中包含有关资源在项目中的使用方式的重要信息，必须将元文件与其相关的资源文件放在一起，因此，如果在文件系统中移动或重命名资源文件，也必须移动/重命名元文件以进行匹配。</p>
+
+<p>安全移动或重命名资源的最简单方法是始终在 Unity 的 Project 文件夹中执行此操作。这样，Unity 就会自动移动或重命名相应的元文件。如果需要，可以进一步了解 .meta 文件和<a href="BehindtheScenes.html">导入过程中的后台工作情况</a>。</p>
+
+<p>如果要将资源集合带入项目中，可使用<a href="AssetPackages.html">资源包</a>。</p>
+
+<h2>检查资源</h2>
+
+<p>Unity 支持的每种类型的资源都有一组导入设置，这些设置会影响资源的显示或行为方式。要查看资源的导入设置，请在 <strong>Project 视图__中选择该资源。该资源的导入设置将显示在 </strong>Inspector__ 中。显示的选项因所选资源的类型而异。</p>
+
+<p>例如，在Unity图像的导入设置中，可选择将其导入为纹理、2D 精灵还是法线贴图。在 FBX 文件的导入设置中，可调整比例、生成法线或光照贴图坐标以及拆分和修剪文件中定义的动画剪辑。</p>
+
+<figure>
+<img src="../uploads/Main/AssetWorkflowImportSettings.png" alt="单击 Project 窗口中的图像资源时在 Inspector 中显示该资源的导入设置">
+<figcaption>单击 Project 窗口中的图像资源时在 Inspector 中显示该资源的导入设置</figcaption>
+</figure>
+
+<p>对于其他资源类型，导入设置不同。具体显示的各种设置与所选资源的类型相关。以下是音频资源的示例，其相关的导入设置显示在 Inspector 中：</p>
+
+<figure>
+<img src="../uploads/Main/ImportSettingsAudioExample.png" alt="Project 窗口中选择的音频资源在 Inspector 中显示了该资源的音频导入设置">
+<figcaption>Project 窗口中选择的音频资源在 Inspector 中显示了该资源的音频导入设置</figcaption>
+</figure>
+
+<p>对于正在开发的跨平台项目，可以覆盖“默认”设置并根据每个具体平台分配不同的导入设置。</p>
+
+<h2>另请参阅：</h2>
+
+<ul>
+<li><a href="AssetPackages.html">资源包</a></li>
+<li><a href="Materials.html">材质和着色器</a></li>
+<li><a href="Textures.html">纹理和视频</a></li>
+<li><a href="SpriteEditor.html">精灵编辑器 (Sprite Editor)</a></li>
+<li><a href="SpritePacker.html">精灵打包器 (Sprite Packer)</a></li>
+<li><a href="AudioFiles.html">音频文件</a></li>
+<li><a href="TrackerModules.html">音轨模块</a></li>
+</ul>
+
+<hr>
+
+<ul>
+<li><span class="page-edit"> 2018–04–25 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide3435.html"></a></span><div class="tip">升级到 Unity 3.5</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ImportingModelFiles.html"></a></span><div class="tip">Importing Models</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

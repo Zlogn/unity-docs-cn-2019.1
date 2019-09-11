@@ -1,0 +1,322 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Scene view navigation - Unity Manual">
+<title>Scene view navigation - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/Editor-SceneGizmo.png">
+<meta name="description" content="The Scene view has a set of navigation controls to help you move around quickly and efficiently.">
+<meta property="og:description" content="The Scene view has a set of navigation controls to help you move around quickly and efficiently.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'SceneViewNavigation';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SceneViewNavigation.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SceneViewNavigation.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SceneViewNavigation.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SceneViewNavigation.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SceneViewNavigation.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SceneViewNavigation.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SceneViewNavigation.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SceneViewNavigation.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SceneViewNavigation.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SceneViewNavigation.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/SceneViewNavigation.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/SceneViewNavigation.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/SceneViewNavigation.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/SceneViewNavigation.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SceneViewNavigation.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SceneViewNavigation.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SceneViewNavigation.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SceneViewNavigation.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SceneViewNavigation.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SceneViewNavigation.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SceneViewNavigation.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SceneViewNavigation.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SceneViewNavigation.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SceneViewNavigation.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="UsingTheEditor.html">The Main Windows</a></li>
+<li><a href="UsingTheSceneView.html">The Scene view</a></li>
+<li>Scene view navigation</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UsingTheSceneView.html"></a></span><div class="tip">The Scene view</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PositioningGameObjects.html"></a></span><div class="tip">游戏对象定位</div>
+</div>
+</div></div>
+<h1>Scene view navigation</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The Scene view has a set of navigation controls to help you move around quickly and efficiently.</p>
+
+<h2>场景视图辅助图标</h2>
+
+<p>The Scene Gizmo is in the upper-right corner of the Scene view. This displays the Scene view Camera’s current orientation, and allows you to quickly modify the viewing angle and projection mode.</p>
+
+<figure>
+<img src="../uploads/Main/Editor-SceneGizmo.png" alt="">
+</figure>
+
+<p>The Scene Gizmo has a conical arm on each side of the cube. The arms at the forefront are labelled <strong>X</strong>, <strong>Y</strong> and <strong>Z</strong>. Click on any of the conical axis arms to snap the Scene view Camera to the axis it represents (for example: top view, left view and front view). You can also right-click the cube to bring up a menu with a list of viewing angles. To return to the default viewing angle, right-click the Scene Gizmo and click <strong>Free</strong>.</p>
+
+<p>You can also toggle <strong>Perspective</strong> on and off. This changes the projection mode of the Scene view between <strong>Perspective</strong> and <strong>Orthographic</strong> (sometimes called ‘isometric’). To do this, click the cube in the centre of the Scene Gizmo, or the text below it. Orthographic view has no perspective, and is useful in combination with clicking one of the conical axis arms to get a front, top or side elevation.</p>
+
+<figure>
+<img src="../uploads/Main/CameraPerspectiveAndOrtho.jpg" alt="在透视模式（左）和正交模式（右）下显示的场景">
+<figcaption>在透视模式（左）和正交模式（右）下显示的场景</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/SceneViewOrthoTopAndSide.jpg" alt="在正交模式下以顶视图和前视图显示的同一场景">
+<figcaption>在正交模式下以顶视图和前视图显示的同一场景</figcaption>
+</figure>
+
+<p><em>（上述场景来自于 <a href="https://www.assetstore.unity3d.com/en/#!/publisher/1299">BITGEM</a>）</em></p>
+
+<p>If your Scene view is in an awkward viewpoint (upside-down, or just an angle you find confusing), Shift-click the cube at the centre of the Scene Gizmo to get back to a <strong>Perspective</strong> view with an angle that is looking at the Scene from the side and slightly from above.</p>
+
+<p>单击场景视图辅助图标右上角的挂锁可启用或禁用场景的旋转。禁用场景旋转后，右键单击鼠标可以平移视图而不是旋转视图。此时的功能与手形工具 (Hand tool) 相同（请参阅下面的<a href="#handtool"><em>手形工具</em></a>）。</p>
+
+<p>请注意，在 __2D 模式__中，不显示场景视图辅助图标，因为此情况下唯一的选择是让视图垂直于 XY 平面。</p>
+
+<h3>场景视图辅助图标：Mac 触控板手势</h3>
+
+<p>在带触控板的 Mac 上，可用两根手指拖动来缩放视图。</p>
+
+<p>You can also use three fingers to simulate the effect of clicking the arms of the <strong>Scene Gizmo</strong>: drag up, left, right or down to snap the Scene view Camera to the corresponding direction. In OS X 10.7 “Lion” you may have to change your trackpad settings in order to enable this feature:</p>
+
+<ul>
+<li>打开 System Preferences 并找到 Trackpad（或在 Spotlight 中输入 trackpad）。</li>
+<li>单击进入“More Gestures”选项。</li>
+<li>单击名称为“Swipe between pages”的第一个选项，然后将其设置为“Swipe left or right with three fingers”或“Swipe with two or three fingers”。</li>
+</ul>
+
+<h2>Moving, orbiting and zooming in the Scene view</h2>
+
+<p>Moving, orbiting and zooming are key operations in Scene view navigation. Unity provides several ways to perform them for maximum accessibility:</p>
+
+<h3>箭头移动</h3>
+
+<p>可使用__箭头键__在场景中移动，就好像在场景中“走动”一样。向上和向下箭头使摄像机朝所在方向前后移动。向左和向右箭头可横向平移视图。使用箭头时按住 <strong>Shift</strong> 键可以加快移动速度。</p>
+
+<p><a name="handtool"></a> </p>
+
+<h3>手形工具</h3>
+
+<p>选择手形工具（快捷键：__Q__）时，可使用以下鼠标控制方式：</p>
+
+<p><img src="../uploads/Main/UI-ViewTool.png" alt=""> __移动：__单击并拖动可拖动摄像机。</p>
+
+<p><img src="../uploads/Main/Editor-EyeTool.png" alt=""> <strong>旋转：__按住 </strong>Alt__，然后左键单击并拖动可围绕当前轴心点旋转摄像机。此选项在 2D 模式下不可用，因为该模式下采用正交视图。</p>
+
+<p><img src="../uploads/Main/Editor-ZoomTool.png" alt=""> <strong>Zoom:</strong> Hold <strong>Alt</strong>, and right-click and drag to zoom the Scene view. On Mac you can also hold <strong>Control</strong>, and left-click and drag instead.</p>
+
+<p>按住 <strong>Shift</strong> 可提高移动和缩放的速度。</p>
+
+<p><a name="flythrough"></a></p>
+
+<h3>飞越模式</h3>
+
+<p>Use <strong>Flythrough mode</strong> to navigate the Scene view by flying around in first-person, similar to how you would navigate in many games.</p>
+
+<ul>
+<li>单击并按住鼠标右键。</li>
+<li>使用鼠标移动视图，使用 <strong>WASD</strong> 键向左/向右/向前/向后移动，使用 <strong>Q</strong> 和 <strong>E</strong> 键向上和向下移动。</li>
+<li>按住 <strong>Shift</strong> 键可以加快移动速度。</li>
+</ul>
+
+<p>飞越模式是专为__透视模式__设计的。在__正交模式__中，按住鼠标右键并移动鼠标会使摄像机旋转。</p>
+
+<p>Note that Flythrough mode is not available in 2D mode. Instead, holding the right mouse button down while moving the mouse pans around the Scene view.</p>
+
+<h3>Camera speed</h3>
+
+<p>To change the current speed of the Camera in the Scene view, click the Camera icon in the toolbar. In <strong>Flythrough mode</strong> you can change the Camera speed while moving around the Scene. To do this, use the mouse scroll wheel or drag two fingers on a trackpad.</p>
+
+<p>For more information, see the documentation on <a href="SceneViewCamera.html">Camera settings</a>.</p>
+
+<h3>移动快捷键</h3>
+
+<p>为了提高效率，无论选择哪种变换组件工具，都可以使用所有以下控制方式。
+最方便的控制方式取决于所使用的鼠标或触控板：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>操作</strong></th>
+	<th style="text-align:left;"><strong>3 键鼠标</strong></th>
+	<th style="text-align:left;"><strong>2 键鼠标或触控板</strong></th>
+	<th style="text-align:left;"><strong>只有一个鼠标键或触控板的 Mac</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>移动</strong></td>
+	<td style="text-align:left;">按住 Alt+鼠标中键，然后拖动</td>
+	<td style="text-align:left;">按住 Alt+Control+左键单击，然后拖动</td>
+	<td style="text-align:left;">按住 Alt+Command+左键单击，然后拖动</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>旋转__（在 2D 模式中不可用） |按住 Alt+左键单击，然后拖动 |按住 Alt+左键单击，然后拖动 |按住 Alt+左键单击，然后拖动 |
+|</strong>缩放__</td>
+	<td style="text-align:left;">使用鼠标滚轮，或按住 Alt+右键单击，然后拖动</td>
+	<td style="text-align:left;">按住 Alt+右键单击，然后拖动</td>
+	<td style="text-align:left;">使用双指轻扫方法可放大或缩小，或按住 Alt-Control+左键单击，然后拖动</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Change speed </strong>(only available in Flythrough mode)</td>
+	<td style="text-align:left;">Use the scroll wheel while moving.</td>
+	<td style="text-align:left;">Drag with two fingers while moving.</td>
+	<td style="text-align:left;">Drag with two fingers while moving.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>将视图居中于游戏对象上</h2>
+
+<p>To center the Scene view on a GameObject, select the GameObject in the Hierarchy, then move the mouse over the Scene view and press <strong>F</strong>. This feature can also be found in the menu bar under <strong>Edit</strong> &gt; <strong>Frame Selected</strong>. To lock the view to the GameObject even when the GameObject is moving, press <strong>Shift+F</strong>. This feature can also be found in the menu bar under <strong>Edit</strong> &gt; <strong>Lock View to Selected</strong>.</p>
+
+<figure>
+<img src="../uploads/Main/FrameSelection.png" alt="">
+</figure>
+
+<hr>
+
+<ul>
+<li><p><span class="search-words">The Scene Gizmo is secretly known as the Tetraxial Perspectagon.</span></p></li>
+<li><p><span class="page-edit">2019–02–08 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Scene view Camera settings added in 2019.1</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UsingTheSceneView.html"></a></span><div class="tip">The Scene view</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PositioningGameObjects.html"></a></span><div class="tip">游戏对象定位</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

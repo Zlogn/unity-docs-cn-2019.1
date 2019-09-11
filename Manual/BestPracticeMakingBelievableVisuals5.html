@@ -1,0 +1,345 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="着色 - Unity Manual">
+<title>着色 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/BelievableVisualsMetals.jpg">
+<meta name="description" content="材质定义了光照与模型表面的相互影响，是制作可信视觉效果的重要组成部分。创建模型后，应使用着色器定义其表面属性。Unity 标准着色器是一种内置着色器，具有全面的功能，因此可让您轻松创建合理的材质，并采用称为&amp;#8220;基于物理着色&amp;#8221;(PBS) 的高级光照模型。在 ShaderLab、ShaderGraph（可编程渲染管线）或其他着色器创建工具中制作自定义表面着色器之前，您应掌握标准着色器的用法。">
+<meta property="og:description" content="材质定义了光照与模型表面的相互影响，是制作可信视觉效果的重要组成部分。创建模型后，应使用着色器定义其表面属性。Unity 标准着色器是一种内置着色器，具有全面的功能，因此可让您轻松创建合理的材质，并采用称为&amp;#8220;基于物理着色&amp;#8221;(PBS) 的高级光照模型。在 ShaderLab、ShaderGraph（可编程渲染管线）或其他着色器创建工具中制作自定义表面着色器之前，您应掌握标准着色器的用法。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'BestPracticeMakingBelievableVisuals5';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/BestPracticeMakingBelievableVisuals5.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/BestPracticeMakingBelievableVisuals5.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/BestPracticeMakingBelievableVisuals5.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/BestPracticeMakingBelievableVisuals5.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/BestPracticeMakingBelievableVisuals5.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/BestPracticeMakingBelievableVisuals5.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/BestPracticeMakingBelievableVisuals5.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/BestPracticeMakingBelievableVisuals5.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/BestPracticeMakingBelievableVisuals5.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/BestPracticeMakingBelievableVisuals5.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/BestPracticeMakingBelievableVisuals5.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/BestPracticeMakingBelievableVisuals5.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/BestPracticeMakingBelievableVisuals5.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/BestPracticeMakingBelievableVisuals5.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/BestPracticeMakingBelievableVisuals5.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/BestPracticeMakingBelievableVisuals5.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/BestPracticeMakingBelievableVisuals5.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/BestPracticeMakingBelievableVisuals5.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/BestPracticeMakingBelievableVisuals5.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/BestPracticeMakingBelievableVisuals5.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/BestPracticeMakingBelievableVisuals5.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/BestPracticeMakingBelievableVisuals5.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/BestPracticeMakingBelievableVisuals5.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/BestPracticeMakingBelievableVisuals5.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="BestPracticeGuides.html">最佳实践指南</a></li>
+<li><a href="BestPracticeMakingBelievableVisuals.html">在 Unity 中制作可信的视觉效果</a></li>
+<li>着色</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeMakingBelievableVisuals4.html"></a></span><div class="tip">Modeling</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeMakingBelievableVisuals6.html"></a></span><div class="tip">室外光照和场景设置</div>
+</div>
+</div></div>
+<h1>着色</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>材质定义了光照与模型表面的相互影响，是制作可信视觉效果的重要组成部分。创建模型后，应使用着色器定义其表面属性。Unity <a href="shader-StandardShader.html">标准着色器</a>是一种内置着色器，具有全面的功能，因此可让您轻松创建合理的材质，并采用称为“基于物理着色”(PBS) 的高级光照模型。在 ShaderLab、ShaderGraph（可编程渲染管线）或其他着色器创建工具中制作自定义表面着色器之前，您应掌握标准着色器的用法。</p>
+
+<p>大多数现实生活中的表面都是由多种材质组成的，因此在使用 Unity 标准着色器对游戏对象进行纹理处理时，您需要考虑：</p>
+
+<ul>
+<li><a href="#setup">标准或标准镜面反射设置</a></li>
+<li><a href="#albedo">反照率值和材质验证器</a></li>
+<li><a href="#metallic">金属性值</a></li>
+<li><a href="#smoothnessValue">平滑度值</a></li>
+<li><a href="#normalMap">法线贴图</a></li>
+<li><a href="#occlusionMap">遮挡贴图</a></li>
+<li><a href="#photos">Reference picture, color chart and photo source</a></li>
+</ul>
+
+<p><strong>注意</strong>：此处仅介绍反照率、平滑度、法线贴图和 AO。有关进一步的建议，请参阅<a href="StandardShaderMaterialParameters.html">标准着色器材质参数</a>文档。</p>
+
+<p><a name="setup"></a> </p>
+
+<h2>标准或标准镜面反射设置</h2>
+
+<p>在 Unity 中，可将材质设置为__标准 (Standard)__ 或__标准镜面反射 (Standard Specular)__。使用其中任何一种设置时，请注意使用标准材质通常更容易，因为镜面亮度和颜色是根据反照率 (Albedo)、平滑度 (Smoothness) 和金属性 (Metallic) 输入自动计算的。</p>
+
+<p>在标准设置材质中，将 Metallic 设置为 1 表示由反照率驱动镜面反射颜色并将其亮度与光滑度相配合，从而调整表面的亮度和光泽度。</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsMetals.jpg" alt="When Metallic is set to 0, the albedo color doesn’t affect the specular color, and shows up as the surface color.">
+<figcaption>When Metallic is set to 0, the albedo color doesn’t affect the specular color, and shows up as the surface color.</figcaption>
+</figure>
+
+<p>如果要将镜面反射颜色与材质的反照率取消关联，请使用标准镜面反射。非金属材质或非标准金属材质就属于这种情况，此类情况下最好手动控制镜面反射颜色。有关更多信息，请参阅 <a href="StandardShaderMaterialParameterSpecular.html">Specular 模式：Specular 参数</a>。</p>
+
+<p><a name="albedo"></a> </p>
+
+<h2>反照率值和材质验证器</h2>
+
+<p>虽然基于物理着色 (Physically Based Shader) 会尽量根据光照自动计算镜面亮度和分布，但是材质的反照率需要合理。材质的反照率会影响直接光照和间接光照，并在场景光照的其余部分传播不切实际的值。</p>
+
+<p>非常暗的反照率将显著吸收光照，并产生不寻常的光照反应。太亮的反照率将反射现实生活中不会出现的大量光照和间接颜色。</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsAlbedoNonMetal.jpg" alt="在非金属表面上设置的反照率会影响间接光照">
+<figcaption>在非金属表面上设置的反照率会影响间接光照</figcaption>
+</figure>
+
+<p>非金属涂漆表面没有确定的值，而此类表面在现实生活中是很常见的。例如，您可以选择用炭黑或雪白的颜色粉刷木墙，但该墙壁反照率没有一个明确的值。为帮助您确定反照率值，我们提供了一个 PBS 值图表（请参阅<a href="StandardShaderMaterialCharts.html">材质图表</a>）。根据一般准则，对于非金属涂漆表面，低于 0.2 的反照率值太暗，而高于 0.8 的反照率值太亮。有关较暗介电材质的信息，请参阅<a href="https://docs.unity3d.com/uploads/ExpertGuides/Dark_Dielectric_Materials.pdf">材质制作指南 1：深色介电材质 (PDF)</a></p>
+
+<p>The Material chart is fairly simple to use when dealing with a single albedo surface. However, deciding on complex albedo textures can be difficult. The Material Validation tool allows you to check whether material values follow the guidelines or not. You can enable this tool in the Scene view by selecting <strong>Material Validation</strong> from the drop down menu in the top left corner of the viewport. <strong>Note</strong>: Material Validation is only available when you’re not using the Scriptable Render Pipeline (SRP). To disable SRP, go to <strong>Edit</strong> &gt; <strong>Project Settings</strong>, select the <strong>Graphics</strong> category, and then set <strong>Scriptable Render Pipeline Settings</strong> to <strong>None</strong>.</p>
+
+<p><a name="metallic"></a> </p>
+
+<h2>金属性值</h2>
+
+<p>材质的金属性值定义了环境反射到表面的程度，同时还确定了表面上有多少可见的反照率颜色。当某个表面为纯金属时，由表面颜色（反照率）驱动环境反射的颜色。使用金属材质时，请注意以下几点：</p>
+
+<ul>
+<li>纯金属光泽材质不会反弹漫射光照。如果整个空间都是用金属制成的，那么空间将非常暗，只能看到镜面高光和反射。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsPureMetal.jpg" alt="由全点光源覆盖的光滑金属空间的黑暗程度示例">
+<figcaption>由全点光源覆盖的光滑金属空间的黑暗程度示例</figcaption>
+</figure>
+
+<ul>
+<li>确定表面是否为金属可能有一定难度。不要考虑游戏对象的核心材质，而应关注游戏对象的最终表面。例如，涂成蓝色的金属栏杆仅应将未涂漆区域指定为金属。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsPaintedMetalTexture.jpg" alt="如何为涂漆金属栏杆设置纹理的示例">
+<figcaption>如何为涂漆金属栏杆设置纹理的示例</figcaption>
+</figure>
+
+<p>注意：涂漆金属杆的缺损区域是金属的，但表面上的锈迹不是金属的。</p>
+
+<ul>
+<li>虽然很容易想象材质只需要金属值 0 或 1 的情况，但有些情况下的表面材质是混合的。例如，部分被灰尘或污垢覆盖的金属游戏对象会由于混合特性而具有介于 0 和 1 之间的金属值。除此之外，在创建合理的材质时，应尽量避免使用介于 0 和 1 之间的金属值。</li>
+</ul>
+
+<p>有关金属的更多信息，请参阅 <a href="StandardShaderMaterialParameterMetallic.html">Metallic 模式：Metallic 参数</a>。</p>
+
+<p><a name="smoothnessValue"></a> </p>
+
+<h2>平滑度值</h2>
+
+<p>平滑度用于控制表面的微表面细节。值为 0 表示非常粗糙、无光泽的表面，值为 1 表示纯反射镜状表面。这通常很简单直观，但注意以下几点会很有帮助：</p>
+
+<ul>
+<li><p>关注游戏对象的最终表面质量。例如，由混凝土制成的物体可能具有粗糙表面或在其上面具有光泽涂料。未涂漆木材的平滑度值取决于木材是否经过抛光。</p></li>
+<li><p>不要忘记磨损、污垢、划痕和水渍。在现实生活中，材质的表面受到许多变量的影响。材质很少有纯粹的单一表面。</p></li>
+<li><p>要确定材质的特性，请考虑元素在表面之间的混合方式。例如，土壤地面上的水坑通常具有吸水后的外环，这样的外环存在变暗的反照率，而不仅仅是直接平滑度混合。</p></li>
+</ul>
+
+<p><img src="../uploads/Main/BelievableVisualsTransitionBlend.jpg" alt="Example of darkened smoothness and albedo on an absorbed water transition">
+​
+For more information on smoothness, see <a href="StandardShaderMaterialParameterSmoothness.html">Smoothness</a>.</p>
+
+<p><a name="normalMap"></a> </p>
+
+<h2>法线贴图</h2>
+
+<p>法线贴图通常是指切线空间法线贴图，这种贴图使多边形的表面法线弯曲，就像光照方向从另一个方向进入一样。此功能通常用于在看似简单的网格上添加许多细节。</p>
+
+<p>您还可以使用法线贴图来定义材质。例如，对于涂有高光泽红色饰面的木材，可显示原始表面材质：</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsAlbedoNormalMap.jpg" alt="">
+</figure>
+
+<p>有关法线贴图的更多信息，请参阅有关<a href="StandardShaderMaterialParameterNormalMap.html">法线贴图（凹凸贴图）</a>的文档。</p>
+
+<p><a name="occlusionMap"></a> </p>
+
+<h2>遮挡贴图</h2>
+
+<p>遮挡贴图可模仿环境光消减状态，并可增强对凹面和形状的感知。</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsOcclusionMap.jpg" alt="预烘焙环境光遮挡有助于遮挡环境光">
+<figcaption>预烘焙环境光遮挡有助于遮挡环境光</figcaption>
+</figure>
+
+<p>使用遮挡贴图有以下好处：</p>
+
+<ul>
+<li><p>在离线渲染期间，能够以更高的质量实现遮挡贴图的细节化版本，尤其是数据来自细节化程度更高的模型的情况下（类似于法线贴图从细节化程度更高的模型烘焙到细节化程度更低的模型）。</p></li>
+<li><p>遮挡贴图非常有助于动态照亮游戏对象，因为动态游戏对象不会被光照烘焙遮挡，并且仅接收光照探针光照或环境光照以及低细节化的屏幕空间环境光遮挡 (SSAO)。</p></li>
+</ul>
+
+<p>有关遮挡贴图的更多信息，请参阅<a href="StandardShaderMaterialParameterOcclusionMap.html">遮挡贴图</a>。</p>
+
+<p><a name="photos"></a> </p>
+
+<h2>参考图片、色卡和照片来源</h2>
+
+<p>就像尝试学习任何新领域一样，研究数字内容创作背后的一般原则可以改善您的学习成果。拍摄真实表面的照片（无论是用于参考还是用作纹理来源）通常可以加快在 3D 建模应用程序中创建表面材质的过程。</p>
+
+<p>收集参考时，只需要拍摄大量特定主题的图片。这种做法与前往图像搜索引擎并搜索特定参考图像具有一样的意义。</p>
+
+<p>拍摄用作纹理来源的照片时，请务必抑制色偏，并消除表面的光照亮度效果。应使用 18% 灰卡（如柯达 R–27 卡）的白平衡和适当曝光值。例如：</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsGreyCard.jpg" alt="">
+</figure>
+
+<p>18% 灰卡是可信赖的值，您可以在拍摄纹理源图片时将其用作锚点。不要试图自行打印 18% 灰卡，因为这样很可能带来不准确的灰卡和不平衡的颜色。适当的 18% 灰卡相当于 rgb(124,124,124) 或 sRGB 颜色空间中的 #7C7C7C。相机使用此灰卡获取适当的曝光（消除光照亮度）并进行白平衡（抑制光照色偏）。</p>
+
+<p>有关灰卡的更多信息，请参阅 <a href="https://en.wikipedia.org/wiki/Middle_gray">Wikipedia 中的中灰色 (Middle gray)</a>.</p>
+
+<p>为获得最佳效果，请使用数码单反相机/高级相机。但是，您可以在任何相机（包括具有手动曝光控制和 RAW 功能的手机）上使用上述设置来获得良好效果。</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsMobileSetup.jpg" alt="使用手动曝光和 RAW 拍摄的手机设置示例">
+<figcaption>使用手动曝光和 RAW 拍摄的手机设置示例</figcaption>
+</figure>
+
+<p>采用偏振光照和镜头并经过 X-Rite ColorChecker 校准的 RAW 图像在拍摄反照率纹理时可带来更高的准确度。</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsColorChecker.jpg" alt="ColorChecker 卡片的示例">
+<figcaption>ColorChecker 卡片的示例</figcaption>
+</figure>
+
+<p>与 R–27 灰卡一样，ColorChecker 卡片是可信赖的颜色参考，您可以将其用作锚点。应生成相机传感器 + 镜头 + 滤镜 + 光照条件特性配置文件，然后将其用于校正 RAW 图像。</p>
+
+<p>在拍摄纹理源图片时，请选择漫射光照条件，例如阴天或光照均匀的阴影。</p>
+
+<p>若要在处理拍摄的图像时获得纯粹的反照率纹理，可使用 <a href="https://github.com/Unity-Technologies/DeLightingTool">Unity 的去光照工具</a>执行其他处理。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–03–21 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li><span class="page-history">在 Unity 2017.3 中添加了制作可信视觉效果最佳实践指南</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeMakingBelievableVisuals4.html"></a></span><div class="tip">Modeling</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeMakingBelievableVisuals6.html"></a></span><div class="tip">室外光照和场景设置</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="混合光照 - Unity Manual">
+<title>混合光照 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/LightMode-Mixed-0.png">
+<meta name="description" content="混合__光源是 Mode__ 属性设置为 Mixed 的光源组件。">
+<meta property="og:description" content="混合__光源是 Mode__ 属性设置为 Mixed 的光源组件。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'LightMode-Mixed';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/LightMode-Mixed.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/LightMode-Mixed.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/LightMode-Mixed.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/LightMode-Mixed.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/LightMode-Mixed.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/LightMode-Mixed.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/LightMode-Mixed.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/LightMode-Mixed.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/LightMode-Mixed.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/LightMode-Mixed.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/LightMode-Mixed.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/LightMode-Mixed.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/LightMode-Mixed.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/LightMode-Mixed.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/LightMode-Mixed.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/LightMode-Mixed.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/LightMode-Mixed.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/LightMode-Mixed.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/LightMode-Mixed.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/LightMode-Mixed.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/LightMode-Mixed.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/LightMode-Mixed.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/LightMode-Mixed.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/LightMode-Mixed.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="LightingOverview.html">光照</a></li>
+<li><a href="GIIntro.html">全局光照</a></li>
+<li><a href="LightModes.html">光照模式</a></li>
+<li>混合光照</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LightMode-Realtime.html"></a></span><div class="tip">实时光照</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightMode-Mixed-BakedIndirect.html"></a></span><div class="tip">Baked Indirect 模式</div>
+</div>
+</div></div>
+<h3>混合光照</h3>
+
+<p><strong>混合__光源是 </strong>Mode__ 属性设置为 <strong>Mixed</strong> 的<a href="class-Light.html">光源组件</a>。</p>
+
+<p>__混合__光源可在运行时更改其变换和视觉属性（例如颜色或强度），但仅限于严格的限制范围内。它们同时照亮静态和动态游戏对象，总是提供直接光照，也可选择提供间接光照。接受__混合__光源光照的动态游戏对象总是在其他动态游戏对象上投射实时阴影。</p>
+
+<p>All <strong>Mixed</strong> Lights in a Scene use the same <strong>Mixed</strong> <strong>Lighting Mode</strong>. To set the <strong>Lighting Mode</strong>, open the Lighting window (menu: <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong>), click the <strong>Scene</strong> tab, and navigate to the <strong>Mixed Lighting</strong> section. </p>
+
+<figure>
+<img src="../uploads/Main/LightMode-Mixed-0.png" alt="Lighting 窗口的 Mixed Lighting 部分">
+<figcaption>Lighting 窗口的 <strong>Mixed Lighting</strong> 部分</figcaption>
+</figure>
+
+<p>可用模式有：</p>
+
+<ul>
+<li><a href="LightMode-Mixed-BakedIndirect.html">Baked Indirect</a></li>
+<li><a href="LightMode-Mixed-ShadowmaskMode.html">Shadowmask</a></li>
+<li><a href="LightMode-Mixed-Subtractive.html">Subtractive</a></li>
+</ul>
+
+<h4>使用混合光源</h4>
+
+<p>混合光照对于不属于游戏但可照亮静态环境的光源（例如天空中不动的太阳）非常有用。混合光源的直接光照仍需在运行时计算，因此静态网格上的材质将保持其视觉保真度，包括完整的<a href="shader-StandardShader.html">基于物理着色 (PBS)</a> 支持。</p>
+
+<figure>
+<img src="../uploads/Main/LightMode-Mixed-1.jpg" alt="混合光源的示例">
+<figcaption>混合光源的示例</figcaption>
+</figure>
+
+<p>The <strong>Shadowmask</strong> mode’s <a href="LightMode-Mixed-DistanceShadowmask.html">Distance Shadowmask</a> is the most resource-intensive option, but provides the best results: it yields high-quality shadows within the <strong>Shadow Distance</strong> (<strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Quality</strong> category, and navigate to the <strong>Shadows</strong> section), and baked high-quality shadows beyond. For example, you could create large landscapes with realistic shadows right up to the horizon, as long as the sun does not travel across the sky.</p>
+
+<p><strong>Subtractive</strong> 模式提供最低质量的结果：仅为一个光源实时渲染阴影，并将阴影与烘焙的直接和间接光照进行合成。只有目标平台无法使用任何其他模式时（例如，应用程序需要在低端移动设备上运行，但内存限制会阻止使用 <strong>Shadowmask</strong> 和 <strong>Distance Shadowmask</strong> 模式）才应使用此模式作为后备解决方案。</p>
+
+<p>请参阅 <a href="https://docs.google.com/spreadsheets/d/18R663xpccuyRns1kOvGAiqj0qU9QFMbbXyrOCQMsU5w/edit#gid=1748986211">Unity 光照模式参考卡 (Unity Lighting Modes Reference Card)</a> 了解各种模式的集中比较。</p>
+
+<p>所有平台都支持所有混合光照模式。但是，有一些渲染限制：</p>
+
+<ul>
+<li><p><strong>Subtractive</strong> 模式会回退到<a href="RenderTech-ForwardRendering.html">前向渲染</a>（无延迟或光照 prepass 支持）。</p></li>
+<li><p><strong>Shadowmask</strong> 模式在仅支持四个渲染目标的平台上（例如许多移动端 GPU）会回退到<a href="RenderTech-ForwardRendering.html">前向渲染</a>（无延迟或光照 prepass 支持）。</p></li>
+</ul>
+
+<p>请参阅<a href="RenderingPaths.html">渲染通道</a>相关文档以了解有关前向渲染和延迟渲染的更多信息。</p>
+
+<h4>高级用途</h4>
+
+<p>__混合__光源可在运行时更改其变换和视觉属性（例如颜色或强度），但仅限于严格的限制范围内。实际上，由于某些光照是烘焙的（因此是预先计算的），在运行时更改任何参数都会导致在组合实时光照和预计算光照时出现不一致的结果。</p>
+
+<p>在使用 <strong>Baked Indirect</strong> 和 <strong>Shadowmask</strong> 的情况下，直接光照的影响就像__实时__光源一样，因此您可以更改光源的颜色、强度甚至变换等参数。但是，烘焙值是预先计算的，在运行时无法更改。</p>
+
+<p>例如：如果将红色__混合__光源烘焙到光照贴图中，但在运行时将其颜色从红色变为绿色，则所有直接光照都会切换为绿色。但是，所有间接光照都被烘焙到光照贴图中，因此它仍然是红色的。此情况同样适用于在运行时移动混合光源：直接光照将跟随光源，但间接光照将保持在光源烘焙位置。</p>
+
+<p>如果仅对直接光照引入细微的变化（例如，仅稍微修改光源的色调或强度），则可以获得间接光照的优点并使光源看起来有一定程度的动态效果，但无需__实时__光源所需的额外处理时间。间接光照仍然不正确，但错误可能很细微，不会令人不适。这种方案对于没有预计算阴影信息的光源特别有效。为实现此方案，需要为光源禁用阴影，也可使用具有实时阴影的 Baked Indirect 模式。由于阴影遮罩是直接光照计算的一部分，因此移动此类光源会导致视觉上不一致，使阴影不能正确排列。</p>
+
+<p>以下视频举例说明了当混合光源移动到离开烘焙位置太远时会发生的情况。请注意，尽管对象移动很远，墙壁上的红色间接光仍保持原位：<a href="https://youtu.be/o6pVBqrj8-s">https://youtu.be/o6pVBqrj8-s</a></p>
+
+<p>以下视频举例说明了如何略微修改混合光源而不会导致间接光照出现明显不一致问题：<a href="https://youtu.be/XN6ya31gm1I">https://youtu.be/XN6ya31gm1I</a></p>
+
+<h4>技术细节</h4>
+
+<p>在使用混合光源的情况下，光路的最后一段（即从光源到表面的路径）也成为预计算的一部分。但是，Unity 仍然分别处理直接光照和间接光照。它将间接光照烘焙到光照贴图和光照探针中，然后在运行时对光照贴图和光照探针进行采样。间接光照通常为低频率，这意味着它看起来很平滑，但不包含高度细节化的阴影或光线过渡。因此，当阴影会产生高度可见的影响时，通过直接光照处理这些阴影。</p>
+
+<p>预计算和存储阴影的方式的差异反映在混合光源的各种子模式中：</p>
+
+<ul>
+<li><a href="LightMode-Mixed-BakedIndirect.html">Baked Indirect</a></li>
+<li><a href="LightMode-Mixed-ShadowmaskMode.html">Shadowmask</a></li>
+<li><a href="LightMode-Mixed-Subtractive.html">Subtractive</a></li>
+</ul>
+
+<p>阴影信息可预计算并存储在阴影遮罩中。阴影遮罩是一种纹理，它与相应的光照贴图共享相同的 UV 布局和分辨率。它存储每个纹理像素的最多四个光源的遮挡信息（因为纹理在当前 GPU 上限制为最多四个通道）。值的范围是 0 到 1，中间的值标记柔和阴影区域。</p>
+
+<p>如果启用了阴影遮罩，光照探针还会存储最多四个光源的遮挡信息。如果超过四个光源相交，则多余的光源会回退到烘焙光源。可使用<a href="GIVis.html">阴影遮罩重叠可视化</a>模式来检查此行为。此信息是预先计算的，因此 Unity 在阴影遮罩中存储的唯一阴影是从静态游戏对象投射到其他静态游戏对象上的阴影。这些阴影可能具有更平滑的边缘，提供比实时阴影贴图更好的质量，具体取决于光照贴图分辨率。由于每个混合光源在运行时保留其阴影遮罩通道贴图，因此动态游戏对象通过阴影贴图投射的阴影可与来自静态游戏对象的预计算阴影正确合成，从而避免诸如双阴影之类的不一致问题。</p>
+
+<p>静态游戏对象的阴影与动态游戏对象的阴影之间唯一可察觉的差异是预计算的阴影遮罩与运行时阴影贴图的分辨率和过滤差异，此外，预计算的阴影支持各种形式的面光源，因此柔和阴影可能具有更逼真的半影。</p>
+
+<figure>
+<img src="../uploads/Main/LightMode-Mixed-2.jpg" alt="在此图像中，烘焙阴影遮罩分辨率与实时阴影分辨率相似">
+<figcaption>在此图像中，烘焙阴影遮罩分辨率与实时阴影分辨率相似</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/LightMode-Mixed-3.jpg" alt="在此图像中，烘焙阴影遮罩分辨率远低于实时阴影分辨率相似。">
+<figcaption>在此图像中，烘焙阴影遮罩分辨率远低于实时阴影分辨率相似。</figcaption>
+</figure>
+
+<p>What <strong>Baked Indirect</strong> and <strong>Shadowmask</strong> have in common is that direct lighting is always computed in real time and added to the indirect lighting stored in the light map, so all Material effects that require a light direction continue to work. Dynamic GameObjects always cast shadows on other dynamic GameObjects via shadow maps within the <strong>Shadow Distance</strong> (<strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Quality</strong> category, and navigate to the <strong>Shadows</strong> section), if shadows are enabled for that Light.</p>
+
+<figure>
+<img src="../uploads/Main/LightMode-Mixed-4.png" alt="Baked Indirect 模式：仅预先计算间接光照">
+<figcaption><strong>Baked Indirect</strong> 模式：仅预先计算间接光照</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/LightMode-Mixed-5.png" alt="Shadowmask 和 Distance Shadowmask 模式：预先计算间接光照和直接遮挡">
+<figcaption><strong>Shadowmask</strong> 和 <strong>Distance Shadowmask</strong> 模式：预先计算间接光照和直接遮挡</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/LightMode-Mixed-6.png" alt="Subtractive 模式：预先计算所有光路">
+<figcaption><strong>Subtractive</strong> 模式：预先计算所有光路</figcaption>
+</figure>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2017–09–18 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 5.6 版中添加了“光照模式”</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LightMode-Realtime.html"></a></span><div class="tip">实时光照</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightMode-Mixed-BakedIndirect.html"></a></span><div class="tip">Baked Indirect 模式</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

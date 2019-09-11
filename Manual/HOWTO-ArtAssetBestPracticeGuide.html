@@ -1,0 +1,301 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="艺术资源最佳实践指南 - Unity Manual">
+<title>艺术资源最佳实践指南 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/HierarchyWrongRight.jpg">
+<meta name="description" content="Unity 支持来自各种程序或来源的纹理化 3D 模型。本简短指南由 Unity 游戏美术师和开发人员汇总而成，旨在帮助您在 Unity 项目中创建更好用、更高效的资源。">
+<meta property="og:description" content="Unity 支持来自各种程序或来源的纹理化 3D 模型。本简短指南由 Unity 游戏美术师和开发人员汇总而成，旨在帮助您在 Unity 项目中创建更好用、更高效的资源。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'HOWTO-ArtAssetBestPracticeGuide';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/HOWTO-ArtAssetBestPracticeGuide.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/HOWTO-ArtAssetBestPracticeGuide.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/HOWTO-ArtAssetBestPracticeGuide.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/HOWTO-ArtAssetBestPracticeGuide.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/HOWTO-ArtAssetBestPracticeGuide.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/HOWTO-ArtAssetBestPracticeGuide.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/HOWTO-ArtAssetBestPracticeGuide.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/HOWTO-ArtAssetBestPracticeGuide.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/HOWTO-ArtAssetBestPracticeGuide.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/HOWTO-ArtAssetBestPracticeGuide.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/HOWTO-ArtAssetBestPracticeGuide.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/HOWTO-ArtAssetBestPracticeGuide.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/HOWTO-ArtAssetBestPracticeGuide.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/HOWTO-ArtAssetBestPracticeGuide.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/HOWTO-ArtAssetBestPracticeGuide.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/HOWTO-ArtAssetBestPracticeGuide.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/HOWTO-ArtAssetBestPracticeGuide.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/HOWTO-ArtAssetBestPracticeGuide.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/HOWTO-ArtAssetBestPracticeGuide.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/HOWTO-ArtAssetBestPracticeGuide.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/HOWTO-ArtAssetBestPracticeGuide.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/HOWTO-ArtAssetBestPracticeGuide.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/HOWTO-ArtAssetBestPracticeGuide.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/HOWTO-ArtAssetBestPracticeGuide.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsHowTos.html">图形操作方法</a></li>
+<li>艺术资源最佳实践指南</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="HOWTO-Water.html"></a></span><div class="tip">Unity 中的水</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="HOWTO-importObject.html"></a></span><div class="tip">从 3D 建模软件导入模型</div>
+</div>
+</div></div>
+<h1>艺术资源最佳实践指南</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 支持来自各种程序或来源的纹理化 3D 模型。本简短指南由 Unity 游戏美术师和开发人员汇总而成，旨在帮助您在 Unity 项目中创建更好用、更高效的资源。</p>
+
+<h2>比例和单位</h2>
+
+<p>按比例工作对于光照和物理模拟都很重要。</p>
+
+<ul>
+<li>将您的系统单位和项目单位设置为公制 (Metric)，从而使您的软件与 Unity 保持一致。
+
+<ul>
+<li>请注意，不同的系统使用不同的单位；例如，Max 的系统单位默认值为英寸，而 Maya 中的系统单位默认值为厘米。</li>
+<li>Unity has different scaling for importing FBX vs. importing native 3D modeling software files. Make sure you check the <a href="FBXImporter-Model.html">FBX import scale settings</a>. For example, if you want to achieve <strong>Scale Factor</strong> = 1 and <strong>Object Transform Scale</strong> = 1, use one of the <a href="3D-formats.html">proprietary file formats</a> and set the <strong>Convert Units</strong> option.</li>
+<li>如果有疑问，请用场景导出“米立方体”以便在 Unity 中匹配。</li>
+</ul>
+</li>
+<li>动画帧率默认值可能在不同的包中不同。因此，最好在整个工作流程中设置一致的值（例如，设置为 30fps）。</li>
+</ul>
+
+<h2>文件和对象</h2>
+
+<ul>
+<li>为场景中的对象提供合理唯一的名称。这种做法有助于您找到项目中的特定网格并对其进行故障排除。</li>
+<li>避免使用特殊字符，如 <code>*()?"#$</code>。</li>
+<li>为对象和文件使用简单但具有描述性的名称，以方便以后进行复制。</li>
+<li>保持层级视图尽可能简单。</li>
+<li>对于 3D 应用程序中的大项目，请考虑在 Unity 项目的目录外部存放工作文件。这样通常可以节省运行更新和导入不必要数据的时间。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/HierarchyWrongRight.jpg" alt="Sensibly named objects help you find things quickly">
+<figcaption>Sensibly named objects help you find things quickly</figcaption>
+</figure>
+
+<h3>网格</h3>
+
+<ul>
+<li>使用高效的拓扑进行构建。仅必要时才使用多边形。</li>
+<li>如果几何体的多边形太多，请对几何体进行优化。许多角色模型需要由美术师进行智能优化甚至重建，特别是如果模型来自或基于：
+
+<ul>
+<li>3D 捕获数据</li>
+<li>Poser</li>
+<li>Zbrush</li>
+<li>专为渲染而设计的其他高密度 NURBS 样条曲线模型</li>
+</ul>
+</li>
+<li>成本允许的情况下，在建筑物、景观和大型结构中使用均匀分布的多边形将有助于分散光照并避免尴尬的扭结。</li>
+<li>避免十分狭长的三角形。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/GeomWrongRight.png" alt="阶梯帧率优化">
+<figcaption>阶梯帧率优化</figcaption>
+</figure>
+
+<p>用于构造对象的方法会对多边形的数量产生巨大影响，尤其是在未进行优化的情况下。在上图中，相同形状的网格在右侧有 156 个三角形，在左侧有 726 个三角形。726 个可能听起来不像是很多的多边形，但如果在一个关卡中使用 40 次，您将真正看到性能节省有多大。根据经验法则，通常应一切从简，仅在需要时添加细节。添加多边形总是比移除多边形更容易。</p>
+
+<h3>纹理</h3>
+
+<p>如果将纹理固定为 2 的幂（例如，512x512 或 256x1024），纹理将更有效，并且在构建时不需要重新缩放。您可以使用高达 4096x4096 像素，但 2048x2048 是许多显卡和平台上支持的最高像素。</p>
+
+<p>您可以在线搜索有关创建合理纹理的专家建议，但本指南中的一些准则可帮助您从项目中获得最有效的结果：</p>
+
+<ul>
+<li>在 Unity 项目外部处理高分辨率源文件（例如 .psd 或 Gimp 文件）。始终可以从源文件缩小尺寸，但反过来却不行。</li>
+<li>使用场景中所需的纹理分辨率输出（保存副本，例如 256x256 优化的 .png 或 .tga 文件）。您可以根据纹理的显示位置和贴图位置做出判断。</li>
+<li>将输出纹理文件存储在 Unity 项目中（例如，在 \Assets\textures 中）。</li>
+<li>确保 3D 工作文件引用相同的纹理，从而在保存或导出时保持一致性。</li>
+<li>充分利用纹理中的可用空间，但请注意不同材质需要使用相同纹理的不同部分。因此最终可多次使用或加载该纹理。</li>
+<li>对于可能需要不同着色器的 Alpha 和元素，请使用不同的纹理。例如，下面左侧的单个纹理已替换为下面右侧的三个较小纹理。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/Pack_WrongRight2.jpg" alt="One Texture (left) versus three Textures (right)">
+<figcaption>One Texture (left) versus three Textures (right)</figcaption>
+</figure>
+
+<ul>
+<li>利用无缝重复的平铺纹理。这样就能使用空间中重复的更高分辨率。</li>
+<li>从位图中删除容易引人注意的重复元素，并注意对比度。若要添加细节，请使用贴花和对象来分解重复元素。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/TexWrongRight.jpg" alt="Tiling Textures">
+<figcaption>Tiling Textures</figcaption>
+</figure>
+
+<ul>
+<li>Unity 负责处理用于输出平台的压缩，因此除非您的源文件已经是正确分辨率的 .jpg，否则最好为纹理使用无损格式。</li>
+<li>基于照片创建纹理页面时，将页面缩小为可重复的单个模块化部分。例如，不需要 12 个相同的窗户完全占据纹理空间。这意味着可为这一个窗户提供更多像素细节。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/BuildingWrongRight.jpg" alt="Less is more when it comes to windows">
+<figcaption>Less is more when it comes to windows</figcaption>
+</figure>
+
+<h3>材质</h3>
+
+<ul>
+<li>组织并命名场景中的材质。这样就能在导入材质后在 Unity 中更轻松地查找和编辑材质。</li>
+<li>可选择在 Unity 中通过以下任一方式创建材质：
+
+<ul>
+<li>&lt;模块名称&gt; - &lt;材质名称&gt;
+或</li>
+<li>&lt;纹理名称&gt;
+ 确保您知道自己想要哪一种方式。</li>
+</ul>
+</li>
+<li>本机资源包中的材质的设置不会全部导入 Unity：
+
+<ul>
+<li>通常支持 <strong>Diffuse Colour</strong>、<strong>Diffuse Texture</strong> 和 <strong>Names</strong>。</li>
+<li>无法识别或导入着色器模型、镜面反射、法线、其他次要纹理和物质材质设置。</li>
+</ul>
+</li>
+</ul>
+
+<h3>导入和导出</h3>
+
+<p>Unity 可使用两种类型的文件：保存的 3D 应用程序文件和导出的 3D 格式。决定使用哪种文件非常重要。有关更多信息，请参阅<a href="3D-formats.html">模型文件格式</a>。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2018–04–25 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-edit"> 2018–09–26 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="HOWTO-Water.html"></a></span><div class="tip">Unity 中的水</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="HOWTO-importObject.html"></a></span><div class="tip">从 3D 建模软件导入模型</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

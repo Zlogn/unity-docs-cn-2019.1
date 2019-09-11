@@ -1,0 +1,219 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="反射探针的类型 - Unity Manual">
+<title>反射探针的类型 - Unity Manual</title>
+<meta name="description" content="反射探针有三种基本类型，通过检视面板中的 Type 属性可进行相应选择（有关更多详细信息，请参阅组件参考页面）。">
+<meta property="og:description" content="反射探针有三种基本类型，通过检视面板中的 Type 属性可进行相应选择（有关更多详细信息，请参阅组件参考页面）。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'RefProbeTypes';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/RefProbeTypes.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/RefProbeTypes.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/RefProbeTypes.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/RefProbeTypes.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/RefProbeTypes.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/RefProbeTypes.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/RefProbeTypes.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/RefProbeTypes.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/RefProbeTypes.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/RefProbeTypes.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/RefProbeTypes.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/RefProbeTypes.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/RefProbeTypes.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/RefProbeTypes.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/RefProbeTypes.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/RefProbeTypes.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/RefProbeTypes.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/RefProbeTypes.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/RefProbeTypes.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/RefProbeTypes.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/RefProbeTypes.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/RefProbeTypes.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/RefProbeTypes.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/RefProbeTypes.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="LightingOverview.html">光照</a></li>
+<li><a href="GIIntro.html">全局光照</a></li>
+<li><a href="ReflectionProbes.html">反射探针</a></li>
+<li>反射探针的类型</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ReflectionProbes.html"></a></span><div class="tip">反射探针</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UsingReflectionProbes.html"></a></span><div class="tip">使用反射探针</div>
+</div>
+</div></div>
+<h1>反射探针的类型</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>反射探针有三种基本类型，通过检视面板中的 <em>Type</em> 属性可进行相应选择（有关更多详细信息，请参阅<a href="class-ReflectionProbe.html">组件参考</a>页面）。</p>
+
+<ul>
+<li>
+<strong>烘焙 (Baked)</strong> 探针可存储 Editor 中生成（烘焙）的反射立方体贴图。可以通过单击 Reflection Probe（反射探针）检视面板底部的 <em>Bake</em> 按钮或 <a href="GlobalIllumination.html">Lighting 窗口</a>中的 <em>Build</em> 按钮来触发烘焙。如果在 Lighting 窗口中启用了 <em>Auto_，则在 Scene 视图中放置对象时，烘焙探针将自动更新。烘焙探针的反射只能显示检视面板中标记为 </em>Reflection Probe Static_ 的对象。此设置向 Unity 指示这些对象不会在运行时移动。</li>
+<li>
+<strong>实时 (Realtime)</strong> 探针在运行时在播放器中而不是在 Editor 中创建立方体贴图。这意味着反射不仅限于静态对象，而且可以实时更新以显示场景中的变化。但是，刷新探针的视图需要相当长的处理时间，因此谨慎管理更新就显得十分重要。Unity 允许从脚本中触发更新，以便能够准确控制更新的发生时间。此外，还有一个选项是应用_时间切片_来探测更新，使更新可在几帧内逐渐发生。</li>
+<li>还可使用<strong>自定义 (Custom)</strong> 探针。这些探针允许在 Editor 中烘焙视图，就像烘焙探针一样，还能为反射提供自定义的立方体贴图。自定义探针无法在运行时更新。</li>
+</ul>
+
+<p>下面将详细说明这三种类型。</p>
+
+<h2>烘焙和自定义反射探针</h2>
+
+<p><strong>烘焙</strong>反射探针是在 Unity Editor 中捕获反射立方体贴图并存储以供后续在播放器中使用的探针（有关详细信息，请参阅<a href="ReflectionProbes.html">反射探针简介</a>）。捕获过程完成后，反射将被“冻结”，因此烘焙探针无法响应移动对象在场景中引起的运行时变化。但是，与实时探针（能响应变化）相比，烘焙探针的处理开销要低得多，并且在许多用途中是可接受的。例如，如果只有一个移动的反射对象，那么它只需要反射其静态环境。</p>
+
+<h3>使用烘焙探针</h3>
+
+<p>应将探针的 <em>Type</em> 属性设置为 <em>Baked</em> 或 <em>Custom</em> 以将其用作烘焙探针（请参阅下面的自定义探针提供的其他功能）。</p>
+
+<p>烘焙探针捕获的反射只能包含标记为 <em>Reflection Probe Static</em> 的场景对象（使用检视面板左上角的 <em>Static</em> 菜单标记所有对象）。可以使用 <em>Culling Mask</em> 和 <em>Clipping Planes</em> 属性进一步优化包含在反射立方体贴图中的对象；具体的工作方式与<a href="class-Camera.html">摄像机</a>的工作方式相同（探针本质上类似于通过旋转观察六个立方体贴图面每一面的摄像机）。</p>
+
+<p>当 <em>Auto</em> 选项启用时（从 <a href="GlobalIllumination.html">Lighting 窗口</a> 中设置），烘焙反射将在对象放置到场景中时自动更新。如果不使用自动烘焙，则需要单击反射探针检视面板中的 <em>Bake</em> 按钮以更新探针。（Lighting 窗口中的 <em>Build</em> 按钮也将触发探针更新。）</p>
+
+<p>无论使用自动烘焙还是手动烘焙，烘焙过程都将继续在 Editor 中工作时异步进行。但是，如果移动任何静态对象、更改其材质或以其他方式改变其视觉外观，则会重新启动烘焙过程。</p>
+
+<h2>自定义探针</h2>
+
+<p>默认情况下，自定义探针的工作方式与烘焙探针的工作方式相同，但自定义探针还有其他选项可以更改此行为。</p>
+
+<p>自定义探针检视面板上的 <em>Dynamic Objects</em> 属性允许未标记为 <em>Reflection Probe Static</em> 的对象包含在反射立方体贴图中。但是请注意，这些对象的位置在烘焙时仍然会在反射中“冻结”。</p>
+
+<p><em>Cubemap</em> 属性允许将自定义的立方体贴图分配给探针，从而使探针完全独立于可从其视点“看到”的对象。可以使用此属性来设置从 3D 建模应用程序生成的天空盒或立方体贴图作为反射源。</p>
+
+<h2>实时探针</h2>
+
+<p>烘焙探针可用于许多用途，并具有良好的运行时性能，但它们的缺点是不能在播放器中实时更新。这意味着对象可在场景中移动但不能让它们的反射随之移动。如果这种问题带来了太多限制，可以使用<strong>实时</strong>探针，它们会在运行时更新反射立方体贴图。这种效果会带来更高的处理开销，但可提供更强的真实感。</p>
+
+<h3>使用实时探针</h3>
+
+<p>要使探针在运行时更新，应在<a href="class-ReflectionProbe.html">反射探针</a>检视面板中将其 <em>Type</em> 属性设置为 <em>Realtime</em>。不需要将对象标记为 <em>Reflection Probe Static</em> 来捕获它们的反射（就像使用烘焙探针一样）。但是，可以使用 <em>Culling Mask</em> 和 <em>Clipping Planes</em> 属性在反射立方体贴图中选择性地排除对象；具体的工作方式与<a href="class-Camera.html">摄像机</a>的工作方式相同（探针本质上类似于通过旋转观察六个立方体贴图面每一面的摄像机）。</p>
+
+<p>在 Editor 中，实时探针与烘焙探针具有大致相同的工作流程，但它们的渲染速度往往更快。当 <em>Auto</em> 选项启用时（从 <a href="GlobalIllumination.html">Lighting 窗口</a> 中设置），反射将在对象放置到场景中时自动更新。如果不使用自动烘焙，则需要单击反射探针检视面板中的 <em>Bake</em> 按钮以更新探针。（Lighting 窗口中的 <em>Build</em> 按钮也将触发探针更新。）</p>
+
+<p>无论使用自动烘焙还是手动烘焙，烘焙过程都将继续在 Editor 中工作时异步进行。但是，如果移动任何静态对象、更改其材质或以其他方式改变其视觉外观，则会重新启动烘焙过程。</p>
+
+<p><strong>注意：</strong>目前，实时探针仅在 <em>Reflection Probe Static</em> 对象移动或改变其外观时才会更新在 Scene 视图中的反射。这意味着，即使移动的动态对象出现在反射中，这些对象也不会触发更新。应该从 <a href="GlobalIllumination.html">Lighting 窗口</a>的 <em>Build</em> 按钮弹出窗口中选择 <em>Bake Reflection Probes</em> 选项，从而在动态对象改变时更新反射。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ReflectionProbes.html"></a></span><div class="tip">反射探针</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UsingReflectionProbes.html"></a></span><div class="tip">使用反射探针</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

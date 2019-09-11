@@ -1,0 +1,274 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="使用采样器状态 - Unity Manual">
+<title>使用采样器状态 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/SamplerStates1.jpg">
+<meta name="description" content="大多数情况下，在着色器中采样纹理时，纹理采样状态应来自纹理设置；本质上，纹理和采样器会耦合在一起。使用 DX9 风格的着色器语法时，这是默认行为：">
+<meta property="og:description" content="大多数情况下，在着色器中采样纹理时，纹理采样状态应来自纹理设置；本质上，纹理和采样器会耦合在一起。使用 DX9 风格的着色器语法时，这是默认行为：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'SL-SamplerStates';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-SamplerStates.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-SamplerStates.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-SamplerStates.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-SamplerStates.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-SamplerStates.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-SamplerStates.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-SamplerStates.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-SamplerStates.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-SamplerStates.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-SamplerStates.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/SL-SamplerStates.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/SL-SamplerStates.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/SL-SamplerStates.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/SL-SamplerStates.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-SamplerStates.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-SamplerStates.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-SamplerStates.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-SamplerStates.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-SamplerStates.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-SamplerStates.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-SamplerStates.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-SamplerStates.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-SamplerStates.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-SamplerStates.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="SL-Reference.html">着色器参考</a></li>
+<li><a href="SL-ShaderPrograms.html">编写顶点和片元着色器</a></li>
+<li>使用采样器状态</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-DataTypesAndPrecision.html"></a></span><div class="tip">着色器数据类型和精度</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-Shader.html"></a></span><div class="tip">ShaderLab 语法</div>
+</div>
+</div></div>
+<h1>使用采样器状态</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>耦合的纹理和采样器</h2>
+
+<p>大多数情况下，在着色器中采样纹理时，纹理采样状态应来自<a href="class-TextureImporter.html">纹理设置</a>；本质上，纹理和采样器会耦合在一起。使用 DX9 风格的着色器语法时，这是默认行为：</p>
+
+<pre><code>sampler2D _MainTex;
+// ...
+half4 color = tex2D(_MainTex, uv);
+</code></pre>
+
+<p>使用 HLSL 关键字 sampler2D、sampler3D 和 samplerCUBE 可声明纹理和采样器。</p>
+
+<p>大部分情况下，这是您想要的结果，而且在较旧的图形 API (OpenGL ES) 中，这是唯一受支持的选项。</p>
+
+<h2>单独的纹理和采样器</h2>
+
+<p>很多图形 API 和 GPU 都允许使用的采样器数量少于纹理，而耦合的纹理+采样器语法可能不允许编写更复杂的着色器。例如，Direct3D 11 允许在单个着色器中最多使用 128 个纹理，但最多仅允许使用 16 个采样器。</p>
+
+<p>Unity 允许使用 DX11 风格的 HLSL 语法来声明纹理和采样器，但需要通过一个特殊的命名约定来让它们匹配：名称为“sampler”+TextureName 格式的采样器将从该纹理中获取采样状态。</p>
+
+<p>以上部分中的着色器代码片段可以用 DX11 风格的 HLSL 语法重写，并且也会执行相同的操作：</p>
+
+<pre><code>Texture2D _MainTex;
+SamplerState sampler_MainTex; //"sampler"+"_MainTex"
+// ...
+half4 color = _MainTex.Sample(sampler_MainTex, uv);
+</code></pre>
+
+<p>但这样一来，就可以编写着色器来重复使用其他纹理中的采样器，同时采样多个纹理。在以下示例中，采样了三个纹理，但仅一个采样器用于所有这些纹理：</p>
+
+<pre><code>Texture2D _MainTex;
+Texture2D _SecondTex;
+Texture2D _ThirdTex;
+SamplerState sampler_MainTex; //"sampler"+"_MainTex"
+// ...
+half4 color = _MainTex.Sample(sampler_MainTex, uv);
+color += _SecondTex.Sample(sampler_MainTex, uv);
+color += _ThirdTex.Sample(sampler_MainTex, uv);
+</code></pre>
+
+<p>但是请注意，DX11 风格的 HLSL 语法在某些较旧的平台（例如，OpenGL ES 2.0）上无效，请参阅<a href="SL-ShadingLanguage.html">着色语言</a>以了解详细信息。您可能希望指定 <code>#pragma target 3.5</code>（请参阅<a href="SL-ShaderCompileTargets.html">着色器编译目标</a>）以避免较旧的平台使用着色器。</p>
+
+<p>Unity 提供了一些着色器宏帮助您使用这种“单独采样器”方法来声明和采样纹理，请参阅<a href="SL-BuiltinMacros.html">内置宏</a>。以上示例可以采用所述的宏重写为下列形式：</p>
+
+<pre><code>UNITY_DECLARE_TEX2D(_MainTex);
+UNITY_DECLARE_TEX2D_NOSAMPLER(_SecondTex);
+UNITY_DECLARE_TEX2D_NOSAMPLER(_ThirdTex);
+// ...
+half4 color = UNITY_SAMPLE_TEX2D(_MainTex, uv);
+color += UNITY_SAMPLE_TEX2D_SAMPLER(_SecondTex, _MainTex, uv);
+color += UNITY_SAMPLE_TEX2D_SAMPLER(_ThirdTex, _MainTex, uv);
+</code></pre>
+
+<p>以上代码将在 Unity 支持的所有平台上进行编译，但会在 DX9 等旧平台上回退到使用三个采样器。</p>
+
+<h2>内联采样器状态</h2>
+
+<p>除了能识别名为“sampler”+TextureName 的 HLSL SamplerState 对象，Unity 还能识别采样器名称中的某些其他模式。这对于直接在着色器中声明简单硬编码采样状态很有用。例如：</p>
+
+<pre><code>Texture2D _MainTex;
+SamplerState my_point_clamp_sampler;
+// ...
+half4 color = _MainTex.Sample(my_point_clamp_sampler, uv);
+</code></pre>
+
+<p>名称 “my_point_clamp_sampler”将被识别为应该使用点（距离最近）纹理过滤和钳制纹理包裹模式的采样器。</p>
+
+<p>采样器名称被识别为“内联”采样器状态（全都不区分大小写）：</p>
+
+<p>*“Point”、“Linear”或“Trilinear”（必需）设置纹理过滤模式。</p>
+
+<p>*“Clamp”、“Repeat”、“Mirror”或“MirrorOnce”（必需）设置纹理包裹模式。</p>
+
+<pre><code>* 可根据每个轴 (UVW) 来指定包裹模式，例如"ClampU_RepeatV"。
+</code></pre>
+
+<p>*“Compare”（可选）设置用于深度比较的采样器；与 HLSL SamplerComparisonState 类型和 SampleCmp/SampleCmpLevelZero 函数配合使用。</p>
+
+<p>以下是分别使用 <code>sampler_linear_repeat</code> 和 <code>sampler_point_repeat</code> 采样器状态进行纹理采样的示例，说明了如何通过名称控制过滤模式：</p>
+
+<figure>
+<img src="../uploads/Main/SamplerStates1.jpg" alt="">
+</figure>
+
+<p>以下是分别使用 <code>SmpClampPoint</code>、<code>SmpRepeatPoint</code>、<code>SmpMirrorPoint</code>、<code>SmpMirrorOncePoint</code> 和 <code>Smp_ClampU_RepeatV_Point</code> 采样器状态的示例，说明了如何通过名称控制包裹模式。在上一个示例中，为水平轴 (U) 和垂直轴 (V) 设置了不同的包裹模式。在任何情况下，纹理坐标的范围都是从 –2.0 到 +2.0。</p>
+
+<figure>
+<img src="../uploads/Main/SamplerStates2.png" alt="">
+</figure>
+
+<p>就像单独的纹理+采样器语法一样，某些平台不支持内联采样器状态。目前在 Direct3D 11/12、PS4、XboxOne 和 Metal 上实现了内联采样器状态。</p>
+
+<p>请注意，大部分移动端 GPU/API 上不支持“MirrorOnce”纹理包裹模式，并将在不支持的情况下回退到 Mirror 模式。
+<br>
+<br></p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–06–01 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history"><a href="https://docs.unity3d.com/2017.1/Documentation/Manual/30_search.html?q=newin20171">2017.1</a> 中的新功能 <span class="search-words">NewIn20171</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-DataTypesAndPrecision.html"></a></span><div class="tip">着色器数据类型和精度</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-Shader.html"></a></span><div class="tip">ShaderLab 语法</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

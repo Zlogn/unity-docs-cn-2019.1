@@ -1,0 +1,472 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Unity Google VR 视频异步重投影 (Video Async Reprojection) - Unity Manual">
+<title>Unity Google VR 视频异步重投影 (Video Async Reprojection) - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/GoogleVRVideoAsyncReprojection0.png">
+<meta name="description" content="异步重投影视频是一个层（称为__外部表面__），应用程序可以使用该层将视频帧直接馈送到异步重投影系统。使用该 API 的主要优点包括：">
+<meta property="og:description" content="异步重投影视频是一个层（称为__外部表面__），应用程序可以使用该层将视频帧直接馈送到异步重投影系统。使用该 API 的主要优点包括：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'VRDevices-GoogleVRVideoAsyncReprojection';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/VRDevices-GoogleVRVideoAsyncReprojection.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/VRDevices-GoogleVRVideoAsyncReprojection.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/VRDevices-GoogleVRVideoAsyncReprojection.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/VRDevices-GoogleVRVideoAsyncReprojection.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/VRDevices-GoogleVRVideoAsyncReprojection.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/VRDevices-GoogleVRVideoAsyncReprojection.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/VRDevices-GoogleVRVideoAsyncReprojection.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/VRDevices-GoogleVRVideoAsyncReprojection.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/VRDevices-GoogleVRVideoAsyncReprojection.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/VRDevices-GoogleVRVideoAsyncReprojection.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/VRDevices-GoogleVRVideoAsyncReprojection.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/VRDevices-GoogleVRVideoAsyncReprojection.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/VRDevices-GoogleVRVideoAsyncReprojection.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/VRDevices-GoogleVRVideoAsyncReprojection.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/VRDevices-GoogleVRVideoAsyncReprojection.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/VRDevices-GoogleVRVideoAsyncReprojection.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/VRDevices-GoogleVRVideoAsyncReprojection.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/VRDevices-GoogleVRVideoAsyncReprojection.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/VRDevices-GoogleVRVideoAsyncReprojection.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/VRDevices-GoogleVRVideoAsyncReprojection.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/VRDevices-GoogleVRVideoAsyncReprojection.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/VRDevices-GoogleVRVideoAsyncReprojection.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/VRDevices-GoogleVRVideoAsyncReprojection.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/VRDevices-GoogleVRVideoAsyncReprojection.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="XR.html">XR</a></li>
+<li><a href="XR-SDK_overviews.html">XR SDK</a></li>
+<li><a href="googlevr_sdk_overview.html">Google VR</a></li>
+<li>Unity Google VR 视频异步重投影 (Video Async Reprojection)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="googlevr_features_overview.html"></a></span><div class="tip">Google VR 功能概述</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="googlevr_resources.html"></a></span><div class="tip">Google VR 资源和故障排除</div>
+</div>
+</div></div>
+<h1>Unity Google VR 视频异步重投影 (Video Async Reprojection)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+<!-- XR overhaul - https://trello.com/c/Qw7imxOL -->
+
+<h2>什么是视频异步重投影？</h2>
+
+<p>异步重投影视频是一个层（称为__外部表面__），应用程序可以使用该层将视频帧直接馈送到异步重投影系统。使用该 API 的主要优点包括：</p>
+
+<p>1.如果没有该 API，则会对视频进行一次采样以渲染到应用程序的颜色缓冲区中，然后再次对颜色缓冲区进行采样以执行失真校正。这样就引入了双重采样瑕疵。外部表面将视频直接传递给 EDS 合成器，因此只对其采样一次，从而可提高视频的画质。</p>
+
+<p>2.使用外部表面 API 时，视频帧率与应用程序帧率分离。应用程序可能需要 1 秒钟来渲染新帧，唯一的结果是用户在移动头部时会看到黑条，而视频将继续正常播放。这样应该可以显著减少丢弃的视频帧，并保持 AV 同步</p>
+
+<p>3.应用程序可以标记自己希望播放 DRM 视频，然后 API 将创建一个受保护的路径来显示受保护的视频并维持异步重投影帧率。</p>
+
+<h2>已知问题：</h2>
+
+<p>1.使用视频异步重投影时，摄像机必须从原点 (0,0,0) 开始。如果摄像机的位置未设置为 0,0,0，可能会出现错误。</p>
+
+<p>2.异步重投影没有可公开访问的 C# 接口。公共 API 仅限于 Java。</p>
+
+<h2>启用异步视频重投影</h2>
+
+<p>异步视频重投影是 Daydream VR 设备设置的一部分。</p>
+
+<figure>
+<img src="../uploads/Main/GoogleVRVideoAsyncReprojection0.png" alt="将 Daydream 添加到 Virtual Reality SDKs 列表设置中">
+<figcaption>将 Daydream 添加到 Virtual Reality SDKs 列表设置中</figcaption>
+</figure>
+
+<p>单击 Daydream 旁边的灰色箭头，然后选中 <strong>Enable Video Surface</strong> 复选框，即可启用异步视频重投影功能</p>
+
+<figure>
+<img src="../uploads/Main/GoogleVRVideoAsyncReprojection1.png" alt="Virtual Reality SDKs 列表 Daydream 设置">
+<figcaption>Virtual Reality SDKs 列表 Daydream 设置</figcaption>
+</figure>
+
+<p>仅当需要对所有内容进行内存保护时，才选中 <strong>Use Protected Memory</strong> 选项，因为启用此选项意味着会在应用程序的整个生命周期内启用。</p>
+
+<figure>
+<img src="../uploads/Main/GoogleVRVideoAsyncReprojection2.png" alt="选中 Enable Video Surface 复选框来启用异步视频重投影">
+<figcaption>选中 Enable Video Surface 复选框来启用异步视频重投影</figcaption>
+</figure>
+
+<h2>API 文档</h2>
+
+<p>要利用 Google VR API，必须扩展 UnityPlayerActivity。有关更多信息，请参阅有关<a href="AndroidUnityPlayerActivity.html">扩展 UnityPlayerActivity</a> 的文档。</p>
+
+<p>Java 插件无法直接访问场景中的对象，因此需要为 C# 代码提供一个简单的 API，以便将一个变换传递给 Java 端并告诉 Java 代码何时开始渲染。</p>
+
+<p>__注意：__以下代码不完整。代码中不包含视频播放器的实现，因为这是特定于客户端的实现细节。代码中也没有任何播放控件，而这些控件必须实现，因为场景中的对象以及这些对象上的操作需要调用 Java。</p>
+
+<p>有关在 Unity 中使用 Java 和扩展 UnityPlayerActivity 的信息，请参阅关于<a href="android.html">在 Unity 中进行 Android 开发</a>的文档。</p>
+
+<p>有关 Google 视频异步重投影系统的信息，请参阅有关<a href="https://developers.google.com/vr/reference/android-ndk/gvr-ndk-rendering#using_video_viewports">视频视口 (Video Viewports)</a> 的 Android Developer Network 文档。</p>
+
+<h3>Java 示例代码：</h3>
+
+<pre><code>package com.unity3d.samplevideoplayer;
+
+import com.unity3d.player.GoogleVrVideo;
+
+import com.unity3d.player.GoogleVrApi;
+
+import android.app.Activity;
+
+import android.os.Bundle;
+
+import android.util.Log;
+
+import android.view.Surface;
+
+public class GoogleAVRPlayer implements GoogleVrVideo.GoogleVrVideoCallbacks {
+
+    private static final String TAG = GoogleAVRPlayer.class.getSimpleName();
+
+    private MyOwnVideoPlayer videoPlayer;
+
+    private boolean canPlayVideo = false;
+
+    private boolean isSceneLoaded = false;
+
+    // 提供给 C# 代码的 API，用于处理视频系统的
+
+    // 初始化。
+
+    public void initVideoPlayer(UnityPlayerActivity activity) {
+
+     //初始化视频播放器和所需的任何其他支持…
+
+     // 将此实例注册为 Google VR 视频监听器，从而获取
+
+     // 生命周期和控制回调。
+
+         GoogleVrVideo gvrv = GoogleVrApi.getGoogleVrVideo();
+
+         if (gvrv != null) gvrv.registerGoogleVrVideoListener(this); 
+
+    }
+
+ 
+
+    //提供给 C# 代码的 API，用于启动播放视频的
+
+    // 视频系统。
+
+    public void play()
+
+    {
+
+           if (canPlayVideo &amp;&amp; videoPlayer != null &amp;&amp; videoPlayer.isPaused())
+
+            videoPlayer.play();
+
+    }
+
+    //提供给 C# 代码的 API，用于停止播放视频的
+
+    // 视频系统。
+
+    public void pause()
+
+    {
+
+            if (canPlayVideo &amp;&amp; videoPlayer != null &amp;&amp; !videoPlayer.isPaused())
+
+            videoPlayer.pause();        
+
+    }
+
+    // Google VR 视频监听器
+
+    @Override
+
+    public void onSurfaceAvailable(Surface surface) {
+
+     // Google VR 有一个可供渲染的表面。
+
+     //根据需要将此表面与视频播放器结合使用。
+
+         if (videoPlayer != null){
+
+            videoPlayer.setSurface(surface);
+
+            canPlayVideo = true;
+
+            if (isSceneLoaded)
+
+            {
+
+                videoPlayer.play();
+
+            }
+
+          }
+
+    }
+
+    @Override
+
+    public void onSurfaceUnavailable() {
+
+     //Google VR 视频表面即将消失。您需要将其
+
+     // 从其持有者中移除并停止视频播放器。
+
+        if (videoPlayer != null){
+
+            videoPlayer.pause();
+
+            canPlayVideo = false;
+
+          }
+
+     }
+
+    @Override
+
+    public void onFrameAvailable() {
+
+     //处理 Google VR 帧可用的回调
+
+    }
+}
+
+</code></pre>
+
+<h3>Unity C# 示例代码：</h3>
+
+<pre><code>using System;
+
+using System.Collections;
+
+using System.Collections.Generic;
+
+using System.Text;
+
+using UnityEngine;
+
+public class GoogleVRVideo : MonoBehaviour {
+
+ private AndroidJavaObject googleAvrPlayer = null;
+
+ private AndroidJavaObject googleVrVideo = null;
+
+ void Awake()
+
+ {
+
+    if (googleAvrPlayer == null)
+
+    {
+
+      googleAvrPlayer = new AndroidJavaObject("com.unity3d.samplevideoplayer.GoogleAVRPlayer");
+
+    }
+
+    AndroidJavaObject googleVrApi = new AndroidJavaClass("com.unity3d.player.GoogleVrApi");
+
+    if (googleVrApi != null) googleVrVideo = googleVrApi.CallStatic&lt;AndroidJavaObject&gt;("getGoogleVrVideo");
+
+ }
+
+ void Start()
+
+ {
+
+  if (googleVrVideo != null)
+
+  {
+
+   // 我们需要告诉 Google VR 该视频表面在世界空间中
+
+   // 的位置。由于没有办法从 Java 获取该信息，
+
+   // 我们可以在此处执行此操作，然后将算出的矩阵向下传递给
+
+   // 我们在 UnityPlayerActivity 子类上公开的 API。
+
+   Matrix4x4 wm = transform.localToWorldMatrix;
+   
+   wm = Camera.main.transform.parent.worldToLocalMatrix * wm;
+   
+   wm = wm * Matrix4x4.Scale(new Vector3(0.5f, 0.5f, 1));
+
+
+   //将 4x4 行有序矩阵转换为 16 个元素列的有序
+
+   // 平面数组。换位是为了确保矩阵符合
+
+   // Google 使用的顺序，我们将其展平可以
+
+   // 更轻松地通过 JNI 边界。复杂之处在于必须
+
+   //在 Java 端将其转换回 4x4 矩阵。
+
+   float[] matrix = new float[16];
+
+   for (int i = 0; i &lt; 4; i++)
+
+   {
+
+    for (int j = 0; j &lt; 4; j++)
+
+    {
+
+     matrix[i * 4 + j] = wm[j,i];
+
+    }
+
+   }
+
+   googleVrVideo.Call("setVideoLocationTransform", matrix);  
+
+  }
+
+  
+
+  if (googleAvrPlayer != null)
+
+  {
+
+    AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+
+    AndroidJavaObject jo = jc.GetStatic&lt;AndroidJavaObject&gt;("currentActivity");
+
+    googleAvrPlayer.Call("initVideoPlayer", jo);
+
+    googleAvrPlayer.Call("play");
+
+  }
+
+ }
+
+}
+
+</code></pre>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2017–08–03 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li><span class="page-history">于 <a href="https://docs.unity3d.com/2017.2/Documentation/Manual/30_search.html?q=newin20172">2017.2</a> 添加 <span class="search-words">NewIn20172</span></span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="googlevr_features_overview.html"></a></span><div class="tip">Google VR 功能概述</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="googlevr_resources.html"></a></span><div class="tip">Google VR 资源和故障排除</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

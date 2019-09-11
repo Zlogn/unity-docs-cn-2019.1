@@ -1,0 +1,234 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Unity Ads - Unity Manual">
+<title>Unity Ads - Unity Manual</title>
+<meta name="description" content="Created by the leading mobile game engine, the Unity Ads SDK provides a comprehensive monetization framework for your game, whether you develop in Unity, xCode, or Android Studio. It streamlines ads, in-app purchasing and analytics, using cutting edge machine learning to maximize your revenue while maintaining a great player experience. Getting started is simple.">
+<meta property="og:description" content="Created by the leading mobile game engine, the Unity Ads SDK provides a comprehensive monetization framework for your game, whether you develop in Unity, xCode, or Android Studio. It streamlines ads, in-app purchasing and analytics, using cutting edge machine learning to maximize your revenue while maintaining a great player experience. Getting started is simple.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UnityAds';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityAds.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityAds.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityAds.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityAds.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityAds.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityAds.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityAds.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityAds.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityAds.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityAds.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UnityAds.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UnityAds.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UnityAds.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UnityAds.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityAds.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityAds.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityAds.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityAds.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityAds.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityAds.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityAds.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityAds.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityAds.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityAds.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li>Unity Ads</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="OrgsWorkingwithUnityTeams.html"></a></span><div class="tip">使用 Unity Teams</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAdsUnityIntegration.html"></a></span><div class="tip">Unity developer integration</div>
+</div>
+</div></div>
+<h1>Unity Ads</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Created by the leading mobile game engine, the Unity Ads SDK provides a comprehensive monetization framework for your game, whether you develop in Unity, xCode, or Android Studio. It streamlines ads, in-app purchasing and analytics, using cutting edge machine learning to maximize your revenue while maintaining a great player experience. Getting started is simple.</p>
+
+<p>This page illustrates the journey towards maximizing your revenue with Unity Ads. Follow step by step, or jump to the integration step that best fits your stage of development.</p>
+
+<p><strong>Note</strong>: Many of the resources referenced here redirect to the <a href="https://unityads.unity3d.com/help/monetization/getting-started">core Unity Ads</a> documentation. </p>
+
+<h2>要求</h2>
+
+<p>Unity recommends always using the latest <a href="https://assetstore.unity.com/packages/add-ons/services/unity-ads-66123">Ads SDK</a>. The APIs discussed in many of these articles are only available in SDK versions 3.0 and higher.</p>
+
+<h2>准备</h2>
+
+<p>If you are new to Unity Ads, follow these basic steps before implementation:</p>
+
+<ol>
+<li>
+<a href="https://id.unity.com/">Register</a> a Unity Developer (UDN) account on the Developer Dashboard.</li>
+<li>
+<a href="https://unityads.unity3d.com/help/monetization/placements">Configure Placements</a> to receive monetization content.</li>
+<li>Download and import <a href="https://assetstore.unity.com/packages/add-ons/services/unity-ads-66123">the latest Unity Ads SDK</a>.</li>
+<li>Review our <a href="https://unityads.unity3d.com/help/resources/best-practices">Best practices guide</a>, to better understand your implementation strategy before diving in.</li>
+</ol>
+
+<h2>实现</h2>
+
+<p>The following implementation resources are for games that are made with Unity:</p>
+
+<ol>
+<li>
+<a href="https://unityads.unity3d.com/help/unity/integration-guide-unity#basic-implementation">Integrate</a> Unity Ads using the Monetization API.</li>
+<li>Expand your basic ads integration:<br>i. <a href="https://unityads.unity3d.com/help/unity/integration-guide-unity#implementing-rewarded-ads">Reward players</a> for watching ads.<br>ii. <a href="https://unityads.unity3d.com/help/unity/integration-guide-unity#implementing-banner-ads">Incorporate banner ads</a>.<br>iii. <a href="https://unityads.unity3d.com/help/beta/ar-ads">Incorporate Augmented Reality</a> (AR) ads.<br>
+</li>
+<li>If your game uses in-app purchasing, integrate <a href="IAPPromo.html">IAP Promo</a>.<br>i. If you use Unity IAP, <a href="IAPPromoIntegration.html">click here </a>. <br>ii. If you use a custom IAP implementation, <a href="https://unityads.unity3d.com/help/unity/purchasing-integration-unity">click here</a>.<br>iii. (Optional) Customize your Promos with <a href="https://unityads.unity3d.com/help/beta/native-promo">Native Promo</a> assets.</li>
+<li>Convert your Ads and Promo Placements into <a href="https://unityads.unity3d.com/help/monetization/placements#personalized-placements">Personalized Placements</a> to take advantage of Unity’s revenue optimization features.</li>
+</ol>
+
+<h2>Manage, analyze, optimize</h2>
+
+<p>Beyond implementation, Unity empowers you to fine-tune your strategy:</p>
+
+<ul>
+<li>The <a href="https://operate.dashboard.unity3d.com/">Unity Developer Dashboard</a> allows you to <a href="https://unityads.unity3d.com/help/resources/dashboard-guide">manage your ads implementation</a>. Use the dashboard’s <a href="https://unityads.unity3d.com/help/resources/statistics">robust metrics tools</a> to adopt a data-driven approach to fine-tuning your monetization strategy.</li>
+<li>Learn how to <a href="https://unityads.unity3d.com/help/resources/dashboard-guide#ad-content-filters">filter your ads</a> to target your audience.</li>
+<li>Don’t miss out on revenue; be sure to <a href="https://unityads.unity3d.com/help/resources/dashboard-guide#platforms">add your Store Details</a> once your game is live.</li>
+<li>
+<a href="UnityAnalyticsStandardEvents.html">Implement Standard Events</a> to help Unity’s machine learning model optimize monetization based on your game’s economy.</li>
+<li>Sign up for <a href="https://unityads.unity3d.com/help/resources/revenue-and-payment#automated-payouts">automated payouts</a>.</li>
+</ul>
+
+<h2>Support</h2>
+
+<p>Have questions? We’re here to help! The following resources can assist in addressing your issue:</p>
+
+<ul>
+<li>Browse the Unity Ads <a href="https://forum.unity.com/forums/unity-ads.67/">community forums</a>.</li>
+<li>Search the Unity Ads <a href="https://support.unity3d.com/hc/en-us/sections/201163835-Ads-Publishers">monetization Knowledge Base</a>.</li>
+<li>
+<a href="mailto:unityads-support@unity3d.com">Contact Unity Ads support</a> with your inquiry.</li>
+</ul>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–11–13 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="OrgsWorkingwithUnityTeams.html"></a></span><div class="tip">使用 Unity Teams</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAdsUnityIntegration.html"></a></span><div class="tip">Unity developer integration</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

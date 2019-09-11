@@ -1,0 +1,240 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="动态光照 - Unity Manual">
+<title>动态光照 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/BelievableVisualsLPPVCapsule.jpg">
+<meta name="description" content="动态照亮的游戏对象（尤其是大型游戏对象）比静态对象需要更多的技巧。如果游戏对象在场景中改变位置，则通常需要动态光照，因此预计算的光照不适用。但是，动态游戏对象的处理必须满足某些限制。要提高动态游戏对象光照的质量，请注意以下方面：">
+<meta property="og:description" content="动态照亮的游戏对象（尤其是大型游戏对象）比静态对象需要更多的技巧。如果游戏对象在场景中改变位置，则通常需要动态光照，因此预计算的光照不适用。但是，动态游戏对象的处理必须满足某些限制。要提高动态游戏对象光照的质量，请注意以下方面：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'BestPracticeMakingBelievableVisuals9';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/BestPracticeMakingBelievableVisuals9.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/BestPracticeMakingBelievableVisuals9.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/BestPracticeMakingBelievableVisuals9.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/BestPracticeMakingBelievableVisuals9.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/BestPracticeMakingBelievableVisuals9.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/BestPracticeMakingBelievableVisuals9.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/BestPracticeMakingBelievableVisuals9.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/BestPracticeMakingBelievableVisuals9.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/BestPracticeMakingBelievableVisuals9.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/BestPracticeMakingBelievableVisuals9.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/BestPracticeMakingBelievableVisuals9.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/BestPracticeMakingBelievableVisuals9.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/BestPracticeMakingBelievableVisuals9.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/BestPracticeMakingBelievableVisuals9.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/BestPracticeMakingBelievableVisuals9.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/BestPracticeMakingBelievableVisuals9.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/BestPracticeMakingBelievableVisuals9.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/BestPracticeMakingBelievableVisuals9.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/BestPracticeMakingBelievableVisuals9.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/BestPracticeMakingBelievableVisuals9.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/BestPracticeMakingBelievableVisuals9.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/BestPracticeMakingBelievableVisuals9.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/BestPracticeMakingBelievableVisuals9.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/BestPracticeMakingBelievableVisuals9.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="BestPracticeGuides.html">最佳实践指南</a></li>
+<li><a href="BestPracticeMakingBelievableVisuals.html">在 Unity 中制作可信的视觉效果</a></li>
+<li>动态光照</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeMakingBelievableVisuals8.html"></a></span><div class="tip">了解后期处理</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeLightingPipelines.html"></a></span><div class="tip">Best Practice: Setting up the Lighting Pipeline</div>
+</div>
+</div></div>
+<h1>动态光照</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>动态照亮的游戏对象（尤其是大型游戏对象）比静态对象需要更多的技巧。如果游戏对象在场景中改变位置，则通常需要动态光照，因此预计算的光照不适用。但是，动态游戏对象的处理必须满足某些限制。要提高动态游戏对象光照的质量，请注意以下方面：</p>
+
+<ul>
+<li><a href="#lppv">光照探针代理体 (LPPV)</a></li>
+<li><a href="#aoMap">逐对象烘焙的环境光遮挡贴图 (AO)</a></li>
+<li><a href="#reflection">局部反射</a></li>
+<li><a href="#assumptions">基于假设的假阴影或遮挡</a></li>
+</ul>
+
+<p><a name="lppv"></a> </p>
+
+<h2>光照探针代理体 (LPPV)</h2>
+
+<p>未被动态光照照亮的动态游戏对象的表面通常使用光照探针数据来填充其光照信息（在不存在光照探针的场景中，使用环境光照）。根据场景中使用的光照策略，这些信息可能包括多种信息，从间接光照信息一直到阴影和烘焙漫射光照探针光照信息。这种光照探针策略通常很适合小型动态游戏对象。但是，较大的游戏对象需要更精细的光照探针光照。这便是光照探针代理体 (Light Probe Proxy Volume) 的用武之地。有关更多信息，请参阅<a href="class-LightProbeProxyVolume.html">光照探针代理体组件</a>。</p>
+
+<p>使用光照探针代理体允许动态照亮的大型游戏对象使用多个光照探针，从而提高光照精度。以下示例显示了具有 LPPV 的胶囊体如何表现出更高的光照探针采样精度（尽管仅使用 2x2x2 代理体网格）：</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsLPPVCapsule.jpg" alt="表现 LLPV 影响的胶囊体比较情况">
+<figcaption>表现 LLPV 影响的胶囊体比较情况</figcaption>
+</figure>
+
+<p><a name="aoMap"></a> </p>
+
+<h2>每个对象烘焙的环境光遮挡贴图 (AO)</h2>
+
+<p>动态游戏对象仅接收来自光照探针或环境光的光照。因此，您需要预计算游戏对象的遮挡，特别是游戏对象包含凹陷内部的情况（例如示例中的电车）。在下面的示例中，未使用 AO 的左侧电车应用了光照探针光照数据，不知道如何区分内部和外部表面。采用预烘焙的 AO 后，该贴图可作为降低外部光线和反射强度的指引，使外观更加接近现实：</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsBakedAO.jpg" alt="表现 AO 影响的电车比较情况">
+<figcaption>表现 AO 影响的电车比较情况</figcaption>
+</figure>
+
+<p>具体游戏对象 AO 离线烘焙甚至可从细节程度更高的网格烘焙到细节程度更低的网格来提供进一步细节化的遮挡，其原理与法线贴图烘焙的工作原理类似。</p>
+
+<p><strong>注意</strong>：具体游戏对象 AO 不与其他动态游戏对象相互作用。例如，动态游戏对象（例如进入电车的角色）从场景接收光照探针数据，不一定要与电车内部的遮挡匹配。</p>
+
+<p><a name="reflection"></a> </p>
+
+<h2>局部反射</h2>
+
+<p>大多数动态游戏对象都不需要有自己的反射。但是，对于包含凹面内部的游戏对象，将反射探针连接到游戏对象并允许其实时运行有助于减少来自环境反射探针的误反射命中。</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsLocalReflection.jpg" alt="显示了反射问题的夸张材质">
+<figcaption>显示了反射问题的夸张材质</figcaption>
+</figure>
+
+<p><a name="assumptions"></a> </p>
+
+<h2>基于假设的假阴影或遮挡</h2>
+
+<p>如果您能为游戏对象做出某些假设，则可以使用一些技巧来提高视觉品质。在下面显示的示例中，电车应始终在轨道上。因此，为了改善阴影区域中的地面光照遮挡，我们可以使用“Particle/Multiply”透明材质平面：</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsFakeShadows.jpg" alt="使用 Particle/Multiply 透明材质的简单平面技巧">
+<figcaption>使用 Particle/Multiply 透明材质的简单平面技巧</figcaption>
+</figure>
+
+<p>一种类似的技巧是将模糊阴影投影器 (blob shadow projector) 放置在角色下，而不是角色投射真实阴影。</p>
+
+<p>在实时渲染中，如果能找到一种有效的技巧，并且性能代价较低，那么它通常便是可行的解决方案。肯定还有更多的提示和技巧有助于改善视觉渲染效果。上面列出的内容应该能启发您针对不同类型的视觉化要求思考相应的解决方案。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–03–21 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li><span class="page-history">在 Unity 2017.3 中添加了制作可信视觉效果最佳实践指南</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeMakingBelievableVisuals8.html"></a></span><div class="tip">了解后期处理</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeLightingPipelines.html"></a></span><div class="tip">Best Practice: Setting up the Lighting Pipeline</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

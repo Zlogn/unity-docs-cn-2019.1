@@ -1,0 +1,291 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="升级到 Unity 5.3 - Unity Manual">
+<title>升级到 Unity 5.3 - Unity Manual</title>
+<meta name="description" content="&amp;#8220;光照贴图快照&amp;#8221;(Lightmap Snapshot) 已更名为&amp;#8220;光照数据资源&amp;#8221;(Lighting Data Asset)。升级到 Enlighten 3 后，光照数据的内部格式发生了变化。不再支持 Unity 以前版本的快照，应进行重新烘焙。">
+<meta property="og:description" content="&amp;#8220;光照贴图快照&amp;#8221;(Lightmap Snapshot) 已更名为&amp;#8220;光照数据资源&amp;#8221;(Lighting Data Asset)。升级到 Enlighten 3 后，光照数据的内部格式发生了变化。不再支持 Unity 以前版本的快照，应进行重新烘焙。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UpgradeGuide53';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UpgradeGuide53.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UpgradeGuide53.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UpgradeGuide53.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UpgradeGuide53.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UpgradeGuide53.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UpgradeGuide53.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UpgradeGuide53.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UpgradeGuide53.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UpgradeGuide53.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UpgradeGuide53.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UpgradeGuide53.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UpgradeGuide53.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UpgradeGuide53.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UpgradeGuide53.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UpgradeGuide53.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UpgradeGuide53.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UpgradeGuide53.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UpgradeGuide53.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UpgradeGuide53.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UpgradeGuide53.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UpgradeGuide53.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UpgradeGuide53.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UpgradeGuide53.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UpgradeGuide53.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="UpgradeGuides.html">升级指南</a></li>
+<li>升级到 Unity 5.3</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide54Networking.html"></a></span><div class="tip">5.4 网络 API 更改</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide52.html"></a></span><div class="tip">升级到 Unity 5.2</div>
+</div>
+</div></div>
+<h1>升级到 Unity 5.3</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>全局光照</h2>
+
+<p>“光照贴图快照”(Lightmap Snapshot) 已更名为“光照数据资源”(Lighting Data Asset)。升级到 Enlighten 3 后，光照数据的内部格式发生了变化。不再支持 Unity 以前版本的快照，应进行重新烘焙。</p>
+
+<p>这也会影响具有实时 GI 的流式场景 AssetBundle。光照贴图数据不会被加载，因此也应该重新构建此类捆绑包。</p>
+
+<p>光照探针和环境光照目前在伽马和线性颜色空间中保持一致。与 Unity 5.2 相比，环境光照存在一些差异。输出现在将正确匹配 Unity 4.x 强度，但是因为 4.x 和我们的光照投影代码会生成 L2 系数，而 Enlighten 仅输出 L1，所以最终光照探针的衰减可能看起来不同。对光照探针的 L2 支持将在未来版本中出现。方向性非重要光源现在应该匹配 4.x 版。
+光照探针总是传递到线性颜色空间中的着色器，并且最终的伽马转换发生在 GPU 上。如果使用了 Unity 的 ShadeSHxxx 函数来估算着色器中的球面谐波 (SH)，则不必更改着色器。在 UNITY_STANDARD_SIMPLE 着色器中，SH 估算不会在像素着色器和顶点着色器之间进行分割，因此我们将线性到伽马的转换限制为仅发生一次且仅在顶点着色器中发生。在更高级的 GPU 上，该计算会在顶点着色器和片元着色器之间进行分割。</p>
+
+<h2>Shuriken</h2>
+
+<p>碰撞模块 (Collision Module) 中的粒子大小已替换为新参数：Radius Scale。此新参数用作实际粒子大小的乘数。如果以前使用了旧值来执行除估算粒子大小之外的任何用途，则需要使用这个新参数重新配置碰撞边界。</p>
+
+<h2>多场景编辑</h2>
+
+<p>多场景编辑功能通过 EditorSceneManager 和 SceneManager 引入了新的 API。这意味着 EditorApplication 和 Application 上的许多 API 已弃用。</p>
+
+<ul>
+<li>EditorApplication.NewScene</li>
+<li>EditorApplication.NewEmptyScene</li>
+<li>EditorApplication.OpenScene</li>
+<li>EditorApplication.OpenSceneAdditive</li>
+<li>EditorApplication.SaveScene</li>
+<li>EditorApplication.SaveCurrentSceneIfUserWantsTo</li>
+<li>EditorApplication.SaveCurrentSceneIfUserWantsToForce</li>
+</ul>
+
+<p>以上全部都在 EditorSceneManager 上具有等效的 API</p>
+
+<ul>
+<li>EditorApplication.currentScene</li>
+</ul>
+
+<p>在内部，此 API 将返回 Scene Manager 中的活动场景的名称，但若要获取所有当前打开的场景，请使用 EditorSceneManager API</p>
+
+<ul>
+<li>EditorApplication.MarkSceneDirty</li>
+<li>EditorApplication.isSceneDirty</li>
+</ul>
+
+<p>每个场景现在都有自己的“脏”(dirty) 标志。应通过 EditorSceneManager 获取场景并检查场景的状态。设置场景“脏”标志也是通过 EditorSceneManager 完成的。已弃用的 API 全部仅对活动场景有效。</p>
+
+<ul>
+<li>Application.LoadLevel</li>
+<li>Application.LoadLevelAsync</li>
+<li>Application.LoadLevelAdditive</li>
+<li>Application.LoadLevelAdditiveAsync</li>
+</ul>
+
+<p>Application.LoadLevel[Async](path) 重定向到 SceneManager.LoadScene[Async](path, false)，而 Application.LoadLevelAdditive[Async](path) 重定向到 SceneManager.LoadScene[Async](path, true)</p>
+
+<ul>
+<li>Application.loadedLevel</li>
+<li>Application.loadedLevelName</li>
+</ul>
+
+<p>这些 API 分别获取活动场景的构建设置索引 (Build Setting Index) 和活动场景的名称。应使用 SceneManager 来获取所有已加载场景的索引和名称。</p>
+
+<p>另外请注意，在 Editor 中播放期间无法再调用 EditorApplication.OpenSceneAdditive。这也意味着无法从 [PostprocessScene] 回调中调用它。如果在播放期间调用 EditorApplication.OpenSceneAdditive，则将停止播放模式。</p>
+
+<h2>预编译的着色器资源</h2>
+
+<p>不再支持预编译的着色器资源 - 这意味着不能再单击“show compiled code”并将生成的反汇编代码复制到新的着色器资源中。预编译的旧着色器资源将标记为“不受支持”。</p>
+
+<p>着色器 Inspector 中的“show compiled code”仍然可以工作，并会显示每个平台上的着色器的反汇编代码。</p>
+
+<p>同样，仍然可以查看表面着色器生成的代码，对其进行修改，然后将其复制到新的着色器资源中 - 因为它只是您修改的 HLSL 源代码。</p>
+
+<p>这将影响在以前版本的 Unity 中构建的 AssetBundle - 它们已根据定义在内部编译了着色器资源。此类捆绑包中的所有着色器都需要重新构建。</p>
+
+<p>有关更多详细信息，请参阅 <a href="http://blogs.unity3d.com/2015/08/27/plans-for-graphics-features-deprecation/">Unity 即将弃用的功能的相关博文</a>。</p>
+
+<h2>桌面平台上的 OpenGL 4.x 支持</h2>
+
+<p>作为一项新功能，OS X Editor 和 Standalone 现在支持这个新的 GL 后端，因此允许使用 OpenGL 3.x 和 4.x 功能，如曲面细分和几何着色器。但是，由于 Apple 将 OS X 桌面上的 OpenGL 版本限制为最高 4.1，因此并不支持所有 DirectX 11 功能（例如无序访问视图或计算着色器）。这意味着，以着色器级别 5.0 为目标（包含 #pragma 目标 50）的所有着色器将无法在 OS X 上加载。</p>
+
+<p>因此引入了新的着色器目标级别：#pragma 目标 gl4.1。此目标级别至少需要 OpenGL 4.1 或 DirectX 11.0 着色器级别 5（桌面端）或 OpenGL ES 3.1 + Android 扩展包（移动端）。</p>
+
+<h2>AssetBundle</h2>
+
+<p>AssetBundle 的容器格式已更改以便支持新的 LZ4 压缩，并为进一步改进奠定了基础。在早期版本（2.x 和 3.x）中创建的捆绑包已弃用且不受支持。
+在 Unity 4.x 和 5.0–5.2 中创建的捆绑包受支持并可加载。但是，如果这些捆绑包已经使用 WWW.LoadFromCacheOrDownload 方法缓存在用户设备上，则会重新加载它们。另外，请记住，此类捆绑包中的数据可能会发生变化（请参阅“全局光照”部分）。</p>
+
+<h2>GetComponent(s)InChildren</h2>
+
+<p>如果在父游戏对象处于非活动状态的游戏对象上调用 GetComponentsInChildren，其行为略有改变。以前总是会得到一个空数组。因为这绝不是想要的结果，而且这意味着 GetComponentsOnChildren 对预制件无效，所以现在对这方面进行了更改，忽略目标游戏对象父项的活动状态。此外，单数版本 GetComponentInChildren() 现在具有可选的 includeInactive 参数。</p>
+
+<h2>UI/默认着色器</h2>
+
+<p>默认情况下，不再支持在非新 UI 对象上使用默认的新 UI 着色器。以前有一个“if”检查可确定是否应使用 _clipRect，但出于性能原因，已删除此检查。要继续在非新 UI 对象上使用新的 UI 着色器，必须自行指定有效的 clipRect。</p>
+
+<h2>投射阴影的点光源和聚光灯</h2>
+
+<p>选择用于投射阴影的点光源现在具有有效的 Bias 滑动条，可以调整和平衡阴影瑕疵（在阴影与阴影暗斑下）。这意味着，现有的有些点光源以前可能设置了偏差 (Bias) 但没有任何效果，而现在将开始产生效果，因此会改变阴影投射行为。</p>
+
+<p>投射阴影的聚光灯现在有一个新的滑动条，可用于选择近裁剪距离。此参数是与光源之间的距离，小于此距离的情况下对象不会投射阴影。较低的值可包括附近的对象，但代价是阴影的精度大大降低。在以前的 Unity 版本中，该数值是以光源总范围的 4% 计算得出的，但对于大型光源来说可能太高了。现在默认为 0.2，应该适用于大多数情况。</p>
+
+<h2>四元数学</h2>
+
+<p>为了获得新增的导入器欧拉旋转曲线支持以及对所有不同欧拉旋转指令的支持，需要重写 QuaternionToEuler 和 EulerToQuaternion 数学函数，包括传统版本和 SIMD 版本。这些新变体尚未在 API 中提供，目前仅在内部使用。</p>
+
+<p>此变化的影响应该非常小，但是在先前版本和新版本之间的结果中存在微小差异（&lt;0.01 度），并且仅在非常接近万向锁条件时才会出现。测试运行结果表明新版本在大多数时间内更准确，平均误差至少降低到原来的 1/10。</p>
+
+<h2>JointDriveMode 标志</h2>
+
+<p>JointDriveMode 标志现在已过时，因此已被删除。但是，在早期版本的 Unity 中，它们被错误地用于忽略可配置关节 (Configurable Joint) 的关节驱动刚度和阻尼设置。将项目升级到使用可配置关节的 Unity 5.3 时，用户应注意这些设置现在可能会起效，但以前这些设置是无效的，因为以前会根据旧的 JointDriveMode 标记错误地忽略了这些设置。</p>
+
+<h2>旧版光源动画</h2>
+
+<p>从 5.3 开始，旧版动画（包括现有的和新的）都不再对 Light 属性进行动画化。对光源的基础数据结构进行的更改使得它们与旧版不再兼容。要正确设置光源的动画，请使用动画器组件 (Animator Component)。</p>
+
+<h2>Editor 扩展</h2>
+
+<p>现在保存场景时会遵循场景的“脏”标志。未正确设置“脏”标志的 Editor 扩展可能无法正确保存数据。请使用 Undo.RecordObject 记录对象即将更改并相应更新场景的“脏”标志，或使用 EditorSceneManager.MarkSceneDirty 强制将整个场景标记为“脏”。</p>
+
+<h2>摄像机深度纹理着色器变量</h2>
+
+<p>现在修复了 <code>_CameraDepthTexture</code> 着色器变量，始终引用摄像机上的主深度纹理，而不是像以前那样引用任何摄像机渲染的最后一个深度纹理。如果要在脚本中渲染辅助摄像机以便获得一个半分辨率深度缓冲区，并需要绑定该摄像机的深度纹理，现在应该使用 <code>_LastCameraDepthTexture</code> 变量，相当于引用最后渲染的任何摄像机的深度纹理。</p>
+
+<h2>ComputeBuffer</h2>
+
+<p>The data layout of ComputeBuffers in automatically-converted OpenGL shaders has changed to match the layout of DirectX ComputeBuffers. If you use ComputeBuffers in OpenGL, remove any code that tweaks the data to match the previous OpenGL-specific layout rules. Please see <a href="class-ComputeShader.html">Compute Shaders</a> for more information.</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide54Networking.html"></a></span><div class="tip">5.4 网络 API 更改</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide52.html"></a></span><div class="tip">升级到 Unity 5.2</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

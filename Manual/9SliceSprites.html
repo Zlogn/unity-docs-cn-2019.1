@@ -1,0 +1,311 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="9 切片精灵 - Unity Manual">
+<title>9 切片精灵 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/9SliceSprites-0.png">
+<meta name="description" content="9 切片是一种 2D 技术，可允许以各种大小复用图像，而无需准备多个资源。此技术涉及将图像分成九个部分，确保在重新调整精灵的大小时，不同部分以不同方式缩放或平铺（即，以网格形式重复），使精灵保持比例。在创建图案或纹理（例如 2D 环境中的墙壁或地板）时，这会很有用。">
+<meta property="og:description" content="9 切片是一种 2D 技术，可允许以各种大小复用图像，而无需准备多个资源。此技术涉及将图像分成九个部分，确保在重新调整精灵的大小时，不同部分以不同方式缩放或平铺（即，以网格形式重复），使精灵保持比例。在创建图案或纹理（例如 2D 环境中的墙壁或地板）时，这会很有用。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = '9SliceSprites';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/9SliceSprites.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/9SliceSprites.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/9SliceSprites.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/9SliceSprites.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/9SliceSprites.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/9SliceSprites.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/9SliceSprites.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/9SliceSprites.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/9SliceSprites.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/9SliceSprites.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/9SliceSprites.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/9SliceSprites.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/9SliceSprites.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/9SliceSprites.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/9SliceSprites.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/9SliceSprites.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/9SliceSprites.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/9SliceSprites.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/9SliceSprites.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/9SliceSprites.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/9SliceSprites.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/9SliceSprites.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/9SliceSprites.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/9SliceSprites.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Unity2D.html">2D</a></li>
+<li><a href="Sprites.html">精灵</a></li>
+<li>9 切片精灵</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-SortingGroup.html"></a></span><div class="tip">排序组</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-SpriteMask.html"></a></span><div class="tip">精灵遮罩</div>
+</div>
+</div></div>
+<h1>9 切片精灵</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>9 切片是一种 2D 技术，可允许以各种大小复用图像，而无需准备多个<a href="AssetWorkflow.html">资源</a>。此技术涉及将图像分成九个部分，确保在重新调整<a href="Sprites.html">精灵</a>的大小时，不同部分以不同方式缩放或平铺（即，以网格形式重复），使精灵保持比例。在创建图案或<a href="class-TextureImporter.html">纹理</a>（例如 2D 环境中的墙壁或地板）时，这会很有用。</p>
+
+<p>以下是 9 切片精灵（分为九个部分）的一个示例。每个部分以 A 到 I 的字母进行标记。</p>
+
+<figure>
+<img src="../uploads/Main/9SliceSprites-0.png" alt="">
+</figure>
+
+<p>以下几点描述了更改图像尺寸时发生的情况：</p>
+
+<ul>
+<li><p>四个角（A、C、G 和 I）的大小不变。</p></li>
+<li><p>B 和 H 部分水平拉伸或平铺。</p></li>
+<li><p>D 和 F 部分垂直拉伸或平铺。</p></li>
+<li><p>E 部分同时水平且垂直拉伸或平铺。</p></li>
+</ul>
+
+<p>本页面介绍如何设置 9 切片以及要应用的设置（根据要拉伸还是平铺以上显示的区域）。</p>
+
+<h2>设置 9 切片精灵</h2>
+
+<p>在对精灵进行 9 切片之前，需要确保正确设置该精灵。</p>
+
+<p>首先，需要确保 <strong>Mesh Type</strong> 设置为 <strong>Full Rect</strong>。要应用此设置，请选择精灵，然后在 Inspector 窗口中单击 <strong>Mesh Type</strong> 下拉选单并选择 <strong>Full Rect</strong>。如果 <strong>Mesh Type</strong> 设置为 __Tight__，由于设置 9 切片精灵时精灵渲染器 (Sprite Renderer) 生成和渲染精灵的方式，9 切片可能运行不正常。</p>
+
+<figure>
+<img src="../uploads/Main/9SliceSprites-1.png" alt="精灵的 Inspector 窗口。Mesh Type 以红框突出显示。">
+<figcaption>精灵的 Inspector 窗口。<strong>Mesh Type</strong> 以红框突出显示。</figcaption>
+</figure>
+
+<p>下一步，需要通过 <a href="SpriteEditor.html"><strong>Sprite Editor</strong></a> 窗口来定义精灵的边框。为此，请选择精灵，然后在 <a href="UsingTheInspector.html">Inspector</a> 窗口中单击 <strong>Sprite Editor</strong> 按钮。</p>
+
+<p>![精灵的 Inspector 窗口。<strong>Sprite Editor</strong> 按钮以红框突出显示。请参阅关于<a href="Sprites.html">精灵</a>的文档以了解关于<a href="../uploads/Main/9SliceSprites-2.png">精灵导入设置 (Sprite Import Settings)</a> 中所有属性的信息。</p>
+
+<p>使用 Sprite Editor 窗口可定义精灵的边框（即，想要定义平铺区域的位置，例如墙壁或地板瓦片）。为此，请使用 Sprite 控制面板的 <strong>L</strong>、<strong>R</strong>、<strong>T</strong> 和 <strong>B</strong> 字段（分别表示左、右、上和下）。或者，单击并拖动顶部、底部和两侧的绿点。</p>
+
+<figure>
+<img src="../uploads/Main/9SliceSprites-3.jpg" alt="在 Sprite Editor 窗口中定义精灵的边框">
+<figcaption>在 Sprite Editor 窗口中定义精灵的边框</figcaption>
+</figure>
+
+<p>单击 Sprite Editor 窗口的顶栏中的 <strong>Apply</strong>。关闭 Sprite Editor 窗口，然后将精灵从 <a href="ProjectView.html">Project 窗口</a>拖入 Scene 视图，从而开始对其进行处理。</p>
+
+<h2>对精灵进行 9 切片</h2>
+
+<p>在 <a href="UsingTheSceneView.html">Scene 视图</a>或 <a href="Hierarchy.html">Hierarchy 窗口</a>中选择精灵。在 Inspector 窗口中，导航到 <a href="class-SpriteRenderer.html">Sprite Renderer</a> 组件，然后更改 <strong>Draw Mode</strong> 属性。</p>
+
+<figure>
+<img src="../uploads/Main/SpriteRenderer.png" alt="">
+</figure>
+
+<p>默认情况下，此属性设置为 <strong>Simple__；要应用 9 切片，根据所需要的行为，请将其设置为 </strong>Sliced__ 或 <strong>Tiled</strong>。以下部分使用下面所示的精灵来说明每个选项的行为：</p>
+
+<figure>
+<img src="../uploads/Main/9SliceSprites-4.jpg" alt="用于下文示例的原始精灵">
+<figcaption>用于下文示例的原始精灵</figcaption>
+</figure>
+
+<h3>Simple</h3>
+
+<figure>
+<img src="../uploads/Main/9SliceSprites-5.png" alt="">
+</figure>
+
+<p>这是默认的精灵渲染器行为。当图像尺寸发生变化时，图像朝所有方向缩放。<strong>Simple</strong> 不用于 9 切片。</p>
+
+<h3>Sliced</h3>
+
+<figure>
+<img src="../uploads/Main/9SliceSprites-6.png" alt="">
+</figure>
+
+<p>在 <strong>Sliced</strong> 模式下，角点的大小保持不变，精灵的顶部和底部水平拉伸，精灵的两侧垂直拉伸，精灵的中心水平和垂直拉伸，从而适应精灵的大小。</p>
+
+<p>将精灵的 <strong>Draw Mode</strong> 设置为 <strong>Sliced</strong> 时，可以选择使用精灵渲染器或<a href="Toolbar.html">矩形变换组件工具</a>上的 <strong>Size</strong> 属性来更改大小。这种情况下，仍然可以使用变换组件属性或变换组件工具来缩放精灵；但是，变换组件会在不应用 9 切片的情况下缩放精灵。</p>
+
+<h3>Tiled</h3>
+
+<figure>
+<img src="../uploads/Main/9SliceSprites-7.png" alt="">
+</figure>
+
+<p>在 <strong>Tiled</strong> 模式下，精灵保持相同的大小，不会缩放。取而代之的行为是，精灵的顶部和底部水平重复，精灵的两侧垂直重复，精灵的中心以平铺形式重复，从而适应精灵的大小。</p>
+
+<p>将精灵的 <strong>Draw Mode</strong> 设置为 <strong>Sliced</strong> 时，可以选择使用精灵渲染器或<a href="Toolbar.html">矩形变换组件工具</a>上的 <strong>Size</strong> 属性来更改大小。这种情况下，仍然可以使用变换组件属性或变换组件工具来缩放精灵；但是，变换组件会在不应用 9 切片的情况下缩放精灵。</p>
+
+<p>将 <strong>Draw Mode</strong> 设置为 <strong>Tiled</strong> 后，将出现另一个称为 <strong>Tile Mode</strong> 的属性。有关 <strong>Tile Mode</strong> 运作方式的更多信息，请参阅本页的下一部分。</p>
+
+<p>请参阅有关<a href="class-SpriteRenderer.html">精灵渲染器</a>的文档以了解关于该组件的所有属性的完整详细信息。</p>
+
+<h2>Tile Mode</h2>
+
+<p>当 <strong>Draw Mode</strong> 设置为 <strong>Tiled</strong> 时，使用 <strong>Tile Mode</strong> 属性可控制当精灵的尺寸发生变化时各部分的重复方式。</p>
+
+<h3><img src="../uploads/Main/9SliceSprites-8.png" alt="将 Draw Mode 设置为 Tiled 才能在 Sprite Renderer 中访问 Tile Mode"></h3>
+
+<h3>Continuous</h3>
+
+<p>默认情况下，__Tile Mode__ 设置为 <strong>Continuous</strong>。当精灵的大小改变时，重复部分在精灵中均匀重复。</p>
+
+<figure>
+<img src="../uploads/Main/9SliceSprites-9.png" alt="">
+</figure>
+
+<h3>Adaptive</h3>
+
+<p>当 <strong>Tile Mode</strong> 设置为 <strong>Adaptive</strong> 时，重复部分仅在精灵的尺寸达到 <strong>Stretch Value</strong> 时才进行重复。</p>
+
+<figure>
+<img src="../uploads/Main/9SliceSprites-10.png" alt="">
+</figure>
+
+<p>使用 <strong>Stretch Value</strong> 滑动条可设置介于 <strong>0</strong> 到 <strong>1</strong> 之间的值。请注意，__1__ 表示图像调整为原始尺寸的两倍，因此如果 <strong>Stretch Value</strong> 设置为 __1__，则当图像拉伸到原始大小的两倍时，该部分将会重复。</p>
+
+<p>为了演示这一点，以下图像显示了尺寸相同但 <strong>Stretch Value</strong> 不同的图像之间的差异：</p>
+
+<p>__Stretch Value 0.1__：</p>
+
+<figure>
+<img src="../uploads/Main/9SliceSprites-11.png" alt="">
+</figure>
+
+<p>__Stretch Value 0.5__：</p>
+
+<figure>
+<img src="../uploads/Main/9SliceSprites-12.png" alt="">
+</figure>
+
+<h2>9 切片和碰撞体</h2>
+
+<p>如果<a href="Sprites.html">精灵</a>已附加 <a href="Collider2D.html">Collider2D</a>，需要确保在更改精灵的尺寸时，Collider2D 随之改变。</p>
+
+<p>Unity 中支持 9 切片的 Collider2D 组件只有 <a href="class-BoxCollider2D.html">2D 盒型碰撞体 (Box Collider 2D)</a> 和 <a href="class-PolygonCollider2D.html">2D 多边形碰撞体 (Polygon Collider 2D)</a>。这两个 Collider2D 具有 <strong>Auto Tiling</strong> 复选框。要确保 Collider2D 组件设置为支持 9 切片，请选择要应用组件的精灵，导航到 Inspector 窗口中的 Collider2D，然后勾选 <strong>Auto Tiling</strong> 复选框。这样可以自动更新 Collider2D 的形状，意味着精灵的尺寸变化时，会自动重新调整形状。如果没有启用 __Auto Tiling__，即使精灵的尺寸变化，Collider2D 也会保持相同的形状和大小。</p>
+
+<h3>限制和已知问题</h3>
+
+<ul>
+<li><p>只有两个 Collider2D 支持 9 切片，分别为 BoxCollider2D 和 PolygonCollider2D。</p></li>
+<li><p>精灵渲染器的 <strong>Draw Mode</strong> 设置为 <strong>Sliced</strong> 或 <strong>Tiled</strong> 时，无法编辑 BoxCollider2D 和 PolygonCollider2D。Inspector 窗口中会禁用编辑功能，并告知由于 Collider2D 由精灵渲染器组件的平铺属性所驱动，因此无法对其进行编辑。</p></li>
+<li><p>以 <strong>Auto Tiling</strong> 模式重新生成该形状时，其他边缘可能出现在 Collider2D 的形状之内。这可能会对碰撞产生影响。</p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-SortingGroup.html"></a></span><div class="tip">排序组</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-SpriteMask.html"></a></span><div class="tip">精灵遮罩</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

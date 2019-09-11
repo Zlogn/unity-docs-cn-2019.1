@@ -1,0 +1,351 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="开发期间的 WMR 测试 - Unity Manual">
+<title>开发期间的 WMR 测试 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/Emulation.jpg">
+<meta name="description" content="Unity 提供了一些工具可用于在开发过程中测试应用程序。就像任何其他 Unity 应用程序一样，这些工具可让您调试自己的应用程序，还能以无线方式将内容推送到设备。这些工具中有一些工具仅适用于特定的 WMR 设备，例如 HoloLens。">
+<meta property="og:description" content="Unity 提供了一些工具可用于在开发过程中测试应用程序。就像任何其他 Unity 应用程序一样，这些工具可让您调试自己的应用程序，还能以无线方式将内容推送到设备。这些工具中有一些工具仅适用于特定的 WMR 设备，例如 HoloLens。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'wmr_testing';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/wmr_testing.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/wmr_testing.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/wmr_testing.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/wmr_testing.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/wmr_testing.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/wmr_testing.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/wmr_testing.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/wmr_testing.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/wmr_testing.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/wmr_testing.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/wmr_testing.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/wmr_testing.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/wmr_testing.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/wmr_testing.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/wmr_testing.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/wmr_testing.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/wmr_testing.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/wmr_testing.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/wmr_testing.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/wmr_testing.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/wmr_testing.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/wmr_testing.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/wmr_testing.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/wmr_testing.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="XR.html">XR</a></li>
+<li><a href="XR-SDK_overviews.html">XR SDK</a></li>
+<li><a href="wmr_sdk_overview.html">Windows Mixed Reality</a></li>
+<li>开发期间的 WMR 测试</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="wmr_input_types.html"></a></span><div class="tip">WMR 输入和交互概念</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="windowsholographic-persistence.html"></a></span><div class="tip">HoloLens WorldAnchor 持久性</div>
+</div>
+</div></div>
+<h1>开发期间的 WMR 测试</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 提供了一些工具可用于在开发过程中测试应用程序。就像任何其他 Unity 应用程序一样，这些工具可让您调试自己的应用程序，还能以无线方式将内容推送到设备。这些工具中有一些工具仅适用于特定的 WMR 设备，例如 HoloLens。</p>
+
+<h2>Play in Editor（沉浸式设备）</h2>
+
+<p>使用沉浸式 Windows Mixed Reality 设备时，可直接在 Unity Editor 中测试和迭代应用程序。确保 Windows Mixed Reality Portal 已打开且头盔处于激活状态，然后按 Editor 中的 <strong>Play</strong> 按钮。现在，应用程序将在 Editor 中运行，同时还渲染到头盔。</p>
+
+<h3>已知限制</h3>
+
+<p>对 Mixed Reality 设备使用 Play in Editor 时，需要考虑以下几个限制：</p>
+
+<ul>
+<li><p>键盘、鼠标和空间控制器可在 Editor 中工作，但前提是 Windows 和 Unity 能识别它们。</p></li>
+<li><p>非 Windows Mixed Reality 输入设备仅在游戏窗口获得焦点时才有效，否则键盘和鼠标控制可能无法正常工作。</p></li>
+</ul>
+
+<h2>Holographic Emulation（仅限 HoloLens）</h2>
+
+<p>Holographic Emulation（全息仿真）允许直接在 Unity Editor 中对 Microsoft HoloLens 项目进行原型设计、调试和运行，无需在每次希望查看应用更改的效果时都要构建和运行应用程序。这样可以极大缩短在 Unity 中开发 HoloLens 应用程序时的迭代间隔时间。</p>
+
+<figure>
+<img src="../uploads/Main/Emulation.jpg" alt="启用 Holographic Emulation 时的 Unity Editor 运行情况">
+<figcaption>启用 Holographic Emulation 时的 Unity Editor 运行情况</figcaption>
+</figure>
+
+<p>Holographic Emulation 有三种不同模式：</p>
+
+<ul>
+<li><p>__Remote to Device：__通过使用与 Windows Holographic 设备之间的连接，应用程序就像已经部署到该设备一样，而实际上是在主机上的 Unity Editor 中运行。有关更多信息，请参阅以下的 <a href="wmr_testing.html#RemoteToDevice">Emulation Mode：Remote to device</a> 部分。</p></li>
+<li><p>__Simulate in Editor：__应用程序直接在 Unity Editor 中的模拟 HoloLens 设备上运行，无需连接到真实的 Windows Holographic 设备。有关更多信息，请参阅以下的 <a href="wmr_testing.html#SimulateInEditor">Emulation Mode：Simulate in Editor</a> 部分。</p></li>
+<li><p>__None__：此设置允许仍然在 Editor 中运行应用程序（如果有 Windows Holographic 设备）。</p></li>
+</ul>
+
+<p>Holographic Emulation 仅在运行 Windows 10（装有 <strong>Fall Creators</strong> 更新）的机器上受支持。<strong>Remote to Device</strong> 和 <strong>Simulate in Editor</strong> 均旨在尽可能模仿当前的 HoloLens 运行时，因此不存在超出此范围的更新 API。这意味着最近添加到输入代码的内容在这些情况下不起作用，就像在 HoloLens 上也不起作用一样。例如，旋转、位置精度、角速度以及用于向前、向上和向右姿势的基础向量全都不存在，因此这些 API 将失败。</p>
+
+<p>To enable remoting or simulation, open the Unity Editor and go to <strong>Window</strong> &gt; <strong>XR</strong> &gt; <strong>Holographic Emulation</strong>.</p>
+
+<p>随即将打开 <strong>Holographic</strong> 控制窗口，其中包含 <strong>Emulation Mode</strong> 下拉菜单。必须在开发期间保持此窗口可见，这样在启动应用程序时才能访问其设置。</p>
+
+<figure>
+<img src="../uploads/Main/Emulation_control_window.png" alt="默认的 Holographic Emulation 控制窗口">
+<figcaption>默认的 Holographic Emulation 控制窗口</figcaption>
+</figure>
+
+<p>默认情况下，__Emulation Mode__ 设置为 <strong>None__，这意味着如果拥有沉浸式头盔连接，应用程序将在 Editor 中运行并在 HMD 上播放。有关更多详细信息，请参阅上文的 </strong>Play in Editor__ 部分。</p>
+
+<p>将 <strong>Emulation Mode</strong> 更改为 <strong>Remote to Device</strong> 或 <strong>Simulate in Editor</strong> 可启用 HoloLens 开发的仿真。此设置将为已连接的沉浸式设备覆盖 Play in Editor 支持。</p>
+
+<p><a name="RemoteToDevice"> </a> </p>
+
+<h3>Emulation Mode：Remote to Device</h3>
+
+<p>全息远程处理 (Holographic Remoting) 可让应用程序就像已经部署到 HoloLens 设备上一样，而实际是在主机上的 Unity Editor 中运行。即使在远程处理时，来自所连接设备的空间传感器数据和头部跟踪仍然处于激活状态并正常工作。在 Unity Editor Game 视图中可以查看设备上渲染的内容，但不能看到设备的佩戴者看到的真实世界。（请参阅上文中标题为“启用 Holographic Emulation 时的 Unity Editor 运行情况”的图中的示例。）</p>
+
+<p>__注意：__全息远程处理是一种在开发过程中快速迭代更改的方式，但应避免将其用于验证性能。应用程序在主机上而不是在设备本身上运行，因此可能会得到不准确的结果。</p>
+
+<p>要在 Unity Editor 中启用此模式，请将 <strong>Emulation Mode</strong> 设置为 <strong>Remote to Device</strong>。然后，Holographic 窗口将更改以反映此模式下可用的其他设置。</p>
+
+<h4>连接设备</h4>
+
+<p>要远程连接 HoloLens 设备，必须在 HoloLens 设备上安装 <a href="https://www.microsoft.com/en-us/store/p/holographic-remoting-player/9nblggh4sv40?activetab=pivot:overviewtab">Holographic Remoting Player</a>。</p>
+
+<p>要安装 Holographic Remoting Player 应用程序并配置 Unity Editor，请执行以下操作：</p>
+
+<p>1.从 HoloLens 应用商店安装并运行 Holographic Remoting Player。可从 Hololens 上的 Windows 应用商店应用程序中获取此应用程序。Remoting Player 在启动时进入等待状态，并在 HoloLens 屏幕上显示设备的 IP 地址：</p>
+
+<pre><code>![Holographic Remoting Player 屏幕](../uploads/Main/remoting_player_screen.png)
+
+有关此 Player 的其他信息，包括如何启用连接诊断，请参阅 [Microsoft Windows 开发人员中心](https://developer.microsoft.com/en-us/windows/holographic/holographic_remoting_player)。
+</code></pre>
+
+<p>2.在 Unity Editor 的 Holographic 窗口的 <strong>Remote Machine</strong> 字段中输入 HoloLens 设备的 IP 地址。使用该字段右侧的下拉选单按钮可选择最近使用的地址：</p>
+
+<pre><code>![配置 Remote to Device 仿真模式](../uploads/Main/Remote_to_device_emulation.png)
+</code></pre>
+
+<p>3.单击 <strong>Connect</strong> 按钮。连接状态应会更改为绿灯并显示已连接消息。</p>
+
+<p>4.单击 Unity Editor 中的 <strong>Play</strong> 以远程运行设备。</p>
+
+<p>远程处理开始后，即可进行暂停、检查游戏对象以及调试，操作就像在 Editor 中运行任何应用程序一样。HoloLens 设备与主机之间通过网络来回传输视频、音频和设备输入。</p>
+
+<h4>已知限制</h4>
+
+<p>对 HoloLens 使用 <strong>Remote to Device</strong> 仿真时，应考虑以下几个限制：</p>
+
+<ul>
+<li><p>使用 <strong>Remote to Device</strong> 仿真模式时，Unity 不支持 Speech (<a href="../ScriptReference/Windows.Speech.PhraseRecognizer.html">PhraseRecognizer</a>)。在此模式下，模拟器会拦截运行 Unity Editor 的主机发出的语音。应用程序将使用执行远程处理的 PC 中的麦克风，而不是 Hololens 麦克风。</p></li>
+<li><p>当 <strong>Remote to Device</strong> 正在运行时，主机上的所有音频都会重定向到设备，包括来自应用程序外部的音频。</p></li>
+</ul>
+
+<p><a name="SimulateInEditor"> </a> </p>
+
+<h3>Emulation Mode：Simulate in Editor</h3>
+
+<p>使用此仿真模式时，应用程序直接在 Unity Editor 中的模拟全息设备上运行，无需连接到真实的 HoloLens 设备。在进行 Windows Holographic 的开发时，如果无法访问 HoloLens 设备，此模式将非常有用。</p>
+
+<p>__注意：__应在 HoloLens 设备上测试应用程序，确保其能够按预期工作。在开发过程中不要完全依赖仿真。</p>
+
+<p>要启用此模式，请将 <strong>Emulation Mode</strong> 设置为 <strong>Simulate in Editor__，然后单击 </strong>Play__ 按钮。然后，应用程序将在 Unity Editor 内置的模拟器中启动。</p>
+
+<p>在 Holographic Emulation 控制窗口中，使用 <strong>Room</strong> 下拉菜单选择可用的虚拟房间（与 <a href="https://developer.microsoft.com/en-us/windows/mixed-reality/using_the_hololens_emulator">XDE HoloLens 模拟器</a>提供的相同）。使用 <strong>Gesture Hand</strong> 下拉菜单指定由哪个虚拟手执行手势（左手还是右手）。</p>
+
+<figure>
+<img src="../uploads/Main/simulate_in_editor.png" alt="配置 Simulate in Editor 仿真模式">
+<figcaption>配置 Simulate in Editor 仿真模式</figcaption>
+</figure>
+
+<p>在 <strong>Simulate in Editor</strong> 模式中，需要使用游戏控制器（例如 Xbox 360 或 Xbox One 控制器）来控制虚拟人类玩家。如果没有控制器，模拟仍然有效，但无法移动虚拟人类玩家。</p>
+
+<p>下表列出了 <strong>Simulate in Editor</strong> 模式期间的控制器输入及其用法。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>控制</strong></th>
+	<th style="text-align:left;"><strong>用法<br></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>左摇杆</strong></td>
+	<td style="text-align:left;">上下方向可使虚拟人类玩家前后移动。左右方向可使人类玩家左右移动。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>右摇杆</strong></td>
+	<td style="text-align:left;">上下方向可上下旋转虚拟人类玩家的头部（围绕 X 轴旋转 - 俯仰）。左右方向可左右转动虚拟人类玩家（围绕 Y 轴旋转 - 偏航）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>十字方向键</strong></td>
+	<td style="text-align:left;">上下移动虚拟人类玩家或左右倾斜玩家的头部（围绕 Z 轴旋转 - 翻滚）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>左右触发按钮或 A 按钮</strong></td>
+	<td style="text-align:left;">使用虚拟手执行点击手势。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Y 按钮</strong></td>
+	<td style="text-align:left;">重置虚拟人类玩家头部的俯仰（X 旋转）和翻滚（Z 旋转）。</td>
+</tr>
+</tbody>
+</table>
+
+<p>要使用游戏控制器，请将 Unity Editor 聚焦在 Game 视图上。如果当前焦点位于另一个 Unity Editor 窗口，请单击 Game 视图窗口以重新聚焦于 Game 视图。</p>
+
+<h4>已知限制</h4>
+
+<p>对 HoloLens 使用 <strong>Simulate in Editor</strong> 仿真时，应考虑以下几个限制：</p>
+
+<ul>
+<li><p>大多数游戏控制器都能在 <strong>Simulate in Editor</strong> 模式下工作，但前提是 Windows 和 Unity 能识别它们。但是，不受支持的控制器可能会导致兼容性问题。</p></li>
+<li><p>可在 <strong>Simulate in Editor</strong> 模式期间使用 <a href="../ScriptReference/XR.WSA.WebCam.PhotoCapture.html">PhotoCapture</a>，但由于缺少连接的 HoloLens 设备，必须使用外部连接的摄像头（例如网络摄像头）。这种情况下也会导致无法使用 <code>TryGetProjectionMatrix</code> 或 <code>TryGetCameraToWorldMatrix</code> 来检索矩阵，因为普通的外部摄像头无法计算自身与现实世界的相对位置。</p></li>
+</ul>
+
+<h2>实用资源和故障排除</h2>
+
+<p>在解决 Windows Mixed Reality 应用程序的开发问题时，以下外部资源非常有用：</p>
+
+<ul>
+<li><p><a href="https://developer.microsoft.com/en-us/windows/mixed-reality/development">Windows Mixed Reality 开发官方文档</a></p></li>
+<li><p><a href="https://developer.microsoft.com/en-us/windows/mixed-reality/academy">Microsoft Windows Mixed Reality 教程</a></p></li>
+<li><p><a href="https://developer.microsoft.com/en-us/windows/mixed-reality/mixed_reality_213#unity_setup">Microsoft Windows Mixed Reality 沉浸式头盔开发教程</a></p></li>
+<li><p><a href="https://support.microsoft.com/en-us/help/13456/hololens-and-holograms-faq">Microsoft HoloLens 常见问题解答 (FAQ)</a></p></li>
+<li><p><a href="https://developer.microsoft.com/en-us/windows/mixed-reality/hololens_known_issues">Microsoft HoloLens 已知问题</a></p></li>
+<li><p><a href="https://docs.microsoft.com/en-us/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality">Microsoft Windows Mixed Reality 故障排除指南</a></p></li>
+<li><p><a href="https://forum.unity.com/threads/custom-build-2017-2-rc-mrtp-windows-mixed-reality-technical-preview.498253/">Unity 论坛关于 WMR 技术预览版的帖子</a></p></li>
+</ul>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–03–27 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 2017.3 版中添加了关于 XR API 变更的新内容</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="wmr_input_types.html"></a></span><div class="tip">WMR 输入和交互概念</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="windowsholographic-persistence.html"></a></span><div class="tip">HoloLens WorldAnchor 持久性</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

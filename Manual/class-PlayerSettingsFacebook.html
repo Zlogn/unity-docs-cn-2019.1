@@ -1,0 +1,494 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Facebook Player settings - Unity Manual">
+<title>Facebook Player settings - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/class-PlayerSettingsFacebok.png">
+<meta name="description" content="This page details the Player settings specific to the Facebook platform. For a description of the general Player settings, see Player.">
+<meta property="og:description" content="This page details the Player settings specific to the Facebook platform. For a description of the general Player settings, see Player.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-PlayerSettingsFacebook';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-PlayerSettingsFacebook.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-PlayerSettingsFacebook.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-PlayerSettingsFacebook.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-PlayerSettingsFacebook.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-PlayerSettingsFacebook.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-PlayerSettingsFacebook.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-PlayerSettingsFacebook.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-PlayerSettingsFacebook.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-PlayerSettingsFacebook.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-PlayerSettingsFacebook.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-PlayerSettingsFacebook.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-PlayerSettingsFacebook.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-PlayerSettingsFacebook.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-PlayerSettingsFacebook.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-PlayerSettingsFacebook.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-PlayerSettingsFacebook.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-PlayerSettingsFacebook.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-PlayerSettingsFacebook.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-PlayerSettingsFacebook.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-PlayerSettingsFacebook.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-PlayerSettingsFacebook.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-PlayerSettingsFacebook.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-PlayerSettingsFacebook.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-PlayerSettingsFacebook.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
+<li><a href="Facebook.html">Facebook</a></li>
+<li>Facebook Player settings</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Facebook-GettingStarted.html"></a></span><div class="tip">Facebook 开发入门</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Windows.html"></a></span><div class="tip">Windows</div>
+</div>
+</div></div>
+<h1>Facebook Player settings</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This page details the <strong>Player</strong> settings specific to the Facebook platform. For a description of the general <strong>Player</strong> settings, see <a href="class-PlayerSettings.html#general">Player</a>.</p>
+
+<figure>
+<img src="../uploads/Main/class-PlayerSettingsFacebok.png" alt="Facebook Player settings">
+<figcaption>Facebook Player settings</figcaption>
+</figure>
+
+<p>You can find documentation for the properties in the following sections:</p>
+
+<ul>
+<li><a href="#Icon">Icon</a></li>
+<li><a href="#Other">Other Settings</a></li>
+<li><a href="#Publishing">Publishing Settings</a></li>
+</ul>
+
+<p><strong>Note:</strong> Although the <strong>Resolution and Presentation</strong> panel appears on the Facebook platform’s <strong>Player</strong> settings, there are no settings on the panel. Also, the only settings on the <strong>Splash Image</strong> panel are the <a href="class-PlayerSettingsSplashScreen.html">common Splash Screen</a> settings. </p>
+
+<p>Since the Facebook build target uses the existing <a href="class-PlayerSettingsWebGL.html">WebGL</a> and Windows <a href="class-PlayerSettingsStandalone.html">Standalone</a> build targets, the Player settings for those targets also apply.</p>
+
+<p><a name="Icon"></a></p>
+
+<h2>Icon</h2>
+
+<p>Enable the <strong>Override for Facebook</strong> setting to assign a custom icon for your standalone game. You can upload different sizes of the icon to fit each of the squares provided.</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetFacebookIcon.png" alt="Icon settings for the Facebook platform">
+<figcaption>Icon settings for the Facebook platform</figcaption>
+</figure>
+
+<p><a name="Other"></a></p>
+
+<h2>Other Settings</h2>
+
+<p>This section allows you to customize a range of options organized into the following groups:</p>
+
+<ul>
+<li><a href="#Rendering">Rendering</a></li>
+<li><a href="#Configuration">Configuration</a></li>
+<li><a href="#Optimization">Optimization</a></li>
+<li><a href="#Logging">Logging</a></li>
+<li><a href="#Legacy">Legacy</a></li>
+</ul>
+
+<p><a name="Rendering"></a></p>
+
+<h3>Rendering</h3>
+
+<p>Use these settings to customize how Unity renders your game for the Facebook platform.</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetFacebookOther-Rendering.png" alt="Rendering Player settings for the Facebook platform">
+<figcaption>Rendering Player settings for the Facebook platform</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Auto Graphics API</strong></td>
+	<td style="text-align:left;">Disable this option to manually pick and reorder the graphics APIs. By default this option is enabled, and Unity includes Direct3D11.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Static Batching</strong></td>
+	<td style="text-align:left;">Enable this option to use <a href="DrawCallBatching.html">Static batching</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Dynamic Batching</strong></td>
+	<td style="text-align:left;">Enable this option to use <a href="DrawCallBatching.html">Dynamic Batching</a> (activated by default).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Graphics Jobs (Experimental)</strong></td>
+	<td style="text-align:left;">Enable this option to instruct Unity to offload graphics tasks (render loops) to worker threads running on other CPU cores. This is intended to reduce the time spent in <code>Camera.Render</code> on the main thread, which is often a bottleneck. <br><strong>Note:</strong> This feature is experimental. It may not deliver a performance improvement for your project, and may introduce instability.<br>Unity currently only supports Graphics Jobs when using <a href="https://www.khronos.org/vulkan/">Vulkan</a> and this setting has no effect when using <a href="https://developer.android.com/guide/topics/graphics/opengl.html">OpenGL</a> ES.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Lightmap Streaming Enabled</strong></td>
+	<td style="text-align:left;">Enable this option to load only the lightmap mip maps as needed to render the current game Cameras. This value applies to the lightmap textures as they are generated.<br><strong>Note:</strong> To use this setting, you must enable the <a href="class-QualitySettings.html#texStream">Texture Streaming Quality</a> setting.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Streaming Priority</strong></td>
+	<td style="text-align:left;">Set the lightmap mip map streaming priority to resolve resource conflicts. These values are applied to the light map textures as they are generated.<br>Positive numbers give higher priority. Valid values range from –128 to 127.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Configuration"></a></p>
+
+<h3>配置</h3>
+
+<figure>
+<img src="../uploads/Main/PlayerSetFacebook-Config.png" alt="Configuration settings for the Facebook platform">
+<figcaption>Configuration settings for the Facebook platform</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>Setting</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Scripting Runtime Version</strong></td>
+	<td style="text-align:left;">选择要在项目中使用的 .NET 运行时。有关更多详细信息，请参阅 Microsoft 的 <a href="https://docs.microsoft.com/en-us/dotnet/">.NET 文档</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>.NET 3.5 Equivalent (Deprecated)</em></td>
+	<td style="text-align:left;">A .NET runtime which implements the .NET 3.5 API. This functionality is deprecated, and should no longer be used. Please use .NET 4.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>.NET 4.x Equivalent</em></td>
+	<td style="text-align:left;">A .NET runtime which implements the .NET 4 API. This API is newer than .NET 3.5, and as such, it offers access to more APIs, is compatible with more external libraries, and supports C# 6. This is the default scripting runtime.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2">
+<a name="backend"></a><strong>Scripting Backend</strong>
+</td>
+	<td style="text-align:left;">This option is not available for WebGL.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>API Compatibility Level</strong></td>
+	<td style="text-align:left;">There are two options for API compatibility level: <em>.NET 4.0</em>, or <em>.NET Standard 2.0</em>.<br><strong>Tip:</strong> If you are having problems with a third-party assembly, you can try the suggestion in the <a href="#apiComp">API Compatibility Level</a> section below.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Use incremental GC</strong></td>
+	<td style="text-align:left;">Use the incremental garbage collector, which spreads garbage collection over several frames to reduce gc-related spikes in frame duration.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Disable HW Statistics</strong></td>
+	<td style="text-align:left;">Enable this option to instruct the application not to send information about the hardware to Unity. By default, Unity Android applications send anonymous HW statistics to Unity. This provides you with aggregated information to help you make decisions as a developer.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Scripting Define Symbols</strong></td>
+	<td style="text-align:left;">Set custom compilation flags. For more details, see <a href="PlatformDependentCompilation.html">Platform dependent compilation</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Allow ‘unsafe’ Code</strong></td>
+	<td style="text-align:left;">Enable support for compiling <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/unsafe">‘unsafe’ C# code</a> in a pre-defined assembly (for example, <code>Assembly-CSharp.dll</code>). <br>For Assembly Definition Files (<code>.asmdef</code>), click on one of your <code>.asmdef</code> files and enable the option in the Inspector window that appears.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Active Input Handling</strong></td>
+	<td style="text-align:left;">Choose how you want to handle input from users.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Input Manager</em></td>
+	<td style="text-align:left;">Use the traditional <a href="class-InputManager.html">Input</a> settings.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Input System (Preview)</em></td>
+	<td style="text-align:left;">Use the newer <a href="../ScriptReference/Input.html">Input</a> system. The Input System is provided as a preview package for this release. To try a preview of the Input System, install the <a href="https://github.com/Unity-Technologies/InputSystem">InputSystem package</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Both</em></td>
+	<td style="text-align:left;">Use both systems side by side.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="apiComp"></a></p>
+
+<h4>API Compatibility Level</h4>
+
+<p>You can choose your mono API compatibility level for all targets. Sometimes a 3rd-party .NET library uses functionality that is outside of your .NET compatibility level. In order to understand what is going on in such cases, and how to best fix it, try following these suggestions: </p>
+
+<ol>
+<li>Install <a href="http://www.airsquirrels.com/reflector/">Reflector</a> for Windows.</li>
+<li>Drag the .NET assemblies for the API compatilibity level you are having issues with into Reflector. You can find these under <code>Frameworks/Mono/lib/mono/YOURSUBSET/</code>.</li>
+<li>Drag in your 3rd-party assembly.</li>
+<li>Right-click your 3rd-party assembly and select <strong>Analyze</strong>.</li>
+<li>In the analysis report, inspect the <strong>Depends on</strong> section. The report highlights anything that the 3rd-party assembly depends on, but that is not available in the .NET compatibility level of your choice in red.</li>
+</ol>
+
+<p><a name="Optimization"></a></p>
+
+<h3>Optimization</h3>
+
+<figure>
+<img src="../uploads/Main/PlayerSetFacebookOther-Optimization.png" alt="Optimization settings for the Facebook platform">
+<figcaption>Optimization settings for the Facebook platform</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Setting</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Prebake Collision Meshes</strong></td>
+	<td style="text-align:left;">Enable this option to add collision data to Meshes at build time.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Keep Loaded Shaders Alive</strong></td>
+	<td style="text-align:left;">Enable this option to prevent shaders from being unloaded.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Preloaded Assets</strong></td>
+	<td style="text-align:left;">Set an array of Assets for the player to load on startup. <br>To add new Assets, increase the value of the <strong>Size</strong> property and then set a reference to the Asset to load in the new <strong>Element</strong> box that appears.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Vertex Compression</strong></td>
+	<td style="text-align:left;">Set vertex compression per channel. For example, you can enable compression for everything except positions and lightmap UVs. Whole Mesh compression set per imported object overrides where vertex compression is set on objects. Everything else obeys these vertex compression settings.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Optimize Mesh Data</strong></td>
+	<td style="text-align:left;">Enable this option to remove any data from Meshes that is not required by the Material applied to them (such as tangents, normals, colors, and UVs).</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Logging"></a></p>
+
+<h3>Logging</h3>
+
+<p>Select what type of logging to allow in specific contexts.</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetPCOther-Logging.png" alt="Logging settings for the Facebook platform">
+<figcaption>Logging settings for the Facebook platform</figcaption>
+</figure>
+
+<p>Check one box that corresponds to each Log Type (<strong>Error</strong>, <strong>Assert</strong>, <strong>Warning</strong>, <strong>Log</strong>, and <strong>Exception</strong>) when running scripts (<strong>ScriptOnly</strong>) , all the time (<strong>Full</strong>), or never (<strong>None</strong>).</p>
+
+<p><a name="Legacy"></a> </p>
+
+<h3>Legacy</h3>
+
+<p>Enable the <strong>Clamp BlendShapes (Deprecated)</strong> option to clamp the range of Blend Shape weights in <a href="class-SkinnedMeshRenderer.html">SkinnedMeshRenderers</a>.</p>
+
+<figure>
+<img src="../uploads/Main/PlayerSetPCOther-Legacy.png" alt="Legacy settings for the Facebook platform">
+<figcaption>Legacy settings for the Facebook platform</figcaption>
+</figure>
+
+<p><a name="Publishing"></a></p>
+
+<h2>发布设置 (Publishing Settings)</h2>
+
+<figure>
+<img src="../uploads/Main/class-PlayerSettingsFacebook-0.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">属性</th>
+	<th style="text-align:left;">功能</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Facebook SDK Version</strong></td>
+	<td style="text-align:left;">Choose the version of the Facebook SDK you want use for your Project. As Facebook publishes new versions compatible with your version of Unity, they will appear in this menu.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>AppID</strong></td>
+	<td style="text-align:left;">Enter your AppID, used by Facebook to identify your app. See <a href="https://developers.facebook.com/docs/unity/gettingstarted">Getting Started Facebook for Unity</a> for help with setting up an AppID.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Upload access token</strong></td>
+	<td style="text-align:left;">Enter your upload access token. Facebook requires this token to authorize the Unity Editor to upload builds of your app to Facebook. You can get this from Facebook, on your app configuration page, under the <strong>Web Hosting</strong> tab.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Show Windows Player Settings</strong></td>
+	<td style="text-align:left;">Click this button to switch to the <a href="class-PlayerSettingsStandalone.html">Standalone Player settings</a>, which affect any Facebook builds for Gameroom.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>FB.Init() Parameters</strong></td>
+	<td style="text-align:left;">Some parameters affecting how the Facebook SDK is initialized on the facebook.com web page. For more information, see the Facebook Developers <a href="https://developers.facebook.com/docs/unity/reference/current/FB.Init/">FB.Init</a> reference page.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Show WebGL Player Settings</strong></td>
+	<td style="text-align:left;">Click this button to switch to the <a href="class-PlayerSettingsWebGL.html">WebGL Player settings</a>, which affect any Facebook builds for WebGL.</td>
+</tr>
+</tbody>
+</table>
+
+<p><br> </p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit"> 2018–11–28 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li><span class="page-history">Input System preview added in Unity 2019.1</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Facebook-GettingStarted.html"></a></span><div class="tip">Facebook 开发入门</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Windows.html"></a></span><div class="tip">Windows</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

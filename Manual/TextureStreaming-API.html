@@ -1,0 +1,780 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Texture Streaming API - Unity Manual">
+<title>Texture Streaming API - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/StreamingController.png">
+<meta name="description" content="This page contains the following sections:">
+<meta property="og:description" content="This page contains the following sections:">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'TextureStreaming-API';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/TextureStreaming-API.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/TextureStreaming-API.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/TextureStreaming-API.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/TextureStreaming-API.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/TextureStreaming-API.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/TextureStreaming-API.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/TextureStreaming-API.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/TextureStreaming-API.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/TextureStreaming-API.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/TextureStreaming-API.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/TextureStreaming-API.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/TextureStreaming-API.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/TextureStreaming-API.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/TextureStreaming-API.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/TextureStreaming-API.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/TextureStreaming-API.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/TextureStreaming-API.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/TextureStreaming-API.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/TextureStreaming-API.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/TextureStreaming-API.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/TextureStreaming-API.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/TextureStreaming-API.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/TextureStreaming-API.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/TextureStreaming-API.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="OptimizingGraphicsPerformance.html">优化图形性能</a></li>
+<li><a href="TextureStreaming.html">Texture Streaming</a></li>
+<li>Texture Streaming API</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-StreamingController.html"></a></span><div class="tip">Streaming Controller</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Layers.html"></a></span><div class="tip">层</div>
+</div>
+</div></div>
+<h1>Texture Streaming API</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This page contains the following sections:</p>
+
+<ul>
+<li><a href="#Overview">Overview</a></li>
+<li><a href="#ControlTextureStreaming">Control the Texture Streaming system</a></li>
+<li><a href="#ControlCameras">Control the Cameras for Texture Streaming</a></li>
+<li><a href="#LoadSpecificMipmap">Load a specific mipmap</a></li>
+<li><a href="#Debugging">Debugging Texture Streaming</a></li>
+</ul>
+
+<p><a name="Overview"> </a></p>
+
+<h2>概述</h2>
+
+<p>Use the API to apply more control over how Unity streams Textures. You can override which mipmap level to load for specific Textures, while the Texture Streaming system automatically manages all other Textures. You might have specific gameplay scenarios where you know that Unity needs to fully load certain Textures. For example, moving large distances quickly, or using instantaneous Camera cuts, can cause noticeable Texture quality changes while the Texture Streaming system streams the mipmaps from the disk into memory. To reduce this problem, you can use the API to preload mipmaps at a new Camera location .</p>
+
+<p>To enable and control Texture Streaming on a Texture, use the following properties:</p>
+
+<ul>
+<li><a href="../ScriptReference/TextureImporter-streamingMipmaps.html">TextureImporter.streamingMipmaps</a></li>
+<li><a href="../ScriptReference/TextureImporter-streamingMipmapsPriority.html">TextureImporter.streamingMipmapsPriority</a></li>
+<li><a href="../ScriptReference/IHVImageFormatImporter-streamingMipmaps.html">IHVImageFormatImporter.streamingMipmaps</a></li>
+<li><a href="../ScriptReference/IHVImageFormatImporter-streamingMipmapsPriority.html">IHVImageFormatImporter.streamingMipmapsPriority</a></li>
+</ul>
+
+<p>Texture Streaming automatically reduces the size of Textures until they fit into the Texture Streaming <strong>Memory Budget</strong>. The Texture’s <strong>Mip Map Priority</strong> number is roughly a mipmap offset for the <strong>Memory Budget</strong>. For example, with a priority of 2, the Texture Streaming system tries to use a mipmap that is two mip levels higher than other Textures with a priority of 0. Negative values are also valid. If it can’t do this, it uses a lower mip level to fit the <strong>Memory Budget</strong>.</p>
+
+<p><a name="ControlTextureStreaming"> </a></p>
+
+<h2>Control the Texture Streaming system</h2>
+
+<p>These properties are read-only at run time:</p>
+
+<ul>
+<li><a href="../ScriptReference/SystemInfo-supportsMipStreaming.html">SystemInfo.supportsMipStreaming</a></li>
+<li><a href="../ScriptReference/Texture2D-streamingMipmaps.html">Texture2D.streamingMipmaps</a></li>
+<li><a href="../ScriptReference/Texture2D-streamingMipmapsPriority.html">Texture2D.streamingMipmapsPriority</a></li>
+</ul>
+
+<p>To control what happens at run time, use the following static properties:</p>
+
+<ul>
+<li><p><a href="../ScriptReference/QualitySettings-streamingMipmapsActive.html">QualitySettings.streamingMipmapsActive</a></p></li>
+<li><p><a href="../ScriptReference/QualitySettings-streamingMipmapsMemoryBudget.html">QualitySettings.streamingMipmapsMemoryBudget</a> (defaults to 512 MB)</p></li>
+<li><p><a href="../ScriptReference/QualitySettings-streamingMipmapsRenderersPerFrame.html">QualitySettings.streamingMipmapsRenderersPerFrame</a> (defaults to 512)</p></li>
+<li><p><a href="../ScriptReference/QualitySettings-streamingMipmapsMaxLevelReduction.html">QualitySettings.streamingMipmapsMaxLevelReduction</a> (defaults to 2)</p></li>
+<li><p><a href="../ScriptReference/QualitySettings-streamingMipmapsMaxFileIORequests.html">QualitySettings.streamingMipmapsMaxFileIORequests</a> (defaults to 1024)</p></li>
+<li><p><a href="../ScriptReference/Texture-streamingTextureDiscardUnusedMips.html">Texture2D.streamingTextureDiscardUnusedMips</a></p></li>
+</ul>
+
+<p>To control the way Unity caches unused mip levels via script, use <a href="../ScriptReference/Texture-streamingTextureDiscardUnusedMips.html">Texture2D.streamingTextureDiscardUnusedMips</a>. It’s useful to set this to <code>true</code> for initial testing to check metrics, and to set a <strong>Memory Budget</strong> (set in <a href="class-QualitySettings.html">Quality Settings</a> when <strong>Texture Streaming</strong> is enabled, or via <a href="../ScriptReference/QualitySettings-streamingMipmapsMemoryBudget.html">QualitySettings.streamingMipmapsMemoryBudget</a>), otherwise Unity doesn’t drop any mips. The <strong>Memory Budget</strong> is set to 512MB by default. </p>
+
+<p><a name="ControlCameras"> </a></p>
+
+<h2>Control the Cameras for Texture Streaming</h2>
+
+<p>In the Quality Settings (<strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Quality</strong>), use <strong>Add All Cameras</strong> to specify whether Unity should calculate Texture Streaming for all Cameras in the Project. This is enabled by default.</p>
+
+<p>For fine-grain control over which Cameras are active, use the <a href="class-StreamingController.html">Streaming Controller</a> component on the same GameObject as the Camera component. This takes the location and Camera settings (such as <strong>Field of View</strong>) directly from the Camera component.</p>
+
+<p>If the Camera is disabled, Unity does not calculate Texture Streaming for it, unless the Streaming Controller is enabled and in the preloading state. When the Streaming Controller and associated Camera are enabled, or if the Streaming Controller is in a preloading state, then Unity calculates Texture Streaming for this Camera. If the Streaming Controller is disabled, then Unity does not calculate Texture Streaming for this Camera. </p>
+
+<figure>
+<img src="../uploads/Main/StreamingController.png" alt="The Streaming Controller component">
+<figcaption>The Streaming Controller component</figcaption>
+</figure>
+
+<p>The Streaming Controller component contains the <strong>Mip Map Bias</strong> setting. To control this via API, use <a href="../ScriptReference/StreamingController-streamingMipmapBias.html">StreamingController.streamingMipmapBias</a>.</p>
+
+<p>Use this setting to force Unity to load smaller or larger mipmap levels than the Texture Streaming system has chosen for those Textures. Use the numerical field to set the offset that Unity applies to the mipmap level. Unity adds this offset to all Textures visible from this Camera. </p>
+
+<h3>Camera cuts</h3>
+
+<p>When cutting from one location to another, the Texture Streaming system needs time to stream the required Textures into Unity. To trigger preloading at a disabled target Camera location, call <a href="../ScriptReference/StreamingController.SetPreloading.html">StreamingController.SetPreloading</a> on the target Camera’s Streaming Controller component. You can specify a time-out to end the preloading phase. To automatically enable the Camera at the end of the preloading phase, set the <code>activateCameraOnTimeout</code> flag to true in script. To disable a Camera after you cut from it to the new one, pass that Camera as the <code>disableCameraCuttingFrom</code> parameter.</p>
+
+<pre><code>void StreamingController.SetPreloading(float timeoutSeconds=0.0f, bool activateCameraOnTimeout=false, Camera disableCameraCuttingFrom=null)
+</code></pre>
+
+<p>To cancel or query the preloading state, use the following methods:</p>
+
+<ul>
+<li><a href="../ScriptReference/StreamingController.CancelPreloading.html">StreamingController.CancelPreloading</a></li>
+<li><a href="../ScriptReference/StreamingController.IsPreloading.html">StreamingController.IsPreloading</a></li>
+</ul>
+
+<p>To determine whether the Texture Streaming system is still loading Textures, you can query the following properties: </p>
+
+<ul>
+<li><a href="../ScriptReference/Texture-streamingTextureLoadingCount.html">Texture.streamingTextureLoadingCount</a></li>
+<li><a href="../ScriptReference/Texture-streamingTexturePendingLoadCount.html">Texture.streamingTexturePendingLoadCount</a></li>
+</ul>
+
+<p>Note that there is delay between when you enable a Camera and when these properties become a value other than zero. This delay is because the Texture Streaming system calculates the mipmaps using time-sliced processing. For this reason, during a Camera cut you should wait a minimum length of time before the cut. Texture budget and Scene movement can cause continuous Texture Streaming, so you also need to set a maximum length of time before the cut.</p>
+
+<p><a name="LoadSpecificMipmap"> </a></p>
+
+<h2>Load a specific mipmap</h2>
+
+<p>To override the mip level calculation for a specific Texture, use <a href="../ScriptReference/Texture2D-requestedMipmapLevel.html">Texture2D.requestedMipmapLevel</a>. This is an exact mip level ranging from 0 to the maximum mip level of the specific Texture, or the <strong>Max Level Reduction</strong> value if that is lower. 0 is the highest resolution mip.</p>
+
+<p>To check if your requested mip level has loaded, use <a href="../ScriptReference/Texture2D.IsRequestedMipmapLevelLoaded.html">Texture2D.IsRequestedMipmapLevelLoaded</a>.</p>
+
+<p>If you no longer want to override the mip level you requested and instead want the system to continue to calculate mip map levels, use <a href="../ScriptReference/Texture2D.ClearRequestedMipmapLevel.html">Texture2D.ClearRequestedMipmapLevel</a> to reset the value.</p>
+
+<p>To get an estimate of the UV density on a Mesh, use the following:</p>
+
+<pre><code>float Mesh.GetUVDistributionMetric(int uvSetIndex)
+</code></pre>
+
+<p>You can use the UV distribution metric to calculate the mipmap level you need, based on the position of the Camera. See <a href="../ScriptReference/Mesh.GetUVDistributionMetric.html">Mesh.GetUVDistributionMetric</a> for example code.</p>
+
+<p>To override the system and force all mips to load, use <a href="../ScriptReference/Texture-streamingTextureForceLoadAll.html">Texture.streamingTextureForceLoadAll</a>.</p>
+
+<h3>Related API methods</h3>
+
+<p>To get and set a Texture assigned to a Material, use: </p>
+
+<ul>
+<li><a href="../ScriptReference/Material.GetTexture.html">Material.GetTexture</a></li>
+<li><a href="../ScriptReference/Material.SetTexture.html">Material.SetTexture</a></li>
+</ul>
+
+<p>To get all Texture properties on a Material, use:</p>
+
+<ul>
+<li><a href="../ScriptReference/Material.GetTexturePropertyNames.html">Material.GetTexturePropertyNames</a></li>
+<li><a href="../ScriptReference/Material.GetTexturePropertyNameIDs.html">Material.GetTexturePropertyNameIDs</a></li>
+</ul>
+
+<p><a name="Debugging"> </a></p>
+
+<h2>Debug Texture Streaming</h2>
+
+<p>Unity has a built-in Texture Streaming debugging view mode. To access it, click the <a href="ViewModes.html">Scene view control drop-down</a> and select <strong>Texture Streaming</strong>. This view mode tints GameObjects the following colours, depending on their status in the Texture Streaming system:</p>
+
+<ul>
+<li>
+<strong>Green</strong> for Textures that have reduced mipmaps due to the Texture Streaming system.</li>
+<li>
+<strong>Red</strong> for Textures that have fewer mipmaps because the Texture Streaming system does not have enough resources to load them all.</li>
+<li>
+<strong>Blue</strong> for Textures that are not set to stream, or if there is no renderer calculating the mip levels.</li>
+</ul>
+
+<h3>Debug via script</h3>
+
+<p>To upload Material properties for the debug modes, use <a href="../ScriptReference/Texture.SetStreamingTextureMaterialDebugProperties.html">Texture.SetStreamingTextureMaterialDebugProperties</a>.</p>
+
+<p>To upload Material properties for the debug modes, use the following properties:</p>
+
+<ul>
+<li><a href="../ScriptReference/Texture-currentTextureMemory.html">Texture.currentTextureMemory</a></li>
+<li><a href="../ScriptReference/Texture-desiredTextureMemory.html">Texture.desiredTextureMemory</a></li>
+<li><a href="../ScriptReference/Texture-totalTextureMemory.html">Texture.totalTextureMemory</a></li>
+<li><a href="../ScriptReference/Texture-targetTextureMemory.html">Texture.targetTextureMemory</a></li>
+<li><a href="../ScriptReference/Texture-nonStreamingTextureMemory.html">Texture.nonStreamingTextureMemory</a></li>
+</ul>
+
+<p>To get information about the number of Textures or renderers the Texture Streaming system is interacting with, use the following properties:</p>
+
+<ul>
+<li><a href="../ScriptReference/Texture-streamingMipmapUploadCount.html">Texture.streamingMipmapUploadCount</a></li>
+<li><a href="../ScriptReference/Texture-nonStreamingTextureCount.html">Texture.nonStreamingTextureCount</a></li>
+<li><a href="../ScriptReference/Texture-streamingTextureCount.html">Texture.streamingTextureCount</a></li>
+<li><a href="../ScriptReference/Texture-streamingRendererCount.html">Texture.streamingRendererCount</a></li>
+</ul>
+
+<p>To get information about mipmap levels, use the following properties:</p>
+
+<ul>
+<li><a href="../ScriptReference/Texture2D-desiredMipmapLevel.html">Texture2D.desiredMipmapLevel</a></li>
+<li><a href="../ScriptReference/Texture2D-loadingMipmapLevel.html">Texture2D.loadingMipmapLevel</a></li>
+<li><a href="../ScriptReference/Texture2D-loadedMipmapLevel.html">Texture2D.loadedMipmapLevel</a></li>
+</ul>
+
+<h3>Light maps</h3>
+
+<p>You can use the Texture Streaming system to stream light maps. You can edit the Texture settings directly, but they reset to their default values when Unity regenerates the light maps. The <a href="class-PlayerSettings.html">Player Settings</a> (<strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Player</strong>) provide two controls to set streaming and priority for generated lightmaps: <strong>Lightmap Streaming Enabled</strong> and <strong>Streaming Priority</strong>.</p>
+
+<figure>
+<img src="../uploads/Main/TextureStreaming-API-LightMaps.png" alt="Edit &amp;gt; Project Settings &amp;gt; Player &amp;gt; Other Settings">
+<figcaption><strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Player</strong> &gt; <strong>Other Settings</strong></figcaption>
+</figure>
+
+<h3>Play Mode</h3>
+
+<p>Texture Streaming is enabled in Play Mode by default. However, when running in Play Mode, the Editor overheads bias the statistics. To get accurate figures, test the application on the target device.</p>
+
+<p>When Texture Streaming is enabled in Play mode, but not enabled in Edit mode (or the other way around), toggling in and out of Play mode takes slightly longer. To disable Texture Streaming in Play mode, go to the Editor Settings (<strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Editor</strong>), navigate to <strong>Streaming Settings</strong> and disable <strong>Enabled Texture Streaming in Play Mode</strong>. This prevents Unity from unloading and reloading mipmap data, and should speed up the Play mode workflow. </p>
+
+<figure>
+<img src="../uploads/Main/StreamingSettings2019-1.png" alt="Edit &amp;gt; Project Settings &amp;gt; Editor &amp;gt; Streaming Settings">
+<figcaption><strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Editor</strong> &gt; <strong>Streaming Settings</strong></figcaption>
+</figure>
+
+<h3>Debug status script</h3>
+
+<p>Add the following script to a GameObject in the Scene to display the Texture Streaming status. This is useful if you want to determine the correct memory budget to set.</p>
+
+<pre><code>Shader "Show Texture Streaming" {
+    Properties {
+        _MainTex ("", 2D) = "white" {}
+        _Control ("Control (RGBA)", 2D) = "red" {}
+        _Splat3 ("Layer 3 (A)", 2D) = "white" {}
+        _Splat2 ("Layer 2 (B)", 2D) = "white" {}
+        _Splat1 ("Layer 1 (G)", 2D) = "white" {}
+        _Splat0 ("Layer 0 (R)", 2D) = "white" {}
+        _BaseMap ("", 2D) = "white" {}
+        _Cutoff ("Cutoff", float) = 0.5
+    }
+
+
+CGINCLUDE
+// Common code used by most of the things below
+#include "UnityCG.cginc"
+struct v2f {
+    float4 pos : SV_POSITION;
+    float2 uv : TEXCOORD0;
+};
+uniform float4 _MainTex_ST;
+uniform float4 _MainTex_TexelSize;
+uniform float4 _MainTex_MipInfo;
+
+UNITY_DECLARE_TEX2D(_MainTex);
+UNITY_DECLARE_TEX2D(_SceneViewMipcolorsTexture);
+
+uint GetMipCount(Texture2D tex)
+{
+#if defined(SHADER_API_D3D11) || defined(SHADER_API_D3D12) || defined(SHADER_API_D3D11_9X) || defined(SHADER_API_XBOXONE) || defined(SHADER_API_PSSL)
+    #define MIP_COUNT_SUPPORTED 1
+#endif
+#if (defined(SHADER_API_OPENGL) || defined(SHADER_API_VULKAN)) &amp;&amp; !defined(SHADER_STAGE_COMPUTE)
+    // OpenGL only supports textureSize for width, height, depth
+    // textureQueryLevels (GL_ARB_texture_query_levels) needs OpenGL 4.3 or above and doesn't compile in compute shaders
+    // tex.GetDimensions converted to textureQueryLevels
+    #define MIP_COUNT_SUPPORTED 1
+#endif
+    // Metal doesn't support high enough OpenGL version
+
+#if defined(MIP_COUNT_SUPPORTED)
+    uint mipLevel, width, height, mipCount;
+    mipLevel = width = height = mipCount = 0;
+    tex.GetDimensions(mipLevel, width, height, mipCount);
+    return mipCount;
+#else
+    return 0;
+#endif
+}
+
+float4 GetStreamingMipColor(uint mipCount, float4 mipInfo)
+{
+    // alpha is amount to blend with source color (0.0 = use original, 1.0 = use new color)
+
+    // mipInfo :
+    // x = quality setings minStreamingMipLevel
+    // y = original mip count for texture
+    // z = desired on screen mip level
+    // w = loaded mip level
+    uint originalTextureMipCount = uint(mipInfo.y);
+
+    // If material/shader mip info (original mip level) has not been set it’s either not a streamed texture 
+    // or no renderer is updating it
+    if (originalTextureMipCount == 0)
+        return float4(0.0, 0.0, 1.0, 0.5);
+
+    uint desiredMipLevel = uint(mipInfo.z);
+    uint mipCountDesired = uint(originalTextureMipCount)-uint(desiredMipLevel);
+    if (mipCount == 0)
+    {
+        // Can't calculate, use the passed value
+        mipCount = originalTextureMipCount - uint(mipInfo.w);
+    }
+
+    if (mipCount &lt; mipCountDesired)
+    {
+        // red tones when not at the desired mip level (reduction due to budget). Brighter is further from original, alpha 0 when at desired
+        float ratioToDesired = float(mipCount) / float(mipCountDesired);
+        return float4(1.0, 0.0, 0.0, 1.0 - ratioToDesired);
+    }
+    else if (mipCount &gt;= originalTextureMipCount)
+    {
+        // original color when at (or beyond) original mip count
+        return float4(1.0, 1.0, 1.0, 0.0);
+    }
+    else
+    {
+        // green tones when not at the original mip level. Brighter is closer to original, alpha 0 when at original
+        float ratioToOriginal = float(mipCount) / float(originalTextureMipCount);
+        return float4(0.0, 1.0, 0.0, 1.0 - ratioToOriginal);
+    }
+}
+
+float3 GetDebugStreamingMipColorBlended(float3 originalColor, Texture2D tex, float4 mipInfo)
+{
+    uint mipCount = GetMipCount(tex);
+    float4 mipColor = GetStreamingMipColor(mipCount, mipInfo);
+    return lerp(originalColor, mipColor.rgb, mipColor.a);
+}
+
+
+v2f vert( appdata_base v ) {
+    v2f o;
+    o.pos = UnityObjectToClipPos(v.vertex);
+    o.uv = TRANSFORM_TEX(v.texcoord,_MainTex);
+    
+    return o;
+}
+
+fixed4 frag(v2f i) : COLOR
+{
+    fixed4 col = UNITY_SAMPLE_TEX2D(_MainTex, i.uv);
+    half4 res;
+    res.rgb = GetDebugStreamingMipColorBlended(col.rgb, _MainTex, _MainTex_MipInfo);
+    res.a = col.a;
+    return res;
+}
+
+struct v2fGrass {
+    float4 pos : SV_POSITION;
+    fixed4 color : COLOR;
+    float2 uv : TEXCOORD0;
+};
+
+fixed4 fragGrass(v2fGrass i) : COLOR
+{
+    fixed4 col = UNITY_SAMPLE_TEX2D(_MainTex, i.uv);
+    half4 res;
+    res.rgb = GetDebugStreamingMipColorBlended(col.rgb, _MainTex, _MainTex_MipInfo);
+    res.a = col.a * i.color.a;
+    return res;
+}
+ENDCG
+
+SubShader {
+    Tags { "ForceSupported" = "True" "RenderType"="Opaque" }
+    Pass {
+CGPROGRAM
+
+// As both normal opaque shaders and terrain splat shaders
+// have "Opaque" render type, we need to do some voodoo
+// to make both work.
+
+#pragma vertex vertWTerrain
+#pragma fragment fragWTerrain
+#pragma target 2.0
+#pragma exclude_renderers gles
+
+struct v2fterr {
+    float4 pos : SV_POSITION;
+    float2 uvnormal : TEXCOORD0;
+    float4 uv[3] : TEXCOORD2;
+    float nonterrain  : TEXCOORD5;
+};
+
+uniform float4 _Splat0_ST,_Splat1_ST,_Splat2_ST,_Splat3_ST,_Splat4_ST;
+uniform float4 _Splat0_TexelSize,_Splat1_TexelSize,_Splat2_TexelSize,_Splat3_TexelSize,_Splat4_TexelSize;
+uniform float4 _BaseMap_TexelSize;
+
+v2fterr vertWTerrain( appdata_base v ) {
+    v2fterr o;
+    o.pos = UnityObjectToClipPos(v.vertex);
+    // assume it's not a terrain if _Splat0_TexelSize is not set up.
+    float nonterrain = _Splat0_TexelSize.z==0.0 ? 1:0;
+    // collapse/don't draw terrain's add pass in this mode, since it looks really bad if first pass
+    // and add pass blink depending on which gets drawn first with this replacement shader
+    // TODO: make it display mips properly even for two-pass terrains. 
+    o.pos *= _MainTex_TexelSize.z==0.0 &amp;&amp; _Splat0_TexelSize.z!=0.0 ? 0 : 1;
+    // normal texture UV
+    o.uvnormal = TRANSFORM_TEX(v.texcoord,_MainTex);
+    // terrain splat UVs
+    float2 baseUV = v.texcoord.xy;
+    o.uv[0].xy = baseUV;
+    o.uv[0].zw = half2(0,0);
+    o.uv[1].xy = TRANSFORM_TEX (baseUV, _Splat0);
+    o.uv[1].zw = TRANSFORM_TEX (baseUV, _Splat1);
+    o.uv[2].xy = TRANSFORM_TEX (baseUV, _Splat2);
+    o.uv[2].zw = TRANSFORM_TEX (baseUV, _Splat3);
+    
+    o.nonterrain = nonterrain;
+    return o;
+}
+UNITY_DECLARE_TEX2D(_Control);
+UNITY_DECLARE_TEX2D(_Splat0);
+UNITY_DECLARE_TEX2D(_Splat1);
+UNITY_DECLARE_TEX2D(_Splat2);
+UNITY_DECLARE_TEX2D(_Splat3);
+UNITY_DECLARE_TEX2D(_BaseMap);
+fixed4 fragWTerrain(v2fterr i) : COLOR
+{
+    // sample regular texture
+    fixed4 colnormal = UNITY_SAMPLE_TEX2D(_MainTex, i.uvnormal);
+    
+    // sample splatmaps
+    half4 splat_control = UNITY_SAMPLE_TEX2D(_Control, i.uv[0].xy);
+    half3 splat_color = splat_control.r * UNITY_SAMPLE_TEX2D(_Splat0, i.uv[1].xy).rgb;
+    splat_color += splat_control.g * UNITY_SAMPLE_TEX2D(_Splat1, i.uv[1].zw).rgb;
+    splat_color += splat_control.b * UNITY_SAMPLE_TEX2D(_Splat2, i.uv[2].xy).rgb;
+    splat_color += splat_control.a * UNITY_SAMPLE_TEX2D(_Splat3, i.uv[2].zw).rgb;
+    
+    // lerp between normal and splatmaps
+    half3 col = lerp(splat_color, colnormal.rgb, (half)i.nonterrain);
+
+    half4 res;
+    // TODO: Take splat mips into account
+    res.rgb = GetDebugStreamingMipColorBlended(col.rgb, _MainTex, _MainTex_MipInfo);
+    res.a = colnormal.a;
+    
+    return res;
+}
+ENDCG
+    }
+}
+
+SubShader {
+    Tags { "ForceSupported" = "True" "RenderType"="Transparent" }
+    Pass {
+        Cull Off
+CGPROGRAM
+#pragma vertex vert
+#pragma fragment frag
+#pragma target 2.0
+#pragma exclude_renderers gles
+ENDCG
+    }
+}
+
+SubShader {
+    Tags { "ForceSupported" = "True" "RenderType"="TransparentCutout" }
+    Pass {
+        AlphaTest Greater [_Cutoff]
+CGPROGRAM
+#pragma vertex vert
+#pragma fragment frag
+#pragma target 2.0
+#pragma exclude_renderers gles
+ENDCG
+    }
+}
+
+SubShader {
+    Tags { "ForceSupported" = "True" "RenderType"="TreeBark" }
+    Pass {
+CGPROGRAM
+#pragma vertex vertTreeBark
+#pragma fragment frag
+#pragma target 2.0
+#pragma exclude_renderers gles
+#include "UnityCG.cginc"
+#include "UnityBuiltin3xTreeLibrary.cginc"
+v2f vertTreeBark (appdata_full v) {
+    v2f o;
+    TreeVertBark(v);
+    o.pos = UnityObjectToClipPos(v.vertex);
+    o.uv = v.texcoord;
+    return o;
+}
+ENDCG
+    }
+}
+
+SubShader {
+    Tags { "ForceSupported" = "True" "RenderType"="TreeLeaf" }
+    Pass {
+CGPROGRAM
+#pragma vertex vertTreeLeaf
+#pragma fragment frag
+#pragma target 2.0
+#pragma exclude_renderers gles
+#include "UnityCG.cginc"
+#include "UnityBuiltin3xTreeLibrary.cginc"
+v2f vertTreeLeaf (appdata_full v) {
+    v2f o;
+    TreeVertLeaf (v);
+    o.pos = UnityObjectToClipPos(v.vertex);
+    o.uv = v.texcoord;
+    return o;
+}
+ENDCG
+        AlphaTest GEqual [_Cutoff]
+    }
+}
+
+SubShader {
+    Tags { "ForceSupported" = "True" "RenderType"="TreeOpaque" }
+    Pass {
+CGPROGRAM
+#pragma vertex vertTree
+#pragma fragment frag
+#pragma target 2.0
+#pragma exclude_renderers gles
+#include "TerrainEngine.cginc"
+struct appdata {
+    float4 vertex : POSITION;
+    fixed4 color : COLOR;
+    float2 texcoord : TEXCOORD0;
+};
+v2f vertTree( appdata v ) {
+    v2f o;
+    TerrainAnimateTree(v.vertex, v.color.w);
+    o.pos = UnityObjectToClipPos(v.vertex);
+    o.uv = v.texcoord;
+    return o;
+}
+ENDCG
+    }
+} 
+
+SubShader {
+    Tags { "ForceSupported" = "True" "RenderType"="TreeTransparentCutout" }
+    Pass {
+        Cull Off
+CGPROGRAM
+#pragma vertex vertTree
+#pragma fragment frag
+#pragma target 2.0
+#pragma exclude_renderers gles
+#include "TerrainEngine.cginc"
+struct appdata {
+    float4 vertex : POSITION;
+    fixed4 color : COLOR;
+    float4 texcoord : TEXCOORD0;
+};
+v2f vertTree( appdata v ) {
+    v2f o;
+    TerrainAnimateTree(v.vertex, v.color.w);
+    o.pos = UnityObjectToClipPos(v.vertex);
+    o.uv = v.texcoord;
+    return o;
+}
+ENDCG
+        AlphaTest GEqual [_Cutoff]
+    }
+}
+
+SubShader {
+    Tags { "ForceSupported" = "True" "RenderType"="TreeBillboard" }
+    Pass {
+        Cull Off
+        ZWrite Off
+CGPROGRAM
+#pragma vertex vertTree
+#pragma fragment frag
+#pragma target 2.0
+#pragma exclude_renderers gles
+#include "TerrainEngine.cginc"
+v2f vertTree (appdata_tree_billboard v) {
+    v2f o;
+    TerrainBillboardTree(v.vertex, v.texcoord1.xy, v.texcoord.y);
+    o.pos = UnityObjectToClipPos(v.vertex);
+    o.uv.x = v.texcoord.x;
+    o.uv.y = v.texcoord.y &amp;gt; 0;
+    return o;
+}
+ENDCG
+        
+        SetTexture [_MainTex] { combine primary, texture }
+    }
+}
+
+SubShader {
+    Tags { "ForceSupported" = "True" "RenderType"="GrassBillboard" }
+    Pass {
+        Cull Off
+CGPROGRAM
+#pragma vertex vertGrass
+#pragma fragment fragGrass
+#pragma target 2.0
+#pragma exclude_renderers gles
+#include "TerrainEngine.cginc"
+v2fGrass vertGrass (appdata_full v) {
+    v2fGrass o;
+    WavingGrassBillboardVert (v);
+    o.color = v.color;
+    o.pos = UnityObjectToClipPos(v.vertex);
+    o.uv = v.texcoord;
+    return o;
+}
+ENDCG
+        AlphaTest Greater [_Cutoff]
+    }
+}
+
+SubShader {
+    Tags { "ForceSupported" = "True" "RenderType"="Grass" }
+    Pass {
+        Cull Off
+CGPROGRAM
+#pragma vertex vertGrass
+#pragma fragment fragGrass
+#pragma target 2.0
+#pragma exclude_renderers gles
+#include "TerrainEngine.cginc"
+v2fGrass vertGrass (appdata_full v) {
+    v2fGrass o;
+    WavingGrassVert (v);
+    o.color = v.color;
+    o.pos = UnityObjectToClipPos(v.vertex);
+    o.uv = v.texcoord;
+    return o;
+}
+ENDCG
+        AlphaTest Greater [_Cutoff]
+    }
+}
+
+Fallback Off
+}
+</code></pre>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-StreamingController.html"></a></span><div class="tip">Streaming Controller</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Layers.html"></a></span><div class="tip">层</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="摄像机 - Unity Manual">
+<title>摄像机 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/CameraPerspectiveAndOrtho.jpg">
+<meta name="description" content="Unity 场景是通过在三维空间中放置并移动对象来创建的。由于观察者的屏幕是二维屏幕，因此需要通过一种方法来捕捉视图并将其&amp;#8220;平面化&amp;#8221;以进行显示。该过程通过__摄像机__完成。">
+<meta property="og:description" content="Unity 场景是通过在三维空间中放置并移动对象来创建的。由于观察者的屏幕是二维屏幕，因此需要通过一种方法来捕捉视图并将其&amp;#8220;平面化&amp;#8221;以进行显示。该过程通过__摄像机__完成。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'CamerasOverview';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/CamerasOverview.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/CamerasOverview.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/CamerasOverview.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/CamerasOverview.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/CamerasOverview.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/CamerasOverview.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/CamerasOverview.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/CamerasOverview.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/CamerasOverview.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/CamerasOverview.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/CamerasOverview.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/CamerasOverview.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/CamerasOverview.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/CamerasOverview.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/CamerasOverview.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/CamerasOverview.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/CamerasOverview.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/CamerasOverview.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/CamerasOverview.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/CamerasOverview.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/CamerasOverview.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/CamerasOverview.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/CamerasOverview.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/CamerasOverview.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li>摄像机</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LinearRendering-LinearTextures.html"></a></span><div class="tip">使用线性纹理</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="MultipleCameras.html"></a></span><div class="tip">使用多个摄像机</div>
+</div>
+</div></div>
+<h1>摄像机</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 场景是通过在三维空间中放置并移动对象来创建的。由于观察者的屏幕是二维屏幕，因此需要通过一种方法来捕捉视图并将其“平面化”以进行显示。该过程通过__摄像机__完成。</p>
+
+<p>摄像机是在场景空间中定义视图的对象。该对象的位置定义了视点，而其向前 (Z) 轴和向上 (Y) 轴分别定义了视图方向和屏幕顶端。<a href="class-Camera.html">摄像机组件</a>还定义了视图中区域的大小和形状。通过设置这些参数，摄像机能够显示其在当前屏幕上“观察”到的内容。当摄像机对象移动和旋转时，显示的视图会随之移动和旋转。</p>
+
+<h2>透视和正交摄像机</h2>
+
+<figure>
+<img src="../uploads/Main/CameraPerspectiveAndOrtho.jpg" alt="在透视模式（左）和正交模式（右）下显示的同一场景">
+<figcaption>在透视模式（左）和正交模式（右）下显示的同一场景</figcaption>
+</figure>
+
+<p>现实世界中的摄像机（实际相当于人眼）在观察外界事物时，物体距离视点越远，看起来越小。这种众所周知的_透视_效果在艺术和计算机图形领域广泛应用，对于创建现实场景至关重要。当然，Unity 支持透视摄像机，有时需要专门在没有这种效果的条件下渲染视图。例如，需要创建一种与真实世界的对象不完全相同的地图或信息显示效果。显示的对象不随距离变远而缩小的摄像机称为正交摄像机；Unity 摄像机也有这样的选项。在透视和正交模式下观察场景称为摄像机投影。<em>（上述场景来自于 <a href="https://www.assetstore.unity3d.com/en/#!/publisher/1299">BITGEM</a>）</em></p>
+
+<h2>被观察区域的形状</h2>
+
+<p>对于从当前位置能“观察”的最远距离方面，透视和正交摄像机都存在一定的限制。该限制由垂直于摄像机向前 (Z) 方向的平面定义。此平面称为远裁剪面，因为与摄像机距离较远的对象将被“裁剪”（即，不在渲染范围内）。摄像机附近还有一个相应的近裁剪面；可观察的距离范围位于这两个平面之间。</p>
+
+<p>在非透视模式下，无论距离远近，对象大小不变。这表示，正交摄像机的视体由两个裁剪面之间的长方体定义。</p>
+
+<p>使用透视摄像机时，对象会随其与摄像机的距离增大而缩小。这表示场景中可视部分的宽度和高度随着距离的增大而增大。因此，透视摄像机的视体不是一个长方体，而是金字塔形状，其顶点位于摄像机位置而底部位于远裁剪面。不过，该形状并不是严格的金字塔形，因为顶部被近裁剪面截断了；这种被截断的金字塔形状称为平截头体。由于平截头体的高度并非常量，平截头体由其宽度与高度之比（称为宽高比）以及顶部与底部之间在顶点处的夹角（称为视野即FOV）定义。请参阅关于<a href="UnderstandingFrustum.html">了解视锥体</a>的页面，了解更多详细说明。</p>
+
+<h2>摄像机视图的背景</h2>
+
+<p>对于室内场景，摄像机可能总是完全位于代表建筑物内部、洞穴或其他结构的某个对象内。但是，当动作发生在室外时，对象之间会有许多不含任何对象的空白区域；这些背景区域通常表现为天空、空间或水下场景的黑暗深处。</p>
+
+<p>摄像机不能完全不顾背景，因此必须用一些对象填充空白空间。最简单的方法是在基于背景渲染场景之前，先将背景清理成单调的颜色。可以使用摄像机的 Background属性来设置此颜色，在检视面板或脚本中进行操作。有一种更复杂的方法非常适合处理室外场景，即<a href="class-Skybox.html">使用天空盒 (Skybox)</a>。顾名思义，天空盒的行为类似于一个布满天空图像的“盒体”。摄像机被有效地放置在此盒体的中央，并可从各个方向观察天空。摄像机在旋转的过程中可观察到天空的不同区域，但是摄像机绝不会移出中心位置（所以摄像机无法“靠近”天空）。天空盒是在场景中所有对象的后面渲染，因此表现了一个无限远的视图。最常见的用法是在标准室外场景中表现天空，但盒体实际上完全围绕着摄像机，甚至在摄像机下面也是如此。因此，可使用天空盒来表现场景的某些部分（例如，延伸到地平线之外的起伏平原）或者太空或水下场景的全方位视角。</p>
+
+<p>You can add a skybox to a scene simply by setting the <em>Skybox</em> property in the <a href="GlobalIllumination.html">Lighting window</a> (menu: <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong>). See <a href="HOWTO-UseSkybox.html">this page</a> for further details on how to create your own skybox.</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LinearRendering-LinearTextures.html"></a></span><div class="tip">使用线性纹理</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="MultipleCameras.html"></a></span><div class="tip">使用多个摄像机</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

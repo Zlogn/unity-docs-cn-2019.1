@@ -1,0 +1,215 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="视频透明度支持 - Unity Manual">
+<title>视频透明度支持 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/Video-10.png">
+<meta name="description" content="Unity 的视频剪辑和视频播放器 (Video Player) 组件支持 Alpha（这是用于指代透明度的标准术语）。">
+<meta property="og:description" content="Unity 的视频剪辑和视频播放器 (Video Player) 组件支持 Alpha（这是用于指代透明度的标准术语）。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'VideoTransparency';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/VideoTransparency.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/VideoTransparency.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/VideoTransparency.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/VideoTransparency.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/VideoTransparency.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/VideoTransparency.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/VideoTransparency.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/VideoTransparency.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/VideoTransparency.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/VideoTransparency.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/VideoTransparency.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/VideoTransparency.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/VideoTransparency.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/VideoTransparency.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/VideoTransparency.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/VideoTransparency.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/VideoTransparency.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/VideoTransparency.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/VideoTransparency.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/VideoTransparency.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/VideoTransparency.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/VideoTransparency.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/VideoTransparency.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/VideoTransparency.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="VideoPlayer.html">视频概述</a></li>
+<li>视频透明度支持</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="VideoSources-VideoFiles.html"></a></span><div class="tip">了解视频文件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="VideoPanoramic.html"></a></span><div class="tip">全景视频</div>
+</div>
+</div></div>
+<h1>视频透明度支持</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 的<a href="class-VideoClip.html">视频剪辑</a>和<a href="class-VideoPlayer.html">视频播放器 (Video Player)</a> 组件支持 Alpha（这是用于指代<a href="StandardShaderMaterialParameterAlbedoColor.html">透明度</a>的标准术语）。</p>
+
+<p>在图形术语中，“Alpha”是“透明度”的另一种说法。Alpha 是一个连续值，而不是可以打开或关闭的选项。</p>
+
+<p>最低的 Alpha 值意味着图像完全透明（根本不可见），而最高的 Alpha 值意味着它完全不透明（图像是实体的，无法透视）。中间值将使图像部分透明，允许您同时看到图像和图像背后的背景。</p>
+
+<p>视频播放器组件在摄像机的近平面或远平面中播放其内容时支持全局 Alpha 值。但是，视频可具有每像素 Alpha 值，这意味着透明度在视频图像的不同位置可能会有所不同。这种每像素透明度控制是在制作图像和视频的应用程序（如 <a href="https://www.thefoundry.co.uk/products/non-commercial/nuke-non-commercial/">NUKE</a> 或 <a href="http://www.adobe.com/products/aftereffects.html">After Effects</a>）中进行的，而不是在 Unity Editor 中进行。</p>
+
+<p>Unity 支持两种具有每像素 Alpha 的来源：</p>
+
+<h2>Apple ProRes 4444</h2>
+
+<p><a href="https://support.apple.com/en-gb/HT202410">Apple ProRes 4444 编解码器</a>是 Apple ProRes 为 4:4:4:4 图像来源提供的极高质量版本（包括 Alpha 通道）。它提供与源视频相同级别的视觉保真度。</p>
+
+<p>Apple ProRes 4444 仅支持 OSX，因为这是本机可用的唯一平台。它通常出现在 .mov 文件中。</p>
+
+<p>导入使用此编解码器的视频时，通过勾选视频剪辑导入器 (Video Clip Importer) 中的相关复选框，启用 <strong>Transcode</strong> 和 <strong>Keep Alpha</strong> 选项。操作系统的视频播放软件可能具有识别视频使用的编解码器的功能。</p>
+
+<figure>
+<img src="../uploads/Main/Video-10.png" alt="在 Inspector 中查看的视频剪辑资源，其中显示已启用 Keep Alpha 选项（以红色突出显示）">
+<figcaption>在 Inspector 中查看的视频剪辑资源，其中显示已启用 <strong><em><em>Keep Alpha</em></em></strong> 选项（以红色突出显示）</figcaption>
+</figure>
+
+<p>在转码过程中，Unity 将 Alpha 插入颜色流中，因此可与 H.264 或 VP8 结合使用。</p>
+
+<p>省略转码操作会将 ProRes 表示方法保留在资源中，这意味着目标平台必须支持此编解码器（请参阅有关视频文件兼容性的文档以了解更多信息）。</p>
+
+<p>此编解码器通常还会生成大文件，因此会增加存储和带宽要求。</p>
+
+<h2>Webm 与 VP8</h2>
+
+<p>.webm 文件格式对规范进行了改进，因此可在与 VP8 视频编解码器结合使用时携带原生的 Alpha 信息。这意味着任何 Editor 平台都可以读取使用这种透明度格式的视频。</p>
+
+<p>由于 Unity 支持的大多数平台都使用软件实现方案来解码这些文件，因此不需要为这些平台进行转码。</p>
+
+<p>一个需要注意的例外情况是 Android。该平台的原生 VP8 支持中不包括透明度支持，这意味着必须启用转码，以便 Unity 使用其内部 Alpha 表示方法。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–06–15 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Unity 5.6 中的新功能</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="VideoSources-VideoFiles.html"></a></span><div class="tip">了解视频文件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="VideoPanoramic.html"></a></span><div class="tip">全景视频</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

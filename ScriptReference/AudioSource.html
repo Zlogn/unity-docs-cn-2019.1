@@ -1,0 +1,166 @@
+<!DOCTYPE html><html class="no-js"><head><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="twitter:card" content="summary" /><meta property="og:title" content="UnityEngine.AudioSource - Unity Scripting API" /><title>UnityEngine.AudioSource - Unity Scripting API</title><meta name="description" content="音频源在 3D 中的表示。" /><meta property="og:description" content="音频源在 3D 中的表示。" /><meta name="author" content="Unity Technologies" /><link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico" /><link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png" /><link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png" /><link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png" /><link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png" /><link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png" /><link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png" /><link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png" /><meta name="msapplication-TileColor" content="#222c37" /><meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png" /><script>
+      var docs_type = 'ScriptReference';
+      var lang = 'zh_CN';
+      var page = 'UnityEngine.AudioSource';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css" /><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css" /><link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css" /></head><body><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div class="header-wrapper"><div id="header" class="header"><div class="content"><div class="spacer"><div class="menu"><div id="nav-open" for="nav-input"><span></span></div><div class="logo"><a href="https://docs.unity3d.com"></a></div><div class="search-form"><form action="30_search.html" method="get" class="apisearch"><input type="text" name="q" placeholder="Search scripting..." autosave="Unity Reference" results="5" class="sbox field" id="q"></input><input type="submit" class="submit"></input></form></div><ul class="menu-items"><li class="menu-item"><a href="../Manual/index.html" class="">Manual</a></li><li class="menu-item"><a href="../ScriptReference/index.html" class="selected">Scripting API</a></li></ul></div></div><div class="more"><div class="filler"></div><ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul></div></div></div><div class="toolbar"><div class="content"><div class="version-switcher"><div class="current toggle" data-target=".version-list"><div class="version-number"><div class="d-inline-block">
+          Version:
+          <b>2019.1</b></div><div class="d-inline-block arrow"></div></div></div><div class="version-list" style="display:none;"><ul><li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/ScriptReference/UnityEngine.AudioSource.html">2019.1</a></li><li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/ScriptReference/UnityEngine.AudioSource.html">2018.4</a></li><li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/ScriptReference/UnityEngine.AudioSource.html">2018.3</a></li><li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/ScriptReference/UnityEngine.AudioSource.html">2018.2</a></li><li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/ScriptReference/UnityEngine.AudioSource.html">2018.1</a></li><li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/ScriptReference/UnityEngine.AudioSource.html">2017.4</a></li><li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/ScriptReference/UnityEngine.AudioSource.html">2017.3</a></li><li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/ScriptReference/UnityEngine.AudioSource.html">2017.2</a></li><li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/ScriptReference/UnityEngine.AudioSource.html">2017.1</a></li><li><a class="docs_version_url_560" href="/zh_CN/560/ScriptReference/UnityEngine.AudioSource.html">5.6</a></li></ul></div></div><ul class="nav-menu-items"><li class="menu-item"><a href="../Manual/index.html" class="">Manual</a></li><li class="menu-item"><a href="../ScriptReference/index.html" class="selected">Scripting API</a></li></ul><div class="lang-switcher"><div class="current toggle" data-target=".lang-list"><div class="lbl">Language:
+        <span class="b">中文</span></div><div class="arrow"></div></div><div class="lang-list" style="display:none;"><ul><li><a data-lang="en" href="/2019.1/Documentation/ScriptReference/UnityEngine.AudioSource.html">English</a></li><li><a data-lang="ja" href="/ja/2019.1/ScriptReference/UnityEngine.AudioSource.html">日本語</a></li><li><a data-lang="es" href="/es/2019.1/ScriptReference/UnityEngine.AudioSource.html">Español</a></li><li><a data-lang="kr" href="/kr/2019.1/ScriptReference/UnityEngine.AudioSource.html">한국어</a></li></ul></div></div></div></div></div><div id="master-wrapper" class="master-wrapper clear"><div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Scripting API</h2><div class="version-switcher"><div class="current toggle" data-target=".version-list"><div class="version-number"><div class="d-inline-block">
+          Version:
+          <b>2019.1</b></div><div class="d-inline-block arrow"></div></div></div><div class="version-list" style="display:none;"><ul><li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/ScriptReference/UnityEngine.AudioSource.html">2019.1</a></li><li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/ScriptReference/UnityEngine.AudioSource.html">2018.4</a></li><li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/ScriptReference/UnityEngine.AudioSource.html">2018.3</a></li><li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/ScriptReference/UnityEngine.AudioSource.html">2018.2</a></li><li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/ScriptReference/UnityEngine.AudioSource.html">2018.1</a></li><li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/ScriptReference/UnityEngine.AudioSource.html">2017.4</a></li><li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/ScriptReference/UnityEngine.AudioSource.html">2017.3</a></li><li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/ScriptReference/UnityEngine.AudioSource.html">2017.2</a></li><li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/ScriptReference/UnityEngine.AudioSource.html">2017.1</a></li><li><a class="docs_version_url_560" href="/zh_CN/560/ScriptReference/UnityEngine.AudioSource.html">5.6</a></li></ul></div></div><div class="clear"></div></div></div></div></div></div><div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content"><div class="section"><div class="mb20 clear" id=""><h1 class="heading inherit">AudioSource</h1><div class="clear"></div><p class="cl mb0 left mr10">class in UnityEngine</p><p class="cl mb0 left mr10">/</p><p class="cl mb0 left">Inherits from:<a href="Behaviour.html" class="cl">Behaviour</a></p><div class="clear"></div><a href="" class="switch-link gray-btn sbtn left hide">Switch to Manual</a><div class="clear"></div></div><div class="subsection"><div class="signature"><div class="signature-CS sig-block"><span style="color:red;"></span></div></div></div><div class="subsection"><h2>Description</h2><p>音频源在 3D 中的表示。</p></div><div class="subsection"><p>AudioSource 附加到 <a href="GameObject.html">GameObject</a>，用于在 3D 环境中播放声音。
+要播放 3D 声音，您还需要一个 <a href="AudioListener.html">AudioListener</a>。
+音频监听器通常附加到您要使用的摄像机。
+声音以 3D 还是 2D 方式播放由 <a href="AudioImporter.html">AudioImporter</a> 设置决定。<br /><br />您可以使用 <a href="AudioSource.Play.html">Play</a>、<a href="AudioSource.Pause.html">Pause</a> 和 <a href="AudioSource.Stop.html">Stop</a> 播放单个音频剪辑。
+也可以使用 <a href="AudioSource-volume.html">volume</a> 属性在播放时调整其音量，或使用 <a href="AudioSource-time.html">time</a> 进行搜寻。
+使用 <a href="AudioSource.PlayOneShot.html">PlayOneShot</a> 可以在一个 AudioSource 上播放多个声音。
+使用 <a href="AudioSource.PlayClipAtPoint.html">PlayClipAtPoint</a> 可以在 3D 空间中的某个静态位置播放剪辑。<br /><br />另请参阅：<a href="AudioListener.html">AudioListener</a>、<a href="AudioClip.html">AudioClip</a>、<a href="../Manual/class-AudioSource.html">AudioSource 组件</a>。</p></div><div class="subsection">
+        
+        <pre class="codeExampleCS">
+//This script allows you to toggle music to play and stop.
+//Assign an <a href="AudioSource.html">AudioSource</a> to a <a href="GameObject.html">GameObject</a> and attach an Audio Clip in the Audio Source. Attach this script to the <a href="GameObject.html">GameObject</a>.<br /><br />using UnityEngine;<br /><br />public class Example : <a href="MonoBehaviour.html">MonoBehaviour</a>
+{
+    <a href="AudioSource.html">AudioSource</a> m_MyAudioSource;<br /><br />    //Play the music
+    bool m_Play;
+    //Detect when you use the toggle, ensures music isn’t played multiple times
+    bool m_ToggleChange;<br /><br />    void Start()
+    {
+        //Fetch the <a href="AudioSource.html">AudioSource</a> from the <a href="GameObject.html">GameObject</a>
+        m_MyAudioSource = GetComponent&lt;<a href="AudioSource.html">AudioSource</a>&gt;();
+        //Ensure the toggle is set to true for the music to play at start-up
+        m_Play = true;
+    }<br /><br />    void <a href="Experimental.PlayerLoop.Update.html">Update</a>()
+    {
+        //Check to see if you just set the toggle to positive
+        if (m_Play == true &amp;amp;&amp;amp; m_ToggleChange == true)
+        {
+            //Play the audio you attach to the <a href="AudioSource.html">AudioSource</a> component
+            m_MyAudioSource.Play();
+            //Ensure audio doesn’t play more than once
+            m_ToggleChange = false;
+        }
+        //Check if you just set the toggle to false
+        if (m_Play == false &amp;amp;&amp;amp; m_ToggleChange == true)
+        {
+            //Stop the audio
+            m_MyAudioSource.Stop();
+            //Ensure audio doesn’t play more than once
+            m_ToggleChange = false;
+        }
+    }<br /><br />    void OnGUI()
+    {
+        //<a href="PlayerSettings.Switch.html">Switch</a> this toggle to activate and deactivate the parent <a href="GameObject.html">GameObject</a>
+        m_Play = <a href="GUI.Toggle.html">GUI.Toggle</a>(new <a href="Rect.html">Rect</a>(10, 10, 100, 30), m_Play, "Play Music");<br /><br />        //Detect if there is a change with the toggle
+        if (<a href="GUI-changed.html">GUI.changed</a>)
+        {
+            //Change to true to show that there was just a change in the toggle state
+            m_ToggleChange = true;
+        }
+    }
+}
+</pre>
+      </div><div class="subsection"><h2>Variables</h2><table class="list">
+      <tr><td class="lbl"><a href="AudioSource-bypassEffects.html">bypassEffects</a></td><td class="desc">直通效果（从滤波器组件或全局监听器滤波器应用）。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-bypassListenerEffects.html">bypassListenerEffects</a></td><td class="desc">如果设置，则不将 AudioListener 上的全局效果应用于 AudioSource 生成的音频信号。不适用于 AudioSource 正在混合器组中播放的情况。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-bypassReverbZones.html">bypassReverbZones</a></td><td class="desc">如果设置，则不将来自 AudioSource 的信号路由到与混响区关联的全局混响。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-clip.html">clip</a></td><td class="desc">要播放的默认 AudioClip。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-dopplerLevel.html">dopplerLevel</a></td><td class="desc">设置该 AudioSource 的多普勒缩放。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-ignoreListenerPause.html">ignoreListenerPause</a></td><td class="desc">即使 AudioListener.pause 设置为 true，也允许 AudioSource 播放。这对于暂停菜单中的菜单元素声音或背景音乐很有用。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-ignoreListenerVolume.html">ignoreListenerVolume</a></td><td class="desc">这使得音频源不考虑音频监听器的音量。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-isPlaying.html">isPlaying</a></td><td class="desc">当前正在播放该 clip 吗？（只读）</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-isVirtual.html">isVirtual</a></td><td class="desc">如果 AudioSource 播放的所有声音（由 Play() 或 playOnAwake 以及单次播放启动的主声音）都被音频系统剔除，则为 true。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-loop.html">loop</a></td><td class="desc">是否循环播放该音频剪辑？</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-maxDistance.html">maxDistance</a></td><td class="desc">（对数衰减）MaxDistance 为声音停止衰减的距离。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-minDistance.html">minDistance</a></td><td class="desc">在最小距离内，AudioSource 将停止增大音量。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-mute.html">mute</a></td><td class="desc">使 AudioSource 静音/取消静音。静音时将音量设置为 0，取消静音则恢复原来的音量。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-outputAudioMixerGroup.html">outputAudioMixerGroup</a></td><td class="desc">AudioSource 应将其信号路由到的目标组。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-panStereo.html">panStereo</a></td><td class="desc">以立体声方式（左声道或右声道）平移正在播放的声音。仅适用于单声道或立体声。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-pitch.html">pitch</a></td><td class="desc">音频源的音高。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-playOnAwake.html">playOnAwake</a></td><td class="desc">如果设置为 true，音频源将在唤醒时自动开始播放。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-priority.html">priority</a></td><td class="desc">设置 AudioSource 的优先级。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-reverbZoneMix.html">reverbZoneMix</a></td><td class="desc">将来自 AudioSource 的信号混合到与混响区关联的全局混响中的量。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-rolloffMode.html">rolloffMode</a></td><td class="desc">设置/获取 AudioSource 随距离衰减的方式。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-spatialBlend.html">spatialBlend</a></td><td class="desc">设置 3D 空间化计算（衰减、多普勒效应等）对该 AudioSource 的影响程度。0.0 使声音变成全 2D 效果，1.0 使其变成全 3D。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-spatialize.html">spatialize</a></td><td class="desc">启用或禁用空间化。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-spatializePostEffects.html">spatializePostEffects</a></td><td class="desc">确定空间音响效果是在效果滤波器前还是后插入的。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-spread.html">spread</a></td><td class="desc">设置扬声器空间中 3D 立体声或多声道声音的扩散角度（以度为单位）。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-time.html">time</a></td><td class="desc">播放位置（以秒为单位）。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-timeSamples.html">timeSamples</a></td><td class="desc">PCM 样本中的播放位置。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-velocityUpdateMode.html">velocityUpdateMode</a></td><td class="desc">应以固定还是动态更新方式更新音频源。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource-volume.html">volume</a></td><td class="desc">音频源的音量（0.0 到 1.0）。</td></tr>
+    </table></div><div class="subsection"><h2>Public Functions</h2><table class="list">
+      <tr><td class="lbl"><a href="AudioSource.DisableDualShock4Output.html">DisableDualShock4Output</a></td><td class="desc">禁止通过任何启用的 DUALSHOCK™4 控制器播放音频源。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource.GetAmbisonicDecoderFloat.html">GetAmbisonicDecoderFloat</a></td><td class="desc">读取附加到 AudioSource 的自定义立体混响声解码器效果的用户定义参数。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource.GetCustomCurve.html">GetCustomCurve</a></td><td class="desc">获取给定 AudioSourceCurveType 的当前自定义曲线。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource.GetOutputData.html">GetOutputData</a></td><td class="desc">提供当前播放源的输出数据块。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource.GetSpatializerFloat.html">GetSpatializerFloat</a></td><td class="desc">读取附加到 AudioSource 的自定义空间音响效果的用户定义参数。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource.GetSpectrumData.html">GetSpectrumData</a></td><td class="desc">提供当前播放音频源的频谱数据块。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource.Pause.html">Pause</a></td><td class="desc">暂停播放 clip。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource.Play.html">Play</a></td><td class="desc">播放 clip。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource.PlayDelayed.html">PlayDelayed</a></td><td class="desc">按照指定的延时（以秒为单位）播放 clip。建议用户使用该函数代替旧的 Play(delay) 函数，Play(delay) 函数接受以样本（参考采样率为 44.1 kHz）数为单位指定的延时作为参数。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource.PlayOnDualShock4.html">PlayOnDualShock4</a></td><td class="desc">允许通过特定 DUALSHOCK™4 控制器播放音频源。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource.PlayOneShot.html">PlayOneShot</a></td><td class="desc">播放 AudioClip，并根据 volumeScale 调整 AudioSource 音量。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource.PlayScheduled.html">PlayScheduled</a></td><td class="desc">在 AudioSettings.dspTime 读取的绝对时间轴上的特定时间播放 clip。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource.SetAmbisonicDecoderFloat.html">SetAmbisonicDecoderFloat</a></td><td class="desc">设置附加到 AudioSource 的自定义立体混响声解码器效果的用户定义参数。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource.SetCustomCurve.html">SetCustomCurve</a></td><td class="desc">设置给定 AudioSourceCurveType 的自定义曲线。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource.SetScheduledEndTime.html">SetScheduledEndTime</a></td><td class="desc">更改某个已计划播放的声音将结束的时间。注意，根据时间安排，并非所有重新计划的请求都能得到满足。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource.SetScheduledStartTime.html">SetScheduledStartTime</a></td><td class="desc">更改某个已计划播放的声音将开始的时间。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource.SetSpatializerFloat.html">SetSpatializerFloat</a></td><td class="desc">设置附加到 AudioSource 的自定义空间音响效果的用户定义参数。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource.Stop.html">Stop</a></td><td class="desc">停止播放 clip。</td></tr>
+      <tr><td class="lbl"><a href="AudioSource.UnPause.html">UnPause</a></td><td class="desc">恢复播放该 AudioSource。</td></tr>
+    </table></div><div class="subsection"><h2>Static Functions</h2><table class="list">
+      <tr><td class="lbl"><a href="AudioSource.PlayClipAtPoint.html">PlayClipAtPoint</a></td><td class="desc">在世界空间中的给定位置播放 AudioClip。</td></tr>
+    </table></div><div class="subsection"><h2>Inherited members</h2>
+      
+      <div class="subsection"><h2>Variables</h2><table class="list">
+        <tr><td class="lbl"><a href="Behaviour-enabled.html">enabled</a></td><td class="desc">启用的 Behaviour 可更新，禁用的 Behaviour 不可更新。</td></tr>
+        <tr><td class="lbl"><a href="Behaviour-isActiveAndEnabled.html">isActiveAndEnabled</a></td><td class="desc">Has the Behaviour had active and enabled called?</td></tr>
+        <tr><td class="lbl"><a href="Component-gameObject.html">gameObject</a></td><td class="desc">此组件附加到的游戏对象。始终将组件附加到游戏对象。</td></tr>
+        <tr><td class="lbl"><a href="Component-tag.html">tag</a></td><td class="desc">此游戏对象的标签。</td></tr>
+        <tr><td class="lbl"><a href="Component-transform.html">transform</a></td><td class="desc">附加到此 GameObject 的 Transform。</td></tr>
+        <tr><td class="lbl"><a href="Object-hideFlags.html">hideFlags</a></td><td class="desc">Should the object be hidden, saved with the Scene or modifiable by the user?</td></tr>
+        <tr><td class="lbl"><a href="Object-name.html">name</a></td><td class="desc">对象的名称。</td></tr>
+      </table></div>
+      
+      
+      
+      <div class="subsection"><h2>Public Functions</h2><table class="list">
+        <tr><td class="lbl"><a href="Component.BroadcastMessage.html">BroadcastMessage</a></td><td class="desc">调用此游戏对象或其任何子项中的每个 MonoBehaviour 上名为 methodName 的方法。</td></tr>
+        <tr><td class="lbl"><a href="Component.CompareTag.html">CompareTag</a></td><td class="desc">此游戏对象是否使用 tag 进行了标记？</td></tr>
+        <tr><td class="lbl"><a href="Component.GetComponent.html">GetComponent</a></td><td class="desc">如果游戏对象附加了类型为 type 的组件，则将其返回，否则返回 null。</td></tr>
+        <tr><td class="lbl"><a href="Component.GetComponentInChildren.html">GetComponentInChildren</a></td><td class="desc">使用深度首次搜索返回 GameObject 或其任何子项中类型为 type 的组件。</td></tr>
+        <tr><td class="lbl"><a href="Component.GetComponentInParent.html">GetComponentInParent</a></td><td class="desc">返回 GameObject 或其任何父项中类型为 type 的组件。</td></tr>
+        <tr><td class="lbl"><a href="Component.GetComponents.html">GetComponents</a></td><td class="desc">返回 GameObject 中类型为 type 的所有组件。</td></tr>
+        <tr><td class="lbl"><a href="Component.GetComponentsInChildren.html">GetComponentsInChildren</a></td><td class="desc">返回 GameObject 或其任何子项中类型为 type 的所有组件。</td></tr>
+        <tr><td class="lbl"><a href="Component.GetComponentsInParent.html">GetComponentsInParent</a></td><td class="desc">返回 GameObject 或其任何父项中类型为 type 的所有组件。</td></tr>
+        <tr><td class="lbl"><a href="Component.SendMessage.html">SendMessage</a></td><td class="desc">调用此游戏对象中的每个 MonoBehaviour 上名为 methodName 的方法。</td></tr>
+        <tr><td class="lbl"><a href="Component.SendMessageUpwards.html">SendMessageUpwards</a></td><td class="desc">调用此游戏对象中的每个 MonoBehaviour 上或此行为的每个父级上名为 methodName 的方法。</td></tr>
+        <tr><td class="lbl"><a href="Object.GetInstanceID.html">GetInstanceID</a></td><td class="desc">返回对象的实例 ID。</td></tr>
+        <tr><td class="lbl"><a href="Object.ToString.html">ToString</a></td><td class="desc">返回 GameObject 的名称。</td></tr>
+      </table></div>
+      
+      <div class="subsection"><h2>Static Functions</h2><table class="list">
+        <tr><td class="lbl"><a href="Object.Destroy.html">Destroy</a></td><td class="desc">删除 GameObject、组件或资源。</td></tr>
+        <tr><td class="lbl"><a href="Object.DestroyImmediate.html">DestroyImmediate</a></td><td class="desc">立即销毁对象 /obj/。强烈建议您改用 Destroy。</td></tr>
+        <tr><td class="lbl"><a href="Object.DontDestroyOnLoad.html">DontDestroyOnLoad</a></td><td class="desc">Do not destroy the target Object when loading a new Scene.</td></tr>
+        <tr><td class="lbl"><a href="Object.FindObjectOfType.html">FindObjectOfType</a></td><td class="desc">返回第一个类型为 type 的已加载的激活对象。</td></tr>
+        <tr><td class="lbl"><a href="Object.FindObjectsOfType.html">FindObjectsOfType</a></td><td class="desc">返回所有类型为 type 的已加载的激活对象的列表。</td></tr>
+        <tr><td class="lbl"><a href="Object.Instantiate.html">Instantiate</a></td><td class="desc">克隆 original 对象并返回克隆对象。</td></tr>
+      </table></div>
+      <div class="subsection"><h2>Operators</h2><table class="list">
+        <tr><td class="lbl"><a href="Object-operator_Object.html">bool</a></td><td class="desc">该对象是否存在？</td></tr>
+        <tr><td class="lbl"><a href="Object-operator_ne.html">operator !=</a></td><td class="desc">比较两个对象是否引用不同的对象。</td></tr>
+        <tr><td class="lbl"><a href="Object-operator_eq.html">operator ==</a></td><td class="desc">比较两个对象引用，判断它们是否引用同一个对象。</td></tr>
+      </table></div>
+      
+      
+      
+    </div></div><div class="footer-wrapper"><div class="footer clear"><div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div><div class="menu"><a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a></div></div><div></div></div></div></div></div></div></body></html>

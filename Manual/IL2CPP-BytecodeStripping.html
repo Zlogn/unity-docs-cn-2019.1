@@ -1,0 +1,259 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="使用 IL2CPP 进行托管字节码剥离 - Unity Manual">
+<title>使用 IL2CPP 进行托管字节码剥离 - Unity Manual</title>
+<meta name="description" content="托管字节码剥离从托管程序集 (DLL) 中删除未使用的代码。该过程先定义根程序集，然后使用静态代码分析来确定这些根程序集使用的其他托管代码。任何无法访问的代码都将被删除。字节码剥离_不会_混淆处理代码，也不会以任何方式修改使用的代码。">
+<meta property="og:description" content="托管字节码剥离从托管程序集 (DLL) 中删除未使用的代码。该过程先定义根程序集，然后使用静态代码分析来确定这些根程序集使用的其他托管代码。任何无法访问的代码都将被删除。字节码剥离_不会_混淆处理代码，也不会以任何方式修改使用的代码。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'IL2CPP-BytecodeStripping';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/IL2CPP-BytecodeStripping.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/IL2CPP-BytecodeStripping.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/IL2CPP-BytecodeStripping.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/IL2CPP-BytecodeStripping.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/IL2CPP-BytecodeStripping.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/IL2CPP-BytecodeStripping.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/IL2CPP-BytecodeStripping.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/IL2CPP-BytecodeStripping.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/IL2CPP-BytecodeStripping.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/IL2CPP-BytecodeStripping.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/IL2CPP-BytecodeStripping.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/IL2CPP-BytecodeStripping.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/IL2CPP-BytecodeStripping.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/IL2CPP-BytecodeStripping.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/IL2CPP-BytecodeStripping.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/IL2CPP-BytecodeStripping.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/IL2CPP-BytecodeStripping.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/IL2CPP-BytecodeStripping.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/IL2CPP-BytecodeStripping.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/IL2CPP-BytecodeStripping.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/IL2CPP-BytecodeStripping.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/IL2CPP-BytecodeStripping.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/IL2CPP-BytecodeStripping.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/IL2CPP-BytecodeStripping.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="ScriptingSection.html">脚本</a></li>
+<li><a href="ScriptingTools.html">脚本工具</a></li>
+<li><a href="IL2CPP.html">IL2CPP</a></li>
+<li>使用 IL2CPP 进行托管字节码剥离</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="IL2CPP-OptimizingBuildTimes.html"></a></span><div class="tip">优化 IL2CPP 构建时间</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ScriptingToolsIDEs.html"></a></span><div class="tip">Integrated development environment (IDE) support</div>
+</div>
+</div></div>
+<h1>使用 IL2CPP 进行托管字节码剥离</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>托管字节码剥离从托管程序集 (DLL) 中删除未使用的代码。该过程先定义根程序集，然后使用静态代码分析来确定这些根程序集使用的其他托管代码。任何无法访问的代码都将被删除。字节码剥离_不会_混淆处理代码，也不会以任何方式修改使用的代码。</p>
+
+<p>对于给定的 Unity 播放器构建而言，根程序集是 Unity Editor 从脚本代码编译的程序集（例如，_Assembly-CSharp.dll_）。从脚本代码编译的任何程序集都不会被剥离，但其他程序集将被剥离。这些程序集包括：</p>
+
+<ul>
+<li>您添加到项目的程序集</li>
+<li>Unity 引擎程序集</li>
+<li>.NET 类库程序集（如 mscorlib.dll、System.dll）</li>
+</ul>
+
+<p>使用 <a href="IL2CPP.html">IL2CPP</a> 脚本后端时，始终启用托管字节码剥离。在这种情况下，Stripping Level 选项将替换为名为 Strip Engine Code 的布尔值选项。如果启用此选项，则还将删除_本机_ Unity 引擎代码中未使用的模块和类。如果禁用此选项，则将保留本机 Unity 引擎代码中的所有模块和类。</p>
+
+<p>可使用 <em>link.xml</em> 文件（如下所述）通过保留类型和完整程序集来有效禁用字节码剥离。例如，要防止剥离系统程序集，可使用以下 link.xml 文件：</p>
+
+<pre><code>&lt;linker&gt;
+       &lt;assembly fullname="System" preserve="all"/&gt;
+&lt;/linker&gt;
+</code></pre>
+
+<h2>提示</h2>
+
+<h3>使用反射时如何处理剥离</h3>
+
+<p>剥离在很大程度上取决于静态代码分析，有时无法有效完成，尤其是在使用反射等动态特性时。在这种情况下，有必要提供一些关于不应触及哪些类的提示。Unity 支持每个项目的自定义剥离黑名单。使用黑名单很简单，只需创建一个 link.xml 文件并将其放入 Assets 文件夹（或 Assets 的任何子目录）即可。下面提供了 link.xml 文件内容的示例。标记为保留状态的类不受剥离的影响：</p>
+
+<pre><code>&lt;linker&gt;
+       &lt;assembly fullname="System.Web.Services"&gt;
+               &lt;type fullname="System.Web.Services.Protocols.SoapTypeStubInfo" preserve="all"/&gt;
+       &lt;/assembly&gt;
+
+       &lt;assembly fullname="System"&gt;
+               &lt;type fullname="System.Net.Configuration.WebRequestModuleHandler" preserve="all"/&gt;
+               &lt;type fullname="System.Net.HttpRequestCreator" preserve="all"/&gt;
+               &lt;type fullname="System.Net.FileWebRequestCreator" preserve="all"/&gt;
+       &lt;/assembly&gt;
+
+       &lt;assembly fullname="mscorlib"&gt;
+               &lt;type fullname="System.AppDomain" preserve="fields"/&gt;
+               &lt;type fullname="System.InvalidOperationException" preserve="fields"&gt;
+                       &lt;method signature="System.Void .ctor()"/&gt;
+               &lt;/type&gt;
+               &lt;type fullname="System.Object" preserve="nothing"&gt;
+                      &lt;method name="Finalize"/&gt;
+               &lt;/type&gt;
+       &lt;/assembly&gt;
+&lt;/linker&gt;
+</code></pre>
+
+<p>一个项目可以包含多个 link.xml 文件。每个 link.xml 文件可指定许多不同的选项。
+assembly 元素指示应该应用嵌套指令的托管程序集。</p>
+
+<p>type 元素用于指示应如何处理特定类型。它必须是 assembly 元素的子元素。fullname 属性可接受“*”通配符匹配一个或多个字符。</p>
+
+<p>preserve 属性可以采用以下三个值之一：</p>
+
+<ul>
+<li>
+<strong>all：</strong>保留给定类型（或程序集，仅适用于 IL2CPP）的所有内容。</li>
+<li>
+<strong>fields：</strong>仅保留给定类型的字段。</li>
+<li>
+<strong>nothing：</strong>仅保留给定类型，但不保留其内容。</li>
+</ul>
+
+<p>method 元素用于指示应保留特定方法。它必须是 type 元素的子元素。可按名称或签名来指定方法。</p>
+
+<p>除了 link.xml 文件之外，还可以在源代码中使用 C# <code>[Preserve]</code> 属性来防止链接器剥离该代码。此属性的行为与 link.xml 文件中的相应条目略有不同：</p>
+
+<ul>
+<li>
+<strong>Assembly：</strong>保留程序集内的所有类型（就好像每个类型都有 <code>[Preserve]</code> 属性一样）</li>
+<li>
+<strong>Type：</strong>保留类型及其默认构造函数</li>
+<li>
+<strong>Method：</strong>保留方法的声明类型、返回类型及其所有参数的类型</li>
+<li>
+<strong>Property、Field、Event：</strong>保留属性、字段或事件的声明类型和返回类型</li>
+</ul>
+
+<p>剥离的程序集将输出到项目中 Temp 目录下的目录（具体位置因目标平台而异）。原始的未剥离程序集在未剥离的目录中与剥离的程序集位于相同的位置。可使用 ILSpy 之类的工具来检查剥离的和未剥离的程序集，从而确定删除了代码的哪些部分。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–09–01 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">2017–05–26 - Unity 5.6 用户手册中进行了仅限于文档的更新</span></p></li>
+<li><p><span class="page-history">2017–09–01 - 为 Unity 2017.1 添加了关于使用 C# <code>[Preserve]</code> 属性的建议</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="IL2CPP-OptimizingBuildTimes.html"></a></span><div class="tip">优化 IL2CPP 构建时间</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ScriptingToolsIDEs.html"></a></span><div class="tip">Integrated development environment (IDE) support</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

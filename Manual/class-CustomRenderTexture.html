@@ -1,0 +1,709 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="自定义渲染纹理 - Unity Manual">
+<title>自定义渲染纹理 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/CustomRenderTextures-0.png">
+<meta name="description" content="自定义渲染纹理是渲染纹理的扩展，允许用户使用着色器轻松更新相关纹理。这对于实现各种类型的复杂模拟（例如焦散、雨水效果的波纹模拟、墙上的液体喷溅等）非常有用。此外，它还提供脚本和着色器框架，从而协助进行更复杂的配置，如部分或多通道更新、改变更新频率等。">
+<meta property="og:description" content="自定义渲染纹理是渲染纹理的扩展，允许用户使用着色器轻松更新相关纹理。这对于实现各种类型的复杂模拟（例如焦散、雨水效果的波纹模拟、墙上的液体喷溅等）非常有用。此外，它还提供脚本和着色器框架，从而协助进行更复杂的配置，如部分或多通道更新、改变更新频率等。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-CustomRenderTexture';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-CustomRenderTexture.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-CustomRenderTexture.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-CustomRenderTexture.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-CustomRenderTexture.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-CustomRenderTexture.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-CustomRenderTexture.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-CustomRenderTexture.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-CustomRenderTexture.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-CustomRenderTexture.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-CustomRenderTexture.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-CustomRenderTexture.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-CustomRenderTexture.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-CustomRenderTexture.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-CustomRenderTexture.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-CustomRenderTexture.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-CustomRenderTexture.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-CustomRenderTexture.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-CustomRenderTexture.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-CustomRenderTexture.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-CustomRenderTexture.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-CustomRenderTexture.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-CustomRenderTexture.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-CustomRenderTexture.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-CustomRenderTexture.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="comp-Textures.html">纹理组件</a></li>
+<li><a href="class-RenderTexture.html">渲染纹理</a></li>
+<li>自定义渲染纹理</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-RenderTexture.html"></a></span><div class="tip">渲染纹理</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-MovieTexture.html"></a></span><div class="tip">Movie Textures</div>
+</div>
+</div></div>
+<h1>自定义渲染纹理</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>自定义渲染纹理是渲染纹理的扩展，允许用户使用着色器轻松更新相关纹理。这对于实现各种类型的复杂模拟（例如焦散、雨水效果的波纹模拟、墙上的液体喷溅等）非常有用。此外，它还提供脚本和着色器框架，从而协助进行更复杂的配置，如部分或多通道更新、改变更新频率等。</p>
+
+<p>要使用自定义渲染纹理，必须创建新的自定义渲染纹理资源并为其分配材质。然后，此材质将根据各种参数更新纹理的内容。再然后，就像常规纹理一样，可将自定义渲染纹理分配给任何类型的材质，甚至可用于另一个自定义渲染纹理。</p>
+
+<h2>属性</h2>
+
+<figure>
+<img src="../uploads/Main/CustomRenderTextures-0.png" alt="">
+</figure>
+
+<p>自定义渲染纹理的检视面板将显示渲染纹理检视面板的大多数属性以及许多特定属性。</p>
+
+<h3>渲染纹理：</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">属性：</th>
+	<th style="text-align:left;">功能：</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Dimension</strong></td>
+	<td style="text-align:left;">渲染纹理的尺寸</td>
+</tr>
+<tr>
+	<td style="text-align:left;">     2D</td>
+	<td style="text-align:left;">渲染纹理将是二维的。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">     Cube</td>
+	<td style="text-align:left;">渲染纹理将是立方体贴图</td>
+</tr>
+<tr>
+	<td style="text-align:left;">     3D</td>
+	<td style="text-align:left;">渲染纹理将是三维的</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Size</strong></td>
+	<td style="text-align:left;">渲染纹理的大小（以像素为单位）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Color Format</strong></td>
+	<td style="text-align:left;">渲染纹理的格式</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>sRGB (Color Render Texture)</strong></td>
+	<td style="text-align:left;">此渲染纹理是否使用 sRGB 读/写转换（只读）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Enable Mip Maps</strong></td>
+	<td style="text-align:left;">此渲染纹理是否使用 MipMap？</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Auto generate Mip Maps</strong></td>
+	<td style="text-align:left;">启用此属性可自动生成 MipMap。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Wrap Mode</strong></td>
+	<td style="text-align:left;">选择纹理平铺时的行为方式</td>
+</tr>
+<tr>
+	<td style="text-align:left;">     Repeat</td>
+	<td style="text-align:left;">纹理重复（平铺）自身</td>
+</tr>
+<tr>
+	<td style="text-align:left;">     Clamp</td>
+	<td style="text-align:left;">纹理的边缘被拉伸</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Filter Mode</strong></td>
+	<td style="text-align:left;">选择纹理在通过 3D 变换拉伸时如何进行过滤：</td>
+</tr>
+<tr>
+	<td style="text-align:left;">     Point</td>
+	<td style="text-align:left;">纹理在靠近时变为块状</td>
+</tr>
+<tr>
+	<td style="text-align:left;">     Bilinear</td>
+	<td style="text-align:left;">纹理在靠近时变得模糊</td>
+</tr>
+<tr>
+	<td style="text-align:left;">     Trilinear</td>
+	<td style="text-align:left;">与 Bilinear 类似，但纹理也在不同的 Mip 级别之间模糊</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Aniso Level</strong></td>
+	<td style="text-align:left;">以大角度查看纹理时提高纹理质量。适用于地板和地面纹理</td>
+</tr>
+</tbody>
+</table>
+
+<h3>自定义纹理：</h3>
+
+<p>自定义纹理参数分为三个主要类别：</p>
+
+<ul>
+<li><p>Material：定义用于更新纹理的着色器。</p></li>
+<li><p>Initialization：控制在着色器执行更新之前如何初始化纹理</p></li>
+<li><p>Update：控制着色器如何更新纹理。</p></li>
+</ul>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">属性：</th>
+	<th style="text-align:left;">功能：</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Material</strong></td>
+	<td style="text-align:left;">用于更新自定义渲染纹理的材质</td>
+</tr>
+<tr>
+	<td style="text-align:left;">     Shader Pass</td>
+	<td style="text-align:left;">用于更新自定义纹理的着色通道。该组合框将显示材质中可用的所有通道。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Initialization Mode</strong></td>
+	<td style="text-align:left;">应初始化纹理的频率。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">     OnLoad</td>
+	<td style="text-align:left;">纹理在创建时初始化一次。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">     Realtime</td>
+	<td style="text-align:left;">在每一帧初始化纹理。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">     OnDemand</td>
+	<td style="text-align:left;">通过脚本按需初始化纹理。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Source</strong></td>
+	<td style="text-align:left;">应如何初始化纹理。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">     Texture and Color</td>
+	<td style="text-align:left;">由纹理叠加颜色来初始化纹理。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">         Initialization Color</td>
+	<td style="text-align:left;">用于初始化自定义纹理的颜色。如果还提供了初始化纹理，则将通过叠加颜色和纹理来初始化自定义纹理。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">         Initialization Texture</td>
+	<td style="text-align:left;">用于初始化自定义纹理的纹理。如果还提供了初始化颜色，则将通过叠加颜色和纹理来初始化自定义纹理。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">     Material</td>
+	<td style="text-align:left;">纹理将由材质初始化。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">         Initialization Material</td>
+	<td style="text-align:left;">用于初始化自定义纹理的材质。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Update Mode</strong></td>
+	<td style="text-align:left;">着色器应更新纹理的频率。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">     OnLoad</td>
+	<td style="text-align:left;">纹理在创建时更新一次。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">     Realtime</td>
+	<td style="text-align:left;">在每一帧更新纹理。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">     OnDemand</td>
+	<td style="text-align:left;">通过脚本按需更新纹理。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Period</strong></td>
+	<td style="text-align:left;">（仅限 Realtime 选项）更新实时纹理的间隔秒数（0.0 表示更新每一帧）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Double Buffered</strong></td>
+	<td style="text-align:left;">纹理将接受双缓冲。每次更新都将交换两个缓冲区，因此可让用户在着色器中读取前一次更新的结果。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Wrap Update Zones</strong></td>
+	<td style="text-align:left;">启用此属性允许部分更新区域包围纹理的边框。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cubemap Faces</strong></td>
+	<td style="text-align:left;">（仅限立方体贴图）通过一系列开关允许用户对每个立方体贴图面启用/禁用更新。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Update Zone Space</strong></td>
+	<td style="text-align:left;">在此坐标系统中定义更新区域。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">     Normalized</td>
+	<td style="text-align:left;">所有坐标和大小都在 0 到 1 之间，左上角从 (0, 0) 开始</td>
+</tr>
+<tr>
+	<td style="text-align:left;">     Pixel</td>
+	<td style="text-align:left;">所有坐标和大小都以像素宽度和高度所限制的像素表示。左上角从 (0, 0) 开始</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Update Zone List</strong></td>
+	<td style="text-align:left;">纹理的更新区域列表（有关更多详细信息，请参阅下文）</td>
+</tr>
+</tbody>
+</table>
+
+<h2>将自定义渲染纹理导出到文件：</h2>
+
+<p>可通过上下文“Export”菜单将自定义渲染纹理导出到 PNG 或 EXR 文件（具体取决于纹理格式）。</p>
+
+<h2>更新区域 (Update Zones)：</h2>
+
+<p>默认情况下，更新自定义渲染纹理时，材质会立即更新整个纹理。自定义纹理的一个重要功能是用户能够定义部分更新区域。有了此功能，用户可根据需要定义多个区域以及处理它们的顺序。</p>
+
+<p>此功能可用于几种不同的目的。例如，您可以使用多个小区域在纹理上绘制水滴，然后执行完整通道以模拟波纹。此外，如果不需要更新完整纹理，也可以使用此功能作为优化手段。</p>
+
+<figure>
+<img src="../uploads/Main/CustomRenderTextures-1.png" alt="">
+</figure>
+
+<p>更新区域具有各自的属性集。<strong>Update Zone Space</strong> 将反映在显示中。根据纹理的 <strong>Dimension</strong> 属性，坐标将为 2D（对于 2D 和立方体纹理）或 3D（对于 3D 纹理）。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">属性：</th>
+	<th style="text-align:left;">功能：</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Center</td>
+	<td style="text-align:left;">更新区域中心的坐标。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Size</td>
+	<td style="text-align:left;">更新区域的大小。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Rotation</td>
+	<td style="text-align:left;">更新区域的方向（以度为单位，3D 纹理中不可用）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Shader Pass</td>
+	<td style="text-align:left;">用于此更新区域的着色器通道。如果保留为默认值，则此更新区域将使用检视面板主要部分中定义的着色器通道，否则将使用提供的着色器通道。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Swap (Double Buffer)</td>
+	<td style="text-align:left;">（仅适用于双缓冲纹理）如果为 true，则在处理此更新区域之前将交换缓冲区。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>双缓冲自定义纹理</h2>
+
+<p>自定义渲染纹理可以是“双缓冲的”(Double Buffered)。在内部有两种纹理，但从用户的角度来看，它们是相同的。每次更新后将交换两个纹理。这种机制可让用户在自定义渲染纹理中写入新结果时读取上次更新的结果。如果着色器需要使用已在纹理中写入的内容但不能将值与经典混合模式混合，则此功能尤其有用。如果着色器必须对前一结果的不同像素进行采样，也需要用到此功能。</p>
+
+<p><strong>性能警告</strong>：由于某些技术问题，双缓冲当前涉及每次交换时进行纹理的复制，这可能导致性能下降，具体取决于其执行频率和纹理分辨率。</p>
+
+<h2>链接自定义渲染纹理</h2>
+
+<p>自定义渲染纹理需要材质才能进行更新。此材质可将纹理作为输入。这意味着自定义纹理可用作生成另一个纹理的输入。这样一来，用户就可以链接多个自定义纹理以生成更复杂的多步模拟。系统将正确处理所有依赖关系，确保以正确的顺序进行不同的更新。</p>
+
+<h2>为自定义渲染纹理编写着色器</h2>
+
+<p>更新自定义纹理就像在渲染纹理中执行 2D 后期处理一样。为了帮助用户编写自定义纹理着色器，我们提供了一个带有实用函数和内置辅助变量的小框架。</p>
+
+<p>下面是一个非常简单的示例，它将使用颜色叠加颜色的方式填充纹理：</p>
+
+<pre><code>Shader "CustomRenderTexture/Simple"
+{
+    Properties
+    {
+        _Color ("Color", Color) = (1,1,1,1)
+                                _Tex("InputTex", 2D) = "white" {}
+     }
+
+     SubShader
+     {
+        Lighting Off
+        Blend One Zero
+
+        Pass
+        {
+            CGPROGRAM
+            #include "UnityCustomRenderTexture.cginc"
+            #pragma vertex CustomRenderTextureVertexShader
+            #pragma fragment frag
+             #pragma target 3.0
+
+            float4      _Color;
+                                        sampler2D   _Tex;
+
+            float4 frag(v2f_customrendertexture IN) : COLOR
+            {
+                return _Color * tex2D(_Tex, IN.localTexcoord.xy);
+            }
+            ENDCG
+                    }
+    }
+}
+</code></pre>
+
+<p>为自定义纹理编写着色器时，唯一必需的步骤是：</p>
+
+<p>* #include “UnityCustomRenderTexture.cginc”</p>
+
+<ul>
+<li><p>使用提供的顶点着色器 <em>CustomRenderTextureVertexShader</em></p></li>
+<li><p>为像素着色器使用提供的输入结构 <em>v2f_customrendertexture</em></p></li>
+</ul>
+
+<p>除此之外，用户可以根据自己的喜好自由编写像素着色器。</p>
+
+<p>以下是在初始化材质中使用的着色器的另一个示例：</p>
+
+<pre><code>Shader "CustomRenderTexture/CustomTextureInit"
+{
+    Properties
+    {
+        _Color ("Color", Color) = (1,1,1,1)
+        _Tex("InputTex", 2D) = "white" {}
+    }
+
+    SubShader
+    {
+        Lighting Off
+        Blend One Zero
+
+        Pass
+        {
+            CGPROGRAM
+            #include "UnityCustomRenderTexture.cginc"
+
+            #pragma vertex InitCustomRenderTextureVertexShader
+            #pragma fragment frag
+            #pragma target 3.0
+
+            float4      _Color;
+                                        sampler2D   _Tex;
+
+            float4 frag(v2f_init_customrendertexture IN) : COLOR
+            {
+                _Color * tex2D(_Tex, IN.texcoord.xy);
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre>
+
+<p>与更新着色器的情况下相同，唯一必需的步骤如下：</p>
+
+<p>* #include “UnityCustomRenderTexture.cginc”</p>
+
+<ul>
+<li><p>使用提供的顶点着色器 Init<em>CustomRenderTextureVertexShader</em></p></li>
+<li><p>为像素着色器使用提供的输入结构 <em>v2f_init_customrendertexture</em></p></li>
+</ul>
+
+<p>为了帮助用户完成此过程，我们提供了一组内置值：</p>
+
+<p>来自 <strong><strong><em>v2f_customrendertexture</em></strong></strong> 结构的输入值：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">名称</th>
+	<th style="text-align:left;">类型</th>
+	<th style="text-align:left;">值</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>localTexcoord</code></td>
+	<td style="text-align:left;"><code>float3</code></td>
+	<td style="text-align:left;">相对于当前正在处理的更新区域的纹理坐标。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>globalTexcoord</code></td>
+	<td style="text-align:left;"><code>float3</code></td>
+	<td style="text-align:left;">相对于自定义渲染纹理本身的纹理坐标</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>primitiveID</code></td>
+	<td style="text-align:left;"><code>uint</code></td>
+	<td style="text-align:left;">当前正在处理的更新区域的索引。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>direction</code></td>
+	<td style="text-align:left;"><code>float3</code></td>
+	<td style="text-align:left;">对于立方体自定义渲染纹理，立方体贴图内当前像素的方向。</td>
+</tr>
+</tbody>
+</table>
+
+<p>来自 <strong><strong><em>v2f_init_customrendertexture</em></strong></strong> 结构的输入值：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">名称</th>
+	<th style="text-align:left;">类型</th>
+	<th style="text-align:left;">值</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>texcoord</code></td>
+	<td style="text-align:left;">float3</td>
+	<td style="text-align:left;">相对于自定义渲染纹理本身的纹理坐标。</td>
+</tr>
+</tbody>
+</table>
+
+<p>全局值：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">名称</th>
+	<th style="text-align:left;">类型</th>
+	<th style="text-align:left;">值</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>_CustomRenderTextureWidth</code></td>
+	<td style="text-align:left;"><code>float</code></td>
+	<td style="text-align:left;">自定义纹理的宽度（以像素为单位）</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>_CustomRenderTextureHeight</code></td>
+	<td style="text-align:left;"><code>float</code></td>
+	<td style="text-align:left;">自定义纹理的高度（以像素为单位）</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>_CustomRenderTextureDepth</code></td>
+	<td style="text-align:left;"><code>float</code></td>
+	<td style="text-align:left;">自定义纹理的深度（以像素为单位，仅适用于 3D 纹理，否则将始终等于 1）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>_CustomRenderTextureCubeFace</code></td>
+	<td style="text-align:left;"><code>float</code></td>
+	<td style="text-align:left;">仅适用于立方体贴图：正在处理的当前立方体贴图面的索引 (-X, +X, -Y, +Y, -Z, +Z)。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>_CustomRenderTexture3DSlice</code></td>
+	<td style="text-align:left;"><code>float</code></td>
+	<td style="text-align:left;">仅适用于 3D 纹理：正在处理的当前 3D 切片的索引。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>_SelfTexture2D</code></td>
+	<td style="text-align:left;"><code>Sampler2D</code></td>
+	<td style="text-align:left;">仅适用于双缓冲纹理：该纹理包含上次交换之前的上次更新的结果。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>_SelfTextureCube</code></td>
+	<td style="text-align:left;"><code>SamplerCUBE</code></td>
+	<td style="text-align:left;">仅适用于双缓冲纹理：该纹理包含上次交换之前的上次更新的结果。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>_SelfTexture3D</code></td>
+	<td style="text-align:left;"><code>Sampler3D</code></td>
+	<td style="text-align:left;">仅适用于双缓冲纹理：该纹理包含上次交换之前的上次更新的结果。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>通过脚本控制自定义渲染纹理</h2>
+
+<p>此处描述的大多数功能均可通过脚本 API 访问到。更改材质参数、更新频率、更新区域、请求更新等全都可以使用脚本完成。</p>
+
+<p>但要记住的一件事是，请求对自定义纹理进行的任何更新都将在帧的开头非常特定的时间发生，并提供自定义纹理的最新状态。这种机制可保证使用此纹理的任何材质都具有最新结果。</p>
+
+<p>这意味着以下模式：</p>
+
+<pre><code>customRenderTexture.updateZones = updateZones1;
+customRenderTexture.Update();
+customRenderTexture.updateZones = updateZones2;
+customRenderTexture.Update();
+</code></pre>
+
+<p>不会产生使用第一个更新区域数组完成一次更新再使用另一个数组完成第二次更新的“预期”结果。此模式将对第二个数组进行两次更新。</p>
+
+<p>根据经验法则，任何修改后的属性都只能在下一帧中激活。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2017–05–18 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Unity <a href="../Manual/30_search.html?q=newin20171">2017.1</a> 中的新功能 <span class="search-words">NewIn20171</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-RenderTexture.html"></a></span><div class="tip">渲染纹理</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-MovieTexture.html"></a></span><div class="tip">Movie Textures</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

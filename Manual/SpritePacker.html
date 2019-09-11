@@ -1,0 +1,449 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="(Legacy) Sprite Packer - Unity Manual">
+<title>(Legacy) Sprite Packer - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/SpritePackerMain.jpg">
+<meta name="description" content="在设计精灵图形时，可以方便地为每个角色使用单独的纹理文件。但是，精灵纹理的很大一部分通常会被图形元素之间的空白空间所占据，而此空间将导致运行时浪费视频内存。为了获得最佳性能，最好将几个精灵纹理中的图形紧密地打包在一个称为图集的纹理中。Unity 提供了一个 Sprite Packer 实用程序来自动执行从各个精灵纹理生成图集的过程。">
+<meta property="og:description" content="在设计精灵图形时，可以方便地为每个角色使用单独的纹理文件。但是，精灵纹理的很大一部分通常会被图形元素之间的空白空间所占据，而此空间将导致运行时浪费视频内存。为了获得最佳性能，最好将几个精灵纹理中的图形紧密地打包在一个称为图集的纹理中。Unity 提供了一个 Sprite Packer 实用程序来自动执行从各个精灵纹理生成图集的过程。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'SpritePacker';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SpritePacker.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SpritePacker.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SpritePacker.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SpritePacker.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SpritePacker.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SpritePacker.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SpritePacker.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SpritePacker.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SpritePacker.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SpritePacker.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/SpritePacker.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/SpritePacker.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/SpritePacker.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/SpritePacker.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SpritePacker.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SpritePacker.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SpritePacker.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SpritePacker.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SpritePacker.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SpritePacker.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SpritePacker.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SpritePacker.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SpritePacker.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SpritePacker.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Unity2D.html">2D</a></li>
+<li><a href="Sprites.html">精灵</a></li>
+<li>(Legacy) Sprite Packer</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="CustomPhysicsShape.html"></a></span><div class="tip">Sprite Editor: Custom Physics Shape</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-SortingGroup.html"></a></span><div class="tip">排序组</div>
+</div>
+</div></div>
+<h1>(Legacy) Sprite Packer</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>在设计精灵图形时，可以方便地为每个角色使用单独的纹理文件。但是，精灵纹理的很大一部分通常会被图形元素之间的空白空间所占据，而此空间将导致运行时浪费视频内存。为了获得最佳性能，最好将几个精灵纹理中的图形紧密地打包在一个称为图集的纹理中。Unity 提供了一个 <strong>Sprite Packer</strong> 实用程序来自动执行从各个精灵纹理生成图集的过程。</p>
+
+<p>Unity 在后台处理精灵图集纹理的生成和使用，这样用户就不需要进行手动分配。可选择在进入播放模式时或在构建期间打包图集，而图集一旦生成，便会从图集获取精灵对象的图形。</p>
+
+<p>用户需要在纹理导入器 (Texture Importer) 中指定一个打包标签 (Packing Tag)，从而为该纹理的精灵启用打包。</p>
+
+<h2>使用 Sprite Packer</h2>
+
+<p>The Sprite Packer is disabled by default but you can configure it from the <a href="class-EditorManager.html">Editor</a> window (menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Editor</strong> category). The sprite packing mode can be changed from <strong>Disabled</strong> to <strong>Enabled for Builds</strong> (packing is used for builds but not Play mode) or <strong>Always Enabled</strong> (packing is enabled for both Play mode and builds).</p>
+
+<p>If you open the Sprite Packer window (menu: <strong>Window</strong> &gt; <strong>2D</strong> &gt; <strong>Sprite Packer</strong>) and click the <strong>Pack</strong> button in the top-left corner, you will see the arrangement of the textures packed within the atlas.</p>
+
+<figure>
+<img src="../uploads/Main/SpritePackerMain.jpg" alt="">
+</figure>
+
+<p>如果在 Project 面板中选择一个精灵，该精灵也会突出显示以显示其在图集内的位置。轮廓实际上是渲染网格轮廓，还定义了用于紧密打包的区域。</p>
+
+<p>Sprite Packer 窗口顶部的工具栏有许多影响打包和查看的控件。<strong>Pack</strong> 按钮可启动打包操作，但如果图集自上次打包后没有更改，则不会强制进行任何更新。（按__自定义 Sprite Packer__ 中所述实现自定义打包策略时，将出现一个相关的 <strong>Repack</strong> 按钮）。<strong>View Atlas</strong> 和 <strong>Page #</strong> 菜单允许选择在窗口中显示哪个图集的哪个页面（如果没有足够的空间来容纳最大纹理大小内的所有精灵，则单个图集可能拆分成多个“页面”）。页面编号旁边的菜单用于选择对图集使用的“打包策略”（见下文）。在工具栏的右侧有两个控件用于缩放视图以及在图集的颜色和 Alpha 显示之间切换。</p>
+
+<h2>打包策略</h2>
+
+<p>Sprite Packer 使用__打包策略__来决定如何将精灵分配到图集。您可以创建自己的打包策略（见下文），但也可以随时使用 <strong>Default Packer Policy</strong>、<strong>Tight Packer Policy</strong> 或 <strong>Tight Rotate Enabled Sprite Packer Policy</strong> 选项。通过使用这些策略，<a href="class-TextureImporter.html">纹理导入器</a>中的 <strong>Packing Tag</strong> 属性可直接选择将精灵打包到的图集的名称，因此具有相同打包标签 (Packing Tag) 的所有精灵将打包到同一图集内。然后，根据纹理导入设置对图集进行进一步排序，使图集符合用户为源纹理进行的任何设置。具有相同纹理压缩设置的精灵将尽可能分组到相同的图集。</p>
+
+<ul>
+<li>DefaultPackerPolicy 将默认使用矩形打包方式，除非在 <strong>Packing Tag</strong> 中指定了“[TIGHT]”（即，将打包标签设置为“[TIGHT]Character”将允许紧密打包）。</li>
+<li>TightPackerPolicy 将默认使用紧密打包（如果精灵具有紧密网格）。如果在 <strong>Packing Tag</strong> 中指定了“[RECT]”，则将执行矩形打包方式（即，将打包标签设置为“[RECT]UI_Elements”将强制进行矩形打包）。</li>
+<li>TightRotateEnabledSpritePackerPolicy 将默认使用紧密打包（如果精灵具有紧密网格）并会启用精灵旋转。如果在 <strong>Packing Tag</strong> 中指定了“[RECT]”，则将执行矩形打包方式（即，将打包标签设置为“[RECT]UI_Elements”将强制进行矩形打包）。</li>
+</ul>
+
+<h2>自定义 Sprite Packer</h2>
+
+<p><strong>DefaultPackerPolicy</strong> 选项足以满足大多数用途，但如果需要，也可以实施自己的自定义打包策略。为此，需要实现编辑器脚本中的一个类的 UnityEditor.Sprites.IPackerPolicy 接口。此接口需要以下方法：</p>
+
+<ul>
+<li>GetVersion - 返回打包策略的版本值。如果对策略脚本进行了修改，则应该更换版本，并且此策略将保存到版本控制系统。</li>
+<li>OnGroupAtlases - 在此处实现打包逻辑。在 PackerJob 上定义图集，并从给定的 TextureImporter 分配精灵。</li>
+</ul>
+
+<p>DefaultPackerPolicy 默认使用矩形打包（请参阅 SpritePackingMode）。如果正在创建纹理空间效果或想要使用不同的网格来渲染精灵，此设置将非常有用。自定义策略可覆盖此设置，并改用紧密打包。</p>
+
+<ul>
+<li>仅在选择自定义策略时才会启用 Repack 按钮。
+
+<ul>
+<li>除非 TextureImporter 元数据或所选的 PackerPolicy 版本值发生变化，否则不会调用 OnGroupAtlases。</li>
+<li>仅在实施自定义策略时才应使用 Repack 按钮。</li>
+</ul>
+</li>
+<li>可使用 TightRotateEnabledSpritePackerPolicy 自动对精灵打包并旋转。
+
+<ul>
+<li>SpritePackingRotation 是保留供未来 Unity 版本使用的类型。</li>
+</ul>
+</li>
+</ul>
+
+<h2>其他</h2>
+
+<ul>
+<li>图集缓存在 Project\Library\AtlasCache 中。
+
+<ul>
+<li>删除此文件夹再启动 Unity 将强制对图集重新打包。这样做时必须关闭 Unity。</li>
+</ul>
+</li>
+<li>启动时不加载图集缓存。
+
+<ul>
+<li>重新启动 Unity 后首次打包时必须选中所有纹理。此操作可能需要一些时间，具体取决于项目中的纹理总数。</li>
+<li>仅加载必需的图集。</li>
+</ul>
+</li>
+<li>默认最大图集大小为 2048x2048。</li>
+<li>如果设置了 PackingTag，则不会压缩纹理，这样 SpritePacker 就可以获取原始像素值，然后对图集进行压缩。</li>
+</ul>
+
+<h2>DefaultPackerPolicy</h2>
+
+<pre><code>using System;
+using System.Linq;
+using UnityEngine;
+using UnityEditor;
+using System.Collections.Generic;
+
+
+public class DefaultPackerPolicySample : UnityEditor.Sprites.IPackerPolicy
+{
+        protected class Entry
+        {
+            public Sprite            sprite;
+        public UnityEditor.Sprites.AtlasSettings settings;
+            public string            atlasName;
+            public SpritePackingMode packingMode;
+            public int               anisoLevel;
+        }
+
+        private const uint kDefaultPaddingPower = 3; // 适合基础级别和两个 Mip 级别。
+
+        public virtual int GetVersion() { return 1; }
+        protected virtual string TagPrefix { get { return"[TIGHT]"; } }
+        protected virtual bool AllowTightWhenTagged { get { return true; } }
+        protected virtual bool AllowRotationFlipping { get { return false; } }
+
+    public static bool IsCompressedFormat(TextureFormat fmt)
+    {
+        if (fmt &gt;= TextureFormat.DXT1 &amp;&amp; fmt &lt;= TextureFormat.DXT5)
+            return true;
+        if (fmt &gt;= TextureFormat.DXT1Crunched &amp;&amp; fmt &lt;= TextureFormat.DXT5Crunched)
+            return true;
+        if (fmt &gt;= TextureFormat.PVRTC_RGB2 &amp;&amp; fmt &lt;= TextureFormat.PVRTC_RGBA4)
+            return true;
+        if (fmt == TextureFormat.ETC_RGB4)
+            return true;
+        if (fmt &gt;= TextureFormat.ATC_RGB4 &amp;&amp; fmt &lt;= TextureFormat.ATC_RGBA8)
+            return true;
+        if (fmt &gt;= TextureFormat.EAC_R &amp;&amp; fmt &lt;= TextureFormat.EAC_RG_SIGNED)
+            return true;
+        if (fmt &gt;= TextureFormat.ETC2_RGB &amp;&amp; fmt &lt;= TextureFormat.ETC2_RGBA8)
+            return true;
+        if (fmt &gt;= TextureFormat.ASTC_RGB_4x4 &amp;&amp; fmt &lt;= TextureFormat.ASTC_RGBA_12x12)
+            return true;
+        if (fmt &gt;= TextureFormat.DXT1Crunched &amp;&amp; fmt &lt;= TextureFormat.DXT5Crunched)
+            return true;
+        return false;
+    }
+
+    public void OnGroupAtlases(BuildTarget target, UnityEditor.Sprites.PackerJob job, int[] textureImporterInstanceIDs)
+        {
+            List&lt;Entry&gt; entries = new List&lt;Entry&gt;();
+
+            foreach (int instanceID in textureImporterInstanceIDs)
+            {
+                TextureImporter ti = EditorUtility.InstanceIDToObject(instanceID) as TextureImporter;
+
+                TextureFormat desiredFormat;
+                ColorSpace colorSpace;
+                int compressionQuality;
+                ti.ReadTextureImportInstructions(target, out desiredFormat, out colorSpace, out compressionQuality);
+
+                TextureImporterSettings tis = new TextureImporterSettings();
+                ti.ReadTextureSettings(tis);
+
+            Sprite[] sprites =
+                AssetDatabase.LoadAllAssetRepresentationsAtPath(ti.assetPath)
+                    .Select(x =&gt; x as Sprite)
+                    .Where(x =&gt; x != null)
+                    .ToArray();
+                foreach (Sprite sprite in sprites)
+                {
+                    Entry entry = new Entry();
+                    entry.sprite = sprite;
+                    entry.settings.format = desiredFormat;
+                    entry.settings.colorSpace = colorSpace;
+                    // 仅针对压缩格式使用压缩质量进行稍后分组。否则，将其保留为空。
+                entry.settings.compressionQuality = IsCompressedFormat(desiredFormat) ? compressionQuality : 0;
+                entry.settings.filterMode = Enum.IsDefined(typeof(FilterMode), ti.filterMode)
+                    ? ti.filterMode
+                    : FilterMode.Bilinear;
+                    entry.settings.maxWidth = 2048;
+                    entry.settings.maxHeight = 2048;
+                    entry.settings.generateMipMaps = ti.mipmapEnabled;
+                    entry.settings.enableRotation = AllowRotationFlipping;
+                    if (ti.mipmapEnabled)
+                        entry.settings.paddingPower = kDefaultPaddingPower;
+                    else
+                        entry.settings.paddingPower = (uint)EditorSettings.spritePackerPaddingPower;
+                    #if ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION
+                        entry.settings.allowsAlphaSplitting = ti.GetAllowsAlphaSplitting ();
+                    #endif //ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION
+
+                    entry.atlasName = ParseAtlasName(ti.spritePackingTag);
+                    entry.packingMode = GetPackingMode(ti.spritePackingTag, tis.spriteMeshType);
+                    entry.anisoLevel = ti.anisoLevel;
+
+                    entries.Add(entry);
+                }
+
+                Resources.UnloadAsset(ti);
+            }
+
+            // 首先根据图集名称将精灵分成几组
+            var atlasGroups =
+                from e in entries
+                group e by e.atlasName;
+            foreach (var atlasGroup in atlasGroups)
+            {
+                int page = 0;
+                // 然后根据纹理设置将这些组拆分为更小的组
+                var settingsGroups =
+                    from t in atlasGroup
+                    group t by t.settings;
+                foreach (var settingsGroup in settingsGroups)
+                {
+                    string atlasName = atlasGroup.Key;
+                    if (settingsGroups.Count() &gt; 1)
+                        atlasName += string.Format(" (Group {0})", page);
+
+                UnityEditor.Sprites.AtlasSettings settings = settingsGroup.Key;
+                    settings.anisoLevel = 1;
+                    // 使用此图集内所有条目的最高各向异性级别
+                    if (settings.generateMipMaps)
+                        foreach (Entry entry in settingsGroup)
+                            if (entry.anisoLevel &gt; settings.anisoLevel)
+                                settings.anisoLevel = entry.anisoLevel;
+
+                    job.AddAtlas(atlasName, settings);
+                    foreach (Entry entry in settingsGroup)
+                    {
+                        job.AssignToAtlas(atlasName, entry.sprite, entry.packingMode, SpritePackingRotation.None);
+                    }
+
+                    ++page;
+                }
+            }
+        }
+
+        protected bool IsTagPrefixed(string packingTag)
+        {
+            packingTag = packingTag.Trim();
+            if (packingTag.Length &lt; TagPrefix.Length)
+                return false;
+            return (packingTag.Substring(0, TagPrefix.Length) == TagPrefix);
+        }
+
+        private string ParseAtlasName(string packingTag)
+        {
+            string name = packingTag.Trim();
+            if (IsTagPrefixed(name))
+                name = name.Substring(TagPrefix.Length).Trim();
+            return (name.Length == 0) ? "(unnamed)" : name;
+        }
+
+        private SpritePackingMode GetPackingMode(string packingTag, SpriteMeshType meshType)
+        {
+            if (meshType == SpriteMeshType.Tight)
+                if (IsTagPrefixed(packingTag) == AllowTightWhenTagged)
+                    return SpritePackingMode.Tight;
+            return SpritePackingMode.Rectangle;
+        }
+}
+</code></pre>
+
+<h2>TightPackerPolicy</h2>
+
+<pre><code>using System;
+using System.Linq;
+using UnityEngine;
+using UnityEditor;
+using UnityEditor.Sprites;
+using System.Collections.Generic;
+
+// 除非打包标签包含 "[RECT]"，否则 TightPackerPolicy 将对非矩形精灵进行紧密打包。
+class TightPackerPolicySample : DefaultPackerPolicySample
+{
+        protected override string TagPrefix { get { return "[RECT]"; } }
+        protected override bool AllowTightWhenTagged { get { return false; } }
+        protected override bool AllowRotationFlipping { get { return false; } }
+}
+</code></pre>
+
+<h2>TightRotateEnabledSpritePackerPolicy</h2>
+
+<pre><code>using System;
+using System.Linq;
+using UnityEngine;
+using UnityEditor;
+using UnityEditor.Sprites;
+using System.Collections.Generic;
+
+// 除非打包标签包含 "[RECT]"，否则 TightPackerPolicy 将对非矩形精灵进行紧密打包。
+class TightRotateEnabledSpritePackerPolicySample : DefaultPackerPolicySample
+{
+        protected override string TagPrefix { get { return "[RECT]"; } }
+        protected override bool AllowTightWhenTagged { get { return false; } }
+        protected override bool AllowRotationFlipping { get { return true; } }
+}
+
+</code></pre>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="CustomPhysicsShape.html"></a></span><div class="tip">Sprite Editor: Custom Physics Shape</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-SortingGroup.html"></a></span><div class="tip">排序组</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="HoloLens 空间映射 - Unity Manual">
+<title>HoloLens 空间映射 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/spatialmapping_image.jpg">
+<meta name="description" content="HoloLens 具有内置摄像机，可连续扫描环境，因此能够为真实世界的物体构建虚拟世界几何体。这种能力可让 HoloLens 在虚拟内容和真实世界之间创建令人信服的交互（例如遮挡以及与现实世界物体进行物理交互）。将真实世界表面映射到虚拟世界的过程称为__空间映射 (Spatial Mapping)__。">
+<meta property="og:description" content="HoloLens 具有内置摄像机，可连续扫描环境，因此能够为真实世界的物体构建虚拟世界几何体。这种能力可让 HoloLens 在虚拟内容和真实世界之间创建令人信服的交互（例如遮挡以及与现实世界物体进行物理交互）。将真实世界表面映射到虚拟世界的过程称为__空间映射 (Spatial Mapping)__。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'SpatialMapping';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SpatialMapping.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SpatialMapping.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SpatialMapping.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SpatialMapping.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SpatialMapping.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SpatialMapping.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SpatialMapping.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SpatialMapping.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SpatialMapping.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SpatialMapping.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/SpatialMapping.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/SpatialMapping.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/SpatialMapping.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/SpatialMapping.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SpatialMapping.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SpatialMapping.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SpatialMapping.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SpatialMapping.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SpatialMapping.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SpatialMapping.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SpatialMapping.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SpatialMapping.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SpatialMapping.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SpatialMapping.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="XR.html">XR</a></li>
+<li><a href="XR-SDK_overviews.html">XR SDK</a></li>
+<li><a href="wmr_sdk_overview.html">Windows Mixed Reality</a></li>
+<li>HoloLens 空间映射</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="windowsholographic-videocapture.html"></a></span><div class="tip">HoloLens 视频捕捉</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SpatialMappingComponents.html"></a></span><div class="tip">空间映射 (Spatial Mapping) 组件</div>
+</div>
+</div></div>
+<h1>HoloLens 空间映射</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<figure>
+<img src="../uploads/Main/spatialmapping_image.jpg" alt="">
+</figure>
+
+<p>HoloLens 具有内置摄像机，可连续扫描环境，因此能够为真实世界的物体构建虚拟世界几何体。这种能力可让 HoloLens 在虚拟内容和真实世界之间创建令人信服的交互（例如遮挡以及与现实世界物体进行物理交互）。将真实世界表面映射到虚拟世界的过程称为__空间映射 (Spatial Mapping)__。</p>
+
+<p>Unity Editor 有一个低级脚本 API 用于在项目环境中收集有关表面的信息。此 API 可用于最大限度控制何时查询设备的表面更改，以及何时创建或更新相应的表面游戏对象。Unity 的空间映射 (Spatial Mapping) 组件可用于快速设置并运行 Windows Mixed Reality，而无需直接使用低级脚本 API。</p>
+
+<figure>
+<img src="../uploads/Main/spatialmapping_example.jpg" alt="应用于真实世界空间的空间映射功能的示例">
+<figcaption>应用于真实世界空间的空间映射功能的示例</figcaption>
+</figure>
+
+<h2>空间映射概念</h2>
+
+<p>__空间映射__是为 HoloLens 应用程序添加更出色的真实世界交互体验的好方法。</p>
+
+<h3>映射</h3>
+
+<p>HoloLens 设备不断扫描周围环境，并根据传入的传感器数据优化对世界的理解。该设备频繁更新这些数据以便捕捉到环境变化，例如有人出入房间或开关门。空间映射将世界映射数据集保存到 HoloLens 设备，而这些数据将在多个应用程序之间以及设备重新启动后持续保留。</p>
+
+<p>HoloLens 的空间映射不适用于透明、黑色和反射表面。如果设备无法检测到真实世界物体，则空间映射数据中会出现一个空洞。对于设备尚未看到或未能看到的世界部分，也是如此。例如，HoloLens 未观察到的房间不存在任何数据。</p>
+
+<h3>数据组织</h3>
+
+<p>该设备的世界映射分为均匀的块，称为“表面”。空间映射系统以一种对系统本身而言非常方便的方式定位世界中的表面。无法保证系统会以任何特定方向排列表面，而表面也可能与给定的真实世界空间（例如房间）不正确地相交。当空间映射生成某个表面的数据时，该数据会与相邻的表面轻微重叠。</p>
+
+<p><strong>注意：</strong>空间映射不存在与任何表面数据相关联的语义或解释。空间映射不知道也无法报告表面上实际是什么。例如，无法分辨出在桌子上检测到的斑点实际上是一个杯子，也不能判断房间中间的椅子状物体到底是什么。空间映射仅根据自身对世界的理解（使用传感输入数据构建对世界的认知）报告该区域中几何体的配置。</p>
+
+<h3>空间映射重要注意事项</h3>
+
+<p>为了在使用空间映射开发应用程序时避免性能问题，请考虑以下事项：</p>
+
+<p>1.空间映射数据量可能非常庞大，因此可能会在可扩展性方面带来挑战。</p>
+
+<p>2.在房间内快速移动的物体或人可能会使空间映射数据非常不规则，因此应该尽可能避免这种情况。</p>
+
+<p>3.数据中的空洞有时会导致问题，特别是出于设计原因需要连续数据时。这些空洞通常由透明或黑色表面引起。</p>
+
+<p>请参阅 Microsoft 关于<a href="https://developer.microsoft.com/en-us/windows/mixed-reality/spatial_mapping">空间映射 (Spatial Mapping)</a> 的文档以进一步了解空间映射概念。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–05–01 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 2017.3 版中更新了 Hololens 空间映射文档</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="windowsholographic-videocapture.html"></a></span><div class="tip">HoloLens 视频捕捉</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SpatialMappingComponents.html"></a></span><div class="tip">空间映射 (Spatial Mapping) 组件</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

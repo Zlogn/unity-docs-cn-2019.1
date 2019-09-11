@@ -1,0 +1,247 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="光照概述 - Unity Manual">
+<title>光照概述 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/LightBasic.svg">
+<meta name="description" content="为了计算 3D 对象的阴影效果，Unity 需要知道落在对象上的光的强度、方向和颜色。">
+<meta property="og:description" content="为了计算 3D 对象的阴影效果，Unity 需要知道落在对象上的光的强度、方向和颜色。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'LightingInUnity';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/LightingInUnity.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/LightingInUnity.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/LightingInUnity.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/LightingInUnity.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/LightingInUnity.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/LightingInUnity.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/LightingInUnity.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/LightingInUnity.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/LightingInUnity.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/LightingInUnity.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/LightingInUnity.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/LightingInUnity.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/LightingInUnity.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/LightingInUnity.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/LightingInUnity.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/LightingInUnity.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/LightingInUnity.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/LightingInUnity.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/LightingInUnity.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/LightingInUnity.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/LightingInUnity.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/LightingInUnity.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/LightingInUnity.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/LightingInUnity.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="LightingOverview.html">光照</a></li>
+<li>光照概述</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LightingOverview.html"></a></span><div class="tip">光照</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="GlobalIllumination.html"></a></span><div class="tip">Lighting 窗口</div>
+</div>
+</div></div>
+<h1>光照概述</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>为了计算 3D 对象的阴影效果，Unity 需要知道落在对象上的光的强度、方向和颜色。</p>
+
+<figure>
+<img src="../uploads/Main/LightBasic.svg" alt="">
+</figure>
+
+<p>这些属性是由场景中的 <span class="doc-keyword">Light</span> 对象提供。不同类型的光以不同的方式发出其指定的颜色；一些光的强度可能随着与光源的距离而衰减，并且对于从光源处获得的光角度有不同规则。<a href="Lighting.html">光源类型</a>中详细介绍了 Unity 中提供的不同类型的光源。</p>
+
+<p>Unity 可通过各种不同的方式计算复杂的高级光照效果，每种方式适合不同的使用情况。</p>
+
+<h2>选择光照技术</h2>
+
+<p>从广义上讲，Unity 中的光照在某种方式上可以被视为“实时”或“预计算”光照，并且两种技术可以组合使用以带来沉浸式场景光照。</p>
+
+<p>在本部分中，我们将简要概述不同技术提供的可能性、相对优势和各自的特性。</p>
+
+<h2>实时光照</h2>
+
+<p>默认情况下，Unity 中的光源（方向光、聚光灯和点光源）是实时的。这意味着它们为场景提供直射光并每帧都更新。如果光源和游戏对象在场景中发生移动，光照效果也会随之更新。在场景和游戏视图中都可以观察到这一效果。</p>
+
+<figure>
+<img src="../uploads/Main/RealtimeSpotlight.png" alt="实时光源单独呈现的效果。请注意，阴影是完全黑色的，因为没有反射光。只有落在聚光灯锥体内的表面才会受到影响。">
+<figcaption>实时光源单独呈现的效果。请注意，阴影是完全黑色的，因为没有反射光。只有落在聚光灯锥体内的表面才会受到影响。</figcaption>
+</figure>
+
+<p>实时光照是场景中对象光照的最基本方式，对于照亮角色或其他可移动的几何体非常有用。</p>
+
+<p>遗憾的是，在单独使用 Unity 实时光源的光线时，这些光线不会自动进行反射。为了使用全局光照等技术创建更逼真的场景，我们需要启用 Unity 的预计算光照解决方案。</p>
+
+<p><a name="BakedLightMaps"></a> </p>
+
+<h2>烘焙光照贴图</h2>
+
+<p>Unity 可以计算复杂的静态光照效果（使用称为全局光照（简称 GI）的技术）并将它们存储在称为光照贴图的纹理贴图中作为参考。这一计算过程称为烘焙。</p>
+
+<p>对光照贴图进行烘焙时，会计算光源对场景中静态对象的影响，并将结果写入纹理中，这些纹理覆盖在场景几何体上以营造出光照效果。</p>
+
+<figure>
+<img src="../uploads/GlobalIllumination/Lightmap.png" alt="左：一个简单的光照贴图场景。右：Unity 生成的光照贴图纹理。请注意捕获阴影和光照信息的方式。">
+<figcaption>左：一个简单的光照贴图场景。右：Unity 生成的光照贴图纹理。请注意捕获阴影和光照信息的方式。</figcaption>
+</figure>
+
+<p>这些光照贴图既可以包括照射到表面的直射光，也可以包括从场景内其他物体或表面反射的间接光。该光照纹理可与颜色（反照率）和浮雕（法线）之类的对象表面信息材质相关联的着色器一起使用。</p>
+
+<p>使用烘焙光照时，这些光照贴图在游戏过程中无法改变，因此称为“静态”。实时光源可以重叠并可在光照贴图场景上叠加使用，但不能实时改变光照贴图本身。</p>
+
+<p>通过这种方法，我们可在游戏中移动我们的光照，通过降低实时光计算量潜在提高性能，适应性能较低的硬件，如移动平台。</p>
+
+<p>有关更多信息，请参阅 <a href="GlobalIllumination.html">Lighting 窗口参考</a>和<a href="UsingPrecomputedLighting.html">使用预计算光照</a>。</p>
+
+<h2>预计算实时全局光照</h2>
+
+<p>虽然静态光照贴图无法对场景中的光照条件变化作出反应，但预计算实时 GI 确实为我们提供了一种可以实时更新复杂场景光照的技术。</p>
+
+<p>通过这种方法，可创建具有丰富全局光照和反射光的光照环境，能够实时响光照变化。这方面的一个典型例子是一天的时间系统：光源的位置和颜色随时间变化。如果使用传统的烘焙光照，这是无法实现的。</p>
+
+<figure>
+<img src="../uploads/GlobalIllumination/timeofdaycycle.gif" alt="使用预计算实时 GI 展示一天时间变化的简单示例。">
+<figcaption>使用预计算实时 GI 展示一天时间变化的简单示例。</figcaption>
+</figure>
+
+<p>为了以流畅帧率提供这些效果，我们需要将一些冗长的数字运算从实时处理变为预先计算处理。</p>
+
+<p>预计算负责将计算复杂光照行为所产生的负担从游戏运行过程中转移到有宽松的时间进行计算的时候。我们将此过程称为“离线”过程。</p>
+
+<p>有关更多信息，请参阅<a href="http://unity3d.com/learn/tutorials/topics/graphics/unity-5-lighting-and-rendering?playlist=17102">光照和渲染教程</a>。</p>
+
+<h2>优势和代价</h2>
+
+<p>虽然可以同时使用烘焙 GI 光照和预计算实时 GI，但要注意，同时渲染两个系统的性能开销也是各自开销的总和。我们不仅需要在视频内存中存储两组光照贴图，而且还要在着色器中进行解码的处理。</p>
+
+<p>在什么情况下选择什么光照方法取决于项目的性质和目标硬件的性能。例如，在视频内存和处理能力局限性更大的移动端，烘焙 GI 光照方法可能具有更高性能。在具有专用图形硬件的独立计算机或最新款的游戏主机上，很可能可以使用预计算实时 GI，甚至同时使用这两个系统。</p>
+
+<p>必须根据特定项目和所需目标平台的性质来决定采用哪种方法。请记住，在面向一系列不同硬件时，通常情况下，性能最低的硬件将决定选取哪种方法。</p>
+
+<p>另请参阅：<a href="LightPerformance.html">光照故障排除和性能</a></p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LightingOverview.html"></a></span><div class="tip">光照</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="GlobalIllumination.html"></a></span><div class="tip">Lighting 窗口</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

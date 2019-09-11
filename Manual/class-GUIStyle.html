@@ -1,0 +1,350 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="GUI Style（IMGUI 系统） - Unity Manual">
+<title>GUI Style（IMGUI 系统） - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/GuiStyleInspector.png">
+<meta name="description" content="GUI Style 是与 UnityGUI 结合使用的自定义属性的集合。单个 GUI Style 定义了单个 UnityGUI __控件__的外观。">
+<meta property="og:description" content="GUI Style 是与 UnityGUI 结合使用的自定义属性的集合。单个 GUI Style 定义了单个 UnityGUI __控件__的外观。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-GUIStyle';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-GUIStyle.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-GUIStyle.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-GUIStyle.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-GUIStyle.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-GUIStyle.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-GUIStyle.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-GUIStyle.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-GUIStyle.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-GUIStyle.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-GUIStyle.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-GUIStyle.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-GUIStyle.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-GUIStyle.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-GUIStyle.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-GUIStyle.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-GUIStyle.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-GUIStyle.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-GUIStyle.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-GUIStyle.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-GUIStyle.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-GUIStyle.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-GUIStyle.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-GUIStyle.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-GUIStyle.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UIToolkits.html">UI</a></li>
+<li><a href="GUIScriptingGuide.html">即时模式 GUI (IMGUI)</a></li>
+<li>GUI Style（IMGUI 系统）</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-GUISkin.html"></a></span><div class="tip">GUI Skin（IMGUI 系统）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Navigation.html"></a></span><div class="tip">导航和寻路</div>
+</div>
+</div></div>
+<h1>GUI Style（IMGUI 系统）</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><strong>GUI Style</strong> 是与 <strong>UnityGUI</strong> 结合使用的自定义属性的集合。单个 GUI Style 定义了单个 UnityGUI __控件__的外观。</p>
+
+<figure>
+<img src="../uploads/Main/GuiStyleInspector.png" alt="Inspector 中的 GUI Style">
+<figcaption>Inspector 中的 GUI Style</figcaption>
+</figure>
+
+<p>如果要将样式添加到多个控件，请使用 <a href="class-GUISkin.html">GUI Skin</a> 而不是 GUI Style。有关 UnityGUI 的更多信息，请阅读 <a href="GUIScriptingGuide.html">GUI 脚本指南</a>。</p>
+
+<p><strong>请注意</strong>：本页面适用于 <a href="GUIScriptingGuide.html">IMGUI</a> 系统的一部分；该系统是一个<em>仅限于脚本</em>的 UI 系统。Unity 有一个完整的基于游戏对象的 UI 系统，您可能更希望使用该系统。该系统允许在 Scene 视图中以可见对象的形式设计和编辑用户界面元素。请参阅 <a href="UISystem.html">UI 系统手册</a>以了解更多信息。</p>
+
+<h2>属性</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Name</strong></td>
+	<td style="text-align:left;">可用于指代此特定样式的文本字符串</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Normal</strong></td>
+	<td style="text-align:left;">控件在默认状态下显示的背景图像和文本颜色</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Hover</strong></td>
+	<td style="text-align:left;">当鼠标位于控件上方时显示的背景图像和文本颜色</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Active</strong></td>
+	<td style="text-align:left;">当鼠标主动单击控件时显示的背景图像和文本颜色</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Focused</strong></td>
+	<td style="text-align:left;">控件获得键盘焦点时显示的背景图像和文本颜色</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>On Normal</strong></td>
+	<td style="text-align:left;">控件在启用状态下显示的背景图像和文本颜色</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>On Hover</strong></td>
+	<td style="text-align:left;">当鼠标位于已启用的控件上方时显示的背景图像和文本颜色</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>On Active</strong></td>
+	<td style="text-align:left;">当鼠标主动单击已启用的控件时显示的属性</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>On Focused</strong></td>
+	<td style="text-align:left;">已启用的控件获得键盘焦点时显示的背景图像和文本颜色</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Border</strong></td>
+	<td style="text-align:left;">
+<strong>背景__图像每条边的像素数（不受控件形状比例影响） |
+|</strong>Padding__</td>
+	<td style="text-align:left;">从控件每个边缘到内容起始位置的空间（以像素为单位）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Margin</strong></td>
+	<td style="text-align:left;">以此样式渲染的元素与任何其他 GUI 控件之间的边距。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Overflow</strong></td>
+	<td style="text-align:left;">要添加到背景图像的额外空间。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Font</strong></td>
+	<td style="text-align:left;">用于此样式中所有文本的字体</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Image Position</strong></td>
+	<td style="text-align:left;">背景图像和文本的组合方式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Alignment</strong></td>
+	<td style="text-align:left;">标准文本对齐选项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Word Wrap</strong></td>
+	<td style="text-align:left;">如果启用此属性，到达控件边界的文本将换到下一行</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Text Clipping</strong></td>
+	<td style="text-align:left;">如果启用了 <strong>Word Wrap__，选择超出控件边界的文本的处理方式 |
+|&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;</strong>Overflow__</td>
+	<td style="text-align:left;">任何超出控件边界的文本都将继续超出边界</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>Clip</strong>
+</td>
+	<td style="text-align:left;">任何超出控件边界的文本都将隐藏起来</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Content Offset</strong></td>
+	<td style="text-align:left;">除了所有其他属性之外，内容在 X 和 Y 轴上移位的像素数</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>X</strong>
+</td>
+	<td style="text-align:left;">左/右偏移</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>Y</strong>
+</td>
+	<td style="text-align:left;">上/下偏移</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Fixed Width</strong></td>
+	<td style="text-align:left;">控件宽度的像素数，此值将覆盖任何提供的 <strong>Rect()</strong> 值</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Fixed Height</strong></td>
+	<td style="text-align:left;">控件高度的像素数，此值将覆盖任何提供的 <strong>Rect()</strong> 值</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Stretch Width</strong></td>
+	<td style="text-align:left;">如果启用此属性，则可以水平拉伸使用此样式的控件来改善布局。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Stretch Height</strong></td>
+	<td style="text-align:left;">如果启用此属性，则可以垂直拉伸使用此样式的控件来改善布局。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>详细信息</h2>
+
+<p>GUIStyle 在脚本中进行声明并基于每个实例进行修改。如果要使用具有自定义样式的单个或几个控件，可在脚本中声明此自定义样式，并将此样式作为控件函数的参数。这样就会以定义的样式显示这些控件。</p>
+
+<p>首先，必须在脚本中声明 GUI Style。</p>
+
+<pre><code>/* 声明 GUI Style */
+var customGuiStyle : GUIStyle;
+
+...
+
+
+</code></pre>
+
+<p>将此脚本附加到游戏对象时，__Inspector__ 中将显示可修改的自定义样式。</p>
+
+<figure>
+<img src="../uploads/Main/ModifyingStyleInInspector.png" alt="可在脚本的每个实例中修改脚本中声明的样式">
+<figcaption>可在脚本的每个实例中修改脚本中声明的样式</figcaption>
+</figure>
+
+<p>现在，希望特定的控件使用此样式时，可将此样式的名称作为控件函数中的最后一个参数。</p>
+
+<pre><code>...
+
+function OnGUI () {
+    // 提供样式的名称作为最后一个参数以便使用该样式
+    GUILayout.Button ("I am a custom-styled Button", customGuiStyle);
+
+    // 如果不想应用该样式，请不要提供名称
+    GUILayout.Button ("I am a normal UnityGUI Button without custom style");
+}
+
+
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/guiStyle-TwoButtonsOneIsStyled.png" alt="两个按钮中有一个按钮应用了代码示例中创建的样式">
+<figcaption>两个按钮中有一个按钮应用了代码示例中创建的样式</figcaption>
+</figure>
+
+<p>有关使用 UnityGUI 的更多信息，请阅读 <a href="GUIScriptingGuide.html">GUI 脚本指南</a>。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-GUISkin.html"></a></span><div class="tip">GUI Skin（IMGUI 系统）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Navigation.html"></a></span><div class="tip">导航和寻路</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

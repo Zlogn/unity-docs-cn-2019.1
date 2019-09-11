@@ -1,0 +1,296 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Customising WWW requests on iOS - Unity Manual">
+<title>Customising WWW requests on iOS - Unity Manual</title>
+<meta name="description" content="You can use a plugin to replace the default code that Unity uses when handling requests with the WWW class. You might do this, for example, to change the default caching behaviour, which caches on the basis of the URL alone.">
+<meta property="og:description" content="You can use a plugin to replace the default code that Unity uses when handling requests with the WWW class. You might do this, for example, to change the default caching behaviour, which caches on the basis of the URL alone.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'iosCustomWWWRequest';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/iosCustomWWWRequest.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/iosCustomWWWRequest.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/iosCustomWWWRequest.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/iosCustomWWWRequest.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/iosCustomWWWRequest.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/iosCustomWWWRequest.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/iosCustomWWWRequest.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/iosCustomWWWRequest.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/iosCustomWWWRequest.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/iosCustomWWWRequest.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/iosCustomWWWRequest.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/iosCustomWWWRequest.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/iosCustomWWWRequest.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/iosCustomWWWRequest.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/iosCustomWWWRequest.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/iosCustomWWWRequest.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/iosCustomWWWRequest.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/iosCustomWWWRequest.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/iosCustomWWWRequest.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/iosCustomWWWRequest.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/iosCustomWWWRequest.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/iosCustomWWWRequest.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/iosCustomWWWRequest.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/iosCustomWWWRequest.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
+<li><a href="iphone.html">iOS</a></li>
+<li>iOS 高级主题</li>
+<li>Customising WWW requests on iOS</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="iphone-Downloadable-Content.html"></a></span><div class="tip">Preparing your application for In-App Purchases (IAP)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AppThinning.html"></a></span><div class="tip">App thinning</div>
+</div>
+</div></div>
+<h1>Customising WWW requests on iOS</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>You can use a plugin to replace the default code that Unity uses when handling requests with the <a href="../ScriptReference/WWW.html">WWW</a> class. You might do this, for example, to change the default caching behaviour, which caches on the basis of the URL alone.</p>
+
+<h2>示例</h2>
+
+<p>The following code (described in more detail below) disables the default caching method and adds a “secret” header field to the request in addition to the headers specified from the game’s script code.</p>
+
+<pre><code>    // Code placed at Plugins/iOS/CustomConnection.mm within the Assets folder.
+
+    #include "Unity/WWWConnection.h"
+
+    @interface UnityWWWCustomRequestProvider : UnityWWWRequestDefaultProvider
+    {
+    }
+    + (NSMutableURLRequest*)allocRequestForHTTPMethod:(NSString*)method url:(NSURL*)url headers:(NSDictionary*)headers;
+    @end
+
+    @implementation UnityWWWCustomRequestProvider
+    + (NSMutableURLRequest*)allocRequestForHTTPMethod:(NSString*)method url:(NSURL*)url headers:(NSDictionary*)headers
+    {
+        NSMutableURLRequest* request = [super allocRequestForHTTPMethod:method url:url headers:headers];
+
+        // let's pretend for security reasons we dont want ANY cache nor cookies
+        request.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
+        [request setHTTPShouldHandleCookies:NO];
+
+        // let's pretend we want special secret info in header
+        [request setValue:@"123456789"forHTTPHeaderField:@"Secret"];
+
+        return request;
+    }
+    @end
+
+    @interface UnityWWWCustomConnectionDelegate : UnityWWWConnectionDelegate
+    {
+    }
+    @end
+
+    @implementation UnityWWWCustomConnectionDelegate
+    - (NSCachedURLResponse*)connection:(NSURLConnection*)connection willCacheResponse:(NSCachedURLResponse*)cachedResponse
+    {
+        // we dont want caching
+        return nil;
+    }
+    - (void)connection:(NSURLConnection*)connection didReceiveResponse:(NSURLResponse*)response
+    {
+        // let's just print something here for test
+        [super connection:connection didReceiveResponse:response];
+        if([response isMemberOfClass:[NSHTTPURLResponse class]])
+            ::printf_console("We've got response with status: %d\n", [(NSHTTPURLResponse*)response statusCode]);
+    }
+    @end
+
+    IMPL_WWW_DELEGATE_SUBCLASS(UnityWWWCustomConnectionDelegate);
+    IMPL_WWW_REQUEST_PROVIDER(UnityWWWCustomRequestProvider);
+</code></pre>
+
+<p>The code breaks down as follows. Firstly, we create a subclass of UnityWWWRequestDefaultProvider to provide a modified NSURLRequest object for the connection. Another option is simply to implement the UnityWWWRequestProvider protocol in the class from scratch. In this case, however, we want to make use of Unity’s existing code.</p>
+
+<pre><code>    @interface UnityWWWCustomRequestProvider : UnityWWWRequestDefaultProvider
+    {
+    }
+    + (NSMutableURLRequest*)allocRequestForHTTPMethod:(NSString*)method url:(NSURL*)url headers:(NSDictionary*)headers;
+    @end
+</code></pre>
+
+<p>The “action” happens in <code>allocRequestForHTTPMethod</code> which starts by calling the same method on the superclass:</p>
+
+<pre><code>    @implementation UnityWWWCustomRequestProvider
+    + (NSMutableURLRequest*)allocRequestForHTTPMethod:(NSString*)method url:(NSURL*)url headers:(NSDictionary*)headers
+    {
+        NSMutableURLRequest* request = [super allocRequestForHTTPMethod:method url:url headers:headers];
+</code></pre>
+
+<p>From there, we disable the default data caching done by iOS and also disable cookies:</p>
+
+<pre><code>    request.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
+    [request setHTTPShouldHandleCookies:NO];
+</code></pre>
+
+<p>Next, we add a header field called “Secret” that provides some additional data. In a real game, this might be a value checked by the server to verify the source of the connection.</p>
+
+<pre><code>    [request setValue:@"123456789"forHTTPHeaderField:@"Secret"];
+</code></pre>
+
+<p>Having created the custom request handling class, we also need to create a subclass of <code>UnityWWWConnectionDelegate</code> to customise the handling of the connection:</p>
+
+<pre><code>    @interface UnityWWWCustomConnectionDelegate : UnityWWWConnectionDelegate
+    {
+    }
+    @end
+</code></pre>
+
+<p>We can disable data caching by returning a nil value from the <code>connection:willCacheResponse:</code> method:</p>
+
+<pre><code>    - (NSCachedURLResponse*)connection:(NSURLConnection*)connection willCacheResponse:(NSCachedURLResponse*)cachedResponse
+    {
+        // we dont want caching
+        return nil;
+    }
+</code></pre>
+
+<p>We can handle the connection itself from <code>connection:didReceiveResponse:</code>, which should call the same method on the superclass to actually get the data. Here, we simply print a message to the console when the connection happens but you could implement anything you like here:</p>
+
+<pre><code>    - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+    {
+        // let's just print something here for test
+        [super connection:connection didReceiveResponse:response];
+        if([response isMemberOfClass:[NSHTTPURLResponse class]])
+            ::printf_console("We've got response with status: %d\n", [(NSHTTPURLResponse*)response statusCode]);
+    }
+</code></pre>
+
+<p>Finally, we register our new connection delegate and request provider with Unity so they will be called whenever a WWW request is issued from a script:</p>
+
+<pre><code>    IMPL_WWW_DELEGATE_SUBCLASS(UnityWWWCustomConnectionDelegate);
+    IMPL_WWW_REQUEST_PROVIDER(UnityWWWCustomRequestProvider);
+</code></pre>
+
+<p>The custom code is transparent to the use of the WWW class within Unity - no extra code needs to be added to the C# script.</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–06–14 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="iphone-Downloadable-Content.html"></a></span><div class="tip">Preparing your application for In-App Purchases (IAP)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AppThinning.html"></a></span><div class="tip">App thinning</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

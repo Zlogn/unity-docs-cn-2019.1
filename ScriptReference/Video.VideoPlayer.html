@@ -1,0 +1,295 @@
+<!DOCTYPE html><html class="no-js"><head><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="twitter:card" content="summary" /><meta property="og:title" content="Video.VideoPlayer - Unity Scripting API" /><title>Video.VideoPlayer - Unity Scripting API</title><meta name="description" content="将视频内容播放到目标上。" /><meta property="og:description" content="将视频内容播放到目标上。" /><meta name="author" content="Unity Technologies" /><link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico" /><link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png" /><link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png" /><link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png" /><link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png" /><link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png" /><link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png" /><link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png" /><meta name="msapplication-TileColor" content="#222c37" /><meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png" /><script>
+      var docs_type = 'ScriptReference';
+      var lang = 'zh_CN';
+      var page = 'Video.VideoPlayer';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css" /><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css" /><link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css" /></head><body><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div class="header-wrapper"><div id="header" class="header"><div class="content"><div class="spacer"><div class="menu"><div id="nav-open" for="nav-input"><span></span></div><div class="logo"><a href="https://docs.unity3d.com"></a></div><div class="search-form"><form action="30_search.html" method="get" class="apisearch"><input type="text" name="q" placeholder="Search scripting..." autosave="Unity Reference" results="5" class="sbox field" id="q"></input><input type="submit" class="submit"></input></form></div><ul class="menu-items"><li class="menu-item"><a href="../Manual/index.html" class="">Manual</a></li><li class="menu-item"><a href="../ScriptReference/index.html" class="selected">Scripting API</a></li></ul></div></div><div class="more"><div class="filler"></div><ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul></div></div></div><div class="toolbar"><div class="content"><div class="version-switcher"><div class="current toggle" data-target=".version-list"><div class="version-number"><div class="d-inline-block">
+          Version:
+          <b>2019.1</b></div><div class="d-inline-block arrow"></div></div></div><div class="version-list" style="display:none;"><ul><li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/ScriptReference/Video.VideoPlayer.html">2019.1</a></li><li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/ScriptReference/Video.VideoPlayer.html">2018.4</a></li><li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/ScriptReference/Video.VideoPlayer.html">2018.3</a></li><li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/ScriptReference/Video.VideoPlayer.html">2018.2</a></li><li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/ScriptReference/Video.VideoPlayer.html">2018.1</a></li><li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/ScriptReference/Video.VideoPlayer.html">2017.4</a></li><li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/ScriptReference/Video.VideoPlayer.html">2017.3</a></li><li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/ScriptReference/Video.VideoPlayer.html">2017.2</a></li><li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/ScriptReference/Video.VideoPlayer.html">2017.1</a></li><li><a class="docs_version_url_560" href="/zh_CN/560/ScriptReference/Video.VideoPlayer.html">5.6</a></li></ul></div></div><ul class="nav-menu-items"><li class="menu-item"><a href="../Manual/index.html" class="">Manual</a></li><li class="menu-item"><a href="../ScriptReference/index.html" class="selected">Scripting API</a></li></ul><div class="lang-switcher"><div class="current toggle" data-target=".lang-list"><div class="lbl">Language:
+        <span class="b">中文</span></div><div class="arrow"></div></div><div class="lang-list" style="display:none;"><ul><li><a data-lang="en" href="/2019.1/Documentation/ScriptReference/Video.VideoPlayer.html">English</a></li><li><a data-lang="ja" href="/ja/2019.1/ScriptReference/Video.VideoPlayer.html">日本語</a></li><li><a data-lang="es" href="/es/2019.1/ScriptReference/Video.VideoPlayer.html">Español</a></li><li><a data-lang="kr" href="/kr/2019.1/ScriptReference/Video.VideoPlayer.html">한국어</a></li></ul></div></div></div></div></div><div id="master-wrapper" class="master-wrapper clear"><div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc"><h2>Scripting API</h2><div class="version-switcher"><div class="current toggle" data-target=".version-list"><div class="version-number"><div class="d-inline-block">
+          Version:
+          <b>2019.1</b></div><div class="d-inline-block arrow"></div></div></div><div class="version-list" style="display:none;"><ul><li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/ScriptReference/Video.VideoPlayer.html">2019.1</a></li><li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/ScriptReference/Video.VideoPlayer.html">2018.4</a></li><li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/ScriptReference/Video.VideoPlayer.html">2018.3</a></li><li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/ScriptReference/Video.VideoPlayer.html">2018.2</a></li><li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/ScriptReference/Video.VideoPlayer.html">2018.1</a></li><li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/ScriptReference/Video.VideoPlayer.html">2017.4</a></li><li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/ScriptReference/Video.VideoPlayer.html">2017.3</a></li><li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/ScriptReference/Video.VideoPlayer.html">2017.2</a></li><li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/ScriptReference/Video.VideoPlayer.html">2017.1</a></li><li><a class="docs_version_url_560" href="/zh_CN/560/ScriptReference/Video.VideoPlayer.html">5.6</a></li></ul></div></div><div class="clear"></div></div></div></div></div></div><div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content"><div class="section"><div class="mb20 clear" id=""><h1 class="heading inherit">VideoPlayer</h1><div class="clear"></div><p class="cl mb0 left mr10">class in UnityEngine.Video</p><p class="cl mb0 left mr10">/</p><p class="cl mb0 left">Inherits from:<a href="Behaviour.html" class="cl">Behaviour</a></p><div class="clear"></div><a href="" class="switch-link gray-btn sbtn left hide">Switch to Manual</a><div class="clear"></div></div><div class="subsection"><div class="signature"><div class="signature-CS sig-block"><span style="color:red;"></span></div></div></div><div class="subsection"><h2>Description</h2><p>将视频内容播放到目标上。</p></div><div class="subsection"><p>Content can be either a <a href="Video.VideoClip.html">VideoClip</a> imported asset or a URL such as <code class="mono">file://</code> or <code class="mono">http://</code>. Video content will be projected onto one of the supported targets, such as camera background or <a href="RenderTexture.html">RenderTexture</a>.
+If the video content includes transparency, this transparency will be present in the target, allowing objects behind the video target to be visible. When the data <a href="Video.VideoPlayer-source.html">VideoPlayer.source</a> is set to URL, the audio and video description of what is being played will only be initialized once the <a href="Video.VideoPlayer.html">VideoPlayer</a> preparation is completed. This can be tested with <a href="Video.VideoPlayer-isPrepared.html">VideoPlayer.isPrepared</a>.<br /><br /><strong>电影文件格式支持说明</strong><br /><br />VideoPlayer 在其实现中使用原生音频和视频解码库，您有责任使用符合目标平台要求的视频。<a href="VideoClipImporter.html">VideoClipImporter</a> 提供了一个将 <a href="Video.VideoClip.html">VideoClip</a> 资源转码为 <a href="https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC">H.264</a> 或 <a href="https://en.wikipedia.org/wiki/VP8">VP8</a> 视频编解码器的选项，以及一些实验性选项（例如 Resolution）。这会将匹配的编解码器用于音频轨道：分别是 <a href="https://en.wikipedia.org/wiki/Advanced_Audio_Coding">AAC</a> 和 <a href="https://en.wikipedia.org/wiki/Vorbis">Vorbis</a>。<br /><br />另请参阅：<a href="VideoClipImporter.SetTargetSettings.html">VideoClipImporter.SetTargetSettings</a> 和 <a href="VideoImporterTargetSettings-enableTranscoding.html">VideoImporterTargetSettings.enableTranscoding</a>。<br /><br />您可以选择忽略此转码，而是改用已知受目标系统支持的视频，同时使用外部程序更精确地控制编码过程。在使用过程中，<a href="VideoClipImporter.html">VideoClipImporter</a> 编辑器会提供指导和警告，以更好地帮助您做出正确的格式和编码选择。<br /><br />For now, vendor recommendations must be followed, and are especially constrained on older mobile platforms. For example, videos you find on the web will often require inspection and manipulations before they can be used reliably in the context of a game running on multiple devices. The following are examples of recommendations and known limitations:<br /><br /><strong>*</strong> <em>Android</em>: <a href="https://developer.android.com/guide/topics/media/media-formats.html#recommendations">Supported Media Formats</a>.  See additional notes below.<br />
+<strong>*</strong> <em>Windows</em>: <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd797815(v=vs.85).aspx">H.264 Video Decoder</a> (see Format Constraints)<br />
+<strong>*</strong> <em>iPhone 6-7</em>: <a href="http://www.apple.com/iphone/compare/">Compare iPhone Models</a> (see TV and Video)<br /><br />可用于硬件加速的本机支持的最优视频编解码器是 H.264，同时 VP8 作为可以在需要时使用的软件解码解决方案。在 Android 上，VP8 还支持使用本机库，因此也可以根据型号对硬件进行辅助。要在编码参数中查找的键值：<br /><br /><strong>*</strong> <em>Video Codec</em>: H.264 or VP8.<br />
+<strong>*</strong> <em>Resolution</em>: For example: 1280 x 720.<br />
+<strong>*</strong> <em>Profile</em>: Applicable for H.264. The profile is a set of capabilities and constraints; vendors often specify this, such as "Baseline" or "Main". See <a href="https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC#Profiles">here</a>.<br />
+<strong>*</strong> <em>Profile Level</em>: Applicable for H.264. Within a given profile, the level specifies certain performance requirements such as "Baseline 3.1". See <a href="https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC#Levels">here</a>.<br />
+<strong>*</strong> <em>Audio Codec</em>: Typically AAC (with mp4 videos using H.264) or Vorbis (with webm videos using VP8).<br />
+<strong>*</strong> <em>Audio Channels</em>: depends on platform.  For example, the Android recommendation is for stereo files, but many devices will accept 5.1.<br /><br /><strong>关于 Android 的注意事项</strong><br /><br /><strong>*</strong> Support for resolutions above 640 x 360 is not available on all devices. Runtime checks are done to verify this and failures will cause the movie to not be played.<br />
+<strong>*</strong> For Jelly Bean/MR1, movies above 1280 x 720 or with more than 2 audio tracks will not be played due to bugs in the OS libraries.<br />
+<strong>*</strong> For Lollipop and above, any resolution or number of audio channels may be attempted, but will be constrained by device capabilities.<br />
+<strong>*</strong> The Vulkan graphics API is not yet supported.<br />
+<strong>*</strong> Format compatibility issues are reported in the <code class="mono">adb logcat</code> output and are always prefixed with <code class="mono">AndroidVideoMedia</code>.<br />
+<strong>*</strong> Also pay attention to device-specific error messages located near Unity's error messages: they are not available to the engine, but often explain what the compatibility issue is.<br />
+<strong>*</strong> Playback from asset bundles is only supported for uncompressed bundles, read directly from disk.<br /><br /><strong>以下部分演示了 VideoPlayer 的一些功能：</strong></p></div><div class="subsection">
+        
+        <pre class="codeExampleCS">
+// Examples of <a href="Video.VideoPlayer.html">VideoPlayer</a> function<br /><br />using UnityEngine;<br /><br />public class Example : <a href="MonoBehaviour.html">MonoBehaviour</a>
+{
+    void Start()
+    {
+        // Will attach a <a href="Video.VideoPlayer.html">VideoPlayer</a> to the main camera.
+        <a href="GameObject.html">GameObject</a> camera = <a href="GameObject.Find.html">GameObject.Find</a>("Main <a href="Camera.html">Camera</a>");<br /><br />        // <a href="Video.VideoPlayer.html">VideoPlayer</a> automatically targets the camera backplane when it is added
+        // to a camera object, no need to change videoPlayer.targetCamera.
+        var videoPlayer = camera.AddComponent&lt;UnityEngine.Video.VideoPlayer&gt;();<br /><br />        // Play on awake defaults to true. Set it to false to avoid the url set
+        // below to auto-start playback since we're in Start().
+        videoPlayer.playOnAwake = false;<br /><br />        // By default, VideoPlayers added to a camera will use the far plane.
+        // Let's target the near plane instead.
+        videoPlayer.renderMode = UnityEngine.Video.VideoRenderMode.CameraNearPlane;<br /><br />        // This will cause our <a href="SceneManagement.Scene.html">Scene</a> to be visible through the video being played.
+        videoPlayer.targetCameraAlpha = 0.5F;<br /><br />        // Set the video to play. URL supports local absolute or relative paths.
+        // Here, using absolute.
+        videoPlayer.url = "/Users/graham/movie.mov";<br /><br />        // Skip the first 100 frames.
+        videoPlayer.frame = 100;<br /><br />        // Restart from beginning when done.
+        videoPlayer.isLooping = true;<br /><br />        // Each time we reach the end, we slow down the playback by a factor of 10.
+        videoPlayer.loopPointReached += EndReached;<br /><br />        // Start playback. This means the <a href="Video.VideoPlayer.html">VideoPlayer</a> may have to prepare (reserve
+        // resources, pre-load a few frames, etc.). To better control the delays
+        // associated with this preparation one can use videoPlayer.Prepare() along with
+        // its prepareCompleted event.
+        videoPlayer.Play();
+    }<br /><br />    void EndReached(UnityEngine.Video.VideoPlayer vp)
+    {
+        vp.playbackSpeed = vp.playbackSpeed / 10.0F;
+    }
+}
+</pre>
+      </div><div class="subsection"><p>
+        <strong>MovieTexture Migration Notes</strong>
+        <br />
+        <br />Since the VideoPlayer is fundamentally different from the legacy movie playback solution MovieTexture, we are providing a few examples to help you migrate your project using MovieTexture to the new VideoPlayer solution.<br /><br /><strong>Playing the Movie Example</strong> :<br /><br /><em>MovieTexture</em> :</p></div><div class="subsection">
+        
+        <pre class="codeExampleCS">
+using UnityEngine;<br /><br />public class PlayMovieMT : <a href="MonoBehaviour.html">MonoBehaviour</a>
+{
+    public <a href="AudioClip.html">AudioClip</a> movieAudioClip;
+    public MovieTexture movieTexture;<br /><br />    void Start()
+    {
+        var audioSource = gameObject.AddComponent&lt;<a href="AudioSource.html">AudioSource</a>&gt;();
+        audioSource.clip = movieAudioClip;
+    }<br /><br />    void <a href="Experimental.PlayerLoop.Update.html">Update</a>()
+    {
+        if (<a href="Input.GetButtonDown.html">Input.GetButtonDown</a>("Jump"))
+        {
+            var audioSource = GetComponent&lt;<a href="AudioSource.html">AudioSource</a>&gt;();
+            GetComponent&lt;<a href="Renderer.html">Renderer</a>&gt;().material.mainTexture = movieTexture;<br /><br />            if (movieTexture.isPlaying)
+            {
+                movieTexture.Pause();
+                audioSource.Pause();
+            }
+            else
+            {
+                movieTexture.Play();
+                audioSource.Play();
+            }
+        }
+    }
+}
+</pre>
+      </div><div class="subsection"><p>
+        <em>VideoPlayer</em> :</p></div><div class="subsection">
+        
+        <pre class="codeExampleCS">
+using UnityEngine;<br /><br />public class PlayMovieVP : <a href="MonoBehaviour.html">MonoBehaviour</a>
+{
+    public UnityEngine.Video.VideoClip videoClip;<br /><br />    void Start()
+    {
+        var videoPlayer = gameObject.AddComponent&lt;UnityEngine.Video.VideoPlayer&gt;();
+        var audioSource = gameObject.AddComponent&lt;<a href="AudioSource.html">AudioSource</a>&gt;();<br /><br />        videoPlayer.playOnAwake = false;
+        videoPlayer.clip = videoClip;
+        videoPlayer.renderMode = UnityEngine.Video.VideoRenderMode.MaterialOverride;
+        videoPlayer.targetMaterialRenderer = GetComponent&lt;<a href="Renderer.html">Renderer</a>&gt;();
+        videoPlayer.targetMaterialProperty = "_MainTex";
+        videoPlayer.audioOutputMode = UnityEngine.Video.VideoAudioOutputMode.AudioSource;
+        videoPlayer.SetTargetAudioSource(0, audioSource);
+    }<br /><br />    void <a href="Experimental.PlayerLoop.Update.html">Update</a>()
+    {
+        if (<a href="Input.GetButtonDown.html">Input.GetButtonDown</a>("Jump"))
+        {
+            var vp = GetComponent&lt;UnityEngine.Video.VideoPlayer&gt;();<br /><br />            if (vp.isPlaying)
+            {
+                vp.Pause();
+            }
+            else
+            {
+                vp.Play();
+            }
+        }
+    }
+}
+</pre>
+      </div><div class="subsection"><p>
+        <strong>Downloading a Movie Example</strong> :<br /><br /><em>MovieTexture</em> :</p></div><div class="subsection">
+        
+        <pre class="codeExampleCS">
+using UnityEngine;<br /><br />public class DownloadMovieMT : <a href="MonoBehaviour.html">MonoBehaviour</a>
+{
+    void Start()
+    {
+        StartCoroutine(GetMovieTexture());
+    }<br /><br />    IEnumerator GetMovieTexture()
+    {
+        using (var uwr = UnityWebRequestMultimedia.GetMovieTexture("http://myserver.com/mymovie.ogv"))
+        {
+            yield return uwr.SendWebRequest();
+            if (uwr.isNetworkError || uwr.isHttpError)
+            {
+                <a href="Debug.LogError.html">Debug.LogError</a>(uwr.error);
+                yield break;
+            }<br /><br />            MovieTexture movie = DownloadHandlerMovieTexture.GetContent(uwr);<br /><br />            GetComponent&lt;<a href="Renderer.html">Renderer</a>&gt;().material.mainTexture = movie;
+            movie.loop = true;
+            movie.Play();
+        }
+    }
+}
+</pre>
+      </div><div class="subsection"><p>
+        <em>VideoPlayer</em> :</p></div><div class="subsection">
+        
+        <pre class="codeExampleCS">
+using UnityEngine;<br /><br />public class DownloadMovieVP : <a href="MonoBehaviour.html">MonoBehaviour</a>
+{
+    void Start()
+    {
+        var vp = gameObject.AddComponent&lt;UnityEngine.Video.VideoPlayer&gt;();
+        vp.url = "http://myserver.com/mymovie.mp4";<br /><br />        vp.isLooping = true;
+        vp.renderMode = UnityEngine.Video.VideoRenderMode.MaterialOverride;
+        vp.targetMaterialRenderer = GetComponent&lt;<a href="Renderer.html">Renderer</a>&gt;();
+        vp.targetMaterialProperty = "_MainTex";<br /><br />        vp.Play();
+    }
+}
+</pre>
+      </div><div class="subsection"><h2>Static Variables</h2><table class="list">
+      <tr><td class="lbl"><a href="Video.VideoPlayer-controlledAudioTrackMaxCount.html">controlledAudioTrackMaxCount</a></td><td class="desc">Maximum number of audio tracks that can be controlled. (Read Only)</td></tr>
+    </table></div><div class="subsection"><h2>Variables</h2><table class="list">
+      <tr><td class="lbl"><a href="Video.VideoPlayer-aspectRatio.html">aspectRatio</a></td><td class="desc">定义如何拉伸视频内容以填充目标区域。</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-audioOutputMode.html">audioOutputMode</a></td><td class="desc">嵌入在视频中的音频的目标。</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-audioTrackCount.html">audioTrackCount</a></td><td class="desc">Number of audio tracks found in the data source currently configured. (Read Only)</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-canSetDirectAudioVolume.html">canSetDirectAudioVolume</a></td><td class="desc">当前平台和视频格式是否支持直接输出音量控制。（只读）</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-canSetPlaybackSpeed.html">canSetPlaybackSpeed</a></td><td class="desc">播放速度是否可以更改。（只读）</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-canSetSkipOnDrop.html">canSetSkipOnDrop</a></td><td class="desc">Whether frame-skipping to maintain synchronization can be controlled. (Read Only)</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-canSetTime.html">canSetTime</a></td><td class="desc">是否可以使用 time 或 timeFrames 属性更改当前时间。（只读）</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-canSetTimeSource.html">canSetTimeSource</a></td><td class="desc">Whether the time source followed by the VideoPlayer can be changed. (Read Only)</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-canStep.html">canStep</a></td><td class="desc">Returns true if the VideoPlayer can step forward through the video content. (Read Only)</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-clip.html">clip</a></td><td class="desc">The clip being played by the VideoPlayer.</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-clockTime.html">clockTime</a></td><td class="desc">The clock time that the VideoPlayer follows to schedule its samples. The clock time is expressed in seconds. (Read Only)</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-controlledAudioTrackCount.html">controlledAudioTrackCount</a></td><td class="desc">Number of audio tracks that this VideoPlayer will take control of.</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-externalReferenceTime.html">externalReferenceTime</a></td><td class="desc">
+          VideoPlayer 用于纠正其偏差的外部时钟的参考时间。</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-frame.html">frame</a></td><td class="desc">The frame index of the currently available frame in VideoPlayer.texture.</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-frameCount.html">frameCount</a></td><td class="desc">Number of frames in the current video content. (Read Only)</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-frameRate.html">frameRate</a></td><td class="desc">The frame rate of the clip or URL in frames/second. (Read Only)</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-height.html">height</a></td><td class="desc">The height of the images in the VideoClip, or URL, in pixels. (Read Only)</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-isLooping.html">isLooping</a></td><td class="desc">Determines whether the VideoPlayer restarts from the beginning when it reaches the end of the clip.</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-isPaused.html">isPaused</a></td><td class="desc">Whether playback is paused. (Read Only)</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-isPlaying.html">isPlaying</a></td><td class="desc">是否正在播放内容。（只读）</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-isPrepared.html">isPrepared</a></td><td class="desc">Whether the VideoPlayer has successfully prepared the content to be played. (Read Only)</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-length.html">length</a></td><td class="desc">The length of the VideoClip, or the URL, in seconds. (Read Only)</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-pixelAspectRatioDenominator.html">pixelAspectRatioDenominator</a></td><td class="desc">Denominator of the pixel aspect ratio (num:den) for the VideoClip or the URL. (Read Only)</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-pixelAspectRatioNumerator.html">pixelAspectRatioNumerator</a></td><td class="desc">Numerator of the pixel aspect ratio (num:den) for the VideoClip or the URL. (Read Only)</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-playbackSpeed.html">playbackSpeed</a></td><td class="desc">基本播放速率的增加倍数。</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-playOnAwake.html">playOnAwake</a></td><td class="desc">内容是否会在组件被唤醒后立即开始播放。</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-renderMode.html">renderMode</a></td><td class="desc">将绘制视频内容的位置。</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-sendFrameReadyEvents.html">sendFrameReadyEvents</a></td><td class="desc">启用 frameReady 事件。</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-skipOnDrop.html">skipOnDrop</a></td><td class="desc">Whether the VideoPlayer is allowed to skip frames to catch up with current time.</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-source.html">source</a></td><td class="desc">The source that the VideoPlayer uses for playback.</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-targetCamera.html">targetCamera</a></td><td class="desc">
+          Camera component to draw to when VideoPlayer.renderMode is set to either VideoRenderMode.CameraFarPlane or VideoRenderMode.CameraNearPlane.</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-targetCamera3DLayout.html">targetCamera3DLayout</a></td><td class="desc">源视频媒体中包含的 3D 内容的类型。</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-targetCameraAlpha.html">targetCameraAlpha</a></td><td class="desc">目标摄像机平面视频的整体透明度级别。</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-targetMaterialProperty.html">targetMaterialProperty</a></td><td class="desc">
+          Material texture property which is targeted when VideoPlayer.renderMode is set to Video.VideoTarget.MaterialOverride.</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-targetMaterialRenderer.html">targetMaterialRenderer</a></td><td class="desc">在 VideoPlayer.renderMode 设置为 Video.VideoTarget.MaterialOverride 时被设为目标的 Renderer</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-targetTexture.html">targetTexture</a></td><td class="desc">当 VideoPlayer.renderMode 设置为 Video.VideoTarget.RenderTexture 时，要在其中绘制资源的 RenderTexture。</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-texture.html">texture</a></td><td class="desc">Internal texture in which video content is placed. (Read Only)</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-time.html">time</a></td><td class="desc">The presentation time of the currently available frame in VideoPlayer.texture.</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-timeReference.html">timeReference</a></td><td class="desc">
+          VideoPlayer 对其进行观测以发现和纠正偏差的时钟。</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-timeSource.html">timeSource</a></td><td class="desc">[NOT YET IMPLEMENTED] The source used used by the VideoPlayer to derive its current time.</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-url.html">url</a></td><td class="desc">The file or HTTP URL that the VideoPlayer reads content from.</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-waitForFirstFrame.html">waitForFirstFrame</a></td><td class="desc">Determines whether the VideoPlayer will wait for the first frame to be loaded into the texture before starting playback when VideoPlayer.playOnAwake is on.</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-width.html">width</a></td><td class="desc">The width of the images in the VideoClip, or URL, in pixels. (Read Only)</td></tr>
+    </table></div><div class="subsection"><h2>Public Functions</h2><table class="list">
+      <tr><td class="lbl"><a href="Video.VideoPlayer.EnableAudioTrack.html">EnableAudioTrack</a></td><td class="desc">Enable/disable audio track decoding. Only effective when the VideoPlayer is not currently playing.</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer.GetAudioChannelCount.html">GetAudioChannelCount</a></td><td class="desc">指定音频轨道中的音频声道数。</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer.GetAudioLanguageCode.html">GetAudioLanguageCode</a></td><td class="desc">返回指定轨道的语言代码（如果有）。</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer.GetAudioSampleRate.html">GetAudioSampleRate</a></td><td class="desc">Gets the audio track sampling rate in Hertz.</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer.GetDirectAudioMute.html">GetDirectAudioMute</a></td><td class="desc">Gets the direct-output audio mute status for the specified track.</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer.GetDirectAudioVolume.html">GetDirectAudioVolume</a></td><td class="desc">返回指定轨道的直接输出音量。</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer.GetTargetAudioSource.html">GetTargetAudioSource</a></td><td class="desc">获取当 VideoPlayer.audioOutputMode 设置为 VideoAudioOutputMode.AudioSource 时将接收指定轨道的音频样本的 AudioSource。</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer.IsAudioTrackEnabled.html">IsAudioTrackEnabled</a></td><td class="desc">Whether decoding for the specified audio track is enabled. See VideoPlayer.EnableAudioTrack for distinction with mute.</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer.Pause.html">Pause</a></td><td class="desc">暂停播放并保持当前时间不变。</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer.Play.html">Play</a></td><td class="desc">开始播放。</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer.Prepare.html">Prepare</a></td><td class="desc">Initiates playback engine preparation.</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer.SetDirectAudioMute.html">SetDirectAudioMute</a></td><td class="desc">设置指定轨道的直接输出音频静音状态。</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer.SetDirectAudioVolume.html">SetDirectAudioVolume</a></td><td class="desc">设置指定轨道的直接输出音频音量。</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer.SetTargetAudioSource.html">SetTargetAudioSource</a></td><td class="desc">设置当使用 VideoPlayer.audioOutputMode 选择此音频目标时将接收指定轨道的音频样本的 AudioSource。</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer.StepForward.html">StepForward</a></td><td class="desc">立即将当前时间向前推进一帧。</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer.Stop.html">Stop</a></td><td class="desc">Stops the playback and sets the current time to 0.</td></tr>
+    </table></div><div class="subsection"><h2>Events</h2><table class="list">
+      <tr><td class="lbl"><a href="Video.VideoPlayer-clockResyncOccurred.html">clockResyncOccurred</a></td><td class="desc">Invoked when the VideoPlayer clock is synced back to its VideoTimeReference.</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-errorReceived.html">errorReceived</a></td><td class="desc">通过此回调报告 HTTP 连接问题等错误。</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-frameDropped.html">frameDropped</a></td><td class="desc">[尚未实现] 当视频解码器在播放期间没有按照时间源生成帧时调用。</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-frameReady.html">frameReady</a></td><td class="desc">当新帧准备就绪时调用。</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-loopPointReached.html">loopPointReached</a></td><td class="desc">Invoked when the VideoPlayer reaches the end of the content to play.</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-prepareCompleted.html">prepareCompleted</a></td><td class="desc">Invoked when the VideoPlayer preparation is complete.</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-seekCompleted.html">seekCompleted</a></td><td class="desc">在搜寻操作完成后调用。</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer-started.html">started</a></td><td class="desc">在调用 Play 后立即调用。</td></tr>
+    </table></div><div class="subsection"><h2>Delegates</h2><table class="list">
+      <tr><td class="lbl"><a href="Video.VideoPlayer.ErrorEventHandler.html">ErrorEventHandler</a></td><td class="desc">Delegate type for VideoPlayer events that contain an error message.</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer.EventHandler.html">EventHandler</a></td><td class="desc">Delegate type for all parameterless events emitted by VideoPlayers.</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer.FrameReadyEventHandler.html">FrameReadyEventHandler</a></td><td class="desc">Delegate type for VideoPlayer events that carry a frame number.</td></tr>
+      <tr><td class="lbl"><a href="Video.VideoPlayer.TimeEventHandler.html">TimeEventHandler</a></td><td class="desc">带有时间位置的 VideoPlayer 事件的委托类型。</td></tr>
+    </table></div><div class="subsection"><h2>Inherited members</h2>
+      
+      <div class="subsection"><h2>Variables</h2><table class="list">
+        <tr><td class="lbl"><a href="Behaviour-enabled.html">enabled</a></td><td class="desc">启用的 Behaviour 可更新，禁用的 Behaviour 不可更新。</td></tr>
+        <tr><td class="lbl"><a href="Behaviour-isActiveAndEnabled.html">isActiveAndEnabled</a></td><td class="desc">Has the Behaviour had active and enabled called?</td></tr>
+        <tr><td class="lbl"><a href="Component-gameObject.html">gameObject</a></td><td class="desc">此组件附加到的游戏对象。始终将组件附加到游戏对象。</td></tr>
+        <tr><td class="lbl"><a href="Component-tag.html">tag</a></td><td class="desc">此游戏对象的标签。</td></tr>
+        <tr><td class="lbl"><a href="Component-transform.html">transform</a></td><td class="desc">附加到此 GameObject 的 Transform。</td></tr>
+        <tr><td class="lbl"><a href="Object-hideFlags.html">hideFlags</a></td><td class="desc">Should the object be hidden, saved with the Scene or modifiable by the user?</td></tr>
+        <tr><td class="lbl"><a href="Object-name.html">name</a></td><td class="desc">对象的名称。</td></tr>
+      </table></div>
+      
+      
+      
+      <div class="subsection"><h2>Public Functions</h2><table class="list">
+        <tr><td class="lbl"><a href="Component.BroadcastMessage.html">BroadcastMessage</a></td><td class="desc">调用此游戏对象或其任何子项中的每个 MonoBehaviour 上名为 methodName 的方法。</td></tr>
+        <tr><td class="lbl"><a href="Component.CompareTag.html">CompareTag</a></td><td class="desc">此游戏对象是否使用 tag 进行了标记？</td></tr>
+        <tr><td class="lbl"><a href="Component.GetComponent.html">GetComponent</a></td><td class="desc">如果游戏对象附加了类型为 type 的组件，则将其返回，否则返回 null。</td></tr>
+        <tr><td class="lbl"><a href="Component.GetComponentInChildren.html">GetComponentInChildren</a></td><td class="desc">使用深度首次搜索返回 GameObject 或其任何子项中类型为 type 的组件。</td></tr>
+        <tr><td class="lbl"><a href="Component.GetComponentInParent.html">GetComponentInParent</a></td><td class="desc">返回 GameObject 或其任何父项中类型为 type 的组件。</td></tr>
+        <tr><td class="lbl"><a href="Component.GetComponents.html">GetComponents</a></td><td class="desc">返回 GameObject 中类型为 type 的所有组件。</td></tr>
+        <tr><td class="lbl"><a href="Component.GetComponentsInChildren.html">GetComponentsInChildren</a></td><td class="desc">返回 GameObject 或其任何子项中类型为 type 的所有组件。</td></tr>
+        <tr><td class="lbl"><a href="Component.GetComponentsInParent.html">GetComponentsInParent</a></td><td class="desc">返回 GameObject 或其任何父项中类型为 type 的所有组件。</td></tr>
+        <tr><td class="lbl"><a href="Component.SendMessage.html">SendMessage</a></td><td class="desc">调用此游戏对象中的每个 MonoBehaviour 上名为 methodName 的方法。</td></tr>
+        <tr><td class="lbl"><a href="Component.SendMessageUpwards.html">SendMessageUpwards</a></td><td class="desc">调用此游戏对象中的每个 MonoBehaviour 上或此行为的每个父级上名为 methodName 的方法。</td></tr>
+        <tr><td class="lbl"><a href="Object.GetInstanceID.html">GetInstanceID</a></td><td class="desc">返回对象的实例 ID。</td></tr>
+        <tr><td class="lbl"><a href="Object.ToString.html">ToString</a></td><td class="desc">返回 GameObject 的名称。</td></tr>
+      </table></div>
+      
+      <div class="subsection"><h2>Static Functions</h2><table class="list">
+        <tr><td class="lbl"><a href="Object.Destroy.html">Destroy</a></td><td class="desc">删除 GameObject、组件或资源。</td></tr>
+        <tr><td class="lbl"><a href="Object.DestroyImmediate.html">DestroyImmediate</a></td><td class="desc">立即销毁对象 /obj/。强烈建议您改用 Destroy。</td></tr>
+        <tr><td class="lbl"><a href="Object.DontDestroyOnLoad.html">DontDestroyOnLoad</a></td><td class="desc">Do not destroy the target Object when loading a new Scene.</td></tr>
+        <tr><td class="lbl"><a href="Object.FindObjectOfType.html">FindObjectOfType</a></td><td class="desc">返回第一个类型为 type 的已加载的激活对象。</td></tr>
+        <tr><td class="lbl"><a href="Object.FindObjectsOfType.html">FindObjectsOfType</a></td><td class="desc">返回所有类型为 type 的已加载的激活对象的列表。</td></tr>
+        <tr><td class="lbl"><a href="Object.Instantiate.html">Instantiate</a></td><td class="desc">克隆 original 对象并返回克隆对象。</td></tr>
+      </table></div>
+      <div class="subsection"><h2>Operators</h2><table class="list">
+        <tr><td class="lbl"><a href="Object-operator_Object.html">bool</a></td><td class="desc">该对象是否存在？</td></tr>
+        <tr><td class="lbl"><a href="Object-operator_ne.html">operator !=</a></td><td class="desc">比较两个对象是否引用不同的对象。</td></tr>
+        <tr><td class="lbl"><a href="Object-operator_eq.html">operator ==</a></td><td class="desc">比较两个对象引用，判断它们是否引用同一个对象。</td></tr>
+      </table></div>
+      
+      
+      
+    </div></div><div class="footer-wrapper"><div class="footer clear"><div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div><div class="menu"><a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a></div></div><div></div></div></div></div></div></div></body></html>

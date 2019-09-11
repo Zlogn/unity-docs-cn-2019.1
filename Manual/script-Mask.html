@@ -1,0 +1,231 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="遮罩 (Mask) - Unity Manual">
+<title>遮罩 (Mask) - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/MaskCtrlExample.png">
+<meta name="description" content="__遮罩__不是可见的 UI 控件，而是一种修改控件子元素外观的方法。遮罩将子元素限制（即&amp;#8220;掩盖&amp;#8221;）为父元素的形状。因此，如果子项比父项大，则子项仅包含在父项以内的部分才可见。">
+<meta property="og:description" content="__遮罩__不是可见的 UI 控件，而是一种修改控件子元素外观的方法。遮罩将子元素限制（即&amp;#8220;掩盖&amp;#8221;）为父元素的形状。因此，如果子项比父项大，则子项仅包含在父项以内的部分才可见。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'script-Mask';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/script-Mask.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/script-Mask.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/script-Mask.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/script-Mask.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/script-Mask.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/script-Mask.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/script-Mask.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/script-Mask.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/script-Mask.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/script-Mask.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/script-Mask.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/script-Mask.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/script-Mask.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/script-Mask.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/script-Mask.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/script-Mask.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/script-Mask.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/script-Mask.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/script-Mask.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/script-Mask.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/script-Mask.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/script-Mask.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/script-Mask.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/script-Mask.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UIToolkits.html">UI</a></li>
+<li><a href="UISystem.html">Unity UI: Unity User Interface</a></li>
+<li><a href="UIReference.html">UI 参考</a></li>
+<li><a href="comp-UIVisual.html">可视组件</a></li>
+<li>遮罩 (Mask)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="script-RawImage.html"></a></span><div class="tip">原始图像 (Raw Image)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="script-RectMask2D.html"></a></span><div class="tip">RectMask2D</div>
+</div>
+</div></div>
+<h1>遮罩 (Mask)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>__遮罩__不是可见的 UI 控件，而是一种修改控件子元素外观的方法。遮罩将子元素限制（即“掩盖”）为父元素的形状。因此，如果子项比父项大，则子项仅包含在父项以内的部分才可见。</p>
+
+<figure>
+<img src="../uploads/Main/MaskCtrlExample.png" alt="由面板掩盖的大型图像的部分（滚动条是单独的控件）">
+<figcaption>由面板掩盖的大型图像的部分（滚动条是单独的控件）</figcaption>
+</figure>
+
+<h2>属性</h2>
+
+<figure>
+<img src="../uploads/Main/UI_MaskInspector.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Show Graphic</strong></td>
+	<td style="text-align:left;">是否应在子对象上使用 Alpha 绘制遮罩（父）对象的图形？</td>
+</tr>
+</tbody>
+</table>
+
+<h2>描述</h2>
+
+<p>遮罩的常见用法是使用面板 (Panel) 对象（菜单：__GameObject &gt; Create UI &gt; Panel__）作为“框架”显示大型图像的一小部分。为实现此目的，可先将图像设置为面板对象的子项。应调整图像的位置，使应该可见的区域直接位于面板区域的后面。</p>
+
+<figure>
+<img src="../uploads/Main/MaskDisabled.svg" alt="面板区域以红色显示，子项图像位于后面">
+<figcaption>面板区域以红色显示，子项图像位于后面</figcaption>
+</figure>
+
+<p>然后，将一个遮罩组件添加到面板。面板外面的子图像区域将变得不可见，因为这些区域被面板的形状所掩盖。</p>
+
+<figure>
+<img src="../uploads/Main/MaskEnabled.svg" alt="掩盖的区域显得暗淡，但实际是不可见的">
+<figcaption>掩盖的区域显得暗淡，但实际是不可见的</figcaption>
+</figure>
+
+<p>如果图像随后移动，则只有面板暴露的部分可见。可通过<a href="script-Scrollbar.html">滚动条</a>来控制移动，从而创建可滚动的地图查看器之类的效果。</p>
+
+<h2>实现</h2>
+
+<p>应使用 GPU 的模板缓冲区来实现遮罩。</p>
+
+<p><em>第一个遮罩元素将 1 写入模板缓冲区。
+</em>遮罩下面的所有元素在渲染时进行检查，仅渲染到模板缓冲区中有 1 的区域。
+*嵌套的遮罩会将增量位掩码写入缓冲区，这意味着可渲染的子项需要具有要渲染的逻辑和模板值。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="script-RawImage.html"></a></span><div class="tip">原始图像 (Raw Image)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="script-RectMask2D.html"></a></span><div class="tip">RectMask2D</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

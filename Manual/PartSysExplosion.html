@@ -1,0 +1,263 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="简单爆炸 - Unity Manual">
+<title>简单爆炸 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/PartSysExpScreenshot.jpg">
+<meta name="description" content="可使用粒子系统来创建令人信服的爆炸效果，但动态性可能比最初看起来要复杂一些。爆炸的核心就是向外爆发的大量粒子，可以应用一些简单的修改使效果显得更真实。">
+<meta property="og:description" content="可使用粒子系统来创建令人信服的爆炸效果，但动态性可能比最初看起来要复杂一些。爆炸的核心就是向外爆发的大量粒子，可以应用一些简单的修改使效果显得更真实。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'PartSysExplosion';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PartSysExplosion.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PartSysExplosion.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PartSysExplosion.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PartSysExplosion.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PartSysExplosion.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PartSysExplosion.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PartSysExplosion.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PartSysExplosion.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PartSysExplosion.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PartSysExplosion.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/PartSysExplosion.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/PartSysExplosion.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/PartSysExplosion.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/PartSysExplosion.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PartSysExplosion.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PartSysExplosion.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PartSysExplosion.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PartSysExplosion.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PartSysExplosion.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PartSysExplosion.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PartSysExplosion.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PartSysExplosion.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PartSysExplosion.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PartSysExplosion.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="ParticleSystems.html">粒子系统</a></li>
+<li><a href="ParticleSystemHowTo.html">粒子系统操作方法</a></li>
+<li>简单爆炸</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ParticleSystemHowTo.html"></a></span><div class="tip">粒子系统操作方法</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PartSysExhaust.html"></a></span><div class="tip">车辆的排气烟雾</div>
+</div>
+</div></div>
+<h1>简单爆炸</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>可使用粒子系统来创建令人信服的爆炸效果，但动态性可能比最初看起来要复杂一些。爆炸的核心就是向外爆发的大量粒子，可以应用一些简单的修改使效果显得更真实。</p>
+
+<figure>
+<img src="../uploads/Main/PartSysExpScreenshot.jpg" alt="正在发生的粒子系统爆炸">
+<figcaption>正在发生的粒子系统爆炸</figcaption>
+</figure>
+
+<h2>粒子的时间轴</h2>
+
+<p>一次简单爆炸会产生在各个方向迅速向外扩展的一团火焰。最初爆发有很多能量，因此温度非常高（即亮度高）并且移动得非常快。此能量迅速消散，导致火焰膨胀速度减慢并且温度降低（即亮度降低）。最后，随着所有燃料燃尽，火焰将消失并很快完全消失。</p>
+
+<p>爆炸粒子的生命周期通常较短，可以在该生命周期内改变几种不同的属性来模拟效果。粒子将以非常快的速度开始移动，但随着从爆炸中心移开，其速度应该会大大降低。此外，颜色应该从最开始的明亮逐渐变暗，并最终淡化为透明状态。最后，在粒子的生命周期内逐渐减小其大小将产生火焰随着燃料耗尽而消散的效果。</p>
+
+<h2>实现</h2>
+
+<p>从默认粒子系统对象（菜单：__GameObject &gt; Effects &gt; Particle System__）开始，选择 <em>Shape</em> 模块，并将发射器形状设置为小型_球体 (Sphere)<em>，比如半径约为 0.5 个单位。标准资源中的粒子包括一种名为 <strong>ParticleFireball</strong> 的材质，这种材质非常适合用于爆炸（菜单：__Assets &gt; Import Package &gt; ParticleSystems__）。可以使用 </em>Renderer_ 模块为系统设置此材质。
+在打开 <em>Renderer</em> 后，还应禁用 <em>Cast Shadows</em> 和 _Receive Shadows_，因为爆炸火焰应该发出光而不是接受光。</p>
+
+<p>在此阶段，系统看起来像是从中心点抛出的许多小火球。当然，爆炸应该同时产生大量粒子爆发的效果。在 <em>Emission</em> 模块中，可将 <em>Rate</em> 值设置为零，并在时间为零的位置添加一个粒子 <em>Burst</em> 状态。爆发中的粒子数量取决于需要的爆炸规模和强度，但一般在开始时使用大约五十个粒子是一种不错的选择。设置好爆发后，系统现在开始看起来很像爆炸了，但速度相当缓慢，火焰似乎长时间停留不动。在粒子系统模块（名称与游戏对象相同，例如“Explosion”）中，请将系统的 <em>Duration</em> 和粒子的 <em>Start Lifetime</em> 均设置为两秒。</p>
+
+<p>此外还可以使用 <em>Size Over Lifetime</em> 模块来创建随着燃料耗尽而变化的火焰效果。应使用“斜降”(ramp down) 预设来设置大小曲线（即，大小从 100% 开始并减小到零）。要使火焰变暗和淡化，请启用 <em>Color Over Lifetime</em> 模块，并将渐变设置为在左侧以白色开始，然后在右侧以黑色结束。<em>Fire Add</em> 材质使用附加着色器进行渲染，因此颜色属性的暗度也控制着粒子的透明度；随着颜色逐渐变黑，火焰将变得完全透明。而且，附加材质允许粒子的亮度在粒子彼此重叠产生时“加”在一起。当粒子全部靠近到一起时，这种功能有助于进一步增强在爆炸开始时出现的明亮闪光效果。</p>
+
+<p>到目前为止，爆炸初步成形，但看起来好像是在太空中发生爆炸。粒子首先被发射出来，然后在消失之前以恒定速度长距离行进。如果游戏设定是在太空中，那么这种效果是很贴切的。但是，在大气中发生的爆炸会被周围的空气减缓和减弱。启用 <em>Limit Velocity Over Lifetime</em> 模块，然后将 <em>Speed</em> 设置为大约 3.0 并将 <em>Dampen</em> 分数设置为大约 0.4，这样应该会看到爆炸发生后逐渐失去一些能量。</p>
+
+<p>最后要注意的是，当粒子从爆炸中心移开时，它们各自的形状变得更容易识别。也就是说，此时会看到所有粒子具有相同的大小和相同旋转，感觉很明显每个粒子重复使用了相同的图形。为了避免这种情况，一种简单方法是在粒子生成时为粒子的大小和旋转添加一些随机变化。在检视面板顶部的粒子系统模块中，单击 <em>Start Size</em> 和 <em>Start Rotation</em> 属性右侧的小箭头，并将这两者均设置为 <em>Random Between Two Constants</em>。对于旋转，请将两个值设置为 0 和 360（即完全随机旋转）。对于大小，请将值设置为 0.5 和 1.5 以便呈现一些变化，而不会有太多巨大或微小粒子的风险。现在将会看到，粒子图形的重复问题现在已经不显示。</p>
+
+<h2>用途</h2>
+
+<p>在测试过程中，开启 <em>Looping</em> 属性很有用，这样可以反复看到爆炸，但在已完成的游戏中，应关闭该属性，使爆炸只发生一次。为有可能爆炸的对象（例如油箱）设计爆炸时，需要将粒子系统组件添加到该对象并禁用 <em>Play On Awake</em> 属性。然后，可根据需要从脚本中启用爆炸。</p>
+
+<pre><code>    void Explode() {
+            var exp = GetComponent&lt;ParticleSystem&gt;();
+            exp.Play();
+            Destroy(gameObject, exp.duration);
+        }
+</code></pre>
+
+<p>在其他一些情况下，爆炸发生在撞击点。如果爆炸来自对象（例如手榴弹），则可在延迟一段时间后或在与目标接触时调用上述 <code>Explode</code> 函数。</p>
+
+<pre><code>    // 手榴弹经过一段延迟时间后爆炸。
+        public float fuseTime;
+
+        void Start() {
+            Invoke("Explode", fuseTime);
+        }
+
+
+
+        // 手榴弹在撞击时爆炸。
+        void OnCollisionEnter(Collision coll) {
+            Explode();
+        }
+</code></pre>
+
+<p>如果爆炸来自实际上并未在游戏中表示出来的对象（例如，飞行速度太快而无法看到的飞弹），可在适当的位置实例化爆炸。例如，可以确定<a href="../ScriptReference/Physics.Raycast.html">射线投射</a>的接触点。</p>
+
+<pre><code>    // 在爆炸对象上。
+        void Start() {
+            var exp = GetComponent&lt;ParticleSystem&gt;();
+            exp.Play();
+            Destroy(gameObject, exp.duration);
+        }
+
+    
+        //可能的飞弹脚本。
+        public GameObject explosionPrefab;
+
+        void Update() {
+            RaycastHit hit;
+
+            if (Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out hit)) {
+                Instantiate (explosionPrefab, hit.point, Quaternion.identity);
+            }
+        }
+</code></pre>
+
+<h2>思路拓展</h2>
+
+<p>此处介绍的爆炸是非常基本的，但可对其进行各方面的修改，从而在游戏中获得所需的确切效果。</p>
+
+<p>使用的粒子图形将在很大程度上影响玩家对爆炸的“解读”。出现大量可独立识别的小型火焰表明抛出了燃烧碎片。不完全分离的较大粒子看起来更像是被破坏的油箱激发的火球。通常，需要一起更改多个属性才能达到效果。例如，火球会在消失之前持续更长时间并且膨胀更少，而剧烈的爆发可能会使燃烧碎片散开相当远的距离。</p>
+
+<p>此处一些属性设置为随机值，但是其他许多属性有 <em>Random Between Two Constants/Curves</em> 选项，因此可通过各种方式添加变化。改变大小和旋转有助于避免最明显的粒子重复效果，但也可以考虑在 <em>Start Delay</em>、<em>Start Lifetime</em> 和 <em>Start Speed</em> 属性中添加一些随机性。少量的变化有助于使爆炸看起来更像是一种“自然”和不可预测的效果，而非受控的机械过程。较大的变化表明是“脏”爆炸。例如，改变 <em>Start Delay</em> 将产生不再剧烈而爆发速度更慢的爆炸，比如可能是因为车辆中的油箱被单独点燃。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–09–19 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 Unity 4.6 中更改了 GameObject 菜单</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ParticleSystemHowTo.html"></a></span><div class="tip">粒子系统操作方法</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PartSysExhaust.html"></a></span><div class="tip">车辆的排气烟雾</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

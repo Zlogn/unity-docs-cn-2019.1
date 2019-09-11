@@ -1,0 +1,290 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="概念和混音器 (AudioMixer) 的概述 - Unity Manual">
+<title>概念和混音器 (AudioMixer) 的概述 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/AudioMixerView.jpg">
+<meta name="description" content="混音器是一种可由音频源 (AudioSource) 引用的资源，能够对通过音频源生成的音频信号进行更复杂的线路规划和混音。这一类混音是通过用户在资源内部构造的音频组层级视图来完成的。">
+<meta property="og:description" content="混音器是一种可由音频源 (AudioSource) 引用的资源，能够对通过音频源生成的音频信号进行更复杂的线路规划和混音。这一类混音是通过用户在资源内部构造的音频组层级视图来完成的。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'AudioMixerOverview';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AudioMixerOverview.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AudioMixerOverview.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AudioMixerOverview.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AudioMixerOverview.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AudioMixerOverview.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AudioMixerOverview.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AudioMixerOverview.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AudioMixerOverview.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AudioMixerOverview.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AudioMixerOverview.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/AudioMixerOverview.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/AudioMixerOverview.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/AudioMixerOverview.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/AudioMixerOverview.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AudioMixerOverview.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AudioMixerOverview.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AudioMixerOverview.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AudioMixerOverview.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AudioMixerOverview.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AudioMixerOverview.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AudioMixerOverview.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AudioMixerOverview.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AudioMixerOverview.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AudioMixerOverview.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Audio.html">音频</a></li>
+<li><a href="AudioMixer.html">混音器</a></li>
+<li>概念和混音器 (AudioMixer) 的概述</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AudioMixer.html"></a></span><div class="tip">混音器</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AudioMixerSpecifics.html"></a></span><div class="tip">AudioMixer 窗口上的具体内容</div>
+</div>
+</div></div>
+<h1>概念和混音器 (AudioMixer) 的概述</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>混音器是一种可由音频源 (AudioSource) 引用的资源，能够对通过音频源生成的音频信号进行更复杂的线路规划和混音。这一类混音是通过用户在资源内部构造的音频组层级视图来完成的。</p>
+
+<p>DSP 效果和其他音频母带制作概念可应用于音频信号，因为音频信号是从音频源路由到音频监听器 (AudioListener)。</p>
+
+<h2>混音器视图</h2>
+
+<figure>
+<img src="../uploads/Main/AudioMixerView.jpg" alt="">
+</figure>
+
+<p>1.资源 - 包含所有音频组 (AudioGroup) 和作为子资源的音频快照 (AudioSnapshot)。
+1.Hierarchy 视图 - 包含混音器中音频组的整个混音层级结构。
+1.混音器视图 - 此处列出混音器缓存的可见性设置。每个视图仅显示主混音器窗口中整个层级视图的一个子集。
+1.快照 - 这是混音器资源中所有音频快照的列表。快照捕获了混音器中所有参数设置的状态，并且可以在运行时切换。
+1.输出混音器 - 可将混音器混合到其他混音器的音频组。此属性字段可用于定义要将此混音器信号路由到的输出音频组。
+1.音频组条带视图 - 显示音频组的概述，包括当前 VU 级别、衰减（音量）设置、静音 (Mute)、独奏 (Solo) 和绕过效果 (Effect Bypass) 设置以及音频组 DSP 效果列表。
+1.Edit In Play Mode - 这是一个开关，播放模式下可以编辑混音器，禁止编辑时可在游戏运行时控制混音器的状态。
+1.Exposed Parameters - 显示暴露的参数（混音器中的任何参数都可以通过字符串名称暴露给脚本）及其对应字符串名称的列表。</p>
+
+<h2>混音器检视面板</h2>
+
+<figure>
+<img src="../uploads/Main/AudioMixerInspector.png" alt="">
+</figure>
+
+<p>1.所有音频组顶部都会显示音高 (Pitch) 和闪避 (Ducking) 设置。
+1.发送效果 (Send Effect) 示例，位于应用衰减之前。
+1.这里对音频组进行了衰减（音量设置）。可在效果堆栈中的任何位置应用衰减。这里的 VU 计量表显示效果堆栈中此时刻的音量级别（不同于混音器视图中显示的 VU 计量表，此计量表显示了在信号离开音频组时的级别）。
+1.包含参数的示例效果，在本示例中为“混响”(Reverb)。要暴露参数，可右键单击参数，然后选择暴露参数即可。</p>
+
+<h2>概念</h2>
+
+<h3>路由和混音</h3>
+
+<p><a href="http://en.wikipedia.org/wiki/Audio_mixing">http://en.wikipedia.org/wiki/Audio_mixing</a></p>
+
+<p>音频路线规划是指获取一定数量的输入音频信号并输出 1 个或多个输出信号的过程。这里的“信号”一词指的是连续的数字音频数据流，可以分解为数字音频声道（比如立体声或 5.1（6 声道））。</p>
+
+<p>在内部通常会对这些信号进行一些处理工作，例如混音、应用效果、衰减等。由于各种原因（后面会讲到），这是音频处理的一个重要方面，这也是混音器的设计用途。</p>
+
+<p>除了“发送”(Sends) 和“返回”(Returns)（后面会讲到）之外，混音器还包含音频组，音频组允许任何数量的输入信号，混合这些信号，并且只有 1 路输出。</p>
+
+<figure>
+<img src="../uploads/Main/AudioMixerSignalPath.png" alt="">
+</figure>
+
+<p>在音频处理领域，这种路线和混音通常在与场景图形层级视图正交的情况下完成，因为音频的行为以及设计者与音频的交互方式与场景中显示的对象和概念非常不同。</p>
+
+<p>在以前版本的 Unity 中，不存在路线和混音的概念。用户以前可以将音频源放置在场景中，并且音频源产生的音频信号（例如通过音频剪辑）被直接添加到音频监听器，所有音频信号在一个点上混合起来。此处需要注意的是，这些操作与场景图正交进行，无论音频源在场景中的什么地方。</p>
+
+<p>混音器现在位于音频信号处理空间中的音频源和音频监听器之间，可以从音频源获取输出信号，执行期望的任何路线和混音操作，直到最终所有音频都输出到音频监听器并从扬声器中听到。</p>
+
+<h4>这些有什么用途？</h4>
+
+<p>通过混音和路线，可以将游戏中的音频分类为所有需求的类型。一旦将声音混合到这些类别中，效果和其他操作就可以作为一个整体应用于这些类别。这一功能很强大，不仅可以将游戏逻辑更改应用于各种声音类别，而且还允许设计人员调整混音的各个方面以便在运行时对整个音景动态地执行所谓的“母带制作”(Mastering)。</p>
+
+<h4>与 3D 空间衰减的关系</h4>
+
+<p>某些声音概念与场景图和 3D 世界有关。其中最明显的是基于 3D 距离、与音频监听器的相对速度和环境混响效果进行的衰减应用。</p>
+
+<p>由于这些操作与场景有关，而与混音器中的声音类别无关，因此在信号进入混音器之前，效果将应用于音频源。例如，基于音频源与音频监听器的距离应用于音频源的衰减将在信号离开音频源之前应用于信号，并被路由到混音器。</p>
+
+<h3>声音类别</h3>
+
+<p>如上所述，混音器允许有效地对声音类型进行分类并对这些类别执行操作。这是一个重要的概念，因为如果没有这样的分类，整个声景很快变成一堆难以区分的噪音，因为每个声音都是平等地播放，而没有对它们应用混音。借助诸如闪避之类的概念，声音类别也可以相互影响，为混音增加额外的丰富性。</p>
+
+<p>例如，设计人员可能希望对类别执行以下操作：</p>
+
+<ul>
+<li>对一组环境声音应用衰减。</li>
+<li>触发游戏中所有拟音的低通滤波器，模拟水下效果。</li>
+<li>衰减游戏中的所有声音，但菜单音乐和交互声音除外。</li>
+<li>降低游戏中所有枪声和爆炸声的音量，以确保可听到玩家与 NPC 之间的交谈。</li>
+<li>等等</li>
+</ul>
+
+<p>这些类别实际上与游戏紧密相关，并且在不同的项目之间有所不同，但这种分类可以借鉴如下所述的方式：</p>
+
+<ul>
+<li>所有声音都路由到“Master”音频组</li>
+<li>在 Master 组中，存在以下类别：Music（音乐）、Menu（菜单）声音和所有游戏声音</li>
+<li>游戏声音组分为：与 NPC 的对话、周围的环境声音以及其他拟音（比如枪声和脚步声）</li>
+<li>可以根据需要来进一步细分这些类别</li>
+</ul>
+
+<p>此布局的类别层级视图如下所示：</p>
+
+<figure>
+<img src="../uploads/Main/AudioMixerHierarchy.png" alt="">
+</figure>
+
+<p>请注意，场景图布局看起来与声音类别的布局完全不同。</p>
+
+<h3>混音的情绪和主题</h3>
+
+<p>游戏声音的混音和路由也可用于创建设计师所寻找的沉浸感。例如，可以将混响应用于所有游戏声音，并使音乐衰减以产生身处洞穴中的感觉。</p>
+
+<p>混音器可以有效地用于在游戏中营造情绪。通过在游戏中使用快照（后面会介绍）和其他不同混音器等概念，游戏可以轻松转换其情绪并使玩家感受到设计师所期望的感受，这在游戏的沉浸体验中是超级强大的。</p>
+
+<h3>全局混音</h3>
+
+<p>混音器用于控制游戏中所有声音的总体混音。这些混音器将控制全局混音，可视为路由声音实例的静态单声道混音。</p>
+
+<p>也就是说，混音器始终存在于场景的生命周期中，声音实例随着游戏的进行而创建和销毁，并通过这些全局混音器播放。</p>
+
+<h3>快照</h3>
+
+<p>快照可以捕获混音器的状态，并随着游戏的进行在这些不同的状态之间转换。要定义混音的情绪或主题，并随着玩家在游戏中的进展而改变这些情绪，这是一种很棒的方法。</p>
+
+<p>快照可捕获混音器中所有参数的值：</p>
+
+<ul>
+<li>音量</li>
+<li>音高</li>
+<li>发送级别</li>
+<li>湿混音级别</li>
+<li>效果参数</li>
+</ul>
+
+<p>要改变音景的多个方面，一种很棒方法是将快照与游戏逻辑相结合。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AudioMixer.html"></a></span><div class="tip">混音器</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AudioMixerSpecifics.html"></a></span><div class="tip">AudioMixer 窗口上的具体内容</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

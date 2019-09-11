@@ -1,0 +1,458 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Physics 2D - Unity Manual">
+<title>Physics 2D - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/Physics2DManager.png">
+<meta name="description" content="Use the Physics 2D settings to apply global settings for 2D physics.">
+<meta property="og:description" content="Use the Physics 2D settings to apply global settings for 2D physics.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-Physics2DManager';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-Physics2DManager.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-Physics2DManager.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-Physics2DManager.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-Physics2DManager.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-Physics2DManager.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-Physics2DManager.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-Physics2DManager.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-Physics2DManager.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-Physics2DManager.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-Physics2DManager.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-Physics2DManager.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-Physics2DManager.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-Physics2DManager.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-Physics2DManager.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-Physics2DManager.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-Physics2DManager.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-Physics2DManager.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-Physics2DManager.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-Physics2DManager.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-Physics2DManager.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-Physics2DManager.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-Physics2DManager.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-Physics2DManager.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-Physics2DManager.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="EditorFeatures.html">编辑器功能</a></li>
+<li><a href="comp-ManagerGroup.html">Project Settings</a></li>
+<li>Physics 2D</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-PhysicsManager.html"></a></span><div class="tip">Physics</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-PlayerSettings.html"></a></span><div class="tip">Player</div>
+</div>
+</div></div>
+<h1>Physics 2D</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Use the <strong>Physics 2D</strong> settings to apply global settings for 2D physics. </p>
+
+<p><strong>Note:</strong> To manage global settings for 3D physics, use the <a href="class-PhysicsManager.html">Physics 3D</a> settings instead.</p>
+
+<figure>
+<img src="../uploads/Main/Physics2DManager.png" alt="Physics 2D settings">
+<figcaption>Physics 2D settings</figcaption>
+</figure>
+
+<p>The Physics 2D settings define limits on the accuracy of the physical simulation. Generally speaking, a more accurate simulation requires more processing overhead, so these settings offer a way to trade off accuracy against performance. See the <a href="PhysicsSection.html">Physics</a> section of the manual for further information.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Gravity</strong></td>
+	<td style="text-align:left;">Set the amount of gravity applied to all <a href="class-Rigidbody2D.html">Rigidbody 2D</a> GameObjects. Generally, you only set gravity for the negative direction of the y-axis.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Default Material</strong></td>
+	<td style="text-align:left;">Set a reference to the <a href="class-PhysicsMaterial2D.html">Physics Material 2D</a> to use if none has been assigned to an individual Collider 2D.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Velocity Iterations</strong></td>
+	<td style="text-align:left;">Set the number of iterations made by the physics engine to resolve velocity effects. Higher numbers result in more accurate physics but at the cost of CPU time.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Position Iterations</strong></td>
+	<td style="text-align:left;">Set the number of iterations made by the physics engine to resolve position changes. Higher numbers result in more accurate physics but at the cost of CPU time.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Velocity Threshold</strong></td>
+	<td style="text-align:left;">Set the threshold for elastic collisions. Unity treats collisions with a relative velocity lower than this value as inelastic collisions (that is, the colliding GameObjects do not bounce off each other).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max Linear Correction</strong></td>
+	<td style="text-align:left;">Set the maximum linear position correction used when solving constraints (from a range between 0.0001 to 1000000). This helps to prevent overshooting.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max Angular Correction</strong></td>
+	<td style="text-align:left;">Set the maximum angular correction used when solving constraints (from a range between 0.0001 to 1000000). This helps to prevent overshooting.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max Translation Speed</strong></td>
+	<td style="text-align:left;">Set the maximum linear speed of a Rigidbody 2D GameObject during any physics update.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max Rotation Speed</strong></td>
+	<td style="text-align:left;">Set the maximum rotation speed of a Rigidbody 2D GameObject during any physics update.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Baumgarte Scale</strong></td>
+	<td style="text-align:left;">Set the scale factor that determines how fast Unity resolves collision overlaps.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Baumgarte Time of Impact Scale</strong></td>
+	<td style="text-align:left;">Set the scale factor that determines how fast Unity resolves time-of-impact overlaps.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Time to Sleep</strong></td>
+	<td style="text-align:left;">在 2D 刚体停止移动之后而进入睡眠状态之前必须经过的时间（以秒为单位）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Linear Sleep Tolerance</strong></td>
+	<td style="text-align:left;">Set the linear speed below which a Rigidbody 2D goes to sleep after the <strong>Time to Sleep</strong> elapses.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Angular Sleep Tolerance</strong></td>
+	<td style="text-align:left;">Set the rotational speed below which a Rigidbody 2D goes to sleep after <strong>Time to Sleep</strong> elapses.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Default Contact Offset</strong></td>
+	<td style="text-align:left;">Set a proximity distance value for colliders to be considered <em>in contact</em>, even they are not actually in contact. Colliders whose distance is less than the sum of their contactOffset values generate contacts. This allows the collision detection system to predictively enforce the contact constraint even when the objects are slightly separated.<br><strong>Caution:</strong> Reducing this value too far could cripple Unity’s ability to calculate continuous polygon collisions. Conversely, increasing the value too much could create artifacts for vertex collision.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Auto Simulation</strong></td>
+	<td style="text-align:left;">Enable this option to automatically run the physics simulation or allow explicit control of it.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Queries Hit Triggers</strong></td>
+	<td style="text-align:left;">Enable this option if you want Collider 2Ds marked as <strong>Triggers</strong> to return a hit when any physics query (such as Linecasts or Raycasts) intersects with them. Defaults to enabled.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Queries Start In Colliders</strong></td>
+	<td style="text-align:left;">Enable this option if you want physics queries that start inside a Collider 2D to detect the collider they start in.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Callbacks On Disable</strong></td>
+	<td style="text-align:left;">Enable this option to produce collision callbacks when a collider with contacts is disabled.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Auto Sync Transforms</strong></td>
+	<td style="text-align:left;">Enable this option to automatically sync transform changes with the physics system.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Job Options (Experimental)</strong></td>
+	<td style="text-align:left;">See the <a href="#jobs">Job Options</a> section below.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Gizmos</strong></td>
+	<td style="text-align:left;">See the <a href="#gizmos">Gizmos</a> section below.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Layer Collision Matrix</strong></td>
+	<td style="text-align:left;">Define how the <a href="LayerBasedCollision.html">layer-based collision</a> detection system behaves. Select which layers on the Collision Matrix interact with the other layers by checking them.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="jobs"></a></p>
+
+<h2>Job Options</h2>
+
+<p>The settings in the <strong>Job Options</strong> section allow you to use the <a href="JobSystem.html">C# Job System</a> to configure multi-threaded physics.</p>
+
+<figure>
+<img src="../uploads/Main/Physics2DManager-Jobs.png" alt="Job Options section">
+<figcaption>Job Options section</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Use Multithreading</strong></td>
+	<td style="text-align:left;">Enable this option to execute the simulation steps using the job system and use the rest of these options to control how to achieve that.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Use Consistency Sorting</strong></td>
+	<td style="text-align:left;">Enable this option if maintaining a consistent processing order becomes important to the simulation. <br>Executing simulation steps on multiple CPU threads produces separate batches of data. Processing these separate batches reduces determinism in processing order, although produces faster results.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Interpolation Poses Per Job</strong></td>
+	<td style="text-align:left;">Set the minimum number of <a href="class-Rigidbody2D.html">Rigidbody 2D</a> objects being interpolated in each simulation job.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>New Contacts Per Job</strong></td>
+	<td style="text-align:left;">Set the minimum number of new contacts to find in each simulation job.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Collide Contacts Per Job</strong></td>
+	<td style="text-align:left;">Set the minimum number of contacts to collide in each simulation job.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Clear Flags Per Job</strong></td>
+	<td style="text-align:left;">Set the minimum number of flags to be cleared in each simulation job.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Clear Body Forces Per Job</strong></td>
+	<td style="text-align:left;">Set the minimum number of bodies to be cleared in each simulation job.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Sync Discrete Fixtures Per Job</strong></td>
+	<td style="text-align:left;">Set the minimum number of fixtures to synchronize in the broadphase during discrete island solving in each simulation job.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Sync Continuous Fixtures Per Job</strong></td>
+	<td style="text-align:left;">Set the minimum number of fixtures to synchronize in the broadphase during continuous island solving in each simulation job.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Find Nearest Contacts Per Job</strong></td>
+	<td style="text-align:left;">Set the minimum number of nearest contacts to find in each simulation job.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Update Trigger Contacts Per Job</strong></td>
+	<td style="text-align:left;">Set the minimum number of trigger contacts to update in each simulation job.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Island Solver Cost Threshold</strong></td>
+	<td style="text-align:left;">Set the minimum threshold cost of all bodies, contacts and joints in an island during discrete island solving.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Island Solver Body Cost Scale</strong></td>
+	<td style="text-align:left;">Set the cost scale of each body during discrete island solving.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Island Solver Contact Cost Scale</strong></td>
+	<td style="text-align:left;">Set the cost scale of each contact during discrete island solving.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Island Solver Joint Cost Scale</strong></td>
+	<td style="text-align:left;">Set the cost scale of each joint during discrete island solving.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Island Solver Bodies Per Job</strong></td>
+	<td style="text-align:left;">Set the minimum number of bodies to solve in each simulation job when performing island solving.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Island Solver Contacts Per Job</strong></td>
+	<td style="text-align:left;">Set the minimum number of contacts to solve in each simulation job when performing island solving.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="gizmos"></a></p>
+
+<h2>Gizmos</h2>
+
+<figure>
+<img src="../uploads/Main/Physics2DManager-Gizmos.png" alt="Job Options section">
+<figcaption>Job Options section</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Always Show Colliders</strong></td>
+	<td style="text-align:left;">Enable this option to show collider gizmos even when they are not selected.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Show Collider Sleep</strong></td>
+	<td style="text-align:left;">Enable this option to show the sleep-state for each collider.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Collider Awake Color</strong></td>
+	<td style="text-align:left;">Set the color to indicate that the collider (body) is awake.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Collider Asleep Color</strong></td>
+	<td style="text-align:left;">Set the color to indicate that the collider (body) is asleep.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Show Collider Contacts</strong></td>
+	<td style="text-align:left;">Enable this option to show current contacts for each gizmo.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Contact Arrow Scale</strong></td>
+	<td style="text-align:left;">Set the size of the contact arrow that appears on collider gizmos.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Collider Contact Color</strong></td>
+	<td style="text-align:left;">Set the gizmo color to indicate the collider contact.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Show Collider AABB</strong></td>
+	<td style="text-align:left;">Enable this option to show the collider’s bounding box.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Collider AABB Color</strong></td>
+	<td style="text-align:left;">Set the gizmo color for the collider’s bounding box.</td>
+</tr>
+</tbody>
+</table>
+
+<p><br> </p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–10–02 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Updated for Unified Settings</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-PhysicsManager.html"></a></span><div class="tip">Physics</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-PlayerSettings.html"></a></span><div class="tip">Player</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

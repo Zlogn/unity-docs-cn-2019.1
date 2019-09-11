@@ -1,0 +1,239 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="自动构建网格外链接 - Unity Manual">
+<title>自动构建网格外链接 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/AutoOffMeshLinksSetup.svg">
+<meta name="description" content="可自动检测网格外链接 (Off-Mesh Link) 的一些用例。两个最常见的用例为：_掉下 (Drop-Down)_ 和_跳过 (Jump-Across)_。">
+<meta property="og:description" content="可自动检测网格外链接 (Off-Mesh Link) 的一些用例。两个最常见的用例为：_掉下 (Drop-Down)_ 和_跳过 (Jump-Across)_。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'nav-BuildingOffMeshLinksAutomatically';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/nav-BuildingOffMeshLinksAutomatically.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/nav-BuildingOffMeshLinksAutomatically.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/nav-BuildingOffMeshLinksAutomatically.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/nav-BuildingOffMeshLinksAutomatically.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/nav-BuildingOffMeshLinksAutomatically.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/nav-BuildingOffMeshLinksAutomatically.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/nav-BuildingOffMeshLinksAutomatically.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/nav-BuildingOffMeshLinksAutomatically.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/nav-BuildingOffMeshLinksAutomatically.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/nav-BuildingOffMeshLinksAutomatically.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/nav-BuildingOffMeshLinksAutomatically.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/nav-BuildingOffMeshLinksAutomatically.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/nav-BuildingOffMeshLinksAutomatically.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/nav-BuildingOffMeshLinksAutomatically.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/nav-BuildingOffMeshLinksAutomatically.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/nav-BuildingOffMeshLinksAutomatically.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/nav-BuildingOffMeshLinksAutomatically.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/nav-BuildingOffMeshLinksAutomatically.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/nav-BuildingOffMeshLinksAutomatically.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/nav-BuildingOffMeshLinksAutomatically.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/nav-BuildingOffMeshLinksAutomatically.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/nav-BuildingOffMeshLinksAutomatically.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/nav-BuildingOffMeshLinksAutomatically.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/nav-BuildingOffMeshLinksAutomatically.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Navigation.html">导航和寻路</a></li>
+<li><a href="nav-Overview.html">导航概述</a></li>
+<li>自动构建网格外链接</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="nav-CreateOffMeshLink.html"></a></span><div class="tip">创建网格外链接</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="nav-HeightMesh.html"></a></span><div class="tip">构建高度网格以准确放置角色</div>
+</div>
+</div></div>
+<h1>自动构建网格外链接</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>可自动检测网格外链接 (Off-Mesh Link) 的一些用例。两个最常见的用例为：_掉下 (Drop-Down)_ 和_跳过 (Jump-Across)_。</p>
+
+<ul>
+<li>
+<strong>掉下</strong>链接的作用是从平台上掉下。</li>
+<li>
+<strong>跳过</strong>链接的作用是跳过缝隙。</li>
+</ul>
+
+<p>为了自动找到跳跃位置，构建过程沿着导航网格的边缘行走，并检查跳跃的着陆位置是否在导航网格上。如果跳跃轨迹畅通无阻，则会创建网格外链接。</p>
+
+<p>让我们来设置网格外链接的自动生成。如果您不熟悉导航网格烘焙，请查看<a href="nav-BuildingNavMesh.html">构建导航网格</a>。</p>
+
+<figure>
+<img src="../uploads/Main/AutoOffMeshLinksSetup.svg" alt="">
+</figure>
+
+<p>首先，需要标记场景中的跳跃_起始位置_对象。为此，需要在 <em>Navigation 窗口_中的 </em>Objects_ 选项卡下选中 <strong>Generate Off-Mesh Links</strong> 选项。</p>
+
+<figure>
+<img src="../uploads/Main/AutoOffMeshLinksParams.svg" alt="">
+</figure>
+
+<p>第二步是设置掉下和跳过轨迹：</p>
+
+<ul>
+<li>
+<strong>掉下</strong>链接的生成由 Drop Height 参数控制。该参数可控制将要连接的最高掉落高度，将值设置为 0 将禁用生成。
+
+<ul>
+<li>定义掉下链接的轨迹时应使水平行程 <strong>(A)</strong> 为：_2*agentRadius + 4*voxelSize<em>。即，掉落将刚好落在平台的边缘之外。此外，垂直行程 <strong>(B)</strong> 需要大于烘焙设置的 </em>Step Height_（否则只会走下平台）并小于 <em>Drop Height</em>。应按体素大小进行调整，确保在体素化期间的任何舍入误差都不会阻止生成链接。应将 <em>Drop Height</em> 的值设置得比在关卡中测量的值略大，使链接正确连接。</li>
+</ul>
+</li>
+<li>
+<strong>跳过</strong>链接的生成由 <em>Jump Distance</em> 参数控制。该参数可控制将要连接的最远距离。将值设置为 0 将禁用生成。
+
+<ul>
+<li>定义跳过链接的轨迹时应使水平行程 <strong>(C)</strong> 大于 <em>2*agentRadius</em> 且小于 Jump Distance。此外，着陆位置 <strong>(D)</strong> 不得超过距离起始位置关卡的 voxelSize。</li>
+</ul>
+</li>
+</ul>
+
+<p>现在已经标记对象并调整了设置，因此该按 <em>Bake</em> 按钮了，随即自动生成网格外链接！当您更改场景并烘焙时，旧链接将被丢弃，并将根据新场景创建新链接。</p>
+
+<h2>故障排除</h2>
+
+<p>如果未在所需位置生成网格外链接，请注意以下几点：</p>
+
+<ul>
+<li>
+<em>Drop Height</em> 应当比在关卡中测量的实际距离略大一点。这样可确保在导航网格烘焙过程中发生的小偏差不会阻止链接的连接。</li>
+<li>
+<em>Jump Distance</em> 应当比在关卡中测量的实际距离略远一点。Jump Distance 是从导航网格上的一个位置到导航网格上的另一个位置之间的测量值，这意味着应加上 _2*agentRadius_（加一点）才能确保跨过缝隙。</li>
+</ul>
+
+<h3>阅读更多信息</h3>
+
+<ul>
+<li>
+<a href="nav-CreateOffMeshLink.html">创建网格外链接</a> - 了解如何手动创建网格外链接。</li>
+<li>
+<a href="nav-BuildingNavMesh.html">构建导航网格</a> – 关于导航网格烘焙的工作流程。</li>
+<li>
+<a href="nav-AdvancedSettings.html">烘焙设置</a> – 导航网格烘焙设置的完整描述。</li>
+<li>
+<a href="class-OffMeshLink.html">网格外链接组件参考</a> – 所有网格外链接属性的完整描述。</li>
+<li>
+<a href="../ScriptReference/AI.OffMeshLink.html">网格外链接脚本参考</a> - 网格外链接脚本 API 的完整描述。</li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="nav-CreateOffMeshLink.html"></a></span><div class="tip">创建网格外链接</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="nav-HeightMesh.html"></a></span><div class="tip">构建高度网格以准确放置角色</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

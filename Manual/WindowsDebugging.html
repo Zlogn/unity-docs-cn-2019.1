@@ -1,0 +1,307 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="﻿Windows 调试 - Unity Manual">
+<title>﻿Windows 调试 - Unity Manual</title>
+<meta name="description" content="Unity 提供了一些工具来简化 Windows 上的调试，从而方便进行游戏或 Editor 进程的取证或实时调试。">
+<meta property="og:description" content="Unity 提供了一些工具来简化 Windows 上的调试，从而方便进行游戏或 Editor 进程的取证或实时调试。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'WindowsDebugging';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/WindowsDebugging.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/WindowsDebugging.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/WindowsDebugging.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/WindowsDebugging.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/WindowsDebugging.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/WindowsDebugging.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/WindowsDebugging.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/WindowsDebugging.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/WindowsDebugging.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/WindowsDebugging.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/WindowsDebugging.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/WindowsDebugging.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/WindowsDebugging.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/WindowsDebugging.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/WindowsDebugging.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/WindowsDebugging.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/WindowsDebugging.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/WindowsDebugging.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/WindowsDebugging.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/WindowsDebugging.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/WindowsDebugging.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/WindowsDebugging.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/WindowsDebugging.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/WindowsDebugging.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
+<li><a href="Windows.html">Windows</a></li>
+<li><a href="WindowsGeneral.html">Windows 通用</a></li>
+<li>﻿Windows 调试</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="WindowsStandaloneBinaries.html"></a></span><div class="tip">Windows 独立平台播放器构建二进制文件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="WindowsLowIntegrity.html"></a></span><div class="tip">Windows 低完整性</div>
+</div>
+</div></div>
+<h1>Windows 调试</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 提供了一些工具来简化 Windows 上的调试，从而方便进行游戏或 Editor 进程的取证或实时调试。</p>
+
+<h3>本机与托管调试</h3>
+
+<p>首先，关于调试的说明。Unity 中需要使用两种类型的调试。即：本机 C++ 调试以及 C# 托管调试。对于支持 IL2CPP 的平台，只会有本机调试，但为了实现快速迭代，托管调试将保留供 Editor 使用。</p>
+
+<h4>本机调试</h4>
+
+<p>通过为相关的二进制文件（exe 或 dll）提供符号（pdb 文件），可以简化本机调试。</p>
+
+<h4>托管调试</h4>
+
+<p>在 Windows 上，标准的 .NET 托管符号也存储在 pdb 文件中，但在使用 Mono 时，存在 mdb 文件。</p>
+
+<h3>符号</h3>
+
+<p>Unity 在 http://symbolserver.unity3d.com/ 上提供了一个符号存储库。此服务器 URL 可在 windbg 或 VS2012 及更高版本中用于自动进行符号解析和下载（很像 Microsoft 的符号存储库）。</p>
+
+<h4>Windbg 设置</h4>
+
+<p>在 windbg 上添加符号存储库的简单方法是使用 .sympath 命令。</p>
+
+<blockquote>
+<p><code>.sympath+ SRV*c:\symbols-cache*http://symbolserver.unity3d.com/</code></p>
+</blockquote>
+
+<p>让我们对此进行分解说明：</p>
+
+<blockquote>
+<p><code>.sympath+</code><br>
++ 添加操作，仅保留现有的符号路径，并附加此符号存储库查找</p>
+
+<p><code>SRV*c:\symbols-cache</code><br>
+SRV 表示用于获取符号的远程服务器，而 c:\symbols 是本地路径，用于缓存下载的符号并在再次下载之前先查看该位置。</p>
+
+<p><code>*http://symbolserver.unity3d.com/</code>
+用于获取符号的符号存储库的路径</p>
+</blockquote>
+
+<h4>Visual Studio 设置</h4>
+
+<p><strong>注意：</strong>VS2010 和更早版本不支持 http 服务器符号存储库。
+1.选择 Tools &gt; Options
+2.展开 Debugging Section，选择 Symbols
+3.指定缓存目录（如果尚未指定）
+4.添加 http://symbolserver.unity3d.com/ 作为“Symbol file (.pdb) location”</p>
+
+<h3>实时调试</h3>
+
+<p>实时调试是将调试器连接到正常运行的进程或连接到已捕获异常的进程的方案。为了让调试器了解发生的情况，需要将符号包含在构建中。这就是上面的步骤应该解决的问题。另外需要注意的是，游戏可执行文件是根据游戏名称命名的，因此如果调试器无权访问重命名后的可执行文件，则可能无法找到正确的 pdb。</p>
+
+<h4>设置自动异常调试</h4>
+
+<p>在 Windows 上，Microsoft 自动设置为在应用程序崩溃时进入 Dr Watson/向 Microsoft 报告错误。但是，如果安装了 Visual Studio 或 windbg，精明的开发者可以充分利用 Microsoft 提供的<a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb204634(v=vs.85).aspx">崩溃调试</a>工具。
+为便于安装，可使用以下注册表文件内容进行安装：</p>
+
+<pre><code>Windows Registry Editor Version 5.00
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug]
+"Auto"="1"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows NT\CurrentVersion\AeDebug]
+ "Auto"="1"
+</code></pre>
+
+<p>有关 Editor 调试的一点额外信息：</p>
+
+<blockquote>
+<p><code>Unity.exe -dbgbreak</code><br>
+将会启动 Unity 并立即提供要连接的调试器（如果设置了自动崩溃处理）</p>
+</blockquote>
+
+<h3>事后分析/取证调试</h3>
+
+<p>Windows 提供了调查故障转储文件（.dmp 或 .mdmp）的工具。根据故障转储的类型，故障转储可能仅仅是堆栈信息，也可能是整个进程内存。根据内容的不同，在了解可能导致崩溃的原因时存在各种可能性。在常规情况下，通常至少有一个堆栈可供调查（如果这是一个有效堆栈…）</p>
+
+<p>要调查转储文件，可选择使用 Visual Studio 或 windbg 来加载该文件。虽然 Visual Studio 是更友好的工具，但其功能比 windbg 更有限。</p>
+
+<h3>调试提示和技巧</h3>
+
+<h4>在本机托管的异常</h4>
+
+<p>NullReferenceException 通常如下所示：</p>
+
+<pre><code>    1b45558c()  
+    &gt;   mono.dll!malloc(unsigned int size=12)  Line 163 + 0x5f bytes    C  
+        mono.dll!g_hash_table_insert_replace(_GHashTable * hash=0x065c3960, void * key=0x0018cba4, void * value=0x0018cb8c, int replace=457528232)  Line 204 + 0x7 bytes    C  
+        mono.dll!mono_jit_runtime_invoke(_MonoMethod * method=0x242bf8b0, void * obj=0x065c3960, void ** params=0x0018cba4, MonoObject * * exc=0x0018cb8c)  Line 4889 + 0xc bytes   C
+</code></pre>
+
+<p>这不是 malloc 中的也不是 mono 中的崩溃，而是 NullReferenceException，符合以下条件之一：
+* 由 VS 调试器捕获
+* 在用户的播放器中未作处理，导致播放器退出</p>
+
+<h4>查看托管堆栈帧</h4>
+
+<p>再次采用上一个示例：</p>
+
+<pre><code>    1b45558c()  
+    &gt;   mono.dll!malloc(unsigned int size=12)  Line 163 + 0x5f bytes    C  
+        mono.dll!g_hash_table_insert_replace(_GHashTable * hash=0x065c3960, void * key=0x0018cba4, void * value=0x0018cb8c, int replace=457528232)  Line 204 + 0x7 bytes    C  
+        mono.dll!mono_jit_runtime_invoke(_MonoMethod * method=0x242bf8b0, void * obj=0x065c3960, void ** params=0x0018cba4, MonoObject * * exc=0x0018cb8c)  Line 4889 + 0xc bytes   C
+</code></pre>
+
+<p>不含任何信息的行即为托管帧。但是，有一种获取托管堆栈信息的途径：mono 有一个名为 mono_pmip 的内置函数，该函数接受堆栈帧的地址并返回附带信息的 char*。可在 Visual Studio 即时窗口中调用 mono_pmip：</p>
+
+<blockquote>
+<p><code>?(char*)mono.dll!mono_pmip((void*)0x1b45558c)</code><br>
+0x26a296c0 “ Tiles:OnPostRender () + 0x1e4 (1B4553A8 1B4555DC) [065C6BD0 - Unity Child Domain]”`</p>
+</blockquote>
+
+<p><strong>注意：</strong>这仅适用于 mono.dll 符号正确加载的情况。</p>
+
+<h4>强制应用程序创建转储</h4>
+
+<p>有时，在某些情况下，应用程序连接了调试器但不崩溃，或者应用程序在远程设备上发生崩溃但调试器不可用。但是，如果可以获取转储文件，仍然能获得有用的信息；如需获取转储文件，请按照以下步骤操作。</p>
+
+<p><strong>注意：</strong>这些说明适用于 Windows 独立平台和通用 Windows 平台（在桌面端运行时）。</p>
+
+<ul>
+<li>打开注册表。</li>
+<li>找到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting</li>
+<li>创建 LocalDumps 文件夹（如果不存在）。</li>
+<li>添加以下注册表项：
+
+<ul>
+<li>“DumpFolder”=&lt;此处为文件夹路径&gt;，例如 C:\Temp</li>
+<li>“DumpCount”=dword:00000010</li>
+<li>“DumpType”=dword:00000002</li>
+</ul>
+</li>
+<li>启动应用程序（可以是 Windows 上运行的任何程序 - 通用 Windows 平台或 Windows 独立平台可执行文件）</li>
+<li>重现崩溃，此时应该会在指定的文件夹中创建转储文件。可使用 Visual Studio 或 WinDbg 打开转储文件。</li>
+</ul>
+
+<hr>
+
+<p><span class="page-edit">• 2017–05–16 Page amended with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span><br></p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="WindowsStandaloneBinaries.html"></a></span><div class="tip">Windows 独立平台播放器构建二进制文件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="WindowsLowIntegrity.html"></a></span><div class="tip">Windows 低完整性</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

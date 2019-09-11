@@ -1,0 +1,196 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Texture Streaming - Unity Manual">
+<title>Texture Streaming - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/TextureStreaming_image_0.png">
+<meta name="description" content="The Texture Streaming system gives you control over which mipmap levels Unity loads into memory. This system reduces the total amount of memory Unity needs for Textures, because it only loads the mipmaps Unity needs to render the current Camera position in a Scene, instead of loading all of them by default. It trades a small amount of CPU resources to save a potentially large amount of GPU memory.">
+<meta property="og:description" content="The Texture Streaming system gives you control over which mipmap levels Unity loads into memory. This system reduces the total amount of memory Unity needs for Textures, because it only loads the mipmaps Unity needs to render the current Camera position in a Scene, instead of loading all of them by default. It trades a small amount of CPU resources to save a potentially large amount of GPU memory.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'TextureStreaming';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/TextureStreaming.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/TextureStreaming.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/TextureStreaming.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/TextureStreaming.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/TextureStreaming.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/TextureStreaming.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/TextureStreaming.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/TextureStreaming.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/TextureStreaming.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/TextureStreaming.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/TextureStreaming.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/TextureStreaming.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/TextureStreaming.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/TextureStreaming.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/TextureStreaming.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/TextureStreaming.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/TextureStreaming.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/TextureStreaming.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/TextureStreaming.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/TextureStreaming.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/TextureStreaming.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/TextureStreaming.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/TextureStreaming.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/TextureStreaming.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="OptimizingGraphicsPerformance.html">优化图形性能</a></li>
+<li>Texture Streaming</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="OptimizingShaderLoadTime.html"></a></span><div class="tip">优化着色器加载时间</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-StreamingController.html"></a></span><div class="tip">Streaming Controller</div>
+</div>
+</div></div>
+<h1>Texture Streaming</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The Texture Streaming system gives you control over which mipmap levels Unity loads into memory. This system reduces the total amount of memory Unity needs for Textures, because it only loads the mipmaps Unity needs to render the current Camera position in a Scene, instead of loading all of them by default. It trades a small amount of CPU resources to save a potentially large amount of GPU memory.</p>
+
+<p>With the Texture System, you can also use the <strong>Memory Budget</strong> to set a total memory limit for all Textures to use in a Project. The Texture Streaming system automatically reduces mipmap levels to stay within this budget. </p>
+
+<p>You can use the Texture System API to request specific mipmap levels for specific Textures. Unity provides sample C# code that duplicates the engine logic for mipmap selection, which you can use to override the engine logic for your own Projects. For more details, see <a href="TextureStreaming-API.html">Texture Streaming API</a>.</p>
+
+<p>In Unity’s <a href="https://assetstore.unity.com/packages/essentials/tutorial-projects/viking-village-29140">Viking Village</a> demo project, Texture Streaming saves 25–30% of Texture memory, depending on Camera location.</p>
+
+<figure>
+<img src="../uploads/Main/TextureStreaming_image_0.png" alt="">
+</figure>
+
+<h2>Texture Streaming setup</h2>
+
+<p>To enable Texture Streaming, go to Unity’s Quality Settings (<strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Quality</strong>) and enable the <strong>Texture Streaming</strong> checkbox. This reveals the settings specific to the Texture Streaming system. For details on each setting, see documentation on <a href="class-QualitySettings.html">Quality Settings</a>. </p>
+
+<figure>
+<img src="../uploads/Main/TextureStreaming_image_1.png" alt="">
+</figure>
+
+<p>When you’ve done this, set up Texture Streaming on individual Textures, to allow the Texture Streaming system to stream each Texture’s mipmaps from the disk into memory. To do this, select the Texture you want to apply Texture Streaming to, navigate to the Inspector window and view the Texture Import settings. Open the <strong>Advanced</strong> settings, and enable the <strong>Streaming Mip Maps</strong> checkbox. </p>
+
+<p>If you’re developing for Android, you also need to open the <a href="BuildSettings.html">Build Settings</a> and set the <strong>Compression Method</strong> to <strong>LZ4</strong> or <strong>LZ4HC</strong>. Unity requires one of these compression methods for <a href="AsyncTextureUpload.html">asynchronous Texture loading</a>, which the Texture Streaming system relies upon.</p>
+
+<p>Unity loads mipmaps at the highest resolution level possible while observing the Texture <strong>Memory Budget</strong>. For more specific control, or to fine-tune the Texture Streaming system’s automatic results, use the C# API to specify mipmap levels for each Texture. For more details, see <a href="TextureStreaming-API.html">Texture Streaming API</a> .</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="OptimizingShaderLoadTime.html"></a></span><div class="tip">优化着色器加载时间</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-StreamingController.html"></a></span><div class="tip">Streaming Controller</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="光照：技术信息和术语 - Unity Manual">
+<title>光照：技术信息和术语 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/LightModes-TechnicalInformation-0.png">
+<meta name="description" content="表面 (Surface)：场景中所有网格的所有三角形都称为场景的表面。表面点是为场景定义的任意三角形内的点。">
+<meta property="og:description" content="表面 (Surface)：场景中所有网格的所有三角形都称为场景的表面。表面点是为场景定义的任意三角形内的点。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'LightModes-TechnicalInformation';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/LightModes-TechnicalInformation.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/LightModes-TechnicalInformation.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/LightModes-TechnicalInformation.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/LightModes-TechnicalInformation.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/LightModes-TechnicalInformation.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/LightModes-TechnicalInformation.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/LightModes-TechnicalInformation.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/LightModes-TechnicalInformation.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/LightModes-TechnicalInformation.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/LightModes-TechnicalInformation.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/LightModes-TechnicalInformation.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/LightModes-TechnicalInformation.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/LightModes-TechnicalInformation.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/LightModes-TechnicalInformation.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/LightModes-TechnicalInformation.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/LightModes-TechnicalInformation.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/LightModes-TechnicalInformation.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/LightModes-TechnicalInformation.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/LightModes-TechnicalInformation.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/LightModes-TechnicalInformation.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/LightModes-TechnicalInformation.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/LightModes-TechnicalInformation.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/LightModes-TechnicalInformation.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/LightModes-TechnicalInformation.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="LightingOverview.html">光照</a></li>
+<li><a href="GIIntro.html">全局光照</a></li>
+<li><a href="LightModes.html">光照模式</a></li>
+<li>光照：技术信息和术语</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LightModes.html"></a></span><div class="tip">光照模式</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightMode-Realtime.html"></a></span><div class="tip">实时光照</div>
+</div>
+</div></div>
+<h1>光照：技术信息和术语</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<ul>
+<li><p><strong>表面 (Surface)</strong>：场景中所有网格的所有三角形都称为场景的<strong>表面</strong>。表面点是为场景定义的任意三角形内的点。</p></li>
+<li><p><strong>发光 (Emitted Light)</strong>：这是直接发射到场景表面的光。</p></li>
+<li><p><strong>直射光 (Direct Light)</strong>：这是发出后照射到场景的表面再被反射到传感器（例如眼睛的视网膜或摄像机）中的光。一个光源的直接贡献是从该光源到达传感器的任何直射光。</p></li>
+<li><p><strong>间接光 (Indirect Light)</strong>：这是发出后接触到场景的表面至少两次并最终反射到传感器中的光。一个光源的间接贡献是从该光源到达传感器的任何间接光。</p></li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/LightModes-TechnicalInformation-0.png" alt="">
+</figure>
+
+<h3>场景中的模拟光的反射</h3>
+
+<p>粗糙表面会在许多方向上散射入射光，可照亮未直接从光源获得光照的表面。场景中的表面越粗糙，此类阴影区域就会越明亮。过去，这种效果是通过定义一个额外的环境光颜色来近似计算的，这种颜色只是简单地添加到直接光照的结果中，因此阴影中的表面看起来不会完全变黑。更复杂的近似算法使用渐变来根据表面的方向模拟不同的环境颜色，甚至使用球谐函数来获得更复杂的<a href="GlobalIllumination.html">环境光照</a>。</p>
+
+<p>光滑或光泽表面可在可预测的方向上反射大部分入射光，从而在材质上产生可见的高光。光滑表面的极端例子是镜子：来自一个方向的所有入射光恰好反射到另一个方向。光泽反射的一种变体是半透明材质，这种材质还可在入射光进入和再次离开材质时折射光线。</p>
+
+<p>在间接光照的情况下，光路与场景表面至少有两次交互。这些交互可以是光泽表面和/或粗糙表面反射的组合。例如，照射到粗糙表面的光泽反射/折射将显示从所有观察方向可见的聚焦明暗图案，称之为<strong>焦散</strong>。照射到另一个粗糙表面的粗糙反射通常称为<strong>环境光照</strong>。</p>
+
+<p>由于光在场景表面上多次反射的性质，正确的解决方案需要考虑整个场景及其所有相关光路的所有表面材质属性和光交互。因此有了<a href="GIIntro.html">全局光照</a>一词。</p>
+
+<h3>解决问题</h3>
+
+<p><em>射线追踪</em>是在计算机图形学中解决这一问题的非常巧妙的方法，因为它试图通过追踪场景中的光线路径来模拟现实世界中实际发生的情况。目前，电影业已完全转向射线追踪技术来生成图像。</p>
+
+<p>遗憾的是，射线追踪仍然太慢，无法在大多数实时图形中使用；取而代之是采用<a href="https://en.wikipedia.org/wiki/Rasterisation">光栅化 (rasterization)</a> 作为生成图像的标准方法。与射线追踪不同，光栅化不能跟踪场景中的任意光路。事实上，光栅器只能计算光路的一段。这就是实时图形中的光照变得复杂的原因。</p>
+
+<p>由于光栅器不能跟踪光线，因此实时光照集中于具有最明显影响的光照部分。这些部分就是发射部分，更常见的说法是直接光照。即使在这样的情况下，光路也已经由两段组成：一段是从摄像机到表面，另一段是从表面到光源。</p>
+
+<p>第一段是从摄像机位置渲染的视图。为了计算第二段，需要使用<a href="Shadows.html">阴影贴图</a>之类的技术。由于阴影贴图特定于每个投射阴影的光源，因此必须为每个光源生成唯一的阴影贴图。投射阴影的光源越多，需要生成的阴影贴图也越多。根据光源的数量，所需的渲染时间可能会很快变得过长。阴影贴图的另一个缺点是它们的分辨率有限。这会导致块状阴影。因此，阴影贴图既存在图像质量问题（由于分辨率有限），也存在性能问题（由于存储阴影贴图的内存要求以及每帧生成阴影贴图所花费的时间）。</p>
+
+<p>与离线渲染不同，游戏对渲染帧的时间长度有一定的严格限制。例如，在 VR 应用程序中，为了实现 90 帧/秒 (FPS) 的帧率，绘制一个帧的时间为 11.11 毫秒 (ms)。在需要玩家快速反应的游戏中，为了达到 60 FPS 的帧率，绘制一个帧的时间为 16.66ms。目标帧率为 30 FPS 的游戏绘制一个帧的时间为 33.33ms。这些时间还必须包括应用程序或游戏其余部分（例如 AI 和物理系统）的计算工作。因此，尽可能提高效率以充分利用系统非常重要。所有渲染必须在少于绘制一个帧所需的时间内发生。</p>
+
+<h3>总结</h3>
+
+<p>总结一下，需要解决的两个主要问题如下：</p>
+
+<p>1.如何处理因计算直接光照的阴影而导致的性能损失。</p>
+
+<p>2.如何处理间接光照（注意：在实时图形的背景下，全局光照与间接光照同义，即使全局光照的实际意义也包括直接光照）。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2017–06–08 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 5.6 版中添加了“光照模式”</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LightModes.html"></a></span><div class="tip">光照模式</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightMode-Realtime.html"></a></span><div class="tip">实时光照</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

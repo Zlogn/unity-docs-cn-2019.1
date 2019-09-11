@@ -1,0 +1,225 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="数据重置 - Unity Manual">
+<title>数据重置 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/AnalyticsDataReset1.jpg">
+<meta name="description" content="Unity Analytics 允许通过执行数据重置来永久清除 Analytics Dashboard 中的所有数据。此操作无法撤销，因此在执行此操作之前，请仔细阅读本文档和 Analytics Dashboard 中的确认消息。">
+<meta property="og:description" content="Unity Analytics 允许通过执行数据重置来永久清除 Analytics Dashboard 中的所有数据。此操作无法撤销，因此在执行此操作之前，请仔细阅读本文档和 Analytics Dashboard 中的确认消息。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UnityAnalyticsDataReset';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityAnalyticsDataReset.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityAnalyticsDataReset.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityAnalyticsDataReset.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityAnalyticsDataReset.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityAnalyticsDataReset.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityAnalyticsDataReset.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityAnalyticsDataReset.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityAnalyticsDataReset.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityAnalyticsDataReset.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityAnalyticsDataReset.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UnityAnalyticsDataReset.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UnityAnalyticsDataReset.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UnityAnalyticsDataReset.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UnityAnalyticsDataReset.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityAnalyticsDataReset.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityAnalyticsDataReset.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityAnalyticsDataReset.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityAnalyticsDataReset.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityAnalyticsDataReset.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityAnalyticsDataReset.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityAnalyticsDataReset.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityAnalyticsDataReset.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityAnalyticsDataReset.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityAnalyticsDataReset.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="UnityAnalytics.html">Unity Analytics</a></li>
+<li>数据重置</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsRawDataExport.html"></a></span><div class="tip">Unity Analytics 原始数据导出 (Raw Data Export)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsUpgrading.html"></a></span><div class="tip">升级 Unity Analytics</div>
+</div>
+</div></div>
+<h1>数据重置</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity Analytics 允许通过执行数据重置来永久清除 Analytics Dashboard 中的所有数据。此操作<strong>无法撤销</strong>，因此在执行此操作之前，请仔细阅读本文档和 Analytics Dashboard 中的确认消息。</p>
+
+<p>本页面介绍数据重置功能何时可能有用，以及此功能对 Analytics 项目中的数据产生的影响。</p>
+
+<h2>何时执行数据重置</h2>
+
+<p>需要重置 Analytics 项目数据的主要情况是在游戏上市（或重新发布游戏）之前从控制面板中清除数据。这种做法可以确保重置后收集的数据是干净的，而不会与以前收集的数据混淆（混淆在一起可能会导致分析出现偏差）。</p>
+
+<p>其他常见情况：</p>
+
+<ul>
+<li><p>在游戏上市之前擦除在开发和测试期间收集的数据。</p></li>
+<li><p>擦除预发布版或测试版的数据。</p></li>
+<li><p>在商店中推出游戏之前擦除数据。</p></li>
+<li><p>在商品重新上市之前擦除数据。</p></li>
+</ul>
+
+<p>请注意，执行数据重置是可选操作，可能永远无需使用此功能。</p>
+
+<h2>此功能对数据的影响</h2>
+
+<p>根据 Unity Technologies 的数据处理周期，所有数据重置操作都会在第二天的 00:00（UTC 时间）进行。请参阅 Configure 页面以了解即将重置数据的准确时间（按您的时区）。</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsDataReset1.jpg" alt="">
+</figure>
+
+<p>发生数据重置时即收集数据，但可能需要长达 4 小时才能填充到控制面板中。无法指定其他日期来重置数据。</p>
+
+<p>重置数据会影响如下这些 Analytics 元素：</p>
+
+<ul>
+<li><p><strong>Dashboard</strong>（控制面板）：永久擦除控制面板中的所有可见数据，包括图表中的数据。</p></li>
+<li><p><strong>Custom event data</strong>（自定义事件数据）：从控制面板中永久擦除此数据。请注意，无需重新验证您已经在项目中设置的自定义事件。</p></li>
+<li><p><strong>Reports, Funnels, Segments</strong>（报告、漏斗图、细分段）：从控制面板中永久擦除与这些配置（在项目中已创建的配置）相关的所有数据。但是，不会删除这些配置本身。例如，如果创建包含三步的漏斗图，为其填充数据，然后执行数据重置，则此三步式漏斗图仍然会存在于控制面板中，但不再包含数据。</p></li>
+<li><p><strong>Livestream</strong>：执行数据重置时，此元素不受影响。</p></li>
+<li><p><strong>Raw Data Export</strong>：执行数据重置时，此元素不受影响。仍然可以执行导出以访问历史数据，并且先前运行的所有导出仍然存在于 Raw Data Export 页面上的 Activity 表中。</p></li>
+</ul>
+
+<h2>如何执行数据重置</h2>
+
+<p>要执行数据重置，请打开要重置的 Analytics 项目的 Unity Services Dashboard，转至 <strong>Configure__，然后单击 </strong>Reset Data<strong>。务必仔细阅读确认消息。将项目名称输入文本框并单击 </strong>Reset__。随后会立即进行数据重置。</p>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsDataReset55.jpg" alt="">
+</figure>
+
+<p>重置数据后，__Configure__ 页面中会提供有关上次重置的详细信息：</p>
+
+<ul>
+<li><p>发生重置的日期和时间。</p></li>
+<li><p>执行重置的用户。</p></li>
+</ul>
+
+<p><strong>注意：</strong>只有项目所有者 (Project Owner) 和管理员 (Manager) 才能执行此操作。项目用户 (Project User) 没有权限执行重置。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsRawDataExport.html"></a></span><div class="tip">Unity Analytics 原始数据导出 (Raw Data Export)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsUpgrading.html"></a></span><div class="tip">升级 Unity Analytics</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

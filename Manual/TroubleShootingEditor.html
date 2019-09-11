@@ -1,0 +1,277 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Editor 故障排除 - Unity Manual">
+<title>Editor 故障排除 - Unity Manual</title>
+<meta name="description" content="下面的各个部分将介绍如何在不同情况下排除 Unity Editor 的故障以及预防问题。通常情况，应确保计算机满足所有系统要求，处于最新状态，并且您在系统中具有所需的用户权限。还要定期备份以确保项目的安全。">
+<meta property="og:description" content="下面的各个部分将介绍如何在不同情况下排除 Unity Editor 的故障以及预防问题。通常情况，应确保计算机满足所有系统要求，处于最新状态，并且您在系统中具有所需的用户权限。还要定期备份以确保项目的安全。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'TroubleShootingEditor';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/TroubleShootingEditor.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/TroubleShootingEditor.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/TroubleShootingEditor.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/TroubleShootingEditor.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/TroubleShootingEditor.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/TroubleShootingEditor.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/TroubleShootingEditor.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/TroubleShootingEditor.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/TroubleShootingEditor.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/TroubleShootingEditor.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/TroubleShootingEditor.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/TroubleShootingEditor.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/TroubleShootingEditor.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/TroubleShootingEditor.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/TroubleShootingEditor.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/TroubleShootingEditor.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/TroubleShootingEditor.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/TroubleShootingEditor.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/TroubleShootingEditor.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/TroubleShootingEditor.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/TroubleShootingEditor.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/TroubleShootingEditor.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/TroubleShootingEditor.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/TroubleShootingEditor.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="EditorFeatures.html">编辑器功能</a></li>
+<li>Editor 故障排除</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SmartMerge.html"></a></span><div class="tip">Smart Merge</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AdvancedDevelopment.html"></a></span><div class="tip">高级开发</div>
+</div>
+</div></div>
+<h1>Editor 故障排除</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>下面的各个部分将介绍如何在不同情况下排除 Unity Editor 的故障以及预防问题。通常情况，应确保计算机满足所有<a href="http://unity3d.com/unity/system-requirements">系统要求</a>，处于最新状态，并且您在系统中具有所需的用户权限。还要定期备份以确保项目的安全。</p>
+
+<h2>版本</h2>
+
+<p>可以在不同的文件夹中安装不同版本的 Editor。但是，请务必备份项目，因为这些项目可能会被较新的版本升级，而无法在较旧版本的 Unity 中打开它们。请参阅关于<a href="InstallingUnity.html">安装 Unity</a> 的手册页以了解更多信息。</p>
+
+<p>附加组件的许可证仅对具有相同主要版本号（例如 3.x 和 4.x）的 Unity 版本有效。如果升级到 Unity 的次要版本，例如 4.0 升级到 4.1，则将保留附加组件。</p>
+
+<h2>激活</h2>
+
+<p>互联网激活是生成 Unity 许可证的首选方法。但如果此过程出现问题，请按以下步骤操作：</p>
+
+<p>1.断开计算机与网络的连接，否则可能会出现“tx_id invalid”错误。
+1.选择 Manual Activation。
+1.单击 Save License Request。
+1.选择已知的保存位置，例如 Downloads 文件夹。
+1.重新连接到网络，并打开 https://license.unity3d.com/
+1.在 File 字段中，单击 Browse，然后选择许可证请求文件。
+1.选择 Unity 所需的许可证，并填写所需的信息。
+1.单击 Download License 并保存文件。
+1.返回 Unity 并根据需要选择 Manual Activation。
+1.单击 Read License，然后选择先前下载的许可证文件。</p>
+
+<p>如果仍然无法注册或登录用户帐户，请联系 <a href="mailto:support@unity3d.com">support@unity3d.com</a>。</p>
+
+<h2>无法启动</h2>
+
+<p>如果 Unity 在启动时崩溃，请首先要确保计算机符合最低<a href="http://unity3d.com/unity/system-requirements">系统要求</a>。此外，还需要更新到最新的图形驱动程序和音频驱动程序。</p>
+
+<p>如果出现磁盘写入错误，应检查用户帐户限制。在 MacOS 中时，请注意我们不建议使用“root 用户”，因为 Unity 尚未在此模式下进行测试。Unity 应始终对其文件夹具有写入权限，但如果选择手动授予这些权限，请检查以下文件夹：</p>
+
+<p>Windows：</p>
+
+<ul>
+<li>Unity 的安装文件夹</li>
+<li>
+<code>%AllUsersProfile%\Unity</code>（通常为 C:\ProgramData\Unity）</li>
+<li><code>C:\Documents and Settings\&lt;user&gt;\Local Settings\Application Data\Unity</code></li>
+<li><code>C:\Users\&lt;user&gt;\AppData\Local\Unity</code></li>
+</ul>
+
+<p>MacOS：</p>
+
+<ul>
+<li>Unity.app 包内容</li>
+<li><code>/Library/Application Support/Unity</code></li>
+<li><code>~/Library/Logs/Unity</code></li>
+</ul>
+
+<p>使用以非本机分区方法格式化的硬盘以及使用某些软件在存储设备之间转移数据时，一些用户遇到过问题。</p>
+
+<h3>字体</h3>
+
+<p>损坏的字体可能会导致 Unity 崩溃，可以按照以下步骤查找损坏的文件：</p>
+
+<p>Windows：</p>
+
+<p>1.打开计算机上的“Windows”文件夹中的 fonts 文件夹。
+2.从“View”菜单中选择“Details”。
+3.检查“Size”列中是否有大小为“0”的字体（表示文件存在问题）。
+4.删除损坏的字体并重新安装。</p>
+
+<p>MacOS：</p>
+
+<p>1.启动 Font Book 应用程序。
+2.选择所有字体。
+3.打开“File”菜单并选择“Validate Fonts”，随后有问题的字体将显示为无效。
+4.删除损坏的字体并重新安装。</p>
+
+<p>系统可能资源受限，例如在虚拟机中运行的情况下。使用任务管理器查找占用大量内存的进程。</p>
+
+<h3>损坏的项目或安装</h3>
+
+<p>Unity 可能会尝试打开一个损坏的项目，这可能包括默认的示例项目。在这种情况下，请重命名或移动项目的文件夹。Unity 正确启动后，可以根据需要恢复该项目的文件夹。</p>
+
+<p>如果安装发生损坏，可能需要重新安装 Unity，请参阅下面的说明。</p>
+
+<p>在 Windows 中，可能存在安装错误、注册表损坏、冲突等问题。例如，错误 0xC0000005 表示程序试图访问不应该访问的内存。如果最近添加了新硬件或驱动程序，请移除并更换硬件以确定是否是硬件导致的问题。运行诊断软件并查看关于操作系统故障排除的信息。</p>
+
+<h2>性能和崩溃</h2>
+
+<p>如果 Editor 运行缓慢或发生崩溃，特别是在构建时，这可能是由于正在消耗所有可用的系统资源引起的。请在构建项目时关闭所有其他应用程序。使用系统的实用程序对系统进行清理，并查看任务管理器 (Windows) 或活动监视器 (MacOS) 确定是否存在使用大量资源（例如内存）的进程。有时，病毒防护软件可能因为扫描过程而减慢甚至阻止文件系统。</p>
+
+<h2>项目丢失</h2>
+
+<p>有许多因素可能导致项目损坏，因此应<strong>定期备份项目</strong>，以防发生不幸的事故。在 MacOS 中，请使用专用的外部硬盘驱动器激活 TimeMachine。项目丢失后，可以尝试使用任何文件恢复实用程序进行恢复，但有时是不可逆转的。</p>
+
+<h2>重新安装</h2>
+
+<p>请按照以下步骤重新安装 Editor：</p>
+
+<p>1.卸载 Unity。在 MacOS 中，将 Unity 应用程序拖到垃圾箱。</p>
+
+<p>1.删除以下文件（如果存在）：</p>
+
+<pre><code>* Windows：
+    * `%AllUsersProfile%\Unity\`（通常为 C:\ProgramData\Unity）
+
+
+* MacOS：
+    * `/Library/Application Support/Unity/`
+</code></pre>
+
+<p>1.重新启动计算机。</p>
+
+<p>1.由于原始安装可能已损坏，请从我们的网站下载最新版本：http://unity3d.com/unity/download/archive</p>
+
+<p>1.重新安装 Unity。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SmartMerge.html"></a></span><div class="tip">Smart Merge</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AdvancedDevelopment.html"></a></span><div class="tip">高级开发</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

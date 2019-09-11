@@ -1,0 +1,252 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="车辆的排气烟雾 - Unity Manual">
+<title>车辆的排气烟雾 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/PartSysExhaustScreenshot.png">
+<meta name="description" content="汽车和许多其他车辆在将燃料转化为动力时会产生排气烟雾。可以使用粒子系统为车辆添加排气效果以作为巧妙的点睛之笔。">
+<meta property="og:description" content="汽车和许多其他车辆在将燃料转化为动力时会产生排气烟雾。可以使用粒子系统为车辆添加排气效果以作为巧妙的点睛之笔。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'PartSysExhaust';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PartSysExhaust.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PartSysExhaust.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PartSysExhaust.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PartSysExhaust.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PartSysExhaust.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PartSysExhaust.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PartSysExhaust.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PartSysExhaust.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PartSysExhaust.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PartSysExhaust.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/PartSysExhaust.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/PartSysExhaust.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/PartSysExhaust.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/PartSysExhaust.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PartSysExhaust.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PartSysExhaust.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PartSysExhaust.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PartSysExhaust.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PartSysExhaust.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PartSysExhaust.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PartSysExhaust.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PartSysExhaust.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PartSysExhaust.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PartSysExhaust.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="ParticleSystems.html">粒子系统</a></li>
+<li><a href="ParticleSystemHowTo.html">粒子系统操作方法</a></li>
+<li>车辆的排气烟雾</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PartSysExplosion.html"></a></span><div class="tip">简单爆炸</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PartSysVertexStreams.html"></a></span><div class="tip">粒子系统顶点流和标准着色器支持</div>
+</div>
+</div></div>
+<h1>车辆的排气烟雾</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>汽车和许多其他车辆在将燃料转化为动力时会产生排气烟雾。可以使用粒子系统为车辆添加排气效果以作为巧妙的点睛之笔。</p>
+
+<figure>
+<img src="../uploads/Main/PartSysExhaustScreenshot.png" alt="由粒子系统生成的排气效果">
+<figcaption>由粒子系统生成的排气效果</figcaption>
+</figure>
+
+<h2>粒子的时间轴</h2>
+
+<p>排气烟雾从管道中快速排出，但随后与大气接触时会迅速减慢速度。在减速过程中，排气烟雾会扩散，变得稀薄，很快消散在空气中。由于排气温度很高，当它通过周围较冷的空气时，还会略微上升。</p>
+
+<p>排气烟雾的粒子在开始时不得超过管道宽度，但随后会在其短暂的生命周期内显著增大。它通常在开始时为部分透明状态，随后与空气混合后逐渐淡化至完全透明状态。在动态性方面，粒子将以相当快的速度发射，但随后迅速减速，并还会略微上升。</p>
+
+<h2>实现</h2>
+
+<p>在 <em>Shape</em> 模块中，选择 <em>Cone</em> 形状并将其 <em>Angle</em> 属性设置为零；在这种情况下，“锥体 (Cone)”实际上是圆柱形管。该管道的 <em>Radius</em> 自然取决于车辆的大小，但通常可通过将 Scene 视图中的半径辅助图标与车辆模型相匹配来设置值（例如，车辆模型通常在尾部有排气管或孔，可与其大小进行匹配）。半径实际上在很大程度上决定了属性设置的选择，例如粒子大小和发射速率。在本示例中，假设车辆遵循 Unity 的标准尺寸惯例，即一个世界单位为一米；因此，半径设定为约 0.05 或 5cm。</p>
+
+<p>标准资源中的 <em>Smoke4</em> 材质提供了烟雾粒子的合适图形。如果尚未安装这些资源，请从菜单中选择 <strong>Assets &gt; Import Package &gt; Particles</strong>。然后，选择粒子系统的 <em>Renderer</em> 模块，并将 <em>Material</em> 属性设置为 <em>Smoke4</em>。</p>
+
+<p>五秒的默认生命周期通常对于汽车尾气而言太长，因此应打开粒子系统模块（其名称与游戏对象相同，例如“Exhaust”），并将 <em>Start Lifetime</em> 设置为大约 2.5 秒。同样在此模块中，将 <em>Simulation Space</em> 设置为 <em>World_，并将 </em>Gravity Modifier_ 设置为较小的负值，例如约 –0.1。通过使用世界模拟空间，即使车辆移动，烟雾也可停留在产生烟雾的位置。负重力效应导致烟雾粒子上升，使它们看起来好像是由热气体组成的。一个很好的额外做法是使用 <em>Start Rotation</em> 旁边的小菜单箭头选择 <em>Random Between Two Constants</em> 选项。将两个值分别设置为 0 和 360，烟雾粒子将在发射时随机旋转。大量排列方式相同的粒子看起来非常显眼，并会降低随机无形烟雾痕迹的效果。</p>
+
+<p>在此阶段，烟雾粒子开始看起来很逼真了，而且默认的发射速率会产生很好的发动机“嚓嘎声”效果。然而，烟雾并没有向外翻腾并消散。打开 <em>Color Over Lifetime</em> 模块，然后单击渐变右端的顶部渐变色标（此控件将控制颜色的“Alpha”值透明度）。将 Alpha 值设置为零，应该会看到场景中的烟雾粒子渐渐消失。根据发动机的洁净程度，可能还希望在开始时减小渐变的 Alpha 值；浓烟往往表示脏污、低效的燃烧物。</p>
+
+<p>除了淡化外，烟雾在逃逸时还应该增大，可以使用 <em>Size Over Lifetime</em> 模块轻松创建这种效果。打开此模块，选择曲线并滑动左端的曲线控制柄，使粒子以最大大小的一个比例开始发射。选择的确切大小取决于排气管的大小，但略大于管道的值会产生良好的气体飘散效果。（发射与管道相同大小的粒子表明气体通过管道保持形状，虽然气体没有确定的形状。）在 Scene 视图中使用粒子系统的模拟功能可获得烟良好的雾外观视觉效果。此外，如果烟雾消散程度达不到期望的效果，可在此时增大粒子系统模块中的 <em>Start Size</em>。</p>
+
+<p>最后，烟雾在消散过程中也会减慢速度。实现这一目标的一种简单方法是使用 <em>Force Over Lifetime</em> 模块。打开此模块，将 <em>Space</em> 选项设置为 _Local_，并将力的 Z 分量设置为负值，以指示粒子被力推回（系统沿对象的局部空间中的正 Z 方向发射粒子）。如果其他参数已按上述方式设置，则此处约 –0.75 的值对于系统便会非常有效。</p>
+
+<h2>用途</h2>
+
+<p>可以将排气粒子系统放置在主车辆的子对象上。对于简单游戏，可仅启用 <em>Play On Awake</em> 和 <em>Looping</em> 属性，然后让系统运行。但是，在大多数情况下，可能希望至少在车辆移动时改变粒子发射速率。这样做首先是为了真实性（即，发动机工作强度提高时产生更多烟雾），但也有助于防止烟雾粒子在车辆移动时散开。如果快速移动的车辆的发射速率太低，看起来会产生明显的“一股股”烟雾，而这是非常不真实的。</p>
+
+<p>可以通过脚本轻易改变发射速率。如果脚本中有一个表示发动机转速或车辆速度的变量，则可简单地将该值乘以一个常量，然后将结果分配给 ParticleSystem 的 emissionRate 属性。</p>
+
+<pre><code>    // C#
+
+        using UnityEngine;
+        using System.Collections;
+
+        public class PartScriptTestCS : MonoBehaviour {
+
+            public float engineRevs;
+            public float exhaustRate;
+
+            ParticleSystem exhaust;
+
+
+            void Start () {
+                exhaust = GetComponent&lt;ParticleSystem&gt;();
+            }
+    
+
+            void Update () {
+                exhaust.emissionRate = engineRevs * exhaustRate;
+            }
+
+        }
+
+
+
+        // JS
+
+        var engineRevs: float;
+        var exhaustRate: float;
+
+        var exhaust: ParticleSystem;
+
+
+        function Start() {
+            exhaust = GetComponent.&lt;ParticleSystem&gt;();
+        }
+
+
+        function Update () {
+            exhaust.emissionRate = engineRevs * exhaustRate;
+        }
+</code></pre>
+
+<h2>思路拓展</h2>
+
+<p>基本方案可产生相当逼真的排气烟雾效果，但可以注意到，当改变参数时，发动机的“特性”会发生变化。调整不当、效率低下的发动机往往不能完全燃烧燃料，因此会导致浓黑的烟雾在空气中持续弥漫很长时间。这种效果对于老旧的农用拖拉机来说是完美的，但对于高性能的跑车则不行。对于“洁净”的发动机，应使用较小的值来表示粒子的生命周期、不透明度和大小增加量。对于“脏”发动机，应增大这些值，可能还要使用 <em>Emission</em> 模块的 <em>Bursts</em> 属性来创建发动机噗噗声效果。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PartSysExplosion.html"></a></span><div class="tip">简单爆炸</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PartSysVertexStreams.html"></a></span><div class="tip">粒子系统顶点流和标准着色器支持</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

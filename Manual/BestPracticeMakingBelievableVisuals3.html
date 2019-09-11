@@ -1,0 +1,376 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="光照策略 - Unity Manual">
+<title>光照策略 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/BelievableVisualsHemisphereLighting.png">
+<meta name="description" content="在开始为场景创建最终资源并处理光照之前，您需要弄清楚自己的光照策略。在开发后期改变光照策略会对工作流程产生很大影响。在您进入生产之前花些时间确定好光照策略可以节省整体时间，还能让您获得更好的性能和更高的视觉保真度。">
+<meta property="og:description" content="在开始为场景创建最终资源并处理光照之前，您需要弄清楚自己的光照策略。在开发后期改变光照策略会对工作流程产生很大影响。在您进入生产之前花些时间确定好光照策略可以节省整体时间，还能让您获得更好的性能和更高的视觉保真度。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'BestPracticeMakingBelievableVisuals3';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/BestPracticeMakingBelievableVisuals3.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/BestPracticeMakingBelievableVisuals3.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/BestPracticeMakingBelievableVisuals3.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/BestPracticeMakingBelievableVisuals3.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/BestPracticeMakingBelievableVisuals3.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/BestPracticeMakingBelievableVisuals3.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/BestPracticeMakingBelievableVisuals3.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/BestPracticeMakingBelievableVisuals3.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/BestPracticeMakingBelievableVisuals3.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/BestPracticeMakingBelievableVisuals3.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/BestPracticeMakingBelievableVisuals3.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/BestPracticeMakingBelievableVisuals3.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/BestPracticeMakingBelievableVisuals3.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/BestPracticeMakingBelievableVisuals3.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/BestPracticeMakingBelievableVisuals3.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/BestPracticeMakingBelievableVisuals3.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/BestPracticeMakingBelievableVisuals3.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/BestPracticeMakingBelievableVisuals3.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/BestPracticeMakingBelievableVisuals3.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/BestPracticeMakingBelievableVisuals3.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/BestPracticeMakingBelievableVisuals3.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/BestPracticeMakingBelievableVisuals3.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/BestPracticeMakingBelievableVisuals3.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/BestPracticeMakingBelievableVisuals3.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="BestPracticeGuides.html">最佳实践指南</a></li>
+<li><a href="BestPracticeMakingBelievableVisuals.html">在 Unity 中制作可信的视觉效果</a></li>
+<li>光照策略</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeMakingBelievableVisuals2.html"></a></span><div class="tip">在 Unity 中准备渲染设置</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeMakingBelievableVisuals4.html"></a></span><div class="tip">Modeling</div>
+</div>
+</div></div>
+<h1>光照策略</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>在开始为场景创建最终资源并处理光照之前，您需要弄清楚自己的光照策略。在开发后期改变光照策略会对工作流程产生很大影响。在您进入生产之前花些时间确定好光照策略可以节省整体时间，还能让您获得更好的性能和更高的视觉保真度。</p>
+
+<p>与所有开发一样，每项设置几乎总是存在优缺点，需要在二者之间进行权衡。但有时，某些技术会为您提供在特定约束条件下减少这些折中的选项。了解每个功能的利弊可以让您选择最适合项目的功能。</p>
+
+<p>一个具有室外区域的典型白天场景拥有以下光照组件：</p>
+
+<ul>
+<li>半球光照（天空贡献值）</li>
+<li>直射光（太阳 + 局部光照）</li>
+<li>间接光（反弹和反射光照）</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsHemisphereLighting.png" alt="">
+</figure>
+
+<p>这三个组件看起来似乎很简单。但是，由于您可以混搭__实时__光照、<strong>混合__光照、</strong>烘焙__光照、静态游戏对象和动态游戏对象，因此最后可得出多种光照选择。</p>
+
+<p>Unity 支持许多不同的光照策略和项目场景。要了解光照模式和设置，请参阅有关<a href="LightModes.html">光照模式</a>的文档。</p>
+
+<p>对于新手来说，要弄清楚哪种设置最适合他们的场景以及如何权衡取舍，可能会让他们不知所措。因此，让我们考虑最常用的光照设置：</p>
+
+<ul>
+<li>
+<a href="#realtime">基本实时光照</a>：有可见的光源镜面高光，但没有间接光照。</li>
+<li>
+<a href="#baked">烘焙光照</a>：有可见的柔和烘焙阴影，在高分辨率下有可见的静态间接光照，但没有光源镜面高光，而且动态光照游戏对象不投射阴影。</li>
+<li>
+<a href="#mixed">混合光照</a>：与__烘焙__光照类似，但是光源会产生镜面反应，而且动态光照游戏对象会投射阴影。</li>
+<li>
+<a href="#realtimeGI">实时光照和 GI（全局光照）</a>：有可见的适当间接光照反应和镜面反应，光源全部都可以移动和更新，但不存在有角度的柔和阴影。</li>
+<li>
+<a href="#all">启用所有选项</a>：根据每个光源的设置，您可以实现上述所有选项的组合。</li>
+</ul>
+
+<p>以下图像显示了这些设置之间的显著差异：</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisuals5LightModes.gif" alt="未启用环境光遮挡或烘焙光照的五种不同光照模式">
+<figcaption>未启用环境光遮挡或烘焙光照的五种不同光照模式</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/BelievableVisuals4LightModes.gif" alt="启用了环境光遮挡和烘焙光照的四种不同光照模式">
+<figcaption>启用了环境光遮挡和烘焙光照的四种不同光照模式</figcaption>
+</figure>
+
+<p><strong>注意__：__实时 GI</strong> 不能烘焙静态环境光遮挡，因此未包括在内。</p>
+
+<p><a name="realtime"></a> </p>
+
+<h2>基本实时光照和环境光（无实时 GI 和烘焙 GI）</h2>
+
+<p>基本实时光照通常用于可视化风格的项目以及原型设计阶段。</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsBaked.gif" alt="基本实时光照">
+<figcaption>基本实时光照</figcaption>
+</figure>
+
+<p><strong>典型的平台目标</strong>：游戏主机和 PC</p>
+
+<p><strong>优点</strong>：</p>
+
+<ul>
+<li>所有直射光和阴影都是实时应用的，因此可移动。</li>
+<li>允许快速迭代，因为没有预计算、烘焙和网格准备过程。</li>
+<li>动态和静态游戏对象以相同的方法照亮，因此不需要光照探针 (Light Probes)。</li>
+</ul>
+
+<p><strong>缺点</strong>：</p>
+
+<ul>
+<li>无半球遮挡，只有天空盒/环境光值，并且区域中的颜色不会被直接光照照亮。</li>
+<li>如果没有 GI 或间接光照组件，场景可能无法实现最佳视觉效果。</li>
+</ul>
+
+<p><a name="baked"></a> </p>
+
+<h2>所有烘焙光照和光照探针</h2>
+
+<p>烘焙光照通常适用于存在运行时性能问题但还有可利用的内存空间的游戏，例如自上而下的等距移动端游戏和高帧率 VR 游戏。</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsBakedLightProbes.gif" alt="启用和不启用环境光遮挡时的全烘焙光照的比较">
+<figcaption>启用和不启用环境光遮挡时的全烘焙光照的比较</figcaption>
+</figure>
+
+<p><strong>典型的平台目标</strong>：移动平台、VR、游戏主机和低端 PC</p>
+
+<p><strong>优点</strong>：</p>
+
+<ul>
+<li>为静态游戏对象烘焙所有光源。它们会产生环境光遮挡和间接光照。</li>
+<li>Unity 可以将面光源烘焙支持和柔和阴影角度烘焙到静态照亮的游戏对象上。</li>
+<li>在此处列出的常见设置中具有最快的运行时性能。</li>
+</ul>
+
+<p><strong>缺点</strong>：</p>
+
+<ul>
+<li>可能减慢光照迭代，因为光源会被烘焙，这意味着 Unity 需要在场景发生变化时重新计算光源（除非您使用的是渐进光照贴图 (Progressive Lightmapper)）</li>
+<li>动态照亮的游戏对象仅使用光照探针照亮。</li>
+<li>镜面高光仅依赖于立方体贴图和反射，而不依赖于光源。</li>
+<li>动态游戏对象不产生阴影。</li>
+<li>可能需要大量的运行时内存，具体取决于场景中使用的光照贴图纹理数量。</li>
+<li>如果游戏对象纹理图表发生重叠，可能需要创建纹理坐标通道 2（用于光照贴图的 UV2）。</li>
+</ul>
+
+<p><a name="mixed"></a> </p>
+
+<h2>采用阴影遮罩和光照探针的混合光照</h2>
+
+<p>混合光照通常在日常光照（例如太阳运动）不重要的游戏中有用。</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsShadowmaskLightProbes.gif" alt="启用和不启用环境光遮挡时的__阴影遮罩____混合__光照的比较">
+<figcaption>启用和不启用环境光遮挡时的__阴影遮罩____混合__光照的比较</figcaption>
+</figure>
+
+<p><strong>典型的平台目标</strong>：VR、游戏主机和 PC</p>
+
+<p><strong>优点</strong>：</p>
+
+<ul>
+<li>与所有烘焙光照类似，但在混合光照中，动态游戏对象可获得实时镜面光照并投射实时阴影，而静态游戏对象可获得烘焙阴影，从而产生更好的视觉品质。</li>
+</ul>
+
+<p><strong>缺点</strong>：</p>
+
+<ul>
+<li>游戏对象的阴影遮罩数量不超过 4。额外的阴影投射光源将被烘焙。</li>
+<li>运行时渲染实时光源会更加消耗资源。</li>
+<li>混合光源在某些设置下会严重影响性能。</li>
+</ul>
+
+<p>有关阴影遮罩光照的更多信息，请参阅<a href="LightMode-Mixed-Shadowmask.html">阴影遮罩</a>。</p>
+
+<p><a name="realtimeGI"></a> </p>
+
+<h2>采用实时 GI 和光照探针的实时光照</h2>
+
+<p>此设置在开放区域游戏中非常有用，在此类游戏中，您需要日常光照更新（例如太阳移动）和动态光照效果。</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsRealtimeGILightProbes.gif" alt="实时 GI，随着方向光的变化而显示间接光照更新">
+<figcaption>实时 GI，随着方向光的变化而显示间接光照更新</figcaption>
+</figure>
+
+<p><strong>典型的平台目标</strong>：游戏主机和 PC</p>
+
+<p><strong>优点</strong>：</p>
+
+<ul>
+<li>此设置支持通过实时间接光照进行快速光照迭代。</li>
+<li>动态和静态游戏对象可获得实时镜面光照和阴影。</li>
+<li>在间接光照中可使用比烘焙光照更少的内存。</li>
+<li>在更新全局光照时具有固定的 CPU 性能影响。</li>
+</ul>
+
+<p><strong>缺点</strong>：</p>
+
+<ul>
+<li>遮挡的细节化程度不如烘焙光照，通常必须通过屏幕空间环境光遮挡 (SSAO) 和具体对象纹理烘焙 AO 进行增强。</li>
+<li>静态游戏对象没有区域/光源角度柔和阴影。</li>
+<li>实时光照在某些设置下会严重影响性能。</li>
+<li>如果有太多游戏对象对静态光照产生影响，预计算时间可能会花费大量时间，尤其是在没有优化 UV 设置的情况下。有关更多信息，请参阅<a href="LightingGiUvs.html">全局光照 UV</a>。</li>
+</ul>
+
+<p>有关优化__实时 GI__ 的深入信息，请参阅 Unity 提供的<a href="https://unity3d.com/learn/tutorials/topics/graphics/introduction-precomputed-realtime-gi">预计算的实时 GI 简介</a>教程。</p>
+
+<p><a name="all"></a> </p>
+
+<h2>启用所有选项</h2>
+
+<p>通常情况下，您只希望在严格控制内存使用量和限制性能并具有高保真要求的游戏中启用所有光照选项。仅当您完全了解每个系统并知道如何处理每个光照组合的情况下，才应这样做。</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsAllLightOptions.gif" alt="启用所有选项，允许在 Unity 中使用所有可能的光照技术">
+<figcaption>启用所有选项，允许在 Unity 中使用所有可能的光照技术</figcaption>
+</figure>
+
+<p><strong>典型的平台目标</strong>：游戏主机和 PC</p>
+
+<p><strong>优点</strong>：</p>
+
+<ul>
+<li>这是一整套光照特性，为您提供全部功能。</li>
+</ul>
+
+<p><strong>缺点</strong>：</p>
+
+<ul>
+<li>在运行时具有高性能要求，并具有高内存使用量。</li>
+<li>需要更多 UV 创作和烘焙时间，因此增加了工作流程时间。</li>
+</ul>
+
+<p>为了帮助您了解光照，Spotlight Tunnel 示例场景使用具有实时 GI 的实时光照。这种情况下可提供各种各样的镜面反应和良好的反弹光照，并允许您快速迭代光照。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–03–21 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li><span class="page-history">在 Unity 2017.3 中添加了制作可信视觉效果最佳实践指南</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeMakingBelievableVisuals2.html"></a></span><div class="tip">在 Unity 中准备渲染设置</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeMakingBelievableVisuals4.html"></a></span><div class="tip">Modeling</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

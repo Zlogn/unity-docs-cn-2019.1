@@ -1,0 +1,390 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="图形方法 - Unity Manual">
+<title>图形方法 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/MobileOptimizationGraphicsMethods-0.jpg">
+<meta name="description" content="移动设备有多大的功能？应该如何相应规划游戏？如果游戏运行缓慢，且性能分析器表明游戏存在渲染瓶颈，那么如何知道应该修改什么？如何让游戏既有好看的外观又能快速运行？本页面将专门就这些方法做一般性和非技术性的说明。如果需要了解具体细节，请参阅渲染优化页面。">
+<meta property="og:description" content="移动设备有多大的功能？应该如何相应规划游戏？如果游戏运行缓慢，且性能分析器表明游戏存在渲染瓶颈，那么如何知道应该修改什么？如何让游戏既有好看的外观又能快速运行？本页面将专门就这些方法做一般性和非技术性的说明。如果需要了解具体细节，请参阅渲染优化页面。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'MobileOptimizationGraphicsMethods';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/MobileOptimizationGraphicsMethods.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/MobileOptimizationGraphicsMethods.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/MobileOptimizationGraphicsMethods.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/MobileOptimizationGraphicsMethods.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/MobileOptimizationGraphicsMethods.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/MobileOptimizationGraphicsMethods.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/MobileOptimizationGraphicsMethods.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/MobileOptimizationGraphicsMethods.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/MobileOptimizationGraphicsMethods.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/MobileOptimizationGraphicsMethods.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/MobileOptimizationGraphicsMethods.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/MobileOptimizationGraphicsMethods.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/MobileOptimizationGraphicsMethods.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/MobileOptimizationGraphicsMethods.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/MobileOptimizationGraphicsMethods.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/MobileOptimizationGraphicsMethods.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/MobileOptimizationGraphicsMethods.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/MobileOptimizationGraphicsMethods.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/MobileOptimizationGraphicsMethods.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/MobileOptimizationGraphicsMethods.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/MobileOptimizationGraphicsMethods.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/MobileOptimizationGraphicsMethods.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/MobileOptimizationGraphicsMethods.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/MobileOptimizationGraphicsMethods.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
+<li><a href="MobileDeveloperChecklist.html">移动平台开发者检查清单</a></li>
+<li><a href="MobileOptimizationPracticalGuide.html">移动平台优化实用指南</a></li>
+<li>图形方法</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MobileOptimizationPracticalGuide.html"></a></span><div class="tip">移动平台优化实用指南</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="MobileOptimizationScriptingMethods.html"></a></span><div class="tip">脚本和游戏方法</div>
+</div>
+</div></div>
+<h1>图形方法</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>移动设备有多大的功能？应该如何相应规划游戏？如果游戏运行缓慢，且性能分析器表明游戏存在渲染瓶颈，那么如何知道应该修改什么？如何让游戏既有好看的外观又能快速运行？本页面将专门就这些方法做一般性和非技术性的说明。如果需要了解具体细节，请参阅<a href="MobileOptimizationPracticalRenderingOptimizations.html">渲染优化</a>页面。</p>
+
+<figure>
+<img src="../uploads/Main/MobileOptimizationGraphicsMethods-0.jpg" alt="">
+</figure>
+
+<h2>可合理期望在当前消费者移动设备上运行：</h2>
+
+<ul>
+<li>光照贴图的静态几何体。但要注意：
+
+<ul>
+<li>使用大量 Alpha 测试着色器</li>
+<li>凹凸贴图，特别是使用内置着色器。</li>
+<li>庞大的多边形数量</li>
+</ul>
+</li>
+<li>动画角色，甚至使用复杂的着色器！但要注意：
+
+<ul>
+<li>庞大的群体或复杂多边形角色</li>
+</ul>
+</li>
+<li>带有精灵的 2D 游戏。但要注意：
+
+<ul>
+<li>过度绘制，或大量图层彼此层叠绘制。</li>
+</ul>
+</li>
+<li>粒子效果。但要注意：
+
+<ul>
+<li>高密度大型粒子。（大量粒子彼此层叠绘制。这是另一种过度绘制情况）</li>
+<li>数量奇多的粒子或粒子碰撞体。</li>
+</ul>
+</li>
+<li>物理组件。但要注意：
+
+<ul>
+<li>网格碰撞体。</li>
+<li>大量活跃体。</li>
+</ul>
+</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/MobileOptimizationGraphicsMethods-1.jpg" alt="">
+</figure>
+
+<h2>不能合理期望在当前消费者移动设备上运行：</h2>
+
+<ul>
+<li>全屏幕图像效果，如发光和景深。</li>
+<li>动态每像素光照（多个光源标记为 Important 且未烘焙到光照贴图中）
+
+<ul>
+<li>对于使用的每个动态光源，每个受影响的对象都会被额外绘制一次，这很快就会导致变慢。</li>
+</ul>
+</li>
+<li>全体实时阴影
+
+<ul>
+<li>Unity 支持移动平台上的实时阴影，但使用时必须非常明智，可能仅限用于高端设备。</li>
+</ul>
+</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/MobileOptimizationGraphicsMethods-2.jpg" alt="">
+</figure>
+
+<h2>示例 - 如何制作一流的移动端游戏</h2>
+
+<h3><a href="http://www.youtube.com/watch?v=YhA0cbu1BxI">暗影之枪 (Shadowgun)</a></h3>
+
+<p>Shadowgun 是体现当前移动端硬件能力的令人印象深刻的例子。但更确切地说，这款游戏充分说明了移动端硬件的限制以及如何克服这些限制。特别是因为这款游戏的一小部分已在此<a href="http://blogs.unity3d.com/2012/03/23/shadowgun-optimizing-for-mobile-sample-level/">博客文章</a>中公开发布，所以得出了这样的结论。</p>
+
+<p>下面概要列出了 Shadowgun 为了确保性能而进行的优化：</p>
+
+<ul>
+<li>动态光照 - 几乎不使用。
+
+<ul>
+<li>使用模糊阴影和光照贴图代替所有真实阴影。</li>
+<li>对角色使用光照探针代替真正光源。
+
+<ul>
+<li>通过脚本将枪口闪光添加到光照探针数据中。</li>
+</ul>
+</li>
+<li>唯一的动态每像素光照是用于计算角色上 BRDF 的任意光线方向。</li>
+</ul>
+</li>
+<li>凹凸贴图 - 几乎不使用。
+
+<ul>
+<li>仅对角色使用真正的凹凸贴图。</li>
+<li>尽可能将对比度和细节烘焙到漫射纹理贴图中。来自凹凸贴图的光照信息将烘焙到其中。</li>
+<li>一个很好的例子是他们的雕像纹理，或者闪亮的墙壁（如右图所示）。未使用凹凸贴图进行渲染，通过烘焙到纹理中来伪造镜面反射。光照贴图与基于顶点光照的镜面高光相结合，为这些模型提供了闪亮的外观。</li>
+<li>如果想了解如何创建这样的纹理，请查看<a href="MobileOptimizationPracticalRenderingOptimizations.html">渲染优化</a>页面。</li>
+</ul>
+</li>
+<li>密集粒子 - 避免使用。
+
+<ul>
+<li>使用 UV 滚动纹理代替密集粒子效果。</li>
+</ul>
+</li>
+<li>雾效 - 避免使用。
+
+<ul>
+<li>他们的神光是手工建模实现的。</li>
+<li>使用淡入和淡出的单个平面实现电影雾效，而不实际渲染任何雾。
+
+<ul>
+<li>这样会加快速度，因为平面很少而且相距很远，这意味着不必在每个像素上和每个着色器中计算雾。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>发光 - 避免使用。
+
+<ul>
+<li>使用混合的精灵平面在某些对象上呈现发光的外观。</li>
+</ul>
+</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/MobileOptimizationGraphicsMethods-3.jpg" alt="">
+</figure>
+
+<h3><a href="http://video.unity3d.com/video/4991636/sky-castle-demo">天空城堡演示 (Sky Castle Demo)</a></h3>
+
+<p>此演示旨在展示 Unity 在高端 Android 设备上的功能。</p>
+
+<ul>
+<li>动态光照 - 未使用。
+
+<ul>
+<li>仅使用光照贴图。</li>
+</ul>
+</li>
+<li>凹凸贴图 - 使用
+
+<ul>
+<li>砖块全都采用凹凸贴图，由方向光照贴图照亮。这正是“高端设备”的用武之地。</li>
+</ul>
+</li>
+<li>实时反射 - 受限。
+
+<ul>
+<li>他们小心地将实时反射表面分开放置在隔离的区域中，这样一次只能运行一个，并可轻松剔除需要渲染两次的环境。</li>
+</ul>
+</li>
+</ul>
+
+<h2>底线 - 对游戏的意义</h2>
+
+<p>越是遵从和理解移动设备的局限性，游戏外观就越好，而且表现也会越流畅。如果要制作一款适用于移动设备的高规格游戏，您将会因为了解 Unity 的图形管线并能够编写自己的着色器而受益。但是如果想要立即使用某些现成的着色器，ShadowGun 的着色器（可从<a href="http://blogs.unity3d.com/2012/03/23/shadowgun-optimizing-for-mobile-sample-level/">此处</a>获取）是一个很好的起点。</p>
+
+<h3>不要进行模拟而是进行烘焙！</h3>
+
+<p>游戏试图遵循自然规律是没有问题的。每个抛射物的抛射运动以及闪亮铬金属每个像素的颜色都是从先用于模拟现实世界观察结果的公式推导而来的。但是，游戏的一部分涉及科学模拟，另一部分涉及图形绘制。您不会因为物理上准确的渲染就能在移动市场中赢得竞争；如果试图自始至终模拟现实世界，硬件根本就不存在，最终游戏会变得很受限、单调和迟钝。</p>
+
+<p>必须充分利用多边形和混合模式，就像它们是画笔一样。</p>
+
+<p><a href="http://www.youtube.com/watch?v=YhA0cbu1BxI">Shadowgun</a> 中显示的<a href="MobileOptimizationPracticalRenderingOptimizations.html">烘焙凹凸贴图</a>就是很好的例子。纹理中已经存在镜面高光，人眼不会注意到它们实际上没有与反射光和视图方向对齐，它们只是纹理上的高对比度细节，完全是伪造的，但最终看起来很棒。这是一种常见的作弊技术，已在许多成功的游戏中使用。通过比较<a href="http://en.wikipedia.org/wiki/File:First_official_halo_screenshot.jpg">曾经发布的第一个 Halo 截屏</a>中的头盔罩与此<a href="http://halo.wikia.com/wiki/File:MJOLNIR_Armor.jpg">发布截屏</a>中的头盔罩，看起来头盔顶部突起的盔甲在头盔罩中反射，但实际上反射被烘焙到头盔罩纹理中。在《英雄联盟》中，<a href="http://www.youtube.com/watch?v=TQSLPO8LEhY&amp;t=0m34s">魔法效果</a>似乎附加了像素光源，但实际上是一个混合平面，其纹理可能是通过对地面上闪烁的像素光源进行截屏而生成的。</p>
+
+<h3>表现良好的方面：</h3>
+
+<ul>
+<li>光照贴图的静态几何体
+
+<ul>
+<li>夸张的光照和动态性很强的环境不能一起使用。二者选其一。</li>
+</ul>
+</li>
+<li>用于移动对象的光照探针
+
+<ul>
+<li>当前的移动端硬件并不真正支持大量动态光源，也无法实现阴影。对于具有静态光照的复杂游戏世界，光照探针是一种非常简洁的解决方案。</li>
+</ul>
+</li>
+<li>专用着色器和细节化的高对比度纹理
+
+<ul>
+<li>ShadowGun 中的着色器最大限度减少了每像素计算并利用了复杂和高质量的纹理。请参阅<a href="MobileOptimizationPracticalRenderingOptimizations.html">渲染优化</a>页面以了解如何在着色器很简单的情况下使纹理看起来很出色。</li>
+</ul>
+</li>
+<li>卡通图形
+
+<ul>
+<li>谁说游戏必须看起来像照片？如果让光照和氛围表现成为纹理美术师的工作，而不是依托于引擎，那么几乎就不用担心优化渲染的问题了。</li>
+</ul>
+</li>
+</ul>
+
+<h3>表现不良的方面：</h3>
+
+<ul>
+<li>发光和其他后期处理效果
+
+<ul>
+<li>如果可能，使用混合四边形来模拟这样的效果，请查看 Shadowgun 项目了解这方面的示例。</li>
+</ul>
+</li>
+<li>凹凸贴图，特别是使用内置着色器
+
+<ul>
+<li>谨慎使用，仅限于最重要的角色或对象。任何可能占据整个屏幕的对象都不应该采用凹凸贴图。</li>
+<li>应将更多细节和对比度烘焙到漫射贴图中，而不是使用凹凸贴图。《英雄联盟》的效果便是在业内成功运用此方法的一个有趣例子。</li>
+</ul>
+</li>
+</ul>
+
+<h3>但该怎么做呢？</h3>
+
+<p>请参阅<a href="MobileOptimizationPracticalRenderingOptimizations.html">渲染优化</a>页面。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MobileOptimizationPracticalGuide.html"></a></span><div class="tip">移动平台优化实用指南</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="MobileOptimizationScriptingMethods.html"></a></span><div class="tip">脚本和游戏方法</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

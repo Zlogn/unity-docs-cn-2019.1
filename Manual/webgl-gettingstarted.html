@@ -1,0 +1,203 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="WebGL 开发入门 - Unity Manual">
+<title>WebGL 开发入门 - Unity Manual</title>
+<meta name="description" content="The WebGL build option allows Unity to publish content as JavaScript programs which use HTML5/JavaScript, WebAssembly, WebGL rendering API and other web standards to run Unity content in a web browser. To build and test your content for WebGL, choose the WebGL build target in the Build Player window, and click Build &amp; Run.">
+<meta property="og:description" content="The WebGL build option allows Unity to publish content as JavaScript programs which use HTML5/JavaScript, WebAssembly, WebGL rendering API and other web standards to run Unity content in a web browser. To build and test your content for WebGL, choose the WebGL build target in the Build Player window, and click Build &amp; Run.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'webgl-gettingstarted';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/webgl-gettingstarted.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/webgl-gettingstarted.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/webgl-gettingstarted.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/webgl-gettingstarted.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/webgl-gettingstarted.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/webgl-gettingstarted.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/webgl-gettingstarted.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/webgl-gettingstarted.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/webgl-gettingstarted.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/webgl-gettingstarted.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/webgl-gettingstarted.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/webgl-gettingstarted.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/webgl-gettingstarted.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/webgl-gettingstarted.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/webgl-gettingstarted.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/webgl-gettingstarted.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/webgl-gettingstarted.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/webgl-gettingstarted.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/webgl-gettingstarted.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/webgl-gettingstarted.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/webgl-gettingstarted.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/webgl-gettingstarted.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/webgl-gettingstarted.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/webgl-gettingstarted.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
+<li><a href="webgl.html">WebGL</a></li>
+<li>WebGL 开发入门</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-PlayerSettingsWebGL.html"></a></span><div class="tip">WebGL Player settings</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="webgl-browsercompatibility.html"></a></span><div class="tip">WebGL 浏览器兼容性</div>
+</div>
+</div></div>
+<h1>WebGL 开发入门</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>Unity WebGL 是什么？</h2>
+
+<p>The WebGL build option allows Unity to publish content as JavaScript programs which use HTML5/JavaScript, WebAssembly, WebGL rendering API and other web standards to run Unity content in a web browser. To build and test your content for WebGL, choose the WebGL build target in the <strong>Build Player</strong> window, and click <strong>Build &amp; Run</strong>.</p>
+
+<h2>技术概述</h2>
+
+<p>We use the <a href="https://kripken.github.io/emscripten-site/">emscripten</a> compiler toolchain to cross-compile the Unity runtime code (written in C and C++) into <a href="https://webassembly.org/">WebAssembly</a> (also known as Wasm), which has been designed to be small in size, load-time and memory efficient as well as able to deliver close to native speed execution. For more information about WebAssembly in Unity, check this <a href="https://blogs.unity3d.com/2018/08/15/webassembly-is-here/">blog post</a>.</p>
+
+<p>To convert the .NET game code (your C# scripts) into WebAssembly, we use a technology called <a href="IL2CPP.html">IL2CPP</a>. IL2CPP takes .NET bytecode and converts it to corresponding C++ source files, which is then compiled using emscripten to convert your scripts to Wasm.</p>
+
+<h2>平台支持</h2>
+
+<p>桌面平台的大多数主要浏览器的当前版本都支持 Unity WebGL 内容，但不同浏览器提供的<a href="webgl-browsercompatibility.html">支持程度存在差异</a>。Unity WebGL 不支持移动设备。</p>
+
+<p>并非所有 Unity 功能都可用于 WebGL 构建，主要是由于平台的限制。具体而言：</p>
+
+<ul>
+<li><p>由于 JavaScript 中缺少线程支持，因此不支持线程。在 Unity 内部使用线程来加速性能以及在脚本代码和托管的 dll 中使用线程都是不受支持的。实质上不支持 <code>System.Threading</code> 命名空间中的任何内容。</p></li>
+<li><p>无法在 Visual Studio 中调试 WebGL 构建。请参阅：<a href="webgl-debugging.html">对 WebGL 构建进行调试和故障排除</a>。</p></li>
+<li><p>出于安全考虑，浏览器不允许直接访问 IP 套接字来进行联网。请参阅：<a href="webgl-networking.html">WebGL 网络</a>。</p></li>
+<li><p>WebGL 图形 API 等效于 OpenGL ES 2.0 和 3.0，存在一些限制。请参阅：<a href="webgl-graphics.html">WebGL 图形</a>。</p></li>
+<li><p>WebGL 构建使用基于 <strong>Web 音频</strong> API 的自定义音频后端。此情况下仅支持基本音频功能。请参阅：<a href="webgl-audio.html">使用 WebGL 中的音频</a>。</p></li>
+<li><p>WebGL 是一个 AOT 平台，因此不允许使用 <code>System.Reflection.Emit</code> 来动态生成代码。在所有其他 IL2CPP 平台、iOS 和大多数游戏主机上都是如此。</p></li>
+</ul>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–03–19 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">从 2018.1 开始，MonoDevelop 由 Visual Studio 取代</span></p></li>
+<li><p><span class="page-history">WebAssembly replaced asm.js from 2018.2</span></p></li>
+<li><p><span class="page-history">asm.js removed in 2019.1</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-PlayerSettingsWebGL.html"></a></span><div class="tip">WebGL Player settings</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="webgl-browsercompatibility.html"></a></span><div class="tip">WebGL 浏览器兼容性</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

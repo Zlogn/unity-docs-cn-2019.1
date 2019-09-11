@@ -1,0 +1,303 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="资源审核 - Unity Manual">
+<title>资源审核 - Unity Manual</title>
+<meta name="description" content="实际项目中发现的许多问题都是源自无心之过：临时的&amp;#8220;测试&amp;#8221;更改和疲惫不堪的开发人员的误点击可能会暗地里添加性能不良的资源或更改现有资源的导入设置。">
+<meta property="og:description" content="实际项目中发现的许多问题都是源自无心之过：临时的&amp;#8220;测试&amp;#8221;更改和疲惫不堪的开发人员的误点击可能会暗地里添加性能不良的资源或更改现有资源的导入设置。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'BestPracticeUnderstandingPerformanceInUnity4';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/BestPracticeUnderstandingPerformanceInUnity4.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/BestPracticeUnderstandingPerformanceInUnity4.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/BestPracticeUnderstandingPerformanceInUnity4.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/BestPracticeUnderstandingPerformanceInUnity4.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/BestPracticeUnderstandingPerformanceInUnity4.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/BestPracticeUnderstandingPerformanceInUnity4.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/BestPracticeUnderstandingPerformanceInUnity4.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/BestPracticeUnderstandingPerformanceInUnity4.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/BestPracticeUnderstandingPerformanceInUnity4.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/BestPracticeUnderstandingPerformanceInUnity4.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/BestPracticeUnderstandingPerformanceInUnity4.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/BestPracticeUnderstandingPerformanceInUnity4.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/BestPracticeUnderstandingPerformanceInUnity4.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/BestPracticeUnderstandingPerformanceInUnity4.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/BestPracticeUnderstandingPerformanceInUnity4.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/BestPracticeUnderstandingPerformanceInUnity4.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/BestPracticeUnderstandingPerformanceInUnity4.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/BestPracticeUnderstandingPerformanceInUnity4.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/BestPracticeUnderstandingPerformanceInUnity4.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/BestPracticeUnderstandingPerformanceInUnity4.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/BestPracticeUnderstandingPerformanceInUnity4.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/BestPracticeUnderstandingPerformanceInUnity4.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/BestPracticeUnderstandingPerformanceInUnity4.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/BestPracticeUnderstandingPerformanceInUnity4.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="BestPracticeGuides.html">最佳实践指南</a></li>
+<li><a href="BestPracticeUnderstandingPerformanceInUnity.html">了解 Unity 中的优化</a></li>
+<li>资源审核</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeUnderstandingPerformanceInUnity3.html"></a></span><div class="tip">协程</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeUnderstandingPerformanceInUnity4-1.html"></a></span><div class="tip">了解托管堆</div>
+</div>
+</div></div>
+<h1>资源审核</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>实际项目中发现的许多问题都是源自无心之过：临时的“测试”更改和疲惫不堪的开发人员的误点击可能会暗地里添加性能不良的资源或更改现有资源的导入设置。</p>
+
+<p>对于任何大规模的项目，最好是将防止人为错误作为第一道防线。编写一小段代码来禁止将 4K 未压缩纹理添加到项目中，是相对简单的事情。</p>
+
+<p>但是，这种错误操作却是十分常见的。一个 4K 的未压缩纹理会占用 60 MB 的内存。在低端移动设备（如 iPhone 4S）上，占用的内存超过大约 180–200 MB 是十分危险的。如果误添加此类纹理，就会无意中占用应用程序内存预算的三分之一到四分之一，并导致难以诊断的内存不足错误。</p>
+
+<p>虽然现在可以使用 5.3 版内存性能分析器来跟踪这些问题，但最好在最初就确保这些错误不可能发生。</p>
+
+<h2>使用 AssetPostprocessor</h2>
+
+<p>Unity Editor 中的 <code>AssetPostprocessor</code> 类可用于在 Unity 项目上强制执行某些最低标准。导入资源时将回调此类。要使用此类，应继承 <code>AssetPostprocessor</code> 并实现一个或多个 <code>OnPreprocess</code> 方法。重要的方法包括：</p>
+
+<ul>
+<li><p><code>OnPreprocessTexture</code></p></li>
+<li><p><code>OnPreprocessModel</code></p></li>
+<li><p><code>OnPreprocessAnimation</code></p></li>
+<li><p><code>OnPreprocessAudio</code></p></li>
+</ul>
+
+<p>请参阅 <a href="../ScriptReference/AssetPostprocessor.html">AssetPostprocessor</a> 的脚本参考，了解更多可能的 <code>OnPreprocess</code> 方法。</p>
+
+<pre><code>
+public class ReadOnlyModelPostprocessor : AssetPostprocessor {
+
+   public void OnPreprocessModel() {
+
+        ModelImporter modelImporter =
+
+ (ModelImporter)assetImporter;
+
+        if(modelImporter.isReadable) {
+
+            modelImporter.isReadable = false;
+
+            modelImporter.SaveAndReimport();
+
+        }
+
+    }
+
+} 
+
+</code></pre>
+
+<p>这是一个在项目中 <code>AssetPostprocessor</code> 强制执行规则的简单示例：</p>
+
+<p>每次将模型导入项目时，或者模型的导入设置发生更改时，都会调用此类。该代码只是检查 <code>Read/Write enabled</code> 标志（由 <code>isReadable</code> 属性表示）是否设置为 <code>true</code>。如果是，则强制将标志位更改为 <code>false</code>，然后保存并重新导入资源。</p>
+
+<p>请注意，调用 <code>SaveAndReimport</code> 会导致再次调用此代码片段！但是，因为现在已确保 <code>isReadable</code> 为 false，所以此代码不会产生无限的重新导入循环。</p>
+
+<p>此变更的原因将在下面的“模型”部分讨论。</p>
+
+<h2>通用资源规则</h2>
+
+<h4>纹理</h4>
+
+<p><strong>禁用 read/write enabled 标志</strong></p>
+
+<p><code>Read/Write enabled</code> 标志使纹理在内存中保留两次：一次保存在 GPU 中，一次保存在 CPU 可寻址内存中(1)（注意：
+ 这是因为大多数平台上从 GPU 内存回读的速度极慢。将纹理从 GPU 内存读入临时缓冲区以供 CPU 代码（例如 Texture.GetPixel）使用将是非常低效的）。在 Unity 中，默认情况下禁用此设置，但可能会无意中将其打开。</p>
+
+<p>只有在着色器之外操作纹理数据时（例如使用 <code>Texture.GetPixel</code> 和 <code>Texture.SetPixel</code> API 时）才需要 <code>Read/Write Enabled</code>，否则应尽可能避免使用它。</p>
+
+<p><strong>尽可能禁用 Mipmap</strong></p>
+
+<p>如果对象相对于摄像机具有相对不变的 Z 深度，则可禁用 Mipmap，这样将大约节省加载纹理所需的内存的三分之一。如果对象的 Z 深度会发生变更，则禁用 Mipmap 可能导致 GPU 上的纹理采样性能变差。</p>
+
+<p>通常情况下，这对于 UI 纹理以及在屏幕上以恒定大小显示的其他纹理非常有用。</p>
+
+<p><strong>压缩所有纹理</strong></p>
+
+<p>使用适合项目目标平台的纹理压缩格式对于节省内存至关重要。</p>
+
+<p>如果所选的纹理压缩格式不适合目标平台，Unity 会在加载纹理时解压缩纹理，这将消耗 CPU 时间和额外的内存。此问题在 Android 设备上最常见，因为此类平台通常因芯片组不同而支持截然不同的纹理压缩格式。</p>
+
+<p><strong>实施合理的纹理大小限制</strong></p>
+
+<p>虽然很简单，但也很容易忘记调整纹理大小或无意中更改纹理大小导入设置。应确定不同类型纹理的合理最大值，并通过代码强制执行这些限制规则。</p>
+
+<p>对于许多移动应用程序，2048x2048 或 1024x1024 足以满足纹理图集的要求，而 512x512 足以满足应用于 3D 模型的纹理的要求。</p>
+
+<h4>模型</h4>
+
+<p><strong>禁用 Read/Write enabled 标志</strong></p>
+
+<p>模型的 <code>Read/Write enabled</code> 标志与纹理的上述相应标志具有相同的工作原理。但是，模型在默认情况下会启用该标志。</p>
+
+<p>如果项目在运行时通过脚本修改网格 (Mesh)，或者如果网格用作 MeshCollider 组件的基础，则 Unity 会要求启用此标志。如果模型未在 MeshCollider 中使用并且未被脚本操纵，请禁用此标志以节省一半模型内存。</p>
+
+<p><strong>在非角色模型上禁用骨架</strong></p>
+
+<p>默认情况下，Unity 会为非角色模型导入通用骨架。如果模型在运行时实例化，则会导致添加 <code>Animator</code> 组件。如果模型没有通过动画系统进行动画处理，则会给动画系统增加不必要的开销，因为每帧都必须运行一次所有激活的 Animator。</p>
+
+<p>在非动画模型上禁用骨架可以避免自动添加 Animator 组件，并防止可能无意中向场景添加不需要的 Animator。</p>
+
+<p><strong>在动画模型上启用 Optimize Game Objects 选项</strong></p>
+
+<p><strong>Optimize Game Objects</strong> 选项对动画模型有着显著的性能影响。禁用该选项后，Unity 会在每次实例化模型时创建一个大型变换层级视图来镜像模型的骨骼结构。此变换层级视图的更新成本很高，尤其是在附加了其他组件（如粒子系统或碰撞体）的情况下。它还限制了 Unity 通过多线程执行网格蒙皮和骨骼动画计算的能力。</p>
+
+<p>如果需要暴露模型骨骼结构上的特定位置（例如暴露模型的双手以便动态附加武器模型），则可在 <code>Extra Transforms</code> 列表中将这些位置专门列入白名单。</p>
+
+<p>如需了解更多详细信息，请参阅 Unity 手册的 <a href="https://docs.unity3d.com/Manual/FBXImporter-Rig.html">Model Importer</a> 页面。</p>
+
+<p><strong>尽可能使用网格压缩</strong></p>
+
+<p>启用网格压缩可减少用于表示模型数据不同通道的浮点数的位数。这样做可能导致精确度的轻微损失，在用于最终项目之前，美术师应评估这种不精确性的影响。</p>
+
+<p>在给定压缩级别中使用的具体位数在 <a href="https://docs.unity3d.com/ScriptReference/ModelImporterMeshCompression.html">ModelImporterMeshCompression</a> 脚本参考中有详细说明。</p>
+
+<p>请注意，可对不同的通道使用不同级别的压缩，因此项目可选择仅压缩切线和法线，同时保持 UV 和顶点位置不压缩。</p>
+
+<p><strong>注意网格渲染器设置</strong></p>
+
+<p>将网格渲染器添加到预制件或游戏对象时，请注意组件上的设置。默认情况下，Unity 会启用阴影投射和接收、光照探针采样、反射探针采样和运动矢量计算。</p>
+
+<p>如果项目不需要这些功能中的一个或多个，请确保通过自动脚本关闭它们。添加网格渲染器的任何运行时代码也都需要处理这些设置。</p>
+
+<p>对于 2D 游戏，在启用阴影选项的情况下意外地将网格渲染器添加到场景会为渲染循环添加完整的阴影 pass。通常情况下，这是对性能的浪费。</p>
+
+<h4>音频</h4>
+
+<p><strong>适合平台的压缩设置</strong></p>
+
+<p>应为音频启用与可用硬件匹配的压缩格式。所有 iOS 设备都包含硬件 MP3 解压器，而许多 Android 设备本身支持 Vorbis。</p>
+
+<p>此外，应将未压缩的音频文件导入 Unity。Unity 在构建项目时总是会重新压缩音频。无需导入压缩的音频再重新压缩，这只会降低最终音频剪辑的质量。</p>
+
+<p><strong>将音频剪辑强制设置为单声道</strong></p>
+
+<p>很少有移动设备实际配备立体声扬声器。在移动平台项目中，将导入的音频剪辑强制设置为单声道会使其内存消耗减半。此设置也适用于没有立体声效果的任何音频，例如大多数 UI 声音效果。</p>
+
+<p><strong>降低音频比特率</strong></p>
+
+<p>尽量降低音频文件的比特率，以进一步节省内存消耗和构建的项目大小，但这种情况需要咨询音频设计师。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeUnderstandingPerformanceInUnity3.html"></a></span><div class="tip">协程</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeUnderstandingPerformanceInUnity4-1.html"></a></span><div class="tip">了解托管堆</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

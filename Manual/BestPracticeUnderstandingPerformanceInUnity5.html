@@ -1,0 +1,354 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="字符串和文本 - Unity Manual">
+<title>字符串和文本 - Unity Manual</title>
+<meta name="description" content="字符串和文本的处理不当是 Unity 项目中性能问题的常见原因。在 C# 中，所有字符串均不可变。对字符串的任何操作均会导致分配一个完整的新字符串。这种操作的代价相对比较高，而且在大型字符串上、大型数据集上或紧凑循环中执行时，接连不断的重复的字符串可能发展成性能问题。">
+<meta property="og:description" content="字符串和文本的处理不当是 Unity 项目中性能问题的常见原因。在 C# 中，所有字符串均不可变。对字符串的任何操作均会导致分配一个完整的新字符串。这种操作的代价相对比较高，而且在大型字符串上、大型数据集上或紧凑循环中执行时，接连不断的重复的字符串可能发展成性能问题。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'BestPracticeUnderstandingPerformanceInUnity5';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/BestPracticeUnderstandingPerformanceInUnity5.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/BestPracticeUnderstandingPerformanceInUnity5.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/BestPracticeUnderstandingPerformanceInUnity5.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/BestPracticeUnderstandingPerformanceInUnity5.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/BestPracticeUnderstandingPerformanceInUnity5.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/BestPracticeUnderstandingPerformanceInUnity5.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/BestPracticeUnderstandingPerformanceInUnity5.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/BestPracticeUnderstandingPerformanceInUnity5.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/BestPracticeUnderstandingPerformanceInUnity5.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/BestPracticeUnderstandingPerformanceInUnity5.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/BestPracticeUnderstandingPerformanceInUnity5.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/BestPracticeUnderstandingPerformanceInUnity5.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/BestPracticeUnderstandingPerformanceInUnity5.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/BestPracticeUnderstandingPerformanceInUnity5.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/BestPracticeUnderstandingPerformanceInUnity5.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/BestPracticeUnderstandingPerformanceInUnity5.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/BestPracticeUnderstandingPerformanceInUnity5.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/BestPracticeUnderstandingPerformanceInUnity5.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/BestPracticeUnderstandingPerformanceInUnity5.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/BestPracticeUnderstandingPerformanceInUnity5.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/BestPracticeUnderstandingPerformanceInUnity5.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/BestPracticeUnderstandingPerformanceInUnity5.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/BestPracticeUnderstandingPerformanceInUnity5.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/BestPracticeUnderstandingPerformanceInUnity5.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="BestPracticeGuides.html">最佳实践指南</a></li>
+<li><a href="BestPracticeUnderstandingPerformanceInUnity.html">了解 Unity 中的优化</a></li>
+<li>字符串和文本</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeUnderstandingPerformanceInUnity4-1.html"></a></span><div class="tip">了解托管堆</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeUnderstandingPerformanceInUnity6.html"></a></span><div class="tip">Resources 文件夹</div>
+</div>
+</div></div>
+<h1>字符串和文本</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>字符串和文本的处理不当是 Unity 项目中性能问题的常见原因。在 C# 中，所有字符串均不可变。对字符串的任何操作均会导致分配一个完整的新字符串。这种操作的代价相对比较高，而且在大型字符串上、大型数据集上或紧凑循环中执行时，接连不断的重复的字符串可能发展成性能问题。</p>
+
+<p>此外，由于 N 个字符串连接需要分配 N–1 个中间字符串，串行连接也可能成为托管内存压力的主要原因。</p>
+
+<p>如果必须在紧凑循环中或每帧期间对字符串进行连接，请使用 StringBuilder 执行实际连接操作。为最大限度减少不必要的内存分配，可重复使用 StringBuilder 实例。</p>
+
+<p>Microsoft 整理了一份处理 C# 中的字符串的最佳做法清单，可在这里的 MSDN 网站上找到该清单：<a href="https://msdn.microsoft.com/en-us/library/dd465121(v=vs.110).aspx">msdn.microsoft.com</a>。</p>
+
+<h2>区域约束与序数比对</h2>
+
+<p>在与字符串相关的代码中经常出现的核心性能问题之一是无意间使用了缓慢的默认字符串 API。这些 API 是为商业应用程序构建的，可根据与文本字符有关的多种不同区域性和语言规则来处理字符串。</p>
+
+<p>例如，在美国英语区域设置下运行时，以下示例代码将返回 true，但在许多欧洲区域设置下，将返回 false (1)</p>
+
+<p>注意：
+从 Unity 5.3 和 5.4 开始，Unity 的脚本运行时始终在美国英语 (en-US) 区域设置下运行：</p>
+
+<pre><code>    String.Equals("encyclopedia", "encyclopædia");
+</code></pre>
+
+<p>对于大多数 Unity 项目，上述代码完全没有必要。使用序数比对可将速度提高大约十倍，这种比较类型以 C 和 C++ 工程师熟悉的方式比较字符串：简单地比较字符串的每个连续字节，不考虑该字节所表示的字符。</p>
+
+<p>切换至序数比对的方式非常简单，只需将 <code>StringComparison.Ordinal</code> 作为最终参数提供给 <code>String.Equals</code>：</p>
+
+<pre><code>myString.Equals(otherString, StringComparison.Ordinal);
+
+</code></pre>
+
+<h2>低效的内置字符串 API</h2>
+
+<p>除了切换至序数比对以外，目前已知某些 C# <code>String</code> API 的效率极低，其中包括 <code>String.Format</code>、<code>String.StartsWith</code> 和 <code>String.EndsWith</code>。尽管 <code>String.Format</code> 难以替换，但低效率字符串比较方法很容易优化掉。</p>
+
+<p>尽管 Microsoft 建议将 <code>StringComparison.Ordinal</code> 传递给任何不需要为本地化做调整的字符串比较，但 Unity 基准测试表明，相比自定义实现，该方法对性能的提升效果有限。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">方法</th>
+	<th style="text-align:left;">100k 短字符串的时间（毫秒）</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">
+<code>String.StartsWith</code>，默认区域性</td>
+	<td style="text-align:left;">137</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<code>String.EndsWit</code>h，默认区域性</td>
+	<td style="text-align:left;">542</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<code>String.StartsWith</code>，序数</td>
+	<td style="text-align:left;">115</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<code>String.EndsWith</code>，序数</td>
+	<td style="text-align:left;">34</td>
+</tr>
+<tr>
+	<td style="text-align:left;">自定义 <code>StartsWith</code> 替换</td>
+	<td style="text-align:left;">4.5</td>
+</tr>
+<tr>
+	<td style="text-align:left;">自定义 <code>EndsWith</code> 替换</td>
+	<td style="text-align:left;">4.5</td>
+</tr>
+</tbody>
+</table>
+
+<p><code>String.StartsWith</code> 和 <code>String.EndsWith</code> 均可以替换为类似于以下示例的简单的手工编码版本。</p>
+
+<pre><code>
+    public static bool CustomEndsWith(this string a, string b)
+    {
+        int ap = a.Length - 1;
+        int bp = b.Length - 1;
+    
+        while (ap &gt;= 0 &amp;&amp; bp &gt;= 0 &amp;&amp; a [ap] == b [bp])
+        {
+            ap--;
+            bp--;
+        }
+    
+        return (bp &lt; 0);
+    }
+
+    public static bool CustomStartsWith(this string a, string b)
+    {
+        int aLen = a.Length;
+        int bLen = b.Length;
+    
+        int ap = 0; int bp = 0;
+    
+        while (ap &lt; aLen &amp;&amp; bp &lt; bLen &amp;&amp; a [ap] == b [bp])
+        {
+            ap++;
+            bp++;
+        }
+    
+        return (bp == bLen);
+    }
+
+</code></pre>
+
+<h2>正则表达式</h2>
+
+<p>尽管正则表达式是匹配和操作字符串的强大方法，但它们可能对性能的影响极大。此外，由于 C# 库的正则表达式实现方式，即使简单的布尔值 <code>IsMatch</code> 查询也需要在底层分配大型瞬态数据结构。除非在初始化期间，否则这种瞬态托管内存波动都是不可接受的。</p>
+
+<p>如果必须使用正则表达式，强烈建议不要使用静态 <code>Regex.Match</code> 或 <code>Regex.Replace</code> 方法，这些方法会将正则表达式视为字符串参数。这些方法即时编译正则表达式，并且不缓存生成的对象。</p>
+
+<p>以下示例代码为无害的单行代码。</p>
+
+<pre><code>
+Regex.Match(myString, "foo");
+
+</code></pre>
+
+<p>但是，该代码每次执行时会产生 5 KB 的垃圾。通过简单的重构即可消除其中的大部分垃圾：</p>
+
+<pre><code>
+var myRegExp = new Regex("foo");
+
+myRegExp.Match(myString);
+
+</code></pre>
+
+<p>在本示例中，每次调用 <code>myRegExp.Match</code>“只”产生 320 字节的垃圾。尽管这对于简单的匹配操作仍然代价高昂，但比前面的示例有了相当大的改进。</p>
+
+<p>因此，如果正则表达式是不变的字符串字面值，通过将正则表达式传递为正则表达式对象构造函数的第一个参数来预编译它们，可显著提高效率。这些预编译的正则表达式之后会被重用。</p>
+
+<h2>XML、JSON 和其他长格式文本解析</h2>
+
+<p>解析文本通常是加载期间所发生的最繁重的操作之一。在某些情况下，解析文本所花费的时间可能超过加载和实例化资源所花费的时间。</p>
+
+<p>此问题背后的原因取决于所使用的具体解析器。C# 的内置 XML 解析器极为灵活，但因此无法针对具体数据布局进行优化。</p>
+
+<p>许多第三方解析器都是基于反射构建的。尽管反射在开发过程中是绝佳选择（因为它能让解析器快速适应不断变化的数据布局），但众所周知，它的速度非常慢。</p>
+
+<p>Unity 引入了采用其内置 <a href="../ScriptReference/JsonUtility.html">JSONUtility</a> API 的部分解决方案，该解决方案提供了读取/发出 JSON 的 Unity 序列化系统接口。在大多数基准测试中，它比纯 C# JSON 解析器快，但它与 Unity 序列化系统的其他接口具有相同的限制：没有额外代码的情况下，无法对许多复杂的数据类型（如字典）进行序列化(2)（注意：
+ 请参阅 <a href="../ScriptReference/ISerializationCallbackReceiver.html">ISerializationCallbackReceiver</a> 接口，了解如何通过一种方法轻松添加必要的额外处理以便在 Unity 序列化过程中来回转换复杂数据类型）。</p>
+
+<p>当遇到文本数据解析所引起的性能问题时，请考虑三种替代解决方案。</p>
+
+<h3>方案 1：在构建时解析</h3>
+
+<p>避免文本解析成本的最佳方法是完全取消运行时文本解析。通常，这意味着通过某种构建步骤将文本数据“烘焙”成二进制格式。</p>
+
+<p>大多数选择使用该方法的开发者会将其数据移动到某种 ScriptableObject 衍生的类层级视图中，然后通过 AssetBundle 分配数据。有关使用 ScriptableObjects 的精彩讨论，请参阅 youtube 上 <a href="https://www.youtube.com/watch?v=VBA1QCoEAX4">Richard Fine 的 Unite 2016 讲座</a>。</p>
+
+<p>该策略可实现尽可能高的性能，但只适用于不需要动态生成的数据。它适用于游戏设计参数和其他内容。</p>
+
+<h3>方案 2：拆分和延迟加载</h3>
+
+<p>第二种可行的方法是将必须解析的数据拆分为较小的数据块。拆分后，解析数据的成本可分摊到多个帧。在理想的情况下，可识别出为用户提供所需体验而需要的特定数据部分，然后只加载这些部分。</p>
+
+<p>举一个简单的例子：如果项目为平台游戏，则没必要将所有关卡的数据一起序列。如果将数据拆分为每个关卡的独立资源，并且将关卡划分到区域中，则可以在玩家闯关到相应位置时再解析数据。</p>
+
+<p>虽然这听起来不难，但实际上需要在工具编码方面投入大量精力，并可能需要重组数据结构。</p>
+
+<h3>方案 3：线程</h3>
+
+<p>如果数据完全解析成纯 C# 对象，并且不需要与 Unity API 进行任何交互，则可以将解析操作移至工作线程。</p>
+
+<p>该方案在具有大量核心的平台上非常强大(3)（注意：
+iOS 设备最多有 2 个核心。大多数 Android 设备具有 2–4 个核心。该技术适用于针对电脑平台和游戏主机发布的项目。）但是，该方案需要仔细编程，以免产生死锁和竞态条件。</p>
+
+<p>选择实现线程的项目通常使用内置的 C# <a href="https://msdn.microsoft.com/en-us/library/system.threading.thread(v=vs.110).aspx">Thread</a> 和 <a href="https://msdn.microsoft.com/en-us/library/system.threading.threadpool(v=vs.110).aspx">ThreadPool</a> 类（请参阅 <a href="https://msdn.microsoft.com/en-us/library/system.threading.thread(v=vs.110).aspx">msdn.microsoft.com</a>）来管理其工作线程以及标准 C# 同步类。</p>
+
+<p><strong>脚注</strong></p>
+
+<ul>
+<li><p>(1) 请注意，从 Unity 5.3 和 5.4 开始，Unity 的脚本运行时始终在美国英语 (en-US) 区域设置下运行。</p></li>
+<li><p>(2) 请参阅 <a href="../ScriptReference/ISerializationCallbackReceiver.html">ISerializationCallbackReceiver</a> 接口，了解如何通过一种方法轻松添加必要的额外处理以便在 Unity 序列化过程中来回转换复杂数据类型。</p></li>
+<li><p>(3) 请注意，iOS 设备最多有 2 个核心。大多数 Android 设备具有 2–4 个核心。该技术适用于针对电脑平台和游戏主机发布的项目。</p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeUnderstandingPerformanceInUnity4-1.html"></a></span><div class="tip">了解托管堆</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeUnderstandingPerformanceInUnity6.html"></a></span><div class="tip">Resources 文件夹</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

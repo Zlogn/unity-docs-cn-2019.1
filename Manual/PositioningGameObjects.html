@@ -1,0 +1,326 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="游戏对象定位 - Unity Manual">
+<title>游戏对象定位 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/Editor-MoveRotateScaleTransform.png">
+<meta name="description" content="要选择游戏对象，请在 Scene 视图中单击该游戏对象，或在 Hierarchy 窗口中单击其名称。要选择或取消选择多个游戏对象，请在单击时按住 Shift 键，或拖拽一个矩形来框选多个游戏对象。">
+<meta property="og:description" content="要选择游戏对象，请在 Scene 视图中单击该游戏对象，或在 Hierarchy 窗口中单击其名称。要选择或取消选择多个游戏对象，请在单击时按住 Shift 键，或拖拽一个矩形来框选多个游戏对象。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'PositioningGameObjects';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PositioningGameObjects.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PositioningGameObjects.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PositioningGameObjects.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PositioningGameObjects.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PositioningGameObjects.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PositioningGameObjects.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PositioningGameObjects.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PositioningGameObjects.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PositioningGameObjects.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PositioningGameObjects.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/PositioningGameObjects.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/PositioningGameObjects.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/PositioningGameObjects.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/PositioningGameObjects.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PositioningGameObjects.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PositioningGameObjects.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PositioningGameObjects.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PositioningGameObjects.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PositioningGameObjects.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PositioningGameObjects.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PositioningGameObjects.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PositioningGameObjects.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PositioningGameObjects.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PositioningGameObjects.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="UsingTheEditor.html">The Main Windows</a></li>
+<li><a href="UsingTheSceneView.html">The Scene view</a></li>
+<li>游戏对象定位</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SceneViewNavigation.html"></a></span><div class="tip">Scene view navigation</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UsingCustomEditorTools.html"></a></span><div class="tip">Using custom Editor tools</div>
+</div>
+</div></div>
+<h1>游戏对象定位</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>要选择游戏对象，请在 <a href="UsingTheSceneView.html">Scene 视图</a>中单击该游戏对象，或在 <a href="Hierarchy.html">Hierarchy 窗口</a>中单击其名称。要选择或取消选择多个游戏对象，请在单击时按住 <strong>Shift</strong> 键，或拖拽一个矩形来框选多个游戏对象。</p>
+
+<p>Unity highlights selected GameObjects and their children in the Scene view. By default, the selection outline color is orange, and the child outline color is blue. You can also choose to highlight selected GameObjects’ wireframes in a different color. You can change all of these outline highlight colors from the Unity Preferences (<strong>Unity &gt; Preferences</strong> on macOS or <strong>Edit &gt; Preferences</strong> on Windows). </p>
+
+<p>See documentation on the <a href="GizmosMenu.html">Gizmos Menu</a> for more information about the outline and wireframe selection visualizations. </p>
+
+<p>Selected GameObjects also display a Gizmo in the Scene view if you have one of the four Transform tools selected:</p>
+
+<h2>移动、旋转、缩放和矩形变换</h2>
+
+<figure>
+<img src="../uploads/Main/Editor-MoveRotateScaleTransform.png" alt="">
+</figure>
+
+<p>工具栏中的第一个工具__手形工具 (Hand Tool)__ 用于平移场景。<strong>移动 (Move)</strong>、<strong>旋转 (Rotate)</strong>、<strong>缩放 (Scale)</strong>、<strong>矩形变换 (Rect Transform)</strong> 和__变换 (Transform)__ 工具用于编辑各个游戏对象。要更改游戏对象的<a href="class-Transform.html">变换</a>组件，请使用鼠标操纵任何辅助图标轴，或直接在 Inspector 中的__变换__组件的数字字段中输入值。</p>
+
+<p>或者，也可以使用热键选择四个__变换__模式之一：__W__ 表示移动，__E__ 表示旋转，__R__ 表示缩放，__T__ 表示矩形变换，__Y__ 表示变换。</p>
+
+<figure>
+<img src="../uploads/Main/MoveRotateScaleTransform.jpg" alt="移动、缩放、旋转、矩形变换和变换辅助图标">
+<figcaption>移动、缩放、旋转、矩形变换和变换辅助图标</figcaption>
+</figure>
+
+<h3>移动</h3>
+
+<p>在__移动__辅助图标的中心，有三个小方块可用于在单个平面内拖动游戏对象（意味着可一次移动两个轴，而第三个保持静止）。</p>
+
+<p>如果在移动辅助图标的中心单击并拖动时按住 Shift，则辅助图标的中心将变为平面方块。平面方块表示可相对于 Scene 视图摄像机所面向的方向在平面上移动游戏对象。</p>
+
+<h3>旋转</h3>
+
+<p>选择__旋转__工具后，通过单击并拖动围绕游戏对象显示的线框球体辅助图标的轴来更改游戏对象的旋转。与移动辅助图标一样，更改的最后一个轴将显示为黄色。红色、绿色和蓝色圆圈可视为围绕在移动模式中出现的红色、绿色和蓝色轴进行旋转（红色表示 x 轴，绿色表示 y 轴，蓝色表示 z 轴）。最后，使用最外面的圆圈围绕 Scene 视图 z 轴旋转游戏对象。可将此行为视为在屏幕空间中旋转。</p>
+
+<h3>缩放</h3>
+
+<p>使用__缩放__工具，可通过单击并拖动辅助图标中心的立方体，在所有轴上均匀地重新缩放游戏对象。也可以单独缩放每个轴，但如果在有子游戏对象的情况下执行此操作，则应该注意，因为效果看起来会很奇怪。</p>
+
+<h3>矩形变换</h3>
+
+<p><a href="class-RectTransform.html">矩形变换</a>通常用于定位 2D 元素（如精灵或 <a href="UIBasicLayout.html">UI 元素</a>），但也可用于操作 3D 游戏对象。此工具将移动、缩放和旋转功能整合到了同一个辅助图标中：</p>
+
+<ul>
+<li>在矩形辅助图标中单击并拖动可移动游戏对象。</li>
+<li>单击并拖动矩形辅助图标的任何角或边可缩放游戏对象。</li>
+<li>拖动某条边可沿一个轴缩放游戏对象。</li>
+<li>拖动某个角可在两个轴上缩放游戏对象。</li>
+<li>要旋转游戏对象，请将光标放在矩形的某个角之外。光标变为显示旋转图标。单击并从此区域拖动可旋转游戏对象。</li>
+</ul>
+
+<p>请注意，在 2D 模式下，无法使用辅助图标更改场景中的 z 轴。但是，某些脚本技术可将 z 轴用于其他目的，因此仍然可以使用 Inspector 中的变换组件设置 z 轴。</p>
+
+<p>有关变换游戏对象的更多信息，请参阅关于<a href="class-Transform.html">变换组件</a>的文档。</p>
+
+<h3>变换</h3>
+
+<p><strong>变换__工具组合了__移动</strong>、<strong>旋转__和__缩放__工具。该工具的辅助图标提供了用于移动和旋转的控制柄。当 </strong>Tool Handle Rotation__ 设置为 __Local__（见下方）时，变换组件工具还提供用于缩放所选游戏对象的控制柄。</p>
+
+<h3>Custom tools</h3>
+
+<p>If your Project uses custom Editor tools, some of them might also allow you to position GameObjects. </p>
+
+<p>You can access custom tools by right-clicking the <strong>Available Custom Editor Tools</strong> button in the Scene view toolbar.</p>
+
+<figure>
+<img src="../uploads/Main/Editor-CustomTools.jpg" alt="">
+</figure>
+
+<p>For information, see the documentation on <a href="UsingCustomEditorTools.html">Using Custom Editor Tools</a>.</p>
+
+<p><a name="GizmoHandlePositions"></a></p>
+
+<h2>辅助图标控制柄位置开关</h2>
+
+<figure>
+<img src="../uploads/Main/GizmoDisplayToggles.png" alt="">
+</figure>
+
+<p>__辅助图标控制柄位置开关__可定义变换组件工具辅助图标的位置以及用于操纵辅助图标本身的控制柄。</p>
+
+<figure>
+<img src="../uploads/Main/HandlePositionButtons.png" alt="辅助图标显示开关">
+<figcaption>辅助图标显示开关</figcaption>
+</figure>
+
+<h3>位置</h3>
+
+<p>单击左侧的 <strong>Pivot</strong>/<strong>Center</strong> 按钮可在 <strong>Pivot</strong> 和 <strong>Center</strong> 之间切换。</p>
+
+<ul>
+<li>
+<strong>Pivot</strong> 将辅助图标定位在网格的实际轴心点。</li>
+<li>
+<strong>Center</strong> 将辅助图标定位在游戏对象渲染边界的中心。</li>
+</ul>
+
+<h3>旋转</h3>
+
+<p>单击右侧的 <strong>Local</strong>/<strong>Global</strong> 按钮可在 <strong>Local</strong> 和 <strong>Global</strong> 之间切换。</p>
+
+<ul>
+<li>
+<strong>Local</strong> 保持辅助图标相对于游戏对象的旋转。</li>
+<li>
+<strong>Global</strong> 将辅助图标固定在世界空间方向。</li>
+</ul>
+
+<p><a name="UnitSnapping"></a></p>
+
+<h3>单位对齐</h3>
+
+<p>使用__移动__工具或__变换__工具拖动任何辅助图标轴时，按住 <strong>Control</strong> 键（Mac 上为 <strong>Command</strong> 键）可对齐到 <strong>Snap Settings__（菜单：__Edit</strong> &gt; <strong>Snap Settings…</strong>）中定义的增量</p>
+
+<figure>
+<img src="../uploads/Main/SceneViewUnitSnappingSettings.png" alt="">
+</figure>
+
+<h3>表面对齐</h3>
+
+<p>While dragging in the center using the <strong>Move</strong> tool, hold <strong>Shift</strong> and <strong>Control</strong> (<strong>Command</strong> on Mac) to quickly snap the GameObject to the intersection of any <strong>Collider</strong>.</p>
+
+<h3>观察旋转</h3>
+
+<p>While using the <strong>Rotate</strong> tool, hold <strong>Shift</strong> and <strong>Control</strong> (<strong>Command</strong> on Mac) to rotate the GameObject towards a point on the surface of any <strong>Collider</strong>.</p>
+
+<h3>顶点对齐</h3>
+
+<p>使用__顶点对齐__可快速组合场景：从给定的网格中获取任何顶点，并将该顶点放置在与您选择的任何其他网格中的任何顶点相同的位置。例如，使用顶点对齐在赛车游戏中精确对齐路段，或者在网格的顶点定位能量块。</p>
+
+<p>按照以下步骤使用顶点对齐：</p>
+
+<p>1.选择要操作的网格，并确保__移动__工具或__变换__工具处于活动状态。</p>
+
+<p>2.按住 <strong>V</strong> 键激活顶点对齐模式。</p>
+
+<p>3.将光标移动到网格上要用作轴心点的顶点上。</p>
+
+<p>4.当光标位于所需顶点上方时按住鼠标左键，将网格拖动到另一个网格上的任何其他顶点旁边。</p>
+
+<p>5.对结果感到满意时，松开鼠标按键和 <strong>V</strong> 键（__Shift+V__ 用作此功能的开关）。</p>
+
+<p><strong>注意：</strong>可将顶点对齐到顶点，将顶点对齐到表面，将轴心对齐到顶点。</p>
+
+<h3>屏幕空间变换</h3>
+
+<p>使用__变换__工具时，按住 <strong>Shift</strong> 键启用屏幕空间 (Screen Space) 模式。当游戏对象出现在屏幕上而不是在场景中时，可使用此模式来移动、旋转和缩放游戏对象。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2019–03–05 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2017.3/Documentation/Manual/30_search.html?q=newin20173">2017.3</a> 中添加了变换组件工具 <span class="search-words">NewIn20173</span></span></p></li>
+<li><p><span class="page-history">Selection Outline for child GameObjects added in <a href="https://docs.unity3d.com/2018.3/Documentation/Manual/30_search.html?q=newin20183">2018.3</a> <span class="search-words">NewIn20183</span></span></p></li>
+<li><p><span class="page-history">Button and menu to access custom Editor tools added in <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/30_search.html?q=newin20183">2019.1</a> <span class="search-words">NewIn20191</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SceneViewNavigation.html"></a></span><div class="tip">Scene view navigation</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UsingCustomEditorTools.html"></a></span><div class="tip">Using custom Editor tools</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

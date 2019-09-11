@@ -1,0 +1,656 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Preferences - Unity Manual">
+<title>Preferences - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/Preferences.png">
+<meta name="description" content="Unity provides a number of preferences that allow you to customize the behavior of the Unity Editor.">
+<meta property="og:description" content="Unity provides a number of preferences that allow you to customize the behavior of the Unity Editor.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'Preferences';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Preferences.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Preferences.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Preferences.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Preferences.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Preferences.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Preferences.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Preferences.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Preferences.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Preferences.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Preferences.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/Preferences.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/Preferences.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/Preferences.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/Preferences.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Preferences.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Preferences.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Preferences.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Preferences.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Preferences.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Preferences.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Preferences.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Preferences.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Preferences.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Preferences.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="EditorFeatures.html">编辑器功能</a></li>
+<li>Preferences</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="2DAnd3DModeSettings.html"></a></span><div class="tip">2D and 3D mode settings</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Presets.html"></a></span><div class="tip">预设</div>
+</div>
+</div></div>
+<h1>Preferences</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity provides a number of preferences that allow you to customize the behavior of the Unity Editor. </p>
+
+<p>To access the <strong>Preferences</strong> window, go to <strong>Edit</strong> &gt; <strong>Preferences</strong> (Windows) or <strong>Unity</strong> &gt; <strong>Preferences</strong> (Mac) from the main menu in Unity. The following preference categories are available:</p>
+
+<ul>
+<li><a href="#General">General</a></li>
+<li>
+<a href="#2D">2D</a>
+
+<ul>
+<li><a href="#2D-Brush">Grid Brush</a></li>
+<li><a href="#2D-Palette">Tile Palette</a></li>
+</ul>
+</li>
+<li><a href="#Cache-Server">Cache Server</a></li>
+<li><a href="#Colors">Colors</a></li>
+<li><a href="#External-Tools">External Tools</a></li>
+<li><a href="#GI-Cache">GI Cache</a></li>
+</ul>
+
+<h2>Navigating the Preferences window</h2>
+
+<figure>
+<img src="../uploads/Main/Preferences.png" alt="Unity Preferences window">
+<figcaption>Unity Preferences window</figcaption>
+</figure>
+
+<p><strong>A:</strong> You can use the <em>search box</em> to filter the list on the left by category and highlight keywords on the right. For more information, see the <a href="comp-ManagerGroup.html#find-settings">Finding settings</a> documentation.</p>
+
+<p><strong>B:</strong> Preferences are grouped by category. The <em>category list</em> displays a list of available categories. When you click on a preference category, all preferences matching that category appear in the details pane.</p>
+
+<p><strong>C:</strong> The <em>details pane</em> displays the list of preferences for each category.</p>
+
+<h2>Package custom preferences</h2>
+
+<p>Some AssetStore or Unity packages add their own custom preferences to the <strong>Preferences</strong> window. Generally these use the package name as the preferences category. In this example, you can see the <a href="https://docs.unity3d.com/Packages/com.unity.cinemachine@latest">Cinemachine package</a> preferences:</p>
+
+<figure>
+<img src="../uploads/Main/PrefsPackages.png" alt="Package-specific preferences appear in the scope list">
+<figcaption>Package-specific preferences appear in the scope list</figcaption>
+</figure>
+
+<p>For information about a specific package’s preferences, see the documentation for that package. This section contains documentation for standard Unity preferences only.</p>
+
+<p><a name="General"></a></p>
+
+<h2>General</h2>
+
+<p><strong>General</strong> preferences allow you to customize working in Unity overall. </p>
+
+<figure>
+<img src="../uploads/Main/PrefsGeneral.png" alt="General scope on the Preferences window">
+<figcaption>General scope on the Preferences window</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Auto Refresh</strong></td>
+	<td style="text-align:left;">Enable this option to update Assets automatically as they change.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Load Previous Project on Startup</strong></td>
+	<td style="text-align:left;">Enable this option to always load the previous Project at startup.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Compress Assets on Import</strong></td>
+	<td style="text-align:left;">Enable this option to automatically compress Assets during import.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>macOS Color Picker</strong></td>
+	<td style="text-align:left;">Enable this option to use the native macOS color picker instead of Unity’s own.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2">
+<strong>Disable Editor Analytics</strong> (Pro only)</td>
+	<td style="text-align:left;">Enable this option to stop the Editor automatically sending information back to Unity.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Show Asset Store search hits</strong></td>
+	<td style="text-align:left;">Enable this option to show the number of free/paid Assets from the Asset Store in the Project Browser.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Verify Saving Assets</strong></td>
+	<td style="text-align:left;">Enable this option if you wish to verify which Assets to save individually on quitting Unity.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Script Changes While Playing</strong></td>
+	<td style="text-align:left;">Choose Unity’s behavior when scripts change while your game is running in the Editor.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Recompile And Continue Playing</em></td>
+	<td style="text-align:left;">Recompile your scripts and keep running the Scene. This is the default behaviour, but you might want to change it if your scripts rely on any non-serializable data.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Recompile After Finished Playing</em></td>
+	<td style="text-align:left;">Defer recompilation until you manually stop your Scene, avoiding any interruption.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Stop Playing And Recompile</em></td>
+	<td style="text-align:left;">Immediately stop your Scene for recompilation, allowing you to quickly restart testing.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Editor Skin</strong></td>
+	<td style="text-align:left;">Choose which skin to use in the Unity Editor. This is only available for Plus and Pro Unity subscriptions.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Personal</em></td>
+	<td style="text-align:left;">Use the light grey background with black text.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Professional</em></td>
+	<td style="text-align:left;">Use the dark grey background with white text.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Enable Alpha Numeric Sorting</strong></td>
+	<td style="text-align:left;">Enable this option to display a button in the top-right corner of the <a href="Hierarchy.html">Hierarchy</a> window, which toggles between Transform sort (the default) and Alphanumeric sort.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Device To Use</strong></td>
+	<td style="text-align:left;">Choose which of your computer’s graphics devices Unity should use. You can leave this on Automatic unless you want Unity to use a specific device. This setting overrides any device specified in command line options.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="2D"></a></p>
+
+<h2>2D</h2>
+
+<p>Use the <strong>Max Sprite Atlas Cache Size (GB)</strong> preference to set the maximum size of the <a href="class-SpriteAtlas.html">Sprite Atlas</a> cache folder. Whenever possible, Unity keeps the size of this folder below this level.</p>
+
+<figure>
+<img src="../uploads/Main/Prefs2D.png" alt="2D scope on the Preferences window">
+<figcaption>2D scope on the Preferences window</figcaption>
+</figure>
+
+<p><a name="2D-Brush"></a></p>
+
+<h3>Grid Brush</h3>
+
+<p>Enable the <strong>Show Flood Fill Preview</strong> checkbox to preview the Tilemap you are painting in Flood Fill mode. This option is enabled by default, but you can disable it to improve performance for large fill areas.</p>
+
+<figure>
+<img src="../uploads/Main/Prefs2D-GridBrush.png" alt="Grid Brush scope on the Preferences window">
+<figcaption>Grid Brush scope on the Preferences window</figcaption>
+</figure>
+
+<p><a name="2D-Palette"></a></p>
+
+<h3>Tile Palette</h3>
+
+<figure>
+<img src="../uploads/Main/Prefs2D-TilePalette.png" alt="Tile Palette scope on the Preferences window">
+<figcaption>Tile Palette scope on the Preferences window</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>行为</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Tile Palette Target Edit Mode</strong></td>
+	<td style="text-align:left;">Choose how to edit a Prefab instance in the <a href="Tilemap-Palette.html">Tile Palette</a> when it is selected as the Active Target.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Enable Dialog</em></td>
+	<td style="text-align:left;">Always ask how to edit the instance (either in Prefab Mode or in the Scene). This is the default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Edit in Prefab Mode</em></td>
+	<td style="text-align:left;">Edit the Paint target <a href="EditingInPrefabMode.html">in Prefab mode</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Edit in Scene</em></td>
+	<td style="text-align:left;">Edit the Prefab instance <a href="EditingPrefabViaInstance.html">directly in the Scene</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Tile Palette Active Targets Sorting Mode</strong></td>
+	<td style="text-align:left;">Controls the sorting of the Active Targets in the <a href="Tilemap-Palette.html">Tile Palette</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>None</em></td>
+	<td style="text-align:left;">Does not sort the Active Targets. By default, the order is determined by the order of appearance of the Targets within a Scene.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Alphabetical</em></td>
+	<td style="text-align:left;">Orders the Active Targets alphabetically from A-Z, 0–9.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>ReverseAlphabetical</em></td>
+	<td style="text-align:left;">Orders the Active Targets reverse alphabetically from 9–0, Z-A.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Tile Palette Restore Edit Mode Active Target</strong></td>
+	<td style="text-align:left;">Restores the Active Target in the Tile Palette to the most recently selected Target from Edit Mode when exiting Play Mode. By default, this checkbox is enabled.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Cache-Server"></a></p>
+
+<h2>Cache Server</h2>
+
+<p>Any time an Asset changes, Unity automatically re-imports it. Setting up a Cache Server drastically reduces the time it takes to import Assets. You can set up a Cache Server using remote hosting or stored on your local computer. </p>
+
+<figure>
+<img src="../uploads/Main/PrefsCacheServer.png" alt="Default Cache Server scope on the Preferences window">
+<figcaption>Default Cache Server scope on the Preferences window</figcaption>
+</figure>
+
+<p>By default, the <a href="CacheServer.html">Cache Server</a> is disabled. </p>
+
+<p>To enable it, choose one of the other options from the <strong>Cache Server Mode</strong> drop-down menu:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Local</strong></td>
+	<td style="text-align:left;">Use a local Cache Server on this computer. The preferences for <a href="#remote">Remote hosting</a> appear.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Remote</strong></td>
+	<td style="text-align:left;">Use a Cache Server hosted on a remote computer. The preferences for <a href="#local">Local storage</a> appear.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="remote"></a></p>
+
+<h3>Remote hosting</h3>
+
+<p>These preferences are only available when the <strong>Use Cache Server</strong> is set to <strong>Remote</strong>. </p>
+
+<figure>
+<img src="../uploads/Main/PrefsCacheServer-Remote.png" alt="Remote Cache Server preferences">
+<figcaption>Remote Cache Server preferences</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>IP Address</strong></td>
+	<td style="text-align:left;">Enter the IP address of the dedicated cache server that <a href="CacheServer.html#admin-setup">an administrator set up</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Check Connection</strong></td>
+	<td style="text-align:left;">Click this button to attempt to connect to the remote Cache Server.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="local"></a></p>
+
+<h3>Local storage</h3>
+
+<p>These preferences are only available when the <strong>Use Cache Server</strong> is set to <strong>Local</strong>. </p>
+
+<figure>
+<img src="../uploads/Main/PrefsCacheServer-Local.png" alt="Local Cache Server preferences">
+<figcaption>Local Cache Server preferences</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Maximum Cache Size (GB)</strong></td>
+	<td style="text-align:left;">Specify the maximum size in gigabytes for the Cache Server on this computer’s storage. The minimum size is 1GB. The maximum size is 200GB. <br>The default cache size is 10GB.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Custom cache location</strong></td>
+	<td style="text-align:left;">Enable this option to specify a location where you want to store the cache.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cache Folder Location</strong></td>
+	<td style="text-align:left;">Click the <strong>Browse</strong> button to specify a location for the cache.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Cache size is</strong> …</td>
+	<td style="text-align:left;">Message displaying the current size of the cache. Before clicking the <strong>Check Cache Size</strong> button, this appears as <strong>Cache size is unknown</strong>. After clicking the button, the calculated cache size appears in the message.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Check Cache Size</strong></td>
+	<td style="text-align:left;">Click this to find out how much storage the Local Cache Server is using. This operation can take some time to complete if you have a large project.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Clean Cache</strong></td>
+	<td style="text-align:left;">删除缓存的内容。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Colors"></a></p>
+
+<h2>Colors</h2>
+
+<figure>
+<img src="../uploads/Main/PrefsColors.png" alt="Colors scope on the Preferences window">
+<figcaption>Colors scope on the Preferences window</figcaption>
+</figure>
+
+<p>The <strong>Colors</strong> preferences allow you to choose the colors that Unity uses when displaying various user interface elements.</p>
+
+<p><a name="External-Tools"></a></p>
+
+<h2>External Tools</h2>
+
+<p>The <strong>External Tools</strong> preferences allow you to set up external applications for scripting, working with images, and source control.</p>
+
+<figure>
+<img src="../uploads/Main/PrefsExtTools.png" alt="External Tools scope on the Preferences window">
+<figcaption>External Tools scope on the Preferences window</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>External Script Editor</strong></td>
+	<td style="text-align:left;">Choose which application Unity should use to open script files. Unity automatically passes the correct arguments to script editors it has built-in support for. Unity has built-in support for Visual Studio (Express), Visual Studio Code, Xamarin Studio, MonoDevelop and JetBrains Rider.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>External Script Editor Args</strong></td>
+	<td style="text-align:left;">Set the arguments to pass to the external script editor.<br><code>$(File)</code> is replaced with a path to a file being opened.<br><code>$(Line)</code> is replaced with a line number that editor should jump to.<br><code>$(ProjectPath)</code> is replaced with the path to the open project.<br> If not set on macOS, then the default mechanism for opening files is used. Otherwise, the external script editor is only launched with the arguments without trying to open the script file using the default mechanism. <br> See below for examples of external script editor arguments: <br> <strong>Gvim/Vim</strong>: <code>--remote-tab-silent +$(Line) "$File"</code><br> <strong>Notepad2</strong>: <code>-g $(Line) "$(File)"</code><br> <strong>Sublime Text 2</strong>: <code>"$(File)":$(Line)</code> <br> <strong>Notepad++</strong>: <code>-n$(Line) "$(File)"</code>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Add .unityproj’s to .sln</strong></td>
+	<td style="text-align:left;">Enable this option to add UnityScript (.unityproj) projects to the generated solution (.sln) file. This is enabled by default for MonoDevelop and Xamarin Studio, and disabled by default for Visual Studio (Express) and Visual Studio Code.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Editor Attaching</strong></td>
+	<td style="text-align:left;">Enable this option to allow debugging of scripts in the Unity Editor. If this option is disabled, it is not possible to attach a script debugger to Unity to debug your scripts.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Image application</strong></td>
+	<td style="text-align:left;">选择希望 Unity 使用哪个应用程序来打开图像文件。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Revision Control Diff/Merge</strong></td>
+	<td style="text-align:left;">选择希望 Unity 使用哪个应用程序来解决与 Asset Server 的文件差异。Unity 在工具的默认安装位置检测这些工具（并在 Windows 上检查 TortoiseMerge、WinMerge、PlasticSCM Merge 和 Beyond Compare 4 的注册表项）。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="GI-Cache"></a></p>
+
+<h2>GI Cache</h2>
+
+<p>The <a href="GIIntro.html">Global Illumination</a> (GI) system uses <a href="GICache.html">a cache on each computer</a> to store intermediate files used to pre-compute real-time Global Illumination. All projects on the computer share the cache.</p>
+
+<figure>
+<img src="../uploads/Main/PrefsGICache.png" alt="GI Cache scope on the Preferences window">
+<figcaption>GI Cache scope on the Preferences window</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Maximum Cache Size (GB)</strong></td>
+	<td style="text-align:left;">Use the slider to set the maximum GI cache folder size. Unity keeps the GI cache folder size below this number whenever possible. Unity periodically deletes unused files to create more space (deleting the oldest files first). This is an automatic process, and doesn’t require you to do anything. <br><strong>Note:</strong> If the current Scene is using all the files in the GI cache, increase your cache size. Otherwise, resource-intensive recomputation occurs when baking. This can happen when the Scene is very large or the cache size is too small.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Custom cache location</strong></td>
+	<td style="text-align:left;">Enable this option to allow a custom location for the GI cache folder. By default, the GI cache is stored in the <em>Caches</em> folder. All Projects share the cache folder.<br><strong>Tip:</strong> Storing the GI Cache on an SSD drive can speed up baking in cases where the baking process is I/O bound.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cache Folder Location</strong></td>
+	<td style="text-align:left;">Click the <strong>Browse</strong> button to specify a location for the cache.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cache compression</strong></td>
+	<td style="text-align:left;">Enable this option to allow Unity to compress files in the GI cache and reduce the size of the generated data. The files are LZ4-compressed by default, and the naming scheme is a hash and a file extension. The hashes are computed based on the inputs to the lighting system, so changing any of the following can lead to recomputation of lighting:<br>- Materials (Textures, Albedo, Emission)<br>- Lights<br>- Geometry<br>- Static flags<br>- Light Probe groups<br>- Reflection probes<br>- Lightmap Parameters<br><strong>Tip:</strong> If you need to access the raw Enlighten data, disable Cache Compression and clean the cache.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Clean Cache</strong></td>
+	<td style="text-align:left;">Use this button to clear the cache directory. <br>It is not safe to delete the GI Cache directory manually while the Editor is running. This is because the Editor creates the <em>GiCache</em> folder when it starts and maintains a set of references to those files. The <strong>Clean Cache</strong> button ensures that the Editor releases all references to the files on disk before they are deleted.</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2019–04–17 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">In <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/30_search.html?q=newin20191">2019.1</a>, Removed keys and added further options to the Tile Palette Preferences. <span class="search-words">NewIn20191</span></span></p></li>
+<li><p><span class="page-history">Selection outline color preference for child GameObjects added in 2018.3</span></p></li>
+<li><p><span class="page-history">New unified settings and other updates for Unity 2018.3</span></p></li>
+<li><p><span class="page-history">Script Changes While Playing and Device To Use drop-down menus added in Unity 2018.2</span></p></li>
+<li><p><span class="page-history">在 2018.1 版中更新了外部脚本编辑器的列表</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="2DAnd3DModeSettings.html"></a></span><div class="tip">2D and 3D mode settings</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Presets.html"></a></span><div class="tip">预设</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="ShaderLab：Properties - Unity Manual">
+<title>ShaderLab：Properties - Unity Manual</title>
+<meta name="description" content="着色器可以定义 Unity 材质检视面板中由美术师设置的参数列表。着色器文件中的 Properties 代码块将定义这些属性。">
+<meta property="og:description" content="着色器可以定义 Unity 材质检视面板中由美术师设置的参数列表。着色器文件中的 Properties 代码块将定义这些属性。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'SL-Properties';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-Properties.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-Properties.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-Properties.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-Properties.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-Properties.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-Properties.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-Properties.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-Properties.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-Properties.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-Properties.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/SL-Properties.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/SL-Properties.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/SL-Properties.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/SL-Properties.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-Properties.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-Properties.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-Properties.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-Properties.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-Properties.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-Properties.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-Properties.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-Properties.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-Properties.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-Properties.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="SL-Reference.html">着色器参考</a></li>
+<li><a href="SL-Shader.html">ShaderLab 语法</a></li>
+<li>ShaderLab：Properties</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-Shader.html"></a></span><div class="tip">ShaderLab 语法</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-SubShader.html"></a></span><div class="tip">ShaderLab：SubShader</div>
+</div>
+</div></div>
+<h1>ShaderLab：Properties</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>着色器可以定义 Unity <a href="Materials.html">材质检视面板</a>中由美术师设置的参数列表。<a href="SL-Shader.html">着色器文件</a>中的 Properties 代码块将定义这些属性。</p>
+
+<h2>语法</h2>
+
+<h4>Properties</h4>
+
+<pre><code>Properties { Property [Property ...]}
+</code></pre>
+
+<p>定义属性代码块。在大括号内，多个属性定义如下。</p>
+
+<h4>数字和滑动条</h4>
+
+<pre><code>name ("display name", Range (min, max)) = number
+name ("display name", Float) = number
+name ("display name", Int) = number
+</code></pre>
+
+<p>这些全都定义一个具有默认值的数字（标量）属性。<code>Range</code> 格式使该属性显示为一个滑动条，范围在 <em>min</em> 到 <em>max</em> 之间。</p>
+
+<h4>颜色和矢量</h4>
+
+<pre><code>name ("display name", Color) = (number,number,number,number)
+name ("display name", Vector) = (number,number,number,number)
+</code></pre>
+
+<p>使用给定 RGBA 分量的默认值定义颜色属性，或使用默认值定义 4D 矢量属性。颜色属性会显示拾色器，并根据颜色空间按需进行调整（请参阅<a href="SL-PropertiesInPrograms.html">着色器程序中的属性</a>）。矢量属性显示为四个数字字段。</p>
+
+<h4>纹理</h4>
+
+<pre><code>name ("display name", 2D) = "defaulttexture" {}
+name ("display name", Cube) = "defaulttexture" {}
+name ("display name", 3D) = "defaulttexture" {}
+</code></pre>
+
+<p>分别定义 <a href="class-TextureImporter.html">2D 纹理</a>、<a href="class-Cubemap.html">立方体贴图</a>或 <a href="class-Texture3D.html">3D（体积）</a>属性。</p>
+
+<h2>详细信息</h2>
+
+<p>着色器中的每个属性均通过 <strong>name</strong> 引用（在 Unity 中，着色器属性名称通常以下划线开头）。属性在材质检视面板中将显示为 <strong>display name</strong>。每个属性都在等号后给出默认值：</p>
+
+<ul>
+<li>对于 <em>Range</em> 和 <em>Float</em> 属性，默认值仅仅是单个数字，例如“13.37”。</li>
+<li>对于 <em>Color</em> 和 <em>Vector</em> 属性，默认值是括在圆括号中的四个数字，例如“(1,0.5,0.2,1)”。</li>
+<li>对于 2D 纹理，默认值为空字符串或内置默认纹理之一：“white”（RGBA：1,1,1,1）、“black”（RGBA：0,0,0,0）、“gray”（RGBA：0.5,0.5,0.5,0.5）、“bump”（RGBA：0.5,0.5,1,0.5）或“red”（RGBA：1,0,0,0）。</li>
+<li>对于非 2D 纹理（立方体、3D 或 2D 数组），默认值为空字符串。如果材质未指定立方体贴图/3D/数组纹理，则使用灰色（RGBA：0.5,0.5,0.5,0.5）。</li>
+</ul>
+
+<p>稍后在着色器的固定函数部分中，可使用括在方括号中的属性名称来访问属性值：<strong>[name]</strong>。例如，可通过声明两个整数属性（例如“<em>SrcBlend“和”</em>DstBlend”）来使混合模式由材质属性驱动，然后让 <a href="SL-Blend.html">Blend 命令</a>使用它们：<code>Blend [_SrcBlend] [_DstBlend]</code>。</p>
+
+<p><code>Properties</code> 代码块中的着色器参数被序列化为<a href="Materials.html">材质</a>数据。<a href="SL-ShaderPrograms.html">着色器程序</a>实际上可以有更多参数（如矩阵、矢量和浮点数），这些参数在运行时从代码中在材质上设置，但如果它们不是 Properties 代码块的一部分，则不会保存它们的值。这对于完全由脚本代码驱动的值最有用（使用 <a href="../ScriptReference/Material.SetFloat.html">Material.SetFloat</a> 和类似函数）。</p>
+
+<h3>属性特性和绘制器</h3>
+
+<p>在属性前面，可指定可选的特性（用方括号括起）。这些是 Unity 可以识别的特性，或者它们可以指示您自己的 <a href="../ScriptReference/MaterialPropertyDrawer.html">MaterialPropertyDrawer 类</a> 来控制它们在<a href="class-Material.html">材质检视面板</a>中的呈现方式。Unity 可以识别的特性包括：</p>
+
+<ul>
+<li>
+<code>[HideInInspector]</code> - 不在材质检视面板中显示属性值。</li>
+<li>
+<code>[NoScaleOffset]</code> - 对于具有此特性的纹理属性，材质检视面板不会显示纹理平铺/偏移字段。</li>
+<li>
+<code>[Normal]</code> - 表示纹理属性需要法线贴图。</li>
+<li>
+<code>[HDR]</code> - 表示纹理属性需要高动态范围 (HDR) 纹理。</li>
+<li>
+<code>[Gamma]</code> - 表示在 UI 中将浮点/矢量属性指定为 sRGB 值（就像颜色一样），并且可能需要根据使用的颜色空间进行转换。请参阅<a href="SL-PropertiesInPrograms.html">着色器程序中的属性</a>。</li>
+<li>
+<code>[PerRendererData]</code> - 表示纹理属性将以 <a href="../ScriptReference/MaterialPropertyBlock.html">MaterialPropertyBlock</a> 的形式来自每渲染器数据。材质检视面板会更改这些属性的纹理字段 UI。</li>
+</ul>
+
+<h2>示例</h2>
+
+<pre><code>// 水着色器的属性
+Properties
+{
+    _WaveScale ("Wave scale", Range (0.02,0.15)) = 0.07 // 滑动条
+    _ReflDistort ("Reflection distort", Range (0,1.5)) = 0.5
+    _RefrDistort ("Refraction distort", Range (0,1.5)) = 0.4
+    _RefrColor ("Refraction color", Color) = (.34, .85, .92, 1) // 颜色
+    _ReflectionTex ("Environment Reflection", 2D) = "" {} // 纹理
+    _RefractionTex ("Environment Refraction", 2D) = "" {}
+    _Fresnel ("Fresnel (A) ", 2D) = "" {}
+    _BumpMap ("Bumpmap (RGB) ", 2D) = "" {}
+}
+</code></pre>
+
+<h2>纹理属性选项（5.0 中已删除）</h2>
+
+<p>在 Unity 5 之前，纹理属性可以将选项括在花括号代码块中，例如 <code>TexGen CubeReflect</code>。这些纹理属性用于控制固定函数纹理坐标的生成。5.0 中删除了此功能；如果现在需要 texgen，应编写一个<a href="SL-ShaderPrograms.html">顶点着色器</a>来代替。请参阅<a href="SL-ImplementingTexGen.html">实现固定函数 TexGen</a>页面以查看示例。</p>
+
+<h2>另请参阅</h2>
+
+<ul>
+<li>
+<a href="SL-PropertiesInPrograms.html">使用 HLSL/Cg 访问着色器属性</a>。</li>
+<li>
+<a href="../ScriptReference/MaterialPropertyDrawer.html">材质属性绘制器</a>。</li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-Shader.html"></a></span><div class="tip">ShaderLab 语法</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-SubShader.html"></a></span><div class="tip">ShaderLab：SubShader</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

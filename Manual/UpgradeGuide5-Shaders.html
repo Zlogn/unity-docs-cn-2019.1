@@ -1,0 +1,262 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Unity 5.0 中的着色器 - Unity Manual">
+<title>Unity 5.0 中的着色器 - Unity Manual</title>
+<meta name="description" content="如果项目使用了自定义着色器代码，在将项目从 Unity 4 升级到 Unity 5 时需要注意以下注意事项。">
+<meta property="og:description" content="如果项目使用了自定义着色器代码，在将项目从 Unity 4 升级到 Unity 5 时需要注意以下注意事项。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UpgradeGuide5-Shaders';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UpgradeGuide5-Shaders.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UpgradeGuide5-Shaders.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UpgradeGuide5-Shaders.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UpgradeGuide5-Shaders.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UpgradeGuide5-Shaders.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UpgradeGuide5-Shaders.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UpgradeGuide5-Shaders.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UpgradeGuide5-Shaders.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UpgradeGuide5-Shaders.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UpgradeGuide5-Shaders.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UpgradeGuide5-Shaders.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UpgradeGuide5-Shaders.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UpgradeGuide5-Shaders.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UpgradeGuide5-Shaders.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UpgradeGuide5-Shaders.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UpgradeGuide5-Shaders.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UpgradeGuide5-Shaders.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UpgradeGuide5-Shaders.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UpgradeGuide5-Shaders.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UpgradeGuide5-Shaders.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UpgradeGuide5-Shaders.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UpgradeGuide5-Shaders.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UpgradeGuide5-Shaders.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UpgradeGuide5-Shaders.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="UpgradeGuides.html">升级指南</a></li>
+<li><a href="UpgradeGuide5.html">升级到 Unity 5.0</a></li>
+<li>Unity 5.0 中的着色器</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide5-Physics.html"></a></span><div class="tip">Unity 5.0 中的物理系统</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide5-Misc.html"></a></span><div class="tip">Unity 5.0 的其他升级注意事项</div>
+</div>
+</div></div>
+<h1>Unity 5.0 中的着色器</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>如果项目使用了自定义着色器代码，在将项目从 Unity 4 升级到 Unity 5 时需要注意以下注意事项。</p>
+
+<h3>着色器不再应用 2 倍光强</h3>
+
+<p>着色器不再应用 2 倍光强。相反，光源会自动升级为两倍亮度。这样可以在光源配置中提高一致性和简单性。例如，照射在白色漫射表面上的方向光将获得光的精确颜色。该升级不会影响动画，因此如果具有动画化的光强值，必须更改动画曲线或脚本代码，将它们设置为 2 倍，从而获得相同的效果。</p>
+
+<p>如果您在自定义着色器中定义自己的光照函数，需要自己删除 * 2。</p>
+
+<pre><code>// 具有此问题的着色器代码中的常见模式如下所示
+c.rgb = s.Albedo * _LightColor0.rgb * (diff * atten * 2);
+// 需要按如下所示的方式修复代码
+c.rgb = s.Albedo * _LightColor0.rgb * (diff * atten);
+</code></pre>
+
+<h3>增加了一些表面着色器的插值器和指令计数</h3>
+
+<p>Unity 5 中的内置光照管线在某些情况下可以使用更多纹理坐标插值器或数学指令计数（从而实现非一致网格比例、动态 GI 等）。现有的一些表面着色器可能会遇到纹理坐标或 ALU 指令限制，特别是以着色器模型 2.0（默认）为目标的情况下。添加“#pragma target 3.0”可以解决此问题。请参阅 <a href="http://docs.unity3d.com/Manual/SL-ShaderPrograms.html">http://docs.unity3d.com/Manual/SL-ShaderPrograms.html</a> 获取参考信息。</p>
+
+<h3>在着色器中必须考虑非一致网格比例</h3>
+
+<p>在 Unity 5.0 中，非一致网格不再在 CPU 上“预先缩放”。这意味着法线和切线矢量可以在顶点着色器中非标准化。如果在此处手动进行光照计算，则必须将它们标准化。如果使用的是 Unity 的表面着色器，那么将自动生成所有必需的代码。</p>
+
+<h3>已更改雾效处理</h3>
+
+<p>Unity 5.0 使内置雾效在 Windows Phone 和游戏主机上有效，但为了实现这一点，我们稍微改变了一下雾效的工作方式。对于表面着色器和固定函数着色器，不需要做任何额外的工作 - 雾效将自动添加（可将“nofog”添加到表面着色器 #pragma 代码行来显式指定不支持雾效）。</p>
+
+<p>对于手动编写的顶点/片元着色器，雾效现在不会自动发生。需要将 #pragma multi_compile_fog 和雾效处理宏添加到着色器代码中。请查看内置着色器源代码（例如 Unlit-Normal）了解如何执行此操作。</p>
+
+<h3>表面着色器 Alpha 通道更改</h3>
+
+<p>默认情况下，所有不透明表面着色器现在都会将 1.0（“白色”）输出到 Alpha 通道。如果要停止该行为，请在 #pragma surface 行中使用“keepalpha”选项。</p>
+
+<p>所有 Alpha 混合表面着色器现在都使用由光照函数计算的 Alpha 分量作为混合系数（而不是 s.Alpha）。如果使用的是自定义光照函数，可能需要在结尾添加类似“c.a = s.Alpha”的内容。</p>
+
+<h3>已删除按材质索引排序的功能</h3>
+
+<p>Unity 在前向渲染循环中不再按材质索引进行排序。这样可以提高性能，因为可以渲染更多对象而不会在它们之间改变状态。不过，这会破坏依赖于材质索引作为排序方式的内容的兼容性。在 4.x 中，具有两种材质的网格总是首先渲染第一种材质，然后是第二种材质。在 Unity 5 中并非如此，渲染顺序取决于在渲染场景时哪种材质可减少最多的状态变化。</p>
+
+<h3>已删除固定函数 TexGen、纹理矩阵和一些 SetTexture 组合器模式</h3>
+
+<p>Unity 5.0 删除了对以下固定函数着色器功能的支持：</p>
+
+<ul>
+<li>UV 坐标生成（TexGen 命令）。</li>
+<li>UV 变换矩阵（纹理属性上或 SetTexture 内的 Matrix 命令）。</li>
+<li>很少使用的 SetTexture 组合器模式：有符号的加法 (a+-b)、乘以有符号的加法 (a<em>b+-c)、先乘后减 (a</em>b-c)、点积 (dot3, dot3rgba)。</li>
+</ul>
+
+<p>以上任何一项现在已经无效，着色器 Inspector 会显示有关其用法的警告。因此，应使用可编程顶点+片元着色器重写受影响的着色器。现在所有平台都支持它们，并且使用固定函数着色器没有任何优势。</p>
+
+<p>如果项目中使用了版本相当旧的 Projector 或 Water 着色器包，这些着色器可能使用了此功能。请将这些着色器包升级到 5.0 版。</p>
+
+<h3>不再允许混用可编程和固定函数着色器部分</h3>
+
+<p>不再支持混合部分固定函数着色器和部分可编程着色器（例如固定函数顶点光照与像素着色器；或者顶点着色器与纹理组合器）。无论如何，这种做法以前在移动设备、游戏主机和 DirectX 11 上也一直是无效的。以前这需要改变 Legacy/Reflective/VertexLit 着色器的行为来禁止这种做法 - 虽然丢失了每顶点镜面反射支持，但从好的方面来看，现在平台之间的行为是一致的了。</p>
+
+<h3>D3D9 着色器编译器已从 Cg 2.2 切换到 HLSL</h3>
+
+<p>大多数情况下，这应该是透明的（只会减少代码生成错误和略微加快着色器速度）。但是 HLSL 编译器在语法方面可能稍微严格一些。例如：</p>
+
+<ul>
+<li>需要完全初始化输出变量。应使用 UNITY_INITIALIZE_OUTPUT helper 宏，就像在 D3D11 上一样。
+-“float3(a_4_component_value)”构造函数无效。应改用“a_4_component_value.xyz”。</li>
+</ul>
+
+<h3>已删除“unity_Scale”着色器变量</h3>
+
+<p>已删除“unity_Scale”着色器属性。在 4.x 版中，unity_Scale.w 是 1 / 变换的一致缩放，Unity 4.x 仅渲染非缩放或一致缩放的模型。其他缩放都是在 CPU 上执行的，这样的成本很高并有意外的内存开销。</p>
+
+<p>在 Unity 5.0 中，所有这些都是在 GPU 上完成的，只需将具有非一致比例的矩阵传递给着色器即可。所以现在删除了 unity_Scale，因为它不能代表完整缩放比例。对于大多数以前使用“unity_Scale”的情况，我们建议首先转换为世界空间。对于转换法线的情况，现在必须对转换的法线进行标准化。在某些情况下，这会导致顶点着色器中的代码成本略微升高。</p>
+
+<pre><code>// Unity 4.x
+float3 norm = mul ((float3x3)UNITY_MATRIX_IT_MV, v.normal * unity_Scale.w);
+// 在 Unity 5.0 中变为如下语句
+float3 norm = normalize(mul ((float3x3)UNITY_MATRIX_IT_MV, v.normal));
+</code></pre>
+
+<pre><code>// Unity 4.x
+temp.xyzw = v.vertex.xzxz * unity_Scale.xzxz * _WaveScale4 + _WaveOffset;
+ 
+// 在 Unity 5.0 中变为如下语句
+float4 wpos = mul (_Object2World, v.vertex);
+temp.xyzw = wpos.xzxz * _WaveScale4 + _WaveOffset;
+</code></pre>
+
+<h3>阴影、深度纹理和 ShadowCollector 通道</h3>
+
+<p>前向渲染的方向光阴影不再单独执行“阴影收集器”(shadow collector) 通道。现在，它们根据摄像机的深度纹理计算屏幕空间阴影（就像在延迟光照中一样）。</p>
+
+<p>这意味着，着色器中的 LightMode=ShadowCollector 通道不再有任何作用；可从着色器中删除它们。</p>
+
+<p>不再使用着色器替换来生成深度纹理本身，而是使用 ShadowCaster 着色器通道来对其进行渲染。这意味着只要对象可以投射适当的阴影，那么它们也将正确出现在摄像机的深度纹理中（在以前，如果想要自定义顶点动画或灵活的 Alpha 测试，这是很难做到的）。这也意味着 Camera-DepthTexture.shader 现在没有任何用处。而且，所有内置的阴影着色器都未使用背面剔除；已更改为匹配常规渲染的剔除模式。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide5-Physics.html"></a></span><div class="tip">Unity 5.0 中的物理系统</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide5-Misc.html"></a></span><div class="tip">Unity 5.0 的其他升级注意事项</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

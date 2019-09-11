@@ -1,0 +1,213 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Metallic 模式：Metallic 参数 - Unity Manual">
+<title>Metallic 模式：Metallic 参数 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/StandardShaderMetallicMode.png">
+<meta name="description" content="在金属性 (Metallic) 工作流程（与镜面反射 (Specular) 工作流程相反）中工作时，表面的反射率和光响应将由 Metallic 级别和 Smoothness 级别进行修改。">
+<meta property="og:description" content="在金属性 (Metallic) 工作流程（与镜面反射 (Specular) 工作流程相反）中工作时，表面的反射率和光响应将由 Metallic 级别和 Smoothness 级别进行修改。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'StandardShaderMaterialParameterMetallic';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/StandardShaderMaterialParameterMetallic.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/StandardShaderMaterialParameterMetallic.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/StandardShaderMaterialParameterMetallic.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/StandardShaderMaterialParameterMetallic.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/StandardShaderMaterialParameterMetallic.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/StandardShaderMaterialParameterMetallic.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/StandardShaderMaterialParameterMetallic.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/StandardShaderMaterialParameterMetallic.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/StandardShaderMaterialParameterMetallic.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/StandardShaderMaterialParameterMetallic.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/StandardShaderMaterialParameterMetallic.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/StandardShaderMaterialParameterMetallic.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/StandardShaderMaterialParameterMetallic.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/StandardShaderMaterialParameterMetallic.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/StandardShaderMaterialParameterMetallic.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/StandardShaderMaterialParameterMetallic.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/StandardShaderMaterialParameterMetallic.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/StandardShaderMaterialParameterMetallic.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/StandardShaderMaterialParameterMetallic.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/StandardShaderMaterialParameterMetallic.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/StandardShaderMaterialParameterMetallic.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/StandardShaderMaterialParameterMetallic.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/StandardShaderMaterialParameterMetallic.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/StandardShaderMaterialParameterMetallic.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="Shaders.html">材质、着色器和纹理</a></li>
+<li><a href="shader-StandardShader.html">标准着色器</a></li>
+<li><a href="StandardShaderMaterialParameters.html">材质参数</a></li>
+<li>Metallic 模式：Metallic 参数</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="StandardShaderMaterialParameterSpecular.html"></a></span><div class="tip">Specular 模式：Specular 参数</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="StandardShaderMaterialParameterSmoothness.html"></a></span><div class="tip">平滑度</div>
+</div>
+</div></div>
+<h1>Metallic 模式：Metallic 参数</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<figure>
+<img src="../uploads/Main/StandardShaderMetallicMode.png" alt="">
+</figure>
+
+<p>在<strong>金属性 (Metallic) 工作流程</strong>（与镜面反射 (Specular) 工作流程相反）中工作时，表面的反射率和光响应将由 Metallic 级别和 <a href="StandardShaderMaterialParameterSmoothness.html">Smoothness</a> 级别进行修改。</p>
+
+<figure>
+<img src="../uploads/Main/StandardShaderParameterMetallic.png" alt="">
+</figure>
+
+<p>使用此工作流程时仍会生成镜面反射，但它们是自然产生的，具体取决于您为 Metallic 和 Smoothness 级别提供的设置，而不是进行显式定义。</p>
+
+<p><strong>Metallic 模式不仅适用于看起来具有金属性的材质！</strong>此模式之所以称为金属性 (Metallic) 模式，是因为您可以控制表面的金属性或非金属性。</p>
+
+<h3>Metallic 参数</h3>
+
+<p>材质的金属性 (Metallic) 参数决定了表面有多么“像金属”。当表面具有较高的金属性时，它会在更大程度上反射环境，并且反照率颜色将变得不那么明显。在最高金属性级别下，表面颜色完全由来自环境的反射驱动。当表面的金属性较低时，其反照率颜色会更清晰，并且所有表面反射均在表面颜色的基础之上可见，而不是遮挡住表面颜色。</p>
+
+<figure>
+<img src="../uploads/Main/StandardShaderMetallicGraduationTable.jpg" alt="从 0 到 1 范围内的金属性值（所有样本的平滑度均设置为 0.8）">
+<figcaption>从 0 到 1 范围内的金属性值（所有样本的平滑度均设置为 0.8）</figcaption>
+</figure>
+
+<p>默认情况下，如果未分配纹理，则 Metallic 和 Smoothness 参数均由滑动条控制。对于某些材质来说，这已足够了。但是，如果模型表面某些区域在反照率纹理中具有混合表面类型，则可以使用纹理贴图来控制金属性和平滑度级别在材质表面上的变化。例如，如果纹理包含角色的服装，其中包括一些金属搭扣和拉链，您会希望搭扣和拉链的金属性值高于服装面料的金属性值。为实现此目的，我们不使用单个滑动条值，而是可以分配一个纹理贴图，在贴图中为搭扣和拉链区域提供较亮的像素颜色，而为布料提供较暗的值。</p>
+
+<p>为 Metallic 参数分配纹理后，Metallic 和 Smoothness 滑动条都将消失。取而代之的是，材质的 Metallic 级别由纹理的红色通道中的值控制，而材质的 <a href="StandardShaderMaterialParameterSmoothness.html">Smoothness</a> 级别由纹理的 Alpha 通道控制。（这意味着忽略绿色和蓝色通道）。也就是说，使用单个纹理即可将区域定义为粗糙或平滑以及金属性或非金属性；在使用纹理贴图来覆盖模型中许多具有不同要求的区域时（例如，单个角色纹理贴图通常包含多种表面要求：皮鞋、布料、手和脸的皮肤以及金属搭扣），这将非常有用。</p>
+
+<figure>
+<img src="../uploads/Main/StandardShaderNoMetallicMap.jpg" alt="此图显示了没有金属性贴图的手提箱模型">
+<figcaption>此图显示了没有金属性贴图的手提箱模型</figcaption>
+</figure>
+
+<p>在上面的示例中，手提箱具有反照率贴图，但没有可用于金属性的纹理。这意味着整个对象具有单一的金属性和平滑度值，这是不理想的。皮革带、金属搭扣、贴纸和手柄都应具有不同的表面属性。</p>
+
+<figure>
+<img src="../uploads/Main/StandardShaderMetallicMap.jpg" alt="此图显示了已应用金属性贴图的手提箱模型">
+<figcaption>此图显示了已应用金属性贴图的手提箱模型</figcaption>
+</figure>
+
+<p>此示例中已分配金属/平滑度纹理贴图。搭扣现在具有较高的金属性值并相应地响应光照。皮革带比箱体的皮革本身更亮，但它们具有较低的“Metallic”值，因此看起来是闪亮的非金属表面。最右边的黑白贴图显示了金属为较亮区域，而皮革为中低灰色。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="StandardShaderMaterialParameterSpecular.html"></a></span><div class="tip">Specular 模式：Specular 参数</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="StandardShaderMaterialParameterSmoothness.html"></a></span><div class="tip">平滑度</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

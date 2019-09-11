@@ -1,0 +1,321 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="升级到 Unity 5.4 - Unity Manual">
+<title>升级到 Unity 5.4 - Unity Manual</title>
+<meta name="description" content="将项目从 Unity 5.3 升级到 Unity 5.4 时，应了解可能会影响现有项目的一些更改。">
+<meta property="og:description" content="将项目从 Unity 5.3 升级到 Unity 5.4 时，应了解可能会影响现有项目的一些更改。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UpgradeGuide54';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UpgradeGuide54.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UpgradeGuide54.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UpgradeGuide54.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UpgradeGuide54.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UpgradeGuide54.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UpgradeGuide54.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UpgradeGuide54.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UpgradeGuide54.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UpgradeGuide54.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UpgradeGuide54.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UpgradeGuide54.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UpgradeGuide54.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UpgradeGuide54.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UpgradeGuide54.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UpgradeGuide54.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UpgradeGuide54.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UpgradeGuide54.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UpgradeGuide54.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UpgradeGuide54.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UpgradeGuide54.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UpgradeGuide54.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UpgradeGuide54.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UpgradeGuide54.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UpgradeGuide54.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="UpgradeGuides.html">升级指南</a></li>
+<li>升级到 Unity 5.4</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide55.html"></a></span><div class="tip">升级到 Unity 5.5</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide54Networking.html"></a></span><div class="tip">5.4 网络 API 更改</div>
+</div>
+</div></div>
+<h1>升级到 Unity 5.4</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>将项目从 Unity 5.3 升级到 Unity 5.4 时，应了解可能会影响现有项目的一些更改。</p>
+
+<h2>网络：Multiplayer 服务 API 更改</h2>
+
+<p><a href="UpgradeGuide54Networking.html">对网络 API 的大量更改</a>。</p>
+
+<h2>网络：WebRequest 不再是实验性的</h2>
+
+<p><code>WebRequest</code> 接口已从 <code>UnityEngine.Experimental.Networking</code> 升级为 <code>UnityEngine.Networking</code>。必须更新使用了 <code>UnityWebRequest</code> 的 Unity 5.2 和 5.3 项目。</p>
+
+<h2>Scene 视图：不自动应用色调映射</h2>
+
+<p>具有 <code>ImageEffectTransformsToLDR</code> 属性的图像效果将不再直接应用于 Scene 视图（如果存在）。现在有一个用于将效果应用于 Scene 视图的新属性：<code>ImageEffectAllowedInSceneView</code>。5.4 版标准资源已升级来反映这一变化。</p>
+
+<h2>着色器：已重命名变量</h2>
+
+<p>为了保持一致性，已重命名许多内置着色器变量：</p>
+
+<ul>
+<li>
+<strong>_Object2World</strong> 和 <strong>_World2Object</strong> 现在重命名为 <strong>unity_ObjectToWorld</strong> 和 <strong>unity_WorldToObject</strong>
+</li>
+<li>
+<strong>_World2Shadow</strong> 现在重命名为 <strong>unity_WorldToShadow[0]</strong>，<strong>_World2Shadow1</strong> 重命名为 <strong>unity_WorldToShadow[1]</strong>，以此类推</li>
+<li>
+<strong>_LightMatrix0</strong> 现在重命名为 <strong>unity_WorldToLight</strong>
+</li>
+<li>
+<strong>_WorldToCamera</strong>、<strong>_CameraToWorld</strong>、<strong>_Projector</strong>、<strong>_ProjectorDistance</strong>、<strong>_ProjectorClip</strong> 和 <strong>_GUIClipTextureMatrix</strong> 先前全都添加前缀 <strong>unity</strong>
+</li>
+</ul>
+
+<p>在导入 .shader 和 .cginc 文件时，其中的变量引用将自动重命名。但是，导入后，如果不手动重命名变量，着色器将无法在 Unity 5.3 或更早版本中使用。</p>
+
+<h2>着色器：一致数组</h2>
+
+<p>在 Unity 5.4 中，处理着色器属性数组的方式已发生变化。现在，针对着色器中的浮点/矢量/矩阵数组，提供了“原生”支持（通过 <code>MaterialPropertyBlock.SetFloatArray</code>、<code>Shader.SetGlobalFloatArray</code> 等）。这些新 API 支持包含最多 1,023 个元素的数组。</p>
+
+<p>在 <code>Material</code> 和 <code>MaterialPropertyBlock</code> 中都已弃用以数字为后缀的名称来引用单个数组元素的旧方法（例如 <code>_Colors0</code>、<code>_Colors1</code>）。使用 <code>Material</code> 序列化的这类属性不再能够设置数组元素（但如果任何一致数组的名称后缀为数字，此方法仍然有效）。</p>
+
+<h2>着色器：5.4 版中的其他更改</h2>
+
+<p>默认着色器编译目标已更改为“#pragma target 2.5”（WinPhone 上的 DX9 SM3.0、DX11 9.3 功能级别）。仍然可以使用“#pragma target 2.0”将目标设置为 DX9 SM2.0 和 DX11 9.1 功能级别。</p>
+
+<p>现在大多数内置着色器的目标是 2.5：明显的例外是 Unlit、VertexLit 和固定函数着色器。实际上，这意味着，默认情况下大多数内置着色器和新创建的着色器将无法在 2004 年之前生产的 PC GPU 上运行。请参阅<a href="http://blogs.unity3d.com/2015/08/27/plans-for-graphics-features-deprecation/">此博客文章</a>了解详细信息。</p>
+
+<p>已弃用的 <code>Material</code> 类构造函数 <code>Material(string)</code> 在 5.4 版中停止工作。使用它将输出错误并导致洋红色的错误着色器。</p>
+
+<p>The internal shader used to compute screen-space directional light shadows has moved to the <a href="class-GraphicsSettings.html">Graphics</a> settings. If you were using a customized version of directional light shadows by having a copy of that shader in your project, it will no longer be used. Instead, select your custom shader under <strong>Edit &gt; Project Settings</strong>, then select the <strong>Graphics</strong> category.</p>
+
+<p>反射探针在两个纹理之间共享一个采样器。如果在着色器中手动对它们进行采样，并得到一个“undeclared identifier samplerunity_SpecCube1”错误，则需要将代码从 <code>UNITY_PASS_TEXCUBE(unity_SpecCube1)</code> 更改为 <code>UNITY_PASS_TEXCUBE_SAMPLER(unity_SpecCube1,unity_SpecCube0)</code>。</p>
+
+<p><code>UnityEditor.ShaderUtil.ShaderPropertyTexDim</code> 已弃用；请改用 <code>Texture.dimension</code>。</p>
+
+<h2>ComputeBuffer</h2>
+
+<p>The data layout of ComputeBuffers in automatically-converted OpenGL shaders has changed to match the layout of DirectX ComputeBuffers. If you use ComputeBuffers in OpenGL, remove any code that tweaks the data to match the previous OpenGL-specific layout rules. Please see <a href="class-ComputeShader.html">Compute Shaders</a> for more information.</p>
+
+<h2>Playable：迁移到 5.4</h2>
+
+<ul>
+<li><p>Playable 现在是结构而不是类。</p></li>
+<li><p><code>Playable</code> 结构是原生 <code>Playable</code> 类的句柄，而不是指向原生 <code>Playable</code> 类的指针。</p></li>
+<li><p>非 null 的 <code>Playable</code> 结构不保证 Playable 可用。请使用 <code>.IsValid</code> 方法验证 Playable 是否可用。</p></li>
+<li><p>用于为空输入/输出返回 null 的所有方法现在将返回 <code>Playable.Null</code>。</p></li>
+<li><p><code>Playable.Null</code> 是无效的 Playable。</p></li>
+<li><p>可将 <code>Playable.Null</code> 传递给 <code>AddInput</code>、<code>SetInput</code> 和 <code>SetInputs</code> 来保留空输入或用于隐式断开连接的输入。</p></li>
+<li><p>如果使用 <code>Playable.Null</code> 或任何无效的 Playable 作为任何方法的输入，或者对无效的 Playable 调用方法，则会为该操作抛出相应的异常。</p></li>
+<li><p>将 Playable 与 <code>null</code> 进行比较现在毫无意义。应与 <code>Playable.Null</code> 比较。</p></li>
+<li><p>必须使用希望使用的类的 <code>Create</code> 静态方法来分配 Playable。</p></li>
+<li><p>必须对 Playable 句柄使用 <code>.Destroy</code> 方法来取消分配 Playable。</p></li>
+<li><p>未取消分配的 Playable 将泄漏。</p></li>
+<li><p>Playable 已转换为结构以避免装箱/拆箱，从而提高性能（<a href="https://msdn.microsoft.com/en-us/library/yz2be5wk.aspx">有关装箱的更多信息</a>）。</p></li>
+<li><p>隐式或显式将 <code>Playable</code> 转换为对象将导致装箱/拆箱，从而降低性能。</p></li>
+<li><p>从 Playable 类继承将导致子类的实例进行装箱/拆箱。</p></li>
+<li><p>由于现在只有动画可用，<code>ScriptPlayable</code>s 已被 <code>CustomAnimationPlayables</code> 取代。</p></li>
+<li><p>无法再从基础 Playable 派生。只需在自定义 Playable 中聚合 Playable。</p></li>
+</ul>
+
+<h2>Oculus Rift：从 Unity 5.3 升级项目</h2>
+
+<p>请按照以下说明从 Unity 5.3 升级 Oculus VR 项目：</p>
+
+<p>重新启用虚拟现实支持。</p>
+
+<ul>
+<li>Open the <a href="class-PlayerSettings.html">Player</a> settings (menu: <strong>Edit &gt; Project Settings</strong>, then select the <strong>Player</strong> category).</li>
+<li>选择 <strong>Other Settings</strong> 并选中 <strong>Virtual Reality Supported</strong> 复选框。使用该复选框下方显示的 Virtual Reality SDK 列表为每个构建目标添加和删除虚拟现实设备。</li>
+</ul>
+
+<p>删除 <strong>Oculus Spatializer</strong>。</p>
+
+<ul>
+<li>Remove the <strong>Oculus Spatializer</strong> Audio Plugin from your project through the Audio settings (menu: <strong>Edit &gt; Project Settings</strong>, then select the <strong>Audio</strong> category), using the Spatializer Plugin dropdown menu. It may conflict with the native spatializer and prevent building.</li>
+</ul>
+
+<h2>对同级游戏对象重新排序</h2>
+
+<p>重新排序同级游戏对象时触发的事件在 Unity 5.4 中发生了变化。同级游戏对象是指在 Hierarchy 窗口中具有相同父对象的游戏对象。在 Unity 的早期版本中，更改同级游戏对象的顺序会导致每个同级对象都接收到一个 <code>OnTransformParentChanged</code> 调用。在 5.4 中，同级游戏对象不再接到此调用。取而代之的是父游戏对象接收到单个 <code>OnTransformChildrenChanged</code> 调用。</p>
+
+<p>这意味着，如果项目中的代码依赖于在重新排序同级游戏对象时调用 <strong>OnTransformParentChanged__，那么这些调用现在将不再发生，并需要更新代码以使父对象收到 </strong>OnTransformChildrenChanged__ 调用时执行操作。</p>
+
+<p>进行此更改的原因是新行为可以提高性能。</p>
+
+<h2>在运行时重新排列大型游戏对象层级视图</h2>
+
+<p>由于变换组件的优化，如果层级视图包含 1000 个以上的游戏对象，则使用 <code>Transform.SetParent</code> 或 <code>Destroy</code>ing 操作可能需要很长时间。建议不要在运行时调用 <code>SetParent</code> 或通过其他方式重新排列如此大的层级视图。</p>
+
+<h2>Windows 应用商店</h2>
+
+<p>已为所有 .NET 脚本后端 SDK 更新了生成的 Visual Studio 项目格式。这可以修复当生成的项目中没有任何更改时进行过多的重建。您可能需要删除现有生成的 *.csproj（尤其如果它是在选中“Generate C# projects”选项的情况下构建的），以便 Unity 可以重新生成它。</p>
+
+<h2>脚本序列化错误</h2>
+
+<p>在反序列化（加载）期间从构造函数和字段初始化程序调用 Unity API 时，可捕获两个新的脚本序列化错误。反序列化可能发生在与主线程不同的线程上，因此在反序列化期间调用 Unity API 是不安全的。Unity 手册中的(脚本序列化)[script-Serialization]页面底部提供了更多详细信息。</p>
+
+<h2>支持 Retina 屏幕</h2>
+
+<p>Editor 现在支持 Mac OS X 上的 Retina 分辨率，提供高分辨率文本、UI 和 3D 视图。</p>
+
+<p>现在 Editor GUI 在点空间而不是像素空间中定义。在标准分辨率显示屏上，没有变化，因为每个点都是一个像素。然而，在 Retina 显示屏上，每个点都是两个像素。当前屏幕与 UI 比例可用作 <code>EditorGUIUtility.pixelsPerPoint</code>。由于 Unity 可以有多个窗口，每个窗口会显示在具有不同像素密度的监视器上，因此该值可能会在视图之间发生变化。</p>
+
+<p>如果 Editor 代码使用常规的 Editor/GUI/Layout 方法，很可能不需要进行任何更改。</p>
+
+<p>如果使用 <code>Screen.width/height</code>，请改用 <code>EditorWindow.position.width/height</code>。这是因为屏幕大小是以像素为单位测量的，但 UI 是以点为单位定义的。对于在 Inspector 中显示的自定义编辑器，请使用 <code>EditorGUIUtility.currentViewWidth</code>，它能正确反映滚动条的存在。</p>
+
+<p>如果要在 UI 中显示其他内容（例如 RenderTexture），可能要以点为单位计算其大小。为了支持 Retina 分辨率，需要将点大小转换为像素大小。<a href="../ScriptReference/EditorGUIUtility.html">EditorGUIUtility</a> 中有用于此目的的新方法。</p>
+
+<p>如果使用具有自定义背景的 GUIStyle，则可以通过将具有恰好双倍尺寸的一个纹理放入“GUIStyleState.scaledBackgrounds”数组中来添加 Retina 版本的背景纹理。</p>
+
+<p>由于分辨率提高，图形硬件不够强大的 Mac 可能在 3D 视图中出现不可接受的 Editor 帧率迟缓问题。可通过在 Finder 中的 Unity.app 上选择“Get Info”并选中“Open in Low Resolution”来禁用 Retina 支持。</p>
+
+<h2>物理：网格和物理变换漂移</h2>
+
+<p>存在以下方面的更改：</p>
+
+<ul>
+<li>如果物理网格包含无效（非有限）顶点，则会拒绝此类物理网格。</li>
+<li>通过不发送冗余变换更新来避免物理变换漂移。</li>
+</ul>
+
+<p>5.3 版的行为是动画系统始终为恒定的动画曲线发送变换更新消息。这些消息会唤醒刚体，而修复这个问题在 5.3 版中被证明是非常危险的。</p>
+
+<p>在 5.4 版中，如果没有位置变化，刚体就不会唤醒（这符合大多数人的预期）。</p>
+
+<p>如果项目依赖于一直唤醒刚体的 5.3 版行为，可能无法在 5.4 版中按预期运行。</p>
+
+<h2>Web 播放器</h2>
+
+<p>已从 Unity 5.4 中删除 Unity Web 播放器目标。如果将项目升级到 5.4 版，则无法将其部署到 Web 播放器平台。</p>
+
+<p>如果有需要维护的旧版 Web 播放器项目，请不要将它们升级到 5.4 或更高版本。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide55.html"></a></span><div class="tip">升级到 Unity 5.5</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide54Networking.html"></a></span><div class="tip">5.4 网络 API 更改</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

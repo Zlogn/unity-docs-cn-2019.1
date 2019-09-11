@@ -1,0 +1,746 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Unity Channel SDK 和 API 扩展 - Unity Manual">
+<title>Unity Channel SDK 和 API 扩展 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/ReceiptObfuscation.jpg">
+<meta name="description" content="AppInfo 类用于存储客户端到服务器通信和身份验证所需的客户端凭据和小米凭据。">
+<meta property="og:description" content="AppInfo 类用于存储客户端到服务器通信和身份验证所需的客户端凭据和小米凭据。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UnityIAPXiaomiAPI';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityIAPXiaomiAPI.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityIAPXiaomiAPI.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityIAPXiaomiAPI.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityIAPXiaomiAPI.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityIAPXiaomiAPI.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityIAPXiaomiAPI.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityIAPXiaomiAPI.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityIAPXiaomiAPI.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityIAPXiaomiAPI.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityIAPXiaomiAPI.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UnityIAPXiaomiAPI.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UnityIAPXiaomiAPI.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UnityIAPXiaomiAPI.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UnityIAPXiaomiAPI.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityIAPXiaomiAPI.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityIAPXiaomiAPI.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityIAPXiaomiAPI.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityIAPXiaomiAPI.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityIAPXiaomiAPI.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityIAPXiaomiAPI.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityIAPXiaomiAPI.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityIAPXiaomiAPI.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityIAPXiaomiAPI.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityIAPXiaomiAPI.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="UnityIAP.html">﻿Unity IAP</a></li>
+<li>应用商店指南</li>
+<li><a href="UnityIAPXiaomi.html">Unity IAP 小米集成指南</a></li>
+<li>Unity Channel SDK 和 API 扩展</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityIAPXiaomi.html"></a></span><div class="tip">Unity IAP 小米集成指南</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityIAPImplementingAStore.html"></a></span><div class="tip">实现应用商店</div>
+</div>
+</div></div>
+<h1>Unity Channel SDK 和 API 扩展</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>Unity Channel API</h2>
+
+<h3>UnityEngine.Store 命名空间</h3>
+
+<h4>AppInfo 类</h4>
+
+<p><code>AppInfo</code> 类用于存储客户端到服务器通信和身份验证所需的客户端凭据和小米凭据。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>键：</strong></th>
+	<th style="text-align:left;"><strong>类型：</strong></th>
+	<th style="text-align:left;"><strong>描述：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>appID</strong></td>
+	<td style="text-align:left;">string</td>
+	<td style="text-align:left;">小米 app ID</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>appKey</strong></td>
+	<td style="text-align:left;">string</td>
+	<td style="text-align:left;">小米 app key</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>clientID</strong></td>
+	<td style="text-align:left;">string</td>
+	<td style="text-align:left;">Unity client ID</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>clientKey</strong></td>
+	<td style="text-align:left;">string</td>
+	<td style="text-align:left;">Unity client key</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>debug</strong></td>
+	<td style="text-align:left;">bool</td>
+	<td style="text-align:left;">切换调试模式</td>
+</tr>
+</tbody>
+</table>
+
+<h4>ILoginListener 接口</h4>
+
+<p>小米要求所有发布到 Mi Game Center 的应用程序通过 <code>ILoginListener</code> 进行登录。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>键：</strong></th>
+	<th style="text-align:left;"><strong>类型：</strong></th>
+	<th style="text-align:left;"><strong>描述：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>OnInitialized ()</strong></td>
+	<td style="text-align:left;">void</td>
+	<td style="text-align:left;">初始化成功时调用</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>OnInitializedFailed (string message)</strong></td>
+	<td style="text-align:left;">void</td>
+	<td style="text-align:left;">初始化失败时调用</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>OnLogin ()</strong></td>
+	<td style="text-align:left;">void</td>
+	<td style="text-align:left;">登录成功时调用</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>OnLoginFailed (string message)</strong></td>
+	<td style="text-align:left;">void</td>
+	<td style="text-align:left;">登录失败时调用</td>
+</tr>
+</tbody>
+</table>
+
+<h4>StoreService 类</h4>
+
+<p>Unity IAP 在内部使用 <code>StoreService</code> 类对 Unity Channel SDK 进行初始化。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>键：</strong></th>
+	<th style="text-align:left;"><strong>类型：</strong></th>
+	<th style="text-align:left;"><strong>描述：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>static Initialize (AppInfo appInfo, ILoginListener loginListener)</strong></td>
+	<td style="text-align:left;">void</td>
+	<td style="text-align:left;">初始化 Unity Channel SDK</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>static Login (AppInfo appInfo, ILoginListener loginListener)</strong></td>
+	<td style="text-align:left;">void</td>
+	<td style="text-align:left;">登录小米帐户</td>
+</tr>
+</tbody>
+</table>
+
+<h4>UserInfo 类</h4>
+
+<p>成功登录 Unity Channel 将会返回 <code>UserInfo</code> 类。返回的数据仅供参考。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>键：</strong></th>
+	<th style="text-align:left;"><strong>类型：</strong></th>
+	<th style="text-align:left;"><strong>描述：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>channel</strong></td>
+	<td style="text-align:left;">string</td>
+	<td style="text-align:left;">Indicates which channel you are using (currently, it is only “XIAOMI”)</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>userID</strong></td>
+	<td style="text-align:left;">string</td>
+	<td style="text-align:left;">Channel’s unique user ID</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>userLoginToken</strong></td>
+	<td style="text-align:left;">string</td>
+	<td style="text-align:left;">验证用户登录信息（请参阅小米 IAP 集成指南的“服务器端初始化”部分）</td>
+</tr>
+</tbody>
+</table>
+
+<h3>UnityEngine.ChannelPurchase 命名空间</h3>
+
+<h4>IPurchaseListener 接口</h4>
+
+<p>Unity IAP 在内部使用 <code>IPurchaseListener</code> 接口来处理购买活动。</p>
+
+<p>通过实现 <code>IPurchaseListener</code> 类来处理购买流程的状态：</p>
+
+<pre><code>using UnityEngine.ChannelPurchase;
+......
+private class ExamplePurchaseListener : IPurchaseListener{
+    public void OnPurchase (PurchaseInfo purchaseInfo){
+        Debug.Log ("Purchase Succeed: " + purchaseInfo.gameOrderId);
+    }
+    public void OnPurchaseFailed (string message, PurchaseInfo purchaseInfo){
+        Debug.Log ("Purchase Failed: " + message);
+    }
+    public void OnPurchaseRepeated(string productCode){
+        Debug.Log ("Purchase Repeated");
+    }
+    public void OnReceiptValidate (ReceiptInfo receiptInfo){
+        Debug.Log ("Validate Succeed");
+    }
+    public void OnReceiptValidateFailed (string gameOrderId, string message){
+        Debug.Log ("Validate Failed");
+    }
+    public void OnPurchaseConfirm (string gameOrderId){
+        Debug.Log ("Confirm Succeed");
+    }
+    public void OnPurchaseConfirmFailed (string gameOrderId, string message){
+        Debug.Log ("Confirm Failed");
+    }
+}
+</code></pre>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>键：</strong></th>
+	<th style="text-align:left;"><strong>类型：</strong></th>
+	<th style="text-align:left;"><strong>描述：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>OnPurchase ()</strong></td>
+	<td style="text-align:left;">void</td>
+	<td style="text-align:left;">购买成功时调用</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>OnPurchaseFailed (string message, PurchaseInfo purchaseInfo)</strong></td>
+	<td style="text-align:left;">void</td>
+	<td style="text-align:left;">购买失败时调用</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>OnPurchaseRepeated (string productCode)</strong></td>
+	<td style="text-align:left;">void</td>
+	<td style="text-align:left;">再次购买非消耗商品时调用</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>OnReceiptValidation (ReceiptInfo receiptInfo)</strong></td>
+	<td style="text-align:left;">void</td>
+	<td style="text-align:left;">
+<code>PurchaseService.ValidateReceipt (...)</code> 成功时调用</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>OnReceiptValidationFailed (string gameOrderID, string message)</strong></td>
+	<td style="text-align:left;">void</td>
+	<td style="text-align:left;">
+<code>PurchaseService.ValidateReceipt (...)</code> 失败时调用</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>OnPurchaseConfirm (string gameOrderId)</strong></td>
+	<td style="text-align:left;">void</td>
+	<td style="text-align:left;">已弃用</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>OnPurchaseConfirm (string gameOrderId, string message)</strong></td>
+	<td style="text-align:left;">void</td>
+	<td style="text-align:left;">已弃用</td>
+</tr>
+</tbody>
+</table>
+
+<h4>PurchaseService 类</h4>
+
+<p>Unity IAP 在内部使用 <code>PurchaseService</code> 类来启动购买活动。</p>
+
+<p>在实现购买监听器的情况下，调用 <code>PurchaseService.Purchase</code> 方法来执行购买交易：</p>
+
+<pre><code>using UnityEngine.ChannelPurchase;
+......
+    var myPurchaseListener = new ExamplePurchaseListener ();
+    PurchaseService.Purchase ("Product ID", "Game Order ID", myPurchaseListener);
+</code></pre>
+
+<p>商品 ID (Product ID) 列在 Xiaomi Developer Portal 中。如果应用程序以调试模式运行，则商品 ID 也会导出到 <em>MiGameProductCatalog.prop</em> 文件。游戏订单 ID (Game Order ID) 可以是 null；Unity Channel SDK 将生成其 UUID。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>键：</strong></th>
+	<th style="text-align:left;"><strong>类型：</strong></th>
+	<th style="text-align:left;"><strong>描述：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>static Purchase (string productCode, string gameOrderId, IPurchaseListener productListener)</strong></td>
+	<td style="text-align:left;">void</td>
+	<td style="text-align:left;">购买商品</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>static ValidateReceipt (string gameOrderId, IPurchaseListener purchaseListener)</strong></td>
+	<td style="text-align:left;">void</td>
+	<td style="text-align:left;">验证购买</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>static ConfirmPurchase ()</strong></td>
+	<td style="text-align:left;">void</td>
+	<td style="text-align:left;">已弃用（改用 <code>ValidateReceipt (...)</code>）</td>
+</tr>
+</tbody>
+</table>
+
+<h4>PurchaseInfo 类</h4>
+
+<p>购买后，通过调用 <code>PurchaseService.ValidateReceipt</code> 方法来验证购买：</p>
+
+<pre><code>    PurchaseService.ValidateReceipt(gameOrderId, myPurchaseListener);
+</code></pre>
+
+<p>如果 <code>gameOrderId</code> 有效，则 <code>myPurchaseListener</code> 会接收包含 <code>signData</code> 和 <code>signature</code> 的 <code>ReceiptInfo</code>，而 Unity Channel 将使用这些信息来验证购买。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>键：</strong></th>
+	<th style="text-align:left;"><strong>类型：</strong></th>
+	<th style="text-align:left;"><strong>描述：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>productCode</strong></td>
+	<td style="text-align:left;">string</td>
+	<td style="text-align:left;">A Product’s unique ID (you can also configure this directly in the Xiaomi dev portal)</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>gameOrderId</strong></td>
+	<td style="text-align:left;">string</td>
+	<td style="text-align:left;">The order’s purchase ID</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>orderQueryToken</strong></td>
+	<td style="text-align:left;">string</td>
+	<td style="text-align:left;">用于验证购买</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="ReceiptInfo"></a></p>
+
+<h4>ReceiptInfo 类</h4>
+
+<p>验证工作通常在游戏服务器上进行，但是您也可以在客户端验证 <code>signData</code>。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>键：</strong></th>
+	<th style="text-align:left;"><strong>类型：</strong></th>
+	<th style="text-align:left;"><strong>描述：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>gameOrderId</strong></td>
+	<td style="text-align:left;">string</td>
+	<td style="text-align:left;">The order’s purchase ID</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>signData</strong></td>
+	<td style="text-align:left;">string</td>
+	<td style="text-align:left;">一个包含购买详细信息的 JSON 字符串</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>signature</strong></td>
+	<td style="text-align:left;">string</td>
+	<td style="text-align:left;">signData’s signature</td>
+</tr>
+</tbody>
+</table>
+
+<h2>收据验证和扩展 API</h2>
+
+<p>在继续之前，请查看有关 <a href="https://docs.unity3d.com/Manual/UnityIAPValidatingReceipts.html">Unity IAP 收据验证</a>的文档。另请参阅 <a href="https://docs.unity3d.com/ScriptReference/index.html">UnityEngine.Purchasing Scripting API</a>。</p>
+
+<h3>UnityEngine.Purchasing 命名空间</h3>
+
+<p><code>IUnityChannelConfiguration</code> 和 <code>IUnityChannelExtensions</code> 接口为拆解应用商店收据提供了扩展功能。</p>
+
+<p>在购买时使用 Unity IAP <code>CrossPlatformValidator</code> 类（在<a href="https://docs.unity3d.com/Manual/UnityIAPValidatingReceipts.html">收据验证</a>文档中有详细说明）和 <code>IUnityChannelExtensions.ValidateReceipt</code> 方法（在下文有详细说明）执行本地收据验证。</p>
+
+<p>在实现验证之前，为小米启用收据混淆处理：</p>
+
+<ol>
+<li>Obtain your app’s <strong>Client RSA Public Key</strong> from your App Store Settings (see the <strong>App Store Settings</strong> section of the <a href="https://docs.unity3d.com/Manual/UnityIAPXiaomi.html">Xiaomi IAP integration guide</a>), or from the <a href="https://id.unity.com/en/user_clients/settings">Unity Client Settings dashboard</a>. 2.在 Unity Editor 的 Unity IAP Receipt Validation Obfuscator 窗口 (<strong>Window</strong> &gt; <strong>Unity IAP</strong> &gt; <strong>Receipt Validation Obfuscator</strong>) 中输入 Unity Channel 密钥。此窗口可收集、混淆处理和存储项目中的公钥以进行收据验证。 3.在 Receipt Validation Obfuscator 窗口中，选择 <strong>Obfuscate Unity Channel Public Key</strong> 以将生成的 <em>UnityChannelTangle</em> 数据文件保存到项目中。</li>
+</ol>
+
+<figure>
+<img src="../uploads/Main/ReceiptObfuscation.jpg" alt="Unity IAP Receipt Validation Obfuscator 窗口。在项目中生成数据类以便用于 CrossPlatformValidator。">
+<figcaption>Unity IAP Receipt Validation Obfuscator 窗口。在项目中生成数据类以便用于 CrossPlatformValidator。</figcaption>
+</figure>
+
+<h4>IUnityChannelConfiguration 接口</h4>
+
+<p>To automatically fetch the required receipt data from Unity Channel during purchase, set <code>IUnityChannelConfiguration.fetchReceiptPayloadOnPurchase</code> to <code>true</code> when initializing Unity IAP. This calls <code>IUnityChannelExtensions.ValidateReceipt</code> internally after a successful purchase (ideally when the <a href="https://docs.unity3d.com/ScriptReference/Purchasing.PurchaseEventArgs.html"><code>PurchaseEventArgs</code></a>’ <code>purchasedProduct.receipt</code> field triggers the <code>IStoreListener.ProcessPurchase</code> success callback).</p>
+
+<p><strong>注意</strong>：如果将 <code>fetchReceiptPayloadOnPurchase</code> 标志设置为 true，则会产生一个网络请求来获取成功购买后的加密收据数据。如果这里的第二个网络请求由于任何原因而失败，那么 <code>ProcessPurchase</code> 成功回调会收到一个包含无效收据的商品。</p>
+
+<p>通过 <code>CrossPlatformValidator.Validate</code> API 传递 <code>purchasedProduct.receipt</code> 数据将会返回一个 <code>IPurchaseReceipt</code>（这是经过完全验证的收据）。如果结果为空，则表示验证失败。请参阅以下示例：</p>
+
+<pre><code>CrossPlatformValidator validator = new CrossPlatformValidator (GooglePlayTangle.Data(), AppleTangle.Data(), UnityChannelTangle.Data(), Application.identifier);
+
+var result = validator.Validate(purchasedProduct.receipt);
+</code></pre>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>键：</strong></th>
+	<th style="text-align:left;"><strong>类型：</strong></th>
+	<th style="text-align:left;"><strong>描述：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>fetchReceiptPayloadOnPurchase</strong></td>
+	<td style="text-align:left;">bool</td>
+	<td style="text-align:left;">购买期间自动收集 Unity Channel 收据数据</td>
+</tr>
+</tbody>
+</table>
+
+<h4>IUnityChannelExtensions 接口</h4>
+
+<p>Use the <code>IUnityChannelExtensions</code> interface to confirm purchases and validate receipts. The callbacks for the above methods return a bool indicating success, a ‘signData’ string, and a ‘signature’ string (see section on <a href="#ReceiptInfo">ChannelPurchase.ReceiptInfo</a>).</p>
+
+<p><strong>注意</strong>：<code>ValidateReceipt ()</code> 容易遭受<a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack">中间人攻击</a>，因此请使用客户端 RSA 公钥 (Client RSA Public Key) 来增加安全性（请参阅<a href="https://docs.unity3d.com/Manual/UnityIAPXiaomi.html">小米 IAP 集成指南</a>的<strong>应用商店设置</strong>部分）。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>键：</strong></th>
+	<th style="text-align:left;"><strong>类型：</strong></th>
+	<th style="text-align:left;"><strong>描述：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong><code>ConfirmPurchase (string transactionID, Action&lt;bool, string, string&gt;, callback)</code></strong></td>
+	<td style="text-align:left;">void</td>
+	<td style="text-align:left;">收集先前购买的购买状态（用于查看购买历史记录，尤其是游戏中断或网络超时的情况下）</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong><code>ValidateReceipt (string transactionID, Action&lt;bool, string, string&gt;, callback)</code></strong></td>
+	<td style="text-align:left;">void</td>
+	<td style="text-align:left;">验证给定交易 ID (transactionID) 的收据</td>
+</tr>
+</tbody>
+</table>
+
+<h4>UnifiedReceipt 类</h4>
+
+<p><code>UnifiedReceipt</code> 类包含 Unity IAP 可以解释的特定于商店的交易数据。请参阅以下示例了解如何拆解一个统一收据字符串：</p>
+
+<pre><code>var unifiedReceipt = JsonUtility.FromJson&lt;UnifiedReceipt&gt;(purchEvtArg.purchasedProduct.receipt)
+</code></pre>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>键：</strong></th>
+	<th style="text-align:left;"><strong>类型：</strong></th>
+	<th style="text-align:left;"><strong>描述：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Payload</strong></td>
+	<td style="text-align:left;">string</td>
+	<td style="text-align:left;">Unity IAP’s wrapper for receipts that come back in different formats for different stores</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Store</strong></td>
+	<td style="text-align:left;">string</td>
+	<td style="text-align:left;">发生购买的商店</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>TransactionID</strong></td>
+	<td style="text-align:left;">string</td>
+	<td style="text-align:left;">唯一的交易 ID</td>
+</tr>
+</tbody>
+</table>
+
+<h4>UnityChannelPurchaseReceipt 接口</h4>
+
+<p>使用 <code>UnityChannelPurchaseReceipt</code> 可进一步将统一收据拆解为 Unity Channel 收据。请参阅以下示例：</p>
+
+<pre><code>var ucReceipt = JsonUtility.FromJson&lt;UnityChannelPurchaseReceipt&gt;(unifiedReceipt.Payload)
+</code></pre>
+
+<p>此额外的 Unity Channel 收据数据仅供参考。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>键：</strong></th>
+	<th style="text-align:left;"><strong>类型：</strong></th>
+	<th style="text-align:left;"><strong>描述：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>productID</strong></td>
+	<td style="text-align:left;">string</td>
+	<td style="text-align:left;">购买的商品的唯一 ID</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>transactionID</strong></td>
+	<td style="text-align:left;">string</td>
+	<td style="text-align:left;">唯一的交易 ID</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>orderQueryToken</strong></td>
+	<td style="text-align:left;">string</td>
+	<td style="text-align:left;">订单查询令牌</td>
+</tr>
+</tbody>
+</table>
+
+<h3>运行时的商店标识</h3>
+
+<p>要在运行时检查小米应用商店是否是您游戏中的有效商店，请使用以下代码片段提供的布尔值：</p>
+
+<pre><code>var module = StandardPurchasingModule.Instance();
+bool m_IsUnityChannelSelected =
+    Application.platform == RuntimePlatform.Android &amp;amp;&amp;amp;
+    module.androidStore == AndroidStore.XiaomiMiPay;
+</code></pre>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityIAPXiaomi.html"></a></span><div class="tip">Unity IAP 小米集成指南</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityIAPImplementingAStore.html"></a></span><div class="tip">实现应用商店</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

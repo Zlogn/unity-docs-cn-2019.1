@@ -1,0 +1,208 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="曲线 - Unity Manual">
+<title>曲线 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/classAnimationClip-Curves.png">
+<meta name="description" content="You can attach animation curves to imported animation clips in the Animation tab.">
+<meta property="og:description" content="You can attach animation curves to imported animation clips in the Animation tab.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'AnimationCurvesOnImportedClips';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AnimationCurvesOnImportedClips.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AnimationCurvesOnImportedClips.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AnimationCurvesOnImportedClips.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AnimationCurvesOnImportedClips.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AnimationCurvesOnImportedClips.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AnimationCurvesOnImportedClips.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AnimationCurvesOnImportedClips.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AnimationCurvesOnImportedClips.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AnimationCurvesOnImportedClips.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AnimationCurvesOnImportedClips.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/AnimationCurvesOnImportedClips.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/AnimationCurvesOnImportedClips.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/AnimationCurvesOnImportedClips.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/AnimationCurvesOnImportedClips.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AnimationCurvesOnImportedClips.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AnimationCurvesOnImportedClips.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AnimationCurvesOnImportedClips.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AnimationCurvesOnImportedClips.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AnimationCurvesOnImportedClips.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AnimationCurvesOnImportedClips.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AnimationCurvesOnImportedClips.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AnimationCurvesOnImportedClips.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AnimationCurvesOnImportedClips.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AnimationCurvesOnImportedClips.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="ImportingAssets.html">导入</a></li>
+<li><a href="class-FBXImporter.html">Model Import Settings 窗口</a></li>
+<li><a href="class-AnimationClip.html">Animation 选项卡</a></li>
+<li>曲线</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LoopingAnimationClips.html"></a></span><div class="tip">动画剪辑上的循环优化</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AnimationEventsOnImportedClips.html"></a></span><div class="tip">事件</div>
+</div>
+</div></div>
+<h1>曲线</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>You can attach animation curves to imported animation clips in the <a href="class-AnimationClip.html">Animation tab</a>.</p>
+
+<p>可以使用这些曲线将其他动画数据添加到导入的剪辑。可以根据animator的状态，使用该数据来动画化其他项的时序。例如，在冰冷环境的游戏中，可以使用额外的动画曲线来控制粒子系统的发射速率，以显示玩家在冷空气中的冷凝呼吸。</p>
+
+<p>要向导入的动画添加曲线，请展开 <a href="class-AnimationClip.html">Animation 选项卡</a>底部的 <strong>Curves</strong> 部分，然后单击加号图标以向当前动画剪辑添加新曲线：</p>
+
+<figure>
+<img src="../uploads/Main/classAnimationClip-Curves.png" alt="Animation 选项卡上展开的 Curves 部分">
+<figcaption>Animation 选项卡上展开的 Curves 部分</figcaption>
+</figure>
+
+<p>如果导入的动画文件被拆分为多个动画剪辑，则每个剪辑都可以拥有自己的自定义曲线。</p>
+
+<figure>
+<img src="../uploads/Main/MecanimCurves.jpg" alt="The curves on an imported animation clip">
+<figcaption>The curves on an imported animation clip</figcaption>
+</figure>
+
+<p>曲线的 X 轴表示_标准化时间_，范围始终在 0.0 和 1.0 之间（无论持续时间如何，均分别对应于动画剪辑的开头和结尾）。</p>
+
+<figure>
+<img src="../uploads/Main/CurveEditorPopupDescr.png" alt="Unity 曲线编辑器">
+<figcaption>Unity 曲线编辑器</figcaption>
+</figure>
+
+<p>双击动画曲线将显示<a href="EditingValueProperties.html">标准 Unity 曲线编辑器</a>，可以使用该编辑器向曲线添加__关键点<strong>。关键点（Keys）是沿着曲线时间轴上的点，其具有 animator 明确设置的值，而不是仅使用插值。关键点（Keys）非常适合用于沿着动画时间轴标记重要的点。例如，对于行走动画，可以使用关键点来标记左脚在地面上的位置点，然后是双脚在地面上的位置点，右脚在地面上的位置点，依此类推。设置好关键点后，通过按 </strong>Previous Key Frame__ 和 <strong>Next Key Frame</strong> 按钮即可方便地在关键帧之间移动。这样就会移动垂直的红线并显示关键帧的_标准化时间_。在文本框中输入的值将在此时间驱动曲线值。</p>
+
+<h2>动画曲线和 Animator Controller 参数</h2>
+
+<p>如果一条曲线的名称与 <a href="Animator.html">Animator Controller</a> 中的某个<a href="AnimationParameters.html">参数</a>同名，则该参数的值将取自这条曲线在时间轴中每个点的值。例如，如果从脚本调用 <a href="../ScriptReference/Animator.GetFloat.html">GetFloat</a>，则返回的值等于进行调用时的曲线值。请注意，在任何给定的时间点，可能有多个动画剪辑试图设置同一控制器中的同一参数。在这种情况下，Unity 会混合多个动画剪辑中的曲线值。如果动画没有特定参数对应的曲线，则 Unity 将与该参数的默认值混合。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit"> 2018–04–25 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LoopingAnimationClips.html"></a></span><div class="tip">动画剪辑上的循环优化</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AnimationEventsOnImportedClips.html"></a></span><div class="tip">事件</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

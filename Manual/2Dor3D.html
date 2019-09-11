@@ -1,0 +1,246 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="2D 还是 3D 项目 - Unity Manual">
+<title>2D 还是 3D 项目 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/3dGames.jpg">
+<meta name="description" content="无论是创建 2D 还是 3D 游戏，Unity 都很拿手。在 Unity 中创建新项目时，可以选择以 2D 或 3D 模式启动。您可能已经知道要构建什么，但有一些细微的要点可能会影响选择的模式。">
+<meta property="og:description" content="无论是创建 2D 还是 3D 游戏，Unity 都很拿手。在 Unity 中创建新项目时，可以选择以 2D 或 3D 模式启动。您可能已经知道要构建什么，但有一些细微的要点可能会影响选择的模式。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = '2Dor3D';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/2Dor3D.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/2Dor3D.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/2Dor3D.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/2Dor3D.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/2Dor3D.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/2Dor3D.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/2Dor3D.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/2Dor3D.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/2Dor3D.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/2Dor3D.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/2Dor3D.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/2Dor3D.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/2Dor3D.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/2Dor3D.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/2Dor3D.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/2Dor3D.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/2Dor3D.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/2Dor3D.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/2Dor3D.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/2Dor3D.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/2Dor3D.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/2Dor3D.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/2Dor3D.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/2Dor3D.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="UnityBasics.html">准备开始</a></li>
+<li>2D 还是 3D 项目</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="GettingStartedOpeningProjects.html"></a></span><div class="tip">打开现有项目</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ProjectTemplates.html"></a></span><div class="tip">项目模板</div>
+</div>
+</div></div>
+<h1>2D 还是 3D 项目</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>无论是创建 2D 还是 3D 游戏，Unity 都很拿手。在 Unity 中创建新项目时，可以选择以 2D 或 3D 模式启动。您可能已经知道要构建什么，但有一些细微的要点可能会影响选择的模式。</p>
+
+<p>选择是以 2D 还是 3D 模式启动决定了 Unity Editor 的一些设置，例如图像是作为纹理还是精灵导入。无论在创建项目时设置何种模式，都可以随时在 2D 或 3D 模式之间切换（请参阅 <a href="2DAnd3DModeSettings.html">2D 和 3D 模式设置</a>）。下面这些指导原则有助于做出选择。</p>
+
+<h3>全 3D</h3>
+
+<figure>
+<img src="../uploads/Main/3dGames.jpg" alt="从 Asset Store 下载的 Unity 示例项目中的一些 3D 场景">
+<figcaption>从 Asset Store 下载的 Unity 示例项目中的一些 3D 场景</figcaption>
+</figure>
+
+<p>3D 游戏通常使用三维几何体，在游戏对象的表面上渲染材质和纹理，使它们看起来像构成游戏世界的坚固环境、角色和对象。摄像机可以在场景中及其周围自由移动，并以逼真的方式在游戏世界中投射光线和阴影。3D 游戏通常使用透视渲染场景，因此当对象靠近摄像机时，对象在屏幕上显得更大。对于符合此描述的所有游戏，请采用 <strong>3D</strong> 模式。</p>
+
+<h3>正交 3D</h3>
+
+<figure>
+<img src="../uploads/Main/3dOrthographicGames.jpg" alt="一些使用正交视图的 3D 游戏">
+<figcaption>一些使用正交视图的 3D 游戏</figcaption>
+</figure>
+
+<p>有时游戏使用 3D 几何体，但使用正交摄像机，而不是透视。这是游戏中常用的技巧，可用于对动作进行鸟瞰，有时也称为“2.5D”。如果要制作这样的游戏，还应该在 <strong>3D</strong> 模式下使用 Editor，因为即使没有<em>透视</em>，仍将使用 3D 模型和资源。但此情况下需要将<a href="CamerasOverview.html">摄像机</a>和 <a href="SceneViewNavigation.html">Scene 视图</a>切换为<strong>正交 (Orthographic)</strong> 视图。</p>
+
+<p><em>以上场景来自 <a href="https://www.assetstore.unity3d.com/en/#!/publisher/5217">Synty Studios</a> 和 <a href="https://www.assetstore.unity3d.com/en/#!/publisher/1299">BITGEM</a> 的作品。</em></p>
+
+<h3>全 2D</h3>
+
+<figure>
+<img src="../uploads/Main/2dGames.jpg" alt="典型 2D 游戏类型的一些示例">
+<figcaption>典型 2D 游戏类型的一些示例</figcaption>
+</figure>
+
+<p>许多 2D 游戏使用平面图形，有时称为精灵（没有任何三维几何体）。它们作为平面图像被绘制到屏幕上，而且游戏的摄像机没有透视。对于这种类型的游戏，应该以 <strong>2D</strong> 模式启动 Editor。</p>
+
+<h3>包含 3D 图形的 2D 游戏玩法</h3>
+
+<figure>
+<img src="../uploads/Main/2dGame3dSceneSideScroll.jpg" alt="采用 2D 游戏玩法但包含 3D 图形的横向卷轴游戏">
+<figcaption>采用 2D 游戏玩法但包含 3D 图形的横向卷轴游戏</figcaption>
+</figure>
+
+<p>一些 2D 游戏将 3D 几何体用于环境和角色，但将<em>游戏玩法</em>限制为二维模式。例如，摄像机可以显示横向卷轴视图，并且玩家只能在两个维度上移动，但是游戏本身仍然将 3D 模型用于障碍物并且将 3D 透视用于摄像机。对于这些游戏，3D 效果的用途可能是为了营造风格，而不是充当某种功能。这种类型的游戏有时<em>也</em>被称为“2.5D”。尽管游戏玩法是 2D，但主要是操纵 3D 模型来构建游戏，因此应该以 <strong>3D</strong> 模式启动 Editor。</p>
+
+<h3>带有透视摄像机的 2D 游戏玩法和图形</h3>
+
+<figure>
+<img src="../uploads/Main/2dParallaxScroller.jpg" alt="2D纸板影院风格的游戏提供了视差运动效果">
+<figcaption>2D“纸板影院”风格的游戏提供了视差运动效果</figcaption>
+</figure>
+
+<p>这是另一种流行的 2D 游戏风格，使用 2D 图形，但通过透视摄像机来获得视差卷轴效果。这是一个“纸板剧院”风格的场景，所有图形都是平面的，但按照与摄像机之间的不同距离排列。在这种情况下，<strong>2D</strong> 模式最有可能符合开发要求。但是，应将<a href="CamerasOverview.html">摄像机</a>的投影模式更改为<strong>透视 (Perspective)</strong>，并将 <a href="SceneViewNavigation.html">Scene 视图</a>模式更改为 <strong>3D</strong>。</p>
+
+<p><em>上述场景由 <a href="https://www.assetstore.unity3d.com/en/#!/publisher/8138">One Point Six Studio</a> 提供。</em></p>
+
+<h3>其他风格</h3>
+
+<p>您可能计划开发符合上述描述之一的项目，也可能在构思其他完全不同或独特的东西。无论计划是什么，希望以上内容可以让您了解启动 Editor 的模式。请记住，可以在以后随时切换模式。</p>
+
+<p>请参阅 <a href="2DAnd3DModeSettings.html">2D 和 3D 模式设置</a>以了解有关如何更改 2D/3D 模式的更多信息，并了解有关模式差异的更多详细信息。</p>
+
+<h2>有用的 2D 项目信息</h2>
+
+<p>无论开发哪种类型的项目，都有一些有用的页面可以帮助您入门。还有许多特定页面是关于 2D 功能的。请参阅 Unity 用户手册的 <a href="Unity2D.html">Unity 2D</a> 部分。</p>
+
+<h3>Unity 入门</h3>
+
+<ul>
+<li><a href="UnityBasics.html">Unity 基础知识</a></li>
+<li><a href="CreatingScenes.html">创建场景</a></li>
+<li><a href="CreatingGameplay.html">创建游戏玩法</a></li>
+</ul>
+
+<h3>使用 Unity 进行 2D 开发</h3>
+
+<ul>
+<li><a href="Unity2D.html">Unity 2D 手册文档</a></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="GettingStartedOpeningProjects.html"></a></span><div class="tip">打开现有项目</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ProjectTemplates.html"></a></span><div class="tip">项目模板</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

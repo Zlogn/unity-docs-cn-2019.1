@@ -1,0 +1,250 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="LAN 模式下的 Network Manager HUD - Unity Manual">
+<title>LAN 模式下的 Network Manager HUD - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/NetworkManagerHUDLANMode.png">
+<meta name="description" content="单击 LAN Host 按钮可将游戏作为本地网络上的主机启动。该客户端既是主机，也是游戏中的玩家之一。此情况下使用 Inspector 中的 Network Info 部分的信息来托管游戏。">
+<meta property="og:description" content="单击 LAN Host 按钮可将游戏作为本地网络上的主机启动。该客户端既是主机，也是游戏中的玩家之一。此情况下使用 Inspector 中的 Network Info 部分的信息来托管游戏。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UNetManagerHUDLanMode';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UNetManagerHUDLanMode.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UNetManagerHUDLanMode.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UNetManagerHUDLanMode.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UNetManagerHUDLanMode.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UNetManagerHUDLanMode.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UNetManagerHUDLanMode.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UNetManagerHUDLanMode.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UNetManagerHUDLanMode.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UNetManagerHUDLanMode.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UNetManagerHUDLanMode.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UNetManagerHUDLanMode.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UNetManagerHUDLanMode.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UNetManagerHUDLanMode.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UNetManagerHUDLanMode.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UNetManagerHUDLanMode.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UNetManagerHUDLanMode.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UNetManagerHUDLanMode.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UNetManagerHUDLanMode.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UNetManagerHUDLanMode.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UNetManagerHUDLanMode.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UNetManagerHUDLanMode.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UNetManagerHUDLanMode.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UNetManagerHUDLanMode.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UNetManagerHUDLanMode.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UNet.html">多玩家和联网</a></li>
+<li>LAN 模式下的 Network Manager HUD</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetManagerHUD.html"></a></span><div class="tip">使用 Network Manager HUD</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UNetManagerHUDMatchMakerMode.html"></a></span><div class="tip">Matchmaker 模式下的 Network Manager HUD</div>
+</div>
+</div></div>
+<h1>LAN 模式下的 Network Manager HUD</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">
+<strong>Note</strong>: UNet is deprecated, and will be removed from Unity in the future. A new system is under development. For more information and next steps see this <a href="https://blogs.unity3d.com/2018/08/02/evolving-multiplayer-games-beyond-unet/">blog post</a> and the <a href="https://support.unity3d.com/hc/en-us/articles/360001252086-UNet-Deprecation-FAQ">FAQ</a>.</td>
+</tr>
+</tbody>
+</table>
+
+<figure>
+<img src="../uploads/Main/NetworkManagerHUDLANMode.png" alt="Game 视图中显示的 LAN 模式（默认模式）下的 Network Manager HUD。">
+<figcaption>Game 视图中显示的 LAN 模式（默认模式）下的 Network Manager HUD。</figcaption>
+</figure>
+
+<h3>LAN Host</h3>
+
+<p>单击 <strong>LAN Host</strong> 按钮可将游戏作为本地网络上的主机启动。该客户端既是主机，<em>也是</em>游戏中的玩家之一。此情况下使用 Inspector 中的 <strong>Network Info</strong> 部分的信息来托管游戏。</p>
+
+<p>单击此按钮时，HUD 会切换到简单的网络详细信息显示界面，还有一个 <strong>Stop (X)</strong> 按钮，可用于停止托管游戏并返回 LAN 主菜单。</p>
+
+<figure>
+<img src="../uploads/Main/NetworkManagerHUDHostingLAN.png" alt="托管 LAN 游戏时的 Network Manager HUD。">
+<figcaption>托管 LAN 游戏时的 Network Manager HUD。</figcaption>
+</figure>
+
+<p>以主机模式开始游戏时，游戏的其他玩家可连接到此主机以加入游戏。</p>
+
+<p>单击 <strong>Stop (X)</strong> 按钮可断开连接到主机玩家的所有玩家。单击 <strong>Stop (X)</strong> 也会将 HUD 返回到 LAN 菜单。</p>
+
+<h3>LAN Client</h3>
+
+<p>要连接到本地网络上的主机，请使用 <strong>LAN Client</strong> 按钮右侧的文本字段指定主机的地址。默认主机地址为“localhost”，表示客户端在自己的计算机上查找游戏主机。单击 <strong>LAN Client </strong><strong>(C)</strong> 可尝试连接到指定的主机地址。</p>
+
+<p>如果在一台计算机上运行多个游戏实例，请使用此字段中的默认“localhost”来测试多人游戏交互情况。为此，可创建游戏的独立构建，然后在计算机上多次启动游戏。这是快速测试网络游戏交互功能是否按预期运行的常用方法（无需将游戏部署到多台计算机或设备）。</p>
+
+<figure>
+<img src="../uploads/Main/NetworkGame3Instances.jpg" alt="在同一台式机上运行联网游戏的三个实例的示例。此功能可用于快速测试以便确保网络交互行为符合预期目标。一个实例作为 LAN 主机 (LAN Host) 运行，另外两个实例作为 LAN 客户端 (LAN Client) 运行。">
+<figcaption>在同一台式机上运行联网游戏的三个实例的示例。此功能可用于快速测试以便确保网络交互行为符合预期目标。一个实例作为 LAN 主机 (LAN Host) 运行，另外两个实例作为 LAN 客户端 (LAN Client) 运行。</figcaption>
+</figure>
+
+<p>如果要在同一网络中（即在 LAN 上）的多台计算机上测试游戏，必须将充当主机的玩家地址输入<strong>“localhost”</strong>文本字段中。</p>
+
+<p>充当主机的玩家需要将 IP 地址告诉运行 LAN 客户端的所有玩家，从而可在文本框中输入该地址。</p>
+
+<p>输入 IP 地址（如果在自己的计算机上进行测试，可将其保留为“localhost”），然后单击 <strong>LAN Client</strong> 尝试连接到主机。</p>
+
+<p>客户端尝试连接时，HUD 会显示 <strong>Cancel Connection Attempt</strong> 按钮。如果要停止尝试连接到主机，请单击此按钮。
+<img src="../uploads/Main/NetworkManagerHUDConnectionAttempt.png" alt="尝试连接时的 HUD"></p>
+
+<p>如果连接成功，HUD 将显示 <strong>Stop (X)</strong> 按钮。如果要在客户端上停止游戏并断开与主机的连接，请单击此按钮：</p>
+
+<figure>
+<img src="../uploads/Main/NetworkManagerHUDConnected.png" alt="连接成功后的 HUD">
+<figcaption>连接成功后的 HUD</figcaption>
+</figure>
+
+<p>Unity 具有内置的 Network Discovery（网络发现）系统，允许客户端在同一本地网络上自动查找主机。但是，此系统未内置于 Network Manager HUD，因此需要手动输入地址。使用自己的 UI 替换 Network Manager HUD 时，可将 Network Discovery 系统集成到游戏中。有关更多信息，请参阅关于 <a href="UNetDiscovery.html">Network Discovery</a> 的文档。</p>
+
+<h3>LAN Server Only</h3>
+
+<p>单击 <strong>LAN Server Only</strong> 可启动游戏并使该游戏充当其他客户端可以连接到的服务器，但不充当游戏本身的客户端。这种类型的游戏通常称为“专用服务器”。用户无法在此特定游戏实例上玩游戏。所有玩家都必须作为客户端连接，没有玩家在作为服务器运行的实例上玩游戏。</p>
+
+<p>在 LAN 上设置一个专用服务器可为所有连接的玩家带来更好的性能，因为除了充当服务器之外，服务器不需要处理本地玩家的游戏运行过程。</p>
+
+<p>有时，您可能希望托管可通过互联网运行的游戏（而不仅仅是在本地网络内），但希望自己保持对服务器的控制，例如，为了防止客户端作弊（因为只有服务器才对游戏具有授权），这种情况下也可以选择这一选项。为此，需要在具有公共 IP 地址的计算机上以 <strong>Server Only</strong> 模式运行游戏。</p>
+
+<h3>Enable Match Maker</h3>
+
+<p>单击 <strong>Enable Match Maker (M)</strong> 可将 HUD 更改为 Matchmaker 模式。如果要使用 Unity 的 Matchmaker Multiplayer 服务创建或连接到互联网上托管的游戏，则需要使用 Matchmaker 模式。单击 <strong>Enable Match Maker (M)</strong> 可在 Network Manager HUD 中显示 Matchmaker 控件。</p>
+
+<p><strong>注意</strong>：请记住，Network Manager HUD 功能是针对开发的临时辅助功能。此组件允许您快速运行多人游戏，但在准备就绪之后应将其替换为您自己的 UI 控件。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetManagerHUD.html"></a></span><div class="tip">使用 Network Manager HUD</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UNetManagerHUDMatchMakerMode.html"></a></span><div class="tip">Matchmaker 模式下的 Network Manager HUD</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

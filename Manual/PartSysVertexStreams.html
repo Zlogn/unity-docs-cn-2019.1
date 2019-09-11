@@ -1,0 +1,394 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="粒子系统顶点流和标准着色器支持 - Unity Manual">
+<title>粒子系统顶点流和标准着色器支持 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/PartSysVertexStreams-VertexShaders.png">
+<meta name="description" content="如果习惯编写自己的着色器，请使用添加到渲染器模块的方式配置粒子系统，从而将更多数据传入自定义着色器。">
+<meta property="og:description" content="如果习惯编写自己的着色器，请使用添加到渲染器模块的方式配置粒子系统，从而将更多数据传入自定义着色器。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'PartSysVertexStreams';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PartSysVertexStreams.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PartSysVertexStreams.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PartSysVertexStreams.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PartSysVertexStreams.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PartSysVertexStreams.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PartSysVertexStreams.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PartSysVertexStreams.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PartSysVertexStreams.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PartSysVertexStreams.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PartSysVertexStreams.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/PartSysVertexStreams.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/PartSysVertexStreams.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/PartSysVertexStreams.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/PartSysVertexStreams.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PartSysVertexStreams.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PartSysVertexStreams.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PartSysVertexStreams.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PartSysVertexStreams.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PartSysVertexStreams.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PartSysVertexStreams.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PartSysVertexStreams.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PartSysVertexStreams.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PartSysVertexStreams.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PartSysVertexStreams.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="ParticleSystems.html">粒子系统</a></li>
+<li><a href="ParticleSystemHowTo.html">粒子系统操作方法</a></li>
+<li>粒子系统顶点流和标准着色器支持</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PartSysExhaust.html"></a></span><div class="tip">车辆的排气烟雾</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PartSysInstancing.html"></a></span><div class="tip">粒子系统 GPU 实例化</div>
+</div>
+</div></div>
+<h1>粒子系统顶点流和标准着色器支持</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>如果习惯编写自己的着色器，请使用添加到<a href="../ScriptReference/ParticleSystemRenderer.html">渲染器模块</a>的方式配置粒子系统，从而将更多数据传入自定义着色器。</p>
+
+<p>有许多内置<a href="../ScriptReference/ParticleSystemVertexStreams.html">数据流</a>可供选择，例如速度、大小和中心位置。除了能够创建强大的自定义着色器之外，这些流还可以带来大量其他好处：</p>
+
+<p><em>使用 <a href="../ScriptReference/ParticleSystemVertexStream.Tangent.html">Tangent</a> 流来支持法线贴图粒子。
+</em> 可以删除 Color，然后添加 Tangent <a href="../ScriptReference/ParticleSystemVertexStream.UV2.html">UV2</a> 和 <a href="../ScriptReference/ParticleSystemVertexStream.AnimBlend.html">AnimBlend</a> 流以便在粒子上使用标准着色器。
+* 需要轻松执行翻页动画的线性纹理混合，请添加 UV2 和 AnimBlend 流，并附加粒子/动画 Alpha 混合着色器 (Particles/Anim Alpha Blended Shader)（请参阅下面的示例截屏，了解如何对其进行设置）。</p>
+
+<p>此外还有两个完全自定义的每粒子数据流（<a href="../ScriptReference/ParticleSystemVertexStreams.Custom1.html">ParticleSystemVertexStreams.Custom1</a> 和 <a href="../ScriptReference/ParticleSystemVertexStreams.Custom2.html">ParticleSystemVertexStreams.Custom2</a>），可通过脚本填充。请使用数据数组调用 <a href="../ScriptReference/ParticleSystem.SetCustomParticleData.html">SetCustomParticleData</a> 和 <a href="../ScriptReference/ParticleSystem.GetCustomParticleData.html">GetCustomParticleData</a> 以便使用它们。有两种方式使用它们：</p>
+
+<ul>
+<li>通过将您自己的数据附加到粒子来驱动脚本中的自定义行为；例如，将“生命”值附加到每个粒子。</li>
+<li>通过添加两个自定义流中的其中一个流将此数据传入着色器，就像将任何其他流发送到着色器一样（请参阅 <a href="../ScriptReference/ParticleSystemRenderer.EnableVertexStreams.html">ParticleSystemRenderer.EnableVertexStreams</a>）。为了详细说明第一个示例，自定义的生命值属性现在也可以驱动某种视觉效果，以及驱动基于脚本的游戏逻辑。</li>
+</ul>
+
+<p>添加顶点流时，Unity 会在每一项旁边的括号中提供一些信息，用于在着色器中读取正确的数据：</p>
+
+<figure>
+<img src="../uploads/Main/PartSysVertexStreams-VertexShaders.png" alt="">
+</figure>
+
+<p>括号中的每一项对应于一个顶点着色器输入，应在着色器中指定。以下是此配置的正确输入结构。</p>
+
+<pre><code>            struct appdata_t {
+                            float4 vertex : POSITION;
+                            float3 normal : NORMAL;
+                            fixed4 color : COLOR;
+                            float4 texcoords : TEXCOORD0;
+                            float texcoordBlend : TEXCOORD1;
+                        };
+</code></pre>
+
+<p>请注意，UV 和 UV2 均传递到 TEXCOORD0 的不同部分中，因此我们对两者使用单个声明。要访问着色器中的每一个，应使用 xy 和 zw 标示字母。这样即可有效地打包顶点数据。</p>
+
+<p>以下是一个翻页动画着色器的示例。它使用默认输入（__Position<strong>、</strong>Normal<strong>、</strong>Color<strong>、</strong>UV__），但还为第二个 UV 流 (<strong>UV2</strong>) 和翻页动画帧信息 (<strong>AnimBlend</strong>) 使用了两个额外的流。</p>
+
+<figure>
+<img src="../uploads/Main/PartSysVertexStreams-Inspector.png" alt="">
+</figure>
+
+<pre><code>Shader "Particles/Anim Alpha Blended" {
+Properties {
+    _TintColor ("Tint Color", Color) = (0.5,0.5,0.5,0.5)
+    _MainTex ("Particle Texture", 2D) = "white" {}
+    _InvFade ("Soft Particles Factor", Range(0.01,3.0)) = 1.0
+}
+
+Category {
+    Tags { "Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent" "PreviewType"="Plane" }
+    Blend SrcAlpha OneMinusSrcAlpha
+    ColorMask RGB
+    Cull Off Lighting Off ZWrite Off
+
+    SubShader {
+        Pass {
+        
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #pragma target 2.0
+            #pragma multi_compile_particles
+            #pragma multi_compile_fog
+            
+            #include "UnityCG.cginc"
+
+            sampler2D _MainTex;
+            fixed4 _TintColor;
+            
+            struct appdata_t {
+                float4 vertex : POSITION;
+                fixed4 color : COLOR;
+                float4 texcoords : TEXCOORD0;
+                float texcoordBlend : TEXCOORD1;
+                UNITY_VERTEX_INPUT_INSTANCE_ID
+            };
+
+            struct v2f {
+                float4 vertex : SV_POSITION;
+                fixed4 color : COLOR;
+                float2 texcoord : TEXCOORD0;
+                float2 texcoord2 : TEXCOORD1;
+                fixed blend : TEXCOORD2;
+                UNITY_FOG_COORDS(3)
+                #ifdef SOFTPARTICLES_ON
+                float4 projPos : TEXCOORD4;
+                #endif
+                UNITY_VERTEX_OUTPUT_STEREO
+            };
+            
+            float4 _MainTex_ST;
+
+            v2f vert (appdata_t v)
+            {
+                v2f o;
+                UNITY_SETUP_INSTANCE_ID(v);
+                UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o); 
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                #ifdef SOFTPARTICLES_ON
+                o.projPos = ComputeScreenPos (o.vertex);
+                COMPUTE_EYEDEPTH(o.projPos.z);
+                #endif
+                o.color = v.color * _TintColor;
+                o.texcoord = TRANSFORM_TEX(v.texcoords.xy,_MainTex);
+                o.texcoord2 = TRANSFORM_TEX(v.texcoords.zw,_MainTex);
+                o.blend = v.texcoordBlend;
+                UNITY_TRANSFER_FOG(o,o.vertex);
+                return o;
+            }
+
+            sampler2D_float _CameraDepthTexture;
+            float _InvFade;
+            
+            fixed4 frag (v2f i) : SV_Target
+            {
+                #ifdef SOFTPARTICLES_ON
+                float sceneZ = LinearEyeDepth (SAMPLE_DEPTH_TEXTURE_PROJ(_CameraDepthTexture, UNITY_PROJ_COORD(i.projPos)));
+                float partZ = i.projPos.z;
+                float fade = saturate (_InvFade * (sceneZ-partZ));
+                i.color.a *= fade;
+                #endif
+                
+                fixed4 colA = tex2D(_MainTex, i.texcoord);
+                fixed4 colB = tex2D(_MainTex, i.texcoord2);
+                fixed4 col = 2.0f * i.color * lerp(colA, colB, i.blend);
+                UNITY_APPLY_FOG(i.fogCoord, col);
+                return col;
+            }
+            ENDCG 
+        }
+    }   
+}
+}
+
+
+</code></pre>
+
+<p>也可以将表面着色器与此系统一起使用，但还有一些需要注意的事项：</p>
+
+<ul>
+<li>表面函数的输入结构与顶点着色器的输入结构不同。需要提供自定义的顶点着色器输入结构。请参阅下面示例中名为 <code>appdata_particles</code> 的结构。</li>
+<li>构建表面着色器时，会自动处理名称以某些标记开头的变量。最明显的就是 <code>uv</code>。为防止自动处理在此处引起问题，请务必为 UV 输入指定不同的名称（例如，“texcoord”）。</li>
+</ul>
+
+<p>下面的示例与第一个示例具有相同的功能，但位于表面着色器中：</p>
+
+<pre><code>Shader "Particles/Anim Alpha Blend Surface" {
+    Properties {
+        _Color ("Color", Color) = (1,1,1,1)
+        _MainTex ("Albedo (RGB)", 2D) = "white" {}
+        _Glossiness ("Smoothness", Range(0,1)) = 0.5
+        _Metallic ("Metallic", Range(0,1)) = 0.0
+    }
+    SubShader {
+        Tags {"Queue"="Transparent" "RenderType"="Transparent"}
+        Blend SrcAlpha OneMinusSrcAlpha
+        ZWrite off
+        LOD 200
+        
+        CGPROGRAM
+        // 这是基于物理的标准光照模型，并对所有光照类型启用阴影
+        #pragma surface surf Standard alpha vertex:vert
+
+        // 使用 Shader Model 3.0 目标以获得更美观的光照
+        #pragma target 3.0
+
+        sampler2D _MainTex;
+
+         struct appdata_particles {
+            float4 vertex : POSITION;
+            float3 normal : NORMAL;
+            float4 color : COLOR;
+            float4 texcoords : TEXCOORD0;
+            float texcoordBlend : TEXCOORD1;
+            };
+
+
+        struct Input {
+            float2 uv_MainTex;
+            float2 texcoord1;
+            float blend;
+            float4 color;
+        };
+
+
+        void vert(inout appdata_particles v, out Input o) {
+            UNITY_INITIALIZE_OUTPUT(Input,o);
+            o.uv_MainTex = v.texcoords.xy;
+            o.texcoord1 = v.texcoords.zw;
+            o.blend = v.texcoordBlend;
+            o.color = v.color;
+          }
+
+
+        half _Glossiness;
+        half _Metallic;
+        fixed4 _Color;
+
+
+        void surf (Input IN, inout SurfaceOutputStandard o) {
+            fixed4 colA = tex2D(_MainTex, IN.uv_MainTex);
+            fixed4 colB = tex2D(_MainTex, IN.texcoord1);
+            fixed4 c = 2.0f * IN.color * lerp(colA, colB, IN.blend) * _Color;
+                 
+            o.Albedo = c.rgb;
+            // Metallic 和 Smoothness 来自滑动条变量
+            o.Metallic = _Metallic;
+            o.Smoothness = _Glossiness;
+            o.Alpha = c.a;
+        }
+        ENDCG
+    }
+    FallBack "Diffuse"
+}
+
+</code></pre>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2017–05–15 Page amended with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PartSysExhaust.html"></a></span><div class="tip">车辆的排气烟雾</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PartSysInstancing.html"></a></span><div class="tip">粒子系统 GPU 实例化</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

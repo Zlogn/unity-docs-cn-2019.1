@@ -1,0 +1,315 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="收据验证 - Unity Manual">
+<title>收据验证 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/IAPObfuscator.png">
+<meta name="description" content="收据验证有助于防止用户访问他们尚未购买的内容。">
+<meta property="og:description" content="收据验证有助于防止用户访问他们尚未购买的内容。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UnityIAPValidatingReceipts';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityIAPValidatingReceipts.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityIAPValidatingReceipts.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityIAPValidatingReceipts.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityIAPValidatingReceipts.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityIAPValidatingReceipts.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityIAPValidatingReceipts.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityIAPValidatingReceipts.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityIAPValidatingReceipts.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityIAPValidatingReceipts.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityIAPValidatingReceipts.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UnityIAPValidatingReceipts.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UnityIAPValidatingReceipts.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UnityIAPValidatingReceipts.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UnityIAPValidatingReceipts.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityIAPValidatingReceipts.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityIAPValidatingReceipts.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityIAPValidatingReceipts.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityIAPValidatingReceipts.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityIAPValidatingReceipts.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityIAPValidatingReceipts.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityIAPValidatingReceipts.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityIAPValidatingReceipts.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityIAPValidatingReceipts.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityIAPValidatingReceipts.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="UnityIAP.html">﻿Unity IAP</a></li>
+<li>跨平台指南</li>
+<li>收据验证</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityIAPPurchaseReceipts.html"></a></span><div class="tip">﻿购买收据</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityIAPStoreExtensions.html"></a></span><div class="tip">应用商店扩展</div>
+</div>
+</div></div>
+<!-- in Trello -->
+
+<h1>收据验证</h1>
+
+<p>收据验证有助于防止用户访问他们尚未购买的内容。</p>
+
+<h2>验证点</h2>
+
+<p>最好的做法是在应用程序内容分发点验证收据。</p>
+
+<ul>
+<li>
+<strong>本地验证：</strong>对于客户端内容，其中所有内容都包含在应用程序中并且一旦购买就会启用，因此应在目标设备上进行验证，无需连接到远程服务器。Unity IAP 支持在应用程序内进行的本地验证。请参阅下面的__本地验证__以了解更多信息。</li>
+<li>
+<strong>远程验证：</strong>对于服务器端内容，一旦购买内容便会下载内容，因此应在内容发布之前在服务器上进行验证。Unity 不提供服务器端验证；但是，可采用第三方解决方案，例如 Nobuyori Takahashi 的 <a href="https://github.com/voltrue2/in-app-purchase">IAP 项目</a>。</li>
+</ul>
+
+<h2>本地验证</h2>
+
+<p>如果用户购买的内容已存在于设备上，应用程序只需决定是否解锁该内容。</p>
+
+<p>Unity IAP 提供了工具来帮助您隐藏内容以及通过 Google Play 和 Apple 商店验证和解析收据。</p>
+
+<h3>混淆处理加密密钥</h3>
+
+<p>收据验证是使用已知的加密密钥执行的。对于您的应用程序而言，这是一个加密的 Google Play 公钥和/或 Apple 根证书。</p>
+
+<p>如果用户可以替换这些密钥，他们就能突破收据验证检查，因此必须让用户难以轻松找到和修改这些密钥，这一点很重要。</p>
+
+<p>Unity IAP 提供了一个工具，可以帮助您在应用程序中混淆处理加密密钥。这个工具会混淆或模糊处理密钥，从而大大增加用户访问这些密钥的难度。在 Unity 菜单栏中，转至 <strong>Window</strong> &gt; <strong>Unity IAP</strong> &gt; <strong>IAP Receipt Validation Obfuscator</strong>。</p>
+
+<figure>
+<img src="../uploads/Main/IAPObfuscator.png" alt="Obfuscator 窗口">
+<figcaption>Obfuscator 窗口</figcaption>
+</figure>
+
+<p>此窗口将 Apple 的根证书（此证书与 Unity IAP 捆绑）和 Google Play 公钥（来自应用程序的 <a href="https://developer.android.com/google/play/licensing/setting-up.html">Google Play Developer Console’s Services &amp;amp; APIs</a> 页面）编码为两个不同的 C# 文件：__AppleTangle__ 和 <strong>GooglePlayTangle</strong>。这些文件需要添加到您的项目中以便在下一部分中使用。</p>
+
+<p>请注意，如果您仅打算面向 Apple 商店，则不必提供 Google Play 公钥，反之亦然。</p>
+
+<h3>验证收据</h3>
+
+<p>使用 <code>CrossPlatformValidator</code> 类可跨 Google Play 和 Apple 商店进行验证。</p>
+
+<p>必须向该类提供 Google Play 公钥或 Apple 根证书或者同时提供两者（如果您希望跨这两个平台进行验证）。</p>
+
+<p><code>CrossPlatformValidator</code> 执行两项检查：</p>
+
+<ul>
+<li>通过签名验证来检查收据真实性。</li>
+<li>收据上的应用 Bundle ID 与您的应用中的 Bundle ID 进行比较。如果两者不匹配，则抛出 <strong>InvalidBundleId</strong> 异常。</li>
+</ul>
+
+<p>请注意，验证器仅验证在 Google Play 和 Apple 平台上生成的收据。任何其他平台上生成的收据（包括 Editor 中生成的虚假收据）都会抛出 <strong>IAPSecurityException</strong>。</p>
+
+<p>如果在未提供平台的密钥的情况下尝试验证该平台的收据，则会抛出 <strong>MissingStoreSecretException</strong>。</p>
+
+<pre><code>public PurchaseProcessingResult ProcessPurchase (PurchaseEventArgs e)
+{
+    bool validPurchase = true; // 假设对没有收据验证的平台有效。
+
+    //Unity IAP 的验证逻辑仅包含在这些平台上。
+# if UNITY_ANDROID || UNITY_IOS || UNITY_STANDALONE_OSX
+    //用我们在 Editor 混淆处理窗口中准备的密钥来
+    // 准备验证器。
+    var validator = new CrossPlatformValidator(GooglePlayTangle.Data(),
+        AppleTangle.Data(), Application.bundleIdentifier);
+
+    try {
+        //在 Google Play 上，结果中仅有一个商品 ID。
+        //在 Apple 商店中，收据包含多个商品。
+        var result = validator.Validate(e.purchasedProduct.receipt);
+        //为便于参考，我们将收据列出
+        Debug.Log("Receipt is valid. Contents:");
+        foreach (IPurchaseReceipt productReceipt in result) {
+            Debug.Log(productReceipt.productID);
+            Debug.Log(productReceipt.purchaseDate);
+            Debug.Log(productReceipt.transactionID);
+        }
+    } catch (IAPSecurityException) {
+        Debug.Log("Invalid receipt, not unlocking content");
+        validPurchase = false;
+    }
+# endif
+
+    if (validPurchase) {
+        // 在此处解锁相应的内容。
+    }
+
+    return PurchaseProcessingResult.Complete;
+}
+
+</code></pre>
+
+<p>不仅要检查收据是否有效，还要检查收据包含的信息，这一点很重要。用户在未购买的情况下尝试访问内容的常见方法是提供来自其他商品或应用程序的收据。这些收据是真实的，并能通过验证，因此您应该根据 <strong>CrossPlatformValidator</strong> 所解析得到的商品 ID 来做决定。</p>
+
+<h3>特定于商店的详细信息</h3>
+
+<p>不同的商店在其购买收据中有不同的字段。要访问特定于商店的字段，<code>IPurchaseReceipt</code> 可向下转换为两个不同的子类型：<code>GooglePlayReceipt</code> 和 <code>AppleInAppPurchaseReceipt</code>。</p>
+
+<pre><code>var result = validator.Validate(e.purchasedProduct.receipt);
+Debug.Log("Receipt is valid.Contents:");
+foreach (IPurchaseReceipt productReceipt in result) {
+    Debug.Log(productReceipt.productID);
+    Debug.Log(productReceipt.purchaseDate);
+    Debug.Log(productReceipt.transactionID);
+
+    GooglePlayReceipt google = productReceipt as GooglePlayReceipt;
+    if (null != google) {
+        // 这是 Google 的订单 ID。
+        //请注意，在沙盒中测试时此项为 null，
+        // 因为 Google 的沙盒不提供订单 ID。
+        Debug.Log(google.transactionID);
+        Debug.Log(google.purchaseState);
+        Debug.Log(google.purchaseToken);
+    }
+
+    AppleInAppPurchaseReceipt apple = productReceipt as AppleInAppPurchaseReceipt;
+    if (null != apple) {
+        Debug.Log(apple.originalTransactionIdentifier);
+        Debug.Log(apple.subscriptionExpirationDate);
+        Debug.Log(apple.cancellationDate);
+        Debug.Log(apple.quantity);
+    }
+}
+</code></pre>
+
+<h3>解析原始 Apple 收据</h3>
+
+<p>使用 <code>AppleValidator</code> 类可提取有关 Apple 收据的详细信息。请注意，此类仅适用于 7.0 版本以上的 iOS 应用程序收据，而不适用于 Apple 已弃用的交易收据。</p>
+
+<pre><code># if UNITY_ANDROID || UNITY_IOS || UNITY_STANDALONE_OSX
+var builder = ConfigurationBuilder.Instance(StandardPurchasingModule.Instance());
+// 在 IAP 初始化期间获取对 IAppleConfiguration 的引用。
+var appleConfig = builder.Configure&lt;IAppleConfiguration&gt;();
+var receiptData = System.Convert.FromBase64String(appleConfig.appReceipt);
+AppleReceipt receipt = new AppleValidator(AppleTangle.Data()).Validate(receiptData);
+
+Debug.Log(receipt.bundleID);
+Debug.Log(receipt.receiptCreationDate);
+foreach (AppleInAppPurchaseReceipt productReceipt in receipt.inAppPurchaseReceipts) {
+    Debug.Log(productReceipt.transactionIdentifier);
+    Debug.Log(productReceipt.productIdentifier);
+}
+# endif
+</code></pre>
+
+<p><code>AppleReceipt</code> 类型可对 Apple 的 ASN1 收据格式建模。请参阅 <a href="https://developer.apple.com/library/ios/releasenotes/General/ValidateAppStoreReceipt/Chapters/ReceiptFields.html#/apple_ref/doc/uid/TP40010573-CH106-SW1">Apple 的文档</a>以了解其字段说明。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityIAPPurchaseReceipts.html"></a></span><div class="tip">﻿购买收据</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityIAPStoreExtensions.html"></a></span><div class="tip">应用商店扩展</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

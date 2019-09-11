@@ -1,0 +1,320 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="使用 Automatic API Updater - Unity Manual">
+<title>使用 Automatic API Updater - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/APIUpdaterWarningDialog.png">
+<meta name="description" content="有时，在开发 Unity 软件期间，我们决定改变和改进类、函数和属性 (API) 的工作方式。我们在此过程中尽力对用户现有的游戏代码产生最小的影响，但有时为了力求完美，我们必须做出突破。">
+<meta property="og:description" content="有时，在开发 Unity 软件期间，我们决定改变和改进类、函数和属性 (API) 的工作方式。我们在此过程中尽力对用户现有的游戏代码产生最小的影响，但有时为了力求完美，我们必须做出突破。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'APIUpdater';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/APIUpdater.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/APIUpdater.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/APIUpdater.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/APIUpdater.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/APIUpdater.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/APIUpdater.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/APIUpdater.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/APIUpdater.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/APIUpdater.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/APIUpdater.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/APIUpdater.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/APIUpdater.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/APIUpdater.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/APIUpdater.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/APIUpdater.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/APIUpdater.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/APIUpdater.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/APIUpdater.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/APIUpdater.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/APIUpdater.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/APIUpdater.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/APIUpdater.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/APIUpdater.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/APIUpdater.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="UpgradeGuides.html">升级指南</a></li>
+<li>使用 Automatic API Updater</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuides.html"></a></span><div class="tip">升级指南</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide20191.html"></a></span><div class="tip">Upgrading to Unity 2019.1</div>
+</div>
+</div></div>
+<h1>使用 Automatic API Updater</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>有时，在开发 Unity 软件期间，我们决定改变和改进类、函数和属性 (API) 的工作方式。我们在此过程中尽力对用户现有的游戏代码产生最小的影响，但有时为了力求完美，我们必须做出突破。</p>
+
+<p>从 Unity 的一个重要版本过渡到另一个版本时，我们倾向于仅引入这些重要的“重大改变”，并且仅在可以提高 Unity 的易用性（意味着用户将产生更少的错误）或带来明显性能提升的情况下，而且仅在再三慎重考虑之后，才会做出这些改变。但是，这样做的结果是，如果在 Unity 5 中打开 Unity 4 项目，可能会发现使用的一些脚本命令现在已经被更改、删除或工作方式略有不同。</p>
+
+<p>一个明显的例子是在 Unity 5 中删除了“快速访问器”，以前可以使用这种访问器直接引用游戏对象上的常见组件类型，例如 <code>gameObject.light</code>、<code>gameObject.camera</code>、<code>gameObject.audioSource</code> 等等。</p>
+
+<p>在 Unity 5 中，现在必须对所有类型使用 GetComponent 命令（变换组件除外）。因此，如果在 Unity 5 中打开使用 <code>gameObject.light</code> 的 Unity 4 项目，可能会发现特定的代码行已<em>过时</em>而需要更新。</p>
+
+<h2>自动更新程序</h2>
+
+<p>Unity 包含一个 <strong>Automatic Obsolete API Updater</strong>，可检测脚本中是否使用了过时代码，并且会主动自动更新这些过时代码。如果接受更改，它将使用 API 的更新版本重新编写这些代码。</p>
+
+<figure>
+<img src="../uploads/Main/APIUpdaterWarningDialog.png" alt="API 更新对话框">
+<figcaption>API 更新对话框</figcaption>
+</figure>
+
+<p>显然，与往常一样，为了防止出现问题，对工作内容备份非常重要，尤其是在允许该软件重新编写代码的情况下！一旦确定进行了备份，并单击了“Go Ahead”按钮，Unity 便会使用推荐的更新版本重新编写所有过时代码实例。</p>
+
+<p>For example you had a script which did this:</p>
+
+<pre><code>
+light.color = Color.red;
+
+</code></pre>
+
+<p>Unity 的 API Updater 会将其转换为：</p>
+
+<pre><code>
+GetComponent&lt;Light&gt;().color = Color.red;
+
+</code></pre>
+
+<p>更新程序的整体工作流程如下：</p>
+
+<p>1.打开项目/导入包含使用了过时 API 的脚本/程序集的资源包</p>
+
+<p>2.Unity 触发脚本编译</p>
+
+<p>3.API Updater 检查是否存在它知道“可更新”的特定编译器错误</p>
+
+<ol>
+<li>If any occurrence is found in the previous step, show a dialog to user offering automatic update, otherwise, we’ve finished.</li>
+</ol>
+
+<p>5.如果用户接受更新，则运行 API Updater（这样就会更新以步骤 2 中编译的相同语言所编写的所有脚本）</p>
+
+<p>6.转到步骤 2（考虑所有更新的代码），直到在步骤 5 中没有脚本更新</p>
+
+<p>因此，从上面的列表中可以看到，如果有脚本属于使用过时代码的不同编译过程（例如，不同语言的脚本、编辑器脚本等），则更新程序可能会多次运行。</p>
+
+<p>When the API Updater successfully finishes, the console displays the following notification:</p>
+
+<figure>
+<img src="../uploads/Main/APIUpdaterFinishedConsoleLog.png" alt="Success notification">
+<figcaption>Success notification</figcaption>
+</figure>
+
+<p>如果选择<em>不</em>允许 API Updater 更新脚本，在控制台中将像往常一样显示脚本错误。还可以看到，API Updater 可自动更新的错误在错误消息中标记为 <strong>(UnityUpgradable)</strong>。</p>
+
+<figure>
+<img src="../uploads/Main/APIUpdaterRejectedConsoleErrors.png" alt="取消 API Updater 时在控制台中显示的错误">
+<figcaption>取消 API Updater 时在控制台中显示的错误</figcaption>
+</figure>
+
+<p>如果除了使用过时 API 之外，脚本还有其他错误，API Updater 可能无法完全完成其工作，除非修复了其他错误。在这种情况下，控制台窗口中将显示如下消息的通知：</p>
+
+<figure>
+<img src="../uploads/Main/APIUpdaterOtherErrors.png" alt="脚本中的其他错误可能会阻止 API Updater 正常工作。">
+<figcaption>脚本中的其他错误可能会阻止 API Updater 正常工作。</figcaption>
+</figure>
+
+<p>“Some scripts have compilation errors which may prevent obsolete API usages to get updated.Obsolete API updating will continue automatically after these errors get fixed.”</p>
+
+<p>修复脚本中的其他错误后，可以再次运行 API Updater。触发脚本编译时，API Updater 会自动运行，也可以从 Assets 菜单中手动运行，位置如下：</p>
+
+<figure>
+<img src="../uploads/Main/APIUpdaterMenuOption.png" alt="可以从 Assets 菜单中手动运行 API Updater。">
+<figcaption>可以从 Assets 菜单中手动运行 API Updater。</figcaption>
+</figure>
+
+<h2>命令行模式</h2>
+
+<p>When running Unity in batch mode from the command line, use the <code>-accept-apiupdate</code> option to allow the API Updater to run. For more information, see <a href="CommandLineArguments.html">Command Line Arguments</a>.</p>
+
+<h2>Logging</h2>
+
+<p>A <a href="https://en.wikipedia.org/wiki/Version_control">Version control</a> system helps you see which changes the APIUpdater applies to a Project’s scripts. However, this can be difficult when dealing with pre-compiled assemblies. To see the list of changes made by the AssemblyUpdater (the APIUpdater component responsible for updating assemblies), set the <code>UNITY_ASSEMBLYUPDATE_LOGTHRESHOLD</code> environment variable to the desirable log threshold and start Unity. For example, on Windows you can enter:</p>
+
+<pre><code>c:&gt; set UNITY_ASSEMBLYUPDATE_LOGTHRESHOLD=Debug
+
+c:&gt; \path\to\unity\Unity.exe
+</code></pre>
+
+<p>After AssemblyUpdater has finished, you can see the updates that have been applied in the Editor.log:</p>
+
+<pre><code>[AssemblyUpdater] Property access to 'UnityEngine.Rigidbody
+UnityEngine.GameObject::get_rigidbody()' in 'System.Void
+Test.ClassReferencingObsoleteUnityAPIThroughEditorAssembly::Run()' replaced with 'T
+UnityEngine.GameObject::GetComponent&lt;UnityEngine.Rigidbody&gt;()'.
+</code></pre>
+
+<p>The valid values for the <code>UNITY_ASSEMBLYUPDATE_LOGTHRESHOLD</code> environment variable are, in increasing order of detail:</p>
+
+<ul>
+<li><p><strong>Error:</strong> The AssemblyUpdater only logs <strong>Error</strong> messages. Error messages are logged when the AssemblyUpdater fails to apply a specific update, which requires you to take corrective action (usually requesting the original assembly author to provide an updated version of the assembly).</p></li>
+<li><p><strong>Warning:</strong> The AssemblyUpdater only logs <strong>Warning</strong>, and <strong>Error</strong> messages. Warning messages usually indicate that the AssemblyUpdater has reached a state that could be a potential problem. These problems can depend on conditions not known to the AssemblyUpdater at the point the message was logged.</p></li>
+<li><p><strong>Info:</strong> The AssemblyUpdater only logs <strong>Informational</strong>, <strong>Warning</strong>, and <strong>Error</strong> messages. Info messages include updates applied by the AssemblyUpdater.</p></li>
+<li><p><strong>Debug:</strong> The AssemblyUpdater logs all messages. Debug help with troubleshooting. You may want to set the threshold to this level if you are having issues with the AssemblyUpdater and you want to report them to Unity.</p></li>
+</ul>
+
+<p><strong>Error</strong> is the default value when <code>UNITY_ASSEMBLYUPDATE_LOGTHRESHOLD</code> is not set.</p>
+
+<h2>故障排除</h2>
+
+<p>如果收到消息“API Updating failed.Check previous console messages”，这意味着 API Updater 遇到了阻止其完成工作的问题。</p>
+
+<p>A common cause of this is if the updater was unable to save its changes - For example - the user may not have rights to modify the updated script because it is write protected.</p>
+
+<p>通过按照指示检查控制台中的前几行，应该能够看到更新过程中出现的问题。</p>
+
+<figure>
+<img src="../uploads/Main/APIUpdaterFailed.png" alt="在此示例中，API Updater 失败，原因是其没有脚本文件的写权限。">
+<figcaption>在此示例中，API Updater 失败，原因是其没有脚本文件的写权限。</figcaption>
+</figure>
+
+<h2>限制</h2>
+
+<p>The API updater cannot automatically fix every API change. Generally, API that is upgradable is marked with <code>(UnityUpgradable)</code> in the obsolete message. For example:</p>
+
+<pre><code>
+[Obsolete("Foo property has been deprecated. Please use Bar (UnityUpgradable)")]
+
+</code></pre>
+
+<p>The API updater only handles APIs marked as <code>(UnityUpgradable)</code>. </p>
+
+<p>The API updater might not run if the only updatable API in your scripts include component or GameObject common properties, and those scripts only access members of those properties. Examples of common properties are <code>renderer</code> and <code>rigidbody</code>, and example members of those properties are <code>rigidbody.mass</code> and <code>renderer.bounds</code>. To workaround this, add a dummy method to any of your scripts to trigger the API updater. For example:</p>
+
+<pre><code>
+private object Dummy(GameObject o) { return o.rigidbody;}.
+
+</code></pre>
+
+<ul>
+<li><p><span class="page-edit">2018–07–31 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Unity 2017.2 中添加了“accept-apiupdate”命令行选项</span></p></li>
+<li><p><span class="page-history">AssemblyUpdater logging improved in Unity <a href="https://docs.unity3d.com/2018.3/Documentation/Manual/30_search.html?q=newin20183">2018.3</a> <span class="search-words">NewIn20183</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuides.html"></a></span><div class="tip">升级指南</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide20191.html"></a></span><div class="tip">Upgrading to Unity 2019.1</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

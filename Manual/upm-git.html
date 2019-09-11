@@ -1,0 +1,251 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Git URLs - Unity Manual">
+<title>Git URLs - Unity Manual</title>
+<meta name="description" content="When the Package Manager fetches a package from a Git repository, it adds the package locally to your Project. This allows you to easily test unpublished changes, but you cannot use it to contribute to that Git repository. To set up an existing local Git repository as a dependency in your Project, use a local path instead.">
+<meta property="og:description" content="When the Package Manager fetches a package from a Git repository, it adds the package locally to your Project. This allows you to easily test unpublished changes, but you cannot use it to contribute to that Git repository. To set up an existing local Git repository as a dependency in your Project, use a local path instead.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'upm-git';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/upm-git.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/upm-git.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/upm-git.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/upm-git.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/upm-git.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/upm-git.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/upm-git.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/upm-git.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/upm-git.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/upm-git.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/upm-git.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/upm-git.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/upm-git.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/upm-git.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/upm-git.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/upm-git.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/upm-git.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/upm-git.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/upm-git.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/upm-git.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/upm-git.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/upm-git.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/upm-git.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/upm-git.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="Packages.html">Packages</a></li>
+<li><a href="upm-manifestPrj.html">Project manifest</a></li>
+<li><a href="upm-dependencies.html">Dependencies</a></li>
+<li>Git URLs</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="upm-localpath.html"></a></span><div class="tip">Local paths</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="upm-scoped.html"></a></span><div class="tip">Scoped package registries</div>
+</div>
+</div></div>
+<h1>Git URLs</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>When the Package Manager fetches a package from a Git repository, it adds the package locally to your Project. This allows you to easily test unpublished changes, but you cannot use it to contribute to that Git repository. To set up an existing local Git repository as a dependency in your Project, use <a href="upm-localpath.html">a local path</a> instead.</p>
+
+<p>To use Git packages in a Project, make sure the <a href="https://git-scm.com/">Git client</a> is installed on your machine and that you have added the Git executable path to the PATH system environment variable.</p>
+
+<p>If the repository tracks files with <a href="https://git-lfs.github.com/">Git LFS</a>, make sure the Git LFS client is also installed on your machine. If it is not installed, the Package Manager can’t retrieve the files stored on the LFS server and instead checks out the LFS pointer files without any error or warning messages. </p>
+
+<p><strong>NOTE</strong>: You cannot use the <strong>Packages</strong> window to install a package directly from a Git repository. You must edit the Project manifest to add a Git URLs as a dependency. </p>
+
+<p>To specify a Git URL as a dependency, add the name of the package to install with a Git URL instead of the version number or local file path. For example, this demonstrates how to specify a remote Git using the recommended HTTPS protocol:</p>
+
+<pre><code class="json">{
+        "dependencies": {
+                "com.mycompany.mypackage": "https://mycompany.github.com/gitproject/com.mycompany.mypackage.git"
+}
+</code></pre>
+
+<p>The Package Manager supports the <strong>https</strong>, <strong>http</strong>, <a href="#Git-SSH"><strong>ssh</strong></a>, <strong>git</strong>, and <a href="#Git-FILE"><strong>file</strong></a> protocols using this form:</p>
+
+<p><code>&lt;protocol&gt;://[&lt;user&gt;[:&lt;password&gt;]@]&lt;host&gt;[:&lt;port&gt;]/&lt;path&gt;.git[#&lt;revision&gt;]</code></p>
+
+<p>You can also skip the <code>.git</code> path suffix if the URL starts with git in these forms:</p>
+
+<p><code>git://[&lt;user&gt;[:&lt;password&gt;]@]&lt;host&gt;[:&lt;port&gt;]/&lt;path&gt;[#&lt;revision&gt;]</code></p>
+
+<p>or:</p>
+
+<p><code>git+&lt;protocol&gt;://[&lt;user&gt;[:&lt;password&gt;]@]&lt;host&gt;[:&lt;port&gt;]/&lt;path&gt;[#&lt;revision&gt;]</code></p>
+
+<p>You might need to <a href="https://git-scm.com/docs/gitcredentials">configure credentials in Git configuration files</a> in order to provide your username and password securely. This is preferable to hard-coding them in the Git URL, which is a major security issue if the Project is shared with others.</p>
+
+<p>Git uses the keys at the default location when you use SSH to authenticate. However, if you are using <a href="https://www.putty.org/">PuTTY</a> as the SSH client on Windows, you might need to configure the <strong>GIT_SSH</strong> environment variable to make it point to <code>plink.exe</code>.</p>
+
+<p>You need to set up SSH keys outside of Unity. The Editor notifies you of authentication failure if you don’t have proper access.</p>
+
+<p>For more information on setting up authentication for a specific host, see the help pages for <a href="https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html">GitLab</a> and <a href="https://github.com/settings/tokens">GitHub</a>.</p>
+
+<h2>Targeting a specific revision</h2>
+
+<p>You can specify any revision to install. A revision is an expression that eventually resolves to a commit hash in Git. The most common types of revisions are commit hashes, tags, and branches.</p>
+
+<p>To target a specific revision, append the following to the Git URL in the <strong>dependencies</strong> attribute: <strong>#</strong> followed by the revision (either the <a href="upm-manifestPkg.html#pkg-ver">version</a> or a specific Git hash). Specifying the hash ensures that you get exactly the version you want. For example: </p>
+
+<pre><code class="json">{
+    "dependencies": {
+                    "com.mycompany.mypackage": "https://mycompany.github.com/gitproject/com.mycompany.mypackage.git#523c4f291cea796141e7211f4951702984d2e9ca"
+        }
+}
+</code></pre>
+
+<p>If the revision omitted, the Package Manager uses the remote repository’s <code>HEAD</code> revision. </p>
+
+<p>For more information about setting a proper revision, see the <a href="https://www.git-scm.com/docs/gitrevisions">Git user manual section on Git revisions</a>.</p>
+
+<p><a name="Git-SSH"></a></p>
+
+<h2>Using the SSH protocol</h2>
+
+<p>If you want to use the <strong>ssh</strong> protocol, make sure you use the full protocol syntax. The Package Manager does not support SCP-based shorthand syntax, and many Git hosting services supply the repository’s URL with the SCP syntax. So if you are copying the URL directly, make sure you use the <code>ssh://</code> protocol and replace the colon (<code>:</code>) before the repository path with a slash (<code>/</code>). For example, if you get <code>git@mycompany.github.com:gitproject/com.mycompany.mypackage.git</code> from a GitHub repository, make sure you change it to the full syntax, as shown in this example:</p>
+
+<pre><code class="json">{
+        "dependencies": {
+                "com.mycompany.mypackage": "ssh://git@mycompany.github.com/gitproject/com.mycompany.mypackage.git"
+}
+</code></pre>
+
+<p><strong>NOTE</strong>: If you set up your SSH key with a passphrase, the Package Manager can’t retrieve the package, because you need to enter the passphrase in a shell or command line. In this case, consider using the <strong>https</strong> protocol instead, or use the <a href="http://man7.org/linux/man-pages/man1/ssh-add.1.html">ssh-add</a> utility shipped with Git. For more information, see <a href="upm-errors.html#ssh-add">Authentication issues with Git URLs</a>.</p>
+
+<p><a name="Git-FILE"></a></p>
+
+<h2>Using the FILE protocol</h2>
+
+<p>The Package Manager does not support file paths with the <strong>file</strong> prefix, but it does support full URLs with the <strong>file</strong> protocol. For example:</p>
+
+<pre><code class="json">{
+        "dependencies": {
+                "com.mycompany.mypackageA": "file://localhost/absolute/path/to/com.mycompany.mypackageA.git",
+                "com.mycompany.mypackageB": "file:///absolute/path/to/other/com.mycompany.mypackageB.git"
+        }
+}
+</code></pre>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="upm-localpath.html"></a></span><div class="tip">Local paths</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="upm-scoped.html"></a></span><div class="tip">Scoped package registries</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

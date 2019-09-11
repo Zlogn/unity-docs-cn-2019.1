@@ -1,0 +1,311 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Scriptable Render Pipeline - Unity Manual">
+<title>Scriptable Render Pipeline - Unity Manual</title>
+<meta name="description" content="A Scriptable Render Pipeline (SRP) is an alternative to the Unity built-in render pipeline.
+With an SRP, you can control and tailor rendering via C# scripts. This way, you can either slightly modify or completely build and customize the render pipeline to your needs.">
+<meta property="og:description" content="A Scriptable Render Pipeline (SRP) is an alternative to the Unity built-in render pipeline.
+With an SRP, you can control and tailor rendering via C# scripts. This way, you can either slightly modify or completely build and customize the render pipeline to your needs.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'ScriptableRenderPipeline';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/ScriptableRenderPipeline.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/ScriptableRenderPipeline.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/ScriptableRenderPipeline.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/ScriptableRenderPipeline.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/ScriptableRenderPipeline.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/ScriptableRenderPipeline.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/ScriptableRenderPipeline.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/ScriptableRenderPipeline.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/ScriptableRenderPipeline.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/ScriptableRenderPipeline.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/ScriptableRenderPipeline.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/ScriptableRenderPipeline.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/ScriptableRenderPipeline.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/ScriptableRenderPipeline.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/ScriptableRenderPipeline.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/ScriptableRenderPipeline.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/ScriptableRenderPipeline.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/ScriptableRenderPipeline.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/ScriptableRenderPipeline.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/ScriptableRenderPipeline.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/ScriptableRenderPipeline.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/ScriptableRenderPipeline.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/ScriptableRenderPipeline.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/ScriptableRenderPipeline.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li>Scriptable Render Pipeline</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ShaderTut2.html"></a></span><div class="tip">着色器：顶点和片元程序</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SRPBatcher.html"></a></span><div class="tip">Scriptable Render Pipeline (SRP) Batcher</div>
+</div>
+</div></div>
+<h1>Scriptable Render Pipeline</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>A Scriptable Render Pipeline (SRP) is an alternative to the Unity <a href="SL-RenderPipeline.html">built-in render pipeline</a>.
+With an SRP, you can control and tailor rendering via C# scripts. This way, you can either slightly modify or completely build and customize the render pipeline to your needs.</p>
+
+<p>An SRP gives you more granularity and customization options than the built-in Unity render pipeline. And you can use one of the pre-built SRPs to target your specific needs.</p>
+
+<p>Using an SRP is different from using the built-in Unity render pipeline. For example, the pre-built SRPs use their own Shader library. This is because the Lit shaders from the built-in render pipeline, and custom Lit shaders, do not work with SRPs. You can upgrade the built-in Lit shaders to both LWRP and HDRP.</p>
+
+<p>Unity has built two Scriptable Render Pipelines: the High Definition Render Pipeline (HDRP) and the Lightweight Render Pipeline (LWRP). Each render pipeline targets a specific set of use-case scenarios and hardware needs. The pre-built render pipelines are available as <a href="ProjectTemplates.html">Project Templates</a>.</p>
+
+<p>Both of these render pipelines are delivered as packages via the Package Manager window in Unity. They both include the <a href="https://docs.unity3d.com/Packages/com.unity.shadergraph@latest/index.html?preview=1">Shader Graph</a> and <a href="https://docs.unity3d.com/Packages/com.unity.postprocessing@latest/index.html">Post-processing</a> packages. </p>
+
+<p><strong>Note:</strong> HDRP and LWRP are not compatible with each other because they use different lighting models. Your Project must use one or the other. You can, however, use different Assets with the same render pipeline. This means that you can test different settings using different Assets by swapping between them, instead of changing individual settings.</p>
+
+<p>If you are an advanced user, and you want to modify the SRP scripts to directly, see <a href="#custom">Creating a custom SRP</a>.</p>
+
+<p><a name="lwrp"></a></p>
+
+<h2>Lightweight Render Pipeline (LWRP)</h2>
+
+<p>You can use LWRP across a wide range of hardware, from mobile platforms to higher-end consoles and PCs. LWRP uses simplified, physically-based Lighting and Materials to achieve quick rendering at a high quality. LWRP uses single-pass forward rendering, for optimized real-time performance on several platforms. </p>
+
+<p>LWRP is available via two templates: LWRP and LWRP-VR. The LWRP-VR comes with pre-enabled VR settings. </p>
+
+<p><strong>Note:</strong> Built-in and custom Lit Shaders do not work with the Lightweight Render Pipeline. Instead, LWRP has a new set of standard Shaders. If you upgrade a current Project to LWRP, you can upgrade built-in Shaders to the new ones.</p>
+
+<p>For more information, see the <a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.lightweight@latest/index.html">LWRP documentation</a>. Tip: You can also access the documentation via the Package Manager in Unity ( the Lightweight Render Pipeline package, and click <strong>View Documentation</strong>). </p>
+
+<p><a name="hdrp"></a></p>
+
+<h2>High Definition Render Pipeline (HDRP)</h2>
+
+<p>HDRP targets high-end hardware like consoles and PCs. With HDRP, you’re able to achieve realistic graphics in demanding scenarios. HDRP uses Compute Shader technology and therefore requires compatible GPU hardware. </p>
+
+<p>Use HDRP for AAA quality games, automotive demos, architectural applications and anything that requires high-fidelity graphics over performance. HDRP uses physically-based Lighting and Materials, and supports both Forward and Deferred rendering. </p>
+
+<p>To start using HDRP, create a Project using the HDRP Template.</p>
+
+<p>For more information, see the <a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@latest/index.html?preview=1">HDRP documentation</a>. Tip: You can also access the documentation via the Package Manager in Unity, find the High Definition Render Pipeline package, and click <strong>View Documentation</strong>.</p>
+
+<h2>Setting up LWRP or HDRP</h2>
+
+<p>To use <a href="#lwrp">LWRP</a> or <a href="#hdrp">HDRP</a>, you can either: </p>
+
+<ul>
+<li><a href="#create-a-new-project">Create a new Project</a></li>
+<li><a href="#convert-existing-project">Convert an existing Project</a></li>
+</ul>
+
+<p><a name="create-a-new-project"></a></p>
+
+<h3>Creating a new Project with LWRP or HDRP</h3>
+
+<p>If you want to use HDRP or LWRP in a new Project, and you don’t need to customise the render pipeline, you can create a new Project using a Template.</p>
+
+<p>To create a Project using a Template:</p>
+
+<ol>
+<li>Open Unity. On the Home page, click <strong>New</strong> to start a new Project.</li>
+<li>Under <strong>Template</strong>, select one of the render pipeline templates.</li>
+<li>Click <strong>Create Project</strong>. Unity automatically creates a new Project for you, complete with all the functionalities of the included built-in pipeline.</li>
+</ol>
+
+<p>For more information on using Templates, see <a href="ProjectTemplates.html">Project Templates</a>.</p>
+
+<p><a name="convert-existing-project"></a></p>
+
+<h3>Converting an existing Project to LWRP or HDRP</h3>
+
+<p>You can download and install the latest version of LWRP or HDRP to your existing Project via the <a href="https://docs.unity3d.com/Packages/com.unity.package-manager-ui@1.8/manual/index.html">Package Manager system</a>. </p>
+
+<p>Switching to LWRP or HDRP from an existing Project consumes a lot of time and resources. LWRP and HDRP use custom shaders. They are not compatible with the built-in Unity shaders. You have to manually change or convert many elements. Instead, consider starting a new Project and using your render pipeline of choice.</p>
+
+<p>To install LWRP or HDRP into an existing Project:</p>
+
+<ol>
+<li>In Unity, open your Project.</li>
+<li>In the Unity menu bar, go to <strong>Window</strong> &gt; <strong>Package Manager</strong> to open the <strong>Package Manager</strong> window.</li>
+<li>Select the <strong>All</strong> tab. This tab displays the list of available packages for the version of Unity that you are currently running.</li>
+<li>Select the render pipeline that you want to use from the list of packages. In the top right corner of the window, click <strong>Install</strong>. This installs the render pipeline directly in to your Project.</li>
+</ol>
+
+<h3>Preparing to use LWRP or HDRP</h3>
+
+<p>Before you can use LWRP or HDRP, you must create a Render Pipeline Asset and add it to your Project settings.</p>
+
+<p>To create a Render Pipeline Asset for your render pipeline, see either the:</p>
+
+<ul>
+<li><a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.lightweight@latest/index.html?subfolder=/manual/configuring-lwrp-for-use.html">LWRP documentation</a></li>
+<li><a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@latest/index.html?subfolder=/manual/HDRP-Asset.html">HDRP documentation</a></li>
+</ul>
+
+<p>To assign the Render Pipeline Asset to your Project:</p>
+
+<ol>
+<li>Select <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Graphics</strong>, and locate the <strong>Scriptable Render Pipeline Settings</strong> property at the top.</li>
+<li>Either drag and drop the Render Pipeline Asset into the property field, or use the object picker (located on the right of the field) to select it from a list of all Assets in your Project.</li>
+</ol>
+
+<p><a name="custom"></a></p>
+
+<h2>Creating a custom SRP</h2>
+
+<p>The Scriptable Render Pipelines are available in an open Project on GitHub. You can clone an SRP and make modifications in your local version. </p>
+
+<p>To configure local script files for a new or existing Unity Project:</p>
+
+<ol>
+<li><p>Create a clone of the SRP repository. Place the clone in the root of the Project directory, next to the <em>Assets</em> folder. For information on cloning repositories, see the GitHub help on <a href="https://help.github.com/articles/cloning-a-repository/">Cloning a repository</a>.</p></li>
+<li><p>Checkout a branch that is compatible with your version of Unity. Use the command <code>git checkout</code>, and type the branch name.</p></li>
+<li><p>Use the <code>git submodule update --init</code> command to find and initialize all submodules related to the SRP. </p></li>
+<li>
+<p>In your Project manifest, update <code>dependencies</code> to so that they point to the SRP packages. To read more about Project manifests, see the <a href="https://docs.unity3d.com/Packages/com.unity.package-manager-ui@1.8/manual/index.html#advanced-package-topics"> Package Manager documentation</a>. Here is an example of what your script should look like:</p>
+
+<pre><code>    
+{
+    
+   "dependencies": {
+       "com.unity.postprocessing": "file:../ScriptableRenderPipeline/com.unity.postprocessing",
+    
+       "com.unity.render-pipelines.core": "file:../ScriptableRenderPipeline/com.unity.render-pipelines.core",
+    
+       "com.unity.shadergraph": "file:../ScriptableRenderPipeline/com.unity.shadergraph",
+    
+       "com.unity.render-pipelines.lightweight": "file:../ScriptableRenderPipeline/com.unity.render-pipelines.lightweight"
+    
+   }
+}
+</code></pre>
+</li>
+<li><p>Open your Project in Unity. Your packages are now installed locally. When you open the Project solution in an integrated development environment, you can debug and modify the script directly.</p></li>
+</ol>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–12–12 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Preview of Scriptable Render Pipeline added in <a href="https://docs.unity3d.com/2018.1/Documentation/Manual/30_search.html?q=newin2018">2018.1</a> <span class="search-words">NewIn20181</span></span></p></li>
+<li><p><span class="page-history">Scriptable Render Pipeline added in <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/30_search.html?q=newin2019">2019.1</a> <span class="search-words">NewIn20191</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ShaderTut2.html"></a></span><div class="tip">着色器：顶点和片元程序</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SRPBatcher.html"></a></span><div class="tip">Scriptable Render Pipeline (SRP) Batcher</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

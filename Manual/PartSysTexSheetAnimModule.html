@@ -1,0 +1,315 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Texture Sheet Animation 模块 - Unity Manual">
+<title>Texture Sheet Animation 模块 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/PartSysTexSheetAnimModule-0.png">
+<meta name="description" content="粒子的图形不必是静止图像。此模块允许您将纹理视为可作为动画帧进行播放的一组单独子图像。">
+<meta property="og:description" content="粒子的图形不必是静止图像。此模块允许您将纹理视为可作为动画帧进行播放的一组单独子图像。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'PartSysTexSheetAnimModule';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PartSysTexSheetAnimModule.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PartSysTexSheetAnimModule.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PartSysTexSheetAnimModule.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PartSysTexSheetAnimModule.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PartSysTexSheetAnimModule.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PartSysTexSheetAnimModule.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PartSysTexSheetAnimModule.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PartSysTexSheetAnimModule.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PartSysTexSheetAnimModule.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PartSysTexSheetAnimModule.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/PartSysTexSheetAnimModule.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/PartSysTexSheetAnimModule.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/PartSysTexSheetAnimModule.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/PartSysTexSheetAnimModule.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PartSysTexSheetAnimModule.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PartSysTexSheetAnimModule.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PartSysTexSheetAnimModule.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PartSysTexSheetAnimModule.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PartSysTexSheetAnimModule.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PartSysTexSheetAnimModule.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PartSysTexSheetAnimModule.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PartSysTexSheetAnimModule.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PartSysTexSheetAnimModule.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PartSysTexSheetAnimModule.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="PartSysReference.html">粒子系统参考</a></li>
+<li><a href="ParticleSystemModules.html">粒子系统模块</a></li>
+<li>Texture Sheet Animation 模块</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PartSysSubEmitModule.html"></a></span><div class="tip">Sub Emitters 模块</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PartSysLightsModule.html"></a></span><div class="tip">Lights 模块</div>
+</div>
+</div></div>
+<h1>Texture Sheet Animation 模块</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>粒子的图形不必是静止图像。此模块允许您将纹理视为可作为动画帧进行播放的一组单独子图像。</p>
+
+<h2>Grid 模式属性</h2>
+
+<figure>
+<img src="../uploads/Main/PartSysTexSheetAnimModule-0.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Mode 弹出菜单</strong></td>
+	<td style="text-align:left;">选择 <strong>Grid</strong> 模式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Tiles</strong></td>
+	<td style="text-align:left;">纹理在 X（水平）和 Y（垂直）方向上划分的区块数量。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Animation</strong></td>
+	<td style="text-align:left;">Animation 模式可设置为 <strong>Whole Sheet</strong> 或 <strong>Single Row__（即精灵图集的每一行代表一个单独的动画序列）。 |
+| </strong>Time Mode<strong>| Choose how the Particle System samples frames in the animation. |
+|    Lifetime| Sample frames using an Animation Curve over the lifetime of the particle. |
+|    Speed| Sample frames based on the speed of the particle. A speed range specifies the minimum and maximum speed range for the frame selection. |
+|    FPS| Sample frames based on the specified frames-per-second value. |
+| </strong>Row Mode<strong>| Make the Particle System choose a row from the Texture sheet to produce the animation. This property is only available when the </strong>Animation__ mode is set to <strong>Single Row</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Custom</td>
+	<td style="text-align:left;">Use a specific row of the Texture sheet for the animation.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Random</td>
+	<td style="text-align:left;">Randomly select a row for each particle when producing the animation.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Mesh Index</td>
+	<td style="text-align:left;">Select a row based on the Mesh index assigned to a particle. This is useful when you want to ensure that a particle using a particular Mesh also uses the same Texture.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Random Row</strong></td>
+	<td style="text-align:left;">随机从精灵图集选择一行以生成动画。仅当 <strong>Animation</strong> 模式设置为 <strong>Single Row</strong> 时，此选项才可用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Row</strong></td>
+	<td style="text-align:left;">从精灵图集选择特定行以生成动画。仅当选择 <strong>Single Row</strong> 模式且禁用 <strong>Random Row</strong> 时，此选项才可用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Frame over Time</strong></td>
+	<td style="text-align:left;">通过一条曲线指定动画帧随着时间的推移如何增加。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Start Frame</strong></td>
+	<td style="text-align:left;">允许指定粒子动画应从哪个帧开始（对于在每个粒子上随机定相动画非常有用）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cycles</strong></td>
+	<td style="text-align:left;">动画序列在粒子生命周期内重复的次数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Affected UV Channels</strong></td>
+	<td style="text-align:left;">允许具体指定粒子系统影响的 UV 流。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Sprite 模式属性</h2>
+
+<figure>
+<img src="../uploads/Main/PartSysTexSheetAnimModule-1.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Mode 弹出菜单</strong></td>
+	<td style="text-align:left;">选择 <strong>Sprites</strong> 模式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Frame over Time</strong></td>
+	<td style="text-align:left;">通过一条曲线指定动画帧随着时间的推移如何增加。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Start Frame</strong></td>
+	<td style="text-align:left;">允许指定粒子动画应从哪个帧开始（对于在每个粒子上随机定相动画非常有用）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cycles</strong></td>
+	<td style="text-align:left;">动画序列在粒子生命周期内重复的次数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Enabled UV Channels</strong></td>
+	<td style="text-align:left;">允许具体指定粒子系统影响的 UV 流。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>详细信息</h2>
+
+<p>粒子动画通常比角色动画更简单，细节级别更低。在可单独看到粒子的系统中，动画可用于表现动作或移动。例如，火焰可能会闪烁，成群的昆虫可能振动或颤抖，好像在拍打翅膀。在粒子形成单个连续实体（如云团）的情况下，动画粒子有助于增添能量和运动效果。</p>
+
+<p>您可以使用 <strong>Single Row</strong> 模式为粒子创建单独的动画序列，并通过脚本在动画之间切换。这对于创建变体或在碰撞后切换到不同动画非常有用。<strong>Random Row</strong> 选项非常适合用于打破粒子系统中明显的规律性（例如，一组火焰对象全部一遍又一遍重复完全相同的闪烁动画）。此选项也用于每行的单个帧，从而生成具有随机图形的粒子。此选项可用于打破诸如云之类的对象中的规则性，或者用于从单个系统产生不同类型的碎片或其他对象。例如，一把大口径枪可能会发射出一堆钉子、螺栓、球和其他飞弹，汽车碰撞效果可能会导致发射出弹簧、汽车油漆、螺钉和其他金属部件。</p>
+
+<p>Use the <strong>Row Mode</strong> property to break up conspicuous regularity in a Particle System (for example, a group of GameObjects that all repeat an identical flickering animation over and over again). To generate particles with random graphics, use this property with a single frame per row. This is useful for breaking up regularity in a single system, such as cloud, or to produce different types of debris. For example, a gun might fire out a cluster of nails, bolts and other projectiles, or a car crash effect could emit springs, car paint, screws and other bits of metal.</p>
+
+<p>UV 翻转是为效果添加更多视觉多样性而无需创建其他纹理的好方法。</p>
+
+<p>从 Mode 下拉选单中选择 <strong>Sprites</strong> 选项，可以定义要为每个粒子显示的精灵列表，而不是使用纹理上的一组常规帧。使用此模式可以利用精灵的许多功能，例如精灵打包器 (Sprite Packer)、自定义轴心和每个精灵帧的不同大小。Sprite Packer 可帮助在不同粒子系统之间共享材质，方法是将纹理整理成图集，从而通过动态批处理 (Dynamic Batching) 提高性能。使用此模式时需要注意一些限制。最重要的一点，附加到粒子系统的所有精灵必须共享相同的纹理。通过使用多模式精灵 (Multiple Mode Sprite) 或使用 Sprite Packer 即可实现此目的。如果为每个精灵使用自定义轴心点，请注意不能在它们的帧之间进行混合，因为每个帧之间的几何体会有所不同。仅支持简单精灵，而不支持 9 切片精灵。另外请注意，网格粒子不支持自定义轴心以及变化的精灵大小。
+<br><br></p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2019–04–16 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 Unity <a href="../Manual/30_search.html?q=newin20171">2017.1</a> 中更改了 Texture Sheet Animation 模块的功能 <span class="search-words">NewIn20171</span></span></p></li>
+<li><p><span class="page-history">Time Mode added to Particle System in Unity <a href="../Manual/30_search.html?q=newin20183">2018.3</a> <span class="search-words">NewIn20183</span></span></p></li>
+<li><p><span class="page-history">Row Mode added to Particle System in Unity <a href="../Manual/30_search.html?q=newin20191">2019.1</a> <span class="search-words">NewIn20191</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PartSysSubEmitModule.html"></a></span><div class="tip">Sub Emitters 模块</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PartSysLightsModule.html"></a></span><div class="tip">Lights 模块</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

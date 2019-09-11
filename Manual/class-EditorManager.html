@@ -1,0 +1,463 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Editor - Unity Manual">
+<title>Editor - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/EditorSettings173.png">
+<meta name="description" content="Use the Editor settings (main menu: Edit &gt; Project Settings, the select the Editor category) to apply global settings for working in Unity&amp;#8217;s Editor.">
+<meta property="og:description" content="Use the Editor settings (main menu: Edit &gt; Project Settings, the select the Editor category) to apply global settings for working in Unity&amp;#8217;s Editor.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-EditorManager';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-EditorManager.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-EditorManager.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-EditorManager.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-EditorManager.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-EditorManager.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-EditorManager.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-EditorManager.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-EditorManager.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-EditorManager.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-EditorManager.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-EditorManager.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-EditorManager.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-EditorManager.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-EditorManager.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-EditorManager.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-EditorManager.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-EditorManager.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-EditorManager.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-EditorManager.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-EditorManager.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-EditorManager.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-EditorManager.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-EditorManager.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-EditorManager.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="EditorFeatures.html">编辑器功能</a></li>
+<li><a href="comp-ManagerGroup.html">Project Settings</a></li>
+<li>Editor</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-AudioManager.html"></a></span><div class="tip">音频</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-GraphicsSettings.html"></a></span><div class="tip">Graphics</div>
+</div>
+</div></div>
+<h1>Editor</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Use the <strong>Editor</strong> settings (main menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong>, the select the <strong>Editor</strong> category) to apply global settings for working in Unity’s Editor. </p>
+
+<figure>
+<img src="../uploads/Main/EditorSettings173.png" alt="Editor settings">
+<figcaption>Editor settings</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2">属性</th>
+	<th style="text-align:left;">功能</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Unity Remote</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Device</strong></td>
+	<td style="text-align:left;">Choose the device type you want to use for Unity Remote testing. <br><a href="UnityRemote5.html">Unity Remote</a> is a downloadable app designed to help with Android, iOS and tvOS development.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Compression</strong></td>
+	<td style="text-align:left;">Choose the type of image compression to use when transmitting the game screen to the device via Unity Remote. Default is <em>JPEG</em>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>JPEG</em></td>
+	<td style="text-align:left;">JPEG 通常提供更高压缩比和性能，但图形质量稍低。这是默认选项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>PNG</em></td>
+	<td style="text-align:left;">PNG 可以更准确地体现游戏显示效果，但可能会降低性能。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Resolution</strong></td>
+	<td style="text-align:left;">Choose the resolution the game should run at on Unity Remote. Default is <em>Downsize</em>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Downsize</em></td>
+	<td style="text-align:left;">Display the game at a lower resolution. This results in better performance, but lower graphical accuracy. This is the default option.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Normal</em></td>
+	<td style="text-align:left;">Display the game at normal resolution. This results in better graphical accuracy, but lower performance.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Joystick Source</strong></td>
+	<td style="text-align:left;">Choose the connection source for the joysticks you are using. Default is <em>Remote</em>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Remote</em></td>
+	<td style="text-align:left;">Use joysticks that are connected to a device running Unity Remote. This is the default option.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Local</em></td>
+	<td style="text-align:left;">Use joysticks that are connected to the computer running the Editor.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Version Control</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Mode</strong></td>
+	<td style="text-align:left;">Choose the visibility of meta files. You can use Unity in conjunction with most common <a href="VersionControl.html">version control tools</a>, including Perforce and PlasticSCM. Default is <em>Hidden Meta Files</em>. <br> For more information on showing or hiding meta files, see <a href="http://answers.unity3d.com/questions/932348/visible-or-hidden-meta-files-with-git.html">Visible or hidden meta files</a> at Unity Answers.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Hidden Meta Files</em></td>
+	<td style="text-align:left;">Hide meta files. This is the default option.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Visible Meta Files</em></td>
+	<td style="text-align:left;">Display meta files. This is useful when using version control, because it allows other users and machines to view these meta files.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Perforce</em></td>
+	<td style="text-align:left;">Use Perforce version control system.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>PlasticSCM</em></td>
+	<td style="text-align:left;">Use PlasticSCM version control system.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Asset Serialization</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Mode</strong></td>
+	<td style="text-align:left;">Choose which format to use for storing serialized Assets. This is set to <em>Force Text</em> by default. <br>Unity uses <a href="script-Serialization-BuiltInUse.html">serialization</a> to load and save Assets and AssetBundles to and from your computer’s hard drive. To help with version control merges, Unity can store Scene files in a <a href="TextSceneFormat.html">text-based format</a>. If you are not merging Scenes, Unity can store Scenes in a more space-efficient binary format, or allow both text and binary Scene files to exist at the same time.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Mixed</em></td>
+	<td style="text-align:left;">Assets in Binary mode remain in Binary mode, and Assets in Text mode remain in Text mode. Unity uses Binary mode by default for new Assets.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Force Binary</em></td>
+	<td style="text-align:left;">Convert all Assets to Binary mode, including new Assets.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Force Text</em></td>
+	<td style="text-align:left;">Convert all Assets to Text mode, including new Assets. This is the default option.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Default Behavior Mode</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Mode</strong></td>
+	<td style="text-align:left;">Choose the default <a href="2DAnd3DModeSettings.html">2D or 3D development</a> mode. Unity sets up the certain default behaviors according to the mode you choose to make development easier. Default is <em>3D</em>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>3D</em></td>
+	<td style="text-align:left;">Set Unity up for 3D development. This is the default option.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>2D</em></td>
+	<td style="text-align:left;">Set Unity up for 2D development.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Prefab Editing Environments</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Regular Environment</strong></td>
+	<td style="text-align:left;">Assign a Scene as an editing environment in Prefab Mode for <em>regular</em> Prefabs (that is, Prefabs with a regular <a href="class-Transform.html">Transform</a> component). This allows you to edit your Prefab against a backdrop of your choosing rather than an empty Scene.<br>See <a href="EditingInPrefabMode.html">Editing a Prefab in Prefab Mode</a> for more information.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>UI Environment</strong></td>
+	<td style="text-align:left;">Assign a Scene as an editing environment in Prefab Mode for <em>UI</em> Prefabs (that is, Prefabs with a <a href="class-RectTransform.html">Rect Transform</a> component). This allows you to edit your Prefab against a backdrop of your choosing rather than an empty Scene.<br>See <a href="EditingInPrefabMode.html">Editing a Prefab in Prefab Mode</a> for more information.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Sprite Packer</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Mode</strong></td>
+	<td style="text-align:left;">Choose a mode to configure the <a href="SpritePacker.html">Sprite Packer</a> tool. The Sprite Packer tool automates the process of generating <a href="class-SpriteAtlas.html">sprite atlases</a> from individual Sprite Textures. Default is <em>Disabled</em>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Disabled</em></td>
+	<td style="text-align:left;">Unity 不会打包图集。这是默认设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Enabled For Builds(Legacy Sprite Packer)</em></td>
+	<td style="text-align:left;">Unity 仅对构建打包图集，在 Editor 内部播放模式下不会打包。此 <strong>Legacy Sprite Packer</strong> 选项是指 Sprite Packer 的基于标签的版本，而不是精灵图集版本。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Always Enabled(Legacy Sprite Packer)</em></td>
+	<td style="text-align:left;">Unity packs Atlases for builds, and before entering in-Editor Play mode. This <strong>Legacy Sprite Packer</strong> option refers to the Tag-based version rather than the Sprite Atlas version.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Enabled For Builds</em></td>
+	<td style="text-align:left;">Unity 仅对构建打包图集，在 Editor 内部播放模式下不会打包。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Always Enabled</em></td>
+	<td style="text-align:left;">Unity 为构建打包图集，并且是进入 Editor 内部播放模式之前进行。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Padding Power (Legacy Sprite Packer)</strong></td>
+	<td style="text-align:left;">Choose the value that the packing algorithm uses when calculating the amount of space or “padding” to allocate between packed Sprites, and between Sprites and the edges of the generated atlas. This setting is only available with the Legacy Sprite Packer.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>1</em></td>
+	<td style="text-align:left;">Represents the value 2<sup>1</sup>. Use this setting to allocate 2 pixels between packed Sprites and atlas edges. This is the default setting.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>2</em></td>
+	<td style="text-align:left;">Represents the value 2<sup>2</sup>. Use this setting to allocate 4 pixels between packed Sprites and atlas edges.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>3</em></td>
+	<td style="text-align:left;">Represents the value 2<sup>3</sup>. Use this setting to allocate 8 pixels between packed Sprites and atlas edges.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>C# Project Generation</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Additional extensions to include</strong></td>
+	<td style="text-align:left;">Include a list of additional file types to add to the C# Project. Separate each file type with a semicolon. By default, this field contains <code>txt;xml;fnt;cd</code>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Root namespace</strong></td>
+	<td style="text-align:left;">Fill in the namespace to use for the C# project <code>RootNamespace</code> property. See <a href="https://msdn.microsoft.com/en-us/library/bb629394.aspx">Common MSBuild Project Properties</a> for more information. This field is blank by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>ETC Texture Compressor</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Behavior</strong></td>
+	<td style="text-align:left;">Specify the compression tool to use for different compression qualities of ETC Textures.<br>The compression tools available are <a href="https://bitbucket.org/wolfpld/etcpak/wiki/Home">etcpak</a>, <a href="https://github.com/Ericsson/ETCPACK">ETCPACK</a> and <a href="https://github.com/google/etc2comp">Etc2Comp</a>. These are all third-party compressor libraries.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Legacy</strong></td>
+	<td style="text-align:left;">Use the configuration that was available before ETC Texture compression became configurable. This sets the following properties: <br> - <strong>Fast</strong>: ETCPACK Fast <br> - <strong>Normal</strong>: ETCPACK Fast <br> - <strong>Best</strong>: ETCPACK Best</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Default</em></td>
+	<td style="text-align:left;">Use the default configuration for Unity. This sets the following properties: <br> - <strong>Fast</strong>: etcpack <br> - <strong>Normal</strong>: ETCPACK Fast <br> - <strong>Best</strong>: Etc2Comp Best</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Custom</em></td>
+	<td style="text-align:left;">Customize the ETC Texture compression configuration. When you choose this option, the <strong>Fast</strong>, <strong>Normal</strong>, and <strong>Best</strong> properties are enabled. This maps to the <strong>Compressor Quality </strong>setting in the <a href="class-TextureImporter.html">Texture Importer</a> for the supported platforms.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Fast</strong></td>
+	<td style="text-align:left;">Define the compression quality tool to use for Fast compression.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Normal</strong></td>
+	<td style="text-align:left;">Define the compression quality tool to use for Normal compression.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Best</strong></td>
+	<td style="text-align:left;">Define the compression quality tool to use for Best compression.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Line Endings For New Scripts</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Mode</strong></td>
+	<td style="text-align:left;">Choose the file line endings to apply to new scripts created within the Editor. Note that configuring these settings does not convert existing scripts.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>OS Native</strong></td>
+	<td style="text-align:left;">Apply line endings based on the operating system the Editor is running on.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Unix</strong></td>
+	<td style="text-align:left;">Apply line endings based on the Unix operating system.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Windows</strong></td>
+	<td style="text-align:left;">Apply line endings based on the Windows operating system.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Streaming Settings</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Enable Texture Streaming in Play Mode</strong></td>
+	<td style="text-align:left;">Enable mipmap Texture streaming in Play Mode. <br>The <a href="class-QualitySettings.html">Quality</a> <strong>Texture Streaming</strong> setting must also be enabled.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Shader Compilation</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Asynchronous Shader Compilation</strong></td>
+	<td style="text-align:left;">Enable this checkbox to make Unity compile shaders in the background. While compiling, the Unity engine uses a dummy Shader to render geometry in the Editor. When Shader compilation has finished, the engine swaps your Shader Variant back in. This means the Editor runs seamlessly, without having to wait for the Unity engine to compile every single Shader variant before rendering. For more information, see <a href="AsynchronousShaderCompilation.html">Asynchronous Shader compilation</a>.</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2019–03–07 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li><span class="page-history">2018–09–28 New Unified Settings updates</span></li>
+<li><span class="page-history">2017–11–03 对文档更新以反映自 5.6 版以来的多项更改</span></li>
+<li><span class="page-history">2019–03–07 Asynchronous Shader Compilation setting added in 2019.1</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-AudioManager.html"></a></span><div class="tip">音频</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-GraphicsSettings.html"></a></span><div class="tip">Graphics</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

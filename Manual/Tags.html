@@ -1,0 +1,238 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="标签 - Unity Manual">
+<title>标签 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/TagDropdown.png">
+<meta name="description" content="标签 (Tag) 是可分配给一个或多个__游戏对象__的参考词。例如，可为玩家控制的角色定义&amp;#8220;Player&amp;#8221;标签，并为非玩家控制的角色定义&amp;#8220;Enemy&amp;#8221;标签。还可以使用&amp;#8220;Collectable&amp;#8221;标签定义玩家可在场景中收集的物品。">
+<meta property="og:description" content="标签 (Tag) 是可分配给一个或多个__游戏对象__的参考词。例如，可为玩家控制的角色定义&amp;#8220;Player&amp;#8221;标签，并为非玩家控制的角色定义&amp;#8220;Enemy&amp;#8221;标签。还可以使用&amp;#8220;Collectable&amp;#8221;标签定义玩家可在场景中收集的物品。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'Tags';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Tags.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Tags.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Tags.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Tags.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Tags.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Tags.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Tags.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Tags.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Tags.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Tags.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/Tags.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/Tags.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/Tags.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/Tags.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Tags.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Tags.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Tags.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Tags.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Tags.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Tags.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Tags.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Tags.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Tags.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Tags.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="CreatingGameplay.html">创建游戏玩法</a></li>
+<li><a href="GameObjects.html">游戏对象</a></li>
+<li>标签</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="DeactivatingGameObjects.html"></a></span><div class="tip">停用游戏对象</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="StaticObjects.html"></a></span><div class="tip">静态游戏对象</div>
+</div>
+</div></div>
+<h1>标签</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><strong>标签 (Tag)</strong> 是可分配给一个或多个__游戏对象__的参考词。例如，可为玩家控制的角色定义“Player”标签，并为非玩家控制的角色定义“Enemy”标签。还可以使用“Collectable”标签定义玩家可在场景中收集的物品。</p>
+
+<p>标签有助于识别游戏对象以便于编写脚本。通过使用标签，不需要使用拖放方式手动将游戏对象添加到脚本的公开属性，因此可以节省在多个游戏对象中使用相同脚本代码的时间。</p>
+
+<p>标签对<a href="CollidersOverview.html">碰撞体</a>控制脚本中的触发器很有用；例如，需要通过标签确定玩家是否与敌人、道具或可收集物进行交互。</p>
+
+<p>通过设置 <a href="../ScriptReference/GameObject.FindWithTag.html">GameObject.FindWithTag()</a> 函数，可以查找包含所需标签的游戏对象。以下示例便使用了 GameObject.FindWithTag()。该函数在具有“Respawn”标签的游戏对象位置实例化 <code>respawnPrefab</code>：</p>
+
+<p>JavaScript：</p>
+
+<pre><code>var respawnPrefab : GameObject;
+var respawn = GameObject.FindWithTag ("Respawn");
+Instantiate (respawnPrefab, respawn.position, respawn.rotation);
+</code></pre>
+
+<p>C#：</p>
+
+<pre><code>using UnityEngine;
+using System.Collections;
+
+public class Example : MonoBehaviour {
+    public GameObject respawnPrefab;
+    public GameObject respawn;
+    void Start() {
+        if (respawn == null)
+            respawn = GameObject.FindWithTag("Respawn");
+        
+        Instantiate(respawnPrefab, respawn.transform.position, respawn.transform.rotation) as GameObject;
+    }
+}
+</code></pre>
+
+<h2>创建新标签</h2>
+
+<p>在 <strong>Inspector</strong> 中，游戏对象的名称下面会显示 <strong>Tag</strong> 和 <strong>Layer</strong> 下拉菜单。</p>
+
+<figure>
+<img src="../uploads/Main/TagDropdown.png" alt="">
+</figure>
+
+<p>要创建新标签，请选择 <strong>Add Tag…</strong>。随即在 Inspector 中打开<a href="class-TagManager.html">标签和层管理器 (Tag and Layer Manager)</a>。请注意，一旦命名了标签，以后就无法重命名。</p>
+
+<p>层类似于标签，但用于定义 Unity 应该如何在场景中渲染游戏对象。请参阅有关<a href="Layers.html">层</a>的文档以了解更多信息。</p>
+
+<h2>应用标签</h2>
+
+<p>在 <strong>Inspector</strong> 中，游戏对象的名称下面会显示 <strong>Tag</strong> 和 <strong>Layer</strong> 下拉菜单。要将现有标签应用于游戏对象，请打开 <strong>Tags</strong> 下拉选单，然后选择要应用的标签。游戏对象现在便与此标签关联。</p>
+
+<h2>提示</h2>
+
+<ul>
+<li><p>只能为游戏对象分配一个标签。</p></li>
+<li>
+<p>Unity 包含一些未出现在标签管理器中的内置标签：</p>
+
+<ul>
+<li><strong>Untagged</strong></li>
+<li><strong>Respawn</strong></li>
+<li><strong>Finish</strong></li>
+<li><strong>EditorOnly</strong></li>
+<li><strong>MainCamera</strong></li>
+<li><strong>Player</strong></li>
+<li><strong>GameController</strong></li>
+</ul>
+</li>
+<li><p>可以使用任何喜欢的词作为标签。甚至可以使用短语，但这种情况下可能需要增加 Inspector 的宽度才能看到标签的全名。</p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="DeactivatingGameObjects.html"></a></span><div class="tip">停用游戏对象</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="StaticObjects.html"></a></span><div class="tip">静态游戏对象</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

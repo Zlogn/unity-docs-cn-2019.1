@@ -1,0 +1,340 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="优化图形性能 - Unity Manual">
+<title>优化图形性能 - Unity Manual</title>
+<meta name="description" content="良好的性能对很多游戏的成功至关重要。以下几条简单法则有助于将游戏的渲染速度最大化。">
+<meta property="og:description" content="良好的性能对很多游戏的成功至关重要。以下几条简单法则有助于将游戏的渲染速度最大化。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'OptimizingGraphicsPerformance';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/OptimizingGraphicsPerformance.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/OptimizingGraphicsPerformance.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/OptimizingGraphicsPerformance.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/OptimizingGraphicsPerformance.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/OptimizingGraphicsPerformance.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/OptimizingGraphicsPerformance.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/OptimizingGraphicsPerformance.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/OptimizingGraphicsPerformance.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/OptimizingGraphicsPerformance.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/OptimizingGraphicsPerformance.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/OptimizingGraphicsPerformance.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/OptimizingGraphicsPerformance.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/OptimizingGraphicsPerformance.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/OptimizingGraphicsPerformance.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/OptimizingGraphicsPerformance.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/OptimizingGraphicsPerformance.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/OptimizingGraphicsPerformance.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/OptimizingGraphicsPerformance.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/OptimizingGraphicsPerformance.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/OptimizingGraphicsPerformance.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/OptimizingGraphicsPerformance.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/OptimizingGraphicsPerformance.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/OptimizingGraphicsPerformance.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/OptimizingGraphicsPerformance.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li>优化图形性能</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Example-CreatingaBillboardPlane.html"></a></span><div class="tip">示例 - 创建四边形</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="DrawCallBatching.html"></a></span><div class="tip">绘制调用批处理</div>
+</div>
+</div></div>
+<h1>优化图形性能</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>良好的性能对很多游戏的成功至关重要。以下几条简单法则有助于将游戏的渲染速度最大化。</p>
+
+<h2>找出影响图形性能的主要因素</h2>
+
+<p>游戏的图形部分主要影响计算机的两个系统：CPU 和 GPU。找到性能问题<strong>所在</strong>是一切优化的首要法则，因为 GPU 与 CPU 的优化策略大不相同（甚至相反；例如，通常在优化 CPU 时让 GPU 做更多工作，反之亦然）。</p>
+
+<p>常见瓶颈及检查方法：</p>
+
+<ul>
+<li>GPU 通常受<strong>填充率</strong>或内存带宽制约。
+
+<ul>
+<li>降低显示分辨率并运行游戏。如果显示分辨率降低后游戏运行更快，表明 GPU 填充率可能是限制因素。</li>
+</ul>
+</li>
+<li>CPU 通常受到需要渲染的批次数的限制。
+
+<ul>
+<li>检查 <a href="RenderingStatistics.html">Rendering Statistics</a> 窗口中的“batches”。渲染的批次越多，CPU 成本越高。</li>
+</ul>
+</li>
+</ul>
+
+<p>不太常见的瓶颈：</p>
+
+<ul>
+<li>GPU 有太多顶点需要处理。可接受的能确保良好性能的顶点数量取决于 GPU 和顶点着色器的复杂程度。一般来说，移动端应不超过 100,000 个顶点。另一方面，即使有数百万个顶点，PC 也能管理到位，不过最好还是通过优化尽可能减少此数量。</li>
+<li>CPU 有太多顶点需要处理。这些顶点可能位于蒙皮网格、布料模拟、粒子或其他游戏对象和网格中。如上所述，通常较好的做法是在不影响游戏质量的情况下尽可能降低此数量。有关如何执行此类操作的指导，请参阅下面有关 <a href="#CPU-optimization">CPU 优化</a>的部分。</li>
+<li>如果渲染在 GPU 或 CPU 方面不是问题，则可能在其他地方存在问题，例如在脚本或物理系统中。请使用 <a href="Profiler.html">Unity Profiler</a> 找出问题。</li>
+</ul>
+
+<p><a name="CPU-optimization"></a> </p>
+
+<h2>CPU 优化</h2>
+
+<p>为了在屏幕上渲染对象，CPU 需要做很多处理工作：确定哪些光源影响该对象，设置着色器和着色器参数，向图形驱动程序发送绘制命令，而图形驱动程序随后将准备发送到显卡的命令。</p>
+
+<p>所有这种基于“每个对象”的 CPU 使用率都是非常消耗资源的，所以如果有很多可见对象，影响就会累加起来。例如，如果有一千个三角形，如果它们都在一个网格中，而不是每个三角形在一个网格中（这种情况下加起来就有 1000 个网格），则 CPU 处理起来就比较容易。两种方案的 GPU 成本非常相似，但 CPU 完成渲染一千个对象（而不是一个）的工作要高得多。</p>
+
+<p>减少可见对象数量。要减少 CPU 需要执行的工作量，请执行以下操作：</p>
+
+<ul>
+<li>通过手动方式或使用 Unity 的<a href="DrawCallBatching.html">绘制调用批处理</a>将近处对象组合在一起。</li>
+<li>通过将单独的纹理放入更大的纹理图集，在对象中使用更少的材质。</li>
+<li>减少可能导致对象多次渲染的因素（例如反射、阴影和每像素光照）。</li>
+</ul>
+
+<p>将对象组合在一起，使每个网格至少有几百个三角形，并使整个网格只使用一种__材质__。请注意，组合两个不共享材质的对象根本不会提高性能。需要多种材质的最常见原因是两个网格不共享相同的纹理；为了优化 CPU 性能，请确保组合的所有对象共享相同的纹理。</p>
+
+<p>在<a href="RenderTech-ForwardRendering.html">前向渲染路径</a>中使用大量像素光照时，有些情况下组合对象可能没有意义。请参阅下面的<a href="#LightingPerformance">光照性能</a>部分，了解如何管理此情况。</p>
+
+<h2>GPU：优化模型几何体</h2>
+
+<p>优化模型几何体有两个基本规则：</p>
+
+<ul>
+<li>除非必要，否则不要使用三角形</li>
+<li>尽可能降低 UV 贴图接缝和硬边（双倍顶点）的数量</li>
+</ul>
+
+<p>请注意，图形硬件必须处理的实际顶点数通常与 3D 应用程序报告的数量不同。建模应用程序通常显示的是构成模型的不同角点的数量（称为几何顶点数）。但是，对于显卡，为了进行渲染，需要将一些几何顶点拆分成两个甚至更多个逻辑顶点。如果顶点具有多个法线、UV 坐标或顶点颜色，则必须将其拆分。因此，Unity 中的顶点计数通常高于 3D 应用程序给出的计数。</p>
+
+<p>虽然模型中的几何体数量主要与 GPU 相关，但 Unity 中的某些功能也要在 CPU 上处理模型（例如，网格蒙皮）。</p>
+
+<p><a name="LightingPerformance"></a> </p>
+
+<h2>光照性能</h2>
+
+<p>速度最快的方案是始终创建根本不需要计算的光照。要做到这一点，使用<a href="GIIntro.html">光照贴图</a>只需一次“烘焙”静态光照，而无需每帧计算。生成光照贴图环境的过程只比在 Unity 场景中放置光源稍久一点，<strong>但是</strong>：</p>
+
+<ul>
+<li>运行速度要快得多（每像素 2 个光源的情况下，速度快 2–3 倍）</li>
+<li>视觉效果要好得多，因为可以烘焙全局光照，使光照贴图显得更平滑</li>
+</ul>
+
+<p>在许多情况下，可运用简单的技巧，无需添加多个额外的光照。例如，无需添加直接照入摄像机的光源来提供__边缘光照__效果，而是直接在着色器中添加专用的 <code>Rim Lighting</code> 计算（请参阅<a href="SL-SurfaceShaderExamples.html">表面着色器示例</a>以了解如何执行此操作）。</p>
+
+<h4>前向渲染中的光照</h4>
+
+<p>另请参阅：<a href="RenderTech-ForwardRendering.html">前向渲染</a></p>
+
+<p>对于所有像素，动态光照会为每个受影响的像素增加渲染工作，可能导致对象在多个 pass 中被渲染。避免在性能较弱的设备（如移动端或低端 PC GPU）上使用多个__像素光照__来照射单个对象，应使用光照贴图实现静态对象的光照，而不是每帧计算其光照。每顶点动态光照可能会为顶点变换增加显著的工作量，因此尽量避免多个光源照射单个对象的情况。</p>
+
+<p>避免组合距离足够远而需要受到不同像素光照影响的网格。使用像素光照时，每个网格必须渲染多次，因为只要发生像素光照就要进行渲染。如果组合两个相距很远的网格，则会增加组合对象的有效大小。照射该组合对象任何部分的所有像素光照在渲染期间都要考虑在内，因此需要创建的渲染 pass 的数量可能增加。通常情况下，为渲染组合对象而必须创建的 pass 数为<strong>每个单独对象的 pass 数之和</strong>，因此进行网格组合并不会获得任何好处。</p>
+
+<p>During rendering, Unity finds all lights surrounding a mesh and calculates which of those lights affect it most. The settings on the <a href="class-QualitySettings.html">Quality</a> window are used to modify how many of the lights end up as pixel lights, and how many as vertex lights. Each light calculates its importance based on how far away it is from the mesh and how intense its illumination is - and some lights are more important than others purely from the game context. For this reason, every light has a <strong>Render Mode</strong> setting which can be set to <strong>Important</strong> or <strong>Not Important</strong>; lights marked as <strong>Not Important</strong> have a lower rendering overhead.</p>
+
+<p><strong>示例</strong>：假设有一个驾驶游戏，玩家的汽车在黑暗中行驶，前照灯已打开。前照灯可能是游戏中视觉上最重要的光源，因此它们的 <strong>Render Mode</strong> 应设置为 <strong>Important</strong>。游戏中可能还有其他不太重要的光源，比如其他汽车的尾灯或远处的灯柱，这些光源不能通过像素光照来大幅改善视觉效果。这种情况下，可放心地将这些光源的 <strong>Render Mode</strong> 设置为 __Not Important__，从而避免将渲染能力浪费在无用之处。</p>
+
+<p>通过优化每像素光照可以节省 CPU 和 GPU 工作量：CPU 的绘制调用将减少，而 GPU 要处理的顶点将减少，同时为所有其他对象渲染栅格化的像素也将减少。</p>
+
+<h2>GPU：纹理压缩和 Mipmap</h2>
+
+<p>使用<a href="class-TextureImporter.html">压缩纹理</a>可减小纹理的大小。这种做法可加快加载时间、减小内存占用并显著提高渲染性能。与未压缩的 32 位 RGBA 纹理所需的内存带宽相比，压缩纹理使用的内存带宽要小得多。</p>
+
+<h4>纹理 Mipmap</h4>
+
+<p>对于 3D 场景中使用的纹理，应始终启用 <a href="class-TextureImporter.html">Generate mipmaps</a> 选项。Mipmap 纹理使 GPU 能够为较小的三角形使用较低分辨率的纹理。这一点类似于纹理压缩可以帮助限制 GPU 渲染时传输的纹理数据量。</p>
+
+<p>此规则的唯一例外是当已知纹理像素将 1:1 映射到渲染的屏幕像素时（与 UI 元素或在 2D 游戏中一样）。</p>
+
+<h2>LOD（细节级别）和每层剔除距离</h2>
+
+<p>剔除对象涉及使对象不可见。这是减轻 CPU 和 GPU 负载的有效方法。</p>
+
+<p>在许多游戏中，在不影响玩家体验的情况下快速有效地执行此操作的方法是，相对于大对象，更激进地剔除小对象。例如，可让远处的小岩石和碎片不可见，而大型建筑物仍然保持可见。</p>
+
+<p>有多种方式实现此目标：</p>
+
+<ul>
+<li><p>使用<a href="LevelOfDetail.html">细节级别</a>系统</p></li>
+<li><p>手动设置摄像机上的每层剔除距离</p></li>
+<li><p>将小对象放入<a href="Layers.html">单独一层</a>，并使用 <a href="../ScriptReference/Camera-layerCullDistances.html">Camera.layerCullDistances</a> 脚本函数设置每层剔除距离</p></li>
+</ul>
+
+<h2>实时阴影</h2>
+
+<p>实时阴影很不错，但它们对性能有很大影响，同时会增加 CPU 的绘制调用次数和 GPU 的处理量。有关更多详细信息，请参阅<a href="LightPerformance.html">光照性能</a>页面。</p>
+
+<h2>GPU：编写高性能着色器的技巧</h2>
+
+<p>不同的平台具有截然不同的性能；与低端移动端 GPU 相比，高端 PC GPU 在图形和着色器方面的处理能力要高得多。即使在单一平台上也是如此；快速的 GPU 比慢速的集成 GPU 快几十倍。</p>
+
+<p>移动平台和低端 PC 上的 GPU 性能可能远低于开发机器上的 GPU 性能。建议手动优化着色器以减少计算和纹理读取，从而在低端 GPU 机器上获得良好的性能。例如，某些内置的 Unity 着色器具有速度快得多但存在一些限制或近似处理的“移动端”等效项。</p>
+
+<p>以下是移动端和低端 PC 显卡的一些指导原则：</p>
+
+<h4>复杂的数学运算</h4>
+
+<p>超越数学函数（例如 <code>pow</code>、<code>exp</code>、<code>log</code>、<code>cos</code>、
+<code>sin</code>、<code>tan</code>）都很消耗资源，所以尽量避免使用它们。如果可能，请尽量考虑使用查找纹理作为复杂数学计算的替代方法。</p>
+
+<p>避免编写自己的运算（如 <code>normalize</code>、<code>dot</code>、<code>inversesqrt</code>）。Unity 的内置选项确保驱动程序可以生成好得多的代码。请记住，Alpha 测试 (<code>discard</code>) 运算通常会使片元着色器变慢。</p>
+
+<h4>浮点精度</h4>
+
+<p>虽然浮点变量的精度（<code>float</code> 与 <code>half</code> 与 <code>fixed</code>）
+在桌面平台 GPU 上很大程度上会被忽略，但在移动端 GPU 上
+对于获得良好性能非常重要。有关详细信息，请参阅
+<a href="SL-DataTypesAndPrecision.html">着色器数据类型和精度</a>
+页面。</p>
+
+<p>有关着色器性能的更多详细信息，请参阅<a href="SL-ShaderPerformance.html">着色器性能</a>页面。</p>
+
+<h2>用于提高游戏运行速度的简单核对表</h2>
+
+<ul>
+<li>在针对 PC 平台进行构建时，保持顶点数量低于 200K 和 3M/帧（具体值取决于目标 GPU）。</li>
+<li>如果要使用内置着色器，请从 <strong>Mobile</strong> 或 <strong>Unlit</strong> 类别中选取。这些类别也适用于非移动平台，但它们是更复杂着色器的简化和近似版本。</li>
+<li>保持每个场景使用较少的不同材质，并尽可能在不同对象之间共享材质。</li>
+<li>在非移动对象上设置 <code>Static</code> 属性以便允许内部优化，如<a href="DrawCallBatching.html">静态批处理</a>。</li>
+<li>只有一个（最好是方向性的）<code>pixel light</code> 影响几何体（而不是有多个）。</li>
+<li>烘焙光照而不是使用动态光照。</li>
+<li>尽可能使用压缩纹理格式，并使用 16 位纹理而非 32 位纹理。</li>
+<li>尽可能避免使用雾效。</li>
+<li>如果复杂的静态场景具有大量遮挡，使用<a href="OcclusionCulling.html">遮挡剔除</a>减少可见几何体数量和绘制调用次数。设计关卡时注意遮挡剔除。</li>
+<li>使用天空盒“伪造”远处的几何体。</li>
+<li>使用像素着色器或纹理组合器来混合多个纹理而不是使用多 pass 方法。</li>
+<li>尽可能使用 <code>half</code> 精度变量。</li>
+<li>最大限度减少在像素着色器中使用复杂的数学运算，例如 <code>pow</code>、<code>sin</code> 和 <code>cos</code>。</li>
+<li>每个片元使用更少的纹理。</li>
+</ul>
+
+<h2>另请参阅</h2>
+
+<ul>
+<li>
+<a href="Profiler.html">Unity Profiler 窗口</a>。</li>
+<li>
+<a href="LightPerformance.html">光照性能</a>。</li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Example-CreatingaBillboardPlane.html"></a></span><div class="tip">示例 - 创建四边形</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="DrawCallBatching.html"></a></span><div class="tip">绘制调用批处理</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

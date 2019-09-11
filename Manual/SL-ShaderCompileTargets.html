@@ -1,0 +1,360 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="着色器编译目标级别 - Unity Manual">
+<title>着色器编译目标级别 - Unity Manual</title>
+<meta name="description" content="编写表面着色器或常规
+着色器程序时，HLSL 源代码可以
+编译到不同&amp;#8220;着色器模型&amp;#8221;中。
+为了支持使用更现代的 GPI 功能，必须使用更高的着色器编译目标。">
+<meta property="og:description" content="编写表面着色器或常规
+着色器程序时，HLSL 源代码可以
+编译到不同&amp;#8220;着色器模型&amp;#8221;中。
+为了支持使用更现代的 GPI 功能，必须使用更高的着色器编译目标。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'SL-ShaderCompileTargets';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-ShaderCompileTargets.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-ShaderCompileTargets.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-ShaderCompileTargets.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-ShaderCompileTargets.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-ShaderCompileTargets.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-ShaderCompileTargets.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-ShaderCompileTargets.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-ShaderCompileTargets.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-ShaderCompileTargets.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-ShaderCompileTargets.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/SL-ShaderCompileTargets.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/SL-ShaderCompileTargets.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/SL-ShaderCompileTargets.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/SL-ShaderCompileTargets.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-ShaderCompileTargets.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-ShaderCompileTargets.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-ShaderCompileTargets.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-ShaderCompileTargets.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-ShaderCompileTargets.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-ShaderCompileTargets.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-ShaderCompileTargets.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-ShaderCompileTargets.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-ShaderCompileTargets.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-ShaderCompileTargets.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="SL-Reference.html">着色器参考</a></li>
+<li><a href="SL-ShaderPrograms.html">编写顶点和片元着色器</a></li>
+<li>着色器编译目标级别</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-ShadingLanguage.html"></a></span><div class="tip">Unity 中使用的着色语言</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-DataTypesAndPrecision.html"></a></span><div class="tip">着色器数据类型和精度</div>
+</div>
+</div></div>
+<h1>着色器编译目标级别</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>编写<a href="SL-SurfaceShaders.html">表面着色器</a>或常规
+<a href="SL-ShaderPrograms.html">着色器程序</a>时，HLSL 源代码可以
+编译到不同“着色器模型”中。
+为了支持使用更现代的 GPI 功能，必须使用更高的着色器编译目标。</p>
+
+<p><strong>注意</strong>：使用更高的着色器编译目标可能会阻止着色器在较旧的 GPU 或平台上运行。</p>
+
+<p>Indicate the compilation target by using the <code>#pragma target</code> <em>name</em> directive or the more specific <code>#pragma require</code> <em>feature …</em> directive. For example:</p>
+
+<pre><code>#pragma target 3.5
+#pragma require integers 2darray instancing
+</code></pre>
+
+<h2>默认编译目标</h2>
+
+<p>默认情况下，Unity 将着色器编译为几乎支持的最低目标（“2.5”）；处于 DirectX 着色器模型 2.0 和 3.0 之间。其他一些编译指令使着色器自动
+编译成更高的目标：</p>
+
+<ul>
+<li>使用几何着色器 (<code>#pragma geometry</code>) 将编译目标设置为 <code>4.0</code>。</li>
+<li>使用曲面细分着色器（<code>#pragma hull</code> 或 <code>#pragma domain</code>）将编译目标设置为 <code>4.6</code>。</li>
+</ul>
+
+<p>对于几何体、外壳或域着色器，未通过 <code>#pragma</code> 显式设置函数入口点的任何着色器都将降级内部着色器功能要求。这可使具有更广泛运行时和功能差异的非 DX11 目标与现有着色器内容更加兼容。</p>
+
+<p>例如，Unity 在 Metal 图形上支持曲面细分着色器，但 Metal 不支持几何着色器。使用 <code>#pragma target 5.0</code> 仍有效，只要您不使用几何着色器。</p>
+
+<h2>Supported ‘#pragma target’ names</h2>
+
+<p>以下是支持的着色器模型列表，其中包含大致增加的功能集（在某些情况下对于平台/GPU 的要求更高）：</p>
+
+<h4>#pragma target 2.0</h4>
+
+<p><em>适用于 Unity 支持的所有平台。DX9 着色器模型 2.0。
+</em> 有限数量的算术和纹理指令；8 个插值器；没有顶点纹理采样；片元着色器中没有衍生指令；没有显式的 LOD 纹理采样。</p>
+
+<h4>#pragma target 2.5（默认值）</h4>
+
+<ul>
+<li>几乎与 3.0 目标相同（见下文），例外之处是仍然只有
+ 8 个插值器，并且没有显式的 LOD 纹理采样。</li>
+<li>在 Windows Phone 上编译为 DX11 功能级别 9.3。</li>
+</ul>
+
+<h4>#pragma target 3.0</h4>
+
+<ul>
+<li>DX9 着色器模型 3.0：衍生指令，纹理 LOD 采样，10 个插值器，允许更多的数学/纹理指令。</li>
+<li>在 DX11 功能级别 9.x GPU（例如大多数 Windows Phone 设备）上不支持。</li>
+<li>某些 OpenGL ES 2.0 设备可能无法完全支持，具体取决于存在的驱动程序扩展和使用的功能。</li>
+</ul>
+
+<h4>#pragma target 3.5（或 es3.0）</h4>
+
+<ul>
+<li>OpenGL ES 3.0 功能（D3D 平台上的 DX10 SM4.0，只是没有几何着色器）。</li>
+<li>在 DX11 9.x (WinPhone) 和 OpenGL ES 2.0 上不支持。</li>
+<li>在 DX11+、OpenGL 3.2+、OpenGL ES 3+、Metal、Vulkan 和 PS4/XB1 游戏主机上支持。</li>
+<li>Native integer operations in shaders, texture arrays and so on.</li>
+</ul>
+
+<h4>#pragma target 4.0</h4>
+
+<ul>
+<li>DX11 着色器模型 4.0。</li>
+<li>在 DX11 9.x (WinPhone)、OpenGL ES 2.0/3.0/3.1 和 Metal 上不支持。</li>
+<li>在 DX11+、OpenGL 3.2+、OpenGL ES 3.1+AEP、Vulkan 和 PS4/XB1 游戏主机上支持。</li>
+<li>具有几何着色器以及 <code>es3.0</code> 目标所具有的一切功能。</li>
+</ul>
+
+<h4>#pragma target 4.5（或 es3.1）</h4>
+
+<ul>
+<li>OpenGL ES 3.1 功能（D3D 平台上的 DX11 SM5.0，只是没有曲面细分着色器）。</li>
+<li>在早于 SM5.0 的 DX11、早于 4.3 的 OpenGL（即 Mac）和 OpenGL ES 2.0/3.0 上不支持。</li>
+<li>在 DX11+ SM5.0、OpenGL 4.3+、OpenGL ES 3.1、Metal、Vulkan 和 PS4/XB1 游戏主机上支持。</li>
+<li>Has compute shaders, random access texture writes, atomics and so on. No geometry or tessellation shaders.</li>
+</ul>
+
+<h4>#pragma target 4.6（或 gl4.1）</h4>
+
+<ul>
+<li>OpenGL 4.1 功能（D3D 平台上的 DX11 SM5.0，只是没有计算着色器）。这基本上是 Mac 支持的最高
+ OpenGL 级别。</li>
+<li>在早于 SM5.0 的 DX11、早于 4.1 的 OpenGL、OpenGL ES 2.0/3.0/3.1 和 Metal 上不支持。</li>
+<li>在 DX11+ SM5.0、OpenGL 4.1+、OpenGL ES 3.1+AEP、Vulkan、Metal（不含几何体）和 PS4/XB1 游戏主机上支持。</li>
+</ul>
+
+<h4>#pragma target 5.0</h4>
+
+<ul>
+<li>DX11 着色器模型 5.0。</li>
+<li>在早于 SM5.0 的 DX11、早于 4.3 的 OpenGL（即 Mac）、OpenGL ES 2.0/3.0/3.1 和 Metal 上不支持。</li>
+<li>在 DX11+ SM5.0、OpenGL 4.3+、OpenGL ES 3.1+AEP、Vulkan、Metal（不含几何体）和 PS4/XB1 游戏主机上支持。</li>
+</ul>
+
+<p>请注意，所有 OpenGL 类平台（包括移动平台）都被视为“支持着色器模型 3.0”。WP8/WinRT 平台（DX11 功能级别 9.x）被视为仅支持着色器模型 2.5。</p>
+
+<h2>Supported ‘#pragma require’ names</h2>
+
+<p>List of supported feature names for the <code>#pragma require</code> directive:</p>
+
+<ul>
+<li>
+<code>interpolators10</code>: At least 10 vertex-to-fragment interpolators (“varyings”) are available.</li>
+<li>
+<code>interpolators15</code>: At least 15 vertex-to-fragment interpolators (“varyings”) are available.</li>
+<li>
+<code>interpolators32</code>: At least 32 vertex-to-fragment interpolators (“varyings”) are available.</li>
+<li>
+<code>mrt4</code>: Multiple Render Targets, at least 4.</li>
+<li>
+<code>mrt8</code>: Multiple Render Targets, at least 8.</li>
+<li>
+<code>derivatives</code>: Pixel shader derivative instructions (ddx/ddy).</li>
+<li>
+<code>samplelod</code>: Explicit texture LOD sampling (tex2Dlod / SampleLevel).</li>
+<li>
+<code>fragcoord</code>: Pixel location (XY on screen, ZW depth in clip space) input in pixel shader.</li>
+<li>
+<code>integers</code>: Integers are an actual data type, including bit/shift operations.</li>
+<li>
+<code>2darray</code>: 2D texture arrays (Texture2DArray).</li>
+<li>
+<code>cubearray</code>: Cubemap arrays (CubemapArray).</li>
+<li>
+<code>instancing</code>: SV_InstanceID input system value.</li>
+<li>
+<code>geometry</code>: DX10 geometry shaders.</li>
+<li>
+<code>compute</code>: Compute shaders, structured buffers, atomic operations.</li>
+<li>
+<code>randomwrite</code>: “random write” (UAV) textures.</li>
+<li>
+<code>tesshw</code>: GPU support for hardware tessellation, but not necessarily tessellation shader stages (e.g. Metal supports tessellation, but not via shader stages).</li>
+<li>
+<code>tessellation</code>: Tessellation hull/domain shader stages.</li>
+<li>
+<code>msaatex</code>: Ability to access multi-sampled textures (Texture2DMS in HLSL).</li>
+<li>
+<code>sparsetex</code>: Sparse textures with residency info (“Tier2” support in D3D terms; CheckAccessFullyMapped HLSL function). Note that currently this is only implemented on DX11/12.</li>
+<li>
+<code>framebufferfetch</code>: Framebuffer fetch – ability to read input pixel color in the pixel shader.</li>
+</ul>
+
+<p>The broad <code>#pragma target</code> directives are shorthands for the requirements above, and they correspond to:</p>
+
+<ul>
+<li>
+<code>2.5</code>: derivatives</li>
+<li>
+<code>3.0</code>: 2.5 + interpolators10 + samplelod + fragcoord</li>
+<li>
+<code>3.5</code>: 3.0 + interpolators15 + mrt4 + integers + 2darray + instancing</li>
+<li>
+<code>4.0</code>: 3.5 + geometry</li>
+<li>
+<code>5.0</code>: 4.0 + compute + randomwrite + tesshw + tessellation</li>
+<li>
+<code>4.5</code>: 3.5 + compute + randomwrite</li>
+<li>
+<code>4.6</code>: 4.0 + cubearray + tesshw + tessellation</li>
+</ul>
+
+<p>Note that in Direct3D terms shader model 4.0 also implies “mrt8”; and shader model 5.0 implies “interpolators32” and “cubearray”. However, these are not guaranteed to be available on many mobile platforms. So for backwards compatibility with existing shaders, writing #pragma target 4.0 does not automatically require 8 MRTs support; and writing #pragma target 5.0 does not require 32 interpolators nor cubemap arrays.</p>
+
+<h2>另请参阅</h2>
+
+<ul>
+<li>
+<a href="SL-ShaderPrograms.html">编写着色器程序</a>。</li>
+<li>
+<a href="SL-SurfaceShaders.html">表面着色器</a>。</li>
+</ul>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–03–20 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li><span class="page-history">在 Unity <a href="https://docs.unity3d.com/2018.1/Documentation/Manual/30_search.html?q=newin20181">2018.1</a> 中添加了着色器 #pragma 指令 <span class="search-words">NewIn20181</span></span></li>
+<li><span class="page-history">在 2018.1 版中添加了__Metal 曲面细分__</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-ShadingLanguage.html"></a></span><div class="tip">Unity 中使用的着色语言</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-DataTypesAndPrecision.html"></a></span><div class="tip">着色器数据类型和精度</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

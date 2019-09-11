@@ -1,0 +1,231 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="立体混响声音频 - Unity Manual">
+<title>立体混响声音频 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/AmbisonicAudioSettings.png">
+<meta name="description" content="本页面介绍如何播放立体混响声以及对音频插件接口进行了哪些更改来支持立体混响声音频解码器。">
+<meta property="og:description" content="本页面介绍如何播放立体混响声以及对音频插件接口进行了哪些更改来支持立体混响声音频解码器。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'AmbisonicAudio';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AmbisonicAudio.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AmbisonicAudio.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AmbisonicAudio.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AmbisonicAudio.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AmbisonicAudio.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AmbisonicAudio.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AmbisonicAudio.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AmbisonicAudio.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AmbisonicAudio.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AmbisonicAudio.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/AmbisonicAudio.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/AmbisonicAudio.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/AmbisonicAudio.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/AmbisonicAudio.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AmbisonicAudio.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AmbisonicAudio.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AmbisonicAudio.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AmbisonicAudio.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AmbisonicAudio.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AmbisonicAudio.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AmbisonicAudio.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AmbisonicAudio.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AmbisonicAudio.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AmbisonicAudio.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Audio.html">音频</a></li>
+<li>立体混响声音频</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AudioProfiler.html"></a></span><div class="tip">音频性能分析器</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-AudioClip.html"></a></span><div class="tip">音频剪辑</div>
+</div>
+</div></div>
+<h1>立体混响声音频</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>简介</h2>
+
+<p>本页面介绍如何播放立体混响声以及对音频插件接口进行了哪些更改来支持立体混响声音频解码器。</p>
+
+<p>立体混响声以多声道格式存储。立体混响声以更加通用的方法来表示声场，而不是映射到特定扬声器的每个声道。因此，可根据监听器的方位（即用户头部在 XR 中的旋转）来旋转声场。声场也可以解码为与扬声器设置相匹配的格式。立体混响声通常与 360 度视频结合使用，也可用作遥远环境声的音频天空盒。</p>
+
+<h2>选择立体混响声音频解码器</h2>
+
+<p>Navigate to the project’s <a href="class-AudioManager.html">Audio</a> settings (main menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Audio</strong> category). Select an ambisonic decoder from the list of available decoders in the project. There are no built-in decoders that ship with Unity 2017.1, but Google and Oculus each provide one in their audio SDKs for Unity.</p>
+
+<figure>
+<img src="../uploads/Main/AmbisonicAudioSettings.png" alt="Ambisonic options in the Audio settings">
+<figcaption>Ambisonic options in the Audio settings</figcaption>
+</figure>
+
+<h2>导入立体混响声音频剪辑</h2>
+
+<p>按照正常操作导入多声道 WAV 文件。在音频剪辑的 Inspector 窗口中，选中新立体混响声的复选框。WAV 文件应为 B 格式（按照 ACN 组件排序并采用 SN3D 标准化）。</p>
+
+<figure>
+<img src="../uploads/Main/AmbisonicAudioClipInspector.png" alt="音频剪辑 Inspector 中的 Ambisonic 复选框">
+<figcaption>音频剪辑 Inspector 中的 Ambisonic 复选框</figcaption>
+</figure>
+
+<h2>通过音频源播放立体混响声音频剪辑</h2>
+
+<p>与播放任何其他音频剪辑一样，立体混响声音频剪辑通过音频源进行播放。在播放立体混响声剪辑时，首先会解压缩剪辑（如果需要），然后通过立体混响声解码器发送以将其转换为项目的选定扬声器模式，然后通过音频源的效果发送。</p>
+
+<p>在音频源属性方面，需要注意以下几点：</p>
+
+<ul>
+<li><p>将 spatialize 属性设置为 false。在播放某个立体混响声音频剪辑时，该剪辑会自动通过项目的选定立体混响声音频解码器来发送。解码器将剪辑从立体混响声格式转换为项目的选定扬声器格式。在此解码操作过程中，解码器还根据音频源和音频监听器的方位来处理空间定位问题。</p></li>
+<li><p>与空间定位的音频源一样，立体混响声音频剪辑也将禁用混响区。</p></li>
+</ul>
+
+<h2>音频插件接口更改</h2>
+
+<p>对于插件开发者，请首先阅读 Unity 手册以了解原生音频插件 SDK 和空间音响 SDK，并下载音频插件 SDK：</p>
+
+<p><a href="https://docs.unity3d.com/Manual/AudioMixerNativeAudioPlugin.html">https://docs.unity3d.com/Manual/AudioMixerNativeAudioPlugin.html</a></p>
+
+<p><a href="https://docs.unity3d.com/Manual/AudioSpatializerSDK.html">https://docs.unity3d.com/Manual/AudioSpatializerSDK.html</a></p>
+
+<p><a href="https://bitbucket.org/Unity-Technologies/nativeaudioplugins">https://bitbucket.org/Unity-Technologies/nativeaudioplugins</a></p>
+
+<p>There are two changes to AudioPluginInterface.h for ambisonic audio decoders. First, there is a new effect definition flag: UnityAudioEffectDefinitionFlags_IsAmbisonicDecoder. Ambisonic decoders should set this flag in the definition bit-field of the effect. During the plugin scanning phase, this flag notifies Unity that this effect is an ambisonic decoder and it will then show up as an option in the <strong>Audio</strong> settings’s list of ambisonic decoders.</p>
+
+<p>其次，有一个新的 UnityAudioAmbisonicData 结构会传递到立体混响声解码器，此结构与传递到空间音响的 UnityAudioSpatializerData 结构非常类似，但新增了一个 ambisonicOutChannels 整数。此字段将设置为 DefaultSpeakerMode 的声道数。立体混响声解码器放在音频管线中非常靠前的位置，在此位置将以剪辑的声道数运行，因此 ambisonicOutChannels 可告知插件将实际使用多少个输出声道。</p>
+
+<p>如果我们要播放一阶立体混响声音频剪辑（4 个声道），但我们的扬声器模式是立体声（2 个声道），则为立体混响声解码器的进程回调传入的输入和输出声道数将为 4。ambisonicOutChannels 字段将设置为 2。在这种常见情况下，插件应将其空间定位数据输出到前 2 个声道，并将另外 2 个声道清零。</p>
+
+<p>2017.1 版本中的 Unity 立体混响声源框架可以支持一阶和二阶立体混响声。插件接口包含用于支持双耳立体声、四声道、5.1 和 7.1 输出的信息，但支持级别实际取决于插件。最初，立体混响声解码器插件预计仅支持一阶立体混响声源和双耳立体声输出。</p>
+
+<p>当前框架中未提供特定于不同立体混响声格式的任何内容。如果剪辑的格式与立体混响声解码器插件的预期格式相匹配，应该会一切正常。但我们的当前计划是，Unity 的首选立体混响声格式是 B 格式（按照 ACN 组件排序并采用 SN3D 标准化）。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2017–08–10 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li><span class="page-history">Unity <a href="https://docs.unity3d.com/2017.1/Documentation/Manual/30_search.html?q=newin20171">2017.1</a> 中的新功能 <span class="search-words">NewIn20171</span></span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AudioProfiler.html"></a></span><div class="tip">音频性能分析器</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-AudioClip.html"></a></span><div class="tip">音频剪辑</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Segment Builder  - Unity Manual">
+<title>Segment Builder  - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/UnityAnalyticsSegmentBuilder1.png">
+<meta name="description" content="细分段是指玩家群体的子集，按照主要差异因素（如国家/地区、平台、经验级别或消费模式）进行划分。在 Segment Builder 页面上可以查看现有细分段和创建新的细分段。">
+<meta property="og:description" content="细分段是指玩家群体的子集，按照主要差异因素（如国家/地区、平台、经验级别或消费模式）进行划分。在 Segment Builder 页面上可以查看现有细分段和创建新的细分段。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UnityAnalyticsSegmentBuilder';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityAnalyticsSegmentBuilder.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityAnalyticsSegmentBuilder.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityAnalyticsSegmentBuilder.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityAnalyticsSegmentBuilder.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityAnalyticsSegmentBuilder.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityAnalyticsSegmentBuilder.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityAnalyticsSegmentBuilder.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityAnalyticsSegmentBuilder.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityAnalyticsSegmentBuilder.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityAnalyticsSegmentBuilder.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UnityAnalyticsSegmentBuilder.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UnityAnalyticsSegmentBuilder.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UnityAnalyticsSegmentBuilder.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UnityAnalyticsSegmentBuilder.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityAnalyticsSegmentBuilder.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityAnalyticsSegmentBuilder.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityAnalyticsSegmentBuilder.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityAnalyticsSegmentBuilder.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityAnalyticsSegmentBuilder.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityAnalyticsSegmentBuilder.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityAnalyticsSegmentBuilder.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityAnalyticsSegmentBuilder.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityAnalyticsSegmentBuilder.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityAnalyticsSegmentBuilder.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="UnityAnalytics.html">Unity Analytics</a></li>
+<li><a href="UnityAnalyticsDashboard.html">Analytics Dashboard</a></li>
+<li>Segment Builder </li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsFunnelAnalyzer.html"></a></span><div class="tip">Funnel Analyzer page </div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsDashboardRemoteSettings.html"></a></span><div class="tip">远程设置 (Remote Settings) 页面</div>
+</div>
+</div></div>
+<h1>Segment Builder</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>细分段是指玩家群体的子集，按照主要差异因素（如国家/地区、平台、经验级别或消费模式）进行划分。在 <strong>Segment Builder</strong> 页面上可以查看现有细分段和创建新的细分段。</p>
+
+<p>在 <strong>Data Explorer</strong> 和 <strong>Funnel Analyzer</strong> 中可使用细分段来比较不同细分段之间的指标。例如，如果同时将游戏发布到 Android 和 iOS 平台，可以使用细分段来按平台比较玩家行为。</p>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsSegmentBuilder1.png" alt="在 Data Explorer 中使用细分段来按平台比较 DAU">
+<figcaption>在 Data Explorer 中使用细分段来按平台比较 DAU</figcaption>
+</figure>
+
+<p>Unity Analytics 定义了以下细分段类别：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Life Cycle</strong></td>
+	<td style="text-align:left;">Segments based on the number of calendar days since a player first used your app. These segments are automatically populated based on core analytics events.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Geography</strong></td>
+	<td style="text-align:left;">Segments based on where the player is located in the world. These segments are automatically populated based on analysis of the player’s IP address and other geolocation techniques.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Monetization</strong></td>
+	<td style="text-align:left;">Segments based on a player’s verified in-app purchases (IAP). These segments are automatically populated if you use Unity’s IAP service. Otherwise, you can report verified IAP purchases using the <a href="../ScriptReference/Analytics.Analytics.Transaction.html">Analytics.Transaction function</a>. <br><br> Note that IAP verification is only supported by the Apple App store and Google Play store.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Platform</strong></td>
+	<td style="text-align:left;">Segments based on the player’s platform. These segments are populated automatically based on the Unity build.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Custom</strong></td>
+	<td style="text-align:left;">Any segments you define.</td>
+</tr>
+</tbody>
+</table>
+
+<p>The <strong>Segment Builder</strong> page lists all the existing segments and shows the current segment population.</p>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsSegmentBuilder2.png" alt="The Segment Builder page">
+<figcaption>The Segment Builder page</figcaption>
+</figure>
+
+<p>您可以更改名称或删除现有细分段，但是不能更改规定细分段定义的规则。（要使用不同规则，请新建细分段。）</p>
+
+<h2>新建细分段</h2>
+
+<p>Create your own segments on the <strong>Segment Builder</strong> page of your Analytics dashboard.</p>
+
+<p><strong>重要信息：</strong>Unity Analytics 在处理传入数据时会评估细分段中定义的规则。
+新建细分段时，不会重新评估现有数据。只有在创建细分段后收到的数据才会显示在 <strong>Data Explorer</strong> 和 <strong>Funnel Analyzer</strong> 报告中的该细分段内。</p>
+
+<p>要创建细分段：</p>
+
+<ol>
+<li>On the Analytics dashboard, click the <strong>Segment Builder</strong> page.
+2.单击 <strong>+ New Segment</strong> 按钮。
+<img src="../uploads/Main/UnityAnalyticsSegmentBuilder3.png" alt="">
+3.定义一个或多个规则（传入事件必须满足这些规则，才能将用户包含在此细分段中）。
+4.单击 <strong>Save</strong> 按钮。</li>
+</ol>
+
+<h4>细分段规则</h4>
+
+<p>对于每个自定义细分段，请定义一个或多个规则来确定玩家是否包含在细分段中。一旦将玩家纳入某个自定义细分段，即使没有收到更多合格事件，也会将玩家包含在该细分段中长达 90 天。在设计细分段时，应考虑到玩家无法离开细分段。例如，应避免创建类似“玩过不到 5 个关卡的玩家”这样的细分段。因为玩家不会离开该细分段，所以他们在玩过超过 5 关时仍会被包含在这个细分段内。更好的方法可能是创建类似“玩过 1、2、…、n 个关卡的玩家”这样的一组细分段（采用任何您认为有用的关卡数）。</p>
+
+<p>您可以为一个细分段定义多个规则。您可以合并规则，使玩家加入某个细分段的条件为<strong>所有</strong> (ALL) 规则必须适用、<strong>任意</strong> (ANY) 规则必须适用或者<strong>无</strong> (NONE) 任何规则适用。</p>
+
+<p>规则本身可以源自基于会话的核心 Analytics 事件（类似于标准细分段），也可以基于标准事件和自定义事件。</p>
+
+<h4>核心 Analytics 细分段规则</h4>
+
+<p>标准细分段使用基于核心 Analytics 事件的规则。您可以使用这些相同条件来创建细分段规则，方法是将 <strong>Rule__（规则）类型设置为 </strong>Event__（事件）之外的任何选项。例如，如果需要标准 Android 和 iOS 细分段之外的基于平台的细分段，可以选择规则类型 __User platform is__，然后选择可用平台之一：</p>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsSegmentBuilder4.png" alt="用于定义自定义平台细分段的规则">
+<figcaption>用于定义自定义平台细分段的规则</figcaption>
+</figure>
+
+<p>每种规则类型都有自己的一组选项。</p>
+
+<h4>标准事件和自定义事件细分段规则</h4>
+
+<p>To create a segment based on <strong>Standard</strong> and <strong>Custom Events</strong>, leave the <strong>Rule</strong> type as <strong>Event</strong> and choose the event name from the <strong>Event name</strong> list. Only events that have already been received from your game appear in the list. Thus, before creating event-based segments, you should dispatch at least one instance of the event (which you can do while running your game in the Unity Editor). Remember that events dispatched by your game do not show up in the dashboard for several hours.</p>
+
+<p>除了事件名称，还可以对允许的参数值设置一项或多项限制。如果不指定任何参数限制，则分发事件时使用任何参数值或完全不使用参数也能满足该规则。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–08–29 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">2018–06–04 - Removed Demographics Segments, which are no longer supported.</span></p></li>
+<li><p><span class="page-history">Unity 2017.1 中的新功能</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsFunnelAnalyzer.html"></a></span><div class="tip">Funnel Analyzer page </div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsDashboardRemoteSettings.html"></a></span><div class="tip">远程设置 (Remote Settings) 页面</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

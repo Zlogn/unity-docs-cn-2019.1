@@ -1,0 +1,708 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Unity IAP 小米集成指南 - Unity Manual">
+<title>Unity IAP 小米集成指南 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/SDKSettings.png">
+<meta name="description" content="Unity IAP 为中国境外的开发者提供了一个在中国市场发布应用程序的方便渠道。本指南将介绍 Unity Channel SDK，并描述开发者将 IAP 内容发布到 Xiaomi Mi Game Center 平台的端到端过程。">
+<meta property="og:description" content="Unity IAP 为中国境外的开发者提供了一个在中国市场发布应用程序的方便渠道。本指南将介绍 Unity Channel SDK，并描述开发者将 IAP 内容发布到 Xiaomi Mi Game Center 平台的端到端过程。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UnityIAPXiaomi';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityIAPXiaomi.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityIAPXiaomi.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityIAPXiaomi.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityIAPXiaomi.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityIAPXiaomi.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityIAPXiaomi.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityIAPXiaomi.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityIAPXiaomi.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityIAPXiaomi.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityIAPXiaomi.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UnityIAPXiaomi.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UnityIAPXiaomi.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UnityIAPXiaomi.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UnityIAPXiaomi.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityIAPXiaomi.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityIAPXiaomi.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityIAPXiaomi.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityIAPXiaomi.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityIAPXiaomi.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityIAPXiaomi.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityIAPXiaomi.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityIAPXiaomi.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityIAPXiaomi.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityIAPXiaomi.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="UnityIAP.html">﻿Unity IAP</a></li>
+<li>应用商店指南</li>
+<li>Unity IAP 小米集成指南</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityIAPMoolahMooStore.html"></a></span><div class="tip">CloudMoolah MOO Store</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityIAPXiaomiAPI.html"></a></span><div class="tip">Unity Channel SDK 和 API 扩展</div>
+</div>
+</div></div>
+<h1>Unity IAP 小米集成指南</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>概述</h2>
+
+<p><a href="https://docs.unity3d.com/Manual/UnityIAP.html">Unity IAP</a> 为中国境外的开发者提供了一个在中国市场发布应用程序的方便渠道。本指南将介绍 Unity Channel SDK，并描述开发者将 IAP 内容发布到 <a href="http://app.mi.com/">Xiaomi Mi Game Center</a> 平台的端到端过程。</p>
+
+<p>将游戏发布到 Mi Game Center 的过程分为三个步骤：</p>
+
+<p>1.通过 <a href="https://docs.unity3d.com/Manual/UnityCloudBuild.html">Unity Cloud Build</a> 提交小米配置的游戏包。
+2.在 <a href="https://developer.unity.mi.com/">Xiaomi-Unity Developer Portal</a> 中，填写游戏的商店元数据。
+3.小米批准后发布您的游戏。</p>
+
+<h3>Xiaomi Mi Game Center</h3>
+
+<p>Mi Game Center 是小米的官方 Android 应用商店。用户在此商店中可以搜索、浏览和使用安全支付方法购买小米平台的商品。有关更多信息，请访问 <a href="https://unity3d.com/partners/xiaomi">Unity 的小米合作伙伴站点</a>。</p>
+
+<h3>Unity Channel</h3>
+
+<p><a href="https://docs.unity3d.com/Manual/UnityIAPXiaomiAPI.html">Unity Channel</a> 是 Unity IAP 的一个内部组件，通过简化用户登录、支付管理以及中国政府应用程序分发监管审批过程，帮助中国境外的开发者访问中国应用商店市场。</p>
+
+<p>由于采用了 Unity Channel，Mi Pay（小米支付）的集成过程与 Google Play 及 iTunes 在以下方面存在不同：</p>
+
+<ul>
+<li>小米游戏需要一个 <a href="#ProductCatalog">Unity IAP Catalog</a>。Google Play 和 iTunes 完全支持后端定义的商品。但是，Unity IAP 中内置的小米客户端 SDK 取决于客户端上可用的商品 ID 和元数据。</li>
+<li>Codeless IAP 支持已在计划中，但尚不可用（请查看论坛了解最新消息）。</li>
+<li>在 Unity IAP 初始化期间，商品所有权信息不会返回给客户端。因此，开发者必须通过用户的服务器或在设备本地跟踪用户购买情况。</li>
+</ul>
+
+<h3>要求</h3>
+
+<ul>
+<li>根据设计，Unity Channel SDK 适用于 Unity 2017.1 以上的版本，但也向后兼容 5.3 以上的版本。</li>
+<li>Unity Channel SDK 包含在 <a href="https://assetstore.unity.com/packages/add-ons/services/billing/unity-iap-68207">Unity IAP</a> 1.13.0 以上的版本中。</li>
+<li>小米 IAP 支持服务仅适用于 Android 平台的发布。必须具有相应的 <a href="#AndroidConfigure">Android 和 Java SDK</a>。</li>
+<li>将应用程序发布到小米需要 <a href="https://docs.unity3d.com/Manual/UnityCloudBuild.html">Unity Cloud Build</a> 服务。</li>
+<li>小米目前不支持 <a href="https://docs.unity3d.com/Manual/UnityIAPCodelessIAP.html">Codeless IAP</a> 的实现。</li>
+</ul>
+
+<h2>将项目发布到小米</h2>
+
+<p>本部分介绍通过 Unity Editor 使用 Unity IAP SDK 配置游戏的过程：</p>
+
+<ul>
+<li>设置项目</li>
+<li>将小米应用包添加到项目</li>
+<li>启用 IAP</li>
+<li>创建 IAP Catalog</li>
+</ul>
+
+<h3>设置项目</h3>
+
+<p><a name="AndroidConfigure"></a> </p>
+
+<h4>针对 Android 进行配置</h4>
+
+<p>小米仅支持 Android 平台的发布。针对 Android 进行项目配置的过程分为 4 步。</p>
+
+<p>1.下载并安装 <a href="https://developer.android.com/studio/index.html">Android</a> 和 <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Java</a> SDK。有关更多信息，请参阅有关 <a href="https://docs.unity3d.com/Manual/android-GettingStarted.html">Android 开发入门 (Getting started with Android development)</a> 的文档。
+2. Set the SDK file path targets. In the Unity Editor, go to <strong>Edit</strong> &gt; <strong>Preferences</strong> (Windows) or <strong>Unity</strong> &gt; <strong>Preferences</strong> (Mac) , then select <strong>External Tools</strong> from the left navigation bar. Scroll down to the <strong>Android</strong> section, and set the <strong>SDK</strong> and <strong>JDK</strong> fields to reflect the file paths where you installed the Android and Java SDKs respectively (see image 1.1, below; note that you can select the <strong>Download</strong> buttons next to each field for direct links to each SDK’s download webpage).
+3. Set the application’s Package Name. Xiaomi requires the application’s <strong>Package Name</strong> to follow the “BuildName.mi” convention. Select <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Player</strong> category to open the <strong>Player</strong> settings. Then select the Android tab (see image below) and, under the <strong>Other Settings</strong> panel, navigate to the <strong>Identification</strong> section, and set the <strong>Package Name</strong> field (see image 1.2, below).
+4.将项目发布到 Android。在 Editor 中，选择 <strong>File</strong> &gt; <strong>Build Settings__，然后从菜单中选择 </strong>Android<strong>。选择 </strong>Build__ 可测试 Unity 是否能找到 SDK 并编译项目。</p>
+
+<figure>
+<img src="../uploads/Main/SDKSettings.png" alt="图 1.1：在 Unity Editor 中指定 Android 和 Java SDK 的位置。">
+<figcaption>图 1.1：在 Unity Editor 中指定 Android 和 Java SDK 的位置。</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/PackageNameSettings.png" alt="图 1.2：在 Unity Editor Android 中设置应用程序的包名。">
+<figcaption>图 1.2：在 Unity Editor Android 中设置应用程序的包名。</figcaption>
+</figure>
+
+<p><a name="UnityChannelInstall"></a> </p>
+
+<h4>将小米资源包添加到项目</h4>
+
+<p>In the Editor, enable Unity IAP from the Services window (<strong>Window</strong> &gt; <strong>General</strong> &gt; <strong>Services</strong>; see documentation on <a href="https://docs.unity3d.com/Manual/UnityIAPSettingUp.html">Setting up Unity IAP</a>). Be sure to Import the IAP Asset package when prompted (see image below). As of version 1.13.0, the Unity IAP Asset package includes the Unity Channel and Xiaomi SDKs.</p>
+
+<figure>
+<img src="../uploads/Main/EnablingIAP.jpg" alt="通过 Unity Editor 的 Services 窗口启用 Unity IAP 并导入小米 SDK。">
+<figcaption>通过 Unity Editor 的 Services 窗口启用 Unity IAP 并导入小米 SDK。</figcaption>
+</figure>
+
+<h4>[可选] 独立 SDK</h4>
+
+<p>如果希望在不采用应用内购 (IAP) 的情况下将应用程序发布到 Mi Game Center，请从 Build Settings 窗口 (<strong>File</strong> &gt; <strong>Build Settings</strong>) 中安装小米 Unity Channel 独立 SDK，具体操作是从 <strong>Platform</strong> 菜单中选择 <strong>Android__，然后从出现的 </strong>Xiaomi Game Center__ 菜单选项中选择 <strong>Add</strong>。</p>
+
+<figure>
+<img src="../uploads/Main/StandaloneSDK.png" alt="从 Build Settings 窗口中安装 Unity Channel 独立 SDK。">
+<figcaption>从 Build Settings 窗口中安装 Unity Channel 独立 SDK。</figcaption>
+</figure>
+
+<p><a name="AppStoreSettings"></a> </p>
+
+<h3>应用商店设置</h3>
+
+<p>Unity Channel 包含一个资源，该资源提供用于管理应用商店凭据和测试模式功能的 Editor 界面。导入 Unity IAP 资源包时，此 <strong>AppStoreSettings</strong> 资源会安装到 <em>Assets/Plugins/UnityChannel/XiaomiSupport/Resources</em> 中。此外还可在 Editor 中通过选择 <strong>Assets</strong> &gt; <strong>Create</strong> &gt; <strong>App Store Settings</strong> 来手动创建该资源。选择该资源并查看 Inspector 即可访问这一界面。</p>
+
+<figure>
+<img src="../uploads/Main/AppStoreSettings.jpg" alt="The AppStoreSettings Asset provides a GUI for managing your apps credentials.">
+<figcaption>The AppStoreSettings Asset provides a GUI for managing your app’s credentials.</figcaption>
+</figure>
+
+<p><strong>注意</strong>：__AppStoreSettings__ 资源仅在 Unity 5.6 以上版本中可用。</p>
+
+<p><a name="rsa"></a>
+In order to communicate, the Unity and Xiaomi servers both require unique identifiers for your game. Note that you can retrieve your Unity Client credentials <a href="https://id.unity.com/en/user_clients/settings">here</a> by pasting your Project ID into the search field. Unity 5.3 or 5.4 users must retrieve and set credentials this way, as they cannot access the <strong>AppStoreSettings</strong> Asset. The settings depicted in the image above are described below:</p>
+
+<p>1.<strong>Generate Unity Client</strong> 按钮可填充与项目关联的 Unity 凭据。<br><br> <strong>注意</strong>：生成、加载或更新 Unity 客户端凭据会将联网的请求发送到 Unity 的后端服务器。此操作的进度会显示在控制台日志中。<br><br>
+2.<strong>Client ID</strong> 和 <strong>Client Key</strong> 是通过 Unity IAP 与 Unity Channel 后端及小米后端进行通信的必需字段。Unity Channel 后端将会代理收据验证请求（有关更多信息，请参阅有关 <a href="https://docs.unity3d.com/Manual/UnityIAPValidatingReceipts.html">Unity IAP 接收验证</a>的文档，以及 <a href="https://docs.unity3d.com/Manual/UnityIAPXiaomiAPI.html">Unity Channel SDK</a> 文档的__收据验证和扩展__部分）。
+3.<strong>Client RSA Public Key</strong> 是可选的安全层。使用该字段可接收服务器回调以进行客户端收据验证，或可与 Unity 服务器 API 集成。<br><br> <strong>注意</strong>：__Client Secret__ 是用于实施服务器端验证的另一个可选安全层。<strong>Client Secret</strong> 是随其他凭据一起自动生成的。随时从 <strong>AssetStoreSettings</strong> 资源中选择 <strong>Update Client Secret</strong> 即可刷新它。<br><br>
+4.为游戏服务器提供可选的 <strong>Callback URL</strong> 可接收购买交易数据。
+5.在提交过程中，小米将分发 <strong>App ID</strong>、<strong>App Key</strong> 和 <strong>App Secret</strong> 凭据。在提交最终版本供发布之前，必须将这些凭据保存到应用商店设置 (App Store Settings) 中。
+6.<strong>Test Mode</strong> 是<a href="#TestingIntegration">测试应用程序购买流程</a>和<a href="#XiaomiSubmission">提交到小米</a>的必选字段。</p>
+
+<p>在集成过程的各个位置需要用到这些凭据和测试模式切换开关。请注意，应用商店设置数据会在服务器端更新，而不是保存到客户端。</p>
+
+<h2>实现 IAP</h2>
+
+<h3>启用 Unity IAP 服务</h3>
+
+<p>如果已启用 Unity IAP 来<a href="#UnityChannelInstall">导入小米资源包</a>，则不需要采取任何操作。否则，请参阅有关<a href="https://docs.unity3d.com/Manual/UnityIAPSettingUp.html">设置 Unity IAP</a> 的文档以启用该服务。</p>
+
+<p>此外还可以通过 <a href="https://www.assetstore.unity3d.com/en/#!/content/68207">Unity Asset Store</a> 安装最新的 Unity IAP 插件。</p>
+
+<p><a name="ProductCatalog"></a> </p>
+
+<h3>创建商品目录</h3>
+
+<p>The Xiaomi client SDK built into Unity IAP depends on Product metadata being available in the client. As such, you must define your Products through the Editor’s IAP Catalog GUI (<strong>Window</strong> &gt; <strong>Unity IAP</strong> &gt; <strong>IAP Catalog</strong>). </p>
+
+<figure>
+<img src="../uploads/Main/IAPCatalogGUI.jpg" alt="IAP Catalog 窗口提供了用于编译和导出应用程序商品目录的 GUI。">
+<figcaption>IAP Catalog 窗口提供了用于编译和导出应用程序商品目录的 GUI。</figcaption>
+</figure>
+
+<p>填充目录：
+IAP Catalog GUI 定义了商品及其在游戏客户端运行时的元数据。有关 <a href="https://docs.unity3d.com/Manual/UnityIAPCodelessIAP.html">Codeless IAP</a> 的文档包含了有关通过 IAP Catalog 进行商品配置的信息。小米平台需要特别注意以下商品属性：</p>
+
+<figure>
+<img src="../uploads/Main/CatalogEditor.png" alt="IAP Catalog 编辑器的细分视图。">
+<figcaption>IAP Catalog 编辑器的细分视图。</figcaption>
+</figure>
+
+<p>1.<strong>ID</strong> 是 Mi Game Center 需要的唯一标识符（字符串数据类型）。
+2.<strong>Type</strong> 指示商品的耐用性。小米支持可消耗和非消耗商品类型。它不支持订阅商品类型。
+3.<strong>Descriptions</strong> 部分控制着在 Mi Store 中使用的 <strong>Title</strong> 和 <strong>Description</strong> 文本。必须从 <strong>Locale</strong> 下拉菜单中选择 <strong>Simplified Chinese__（这是目前唯一支持的语言）。
+4.</strong>Pay Configuration__ 控制着商品的价格。Unity Channel SDK 支持小米预定义的中国人民币定价等级，而非任意值。</p>
+
+<p>有关商品属性及其参数的更多信息，请参阅有关<a href="https://docs.unity3d.com/Manual/UnityIAPDefiningProducts.html">定义商品</a>的文档。</p>
+
+<p><a name="ExportCatalog"></a> </p>
+
+<h4>为 Xiaomi Developer Portal 导出目录</h4>
+
+<p>在 Editor 的 IAP Catalog 窗口中，通过选择 <strong>App Store Export</strong> &gt; <strong>Xiaomi Mi Pay Catalog</strong> 来导出目录。</p>
+
+<figure>
+<img src="../uploads/Main/ExportCatalog.png" alt="为 Xiaomi Developer Portal 导出应用程序的商品目录。">
+<figcaption>为 Xiaomi Developer Portal 导出应用程序的商品目录。</figcaption>
+</figure>
+
+<p>将 <em>MiGameProductCatalog.prop</em> 文件导出到所选的位置。将商品目录导入到 <a href="https://developer.unity.mi.com/">Xiaomi Developer Portal</a> 上，具体操作是导航至项目的 <strong>IAP Configuration</strong> 选项卡，然后选择 __Import__（请参阅下面有关<a href="#ImportCatalog">导入 IAP 商品目录</a>的部分）。</p>
+
+<figure>
+<img src="../uploads/Main/ImportCatalog.png" alt="Xiaomi Developer Portal 为其界面读取 MiGameProductCatalog.prop 文件的示例。">
+<figcaption>Xiaomi Developer Portal 为其界面读取 <em>MiGameProductCatalog.prop</em> 文件的示例。</figcaption>
+</figure>
+
+<p>导出 IAP Catalog 还会将 <em>MiGameProductCatalog.prop</em> 文件的副本写入到项目的 <em>Assets/Plugins/Android/assets/</em> 目录（请参阅下图）。Unity IAP 在 IAP Catalog 编辑器中以及在运行时使用此文件。如果未通过 Xiaomi Developer Portal 显式导入任何目录文件，则此目录还会用作应用程序的默认商品目录。</p>
+
+<figure>
+<img src="../uploads/Main/PropFile.png" alt="导出的商品目录。">
+<figcaption>导出的商品目录。</figcaption>
+</figure>
+
+<p><a name="Initialization"></a> </p>
+
+<h3>客户端初始化</h3>
+
+<p>Unity IAP 通常需要一个配置构建器（此构建器使用要为目标应用商店解析的 IAP Catalog 数据），随后需要 Unity IAP <code>Initialize()</code> API（请参阅有关<a href="https://docs.unity3d.com/Manual/UnityIAPInitialization.html">初始化 IAP</a> 的文档）。</p>
+
+<p>小米游戏在初始化 IAP 之前需要一个额外步骤，因为 Mi Game Center 要求应用程序在启动时通过<a href="https://docs.unity3d.com/Manual/UnityIAPXiaomiAPI.html">登录 API</a> 共享其凭据。</p>
+
+<p>修改后的初始化过程变为：</p>
+
+<p>1.初始化 Unity Channel 小米 API。
+2.登录 Unity Channel 小米 API。
+3.通过运行配置构建器实例正常初始化 Unity IAP，然后调用 Unity IAP <code>initialize()</code> API。</p>
+
+<p>应在游戏的运行时生命周期中尽早（最好在启动时）执行这些步骤。您可以在同一脚本中实现它们。</p>
+
+<h4>1.小米登录</h4>
+
+<p>以下示例说明如何使用 Unity Channel SDK 修改初始化以便调用登录 API：</p>
+
+<pre><code>using AppStoreSupport;
+using System;
+using System.Collections;
+using UnityEngine;
+using UnityEngine.Purchasing;
+using UnityEngine.Store;
+
+// 在游戏启动时运行一次脚本。
+public class UnityChannelSample : MonoBehaviour
+{
+    // 小米登录需要一个登录监听器。
+    //通过实现 Unity Channel SDK 中包含的 ILoginListener 抽象类来创建一个登录监听器。
+    class SampleLoginListener : ILoginListener
+    {
+        public Action initializeIAP;
+
+        //步骤 1 成功；调用步骤 2
+        public void OnInitialized()
+        {
+            Debug.Log("Initialization succeeded.");
+            UnityEngine.Store.StoreService.Login(this); // 如果初始化成功，则启动小米登录
+        }
+
+        // 步骤 1 失败；显示错误消息和帮助
+        public void OnInitializeFailed(string message)
+        {
+            Debug.Log("Initialization failed.");
+        }
+
+        // 步骤 2 完成；调用步骤 3
+        public void OnLogin(UserInfo userInfo)
+        {
+            Debug.Log(string.Format("Login successful: userId {0}, userLoginToken {1}, channel {2}", userInfo.userId, userInfo.userLoginToken, userInfo.channel));
+            // 登录成功时，继续初始化 IAP
+initializeIAP(); 
+        }
+
+        // 步骤 2 失败；显示错误消息和帮助
+        public void OnLoginFailed(string message)
+        {
+            Debug.Log("Login failed.");
+        }
+    }
+}
+</code></pre>
+
+<p><strong>注意</strong>：必须使用上述示例代码中的所有函数，这些函数涵盖了登录过程的所有可能步骤。但是，您可以选择每个函数内调用的操作。在该示例中，调试文本取代了调用的操作。该示例中的 OnLogin() 方法用于启动 Unity IAP 初始化函数。</p>
+
+<h4>2.小米初始化</h4>
+
+<p>接下来，使用登录监听器以及存储在 <strong>AppStoreSettings</strong> 资源中的应用程序凭据来初始化小米 API：</p>
+
+<pre><code>    void Awake()
+        {
+            // 根据 SamleLoginListener 类创建一个登录监听器
+            SampleLoginListener loginListener = new SampleLoginListener();
+
+            // 将 initializeIAP 操作（来自 SampleLoginListener 类）关联到一个函数（在下一步中定义）
+            loginListener.initializeIAP = ConfigureIAP;
+
+            // 访问 AppStoreSettings 资源以使用存储的凭据生成 AppInfo。AppStoreSettings 类属于 AppStoreSupport 库的一部分。
+            AppStoreSettings appStoreSettings = Resources.Load&lt;AppStoreSettings&gt;("AppStoreSettings");
+
+            // 使用凭据和登录监听器来初始化小米
+            UnityEngine.Store.StoreService.Initialize(appStoreSettings.getAppInfo(), loginListener);
+        }
+</code></pre>
+
+<p>在加载项目的 <strong>AppStoreSettings</strong> 资源时，<code>getAppInfo()</code> 函数将返回用于 Mi Game Center 商店初始化过程的凭据数据。</p>
+
+<h4>3.Unity IAP 配置构建器和初始化</h4>
+
+<p>最后，使用配置构建器为小米转换 IAP Catalog 中的商品数据，然后<a href="https://docs.unity3d.com/2017.2/Documentation/Manual/UnityIAPInitialization.html">初始化 Unity IAP</a>：</p>
+
+<pre><code>    // 配置构建器需要一个商店监听器。
+        // 通过实现 IStoreListener 抽象类来创建一个商店监听器。
+        class StoreListener : IStoreListener
+        {
+            private IStoreController controller;
+            private IExtensionProvider extensions;
+
+            // 当 Unity IAP 准备好进行购买时调用。
+            public void OnInitialized(IStoreController controller, IExtensionProvider extensions)
+            {
+                this.controller = controller;
+                this.extensions = extensions;
+            }
+
+            //请注意，如果互联网不可用，则不会调用此项；
+            // Unity IAP 会在互联网变为可用状态后尝试进行初始化。
+            public void OnInitializeFailed(InitializationFailureReason error)
+            {
+            }
+
+            //购买完成时或 Unity IAP 遇到不可恢复的初始化错误时调用；
+            // 可能在 OnInitialized() 之后的任何时间调用。
+            public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs e)
+            {
+                return PurchaseProcessingResult.Complete;
+            }
+
+            //购买失败时调用。
+            public void OnPurchaseFailed(Product i, PurchaseFailureReason p)
+            {
+            }
+        }
+
+        //运行配置构建器以定义商品
+        public void ConfigureIAP()
+        {
+            // 加载来自 IAP Catalog 中的商品
+            var module = StandardPurchasingModule.Instance();
+            var builder = ConfigurationBuilder.Instance(module);
+            var catalog = ProductCatalog.LoadDefaultCatalog();
+
+            // 对目录中的商品循环操作，将元数据提取到构建器
+            foreach (var product in catalog.allProducts)
+            {
+                if (product.allStoreIDs.Count &gt; 0)
+                {
+                    var ids = new IDs();
+                    foreach (var storeID in product.allStoreIDs)
+                    {
+                        ids.Add(storeID.id, storeID.store);
+                    }
+                    builder.AddProduct(product.id, product.type, ids);
+                }
+                else
+                {
+                    builder.AddProduct(product.id, product.type);
+                }
+            }
+
+            // 根据 StoreListener 类创建商店监听器
+            StoreListener storeListener = new StoreListener();
+
+            // 初始化 Unity IAP
+            UnityPurchasing.Initialize(storeListener, builder);
+        }
+</code></pre>
+
+<p>配置构建器引用商品 ID (Product IDs) 和商品类型 (Product Types) 来自动填充价格 (Price)、类型 (Type)、名称 (Title) 和描述 (Description) 元数据。它会使用 IAP Catalog 的 <em>IAPProductCatalog.json</em> 文件以及 Unity IAP 初始化过程中实例化的 <code>builder</code> 对象。</p>
+
+<h3>实现 IAP 购买</h3>
+
+<p>有关游戏内购买实现方法的信息，请参阅以下相关文档：</p>
+
+<ul>
+<li><a href="https://docs.unity3d.com/Manual/UnityIAPCodelessIAP.html">Codeless IAP</a></li>
+<li><a href="https://docs.unity3d.com/Manual/UnityIAPInitialization.html">Unity IAP 初始化</a></li>
+<li><a href="https://docs.unity3d.com/Manual/UnityIAPXiaomiAPI.html">Unity Channel SDK</a></li>
+</ul>
+
+<p><a name="TestingIntegration"></a> </p>
+
+<h3>测试集成</h3>
+
+<p>Test your game’s purchase flows on a non-Xiaomi Android device by toggling test mode in the <a href="#AppStoreSettings">AppStoreSettings Asset interface</a>. Unity Channel also provides an API for toggling test mode:</p>
+
+<p><code>AppInfo.debug = true;</code></p>
+
+<p>Unity Channel 包装器包含 <code>AppInfo</code> 类，并将数据传递给小米 SDK。要将应用程序提交给小米，必须启用测试模式。测试模式也会出于测试目的而绕过信用卡要求。启用测试模式后，应编译项目并从 Android 设备启动生成的 APK 文件。</p>
+
+<p>要测试实际购买情况，请将测试模式设置为 false 并在小米设备上进行测试。请注意，实际购买时要求具有 <a href="https://account.xiaomi.com">Xiaomi Mi Pay 帐户</a>和适当的货币（如人民币）。</p>
+
+<p><a name="XiaomiSubmission"></a> </p>
+
+<h2>提交给小米</h2>
+
+<p>本部分介绍通过 Unity Editor 使用 Unity IAP SDK 提交游戏的过程：</p>
+
+<p>1.设置 IAP 目标
+2.测试 IAP 集成
+3.注册应用程序
+4.将游戏推送到 Xiaomi Portal</p>
+
+<h3>设置 IAP 目标</h3>
+
+<p>In the Unity Editor, set Unity IAP to target Mi Game Pay by selecting <strong>Window</strong> &gt; <strong>Unity IAP</strong> &gt; <strong>Android</strong> &gt; <strong>Target Xiaomi Mi Game Pay</strong>. This enables Xiaomi for the next build of the game’s APK. It also creates the configuration file that informs Unity IAP at runtime to use the Xiaomi Mi Pay native billing API.</p>
+
+<figure>
+<img src="../uploads/Main/TargetXiaomi.jpg" alt="设置 Unity IAP 以便在下一次发布应用程序时以 Xiaomi Mi Game Pay 为目标。">
+<figcaption>设置 Unity IAP 以便在下一次发布应用程序时以 Xiaomi Mi Game Pay 为目标。</figcaption>
+</figure>
+
+<h3>将项目推送到 Xiaomi Developer Portal</h3>
+
+<p>在推送到小米之前，应对游戏进行试编译：在本地进行编译或者在 Unity Cloud Build 中将项目配置为 Android 编译目标后再进行编译（请参阅有关 <a href="https://docs.unity3d.com/Manual/UnityCloudBuild.html">Cloud Build</a> 的文档）。</p>
+
+<p>在 Editor 中通过 Unity Services 窗口启用 Cloud Build（请参阅有关 <a href="https://developer.cloud.unity3d.com/support/">Cloud Build 实现</a>的文档）。</p>
+
+<h4>上传编译文件</h4>
+
+<p>使用以下两种方法之一将编译文件上传到项目的编译历史记录：</p>
+
+<p><strong>通过 Editor</strong>：</p>
+
+<p>1.在 Cloud Build Services 窗口中，选择 <strong>Manage Target Builds</strong> &gt; <strong>Add New Target</strong>。
+2.在 <strong>TARGET SETUP</strong> 菜单中，将 <strong>PLATFORM</strong> 字段设置为 <strong>Android</strong> 并输入有用的 <strong>TARGET LABEL</strong>。然后，选择 <strong>Next: Save</strong>。
+3.选择 __Start Cloud Build__，然后选择刚才创建的目标编译文件。</p>
+
+<figure>
+<img src="../uploads/Main/CloudUpload.png" alt="通过 Editor 上传 Cloud Build。">
+<figcaption>通过 Editor 上传 Cloud Build。</figcaption>
+</figure>
+
+<p><strong>通过 <a href="https://developer.cloud.unity3d.com/build">Unity Cloud Build 开发者控制面板 (Developer Dashboard)</a>：</strong></p>
+
+<p>1.导航至项目的 <strong>Cloud Build History</strong>。
+2.选择 __Upload__，然后选择在 Editor 中编译的 APK 文件。</p>
+
+<figure>
+<img src="../uploads/Main/DashUpload.png" alt="通过开发者控制面板 (Developer Dashboard) 上传 Cloud Build。">
+<figcaption>通过开发者控制面板 (Developer Dashboard) 上传 Cloud Build。</figcaption>
+</figure>
+
+<h4>将编译文件推送到小米</h4>
+
+<p>使用以下两种方法之一将托管的编译文件推送到 Xiaomi Developer Portal：</p>
+
+<p><strong>通过 Editor：</strong></p>
+
+<p>在 Cloud Build Services 窗口中，根据编译历史记录时间轴找到所需的编译文件，然后选择 <strong>Push to Xiaomi</strong>。确认想要推送，然后确认操作完成。</p>
+
+<figure>
+<img src="../uploads/Main/EditorPush.png" alt="通过 Editor 将托管的编译文件推送到 Xiaomi Developer Portal。">
+<figcaption>通过 Editor 将托管的编译文件推送到 Xiaomi Developer Portal。</figcaption>
+</figure>
+
+<p><strong>通过 <a href="https://developer.cloud.unity3d.com/build">Unity Cloud Build 开发者控制面板 (Developer Dashboard)</a>：</strong></p>
+
+<p>1.导航至项目的 <strong>Cloud Build History</strong>。
+2.选择 <strong>Download .APK file__，然后从下拉菜单中选择 </strong>Push to Xiaomi__。</p>
+
+<figure>
+<img src="../uploads/Main/DashPush.png" alt="通过 Unity 开发者控制面板 (Developer Dashboard) 将托管的编译文件推送到 Xiaomi Developer Portal。">
+<figcaption>通过 Unity 开发者控制面板 (Developer Dashboard) 将托管的编译文件推送到 Xiaomi Developer Portal。</figcaption>
+</figure>
+
+<p><strong>注意</strong>：只有项目所在组织的所有者才能将项目部署到小米。</p>
+
+<h3>在 Xiaomi Developer Portal 中配置游戏</h3>
+
+<p>您的 UDN 凭据可授权访问在 <a href="https://developer.unity.mi.com/">Xiaomi Unity Developer Portal</a> 中上传的项目。首次登录时，必须先确认小米的条款和条件，然后再继续进入 <strong>Projects</strong> 列表。找到想要提交的项目。该项目的状态（下面突出显示处）最初显示为 <strong>Version1.0: Draft</strong>。选择剪贴板图标可查看项目全程状态变化的提交日志。选择状态链接可展开项目的元数据详细信息。</p>
+
+<figure>
+<img src="../uploads/Main/XiaomiProjects.png" alt="您在 Xiaomi Developer Portal 中的 Projects 列表。">
+<figcaption>您在 Xiaomi Developer Portal 中的 Projects 列表。</figcaption>
+</figure>
+
+<p>下图显示了详细信息：</p>
+
+<figure>
+<img src="../uploads/Main/XiaomiProjectDetails.png" alt="项目在 Xiaomi Developer Portal 中展开的商店元数据。">
+<figcaption>项目在 Xiaomi Developer Portal 中展开的商店元数据。</figcaption>
+</figure>
+
+<h4>1.基本信息 (Basic Information)</h4>
+
+<p>本部分包含要在 Mi Game Center 显示的文本。</p>
+
+<ul>
+<li>
+<strong>Game Name</strong> 是应用程序的英文名称。小米将以人工方式将英文名称翻译为中文以适应面向客户的应用商店。</li>
+<li>
+<strong>Name of Developer</strong> 是面向客户的发布者名称。</li>
+<li>
+<strong>Game Introduction</strong> 是应用程序的英文介绍。请注意，小米将以人工方式将英文名称翻译为中文以适应面向客户的应用商店。</li>
+<li>
+<strong>Email</strong> 是小米应该用于发起反馈的开发者联系信息。</li>
+</ul>
+
+<h4>2.目标设备 (Target Device)</h4>
+
+<p>本部分包含在 Mi Game Center 显示的适用于手机和平板电脑设备的营销资源。请注意以下原则：</p>
+
+<ul>
+<li>必须为所选的每种设备类型至少上传 3 张图像。</li>
+<li>图像尺寸必须为 1080 x 720 像素（横向）或 720 x 1080 像素（纵向）。</li>
+</ul>
+
+<h3>提交供审查</h3>
+
+<p>准备好后，请选择 <strong>Submit</strong> 以将游戏提交给小米供审查。项目的状态标识变为 <strong>In review</strong>。当项目处于审查状态时，无法编辑其详细信息。展开项目再选择 <strong>Cancel</strong> 即可取消审查并修改项目的详细信息。</p>
+
+<h4>区域性合规</h4>
+
+<p>您需要有 ISBN 出版许可证才能发布应用程序。小米为您通过中国国家新闻出版广电总局 (SAPPRFT) 的 ISBN 审批流程提供全面的支持。</p>
+
+<p>小米不保证 SAPPRFT 会批准所有游戏（请参阅 <a href="http://www.miit.gov.cn/n1146290/n4388791/c4638978/content.html">SAPPRFT 提交指南</a>）。为了满足应用商店和国家合规规则，您可能需要对游戏进行一些更改。</p>
+
+<h4>顺利通过审批流程的内容准则</h4>
+
+<p>提交中国政府审批时，请注意以下提示：</p>
+
+<ul>
+<li>避免以不尊重的方式描绘中国国家地标和象征（例如中国国旗或长城）。</li>
+<li>避免全面描绘中国的国家政治、历史、冲突或宗教。</li>
+<li>在游戏世界中创建地图和区域时，请避免定义与中国现有地缘政治和边界相冲突的地区。</li>
+<li>避免描绘任何形式的赌博和赌博机制。</li>
+<li>中国对成人内容有严格的限制。避免描绘裸体、逼真暴力和吸毒。</li>
+<li>避免描绘未成年人参与任何非法活动，如未成年人饮酒和吸烟。</li>
+</ul>
+
+<p><a name="ImportCatalog"></a> </p>
+
+<h4>导入 IAP 商品目录</h4>
+
+<p>在完成提交之前，请按照以下步骤确保小米拥有最新的 IAP 商品目录：</p>
+
+<p>1.选择项目，然后从左侧导航栏中选择 <strong>IAP Configuration</strong>。
+2.选择 <strong>Import</strong>。
+3.导入您<a href="#ExportCatalog">从项目中导出</a>的 <em>MiGameProductCatalog.prop</em> 文件。
+4.验证目录的内容，然后选择 <strong>Confirm</strong>。
+5.随后将显示导入商品的列表。选择 <strong>Submit</strong> 即可提交该目录。</p>
+
+<figure>
+<img src="../uploads/Main/XiaomiCatalogImport.png" alt="将 IAP Catalog 导入到 Xiaomi Developer Portal。">
+<figcaption>将 IAP Catalog 导入到 Xiaomi Developer Portal。</figcaption>
+</figure>
+
+<h2>发布到 Mi Game Center</h2>
+
+<h3>凭据</h3>
+
+<p>当小米表示批准时，项目状态将变为 <strong>Approved</strong> 并收到以下凭据：</p>
+
+<ul>
+<li><strong>App ID</strong></li>
+<li><strong>App Key</strong></li>
+<li><strong>App Secret</strong></li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/ApprovedProject.png" alt="Xiaomi Developer Portal 上已批准的项目。">
+<figcaption>Xiaomi Developer Portal 上已批准的项目。</figcaption>
+</figure>
+
+<p>Enter these credential values in the <a href="#AppStoreSettings">AppStoreSettings Asset</a> or <a href="#Initialization">initialization script</a>, then set <a href="#AppStoreSettings">test mode</a> to <code>false</code>. Create a new build of your game, and push this build to Xiaomi as before.</p>
+
+<p>小米通过电子邮件提供一份开发者合同。一旦您签订合同，小米便会推动政府审批程序。当游戏收到 ISBN 许可证并获准发布到 Mi Game Center 时，小米会通知您。</p>
+
+<p>小米的内容审查过程通常需要 1–2 个工作日（除非小米建议更改游戏内容）。不过，政府审批程序和许可证分发过程可能需要 4–8 个月的时间。有关审查过程的更多信息，请参阅 <a href="https://unity3d.com/partners/xiaomi">Unity-Xiaomi 合作伙伴页面</a>的<strong>常见问题解答 (FAQ)</strong> 部分。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityIAPMoolahMooStore.html"></a></span><div class="tip">CloudMoolah MOO Store</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityIAPXiaomiAPI.html"></a></span><div class="tip">Unity Channel SDK 和 API 扩展</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

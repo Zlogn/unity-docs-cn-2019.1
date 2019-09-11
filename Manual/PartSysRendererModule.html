@@ -1,0 +1,405 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Renderer 模块 - Unity Manual">
+<title>Renderer 模块 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/PartSysRendererModule-0.png">
+<meta name="description" content="Renderer 模块的设置决定了粒子的图像或网格如何被其他粒子变换、着色和过度绘制。">
+<meta property="og:description" content="Renderer 模块的设置决定了粒子的图像或网格如何被其他粒子变换、着色和过度绘制。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'PartSysRendererModule';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PartSysRendererModule.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PartSysRendererModule.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PartSysRendererModule.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PartSysRendererModule.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PartSysRendererModule.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PartSysRendererModule.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PartSysRendererModule.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PartSysRendererModule.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PartSysRendererModule.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PartSysRendererModule.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/PartSysRendererModule.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/PartSysRendererModule.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/PartSysRendererModule.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/PartSysRendererModule.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PartSysRendererModule.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PartSysRendererModule.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PartSysRendererModule.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PartSysRendererModule.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PartSysRendererModule.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PartSysRendererModule.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PartSysRendererModule.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PartSysRendererModule.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PartSysRendererModule.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PartSysRendererModule.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="PartSysReference.html">粒子系统参考</a></li>
+<li><a href="ParticleSystemModules.html">粒子系统模块</a></li>
+<li>Renderer 模块</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PartSysCustomDataModule.html"></a></span><div class="tip">Custom Data 模块</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-ParticleSystemForceField.html"></a></span><div class="tip">Particle System Force Field</div>
+</div>
+</div></div>
+<h1>Renderer 模块</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Renderer 模块的设置决定了粒子的图像或<a href="class-Mesh.html">网格</a>如何被其他粒子变换、着色和过度绘制。</p>
+
+<figure>
+<img src="../uploads/Main/PartSysRendererModule-0.png" alt="">
+</figure>
+
+<h2>属性</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Render Mode</strong></td>
+	<td style="text-align:left;">如何从图形图像（或网格）生成渲染图像。请参阅下面的<a href="#Details">详细信息</a>以了解更多信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Billboard</td>
+	<td style="text-align:left;">粒子始终面向摄像机。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Stretched Billboard</td>
+	<td style="text-align:left;">粒子面向摄像机，但会应用各种缩放（见下文）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        Camera Scale</td>
+	<td style="text-align:left;">根据摄像机运动拉伸粒子。将此值设置为 0 可禁用摄像机运动拉伸。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        Velocity Scale</td>
+	<td style="text-align:left;">根据粒子速度按比例拉伸粒子。将此值设置为 0 可禁用基于速度的拉伸。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        Length Scale</td>
+	<td style="text-align:left;">沿着粒子的速度方向根据粒子当前大小按比例拉伸粒子。将此值设置为 0 会使粒子消失，相当于 0 长度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Horizontal Billboard</td>
+	<td style="text-align:left;">粒子平面与 XZ“地板”平面平行。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Vertical Billboard</td>
+	<td style="text-align:left;">粒子在世界 Y 轴上直立，但转向面向摄像机。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Mesh</td>
+	<td style="text-align:left;">从 3D 网格而非从纹理渲染粒子。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    None</td>
+	<td style="text-align:left;">使用 <a href="PartSysTrailsModule.html">Trails</a> 模块时，如果只想渲染轨迹并隐藏默认渲染，则可使用此属性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Normal Direction</strong></td>
+	<td style="text-align:left;">用于粒子图形的光照法线的偏差。值为 1.0 表示法线指向摄像机，而值为 0.0 表示法线指向屏幕中心（仅限公告牌模式）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Material</strong></td>
+	<td style="text-align:left;">用于渲染粒子的材质。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Trail Material</strong></td>
+	<td style="text-align:left;">用于渲染粒子轨迹的材质。仅当启用了 <strong>Trails</strong> 模块时，此选项才可用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Sort Mode</strong></td>
+	<td style="text-align:left;">绘制粒子（因此覆盖粒子）的顺序。可能的值为 <strong>By Distance (from the Camera)</strong>、<strong>Oldest in Front</strong> 和 <strong>Youngest in Front</strong>。系统中的每个粒子都将根据此设置进行排序。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<a name="fudge"></a><strong>Sorting Fudge</strong>
+</td>
+	<td style="text-align:left;">粒子系统排序的偏差。较低的值会增加粒子系统在其他透明游戏对象（包括其他粒子系统）上绘制的相对几率。此设置仅影响整个系统在场景中的显示位置，而不会对系统中的单个粒子执行排序。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Min Particle Size</strong></td>
+	<td style="text-align:left;">最小粒子大小（无论其他设置如何），表示为视口大小的一个比例。请注意，仅当 <strong>Rendering Mode</strong> 设置为 <strong>Billboard</strong> 时，才应用此设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max Particle Size</strong></td>
+	<td style="text-align:left;">最大粒子大小（无论其他设置如何），表示为视口大小的一个比例。请注意，仅当 <strong>Rendering Mode</strong> 设置为 <strong>Billboard</strong> 时，才应用此设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Render Alignment</strong></td>
+	<td style="text-align:left;">使用下拉选单选择粒子公告牌面向的方向。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    View</td>
+	<td style="text-align:left;">粒子面向摄像机平面。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    World</td>
+	<td style="text-align:left;">粒子与世界轴对齐。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Local</td>
+	<td style="text-align:left;">粒子与游戏对象的变换组件对齐。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Facing</td>
+	<td style="text-align:left;">粒子面向摄像机游戏对象的直接位置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Enable GPU Instancing</strong></td>
+	<td style="text-align:left;">控制是否要使用 GPU 实例化来渲染粒子系统。需要使用网格渲染模式并使用兼容的着色器。有关更多详细信息，请参阅<a href="PartSysInstancing.html">粒子网格 GPU 实例化</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Flip</strong></td>
+	<td style="text-align:left;">Mirror a proportion of the particles across the specified axes. A higher value flips more particles.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Allow Roll</strong></td>
+	<td style="text-align:left;">Control whether camera-facing particles can rotate around the Z-axis of the camera. Disabling this can be particularly useful for VR applications, where HMD roll can give undesirable results for Particle Systems.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Pivot</strong></td>
+	<td style="text-align:left;">Modify the central pivot point for rotating particles. The value is a multiplier of the particle size.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Visualize Pivot</strong></td>
+	<td style="text-align:left;">在 Scene 视图中预览粒子轴心点。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Masking</strong></td>
+	<td style="text-align:left;">Set how the particles rendered by the Particle System behave when interacting with a Sprite Mask.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    No Masking</td>
+	<td style="text-align:left;">The Particle System does not interact with any Sprite Masks in the Scene. This is the default option.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Visible Inside Mask</td>
+	<td style="text-align:left;">The particles are visible where the Sprite Mask overlays them, but not outside of it.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Visible Outside Mask</td>
+	<td style="text-align:left;">The particles are visible outside of the Sprite Mask, but not inside it. The Sprite Mask hides the sections of the particles it overlays.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Apply Active Color Space</strong></td>
+	<td style="text-align:left;">When rendering in Linear Color Space, the system converts particle colors from Gamma Space before uploading them to the GPU.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Custom Vertex Streams</strong></td>
+	<td style="text-align:left;">配置材质的顶点着色器中可用的粒子属性。有关更多详细信息，请参阅<a href="PartSysVertexStreams.html">粒子顶点流</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cast Shadows</strong></td>
+	<td style="text-align:left;">如果启用此属性，阴影投射光源照在粒子系统上时将产生阴影。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    On</td>
+	<td style="text-align:left;">选择 <strong>On</strong> 启用阴影。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Off</td>
+	<td style="text-align:left;">选择 <strong>Off</strong> 禁用阴影。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Two-Sided</td>
+	<td style="text-align:left;">选择 <strong>Two Sided</strong> 允许从网格的任一侧投射阴影（这意味着不考虑背面剔除）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Shadows Only</td>
+	<td style="text-align:left;">选择 <strong>Shadows Only</strong> 使阴影可见，但网格本身不可见。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Shadow Bias</strong></td>
+	<td style="text-align:left;">Move the shadows along the direction of the light, in order to remove shadowing artifacts caused by approximating volumes with billboards.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Receive Shadows</strong></td>
+	<td style="text-align:left;">决定阴影是否可投射到粒子上。只有不透明材质才能接受阴影。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Sorting Layer</strong></td>
+	<td style="text-align:left;">渲染器排序图层的名称。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Order in Layer</strong></td>
+	<td style="text-align:left;">此渲染器在排序图层中的顺序。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Light Probes</strong></td>
+	<td style="text-align:left;">基于探针的光照插值模式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Reflection Probes</strong></td>
+	<td style="text-align:left;">如果启用此属性，并且场景中存在反射探针，则会为此游戏对象拾取反射纹理，并将此纹理设置为内置的着色器 uniform 变量。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Anchor Override</strong></td>
+	<td style="text-align:left;">使用<a href="LightProbes.html">光照探针</a>或<a href="ReflectionProbes.html">反射探针</a>系统时用变换来确定插值位置。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Details"> </a> </p>
+
+<h2>详细信息</h2>
+
+<p>The <strong>Render Mode</strong> lets you choose between several 2D Billboard graphic modes and Mesh mode. Using 3D Meshes gives particles extra authenticity when they represent solid GameObjects, such as rocks, and can also improve the sense of volume for clouds, fireballs and liquids. Meshes must be read/write enabled to work on the Particle System. If you assign them in the editor Unity handles this for you but if you want to assign different meshes at runtime you need to handle this setting yourself.</p>
+
+<p>When 2D billboard graphics are used, the different options can be used for a variety of effects:</p>
+
+<p>1.__Billboard 模式__适合用于表示从任何方向看起来大致相同的体积的粒子（例如云）。</p>
+
+<p>2.<strong>Horizontal Billboard</strong> 模式可在粒子覆盖地面时（例如目标指示器和魔法效果）或者是平行于地面飞行或浮动的扁平对象时（例如飞镖）使用。</p>
+
+<p>3.<strong>Vertical Billboard</strong> 模式使每个粒子保持直立并垂直于 XZ 平面，但允许粒子围绕其 y 轴旋转。使用正交摄像机并希望粒子大小保持一致时，此模式可能会有用。</p>
+
+<p>4.<strong>Stretched Billboard</strong> 模式通过与传统动画器使用的“拉伸或挤压”技术类似的方式突出粒子的表观速度。请注意，在 Stretched Billboard 模式下，粒子将看齐面向摄像机，并且还向粒子速度看齐。无论 Velocity Scale 值如何，都会发生此看齐；即使 Velocity Scale 设置为 0，此模式下的粒子仍然向速度看齐。</p>
+
+<p>Normal Direction 可用于在扁平矩形公告牌上创建球形阴影。如果使用的材质将光照应用于粒子，此设置有助于创建 3D 粒子的视觉效果。此设置仅与 Billboard 渲染模式结合使用。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–10–16 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 Unity 2018.1 中添加了 GPU 实例化</span></p></li>
+<li><p><span class="page-history">New particle system options added to Renderer module in <a href="https://docs.unity3d.com/2018.3/Documentation/Manual/30_search.html?q=newin20183">2018.3</a> <span class="search-words">NewIn20183</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PartSysCustomDataModule.html"></a></span><div class="tip">Custom Data 模块</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-ParticleSystemForceField.html"></a></span><div class="tip">Particle System Force Field</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,505 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Camera - Unity Manual">
+<title>Camera - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/InspectorCamera35.png">
+<meta name="description" content="__摄像机__是为玩家捕捉和展示世界的设备。通过自定义和操纵摄像机，您可以让自己的游戏呈现出真正的独特性。在场景中可拥有无限数量的摄像机。这些摄像机可设置为以任何顺序在屏幕上任何位置或仅在屏幕的某些部分进行渲染。">
+<meta property="og:description" content="__摄像机__是为玩家捕捉和展示世界的设备。通过自定义和操纵摄像机，您可以让自己的游戏呈现出真正的独特性。在场景中可拥有无限数量的摄像机。这些摄像机可设置为以任何顺序在屏幕上任何位置或仅在屏幕的某些部分进行渲染。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-Camera';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-Camera.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-Camera.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-Camera.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-Camera.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-Camera.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-Camera.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-Camera.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-Camera.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-Camera.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-Camera.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-Camera.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-Camera.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-Camera.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-Camera.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-Camera.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-Camera.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-Camera.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-Camera.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-Camera.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-Camera.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-Camera.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-Camera.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-Camera.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-Camera.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="CamerasReference.html">摄像机参考</a></li>
+<li>Camera</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="CamerasReference.html"></a></span><div class="tip">摄像机参考</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-FlareLayer.html"></a></span><div class="tip">光晕层 (Flare Layer)</div>
+</div>
+</div></div>
+<h1>Camera</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>__摄像机__是为玩家捕捉和展示世界的设备。通过自定义和操纵摄像机，您可以让自己的游戏呈现出真正的独特性。在场景中可拥有无限数量的摄像机。这些摄像机可设置为以任何顺序在屏幕上任何位置或仅在屏幕的某些部分进行渲染。</p>
+
+<figure>
+<img src="../uploads/Main/InspectorCamera35.png" alt="">
+</figure>
+
+<h2>属性</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Clear Flags</strong></td>
+	<td style="text-align:left;">确定将清除屏幕的哪些部分。使用多个摄像机来绘制不同游戏元素时，这会很方便。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Background</strong></td>
+	<td style="text-align:left;">在绘制视图中的所有元素之后但没有天空盒的情况下，应用于剩余屏幕部分的颜色。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Culling Mask</strong></td>
+	<td style="text-align:left;">包含或忽略要由摄像机渲染的对象层。在检视面板中将层分配到对象。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Projection</strong></td>
+	<td style="text-align:left;">切换摄像机模拟透视的功能。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<em>Perspective</em>
+</td>
+	<td style="text-align:left;">摄像机将以完整透视角度渲染对象。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<em>Orthographic</em>
+</td>
+	<td style="text-align:left;">摄像机将均匀渲染对象，没有透视感。<strong>注意</strong>：在正交模式下不支持延迟渲染。始终使用前向渲染。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Size__（选择 Orthographic 时） |设置为 Orthographic 时摄像机的视口大小。 |
+|</strong>Field of view__（选择 Perspective 时）</td>
+	<td style="text-align:left;">摄像机视角的宽度（以沿着局部 Y 轴的度数为单位）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Physical Camera</strong></td>
+	<td style="text-align:left;">Tick this box to enable the <a href="PhysicalCameras.html">Physical Camera</a> properties for this camera. <br><br> When the Physical Camera properties are enabled, Unity calculates the <strong>Field of View</strong> using the properties that simulate real-world camera attributes: <strong>Focal Length</strong>, <strong>Sensor Size</strong>, and <strong>Lens Shift</strong>. <br><br>Physical Camera properties are not visible in the Inspector until you tick this box.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <em>Focal Length</em>
+</td>
+	<td style="text-align:left;">Set the distance, in millimeters, between the camera sensor and the camera lens.<br><br>Lower values result in a wider <strong>Field of View</strong>, and vice versa. <br><br>When you change this value, Unity automatically updates the <strong>Field of View</strong> property accordingly.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <em>Sensor Type</em>
+</td>
+	<td style="text-align:left;">Specify the real-world camera format you want the camera to simulate. Choose the desired format from the list. <br><br>When you choose a camera format, Unity sets the the <strong>Sensor Size &gt; X</strong> and <strong>Y</strong> properties to the correct values automatically. <br><br>If you change the <strong>Sensor Size</strong> values manually, Unity automatically sets this property to <strong>Custom</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <em>Sensor Size</em>
+</td>
+	<td style="text-align:left;">Set the size, in millimeters, of the camera sensor. <br><br>Unity sets the <strong>X</strong> and <strong>Y</strong> values automatically when you choose the <strong>Sensor Type</strong>. You can enter custom values if needed.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">                <em>X</em>
+</td>
+	<td style="text-align:left;">The width of the sensor.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">                <em>Y</em>
+</td>
+	<td style="text-align:left;">The height of the sensor.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <em>Lens Shift</em>
+</td>
+	<td style="text-align:left;">Shift the lens horizontally or vertically from center. Values are multiples of the sensor size; for example, a shift of 0.5 along the X axis offsets the sensor by half its horizontal size. <br><br>You can use lens shifts to correct distortion that occurs when the camera is at an angle to the subject (for example, converging parallel lines). <br><br>Shift the lens along either axis to make the camera frustum <a href="ObliqueFrustum.html">oblique</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">                <em>X</em>
+</td>
+	<td style="text-align:left;">The horizontal sensor offset.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">                <em>Y</em>
+</td>
+	<td style="text-align:left;">The vertical sensor offset.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <em>Gate Fit</em>
+</td>
+	<td style="text-align:left;">Options for changing the size of the <strong>resolution gate</strong> (size/aspect ratio of the game view) relative to the <strong>film gate</strong> (size/aspect ratio of the Physical Camera sensor). <br><br>For further information about resolution gate and film gate, see documentation on <a href="PhysicalCameras.html">Physical Cameras</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">                <em>Vertical</em>
+</td>
+	<td style="text-align:left;">Fits the resolution gate to the height of the film gate. <br><br>If the sensor aspect ratio is larger than the game view aspect ratio, Unity crops the rendered image at the sides. <br><br>If the sensor aspect ratio is smaller than the game view aspect ratio, Unity overscans the rendered image at the sides. <br><br>When you choose this setting, changing the sensor width (<strong>Sensor Size &gt; X property</strong>) has no effect on the rendered image.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">                <em>Horizontal</em>
+</td>
+	<td style="text-align:left;">Fits the resolution gate to the width of the film gate. <br><br>If the sensor aspect ratio is larger than the game view aspect ratio, Unity overscans the rendered image on the top and bottom. <br><br>If the sensor aspect ratio is smaller than the game view aspect ratio, Unity crops the rendered image on the top and bottom. <br><br>When you choose this setting, changing the sensor height (<strong>Sensor Size &gt; Y</strong> property) has no effect on the rendered image.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">                <em>Fill</em>
+</td>
+	<td style="text-align:left;">Fits the resolution gate to either the width or height of the film gate, whichever is smaller. This crops the rendered image.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">                <em>Overscan</em>
+</td>
+	<td style="text-align:left;">Fits the resolution gate to either the width or height of the film gate, whichever is larger. This overscans the rendered image.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">                <em>None</em>
+</td>
+	<td style="text-align:left;">Ignores the resolution gate and uses the film gate only. This stretches the rendered image to fit the game view aspect ratio.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Clipping Planes</strong></td>
+	<td style="text-align:left;">开始和停止渲染位置到摄像机的距离。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<em>Near</em>
+</td>
+	<td style="text-align:left;">相对于摄像机的最近绘制点。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<em>Far</em>
+</td>
+	<td style="text-align:left;">相对于摄像机的最远绘制点。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Viewport Rect</strong></td>
+	<td style="text-align:left;">通过四个值指示将在屏幕上绘制此摄像机视图的位置。在视口坐标中测量（值为 0–1）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<em>X</em>
+</td>
+	<td style="text-align:left;">绘制摄像机视图的起始水平位置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<em>Y</em>
+</td>
+	<td style="text-align:left;">绘制摄像机视图的起始垂直位置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<em>W_（宽度） |屏幕上摄像机输出的宽度。 |
+|&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;</em>H_（高度）</td>
+	<td style="text-align:left;">屏幕上摄像机输出的高度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Depth</strong></td>
+	<td style="text-align:left;">摄像机在绘制顺序中的位置。具有更大值的摄像机将绘制在具有更小值的摄像机之上。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Rendering Path</strong></td>
+	<td style="text-align:left;">定义摄像机将使用的渲染方法的选项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<em>Use Player Settings</em>
+</td>
+	<td style="text-align:left;">此摄像机将使用 Player Settings 中设置的任何渲染路径 (Rendering Path)。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<em>Vertex Lit</em>
+</td>
+	<td style="text-align:left;">此摄像机渲染的所有对象都将渲染为顶点光照对象。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<em>Forward</em>
+</td>
+	<td style="text-align:left;">每种材质采用一个通道渲染所有对象。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<em>Deferred Lighting</em>
+</td>
+	<td style="text-align:left;">将在没有光照的情况下一次性绘制所有对象，然后在渲染队列末尾一起渲染所有对象的光照。<strong>注意：</strong><em>如果摄像机的投影模式设置为 Orthographic，则会覆盖该值，并且摄像机将始终使用前向渲染。</em>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Target Texture</strong></td>
+	<td style="text-align:left;">引用将包含摄像机视图输出的<a href="class-RenderTexture.html">渲染纹理</a>。设置此引用将禁用此摄像机的渲染到屏幕功能。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Occlusion Culling</strong></td>
+	<td style="text-align:left;">Enables High Dynamic Range rendering for this camera. See <a href="OcclusionCulling.html">Occlusion Culling</a> for details</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Allow HDR</strong></td>
+	<td style="text-align:left;">Enables High Dynamic Range rendering for this camera. See <a href="HDR.html">High Dynamic Range Rendering</a> for details.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Allow MSAA</strong></td>
+	<td style="text-align:left;">Enables multi sample antialiasing for this camera.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Allow Dynamic Resolution</strong></td>
+	<td style="text-align:left;">Enables Dynamic Resolution rendering for this camera. See <a href="DynamicResolution.html">Dynamic Resolution</a> for details.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Target Display</strong></td>
+	<td style="text-align:left;">定义要渲染到的外部设备。值为 1 到 8 之间。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>详细信息</h2>
+
+<p>为了向玩家显示游戏，摄像机至关重要。可对摄像机进行自定义、为其编写脚本或对其进行管控以实现任何可想象的效果。对于拼图游戏，摄像机可保持静态以获得拼图的完整视图。对于第一人称射击游戏，可让摄像机跟随玩家角色，并将其置于角色的视线水平。对于赛车游戏，可能希望让摄像机跟随玩家的车辆。</p>
+
+<p>可创建多个摄像机，并将每个摄像机分配给不同的__深度 (Depth)<strong>。按照从低__深度__到高__深度__的顺序绘制摄像机。换言之，__深度__为 2 的摄像机将绘制在深度为 1 的摄像机之上。您可以调整 </strong>Normalized View Port Rectangle__ 属性的值，从而调整屏幕上摄像机视图的大小和位置。这样就能创建多种迷你视图，如导弹摄像机、地图视图、后视镜等。</p>
+
+<h3>Render path</h3>
+
+<p>Unity supports different rendering paths. You should choose which one you use depending on your game content and target platform / hardware. Different rendering paths have different features and performance characteristics that mostly affect lights and shadows.
+The rendering path used by your Project is chosen in the <strong>Player</strong> settings. Additionally, you can override it for each Camera.</p>
+
+<p>有关渲染路径的更多信息，请查看<a href="RenderingPaths.html">渲染路径</a>页面。</p>
+
+<h3>Clear Flags</h3>
+
+<p>每个摄像机在渲染其视图时都会存储颜色和深度信息。屏幕中未绘制的部分为空，默认情况下将显示天空盒。使用多个摄像机时，每个摄像机都会在缓冲区中存储自己的颜色和深度信息，随着每个摄像机渲染而累积越来越多数据。场景中的任何特定摄像机渲染其视图时，您可以设置 <strong>Clear Flags</strong> 来清除不同的缓冲区信息集合。为此，请选择以下四个选项之一：</p>
+
+<h4>Skybox</h4>
+
+<p>This is the default setting. Any empty portions of the screen will display the current Camera’s skybox. If the current Camera has no skybox set, it will default to the skybox chosen in the <a href="GlobalIllumination.html">Lighting Window</a> (menu: <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong>). It will then fall back to the <strong>Background Color</strong>. Alternatively a <a href="class-Skybox.html">Skybox component</a> can be added to the camera. If you want to create a new Skybox, <a href="HOWTO-UseSkybox.html">you can use this guide</a>.</p>
+
+<h4>Solid color</h4>
+
+<p>屏幕的任何空白部分都将显示当前摄像机的__背景颜色__。</p>
+
+<h4>Depth only</h4>
+
+<p>如果要绘制玩家的枪支而不使其陷入环境中，请设置一个__深度 (Depth)__ 为 0 的摄像机来绘制环境，并设置另一个__深度__为 1 的摄像机来单独绘制武器。将武器摄像机的 <strong>Clear Flags</strong> 设置为 <strong>Depth Only</strong>。这样将在屏幕上保持环境的图形显示，但丢弃有关每个对象在 3D 空间中所处位置的所有信息。绘制枪支时，不透明部分将完全覆盖所绘制的任何对象（无论枪支与墙壁的接近程度如何）。</p>
+
+<figure>
+<img src="../uploads/Main/Camera-ClearFlags.jpg" alt="The gun is drawn last, after clearing the depth buffer of the cameras before it">
+<figcaption>The gun is drawn last, after clearing the depth buffer of the cameras before it</figcaption>
+</figure>
+
+<h4>Don’t clear</h4>
+
+<p>此模式不会清除颜色或深度缓冲区。结果是将每帧绘制在下一帧之上，从而产生涂抹效果。此模式通常不用于游戏，更可能与自定义着色器一起使用。</p>
+
+<p>请注意，在某些 GPU（主要是移动端 GPU）上，不清除屏幕可能会导致其内容在下一帧中未定义。在某些系统上，屏幕可能包含前一帧图像、纯黑色屏幕或随机有色像素。</p>
+
+<h3>裁剪面 (Clip Planes)</h3>
+
+<p><strong>Near</strong> 和 <strong>Far Clip Plane</strong> 属性可确定摄像机视图的开始和结束位置。这些平面垂直于摄像机的方向，并从摄像机位置算起。__近平面__是将要渲染的最近位置，而__远平面__是最远位置。</p>
+
+<p>裁剪面还将确定深度缓冲区精度在场景上的分布情况。一般情况下，为了获得更好的精度，应将__近平面__尽可能移到远处。</p>
+
+<p>注意，近裁剪面和远裁剪面以及由摄像机可视角度定义的平面一起描述了通常所知的摄像机_视椎体_。Unity 确保在渲染对象时不会显示完全位于此视椎体之外的对象。这就是所谓的视椎体剔除 (Frustum Culling)。无论您是否在游戏中使用遮挡剔除 (Occlusion Culling)，都会发生视椎体剔除。</p>
+
+<p>出于性能原因，您可能希望更早剔除小对象。例如，使小石块和碎片不可见的距离可远小于使大型建筑物不可见的距离。为此，可将小对象放入<a href="Layers.html">单独一层</a>，并使用 <a href="../ScriptReference/Camera-layerCullDistances.html">Camera.layerCullDistances</a> 脚本函数来设置每层剔除距离。</p>
+
+<h3>剔除遮罩 (Culling Mask)</h3>
+
+<p>借助__剔除遮罩__，可使用层来选择性渲染对象组。可在<a href="Layers.html">此处</a>找到有关使用层的更多信息。</p>
+
+<h3>标准化视口矩形 (Normalized Viewport Rectangle)</h3>
+
+<p>__标准化视口矩形__专门用于定义将要绘制当前摄像机视图的屏幕特定部分。您可以将地图视图放在屏幕的右下角，或者将导弹尖端视图放置在左上角。通过一些设计工作，即可使用__视口矩形__来创建一些独特行为。</p>
+
+<p>使用__标准化视口矩形__可以轻松创建双玩家分屏效果。创建两个摄像机后，将摄像机的 H 值更改为 0.5，然后将玩家 1 的 Y 值设置为 0.5，将玩家 2 的 Y 值设置为 0。这样，就能使玩家 1 的摄像机显示为屏幕的上半部，而玩家 2 的摄像机显示为屏幕的下半部。</p>
+
+<figure>
+<img src="../uploads/Main/Camera-Viewport.jpg" alt="Two-player display created with the Normalized Viewport Rectangle property">
+<figcaption>Two-player display created with the Normalized Viewport Rectangle property</figcaption>
+</figure>
+
+<h3>正交模式 (Orthographic)</h3>
+
+<p>将摄像机标记为__正交模式__，就会从摄像机视图移除全部透视。此模式最常用于创建等距视图游戏或 2D 游戏。</p>
+
+<p>请注意，雾效在正交摄像机模式下均匀渲染，因此可能无法按预期显示。这是因为后透视空间的 Z 坐标用于雾的“深度”。这对于正交摄像机而言并不是严格准确的，但之所以使用该模式，是因为其在渲染过程中有一定的性能优势。</p>
+
+<figure>
+<img src="../uploads/Main/Camera-Non-Ortho-FPS.jpg" alt="Perspective camera.">
+<figcaption>Perspective camera.</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/Camera-Ortho-FPS.jpg" alt="Orthographic camera. Objects do not get smaller with distance here!">
+<figcaption>Orthographic camera. Objects do not get smaller with distance here!</figcaption>
+</figure>
+
+<h3>渲染纹理 (Render Texture)</h3>
+
+<p>此设置将把摄像机的视图置于<a href="class-RenderTexture.html">纹理</a>上，然后可以将纹理应用于另一对象。如此便可轻松创建运动竞技场视频监视器、监控摄像机和反射等。</p>
+
+<figure>
+<img src="../uploads/Main/Camera-RenderTexture.jpg" alt="A Render Texture used to create a live arena-cam">
+<figcaption>A Render Texture used to create a live arena-cam</figcaption>
+</figure>
+
+<h3>目标显示 (Target display)</h3>
+
+<p>一个摄像机最多可以有 8 种目标显示设置。可控制摄像机来渲染最多 8 种显示之一。仅在 PC、Mac 和 Linux 上支持该功能。在 Game 视图中将显示摄像机检视面板 (Camera Inspector) 中选择的显示方式。</p>
+
+<h2>提示</h2>
+
+<ul>
+<li>可以像任何其他游戏对象一样，将摄像机实例化、父子化和脚本化。</li>
+<li>为了增加赛车游戏的速度感，使用高__视野 (Field of View)__ 值。</li>
+<li>如果添加__刚体__组件，摄像机可用于物理模拟。</li>
+<li>允许在场景中使用的摄像机数量没有限制。</li>
+<li>正交摄像机非常适合制作 3D 用户界面。</li>
+<li>如果遇到深度瑕疵（表面彼此靠近而发生闪烁），请尝试将__近平面 (Near Plane)__ 设置得尽可能大。</li>
+<li>摄像机无法同时渲染到游戏屏幕和渲染纹理，只能渲染一个或另一个。</li>
+<li>可选择将摄像机的视图渲染到纹理（称为 Render-to-Texture）以获得更有趣的效果。</li>
+<li>Unity 会预安装摄像机脚本（位于 <strong>Components &gt; Camera Control</strong> 中）。请尝试使用这些脚本来体验可能的效果。</li>
+<li>
+</ul>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–10–05 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li><span class="page-history">Physical Camera options added in Unity 2018.2</span></li>
+<li><span class="page-history">Gate Fit options added in Unity 2018.3</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="CamerasReference.html"></a></span><div class="tip">摄像机参考</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-FlareLayer.html"></a></span><div class="tip">光晕层 (Flare Layer)</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

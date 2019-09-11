@@ -1,0 +1,307 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="编写顶点和片元着色器 - Unity Manual">
+<title>编写顶点和片元着色器 - Unity Manual</title>
+<meta name="description" content="ShaderLab 着色器不止包含&amp;#8220;硬件着色器&amp;#8221;。它们执行很多操作。它们描述了在材质检视面板中显示的属性，包含用于不同图形硬件的多个着色器实现，配置固定函数硬件状态，等等。实际的可编程着色器（如顶点和片元程序）只是整个 ShaderLab 的&amp;#8220;着色器&amp;#8221;概念的一部分。有关基本介绍，请查看着色器教程。在本文中，我们将低级别硬件着色器称为__着色器程序__。">
+<meta property="og:description" content="ShaderLab 着色器不止包含&amp;#8220;硬件着色器&amp;#8221;。它们执行很多操作。它们描述了在材质检视面板中显示的属性，包含用于不同图形硬件的多个着色器实现，配置固定函数硬件状态，等等。实际的可编程着色器（如顶点和片元程序）只是整个 ShaderLab 的&amp;#8220;着色器&amp;#8221;概念的一部分。有关基本介绍，请查看着色器教程。在本文中，我们将低级别硬件着色器称为__着色器程序__。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'SL-ShaderPrograms';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-ShaderPrograms.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-ShaderPrograms.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-ShaderPrograms.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-ShaderPrograms.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-ShaderPrograms.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-ShaderPrograms.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-ShaderPrograms.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-ShaderPrograms.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-ShaderPrograms.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-ShaderPrograms.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/SL-ShaderPrograms.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/SL-ShaderPrograms.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/SL-ShaderPrograms.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/SL-ShaderPrograms.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-ShaderPrograms.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-ShaderPrograms.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-ShaderPrograms.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-ShaderPrograms.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-ShaderPrograms.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-ShaderPrograms.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-ShaderPrograms.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-ShaderPrograms.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-ShaderPrograms.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-ShaderPrograms.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="SL-Reference.html">着色器参考</a></li>
+<li>编写顶点和片元着色器</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-SurfaceShaderTessellation.html"></a></span><div class="tip">支持 DX11/OpenGL Core 曲面细分的表面着色器</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-VertexFragmentShaderExamples.html"></a></span><div class="tip">顶点和片元着色器示例</div>
+</div>
+</div></div>
+<h1>编写顶点和片元着色器</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><strong>ShaderLab</strong> 着色器不止包含“硬件着色器”。它们执行很多操作。它们描述了在材质检视面板中显示的属性，包含用于不同图形硬件的多个着色器实现，配置固定函数硬件状态，等等。实际的可编程着色器（如顶点和片元程序）只是整个 ShaderLab 的“着色器”概念的一部分。有关基本介绍，请查看<a href="ShaderTut2.html">着色器教程</a>。在本文中，我们将低级别硬件着色器称为__着色器程序__。</p>
+
+<p><strong>如果要编写与光照交互的着色器，请查看<a href="SL-SurfaceShaders.html">表面着色器</a>文档</strong>。如需查看一些示例，请参阅<a href="SL-VertexFragmentShaderExamples.html"><strong>顶点和片元着色器示例</strong></a>。本页的其余部分假设着色器不与 Unity 光源（例如特殊效果、<a href="PostProcessingOverview.html">后期处理效果</a>等等）交互。</p>
+
+<p>着色器程序用 <a href="SL-ShadingLanguage.html">HLSL 语言</a>编写，在着色器文本中嵌入“代码片段”（在 <a href="SL-Pass.html">Pass</a> 命令中的某个位置）。着色器程序通常如下所示：</p>
+
+<pre><code>  Pass {
+        // ...常规通道状态设置 ...
+      
+        CGPROGRAM
+        // 此代码片段的编译指令，例如：
+        #pragma vertex vert
+        #pragma fragment frag
+      
+        // Cg/HLSL 代码本身
+      
+        ENDCG
+        // ...通道设置的剩余部分 ...
+    }
+</code></pre>
+
+<h2>HLSL 代码片段</h2>
+
+<p>HLSL 程序代码片段写入到 <strong>CGPROGRAM</strong> 和 <strong>ENDCG</strong> 关键字之间，或者 <strong>HLSLPROGRAM</strong> 和 <strong>ENDHLSL</strong> 之间。后一种形式<em>不会</em>自动包含 HLSLSupport 和 UnityShaderVariables <a href="SL-BuiltinIncludes.html">内置头文件</a>。</p>
+
+<p>在代码片段的开头，可使用 <strong>#pragma</strong> 语句的形式提供编译指令。以下指令可指示要编译的着色器函数：</p>
+
+<ul>
+<li>
+<strong>#pragma vertex</strong> <em>name</em> - 作为顶点着色器来编译函数 <em>name</em>。</li>
+<li>
+<strong>#pragma fragment</strong> <em>name</em> - 作为片元着色器来编译函数 <em>name</em>。</li>
+<li>
+<strong>#pragma geometry</strong> <em>name</em> - 作为 DX10 几何着色器来编译函数 <em>name</em>。如下所述，设置此选项会自动开启 <strong>#pragma target 4.0</strong>。</li>
+<li>
+<strong>#pragma hull</strong> <em>name</em> - 作为 DX11 外壳着色器来编译函数 <em>name</em>。如下所述，设置此选项会自动开启 <strong>#pragma target 5.0</strong>。</li>
+<li>
+<strong>#pragma domain</strong> <em>name</em> - 作为 DX11 域着色器来编译函数 <em>name</em>。如下所述，设置此选项会自动开启 <strong>#pragma target 5.0</strong>。</li>
+</ul>
+
+<p>其他编译指令：</p>
+
+<ul>
+<li>
+<strong>#pragma target</strong> <em>name</em> - 要编译到的着色器目标。有关详细信息，请参阅<a href="SL-ShaderCompileTargets.html">着色器编译目标</a>页面。</li>
+<li>
+<strong>#pragma require</strong> <em>feature</em> …- 对着色器需要的 GPU 功能进行精细控制，请参阅<a href="SL-ShaderCompileTargets.html">着色器编译目标</a>页面以了解详细信息。</li>
+<li>
+<strong>#pragma only_renderers</strong> <em>空格分隔的名称</em> - 仅为给定的渲染器编译着色器。默认情况下，将为所有渲染器编译着色器。请参阅下文中的_渲染器_以了解详细信息。</li>
+<li>
+<strong>#pragma exclude_renderers</strong> <em>空格分隔的名称</em> - 不为给定渲染器编译着色器。默认情况下，将为所有渲染器编译着色器。请参阅下文中的_渲染器_以了解详细信息。</li>
+<li>
+<strong>#pragma multi_compile …</strong> - for working with <a href="SL-MultipleProgramVariants.html">multiple shader variants</a>. Unused variants of <strong>multi_compile</strong> shaders are included in the game build.</li>
+<li>
+<strong>#pragma multi_compile_local …</strong> - similar to <strong>multi_compile</strong>, but enumerated keywords are local. See <a href="SL-MultipleProgramVariants.html">Making multiple shader program variants: Keyword limits</a> for more information.</li>
+<li>
+<strong>#pragma shader_feature …</strong> - for working with <a href="SL-MultipleProgramVariants.html">multiple shader variants</a>. Unused variants of <strong>shader_feature</strong> shaders are not included in the game build.</li>
+<li>
+<strong>#pragma shader_feature_local …</strong> - similar to <strong>shader_feature</strong>, but enumerated keywords are local. See <a href="SL-MultipleProgramVariants.html">Making multiple shader program variants: Keyword limits</a> for more information.</li>
+<li>
+<strong>#pragma enable_d3d11_debug_symbols</strong> - 为针对 DirectX 11 编译的着色器生成调试信息，这将允许您通过 Visual Studio 2012（或更高版本）图形调试器来调试着色器。</li>
+<li>
+<strong>#pragma hardware_tier_variants</strong> <em>渲染器名称</em> - 为每个可以运行所选渲染器的硬件层生成每个编译着色器的<a href="SL-MultipleProgramVariants.html">多个着色器硬件变体</a>。请参阅下文中的_渲染器_以了解详细信息。</li>
+<li>
+<strong>#pragma hlslcc_bytecode_disassembly</strong> - embed disassembled HLSLcc bytecode into translated shader.</li>
+<li>
+<strong>#pragma disable_fastmath</strong> - enables precise IEEE 754 rules, mostly involving NaN handling (currently only affects Metal platform).</li>
+<li>
+<strong>#pragma glsl_es2</strong> - When set in a GLSL shader, generate a GLSL ES 1.0(OpenGL ES 2.0), even when the shader target is OpenGL ES 3.</li>
+<li>
+<strong>#pragma editor_sync_compilation</strong> - Force synchronous compilation (affects Editor only).</li>
+</ul>
+
+<p>每个代码片段必须至少包含一个顶点程序和一个片元程序。因此，<strong>#pragma vertex</strong> 和 <strong>#pragma fragment</strong> 指令是必需的。</p>
+
+<p>从 Unity 5.0 开始不执行任何操作并且可以安全删除的编译指令：<code>#pragma glsl</code>、<code>#pragma glsl_no_auto_normalization</code>、<code>#pragma profileoption</code> 和 <code>#pragma fragmentoption</code>。</p>
+
+<p>Unity only supports <strong>#pragma</strong> directives in the shader files, and not in the includes.</p>
+
+<h2>渲染平台</h2>
+
+<p>Unity 支持多种渲染 API（例如 Direct3D 11 和 OpenGL），默认情况下，所有着色器程序都编译到所有支持的渲染器中。您可以使用 <strong>#pragma only_renderers</strong> 或 <strong>#pragma exclude_renderers</strong> 指令指示要编译到的渲染器。如果您确信自己显式使用的一些着色器语言功能在某些平台上无法实现，这样做将非常有用。支持的渲染器名称包括：</p>
+
+<ul>
+<li>
+<strong>d3d11</strong> - Direct3D 11/12</li>
+<li>
+<strong>glcore</strong> - OpenGL 3.x/4.x</li>
+<li>
+<strong>gles</strong> - OpenGL ES 2.0</li>
+<li>
+<strong>gles3</strong> - OpenGL ES 3.x</li>
+<li>
+<strong>metal</strong> - iOS/Mac Metal</li>
+<li>
+<strong>vulkan</strong> - Vulkan</li>
+<li>
+<strong>d3d11_9x</strong> - Direct3D 11 9.x 功能级别，通常在 WSA 平台上使用</li>
+<li>
+<strong>xboxone</strong> - Xbox One</li>
+<li>
+<strong>ps4</strong> - PlayStation 4</li>
+<li>
+<strong>n3ds</strong> - Nintendo 3DS</li>
+<li>
+<strong>wiiu</strong> - Nintendo Wii U</li>
+</ul>
+
+<p>例如，以下行仅会将着色器编译到 D3D11 模式：</p>
+
+<pre><code>#pragma only_renderers d3d11
+</code></pre>
+
+<h2>另请参阅</h2>
+
+<ul>
+<li>
+<a href="SL-PropertiesInPrograms.html">访问材质属性</a>。</li>
+<li>
+<a href="SL-MultipleProgramVariants.html">编写多个着色器程序变体</a>。</li>
+<li>
+<a href="SL-ShaderCompileTargets.html">着色器编译目标</a>。</li>
+<li>
+<a href="SL-ShadingLanguage.html">着色语言详细信息</a>。</li>
+<li>
+<a href="SL-BuiltinMacros.html">着色器预处理器宏</a>。</li>
+<li>
+<a href="SL-PlatformDifferences.html">平台特定的渲染差异</a>。</li>
+</ul>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–03–20 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li><span class="page-history">在 Unity 2018.1 中添加了着色器 #pragma 指令</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-SurfaceShaderTessellation.html"></a></span><div class="tip">支持 DX11/OpenGL Core 曲面细分的表面着色器</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-VertexFragmentShaderExamples.html"></a></span><div class="tip">顶点和片元着色器示例</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

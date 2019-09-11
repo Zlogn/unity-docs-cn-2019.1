@@ -1,0 +1,325 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="光晕 - Unity Manual">
+<title>光晕 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/FlareInspector.png">
+<meta name="description" content="光晕 (Flare) 对象是镜头光晕 (Lens Flare) 组件使用的源资源。光晕本身集合了纹理文件和确定光晕行为方式的特定信息。然后，当希望在__场景__中使用光晕时，需要从附加到__游戏对象__的 LensFlare __组件__内部引用特定光晕。">
+<meta property="og:description" content="光晕 (Flare) 对象是镜头光晕 (Lens Flare) 组件使用的源资源。光晕本身集合了纹理文件和确定光晕行为方式的特定信息。然后，当希望在__场景__中使用光晕时，需要从附加到__游戏对象__的 LensFlare __组件__内部引用特定光晕。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-Flare';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-Flare.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-Flare.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-Flare.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-Flare.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-Flare.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-Flare.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-Flare.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-Flare.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-Flare.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-Flare.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-Flare.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-Flare.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-Flare.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-Flare.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-Flare.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-Flare.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-Flare.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-Flare.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-Flare.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-Flare.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-Flare.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-Flare.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-Flare.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-Flare.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="comp-Effects.html">视觉效果参考</a></li>
+<li><a href="class-LensFlare.html">镜头光晕 (Lens Flare)</a></li>
+<li>光晕</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-LensFlare.html"></a></span><div class="tip">镜头光晕 (Lens Flare)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-LineRenderer.html"></a></span><div class="tip">线渲染器 (Line Renderer)</div>
+</div>
+</div></div>
+<h1>光晕</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><strong>光晕 (Flare)</strong> 对象是<a href="class-LensFlare.html">镜头光晕 (Lens Flare) 组件</a>使用的源资源。光晕本身集合了纹理文件和确定光晕行为方式的特定信息。然后，当希望在__场景__中使用光晕时，需要从附加到__游戏对象__的 <strong>LensFlare</strong> __组件__内部引用特定光晕。</p>
+
+<p><a href="AssetTypes.html#Standard">标准资源</a>包中提供一些示例光晕。如果要将其中一个光晕添加到场景中，请将<a href="class-LensFlare.html">镜头光晕 (Lens Flare)</a> 组件附加到游戏对象，然后将要使用的光晕拖动到 Lens Flare 的 <strong>Flare</strong> 属性中，操作方法就像将__材质 (Material)__ 分配给__网格渲染器 (Mesh Renderer)__ 一样。</p>
+
+<figure>
+<img src="../uploads/Main/FlareInspector.png" alt="光晕检视面板 (Flare Inspector)">
+<figcaption>光晕检视面板 (Flare Inspector)</figcaption>
+</figure>
+
+<p>光晕需要包含单个__纹理__上的多个光晕__元素<strong>。在光晕中，可从任何纹理选取要包含的__元素</strong>。</p>
+
+<h2>属性</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Elements</strong></td>
+	<td style="text-align:left;">光晕中包含的光晕图像数量。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>Image Index</strong>
+</td>
+	<td style="text-align:left;">从 <strong>Flare Texture</strong> 为此元素使用哪个光晕图像。请参阅下面的_光晕纹理_部分以了解更多信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>Position</strong>
+</td>
+	<td style="text-align:left;">元素沿着从所属游戏对象的位置到屏幕中心的线路上的偏移量。0 = 游戏对象位置，1 = 屏幕中心。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>Size</strong>
+</td>
+	<td style="text-align:left;">元素的大小。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>Color</strong>
+</td>
+	<td style="text-align:left;">元素的颜色色调。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>Use Light Color</strong>
+</td>
+	<td style="text-align:left;">如果光晕附加在光源上，启用此功能会使用光源的颜色为光晕着色。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>Rotate</strong>
+</td>
+	<td style="text-align:left;">如果启用此属性，元素的底部将始终面向屏幕的中心，使元素随着镜头光晕在屏幕上移动而旋转。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>Zoom</strong>
+</td>
+	<td style="text-align:left;">如果启用此属性，元素将在可见时扩大，而在不可见时再次缩小。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>Fade</strong>
+</td>
+	<td style="text-align:left;">如果启用此属性，元素将在可见时淡入至最高强度，而在不可见时淡出。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Flare Texture</strong></td>
+	<td style="text-align:left;">此纹理包含该光晕的__元素__使用的图像。必须根据 <strong>TextureLayout</strong> 选项之一进行排列。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Texture Layout</strong></td>
+	<td style="text-align:left;">如何在__光晕纹理 (Flare Texture)__ 中布置各个光晕元素图像（有关详细信息，请参阅下面的_纹理布局_）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Use Fog</strong></td>
+	<td style="text-align:left;">如果启用此属性，光晕将伴随着距离雾效消失。此属性通常用于小光晕。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>详细信息</h2>
+
+<p>光晕由多个__元素__组成，沿着一条线排列。这条线是通过比较包含镜头光晕的游戏对象的位置与屏幕的中心来计算得出的。这条线会延伸到所属游戏对象和屏幕中心之外。所有光晕__元素__都在这条线上排成一行。</p>
+
+<h2>光晕纹理</h2>
+
+<p>出于性能原因，一个光晕的所有__元素__必须共享相同的纹理。此纹理包含一组不同的图像，这些图像可用作单个光晕中的元素。<strong>Texture Layout</strong> 定义了__元素__在__光晕纹理__中的布局。</p>
+
+<h2>纹理布局</h2>
+
+<p>下面提供了不同光晕__纹理布局__的选项。图像中的数字对应于每个__元素__的 <strong>Image Index</strong> 属性。</p>
+
+<h3>1 大 4 小</h3>
+
+<figure>
+<img src="../uploads/Main/FlaresLayout0.png" alt="">
+</figure>
+
+<p>专为类似于太阳的大型光晕而设计，这种情况下需要其中一个__元素__比其他元素具有更高的保真度。此布局适用于高度是宽度两倍的纹理。</p>
+
+<h3>1 大 2 中 8 小</h3>
+
+<figure>
+<img src="../uploads/Main/FlaresLayout1.png" alt="">
+</figure>
+
+<p>专为需要 1 个高清图像、2 个中等大小图像和 8 个小图像的复杂光晕而设计。此布局用于标准资源“50mm Zoom Flare”（50mm 缩放光晕），其中有两个中等大小的元素表示彩虹色圆圈。此布局适用于高度是宽度两倍的纹理。</p>
+
+<h3>1 个纹理</h3>
+
+<figure>
+<img src="../uploads/Main/FlaresLayout2.png" alt="">
+</figure>
+
+<p>单个图像。</p>
+
+<h2>2x2 网格</h2>
+
+<figure>
+<img src="../uploads/Main/FlaresLayout3.png" alt="">
+</figure>
+
+<p>一个简单的 2x2 网格。</p>
+
+<h3>3x3 网格</h3>
+
+<figure>
+<img src="../uploads/Main/FlaresLayout4.png" alt="">
+</figure>
+
+<p>一个简单的 3x3 网格。</p>
+
+<h3>4x4 网格</h3>
+
+<figure>
+<img src="../uploads/Main/FlaresLayout5.png" alt="">
+</figure>
+
+<p>一个简单的 4x4 网格。</p>
+
+<h2>提示</h2>
+
+<ul>
+<li>如果使用许多不同的光晕，使用包含所有__元素__的单个__光晕纹理__将带来最佳的渲染性能。</li>
+<li>镜头光晕会被__碰撞体__阻挡。光晕游戏对象和摄像机之间的碰撞体即使没有__网格渲染器__，也会隐藏光晕。如果中间碰撞体被标记为触发器 (Trigger)，当且仅当 <strong>Physics.queriesHitTriggers</strong> 为 true 时，该碰撞体才会阻挡光晕。</li>
+<li>To override the shader used for Flares, open the <a href="class-GraphicsSettings.html">Graphics</a> window and set <strong>Lens Flares</strong> to the shader that you would like to use as the override.</li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-LensFlare.html"></a></span><div class="tip">镜头光晕 (Lens Flare)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-LineRenderer.html"></a></span><div class="tip">线渲染器 (Line Renderer)</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

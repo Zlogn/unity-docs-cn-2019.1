@@ -1,0 +1,227 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Debugging and troubleshooting WebGL builds - Unity Manual">
+<title>Debugging and troubleshooting WebGL builds - Unity Manual</title>
+<meta name="description" content="Visual Studio does not support debugging Unity WebGL content. To help you to find out exactly what&amp;#8217;s going on with your content, here are some tips on how to get information out of your build.">
+<meta property="og:description" content="Visual Studio does not support debugging Unity WebGL content. To help you to find out exactly what&amp;#8217;s going on with your content, here are some tips on how to get information out of your build.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'webgl-debugging';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/webgl-debugging.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/webgl-debugging.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/webgl-debugging.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/webgl-debugging.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/webgl-debugging.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/webgl-debugging.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/webgl-debugging.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/webgl-debugging.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/webgl-debugging.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/webgl-debugging.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/webgl-debugging.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/webgl-debugging.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/webgl-debugging.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/webgl-debugging.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/webgl-debugging.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/webgl-debugging.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/webgl-debugging.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/webgl-debugging.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/webgl-debugging.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/webgl-debugging.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/webgl-debugging.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/webgl-debugging.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/webgl-debugging.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/webgl-debugging.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
+<li><a href="webgl.html">WebGL</a></li>
+<li><a href="webgl-gettingstarted.html">WebGL 开发入门</a></li>
+<li>Debugging and troubleshooting WebGL builds</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="webgl-deploying.html"></a></span><div class="tip">WebGL：部署压缩构建</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="webgl-graphics.html"></a></span><div class="tip">WebGL 图形</div>
+</div>
+</div></div>
+<h1>Debugging and troubleshooting WebGL builds</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Visual Studio does not support debugging Unity WebGL content. To help you to find out exactly what’s going on with your content, here are some tips on how to get information out of your build.</p>
+
+<h2>The browser’s JavaScript console</h2>
+
+<p>Unity WebGL does not have access to your file system, so it does not write a log file like other platforms. However, it does write all logging information (such as <code>Debug.Log</code>, <code>Console.WriteLine</code> or Unity’s internal logging) to the browser’s JavaScript console.</p>
+
+<p>To open the JavaScript console:</p>
+
+<ul>
+<li>In Firefox, press Ctrl-Shift-K on Windows or Command-Option-K on a Mac.</li>
+<li>In Chrome, press Ctrl-Shift-J on Windows or Command-Option-J on a Mac.</li>
+<li>In Safari, go to Preferences &gt; Advanced &gt; Develop, and press Command-Option-C.</li>
+<li>In Microsoft Edge or Internet Explorer, press F12.</li>
+</ul>
+
+<h2>Development builds</h2>
+
+<p>For debugging purposes, you might want to make a development build in Unity (open the <a href="PublishingBuilds.html">Build Settings window</a> and click the <strong>Development Build</strong> checkbox). Development builds allow you to connect the profiler, and Unity does not <a href="https://en.wikipedia.org/wiki/Minification_%28programming%29">minify</a> them, so the emitted JavaScript code still contains human-readable (though <a href="https://en.wikipedia.org/wiki/Name_mangling#Name_mangling_in_C.2B.2B">C++-mangled</a>) function names. The browser can use these to display stack traces when you run into a browser error, when using <code>Debug.LogError, or when you throw an exception and exception support is disabled</code>. Unlike the managed stack traces that can occur when you have full exception support (see below), these stack traces have mangled names, and contain not only managed code, but also the internal UnityEngine code.</p>
+
+<h2>Exception support</h2>
+
+<p>WebGL has different levels of exception support (see documentation on <a href="webgl-building.html">Building for WebGL</a>). By default, Unity WebGL only supports explicitly thrown exceptions. You can enable <strong>Full</strong> exception support, which emits additional checks in the IL2CPP-generated code, to catch access to null references and out-of-bounds array elements in your managed code. These additional checks significantly impact performance and increase code size and load times, so you should only use it for debugging.</p>
+
+<p><strong>Full</strong> exception support also emits function names to generate stack traces for your managed code. For this reason, stack traces appear in the console for uncaught exceptions and for <code>Debug.Log</code> statements. Use <code>System.Environment.Stacktrace</code> to get a stack trace string.</p>
+
+<h2>故障排除</h2>
+
+<h3>Problem: The build runs out of memory</h3>
+
+<p>This is a common problem, especially on 32-bit browsers. For more information on WebGL memory issues and how to fix them, see documentation on <a href="webgl-memory.html">Memory in WebGL</a>.</p>
+
+<h3>Problem: Files saved to Application.persistentDataPath do not persist</h3>
+
+<p>Unity WebGL stores all files that must persist between sessions (such as PlayerPrefs or files saved in persistentDataPath) to the browser IndexedDB. This is an asynchronous API, so you don’t know when it’s going to complete.</p>
+
+<p>Call the following code to make sure Unity flushes all pending file system write operations to the IndexedDB file system from memory:</p>
+
+<pre><code>FS.syncfs(false, function (err) {
+    console.log('Error: syncfs failed!');
+ });
+</code></pre>
+
+<h3>Error message: Incorrect header check</h3>
+
+<p>The browser console log usually prints this error as a result of incorrect server configuration. For more information on how to deploy a release build, see documentation on <a href="webgl-deploying.html">Deploying compressed builds</a>.</p>
+
+<h3>Error message: Decompressing this format (1) is not supported on this platform</h3>
+
+<p>The browser console log prints this error when the content tries to load an AssetBundle compressed using LZMA, which Unity WebGL does not support. Re-compress the AssetBundle using LZ4 compression to solve this problem. For more information on compression for WebGL, see documentation on <a href="https://docs.unity3d.com/Manual/webgl-building.html">WebGL building</a>, particularly the <strong>AssetBundles</strong> section.</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–09–03 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">MonoDevelop replaced with Visual Studio from 2018.1</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="webgl-deploying.html"></a></span><div class="tip">WebGL：部署压缩构建</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="webgl-graphics.html"></a></span><div class="tip">WebGL 图形</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

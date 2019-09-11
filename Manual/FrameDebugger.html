@@ -1,0 +1,294 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="帧调试器 - Unity Manual">
+<title>帧调试器 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/FrameDebugger.jpg">
+<meta name="description" content="帧调试器 (Frame Debugger) 可将正在运行的游戏的状态冻结到特定帧来自由回放，并查看用于渲染该帧的各个_绘制调用_。除了列出绘制调用，调试器还可逐个单步执行这些调用，以便您详细查看场景是如何从场景的图形元素构建的。">
+<meta property="og:description" content="帧调试器 (Frame Debugger) 可将正在运行的游戏的状态冻结到特定帧来自由回放，并查看用于渲染该帧的各个_绘制调用_。除了列出绘制调用，调试器还可逐个单步执行这些调用，以便您详细查看场景是如何从场景的图形元素构建的。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'FrameDebugger';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/FrameDebugger.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/FrameDebugger.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/FrameDebugger.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/FrameDebugger.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/FrameDebugger.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/FrameDebugger.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/FrameDebugger.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/FrameDebugger.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/FrameDebugger.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/FrameDebugger.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/FrameDebugger.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/FrameDebugger.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/FrameDebugger.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/FrameDebugger.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/FrameDebugger.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/FrameDebugger.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/FrameDebugger.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/FrameDebugger.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/FrameDebugger.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/FrameDebugger.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/FrameDebugger.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/FrameDebugger.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/FrameDebugger.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/FrameDebugger.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="OptimizingGraphicsPerformance.html">优化图形性能</a></li>
+<li>帧调试器</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="RenderingStatistics.html"></a></span><div class="tip">渲染 Statistics 窗口</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="OptimizingShaderLoadTime.html"></a></span><div class="tip">优化着色器加载时间</div>
+</div>
+</div></div>
+<h1>帧调试器</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><strong>帧调试器 (Frame Debugger)</strong> 可将正在运行的游戏的状态冻结到特定帧来自由回放，并查看用于渲染该帧的各个_绘制调用_。除了列出绘制调用，调试器还可逐个单步执行这些调用，以便您详细查看场景是如何从场景的图形元素构建的。</p>
+
+<figure>
+<img src="../uploads/Main/FrameDebugger.jpg" alt="">
+</figure>
+
+<h2>使用帧调试器</h2>
+
+<p>The Frame Debugger window (menu: <strong>Window</strong> &gt; <strong>Analysis</strong> &gt; <strong>Frame Debugger</strong>) shows the drawcall information and lets you control the “playback” of the frame under construction.</p>
+
+<p>主列表以层级视图形式显示绘制调用（以及其他事件，例如帧缓冲区清除）的序列，并在其中标识绘制调用的来源。列表右侧面板提供有关绘制调用的更多信息，例如几何体细节和用于渲染的着色器。</p>
+
+<p>单击列表中的某项将显示该场景（在 Game 视图中）截止到并包括该绘制调用的情况。工具栏中的左右箭头按钮用于在列表中向前和向后移动一步，您也可以使用箭头键来实现相同效果。此外，窗口顶部的滑动条可让您在绘制调用中快速拖动来迅速定位要关注的事项。如果绘制调用对应于游戏对象的几何体，则会在主 Hierarchy 面板中突出显示该对象以便于识别。</p>
+
+<p>如果在选定的绘制调用中，RenderTexture 发生渲染，那么该 RenderTexture 的内容将显示在 <a href="GameView.html">Game 视图</a>中。这可用于检查各种屏幕外渲染目标是如何构建的，例如延迟着色中的漫射 G 缓冲区：</p>
+
+<figure>
+<img src="../uploads/Main/FrameDebugAnimDiffuse.gif" alt="">
+</figure>
+
+<p>或者查看阴影贴图的渲染方式：</p>
+
+<figure>
+<img src="../uploads/Main/FrameDebugAnimShadow.gif" alt="">
+</figure>
+
+<h2>远程帧调试器</h2>
+
+<figure>
+<img src="../uploads/Main/RemoteFrameDebugger.png" alt="">
+</figure>
+
+<p>To use Frame Debugger remotely, the player has to support multithreaded rendering (for example, WebGL doesn’t support it, thus frame debugger cannot be run on it), most of the Unity platforms support it, secondly you have to check ‘Development Build’ when building.</p>
+
+<p>桌面平台的注意事项：确保在构建之前选中“Run In Background”选项。否则，将帧调试器连接到播放器时，它将不会反映任何渲染变化，直至其获得焦点为止。假设在同一台机器上运行 Editor 和播放器，您在 Editor 中控制帧调试器时，将从播放器获取焦点。</p>
+
+<p>快速启动：</p>
+
+<ul>
+<li>从 Editor 中针对目标平台构建项目（选择 Development Player）</li>
+<li>运行播放器</li>
+<li>返回到 Editor</li>
+<li>打开 Frame Debugger 窗口</li>
+<li>单击 <strong>Active Profiler</strong>，然后选择播放器</li>
+<li>单击 <strong>Enable</strong>，帧调试器应该会在播放器上启用</li>
+</ul>
+
+<h3>渲染目标显示选项</h3>
+
+<p>信息面板的顶部是一个工具栏，可让您为 Game 视图的当前状态隔离红色、绿色、蓝色和 Alpha 通道。同样，您可以使用这些通道按钮右侧的 <em>Levels</em> 滑动条，根据亮度级别来隔离视图区域。这些功能仅在渲染到 RenderTexture 时才会启用。</p>
+
+<p>一次渲染到多个渲染目标时，您可以在 Game 视图中选择显示哪个渲染目标。下面分别显示在 5.0版本中的延迟着色模式下的漫射、镜面反射、法线和发光/间接光照缓冲区：</p>
+
+<figure>
+<img src="../uploads/Main/FrameDebugMRTDiffuse.jpg" alt="">
+</figure>
+
+<figure>
+<img src="../uploads/Main/FrameDebugMRTSpec.jpg" alt="">
+</figure>
+
+<figure>
+<img src="../uploads/Main/FrameDebugMRTNormal.jpg" alt="">
+</figure>
+
+<figure>
+<img src="../uploads/Main/FrameDebugMRTLight.jpg" alt="">
+</figure>
+
+<p>此外，可通过从下拉选单中选择“Depth”来查看深度缓冲区内容：</p>
+
+<figure>
+<img src="../uploads/Main/FrameDebugMRTDepth.jpg" alt="">
+</figure>
+
+<p>通过隔离渲染纹理的 Alpha 通道，可以看到延迟 G 缓冲区的遮挡（存储在 RT0 Alpha 中）和平滑度（存储在 RT1 Alpha 中）：</p>
+
+<figure>
+<img src="../uploads/Main/FrameDebugMRTDiffuseA.jpg" alt="">
+</figure>
+
+<figure>
+<img src="../uploads/Main/FrameDebugMRTSpecA.jpg" alt="">
+</figure>
+
+<p>此场景中的发光和环境/间接光照非常暗；我们可以通过更改 Levels 滑动条使其更明显：</p>
+
+<figure>
+<img src="../uploads/Main/FrameDebugMRTLightRange.jpg" alt="">
+</figure>
+
+<h3>查看着色器属性值</h3>
+
+<p>对于绘制调用，帧调试器还可以显示所用的<a href="SL-PropertiesInPrograms.html">着色器属性
+值</a>。单击“Shader Properties”选项卡即可显示属性：</p>
+
+<figure>
+<img src="../uploads/Main/FrameDebugShaderProperties.jpg" alt="">
+</figure>
+
+<p>对于每个属性，将显示该属性的值，以及在哪些着色器阶段
+（顶点、片元、几何体、外壳、域）中使用了它。请注意，在使用 OpenGL 时（例如在 Mac 上），由于 GLSL 着色器的工作原理，所有着色器属性都被视为顶点着色器阶段的一部分。</p>
+
+<p>在 Editor 中，还会显示纹理的缩略图，单击它们
+会在项目窗口中突出显示纹理。</p>
+
+<h2>备用帧调试技术</h2>
+
+<p>您还可以使用外部工具来调试渲染。通过现有的 Editor 集成可轻松启动 <a href="RenderDocIntegration.html">RenderDoc</a> 以检查 Editor 中的 Scene 或 Game 视图。</p>
+
+<p>此外还可构建独立平台播放器并通过以下任何方式使其运行：</p>
+
+<ul>
+<li><a href="http://msdn.microsoft.com/en-us/library/hh315751.aspx">Visual Studio 图形调试器</a></li>
+<li><a href="https://software.intel.com/en-us/vcsource/tools/intel-gpa">Intel GPA</a></li>
+<li><a href="https://github.com/baldurk/renderdoc">RenderDoc</a></li>
+<li><a href="http://www.nvidia.com/object/nsight.html">NVIDIA NSight</a></li>
+<li><a href="http://developer.amd.com/tools-and-sdks/graphics-development/gpu-perfstudio-2/">AMD GPU PerfStudio</a></li>
+<li><a href="https://developer.apple.com/library/ios/recipes/xcode_help-debugger/articles/debugging_opengl_es_frame.html">Xcode GPU Frame Capture</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/DeveloperTools/Conceptual/InstrumentsUserGuide/Instrument-GPUDriver.html">GPU Driver Instruments</a></li>
+</ul>
+
+<p>完成此操作后，捕获一帧渲染，然后逐步执行绘制调用和其他渲染事件以查看运行情况。这是一种非常强大的方法，因为这些工具可为您提供大量信息来真正进行深入研究。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="RenderingStatistics.html"></a></span><div class="tip">渲染 Statistics 窗口</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="OptimizingShaderLoadTime.html"></a></span><div class="tip">优化着色器加载时间</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

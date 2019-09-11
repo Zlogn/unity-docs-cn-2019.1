@@ -1,0 +1,372 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="粒子系统 (Particle System) 主模块 - Unity Manual">
+<title>粒子系统 (Particle System) 主模块 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/PartSysPartSysInsp.png">
+<meta name="description" content="Particle System 模块包含影响整个系统的全局属性。大多数这些属性用于控制新创建的粒子的初始状态。要展开和折叠主模块，请单击 Inspector 窗口中的 Particle System 栏。">
+<meta property="og:description" content="Particle System 模块包含影响整个系统的全局属性。大多数这些属性用于控制新创建的粒子的初始状态。要展开和折叠主模块，请单击 Inspector 窗口中的 Particle System 栏。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'PartSysMainModule';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PartSysMainModule.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PartSysMainModule.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PartSysMainModule.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PartSysMainModule.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PartSysMainModule.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PartSysMainModule.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PartSysMainModule.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PartSysMainModule.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PartSysMainModule.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PartSysMainModule.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/PartSysMainModule.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/PartSysMainModule.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/PartSysMainModule.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/PartSysMainModule.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PartSysMainModule.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PartSysMainModule.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PartSysMainModule.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PartSysMainModule.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PartSysMainModule.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PartSysMainModule.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PartSysMainModule.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PartSysMainModule.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PartSysMainModule.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PartSysMainModule.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="PartSysReference.html">粒子系统参考</a></li>
+<li><a href="ParticleSystemModules.html">粒子系统模块</a></li>
+<li>粒子系统 (Particle System) 主模块</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ParticleSystemModules.html"></a></span><div class="tip">粒子系统模块</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PartSysEmissionModule.html"></a></span><div class="tip">Emission 模块</div>
+</div>
+</div></div>
+<h1>粒子系统 (Particle System) 主模块</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Particle System 模块包含影响整个系统的全局属性。大多数这些属性用于控制新创建的粒子的初始状态。要展开和折叠主模块，请单击 Inspector 窗口中的 Particle System 栏。</p>
+
+<figure>
+<img src="../uploads/Main/PartSysPartSysInsp.png" alt="">
+</figure>
+
+<p>该模块的名称在 Inspector 中显示为<a href="class-ParticleSystem.html">粒子系统 (Particle System)</a> 组件所附加到的游戏对象的名称。</p>
+
+<h2>属性</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Duration</strong></td>
+	<td style="text-align:left;">系统运行的时间长度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Looping</strong></td>
+	<td style="text-align:left;">如果启用此属性，系统将在其持续时间结束时再次启动并继续重复该循环。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Prewarm</strong></td>
+	<td style="text-align:left;">如果启用此属性，系统将初始化，就像已经完成一个完整周期一样（仅当 <strong>Looping</strong> 也启用时才有效）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Start Delay</strong></td>
+	<td style="text-align:left;">启用此属性后，系统开始发射前将延迟一段时间（以秒为单位）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Start Lifetime</strong></td>
+	<td style="text-align:left;">粒子的初始生命周期。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Start Speed</strong></td>
+	<td style="text-align:left;">每个粒子在适当方向的初始速度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>3D Start Size</strong></td>
+	<td style="text-align:left;">如果要分别控制每个轴的大小，请启用此属性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Start Size</strong></td>
+	<td style="text-align:left;">每个粒子的初始大小。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>3D Start Rotation</strong></td>
+	<td style="text-align:left;">如果要分别控制每个轴的旋转，请启用此属性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Start Rotation</strong></td>
+	<td style="text-align:left;">每个粒子的初始旋转角度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Randomize Rotation Direction</strong></td>
+	<td style="text-align:left;">使一些粒子以相反的方向旋转。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Start Color</strong></td>
+	<td style="text-align:left;">每个粒子的初始颜色。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Gravity Modifier</strong></td>
+	<td style="text-align:left;">Scales the gravity value set in the <a href="class-PhysicsManager.html">Physics</a> window. A value of zero switches gravity off.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Simulation Space</strong></td>
+	<td style="text-align:left;">控制粒子的运动位置是在父对象的局部空间中（因此与父对象一起移动）、在世界空间中还是相对于自定义对象（与您选择的自定义对象一起移动）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Simulation Speed</strong></td>
+	<td style="text-align:left;">调整整个系统更新的速度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Delta Time</strong></td>
+	<td style="text-align:left;">Choose between <strong>Scaled</strong> and <strong>Unscaled</strong>, where <strong>Scaled</strong> uses the <strong>Time Scale</strong> value in the <a href="class-TimeManager.html">Time</a> window, and <strong>Unscaled</strong> ignores it. This is useful for Particle Systems that appear on a Pause Menu, for example.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Scaling Mode</strong></td>
+	<td style="text-align:left;">选择如何使用变换中的缩放。设置为 <strong>Hierarchy</strong>、<strong>Local</strong> 或 <strong>Shape</strong>。Local 仅应用粒子系统变换缩放，忽略任何父级。Shape 模式将缩放应用于粒子起始位置，但不影响粒子大小。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Play on Awake</strong></td>
+	<td style="text-align:left;">如果启用此属性，则粒子系统会在创建对象时自动启动。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Emitter Velocity</strong></td>
+	<td style="text-align:left;">选择粒子系统如何计算 Inherit Velocity 和 Emission 模块使用的速度。系统可使用刚体组件（如果存在）或通过跟踪变换组件的移动情况来计算速度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max Particles</strong></td>
+	<td style="text-align:left;">系统中同时允许的最多粒子数。如果达到限制，则移除一些粒子。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Auto Random Seed</strong></td>
+	<td style="text-align:left;">如果启用此属性，则每次播放时粒子系统看起来都会不同。设置为 false 时，每次播放时系统都完全相同。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Random Seed</strong></td>
+	<td style="text-align:left;">禁用自动随机种子时，此值用于创建唯一的可重复效果。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Stop Action</strong></td>
+	<td style="text-align:left;">当属于系统的所有粒子都已完成时，可使系统执行某种操作。当一个系统的所有粒子都已死亡，并且系统存活时间已超过 Duration 设定的值时，判定该系统已停止。对于循环系统，只有在通过脚本停止系统时才会发生这种情况。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Disable</td>
+	<td style="text-align:left;">禁用游戏对象。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Destroy</td>
+	<td style="text-align:left;">销毁游戏对象。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Callback</td>
+	<td style="text-align:left;">将 OnParticleSystemStopped 回调发送给附加到游戏对象的任何脚本。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Culling Mode</strong></td>
+	<td style="text-align:left;">Choose whether to pause Particle System simulation when particles are offscreen. Culling when offscreen is most efficient, but you may want to continue simulation for off-one effects.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Automatic</td>
+	<td style="text-align:left;">Looping systems use <strong>Pause</strong>, and all other system use <strong>Always Simulate</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Pause And Catch-up</td>
+	<td style="text-align:left;">The system stops simulating while offscreen. When re-entering the view, the simulation performs a large step to reach the point where it would have been had it not paused. In complex systems, this option can cause performance spikes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Pause</td>
+	<td style="text-align:left;">The system stops simulating while offscreen.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Always Simulate</td>
+	<td style="text-align:left;">The system processes its simulation on each frame, regardless of whether it is on screen or not. This can be useful for one-shot effects such as fireworks, where during the simulation would be obvious.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Ring Buffer Mode</strong></td>
+	<td style="text-align:left;">Keeps particles alive until they reach the <strong>Max Particles</strong> count, at which point new particles recycle the oldest ones, instead of removing particles when their lifetimes elapse.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Disabled</td>
+	<td style="text-align:left;">Disable <strong>Ring Buffer Mode</strong>, so the system removes particles when their lifetime elapses.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Pause Until Replaced</td>
+	<td style="text-align:left;">Pauses old particles at the end of their lifetime until the <strong>Max Particle</strong> limit is reached, at which point the system recycles them, so they reappear as new particles.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Loop Until Replaced</td>
+	<td style="text-align:left;">At the end of their lifetime, particles rewind back to the specified proportion of their lifetime until the <strong>Max Particle</strong> limit is reached, at which point the system recycles them, so they reappear as new particles.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>属性详细信息</h2>
+
+<p>系统会在特定时间内发射粒子，并可使用 <strong>Looped</strong> 属性将其设置为连续发射。此设置可让您设置间歇或连续发射粒子；例如，一个对象可能以短暂间隔或以稳定流的形式发射烟雾。</p>
+
+<p><strong>Start</strong> 属性（__lifetime<strong>、</strong>speed<strong>、</strong>size<strong>、</strong>rotation__ 和 <strong>color__）可指定粒子发射时的状态。可使用 </strong>3D Start Size__ 属性来独立指定粒子的宽度、高度和深度（请参阅下面的<a href="#scaling">非均匀粒子缩放</a>）。</p>
+
+<p>所有粒子系统都使用 <strong>Physics</strong> 设置中指定的相同重力矢量。Gravity Multiplier 值可用于缩放重力，或者如果设置为零则将其关闭。</p>
+
+<p><a name="scaling"></a> </p>
+
+<h2>非均匀粒子缩放</h2>
+
+<p>3D Start Size 属性允许您独立指定粒子的宽度、高度和深度。在粒子系统__主__模块中，选中 <strong>3D Start Size</strong> 复选框，然后输入粒子的初始 x（宽度）、y（高度）和 z（深度）的值。请注意，z（深度）仅适用于 3D 网格粒子。此外，还可在两个常量或曲线之间的范围内为这些属性设置随机值。</p>
+
+<p>您可以在粒子系统__主__模块中设置粒子的初始大小，并使用 <strong>Size over Lifetime</strong> 模块中的 <strong>Separate Axes</strong> 选项设置粒子在其生命周期内的大小。此外，还可使用 <strong>Size by Speed</strong> 模块中的 <strong>Separate Axes</strong> 选项设置粒子的大小与其速度的关系。</p>
+
+<h2>Simulation Space</h2>
+
+<p><strong>Simulation Space</strong> 属性确定粒子是随粒子系统父对象移动、随自定义对象移动还是在游戏世界中独立移动。例如，像云，软管和喷火器这样的系统需要独立于其父游戏对象进行设置，因为即使生成它们的对象移动，它们往往也会留下在世界空间中持续存在的轨迹。另一方面，如果使用粒子在两个电极之间产生火花，则粒子应该随父对象一起移动。有关粒子如何跟随粒子变换的更高级控制方式，请参阅 <a href="PartSysInheritVelocity.html">Inherit Velocity 模块</a>相关文档。</p>
+
+<p>When set to Custom, particles no longer move relative to their own Transform component. Instead, they all move relative to the movement of the specified Transform component. The Particle System uses the Custom Transform to calculate emitter velocity, which the Inherit Velocity module and <strong>Rate over Distance</strong> property of the Emission module use to control particle velocity and emission.</p>
+
+<p><br> </p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–11–02 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 Unity <a href="../Manual/30_search.html?q=newin20171">2017.1</a> 中添加了 Simulation Speed、Delta Time 和 Emitter Velocity <span class="search-words">NewIn20171</span></span></p></li>
+<li><p><span class="page-history">在 Unity <a href="../Manual/30_search.html?q=newin20172">2017.2</a> 中添加了 Stop Action 粒子系统属性 <span class="search-words">NewIn20172</span></span></p></li>
+<li><p><span class="page-history">Culling Mode and Ring Buffer Mode properties added to Particle System in <a href="../Manual/30_search.html?q=newin20183">2018.3</a> <span class="search-words">NewIn20183</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ParticleSystemModules.html"></a></span><div class="tip">粒子系统模块</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PartSysEmissionModule.html"></a></span><div class="tip">Emission 模块</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Understanding Automatic Memory Management - Unity Manual">
+<title>Understanding Automatic Memory Management - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/gc_spike.png">
+<meta name="description" content="创建对象、字符串或数组时，用于存储它的内存是从称为堆的中央池分配的。当此项不再使用时，其先前占用的内存可被回收并用于其他目的。在过去，通常由程序员通过适当的函数调用显式地分配和释放这些堆内存块。如今，Unity 的 Mono 引擎等运行时系统会自动为您管理内存。自动内存管理比显式分配/释放的做法需要更少的编码工作，并且大大降低了内存泄漏的可能性（即分配了内存但后续从未释放的情况）。">
+<meta property="og:description" content="创建对象、字符串或数组时，用于存储它的内存是从称为堆的中央池分配的。当此项不再使用时，其先前占用的内存可被回收并用于其他目的。在过去，通常由程序员通过适当的函数调用显式地分配和释放这些堆内存块。如今，Unity 的 Mono 引擎等运行时系统会自动为您管理内存。自动内存管理比显式分配/释放的做法需要更少的编码工作，并且大大降低了内存泄漏的可能性（即分配了内存但后续从未释放的情况）。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UnderstandingAutomaticMemoryManagement';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnderstandingAutomaticMemoryManagement.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnderstandingAutomaticMemoryManagement.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnderstandingAutomaticMemoryManagement.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnderstandingAutomaticMemoryManagement.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnderstandingAutomaticMemoryManagement.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnderstandingAutomaticMemoryManagement.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnderstandingAutomaticMemoryManagement.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnderstandingAutomaticMemoryManagement.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnderstandingAutomaticMemoryManagement.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnderstandingAutomaticMemoryManagement.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UnderstandingAutomaticMemoryManagement.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UnderstandingAutomaticMemoryManagement.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UnderstandingAutomaticMemoryManagement.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UnderstandingAutomaticMemoryManagement.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnderstandingAutomaticMemoryManagement.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnderstandingAutomaticMemoryManagement.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnderstandingAutomaticMemoryManagement.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnderstandingAutomaticMemoryManagement.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnderstandingAutomaticMemoryManagement.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnderstandingAutomaticMemoryManagement.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnderstandingAutomaticMemoryManagement.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnderstandingAutomaticMemoryManagement.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnderstandingAutomaticMemoryManagement.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnderstandingAutomaticMemoryManagement.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="ScriptingSection.html">脚本</a></li>
+<li><a href="ScriptingConcepts.html">脚本概述</a></li>
+<li>Understanding Automatic Memory Management</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ExecutionOrder.html"></a></span><div class="tip">Order of Execution for Event Functions</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PlatformDependentCompilation.html"></a></span><div class="tip">平台相关的编译</div>
+</div>
+</div></div>
+<h1>Understanding Automatic Memory Management</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>创建对象、字符串或数组时，用于存储它的内存是从称为<strong>堆</strong>的中央池分配的。当此项不再使用时，其先前占用的内存可被回收并用于其他目的。在过去，通常由程序员通过适当的函数调用显式地分配和释放这些堆内存块。如今，Unity 的 Mono 引擎等运行时系统会自动为您管理内存。自动内存管理比显式分配/释放的做法需要更少的编码工作，并且大大降低了内存泄漏的可能性（即分配了内存但后续从未释放的情况）。</p>
+
+<h2>Value and Reference Types</h2>
+
+<p>调用某个函数时，其参数的值将复制到为该特定调用保留的内存区域。只占几个字节的数据类型可以非常快速和轻松地完成复制。但是，对象、字符串和数组通常要大得多，如果需要经常复制这些类型的数据，效率会非常低。幸运的是，并不是非要这样做；可从堆中分配大项的实际存储空间，并使用小“指针”值来记住它的位置。此后，在参数传递期间只需要复制指针。只要运行时系统能找到该指针所标识的项，就可以根据需要频繁使用该数据的同一个副本。</p>
+
+<p>在参数传递期间直接存储和复制的类型称为值类型。这些类型包括整数、浮点数、布尔值和 Unity 的结构类型（例如，__Color__ 和 __Vector3__）。在堆上分配后再通过指针访问的类型称为引用类型，因为在变量中存储的值仅“引用”实际数据。引用类型的示例包括对象、字符串和数组。</p>
+
+<h2>Allocation and Garbage Collection</h2>
+
+<p>内存管理器跟踪已知未使用的堆区域。当请求新的内存块时（例如，当实例化对象时），管理器选择一个未使用的区域来分配内存块，然后从已知的未使用空间中移除分配的内存。后续请求以相同的方式处理，直到没有足够大的可用区域来分配所需的块大小。此时极不可能从堆中分配的所有内存都仍在使用中。若要访问堆上的引用项，前提是仍有引用变量可以定位到该项。如果对内存块的所有引用都消失（即，引用变量已被重新分配，或者引用变量是局部变量但现在已超出范围），则可安全地重新分配其占用的内存。</p>
+
+<p>为确定哪些堆块已不再使用，内存管理器会搜索所有当前处于活动状态的引用变量，并将它们引用的块标记为“实时”。在搜索结束时，内存管理器会认为实时块之间的任何空间都是空的并可用于后续分配。由于显而易见的原因，定位和释放未使用的内存的过程称为垃圾收集（或简称 GC）。</p>
+
+<p>Unity uses the <a href="https://www.hboehm.info/gc/">Boehm–Demers–Weiser garbage collector</a>, a stop-the-world garbage collector. Whenever Unity needs to perform garbage collection, it stops running your program code and only resumes normal execution when the garbage collector has finished all its work. This interruption can cause delays in the execution of your game that last anywhere from less than one millisecond to hundreds of milliseconds, depending on how much memory the garbage collector needs to process and on the platform the game is running on. For real-time applications like games, this can become quite a big issue, because you can’t sustain the consistent frame rate that smooth animation require when the garbage collector suspends a game’s execution. These interruptions are also known as GC spikes, because they show as spikes in the Profiler frame time graph. In the next sections you can learn more about how to write your code to avoid unnecessary garbage-collected memory allocations while running the game, so the garbage collector has less work to do.</p>
+
+<h2>Optimization</h2>
+
+<p>Garbage collection is automatic and invisible to the programmer but the collection process actually requires significant CPU time behind the <span class="no tooltip">scenes</span>. When used correctly, automatic memory management will generally equal or beat manual allocation for overall performance. However, it is important for the programmer to avoid mistakes that will trigger the collector more often than necessary and introduce pauses in execution.</p>
+
+<p>有一些臭名昭着的算法虽然一眼看上去好像是无辜的，但可能成为 GC 的噩梦。重复的字符串连接便是一个典型的例子：</p>
+
+<pre><code>//C# script example
+using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    void ConcatExample(int[] intArray) {
+        string line = intArray[0].ToString();
+        
+        for (i = 1; i &lt; intArray.Length; i++) {
+            line += ", " + intArray[i].ToString();
+        }
+        
+        return line;
+    }
+}
+
+</code></pre>
+
+<p>此处的关键细节是新的部分不会逐一添加到字符串。实际情况的是，每次循环时，line 变量的先前内容变为死亡状态：分配的整个新字符串将包含原始部分加上末尾的新部分。由于字符串随着 i 值的增加而变长，因此消耗的堆空间量也会增加，所以每次调用此函数时都很容易用掉数百个字节的空闲堆空间。如果需要将大量字符串连接在一起，那么 Mono 库的 <a href="http://msdn.microsoft.com/en-gb/library/system.text.stringbuilder.aspx">System.Text.StringBuilder</a> 类将是更好的选择。</p>
+
+<p>但是，即使重复的连接也不会造成太大麻烦，除非频繁调用，而在 Unity 中这通常意味着帧更新。类似以下脚本：</p>
+
+<pre><code>//C# script example
+using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    public GUIText scoreBoard;
+    public int score;
+    
+    void Update() {
+        string scoreText = "Score: " + score.ToString();
+        scoreBoard.text = scoreText;
+    }
+}
+
+</code></pre>
+
+<p>…在每次调用 Update 时都会分配新的字符串，并生成源源不断的垃圾。通过仅在 score 发生变化时才更新 text，可避免大部分的垃圾：</p>
+
+<pre><code>//C# script example
+using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    public GUIText scoreBoard;
+    public string scoreText;
+    public int score;
+    public int oldScore;
+    
+    void Update() {
+        if (score != oldScore) {
+            scoreText = "Score: " + score.ToString();
+            scoreBoard.text = scoreText;
+            oldScore = score;
+        }
+    }
+}
+</code></pre>
+
+<p>另一个潜在问题是在函数返回数组值时出现的问题：</p>
+
+<pre><code>//C# script example
+using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    float[] RandomList(int numElements) {
+        var result = new float[numElements];
+        
+        for (int i = 0; i &lt; numElements; i++) {
+            result[i] = Random.value;
+        }
+        
+        return result;
+    }
+}
+</code></pre>
+
+<p>在新建包含值的数组时，这种类型的函数非常从容和方便。但是，如果重复调用这种函数，则每次都会分配全新的内存。由于数组可能非常大，因此空闲堆空间可能会迅速耗尽，导致频繁进行垃圾收集。避免此问题的一种方法是利用数组为引用类型这一特点。作为参数传入该函数的数组可在该函数内予以修改，且结果在函数返回后仍然保留。像上面这样的函数通常可替换为如下所示的函数：</p>
+
+<pre><code>//C# script example
+using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    void RandomList(float[] arrayToFill) {
+        for (int i = 0; i &lt; arrayToFill.Length; i++) {
+            arrayToFill[i] = Random.value;
+        }
+    }
+}
+
+</code></pre>
+
+<p>此函数仅将数组的现有内容替换为新值。虽然这需要在调用代码中完成数组的初始分配（看起来有点不方便），但在调用该函数时不会产生任何新的垃圾。</p>
+
+<h3>Disabling garbage collection</h3>
+
+<p>If you are using the Mono or IL2CPP scripting backend, you can avoid CPU spikes during garbage collection by disabling garbage collection at run time. When you disable garbage collection, memory usage never decreases because the garbage collector does not collect objects that no longer have any references. In fact, memory usage can only ever increase when you disable garbage collection. To avoid increased memory usage over time, take care when managing memory. Ideally, allocate all memory before you disable the garbage collector and avoid additional allocations while it is disabled. </p>
+
+<p>For more details on how to enable and disable garbage collection at run time, see the <a href="../ScriptReference/Scripting.GarbageCollector.html">GarbageCollector</a> Scripting API page.</p>
+
+<p>You can also try an <a href="#incremental_gc">experimental, incremental garbage collection option</a>.</p>
+
+<h3>Requesting a Collection</h3>
+
+<p>As mentioned above, it is best to avoid allocations as far as possible. However, given that they can’t be completely eliminated, there are two main strategies you can use to minimise their intrusion into gameplay.</p>
+
+<h4>Small heap with fast and frequent garbage collection</h4>
+
+<p>这种策略通常最适合游戏运行过程很长且主要关注帧率平滑性的游戏。像这样的游戏通常会频繁分配小块，但这些块的使用时间很短暂。在 iOS 上使用此策略时的典型堆大小约为 200KB，在 iPhone 3G 上的垃圾收集时间大约需要 5ms。如果堆大小增加到 1MB，则收集时间将大约需要 7ms。因此，有时，以定期的帧间隔请求进行垃圾收集可能是有利的。这种情况下通常会使垃圾收集频率高于严格意义上的要求，但是这些行为将得到快速处理，并且对游戏运行过程的影响极小：</p>
+
+<pre><code>if (Time.frameCount % 30 == 0)
+{
+   System.GC.Collect();
+}
+</code></pre>
+
+<p>但是，应谨慎使用此技术并检查性能分析器的统计信息，以确保真正减少了游戏的垃圾收集时间。</p>
+
+<h4>Large heap with slow but infrequent garbage collection</h4>
+
+<p>这种策略最适合内存分配（因此垃圾收集）相对不频繁并可在游戏运行过程的暂停期间进行处理的游戏。一种非常有用的方法是，尽可能增大堆的大小，但不至于因为系统内存不足而导致操作系统终止您的应用程序。但是，Mono 运行时会尽可能避免自动扩展堆。这种情况下，可通过在启动期间预先分配一些占位空间来手动扩展堆（即，实例化一个纯粹为了影响内存管理器而分配的“无用”对象）：</p>
+
+<pre><code>//C# script example
+using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    void Start() {
+        var tmp = new System.Object[1024];
+        
+        // make allocations in smaller blocks to avoid them to be treated in a special way, which is designed for large blocks
+        for (int i = 0; i &lt; 1024; i++)
+            tmp[i] = new byte[1024];
+        
+        // release reference
+        tmp = null;
+    }
+}
+
+</code></pre>
+
+<p>一个足够大的堆不应在游戏运行过程中配合进行垃圾收集的暂停期间完全耗尽。发生此类暂停时，可显式请求垃圾收集：</p>
+
+<pre><code>System.GC.Collect();
+</code></pre>
+
+<p>同样，在使用此策略时应谨慎，并注意性能分析器的统计信息，而不能仅仅期待其具有所需的效果。</p>
+
+<h3>Reusable Object Pools</h3>
+
+<p>在许多情况下，通过减少创建和销毁的对象数量即可避免生成垃圾。游戏中存在某些类型的对象，例如飞弹，可能会多次反复遇到，但是只有少数对象会同时处于游戏中。在这种情况下，通常可以重用对象，而不是销毁旧对象并替换为新对象。</p>
+
+<p><a name="incremental_gc"></a></p>
+
+<h1>Incremental Garbage Collection (Experimental)</h1>
+
+<p><strong>Note:</strong> This is a preview feature and is subject to change. Any Projects that use this feature may need updating in a future release. Do not rely on this feature for full-scale production until it is officially released.</p>
+
+<p><em>Incremental Garbage Collection</em> spreads out the work performed to perform garbage collection over multiple frames. </p>
+
+<p>With Incremental garbage collection, Unity still uses the Boehm–Demers–Weiser garbage collector, but runs it in an incremental mode. Instead of doing a full garbage collection each time it runs, Unity splits up the garbage collection workload over multiple frames. So instead of having a single, long interruption of your program’s execution to allow the garbage collector to do its work, you have multiple, much shorter interruptions. While this does not make garbage collection faster overall, it can significantly reduce the problem of garbage collection “spikes” breaking the smoothness of your game by distributing the workload over multiple frames.</p>
+
+<p>The following screenshots from the Unity Profiler, without and with incremental garbage collection enabled, illustrate how incremental collection reduces frame rate hiccups. In these profile traces, the light blue parts of the frame show how much time is used by script operations, the yellow parts show the time remaining in the frame until Vsync (waiting for the next frame to begin), and the dark green parts show the time spent for garbage collection.</p>
+
+<figure>
+<img src="../uploads/Main/gc_spike.png" alt="Nonincremental garbage collection profile">
+<figcaption>Nonincremental garbage collection profile</figcaption>
+</figure>
+
+<p>Without incremental GC (above), you can see a spike interrupting the otherwise smooth 60fps frame rate. This spike pushes the frame in which garbage collection occurs well over the 16 millisecond limit required to maintain 60FPS. (In fact, this example drops more than one frame because of garbage collection.)</p>
+
+<figure>
+<img src="../uploads/Main/gc_incremental.png" alt="Incremental garbage collection profile">
+<figcaption>Incremental garbage collection profile</figcaption>
+</figure>
+
+<p>With incremental garbage collection enabled (above), the same project keeps its consistent 60fps frame rate, as the garbage collection operation is broken up over several frames, using only a small time slice of each frame (the darker green fringe just above the yellow Vsync trace).</p>
+
+<figure>
+<img src="../uploads/Main/gc_auto.png" alt="Incremental garbage collection using left over time in frame">
+<figcaption>Incremental garbage collection using left over time in frame</figcaption>
+</figure>
+
+<p>This screenshot shows the same project, also running with incremental garbage collection enabled, but this time with fewer scripting operations per frame. Again, the garbage collection operation is broken up over several frames. The difference is that this time, the garbage collection uses more time each frame, and requires fewer total frames to finish. This is because we adjust the time allotted to the garbage collection based on the remaining available frame time if <a href="../ScriptReference/QualitySettings-vSyncCount.html">Vsync</a> or <a href="../ScriptReference/Application-targetFrameRate.html">Application.targetFrameRate</a> is being used. This way, we can run the garbage collection in time which would otherwise be spent waiting, and thus get garbage collection “for free”.</p>
+
+<h2>Enabling incremental garbage collection</h2>
+
+<p>Incremental garbage collection is currently supported on Mac, Windows and Linux Standalone Players and on iOS, Android and Windows UWP players. More supported platforms will be added in the future. Incremental garbage collection requires the new .NET 4.x Equivalent scripting runtime version.</p>
+
+<p>On supported configurations, Unity provides Incremental garbage collection as an experimental option in the “Other settings” area of the Player settings window. Just enable the <strong>Use incremental GC (Experimental)</strong> checkbox.</p>
+
+<figure>
+<img src="../uploads/Main/gc_settings.png" alt="Player Settings to enable incremental garbage collection">
+<figcaption>Player Settings to enable incremental garbage collection</figcaption>
+</figure>
+
+<p>In addition, if you set the <strong>VSync Count</strong> to anything other than <strong>Don’t Sync</strong> in your project <a href="class-QualitySettings.html">Quality</a> settings or with the <a href="../ScriptReference/QualitySettings-vSyncCount.html">Application.VSync</a> property or you set the <a href="../ScriptReference/Application-targetFrameRate.html">Application.targetFrameRate</a> property, Unity automatically uses any idle time left at the end of a given frame for incremental garbage collection. </p>
+
+<p>You can exercise more precise control over incremental garbage collection behavior using the <a href="../ScriptReference/Scripting.GarbageCollector.html">Scripting.GarbageCollector</a> class. For example, if you do not want to use VSync or a target frame rate, you could calculate the amount of time available before the end of a frame yourself and provide that time to the garbage collector to use.</p>
+
+<h2>Possible problems with incremental collection</h2>
+
+<p>In most cases, incremental garbage collection can mitigate the problem of garbage collection spikes. However, in some cases, incremental garbage collection may not prove beneficial in practice. </p>
+
+<p>When incremental garbage collection breaks up its work, it breaks up the marking phase in which it scans all managed objects to determine which objects are still in use and which objects can be cleaned up. Dividing up the marking phase works well when most of the references between objects don’t change between slices of work. When an object reference does change, those objects must be scanned again in the next iteration. Thus, too many changes can overwhelm the incremental garbage collector and cause a situation where the marking pass never finishes because it always has more work to do – in this case, the garbage collection falls back to doing a full, non-incremental collection. </p>
+
+<p>Also, when using incremental garbage collection, Unity needs to generate additional code (known as write barriers) to inform the garbage collection whenever a reference has changed (so the garbage collection will know if it needs to rescan an object). This adds some overhead when changing references which can have a measurable performance impact in some managed code.</p>
+
+<p>Still, most typical Unity projects (if there is such a thing as a “typical” Unity project) can benefit from incremental garbage collection, especially if they suffer from garbage collection spikes.</p>
+
+<p>Always use the <a href="Profiler.html">Profiler</a> to verify that your game or program performs as you expect.</p>
+
+<h2>Experimental status</h2>
+
+<p>Incremental garbage collection is included in Unity 2019.1 as an experimental preview feature. This has been done for a number of reasons:
+* It isn’t yet supported on all platforms.
+* As outlined in the “Possible problems with incremental collection” section above, we expect incremental garbage collection to be beneficial or at least not detrimental performance-wise for most Unity content, and this seems to have been true for various projects we have been testing with. But as Unity content is very diverse, we want to make sure that this assumption stays true across the greater Unity ecosystem, and we need your feedback on this.
+* The requirement for Unity code and scripting VM (mono, il2cpp) to add write barriers to inform the garbage collection whenever references in managed memory have changed introduces a potential source of bugs where we have missed adding such a write barrier, which could lead to objects being garbage collected when they are still needed. Now, we have done extensive testing (both manual and automated) and we aren’t aware of any such issues, and we believe that this feature is stable (otherwise, we would not ship it). But, once again, because of the diversity of Unity content and because such bugs might turn out to be hard to trigger in practice, we cannot completely rule out the possibility that there may be issues.</p>
+
+<p>So, overall we believe that this feature works as expected and there are no known issues with it. But, because of the complexity of the Unity ecosystem, we need some time and exposure to get the confidence to drop the experimental label, which we will do based on the feedback we get.</p>
+
+<h1>Further Information</h1>
+
+<p>内存管理是一个微妙而复杂的主题，业界已投入了大量的学术努力。如果有兴趣了解这一主题，<a href="http://www.memorymanagement.org/">memorymanagement.org</a> 将是极好的资源，其中列出了大量出版物和在线文章。如需了解对象池的更多信息，请访问 <a href="http://en.wikipedia.org/wiki/Object_pool_pattern">Wikipedia 页面</a>以及 <a href="http://sourcemaking.com/design_patterns/object_pool">Sourcemaking.com</a>。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2019–01–17</span></li>
+<li><span class="page-history">Ability to disable garbage collection on Mono and IL2CPP scripting backends added in Unity <a href="https://docs.unity3d.com/2018.3/Documentation/Manual/30_search.html?q=newin20183">2018.3</a> <span class="search-words">NewIn20183</span></span></li>
+<li><span class="page-history">Added exerimental Incremental Garbage Collection feature added in Unity <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/30_search.html?q=newin20191">2019.1</a> <span class="search-words">NewIn20191</span></span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ExecutionOrder.html"></a></span><div class="tip">Order of Execution for Event Functions</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PlatformDependentCompilation.html"></a></span><div class="tip">平台相关的编译</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="交互组件 - Unity Manual">
+<title>交互组件 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/UI_ButtonExample.png">
+<meta name="description" content="本部分将介绍 UI 系统中的交互组件，这些组件可用于处理交互，例如鼠标或触摸事件以及使用键盘或控制器进行的交互。">
+<meta property="og:description" content="本部分将介绍 UI 系统中的交互组件，这些组件可用于处理交互，例如鼠标或触摸事件以及使用键盘或控制器进行的交互。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UIInteractionComponents';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UIInteractionComponents.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UIInteractionComponents.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UIInteractionComponents.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UIInteractionComponents.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UIInteractionComponents.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UIInteractionComponents.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UIInteractionComponents.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UIInteractionComponents.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UIInteractionComponents.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UIInteractionComponents.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UIInteractionComponents.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UIInteractionComponents.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UIInteractionComponents.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UIInteractionComponents.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UIInteractionComponents.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UIInteractionComponents.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UIInteractionComponents.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UIInteractionComponents.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UIInteractionComponents.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UIInteractionComponents.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UIInteractionComponents.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UIInteractionComponents.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UIInteractionComponents.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UIInteractionComponents.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UIToolkits.html">UI</a></li>
+<li><a href="UISystem.html">Unity UI: Unity User Interface</a></li>
+<li>交互组件</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIVisualComponents.html"></a></span><div class="tip">可视组件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UIAnimationIntegration.html"></a></span><div class="tip">动画集成</div>
+</div>
+</div></div>
+<h1>交互组件</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>本部分将介绍 UI 系统中的交互组件，这些组件可用于处理交互，例如鼠标或触摸事件以及使用键盘或控制器进行的交互。</p>
+
+<p>交互组件本身不可见，必须与一个或多个<a href="UIVisualComponents.html">可视元素</a>组合才能正常工作。</p>
+
+<h2>通用功能</h2>
+
+<p>大多数交互组件都有一些共同点。这些组件是可选择的组件，这意味着它们具有共享的内置功能，可用于对状态（正常、突出显示、按下、禁用）之间的过渡进行可视化，也可用于通过键盘或控制器导航到其他可选择的组件。<a href="script-Selectable.html">可选基类</a>页面中介绍了此共享功能。</p>
+
+<p>交互组件至少有一个 UnityEvent，当用户以特定方式与组件交互时将调用该 UnityEvent。UI 系统会捕获并记录从附加到 UnityEvent 的代码传出的任何异常。</p>
+
+<h2>按钮 (Button)</h2>
+
+<p>按钮有一个 <strong>OnClick</strong> UnityEvent 用于定义单击按钮时将执行的操作。</p>
+
+<figure>
+<img src="../uploads/Main/UI_ButtonExample.png" alt="">
+</figure>
+
+<p>请参阅<a href="script-Button.html">按钮</a>页面以了解有关使用按钮组件的详细信息。</p>
+
+<h2>开关 (Toggle)</h2>
+
+<p>开关有一个 <strong>Is On</strong> 复选框用于确定开关当前是打开还是关闭状态。当用户单击开关时，此值将反转，并可相应打开或关闭可视复选标记。按钮还有一个 <strong>OnValueCHanged</strong> UnityEvent 用于定义更改该值时将执行的操作。</p>
+
+<figure>
+<img src="../uploads/Main/UI_ToggleExample.png" alt="">
+</figure>
+
+<p>请参阅<a href="script-Toggle.html">开关</a>页面以了解有关使用开关组件的详细信息。</p>
+
+<h2>开关组 (Toggle Group)</h2>
+
+<p>开关组可用于整合一组互斥的<a href="script-Toggle.html">开关</a>。属于同一组的开关将受到约束，即一次只能选择其中一个开关：选择其中一个开关便会自动取消选择所有其他开关。</p>
+
+<figure>
+<img src="../uploads/Main/UI_ToggleGroupExample.png" alt="">
+</figure>
+
+<p>请参阅<a href="script-ToggleGroup.html">开关组</a>页面以了解有关使用开关组组件的详细信息。</p>
+
+<h2>滑动条 (Slider)</h2>
+
+<p>滑动条具有十进制<strong>数值</strong>，用户可以在最小值和最大值之间拖动。滑动条可以是水平或垂直的。滑动条也有一个 <strong>OnValueChanged</strong> UnityEvent 用于定义更改该值时将执行的操作。</p>
+
+<figure>
+<img src="../uploads/Main/UI_SliderExample.png" alt="">
+</figure>
+
+<p>请参阅<a href="script-Slider.html">滑动条</a>页面以了解有关使用滑动条组件的详细信息。</p>
+
+<h2>滚动条 (Scrollbar)</h2>
+
+<p>滚动条具有一个介于 0 和 1 之间的十进制<strong>数值</strong>。当用户拖动滚动条时，该值将相应变化。</p>
+
+<p>滚动条通常与<a href="script-ScrollRect.html">滚动矩形 (Scroll Rect)</a> 和<a href="script-Mask.html">遮罩 (Mask)</a> 一起用于创建滚动视图。滚动条具有一个介于 0 和 1 之间的 <strong>Size</strong> 值，该值用于确定控制柄的大小（占整个滚动条长度的一个比例）。滚动条通常由另一个组件控制，旨在指示滚动视图中可见的内容比例。滚动矩形组件可自动执行此过程。</p>
+
+<p>滚动条可以是水平或垂直的。滑动条也有一个 <strong>OnValueChanged</strong> UnityEvent 用于定义更改该值时将执行的操作。</p>
+
+<figure>
+<img src="../uploads/Main/UI_ScrollbarExample.png" alt="">
+</figure>
+
+<p>请参阅<a href="script-Scrollbar.html">滚动条</a>页面以了解有关使用滚动条组件的详细信息。</p>
+
+<h2>下拉选单 (Dropdown)</h2>
+
+<p>下拉选单有一个可供选择的选项列表。可为每个选项指定文本字符串和可选的图像，可在 Inspector 中进行此设置，也可从代码中进行动态设置。下拉选单有一个 <strong>OnValueChanged</strong> UnityEvent 用于定义当更改当前选择的选项时将执行的操作。</p>
+
+<figure>
+<img src="../uploads/Main/UI_DropdownExample.png" alt="">
+</figure>
+
+<p>请参阅<a href="script-Dropdown.html">下拉选单</a>页面以了解有关使用下拉选单组件的详细信息。</p>
+
+<h2>输入字段 (Input Field)</h2>
+
+<p>输入字段用于使<a href="script-Text.html">文本元素</a>的文本可由用户编辑。输入字段有一个 UnityEvent 用于定义当更改文本内容时将执行的操作，另一个用于定义用户完成编辑后将执行的操作。</p>
+
+<figure>
+<img src="../uploads/Main/UI_InputFieldExample.png" alt="">
+</figure>
+
+<p>请参阅<a href="script-InputField.html">输入字段</a>页面以了解有关使用输入字段 (Input Field) 组件的详细信息。</p>
+
+<h2>滚动矩形/滚动视图 (Scroll Rect/Scroll View)</h2>
+
+<p>当占用大量空间的内容需要在小区域中显示时，可使用滚动矩形。滚动矩形提供了滚动此内容的功能。</p>
+
+<p>通常情况下，滚动矩形与<a href="script-Mask.html">遮罩 (Mask)</a> 相结合来创建滚动视图，在产生的视图中只有滚动矩形内的可滚动内容为可见状态。此外，滚动矩形还可与一个或两个可拖动以便水平或垂直滚动的<a href="script-Scrollbar.html">滚动条 (Scrollbar)</a> 组合使用。</p>
+
+<figure>
+<img src="../uploads/Main/UI_ScrollRectExample.png" alt="">
+</figure>
+
+<p>请参阅<a href="script-ScrollRect.html">滚动矩形</a>页面以了解有关使用滚动矩形组件的详细信息。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIVisualComponents.html"></a></span><div class="tip">可视组件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UIAnimationIntegration.html"></a></span><div class="tip">动画集成</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

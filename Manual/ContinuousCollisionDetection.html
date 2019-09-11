@@ -1,0 +1,245 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Continuous collision detection (CCD) - Unity Manual">
+<title>Continuous collision detection (CCD) - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/SpeculativeCCD1.gif">
+<meta name="description" content="CCD ensures that fast-moving bodies collide with objects instead of passing, or tunnelling, through those objects. Unity provides the following CCD methods:">
+<meta property="og:description" content="CCD ensures that fast-moving bodies collide with objects instead of passing, or tunnelling, through those objects. Unity provides the following CCD methods:">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'ContinuousCollisionDetection';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/ContinuousCollisionDetection.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/ContinuousCollisionDetection.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/ContinuousCollisionDetection.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/ContinuousCollisionDetection.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/ContinuousCollisionDetection.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/ContinuousCollisionDetection.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/ContinuousCollisionDetection.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/ContinuousCollisionDetection.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/ContinuousCollisionDetection.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/ContinuousCollisionDetection.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/ContinuousCollisionDetection.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/ContinuousCollisionDetection.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/ContinuousCollisionDetection.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/ContinuousCollisionDetection.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/ContinuousCollisionDetection.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/ContinuousCollisionDetection.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/ContinuousCollisionDetection.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/ContinuousCollisionDetection.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/ContinuousCollisionDetection.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/ContinuousCollisionDetection.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/ContinuousCollisionDetection.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/ContinuousCollisionDetection.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/ContinuousCollisionDetection.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/ContinuousCollisionDetection.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="PhysicsSection.html">物理系统</a></li>
+<li><a href="PhysicsOverview.html">物理系统概述</a></li>
+<li>Continuous collision detection (CCD)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="CharacterControllers.html"></a></span><div class="tip">角色控制器</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PhysicsDebugVisualization.html"></a></span><div class="tip">物理调试可视化</div>
+</div>
+</div></div>
+<h1>Continuous collision detection (CCD)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>CCD ensures that fast-moving bodies collide with objects instead of passing, or tunnelling, through those objects. Unity provides the following CCD methods:</p>
+
+<ul>
+<li><a href="#sweep">Sweep-based CCD</a></li>
+<li><a href="#speculative">Speculative CCD</a></li>
+</ul>
+
+<p>To use sweep-based CCD, select a <a href="class-Rigidbody.html">RigidBody</a> in the Inspector window and set <strong>Collision Detection</strong> to <strong>Continuous</strong> or <strong>Continuous Dynamic</strong>. For speculative CCD, set <strong>Collision Detection</strong> to <strong>Continuous Speculative</strong>.</p>
+
+<p><a name="sweep"></a></p>
+
+<h2>Sweep-based CCD</h2>
+
+<p>Sweep-based CCD uses a Time Of Impact (TOI) algorithm to compute potential collisions for an object by sweeping its forward trajectory using its current velocity. If there are contacts along the object’s moving direction, the algorithm computes the time of impact and moves the object until that time. The algorithm can perform sub steps from that time onwards, computing the velocity after TOI then re-sweep, at the expense of more CPU cycles.</p>
+
+<p>However, because this method relies on linear sweep, it ignores the body’s angular motion, which can cause tunnelling effects when objects are rotating at speed. For example, the flipper in a pinball machine is fixed at one end and rotates around a fixed point. The flipper only has angular motion and no linear motion. Therefore, it can easily miss the collision with the pinball:</p>
+
+<figure>
+<img src="../uploads/Main/SpeculativeCCD1.gif" alt="A thin stick GameObject with its Continuous Dynamic property enabled. When rotating quickly around the pivot point, the stick doesn’t make contact with the sphere.">
+<figcaption>A thin stick GameObject with its Continuous Dynamic property enabled. When rotating quickly around the pivot point, the stick doesn’t make contact with the sphere.</figcaption>
+</figure>
+
+<p>Another issue with this method is performance. If you have a large number of high-speed objects with CCD in close proximity, the CCD overhead increases quickly because of the extra sweeping, and the physics engine has to perform more CCD sub-steps.</p>
+
+<p><a name="speculative"></a></p>
+
+<h2>Speculative CCD</h2>
+
+<p>Speculative CCD works by increasing an object’s broad-phase axis-aligned minimum bounding box (AABB), based on the object’s linear and angular motion. The algorithm is speculative because it picks all potential contacts during the next physics step. All contacts are then fed into the solver, which makes sure that all contact constraints are satisfied so that an object does not tunnel through any collision.</p>
+
+<p>The following diagram shows how a sphere moving from <strong>t0</strong> could have an expected position at <strong>t1</strong> if there were no walls in its path. By inflating the AABB with its target pose, the speculative algorithm picks up two contacts with the <strong>n1</strong> and <strong>n2</strong> normals. The algorithm then tells the solver to respect those contacts so that the sphere doesn’t tunnel through the walls.</p>
+
+<figure>
+<img src="../uploads/Main/SpeculativeCCD2.png" alt="">
+</figure>
+
+<p>Inflated AABB based on current velocity helps detect all potential contacts along the moving trajectory, which enables the solver to prevent tunnelling.</p>
+
+<p>Speculative CCD is generally cheaper than the sweep-based method because contacts are only computed during the collision detection phase, not during the solving and integrating phase. Also, because Speculative CCD expands the broad-phase AABB based on the object’s linear and angular motion, it finds the contacts that sweep-based CCD can miss.</p>
+
+<figure>
+<img src="../uploads/Main/SpeculativeCCD3.gif" alt="A thin stick GameObject with the Speculative CCD enabled. When rotating quickly around the pivot point, the stick makes contact with the sphere and a collision occurs.">
+<figcaption>A thin stick GameObject with the Speculative CCD enabled. When rotating quickly around the pivot point, the stick makes contact with the sphere and a collision occurs.</figcaption>
+</figure>
+
+<p>However, speculative CCD can cause a ghost collision, where an object’s motion is affected by a speculative contact point when it shouldn’t be. This is because speculative CCD collects all potential contacts based on the closest point algorithm, so the contact normal is less accurate. This can often make high speed objects slide along tessellated collision features and jump up, even though they shouldn’t. For example, in the following diagram, a sphere starts at <strong>t0</strong> and moves horizontally towards the right, with a predicted position at <strong>t1</strong> after integration. An inflated AABB overlaps the boxes <strong>b0</strong> and <strong>b1</strong>, and the CCD yields two speculative contacts at <strong>c0</strong> and <strong>c1</strong>. Because speculative CCD generates contacts using the closest point algorithm, <strong>c0</strong> has a very inclined normal, which appears to be a ramp to the solver.</p>
+
+<figure>
+<img src="../uploads/Main/SpeculativeCCD4.png" alt="The solver assumes that the contact point at c0 is a ramp because the closest point algorithm generated an inaccurate contact normal">
+<figcaption>The solver assumes that the contact point at <strong>c0</strong> is a ramp because the closest point algorithm generated an inaccurate contact normal</figcaption>
+</figure>
+
+<p>Such a very inclined normal causes <strong>t1</strong> to jump upward after integration, rather than moving straight forward:</p>
+
+<figure>
+<img src="../uploads/Main/SpeculativeCCD5.gif" alt="A ghost collision generated at c0 causes the sphere to erroneously jump up instead of move straight forward">
+<figcaption>A ghost collision generated at c0 causes the sphere to erroneously jump up instead of move straight forward</figcaption>
+</figure>
+
+<p>Speculative CCD can also cause tunneling because speculative contacts are only computed during the collision detection phase. During contact solving, if an object gains too much energy from the solver, it may end up outside the initial inflated AABB after integration. If there are collisions just outside the AABB, the object will tunnel right though.</p>
+
+<p>For example, the following diagram shows a sphere is moving left from <strong>t0</strong> while a stick is rotating clockwise. If the sphere gains too much energy from the impact, it may end up exiting the inflated AABB (red dotted rectangle) at <strong>t1</strong>. If there are collisions just outside the AABB, as shown by the blue box below, the sphere may end up tunneling right through it. This is because the solver only computes contacts inside the inflated AABB, and collision detection isn’t performed during the solving and integrating phase.</p>
+
+<figure>
+<img src="../uploads/Main/SpeculativeCCD6.png" alt="The sphere with inflated AABB using speculative CCD, which only computes contacts during the collision detection phase, so tunnelling may occur">
+<figcaption>The sphere with inflated AABB using speculative CCD, which only computes contacts during the collision detection phase, so tunnelling may occur</figcaption>
+</figure>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–10–12 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Speculative collision detection added in <a href="https://docs.unity3d.com/2018.3/Documentation/Manual/30_search.html?q=newin20183">2018.3</a> <span class="search-words">NewIn20183</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="CharacterControllers.html"></a></span><div class="tip">角色控制器</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PhysicsDebugVisualization.html"></a></span><div class="tip">物理调试可视化</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

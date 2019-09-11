@@ -1,0 +1,278 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="全局光照 UV - Unity Manual">
+<title>全局光照 UV - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/LightingGiUvs-0.jpg">
+<meta name="description" content="有两套 GI 光照贴图：__烘焙 (Baked)__ 和__实时 (Realtime)__。决定要使用哪套光照贴图取决于您使用的是环境光照还是特定光源：">
+<meta property="og:description" content="有两套 GI 光照贴图：__烘焙 (Baked)__ 和__实时 (Realtime)__。决定要使用哪套光照贴图取决于您使用的是环境光照还是特定光源：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'LightingGiUvs';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/LightingGiUvs.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/LightingGiUvs.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/LightingGiUvs.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/LightingGiUvs.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/LightingGiUvs.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/LightingGiUvs.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/LightingGiUvs.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/LightingGiUvs.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/LightingGiUvs.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/LightingGiUvs.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/LightingGiUvs.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/LightingGiUvs.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/LightingGiUvs.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/LightingGiUvs.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/LightingGiUvs.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/LightingGiUvs.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/LightingGiUvs.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/LightingGiUvs.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/LightingGiUvs.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/LightingGiUvs.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/LightingGiUvs.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/LightingGiUvs.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/LightingGiUvs.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/LightingGiUvs.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="LightingOverview.html">光照</a></li>
+<li><a href="GIIntro.html">全局光照</a></li>
+<li>全局光照 UV</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MetaPass.html"></a></span><div class="tip">材质属性和 GI 系统</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightingGiUvs-ImportingFromMaya.html"></a></span><div class="tip">Importing UVs from Autodesk® Maya® to Unity</div>
+</div>
+</div></div>
+<h1>全局光照 UV</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>有两套 GI 光照贴图：__烘焙 (Baked)__ 和__实时 (Realtime)__。决定要使用哪套光照贴图取决于您使用的是环境光照还是特定光源：</p>
+
+<ul>
+<li><p><a href="GlobalIllumination.html">Global illumination</a> (environment lighting) can be set to <strong>Realtime</strong> or <strong>Baked</strong>. Go to <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong> and choose an option from the <strong>Ambient GI</strong> drop-down menu.</p></li>
+<li><p><a href="class-Light.html">Lights</a> 可以设置为 <strong>Realtime</strong>、<strong>Baked</strong> 或 <strong>Mixed</strong>。前往 Inspector 窗口，然后从 <strong>Baking</strong> 下拉菜单中选择一个选项。</p></li>
+<li><p>材质包含发光控件，这些控件可以设置为 <strong>Realtime</strong> 或 <strong>Baked</strong>。请参阅有关<a href="StandardShaderMaterialParameterEmission.html">标准着色器材质发光参数</a>的文档以了解更多信息。</p></li>
+</ul>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>光照贴图</strong></th>
+	<th style="text-align:left;"><strong>属性</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>烘焙 (Baked)</strong></td>
+	<td style="text-align:left;">烘焙光照贴图主要用于在运行时一直不变的光源（例如，点亮的街灯），因此在光照贴图中存储为静态渲染。功能包括直接光照、间接光照和环境光遮挡。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>实时 (Realtime)</strong></td>
+	<td style="text-align:left;">实时光照贴图主要用于在运行期间有动画效果的光源（例如，闪烁的街灯），因此需要实时渲染。功能仅包括间接光照，通常分辨率较低。直射光不在光照贴图中，而是实时渲染。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>混合 (Mixed)</strong></td>
+	<td style="text-align:left;">将光照设置为“混合”模式时，会产生烘焙光照贴图，同时还会为非静态对象提供直接的实时光照。</td>
+</tr>
+</tbody>
+</table>
+
+<p>您可以使用其中一个光照贴图或同时使用这些光照贴图来对场景进行光照。您的选择决定了光源影响因素和产生的 GI 将添加到哪些光照贴图。</p>
+
+<h2>可视化 UV</h2>
+
+<p>It is important to be able to view the UVs that are being used, and Unity has a visualization tool to help you with this. First, open the Lighting window (menu: <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong>) and tick the <strong>Auto</strong> checkbox at the bottom. This ensures that your bake and precompute are up-to-date, and outputs the data that is needed to view the UVs. Wait for the process to finish (this can take some time for large or complex Scenes).</p>
+
+<h3>可视化实时 UV</h3>
+
+<p>要查看预计算实时 GI UV，请执行以下操作：</p>
+
+<ul>
+<li>在场景中选定一个包含网格渲染器的游戏对象</li>
+<li>打开 Lighting 窗口，然后选择 <strong>Object</strong> 选项卡</li>
+<li>在 <strong>Preview</strong> 区域中，从下拉选单中选择 <strong>Charting</strong>。
+<img src="../uploads/Main/LightingGiUvs-0.jpg" alt="">
+</li>
+</ul>
+
+<p>这将显示所选网格的实例的实时光照贴图的 UV 布局。</p>
+
+<ul>
+<li>图表由预览中的不同颜色区域表示（显示在上图中的右侧）。</li>
+<li>所选实例的 UV 放置在图表上，同时网格的线框表示了相应的游戏对象。</li>
+<li>深灰色纹理像素显示了光照贴图的未使用区域。</li>
+</ul>
+
+<p>可以将多个实例打包到实时光照贴图中，因此您看到的某些图表可能实际上属于其他游戏对象。</p>
+
+<p><strong>注意：</strong>实时和烘焙光照贴图之间的实例分组没有直接对应关系。同一实时光照贴图中的两个实例也可能位于两个不同的烘焙光照贴图中，反之亦然。</p>
+
+<h3>可视化烘焙 UV</h3>
+
+<p>要查看烘焙 UV，请执行以下操作：</p>
+
+<ul>
+<li>选择一个实例。</li>
+<li>Open the Lighting window (menu: <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong>) and select the <strong>Object </strong>tab.</li>
+<li>在 <strong>Preview</strong> 区域中，从下拉选单中选择 <strong>Baked Intensity</strong>。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/LightingGiUvs-1.jpg" alt="">
+</figure>
+
+<p>如您所见，烘焙 UV 与预计算实时 UV 大不相同。这是因为烘焙和预计算实时 UV 的要求不同。</p>
+
+<h2>实时 UV</h2>
+
+<p>必须注意，即使勾选 __Preserve UVs__，也无法使预计算实时 GI 获得与烘焙 GI 相同的 UV。</p>
+
+<p>如果可以，您会在不起眼的地方看到明显锯齿（例如浅色或深色边缘）。这是因为实时光照贴图的分辨率有意被降低，这样实时更新它们才变得切实可行。这不会影响图形质量，因为它只存储通常为低频率（也就是说通常情况下不会突然改变强度或细节图案）的间接光照。直射光和阴影将使用标准实时光照和阴影贴图单独渲染。直射光通常频率更高（也就是说它更可能突然改变强度或细节图案，例如阴影的锐边），因此需要更高分辨率的光照贴图来获取这些信息。</p>
+
+<p>当图表共享纹理像素时，低分辨率光照贴图会产生渗色问题。这会对光照质量产生不利影响，但可以通过重新打包 UV 图表来包含它们周围的半像素边界，从而解决此问题。这样，即便使用双线性插值，也绝不要<em>跨越</em>图表（在细节最高的 Mip 上）进行采样。采用保证半像素边界的图表的另一个好处是，您可以将图表放在彼此旁边，从而节省光照贴图空间。</p>
+
+<figure>
+<img src="../uploads/Main/LightingGiUvs-2.png" alt="">
+</figure>
+
+<p>总之，用于预计算实时 GI 光照贴图的 UV 始终会重新打包。</p>
+
+<p>由于重新打包可确保图表周围的半像素边界，因此 UV 取决于实例的比例和光照贴图分辨率。如果放大 UV 以获得更高分辨率的光照贴图，则无法保证此半像素边界。UV 单独打包，并会考虑实例的比例和分辨率。因此，实时 UV 与<em>每个实例</em>有关。请注意，如果 1000 个对象具有相同比例和分辨率，则这些对象共享 UV。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–07–04 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">2017–07–04 仅更新文档，Unity 功能无变化</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MetaPass.html"></a></span><div class="tip">材质属性和 GI 系统</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightingGiUvs-ImportingFromMaya.html"></a></span><div class="tip">Importing UVs from Autodesk® Maya® to Unity</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

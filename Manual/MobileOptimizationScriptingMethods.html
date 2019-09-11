@@ -1,0 +1,252 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="脚本和游戏方法 - Unity Manual">
+<title>脚本和游戏方法 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/MobileOptimizationScriptingMethods-0.jpg">
+<meta name="description" content="本部分将演示移动平台开发者编写代码和构建游戏结构以便快速运行的方法。这里的核心思想是游戏设计和优化并不是真正独立的过程；在设计游戏时做出的决定可以使游戏既好玩又快速。">
+<meta property="og:description" content="本部分将演示移动平台开发者编写代码和构建游戏结构以便快速运行的方法。这里的核心思想是游戏设计和优化并不是真正独立的过程；在设计游戏时做出的决定可以使游戏既好玩又快速。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'MobileOptimizationScriptingMethods';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/MobileOptimizationScriptingMethods.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/MobileOptimizationScriptingMethods.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/MobileOptimizationScriptingMethods.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/MobileOptimizationScriptingMethods.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/MobileOptimizationScriptingMethods.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/MobileOptimizationScriptingMethods.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/MobileOptimizationScriptingMethods.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/MobileOptimizationScriptingMethods.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/MobileOptimizationScriptingMethods.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/MobileOptimizationScriptingMethods.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/MobileOptimizationScriptingMethods.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/MobileOptimizationScriptingMethods.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/MobileOptimizationScriptingMethods.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/MobileOptimizationScriptingMethods.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/MobileOptimizationScriptingMethods.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/MobileOptimizationScriptingMethods.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/MobileOptimizationScriptingMethods.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/MobileOptimizationScriptingMethods.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/MobileOptimizationScriptingMethods.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/MobileOptimizationScriptingMethods.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/MobileOptimizationScriptingMethods.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/MobileOptimizationScriptingMethods.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/MobileOptimizationScriptingMethods.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/MobileOptimizationScriptingMethods.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
+<li><a href="MobileDeveloperChecklist.html">移动平台开发者检查清单</a></li>
+<li><a href="MobileOptimizationPracticalGuide.html">移动平台优化实用指南</a></li>
+<li>脚本和游戏方法</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MobileOptimizationGraphicsMethods.html"></a></span><div class="tip">图形方法</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="MobileOptimizationPracticalRenderingOptimizations.html"></a></span><div class="tip">渲染优化</div>
+</div>
+</div></div>
+<h1>脚本和游戏方法</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>本部分将演示移动平台开发者编写代码和构建游戏结构以便快速运行的方法。这里的核心思想是游戏设计和优化并不是真正独立的过程；在设计游戏时做出的决定可以使游戏既好玩又快速。</p>
+
+<h2>一个老例子</h2>
+
+<figure>
+<img src="../uploads/Main/MobileOptimizationScriptingMethods-0.jpg" alt="">
+</figure>
+
+<p>您可能还记得一些老游戏：玩家一次只能在屏幕上玩一回，而再装弹速度由子弹是否击中而由非计时器进行控制。这种技术称为<strong>对象池</strong>，它能简化内存管理，使程序运行更流畅。</p>
+
+<p>太空入侵者游戏的创作者只能使用少量的 RAM，且必须确保程序需要分配的量不得超过可用量。如果他们让玩家每秒射击一次，并提供一个能量块使再装弹时间减少到半秒，那么他们必须确保有足够的内存空间来分配大量飞弹，以防玩家以尽可能快的速度射击并需要让所有射击效果保留尽可能长的时间。这种情况可能会给他们带来问题，所以取而代之的做法是仅分配一个飞弹并就此作罢。一旦飞弹销毁，便简单地将其停用，然后再次射击时对其重新定位并激活。但是，此飞弹始终存在于内存中的相同空间内，也不必移动或不断删除和重建飞弹。</p>
+
+<h3>进行优化还是寻求游戏瑰宝？</h3>
+
+<p>这样的游戏不太真实，但却很有趣。当外星入侵者接近地面时，紧张感在一个高潮时刻释放，类似于电影或文学中的高潮。入侵者的接近距离为熟练的玩家提供了近乎瞬时的再装弹时间，让他们在完美的时间内按压射击按键，奇迹般地保卫地球。出色的游戏设计介于交互式叙事与背景驱动技术之间的一个奇异空间中。很难规划出这样优秀、有趣、高效的游戏，因为代码逻辑和用户交互是截然不同而又非常挑剔的两个方面，将它们结合起来合成新鲜有趣的成果需要大量的思考和实验。</p>
+
+<p>可能无法在交互方面和同时使用移动端硬件方面进行游戏的全方位规划。让两者和谐碰撞的“瑰宝”更有可能在您进行实验时突然闪现。但是，充分了解代码在计划部署的硬件上的运行情况将有所帮助。如果要查看为何对象池更好的详细技术说明，并了解内存分配，请参阅我们的<a href="MobileOptimizationPracticalScriptingOptimizations.html">脚本优化</a>页面。</p>
+
+<h2>X 会在移动设备上快速运行吗？</h2>
+
+<p>假设您要开始进行游戏开发，希望同时通过大量操作和华丽的外观给玩家留下深刻印象。如何规划这些东西？如何知道限制在哪里？比如在游戏方面有多少金币？多少僵尸？多少对手车辆？这一切都取决于如何对游戏进行编码。</p>
+
+<p>通常情况下，如果以简单方式编写游戏代码，或者使用最常规和最通用的方式，那么很快就会遇到性能问题。越依赖特定结构和技巧来运行游戏，视野就会越开阔，您就可以在屏幕上塞入更多的东西。</p>
+
+<h3>简单且通用，但速度缓慢</h3>
+
+<ul>
+<li>在 2D 游戏中，刚体仅限于 2 个维度。</li>
+<li>飞弹上的刚体。</li>
+<li>大量使用 Instantiate 和 Destroy。</li>
+<li>可收集物或角色的大量单独 3D 对象。</li>
+<li>每帧执行计算。</li>
+<li>为 GUI 或 HUD 使用 OnGUI。</li>
+</ul>
+
+<h3>复杂且受限，但速度更快</h3>
+
+<ul>
+<li>为 2D 游戏编写您自己的物理代码。</li>
+<li>自己处理飞弹的碰撞检测。</li>
+<li>使用对象池而不是 Instantiate 和 Destroy。</li>
+<li>在粒子上使用动画精灵来表示简单对象。</li>
+<li>每隔几帧执行高成本的计算并将结果缓存起来。</li>
+<li>自定义 GUI 解决方案。</li>
+</ul>
+
+<h2>示例</h2>
+
+<figure>
+<img src="../uploads/Main/MobileOptimizationScriptingMethods-1.jpg" alt="">
+</figure>
+
+<h3>数百个正在旋转、动态光照的可收集硬币一次性出现在屏幕上</h3>
+
+<ul>
+<li>不应：将每个硬币作为一个独立对象，为每个对象添加刚体和脚本来对其进行旋转并使其被拾取。</li>
+<li>应当：将大量硬币作为一个具有动画纹理的粒子系统，通过单个脚本对所有硬币进行碰撞测试，并根据与光源的距离设置硬币颜色。
+
+<ul>
+<li>此示例在“脚本优化”页面中实现。</li>
+</ul>
+</li>
+</ul>
+
+<h3>定制的软体模拟</h3>
+
+<ul>
+<li>不应：世界中到处都是枕头，您可以将它们乱扔并堆成一堆。</li>
+<li>应当：角色是一个枕头，只有其中一个枕头，其所处的情况有一定的可预测性（仅与球体和轴对齐立方体进行碰撞）。编写的也许并非功能齐全的软体模拟，但能给人带来非常深刻的印象并且运行速度很快。</li>
+</ul>
+
+<h3>30 个敌人角色同时向玩家射击</h3>
+
+<ul>
+<li>不应：每个敌人都有自己的蒙皮网格，武器为单独对象，并在每次射击时实例化基于刚体的飞弹。每个敌人都会在每帧都运行的复杂 AI 脚本中考虑所有同胞的状态。</li>
+<li>应当：大多数敌人都很远，由单个精灵表示，即敌人为 2D 且无论如何仅几个精灵。每个敌人子弹都由同一个粒子系统绘制而来，并由一个只做基本物理操作的脚本进行模拟。每个敌人根据其区域内其他敌人的状态每秒更新两次其 AI 状态。</li>
+</ul>
+
+<h2>脚本优化的方式和原因</h2>
+
+<p>请参阅<a href="MobileOptimizationPracticalScriptingOptimizations.html">优化脚本</a>页面。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MobileOptimizationGraphicsMethods.html"></a></span><div class="tip">图形方法</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="MobileOptimizationPracticalRenderingOptimizations.html"></a></span><div class="tip">渲染优化</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

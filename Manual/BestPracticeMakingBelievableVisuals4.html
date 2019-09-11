@@ -1,0 +1,311 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Modeling - Unity Manual">
+<title>Modeling - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/BelievableVisualsInvisibleSurfaces.jpg">
+<meta name="description" content="在建模之前提前制定计划非常重要。快速制作的模型在预产期间或用于粗制空间时都表现良好，但在需要最终确定资源来制作适当场景时，请注意以下几点：">
+<meta property="og:description" content="在建模之前提前制定计划非常重要。快速制作的模型在预产期间或用于粗制空间时都表现良好，但在需要最终确定资源来制作适当场景时，请注意以下几点：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'BestPracticeMakingBelievableVisuals4';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/BestPracticeMakingBelievableVisuals4.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/BestPracticeMakingBelievableVisuals4.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/BestPracticeMakingBelievableVisuals4.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/BestPracticeMakingBelievableVisuals4.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/BestPracticeMakingBelievableVisuals4.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/BestPracticeMakingBelievableVisuals4.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/BestPracticeMakingBelievableVisuals4.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/BestPracticeMakingBelievableVisuals4.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/BestPracticeMakingBelievableVisuals4.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/BestPracticeMakingBelievableVisuals4.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/BestPracticeMakingBelievableVisuals4.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/BestPracticeMakingBelievableVisuals4.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/BestPracticeMakingBelievableVisuals4.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/BestPracticeMakingBelievableVisuals4.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/BestPracticeMakingBelievableVisuals4.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/BestPracticeMakingBelievableVisuals4.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/BestPracticeMakingBelievableVisuals4.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/BestPracticeMakingBelievableVisuals4.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/BestPracticeMakingBelievableVisuals4.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/BestPracticeMakingBelievableVisuals4.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/BestPracticeMakingBelievableVisuals4.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/BestPracticeMakingBelievableVisuals4.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/BestPracticeMakingBelievableVisuals4.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/BestPracticeMakingBelievableVisuals4.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="BestPracticeGuides.html">最佳实践指南</a></li>
+<li><a href="BestPracticeMakingBelievableVisuals.html">在 Unity 中制作可信的视觉效果</a></li>
+<li>Modeling</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeMakingBelievableVisuals3.html"></a></span><div class="tip">光照策略</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeMakingBelievableVisuals5.html"></a></span><div class="tip">着色</div>
+</div>
+</div></div>
+<h1>Modeling</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>在建模之前提前制定计划非常重要。快速制作的模型在预产期间或用于粗制空间时都表现良好，但在需要最终确定资源来制作适当场景时，请注意以下几点：</p>
+
+<ul>
+<li><a href="#polygon">每个多边形都至关重要</a></li>
+<li><a href="#GameObject">游戏对象对光照的影响</a></li>
+<li><a href="#modelUV">模型 UV 布局策略</a></li>
+<li><a href="#geometry">几何体细节</a></li>
+<li><a href="#smoothingGroups">Smoothing groups (Hard/soft edges of polygons)</a></li>
+</ul>
+
+<p><a name="polygon"></a> </p>
+
+<h2>每个多边形都至关重要</h2>
+
+<p>尽管现代硬件比以往任何时候都更强大，但在场景中使用简单几何体总是有好处的。对于实时设置而言，不必要的曲面细分和复杂几何体是很难管理的，并可能会影响性能和使用不必要的内存。以下示例演示了玩家从未见过的几何体如何浪费光照贴图和过度绘制等资源并导致漏光：</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsInvisibleSurfaces.jpg" alt="场景中突出显示了不必要的可见表面">
+<figcaption>场景中突出显示了不必要的可见表面</figcaption>
+</figure>
+
+<p><a name="GameObject"></a> </p>
+
+<h2>游戏对象对光照的影响</h2>
+
+<p>如果要将烘焙光照或实时 GI（全局光照）与光照探针结合使用，则需要确定游戏对象对场景中的光照有影响，还是仅接收场景中的间接/烘焙光照。</p>
+
+<h3>对光照有影响的游戏对象</h3>
+
+<p>要设置游戏对象来影响光照，请确保在 Inspector 窗口中选中__Lightmap Static__。这样可以提供更简单和更平滑的表面区域，而由于在光照贴图纹理的空间使用效率方面的优势，这些区域将带来更好的间接反弹/烘焙光照。请注意：</p>
+
+<ul>
+<li>如果自动光照贴图 UV 提供效率低下的图表或产生不合适的接缝，则可能需要在进行光照烘焙时为几何体创作 UV2。</li>
+<li>您可能需要为几何体创建 UV3 以便在实时 GI 中获得有效结果。</li>
+</ul>
+
+<p>有时，在实时 GI 中，您可以简化网格的 UV 以使几何体显著减少使用的资源，并获得最佳效果和更少瑕疵。</p>
+
+<h3>仅接收场景光照的游戏对象</h3>
+
+<p>当游戏对象仅接收来自实时光照和光照探针的光照时，几何体没有光照贴图 UV 限制。如果几何体很大，仍然需要特别注意几何体，因为单个光照探针可能无法正确照亮几何体，可能需要<a href="class-LightProbeProxyVolume.html">光照探针代理体 (Light Probe Proxy Volume) 组件</a>将多个探针光照定义拼接到一起。</p>
+
+<p>并非总是需要使用光照贴图或使用实时 GI 来处理非移动的游戏对象。如果游戏对象很小，或者不存在会反射大量光的表面，则可能不需要将其包含在光照贴图中。下面显示的长椅和栏杆就是很好的例子：</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsUVChart.jpg" alt="只有带 UV 图表的游戏对象才需要对间接光照产生影响">
+<figcaption>只有带 UV 图表的游戏对象才需要对间接光照产生影响</figcaption>
+</figure>
+
+<p><a name="modelUV"></a> </p>
+
+<h2>模型 UV 布局策略</h2>
+
+<p>UV 布局有助于在使用相同大小的内存进行法线贴图烘焙（通常为 UV1）、光照贴图烘焙 (UV2) 和实时光照贴图 (UV3) 时提高视觉品质，尤其适合具有不可平铺纹理的几何体。</p>
+
+<p>以下是制定 UV 布局策略时需要注意的一些提示：</p>
+
+<ul>
+<li>对于 UV1 图表，请在必要时才拆分 UV 壳，并尝试尽可能有效地调整 UV 图表布局，以防在法线贴图烘焙时浪费纹理空间。换句话说，无论您是否在纹理中添加细节，1024 正方形纹理均使用相同大小的内存。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsSmoothingGroup.jpg" alt="碎片占据整个纹理空间的示例，避免浪费空间">
+<figcaption>碎片占据整个纹理空间的示例，避免浪费空间</figcaption>
+</figure>
+
+<ul>
+<li>对于光照贴图 (UV2)，请尝试制作边框会接触但不重叠的完整光照贴图图表，以免光照烘焙中出现扩散或接缝。在 UV 图表/壳之间保持一致的比例对于在模型中均匀分布光照贴图纹理像素非常重要。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsSeamless.jpg" alt="在简单几何体上拆分的夸大光照贴图，演示了光照贴图接缝的问题">
+<figcaption>在简单几何体上拆分的夸大光照贴图，演示了光照贴图接缝的问题</figcaption>
+</figure>
+
+<ul>
+<li><p>对于实时 GI (UV3)，应为大型区域（表示模型中的大型表面）的 UV 空间设定高优先级，以便减少内存使用量并避免接缝。在许多情况下，模型中的自动 UV 设置确实可以帮助优化图表。有关实时 GI 的图表优化的深入信息，请参阅 Unity 提供的<a href="https://unity3d.com/learn/tutorials/topics/graphics/optimizing-unitys-auto-unwrapping?playlist=17102">优化 Unity 的自动展开</a>教程。</p></li>
+<li><p>对于不需要光照贴图的游戏对象，除非自定义着色器需要，否则不要创作其他 UV 以免浪费内存和时间。</p></li>
+</ul>
+
+<p><a name="geometry"></a> </p>
+
+<h2>几何体细节</h2>
+
+<p>真实世界的游戏对象具有高度细节化特点。要创建实时几何体，您需要确定要在几何体中添加的细节，以及要在法线贴图和纹理中添加的细节。在为实时场景开发资源时，将复杂多边形烘焙到简单多边形法线贴图是很正常的。</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsGeometry.jpg" alt="从复杂多边形网格到简单多边形网格的烘焙切线空间法线贴图的示例">
+<figcaption>从复杂多边形网格到简单多边形网格的烘焙切线空间法线贴图的示例</figcaption>
+</figure>
+
+<p>需要记住的一个重要细节是游戏对象上的边缘获得高光的方式。在现实生活中很难找到具有非常锋利边缘、具有非倾斜边缘或没有详细边缘定义的物体。复制逼真的边缘效果可提高场景的可信度。</p>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsNormalMapSmooth.jpg" alt="法线贴图在与其他几何体相交的表面上提供流畅的高光">
+<figcaption>法线贴图在与其他几何体相交的表面上提供流畅的高光</figcaption>
+</figure>
+
+<p><a name="smoothingGroups"></a> </p>
+
+<h2>平滑组（多边形的硬/软边）</h2>
+
+<p>您可以使用适当的平滑组来提高模型和法线贴图的效率。以下是使用平滑组的一些提示：</p>
+
+<ul>
+<li>处理从复杂多边形到简单多边形的法线贴图烘焙时，请对平滑组使用简单配置而不是使用多个多面多边形。这是因为切线法线贴图需要在从简单多边形几何体上硬拆分表面法线时使拆分位置弯曲。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsLowHighPolygon.jpg" alt="一个法线贴图通过平滑弯曲简单多边形法线来模仿复杂多边形网格">
+<figcaption>一个法线贴图通过平滑弯曲简单多边形法线来模仿复杂多边形网格</figcaption>
+</figure>
+
+<ul>
+<li>
+<p>具有良好法线贴图的平滑多边形可节省顶点数，相当于渲染更高效的几何体。下面一个简单示例比较了以下设置：</p>
+
+<ul>
+<li><p>具有拆分平滑组的单个平面（等于 36 个顶点）。</p></li>
+<li><p>位于 1 个平滑组内的简单 18 三角平面（等于 16 个顶点）。</p></li>
+</ul>
+</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/BelievableVisualsVertexComparison.jpg" alt="">
+</figure>
+
+<p>单个平面和三角平面顶点数比较</p>
+
+<ul>
+<li>平滑多边形省去了光照贴图烘焙和实时 GI 中的图表拆分，带来更平滑的视觉效果。</li>
+</ul>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–03–21 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li><span class="page-history">在 Unity 2017.3 中添加了制作可信视觉效果最佳实践指南</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeMakingBelievableVisuals3.html"></a></span><div class="tip">光照策略</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeMakingBelievableVisuals5.html"></a></span><div class="tip">着色</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,545 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="从其他应用程序导出 - Unity Manual">
+<title>从其他应用程序导出 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/3dsMaxLightmapMaterial.png">
+<meta name="description" content="Note: This section provides information about proprietary file formats that use FBX conversion. However, there are two file formats that do not use FBX as an intermediary: SketchUp and SpeedTree. For more information about importing these file formats, see the SketchUp Settings and SpeedTree topics.">
+<meta property="og:description" content="Note: This section provides information about proprietary file formats that use FBX conversion. However, there are two file formats that do not use FBX as an intermediary: SketchUp and SpeedTree. For more information about importing these file formats, see the SketchUp Settings and SpeedTree topics.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'HOWTO-exportFBX';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/HOWTO-exportFBX.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/HOWTO-exportFBX.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/HOWTO-exportFBX.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/HOWTO-exportFBX.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/HOWTO-exportFBX.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/HOWTO-exportFBX.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/HOWTO-exportFBX.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/HOWTO-exportFBX.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/HOWTO-exportFBX.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/HOWTO-exportFBX.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/HOWTO-exportFBX.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/HOWTO-exportFBX.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/HOWTO-exportFBX.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/HOWTO-exportFBX.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/HOWTO-exportFBX.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/HOWTO-exportFBX.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/HOWTO-exportFBX.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/HOWTO-exportFBX.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/HOWTO-exportFBX.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/HOWTO-exportFBX.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/HOWTO-exportFBX.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/HOWTO-exportFBX.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/HOWTO-exportFBX.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/HOWTO-exportFBX.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="ImportingAssets.html">导入</a></li>
+<li>从其他应用程序导出</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="HOWTO-ImportObjectsFrom3DApps.html"></a></span><div class="tip">从其他应用程序导入时的限制</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UsingHumanoidChars.html"></a></span><div class="tip">人形资源准备</div>
+</div>
+</div></div>
+<h1>从其他应用程序导出</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><strong>Note:</strong> This section provides information about proprietary file formats that use FBX conversion. However, there are two file formats that do not use FBX as an intermediary: <a href="https://www.sketchup.com/">SketchUp</a> and <a href="https://store.speedtree.com/unity/">SpeedTree</a>. For more information about importing these file formats, see the <a href="HOWTO-ImportObjectSketchUp.html">SketchUp Settings</a> and <a href="SpeedTree.html">SpeedTree</a> topics. </p>
+
+<p>Unity 支持可能从许多 3D 建模应用程序导出的 FBX 文件。请遵循以下准则来确保获得最佳结果：</p>
+
+<p>1.<a href="#Select">选择</a>要在 3D 建模应用程序中导出的内容。
+2.<a href="#Prepare">准备</a>需要在 3D 建模应用程序中包含的内容。
+3.在导出之前检查 <a href="#Export">FBX 设置</a>。
+4.<a href="#Import">验证并导入</a> FBX 文件到 Unity。</p>
+
+<p>In addition to these generation guidelines about exporting from 3d modeling applications, some 3d modeling applications have more specific information under these sections:</p>
+
+<ul>
+<li><a href="#Maya">Autodesk® Maya®</a></li>
+<li><a href="#Cinema4D">MAXON Cinema 4D</a></li>
+<li><a href="#Max">Autodesk® 3ds Max®</a></li>
+<li><a href="#LightWave">NewTek LightWave</a></li>
+</ul>
+
+<p><a name="Select"></a> </p>
+
+<h2>选择要导出的内容</h2>
+
+<p>对于想导出的内容：有些场景对象必不可少，而其他可能不必要。
+应用程序通常允许导出<strong>选定对象</strong>或<strong>整个场景</strong>。
+可以通过仅保留基本对象来优化 Unity 中的数据。</p>
+
+<p>如果选择仅导出场景中的特定对象，则可以：</p>
+
+<ul>
+<li>仅导出<strong>选定对象</strong>（如果应用程序支持此功能）。</li>
+<li>从场景中删除不需要的数据并导出<strong>整个场景</strong>。</li>
+<li>制作预设或自定义场景导出器以自动化或简化选择导出过程。</li>
+</ul>
+
+<p><a name="Prepare"></a> </p>
+
+<h2>准备需要包含的内容</h2>
+
+<p>根据以下注意事项准备要导出的资源：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>对象：</strong></th>
+	<th style="text-align:left;"><strong>准备：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>网格 (Meshes)</strong></td>
+	<td style="text-align:left;">必须将所有 NURBS、NURMS、样条曲线、面片和细分曲面转换为多边形（三角形剖分或四边形剖分）</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>动画 (Animation)</strong></td>
+	<td style="text-align:left;">选择正确的骨架。检查帧率。检查动画长度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>混合形状 (Blend Shapes)</strong> 或__变形 (Morphing)<strong>|Make sure your Blend Shapes or Morph targets are assigned. Set up the export Mesh appropriately.|
+|<strong>Bake deformers</strong>|Make sure that you bake deformers onto your Model before exporting to FBX. For example, if you are exporting a complex rig from Maya, you can <a href="#bake-deformers">bake the deformation onto skin weights</a> before you export the Model to FBX.|
+|</strong>纹理 (Textures)<strong>|确保您的纹理来自 Unity 项目，或者将它们复制到 Unity 项目中的名为 <code>textures</code> 的文件夹。<br><br><strong>注意：</strong>建议不要使用 </strong>Embed Media__ 选项在 FBX 文件中嵌入纹理。在使用纹理之前必须提取纹理，因此嵌入它们只会导致项目出现不必要的臃肿问题并减慢导入过程。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>平滑 (Smoothing)</strong></td>
+	<td style="text-align:left;">Verify any smoothing groups and smooth Mesh settings.<br><br><strong>Important:</strong> Importing blendshape normals requires having smoothing groups in the FBX file.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Export"></a> </p>
+
+<h2>设置 FBX 导出选项</h2>
+
+<p>检查 FBX 导出设置：</p>
+
+<ul>
+<li>检查 3D 建模应用程序的导出对话框中的每项设置，以便了解与 Unity 中的 FBX 导入设置的匹配情况。</li>
+<li>根据需要选择是否导出动画 (Animation)、变形 (Deformations)、皮肤 (Skins)、变体 (Morphs)。</li>
+<li>节点、标记及其变换可以导出到 Unity。</li>
+<li>选择要导入 Unity 的任何摄像机 (Cameras)、光照 (Lights) 和可见性 (Visibility) 设置。</li>
+<li>尽可能使用<a href="https://www.autodesk.com/products/fbx/overview">最新版本的 FBX</a>。Autodesk 会定期更新其 FBX 安装程序。</li>
+<li>确保在将文件导入 Unity 时使用的 FBX 版本与从 3D 建模应用程序中导出时使用的版本相同。使用不同版本的软件可能产生意想不到的结果。</li>
+</ul>
+
+<p><a name="Import"></a> </p>
+
+<h2>验证并导入到 Unity</h2>
+
+<p>在将 FBX 文件导入到 Unity 之前：</p>
+
+<p>1.验证导出的文件的大小。对文件大小执行完整性检查（例如 &gt;10kb？）。</p>
+
+<p>2.将 FBX 文件重新导入到新场景中，导回到用于生成该文件的 3D 建模软件中。检查并确保能正常工作。</p>
+
+<p>要将文件导入 Unity，请遵循有关<a href="ImportingAssets.html">导入操作</a>的说明，务必记住您在 3D 建模软件中的导出选项设置。</p>
+
+<p><a name="Scaling"></a></p>
+
+<h2>Scaling factors</h2>
+
+<p>Unity’s physics and lighting systems expect <strong>1</strong> meter in the game world to be <strong>1</strong> unit in the imported file.</p>
+
+<p>The defaults for different 3D packages are as follows:</p>
+
+<ul>
+<li>.fbx, .max, .jas, .c4d = <strong>0.01</strong>
+</li>
+<li>.mb, .ma, .lxo, .dxf, .blend, .dae = <strong>1</strong>
+</li>
+<li>.3ds = <strong>0.1</strong>
+</li>
+</ul>
+
+<p>When importing Model files into Unity from a 3D modeling application with a different scaling factor, you can convert the file units to use the Unity scale by <a href="FBXImporter-Model.html">enabling the <strong>Convert Units</strong> option</a>.</p>
+
+<h2>特定 3D 建模应用程序中的导出设置</h2>
+
+<p><a name="Maya"></a> </p>
+
+<h3>Autodesk® Maya®</h3>
+
+<p>您可以使用 <a href="http://help.autodesk.com/view/MAYAUL/2018/ENU/?guid=GUID-FE8DBEAA-C2DD-43B3-9933-4BA4CDDEAA89">FBX 导出选项</a>选择要在 FBX 文件中导出的内容。</p>
+
+<h4>导出 BlendShape（变形）</h4>
+
+<p>从 Maya 导出 BlendShape（变形）时，请遵循以下准则：</p>
+
+<ul>
+<li>将混合形状按顺序应用于导出网格及其目标。</li>
+<li>如果需要 Maya 动画关键帧，可在混合形状节点上对关键帧进行动画化。</li>
+<li>导出网格之前，在 Maya 中启用 <strong>Animation</strong> &gt; <strong>Deformed Models</strong> &gt; <strong>Blend Shapes</strong> FBX 导出选项。</li>
+<li>如果还想导出皮肤变形，则应在导出网格之前在 Maya 中启用 <strong>Animation</strong> &gt; <strong>Deformed Models</strong> &gt; <strong>Skins</strong> FBX 导出选项。</li>
+</ul>
+
+<p>将文件导入 Unity 之后，请在__项目__视图中选择该文件，然后在 <a href="class-AnimationClip.html">Model Importer 的 Animations 选项卡</a>中启用 <strong>Bake Animations</strong>。</p>
+
+<p><a name="bake-deformers"></a></p>
+
+<h4>Exporting complex deformation</h4>
+
+<p>You can create very complex character rigs in Maya. For performance reasons, Unity only supports linear blend skinning with four influences per vertex. If your character uses more than four influences, when you import the Model into Unity, the animation may appear choppy or distorted. Or if you are using deformation other than clusters, the animation may be completely absent.</p>
+
+<p>To solve this problem, bake the deformation joints before exporting your Model from Maya, using the <em>Bake Deformer</em> tool (from Maya’s top menu: <strong>Skin</strong> &gt; <strong>Bake Deformers to Skin Weights</strong>). </p>
+
+<p>For more information, see <a href="http://help.autodesk.com/view/MAYAUL/2018/ENU/?guid=GUID-8B68FF4A-E9BC-44E9-B0D9-53CFE0C008FC">Bake deformers on a character</a> in the Autodesk documentation.</p>
+
+<p><a name="Cinema4D"></a> </p>
+
+<h3>Cinema 4D</h3>
+
+<h4>使用 IK（反向动力学）的动画角色</h4>
+
+<p>如果使用 IK 在 Cinema 4D 中对角色进行动画化，必须在导出之前使用 Cinema 4D 中的 <strong>Plugins &gt; Mocca &gt; Cappucino</strong> 菜单烘焙 IK。
+如果您在导入 Unity 之前未烘焙 IK，则只能获得动画定位器 (locator) 和动画骨骼。</p>
+
+<h4>最大限度提高导入速度</h4>
+
+<p>为了加快文件导入 Unity 的速度，可在导出之前关闭 Cinema 4D 中的 <strong>Embed Textures</strong> 偏好设置。请查看 <a href="https://help.maxon.net/us/#FFBXEXPORT-FBXEXPORT_GROUP">Cinema 4D 文档</a>了解相关说明。</p>
+
+<p><a name="Max"></a> </p>
+
+<h3>Autodesk® 3ds Max®</h3>
+
+<p>You can use the <a href="https://help.autodesk.com/view/3DSMAX/2018/ENU/?guid=GUID-EB0F5BB7-2E59-4EF6-8B16-F59CC56A4747">FBX Export options</a> to pick what to export in your FBX file.</p>
+
+<p>When exporting from 3ds Max, there are some extra considerations when dealing with the following:</p>
+
+<ul>
+<li><a href="#Quads">Exporting quads</a></li>
+<li><a href="#Bones">Bone-based Animations</a></li>
+<li>
+<a href="#Blendshapes">Morph targets</a> (Blendshapes)</li>
+<li><a href="#Lightmapping">UV sets for Lightmapping</a></li>
+</ul>
+
+<p><a name="Quads"></a> </p>
+
+<h4>导出四边形</h4>
+
+<p>3ds Max’s editable Mesh always exports triangles. The Editable Poly retains quads and N-gons on import. So if you want to import quads into Unity, you have to use an Editable Poly in 3ds Max.</p>
+
+<p><a name="Bones"></a></p>
+
+<h4>基于骨骼的动画</h4>
+
+<p>如果要在 3ds Max 中导出基于骨骼的动画，请遵循以下准则：</p>
+
+<ul>
+<li>设置骨骼结构和动画（使用正向动力学 (FK) 或 IK）后，选择所有骨骼和/或 IK 解算器。</li>
+<li>Select <strong>Motion</strong> &gt; <strong>Motion Paths</strong> &gt; <strong>Collapse</strong>. Unity makes a key filter, so the amount of keys you export is irrelevant.</li>
+<li>Click the OK button on the FBX Exporter window.</li>
+<li>将 FBX 文件复制到 Assets 文件夹中。</li>
+<li>打开 Unity 并将纹理重新分配给根骨骼中的材质。</li>
+</ul>
+
+<p>When exporting a bone hierarchy with Mesh and animations from 3ds Max to Unity, the exported GameObject hierarchy corresponds to the hierarchy you can see in the 3ds Max Schematic View. However, Unity uses a GameObject as the new root, containing the animations, and places the Mesh and material information in the root bone.</p>
+
+<p>If you prefer to keep animation and Mesh information in the same Unity GameObject, parent the Mesh node to a bone in the bone hierarchy in 3ds Max before exporting. </p>
+
+<p><a name="Blendshapes"></a></p>
+
+<h4>变形目标 (Blendshape)</h4>
+
+<p>如果要在 3ds Max 中导出变形目标，请遵循以下准则：</p>
+
+<ul>
+<li>Apply the Morpher Modifier to the export Mesh with appropriate morph targets set up in the Channel List.</li>
+<li>If you require 3ds Max animation keyframes, you can animate keyframes on the Mesh/modifier.</li>
+<li>Before exporting the Mesh, eEnable the <strong>Animation</strong> &gt; <strong>Deformed Models</strong> &gt; <strong>Blend Shapes</strong> FBX Export option in 3ds Max.</li>
+<li>If you also want to export skin deformation, enable the <strong>Animation</strong> &gt; <strong>Deformed Models</strong> &gt; <strong>Skins</strong> FBX Export option in 3ds Max before exporting the Mesh.</li>
+</ul>
+
+<p><a name="Lightmapping"></a></p>
+
+<h4>用于光照贴图的 UV 集</h4>
+
+<p>Unity 具有内置的<a href="GIIntro.html">光照贴图功能 (lightmapper)</a>，但您也可以使用纹理烘焙（Rendering 菜单上的 <strong>Render To Texture</strong>）功能和 3ds Max 中的自动展开 (unwrapping) 功能来创建光照贴图。</p>
+
+<p>Usually one UV set is used for main texture and/or normal maps, and another UV set is used for the lightmap Texture. For both UV sets to come through properly, set the Material in 3ds Max to Standard and set up both Diffuse (for the main Texture)and Self-Illumination (for the lightmap) map slots:</p>
+
+<figure>
+<img src="../uploads/Main/3dsMaxLightmapMaterial.png" alt="3ds Max 中的光照贴图的材质设置（使用自发光贴图）">
+<figcaption>3ds Max 中的光照贴图的材质设置（使用自发光贴图）</figcaption>
+</figure>
+
+<p><strong>注意</strong>：如果对象使用 Shell 类型的材质，Autodesk 的 FBX Exporter <strong>不能正确导出 UV</strong>。</p>
+
+<p>或者，您可以使用多维/子对象 (Multi/Sub Object) 材质类型，并使用漫射贴图字段中的主纹理 (main texture) 和光照贴图 (lightmap) 设置两个子材质，如下图所示。但是，如果模型中的面使用不同的子材质 ID，这种方法会导致导入多个材质，此情况对性能而言并非最佳选择。</p>
+
+<figure>
+<img src="../uploads/Main/3dsMaxMultiSubObject.png" alt="3ds Max 中的光照贴图的另一种材质设置（使用多维/子对象材质）">
+<figcaption>3ds Max 中的光照贴图的另一种材质设置（使用多维/子对象材质）</figcaption>
+</figure>
+
+<p><a name="LightWave"></a> </p>
+
+<h3>LightWave</h3>
+
+<p>通过从 LightWave Layout 中的 <strong>File</strong> 工具栏选择 <strong>Save</strong> &gt; <strong>Export</strong> &gt; <strong>Export FBX</strong> 即可访问 LightWave 中的 FBX 导出设置窗口：</p>
+
+<figure>
+<img src="../uploads/Main/LW_Export.jpg" alt="Accessing FBX Export options in LightWave Layout">
+<figcaption>Accessing FBX Export options in LightWave Layout</figcaption>
+</figure>
+
+<p>随后将显示 Export FBX 窗口。</p>
+
+<figure>
+<img src="../uploads/Main/LW_FBX.png" alt="LightWave FBX 导出设置">
+<figcaption>LightWave FBX 导出设置</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>FBX Filename</strong></td>
+	<td style="text-align:left;">设置 FBX 文件的名称和位置。应使用 Unity <code>Assets</code> 文件夹下的位置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Anim Layer</strong></td>
+	<td style="text-align:left;">要使用的动画层的名称。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Type</strong></td>
+	<td style="text-align:left;">使用 <strong>Binary</strong> 来减小文件大小，或使用 <strong>ASCII</strong> 生成文本可编辑的 FBX 文件。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>FBX Version</strong></td>
+	<td style="text-align:left;">从列表中选择最新的 FBX 版本，确保其与 Unity 使用的版本匹配。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Export</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Models</strong></td>
+	<td style="text-align:left;">导出场景中的所有模型</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Morphs (Blend Shapes)</strong></td>
+	<td style="text-align:left;">导出场景中的所有 BlendShape</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Mesh type</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Cage (Subdivision Off)</strong></td>
+	<td style="text-align:left;">导出对象但不进行任何细分</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Subdivision</strong></td>
+	<td style="text-align:left;">导出网格时对其进行细分</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Re-parent bone hierarchy</strong></td>
+	<td style="text-align:left;">创建一个 null 充当骨骼层级视图的新父级。<br><br>从布局中导出骨架时，如果骨骼层级视图以网格为父级，变形网格的实际移动将是预期值的两倍。启用此新父级会使网格保持原样。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Materials</strong></td>
+	<td style="text-align:left;">转换 LightWave 的标准表面通道和图像映射。这不包括程序化纹理和节点。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Embedded Textures</strong></td>
+	<td style="text-align:left;">将嵌入的纹理保存为直接包含在 FBX 文件中的图像映射，而不是保存到单独的图像目录。这会创建更大但更独立的 FBX 文件。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Smoothing Groups</strong></td>
+	<td style="text-align:left;">将 LightWave 的法线转换为平滑组。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Collapse Materials</strong></td>
+	<td style="text-align:left;">折叠具有相同材质名称的表面，分别导出材质。但是，如果材质名称和所有表面参数都匹配，则无论此设置如何，始终都会合并两个材质。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Merge UVs</strong></td>
+	<td style="text-align:left;">将多个 UV 贴图折叠为每个对象的单个贴图。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Unity 3D Mode</strong></td>
+	<td style="text-align:left;">纠正 LightWave、FBX 和 Unity 的坐标系之间的转换导致的旋转错误。<br><br>LightWave 和 Unity 均使用<em>左手</em>坐标系，但 FBX 使用<em>右手</em>坐标系。当 LightWave 导出到 FBX 时，它会沿 Z 轴转换为右手坐标。当 Unity 导入 FBX 文件时，它会沿 X 轴转换回左手坐标，从而使场景旋转 180 度。使用该设置意味着，当您进入 Unity 并向下观察 Z 轴时，导入的 FBX 看起来与在 LightWave 内部完全相同。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Cameras</strong></td>
+	<td style="text-align:left;">导出场景中的所有摄像机。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Lights</strong></td>
+	<td style="text-align:left;">导出场景中的所有光照。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Animations</strong></td>
+	<td style="text-align:left;">无需烘焙即可导出基于移动、旋转或缩放的简单动画。使用 IK 或动态的角色动画或其他动画仍应使用 <strong>Bake Motion Envelopes</strong> 进行烘焙。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Bake Motion Envelopes</strong></td>
+	<td style="text-align:left;">当存在您不想捕获的设置帧时，设置烘焙的任意起始点和结束点。仅当选中 <strong>Animations</strong> 时才可用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2">
+<strong>Start Frame</strong> 和 <strong>End Frame</strong>
+</td>
+	<td style="text-align:left;">仅导出此时间范围内的数据。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Scale Scene</strong></td>
+	<td style="text-align:left;">Set a scale for your scene to match the <a href="#Scaling">Unity file scale</a> value.</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<ul>
+<li><span class="page-edit"> 2018–09–26 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="HOWTO-ImportObjectsFrom3DApps.html"></a></span><div class="tip">从其他应用程序导入时的限制</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UsingHumanoidChars.html"></a></span><div class="tip">人形资源准备</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

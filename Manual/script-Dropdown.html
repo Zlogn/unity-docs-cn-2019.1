@@ -1,0 +1,327 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="下拉选单 (Dropdown) - Unity Manual">
+<title>下拉选单 (Dropdown) - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/UI_DropdownExample.png">
+<meta name="description" content="__下拉选单__可用于让用户从选项列表中选择单个选项。">
+<meta property="og:description" content="__下拉选单__可用于让用户从选项列表中选择单个选项。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'script-Dropdown';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/script-Dropdown.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/script-Dropdown.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/script-Dropdown.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/script-Dropdown.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/script-Dropdown.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/script-Dropdown.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/script-Dropdown.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/script-Dropdown.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/script-Dropdown.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/script-Dropdown.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/script-Dropdown.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/script-Dropdown.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/script-Dropdown.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/script-Dropdown.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/script-Dropdown.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/script-Dropdown.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/script-Dropdown.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/script-Dropdown.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/script-Dropdown.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/script-Dropdown.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/script-Dropdown.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/script-Dropdown.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/script-Dropdown.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/script-Dropdown.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UIToolkits.html">UI</a></li>
+<li><a href="UISystem.html">Unity UI: Unity User Interface</a></li>
+<li><a href="UIReference.html">UI 参考</a></li>
+<li><a href="comp-UIInteraction.html">交互组件</a></li>
+<li>下拉选单 (Dropdown)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="script-Scrollbar.html"></a></span><div class="tip">滚动条 (Scrollbar)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="script-InputField.html"></a></span><div class="tip">输入字段 (Input Field)</div>
+</div>
+</div></div>
+<h1>下拉选单 (Dropdown)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>__下拉选单__可用于让用户从选项列表中选择单个选项。</p>
+
+<p>此控件会显示当前选择的选项。单击后，此控件会打开选项列表，以便选择新选项。选择新选项后，列表再次关闭，而控件将显示新选择的选项。如果用户单击控件本身或画布内的任何其他位置，列表也将关闭。</p>
+
+<figure>
+<img src="../uploads/Main/UI_DropdownExample.png" alt="下拉选单。">
+<figcaption>下拉选单。</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/UI_DropdownExampleOpen.png" alt="已打开选项列表的下拉选单。">
+<figcaption>已打开选项列表的下拉选单。</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/UI_DropdownInspector.png" alt="">
+</figure>
+
+<h2>属性</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Interactable</strong></td>
+	<td style="text-align:left;">此组件是否接受输入？请参阅 <a href="script-Selectable.html">Interactable</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Transition</strong></td>
+	<td style="text-align:left;">确定控件以何种方式对用户操作进行可视化响应的属性。请参阅<a href="script-SelectableTransition.html">过渡选项</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Navigation</strong></td>
+	<td style="text-align:left;">确定控件顺序的属性。请参阅<a href="script-SelectableNavigation.html">导航选项</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Template</strong></td>
+	<td style="text-align:left;">下拉列表的模板的矩形变换。请参阅以下说明。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Caption Text</strong></td>
+	<td style="text-align:left;">用于保存当前所选选项的文本的文本 (Text) 组件。（可选）</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Caption Image</strong></td>
+	<td style="text-align:left;">用于保存当前所选选项的图像的图像 (Image) 组件。（可选）</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Item Text</strong></td>
+	<td style="text-align:left;">用于保存列表项的文本的文本组件。（可选）</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Item Image</strong></td>
+	<td style="text-align:left;">用于保存列表项的图像的图像组件。（可选）</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Value</strong></td>
+	<td style="text-align:left;">当前所选选项的索引。0 代表第一个选项，1 代表第二个，依此类推。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Options</strong></td>
+	<td style="text-align:left;">可能选项的列表。可为每个选项指定一个文本字符串和一个图像。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>事件</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>On Value Changed</strong></td>
+	<td style="text-align:left;">用户单击了下拉列表中一个选项时调用的 <a href="UnityEvents.html">UnityEvent</a>。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>详细信息</h2>
+
+<p>可在 Inspector 中指定选项列表，也可通过代码指定。对于每个选项，可以指定文本字符串，也可以选择指定图像（如果下拉选单设置为支持图像）。</p>
+
+<p>按钮有一个名为 <em>On Value Changed</em> 的事件，当用户完成对列表中某个选项的单击时会响应。该组件支持发送作为所选选项索引的整数值。0 代表第一个选项，1 代表第二个，依此类推。</p>
+
+<h3>模板系统</h3>
+
+<p>根据设计，下拉选单控件有一个子游戏对象用作单击下拉选单控件时显示的下拉列表的模板。此模板游戏对象在默认情况下处于非活动状态，但可以在编辑模板时将其激活，从而方便查看正在进行的状态。必须在下拉选单组件的 Template 属性中指定对模板对象的引用。</p>
+
+<p>模板必须包含一个启用开关 (Toggle) 组件的列表项。单击下拉选单控件来创建实际下拉列表时，此项会多次重复，列表中的每个选项都使用一个副本。该项的父项会自动调整大小，从而容纳所有项。</p>
+
+<figure>
+<img src="../uploads/Main/UI_DropdownHierarchySimple.png" alt="一个简单的下拉选单设置，其中的项是模板的直接子项。">
+<figcaption>一个简单的下拉选单设置，其中的项是模板的直接子项。</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/UI_DropdownHierarchyScrolling.png" alt="一个更高级的下拉选单设置，其中包括滚动视图，当列表中有许多选项时支持滚动。">
+<figcaption>一个更高级的下拉选单设置，其中包括滚动视图，当列表中有许多选项时支持滚动。</figcaption>
+</figure>
+
+<p>可通过许多不同方式设置模板。GameObject &gt; UI &gt; Dropdown 菜单项使用的设置包括一个滚动视图，因此如果选项太多而不能一次完整显示，则会出现一个滚动条，用户可以滚动这些选项。但这不是模板设置的必需部分。</p>
+
+<p>（请参阅 ScrollRect 页面以了解有关滚动视图的更多信息。）</p>
+
+<h3>设置文本和图像支持</h3>
+
+<p>下拉选单支持每个选项使用一个文本内容和一个图像内容。文本和图像都是可选的。只有在下拉选单设置为支持文本和图像时，才能使用它们。</p>
+
+<p>同时设置 Caption Text 和 Item Text 属性的情况下，下拉选单支持每个选项使用文本。使用 GameObject &gt; UI &gt; Dropdown 菜单项时，默认情况下会设置这些属性。</p>
+
+<ul>
+<li>Caption Text 是用于保存当前所选选项的文本的文本组件。此组件通常是 Dropdown 游戏对象的子项。</li>
+<li>Item Text 是用于保存每个选项的文本的文本组件。此组件通常是 Item 游戏对象的子项。</li>
+</ul>
+
+<p>同时设置 Caption Image 和 Item Image 属性的情况下，下拉选单支持每个选项使用图像。默认情况下未设置这些属性。</p>
+
+<ul>
+<li>Caption Image 是用于保存当前所选选项的图像的图像组件。此组件通常是 Dropdown 游戏对象的子项。</li>
+<li>Item Image 是用于保存每个选项的图像的图像组件。此组件通常是 Item 游戏对象的子项。</li>
+</ul>
+
+<p>用于下拉选单的实际文本和图像在下拉选单组件的 Options 属性中指定，也可通过代码设置。</p>
+
+<h3>放置下拉列表</h3>
+
+<p>下拉列表相对于下拉选单控件的位置由模板的矩形变换的锚定和轴心确定。</p>
+
+<p>默认情况下，列表将显示在控件下方。这是通过将模板锚定到控件的底部来实现的。模板的轴心也需要位于顶部，以便在扩展模板来容纳可变数量的选项时仅向下扩展。</p>
+
+<p>下拉选单控件具有简单的逻辑，可以防止下拉选单显示在画布的边界之外，因为这样就无法选择某些选项。如果位于默认位置的下拉选单未完全位于画布矩形内，则其相对于控件的位置将反转。例如，默认情况下在控件下方显示的列表将显示在其上方。</p>
+
+<p>此逻辑非常简单并有一定的局限性。下拉选单模板不能大于画布大小的一半减去下拉控件的大小，否则如果下拉选单控件放在画布的中间，则列表在任何位置都可能没有足够空间。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="script-Scrollbar.html"></a></span><div class="tip">滚动条 (Scrollbar)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="script-InputField.html"></a></span><div class="tip">输入字段 (Input Field)</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

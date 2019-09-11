@@ -1,0 +1,294 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="其他有用的类 - Unity Manual">
+<title>其他有用的类 - Unity Manual</title>
+<meta name="description" content="None = 0">
+<meta property="og:description" content="None = 0">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'Tilemap-ScriptableTiles-OtherClasses';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Tilemap-ScriptableTiles-OtherClasses.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Tilemap-ScriptableTiles-OtherClasses.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Tilemap-ScriptableTiles-OtherClasses.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Tilemap-ScriptableTiles-OtherClasses.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Tilemap-ScriptableTiles-OtherClasses.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Tilemap-ScriptableTiles-OtherClasses.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Tilemap-ScriptableTiles-OtherClasses.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Tilemap-ScriptableTiles-OtherClasses.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Tilemap-ScriptableTiles-OtherClasses.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Tilemap-ScriptableTiles-OtherClasses.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/Tilemap-ScriptableTiles-OtherClasses.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/Tilemap-ScriptableTiles-OtherClasses.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/Tilemap-ScriptableTiles-OtherClasses.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/Tilemap-ScriptableTiles-OtherClasses.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Tilemap-ScriptableTiles-OtherClasses.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Tilemap-ScriptableTiles-OtherClasses.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Tilemap-ScriptableTiles-OtherClasses.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Tilemap-ScriptableTiles-OtherClasses.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Tilemap-ScriptableTiles-OtherClasses.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Tilemap-ScriptableTiles-OtherClasses.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Tilemap-ScriptableTiles-OtherClasses.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Tilemap-ScriptableTiles-OtherClasses.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Tilemap-ScriptableTiles-OtherClasses.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Tilemap-ScriptableTiles-OtherClasses.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Unity2D.html">2D</a></li>
+<li><a href="class-Tilemap.html">Tilemap</a></li>
+<li><a href="Tilemap-ScriptableTiles.html">可编程瓦片</a></li>
+<li>其他有用的类</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Tilemap-ScriptableTiles-TileAnimationData.html"></a></span><div class="tip">TileAnimationData</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Tilemap-ScriptableTiles-Example.html"></a></span><div class="tip">可编程瓦片示例</div>
+</div>
+</div></div>
+<h1>其他有用的类</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>TileFlags</h2>
+
+<p><code>
+None = 0
+</code></p>
+
+<p>不为瓦片设置任何标志。这是大多数瓦片的默认设置。</p>
+
+<p><code>
+LockColor = 1 &lt;&lt; 0
+</code></p>
+
+<p>如果瓦片脚本控制瓦片的颜色，请设置此标志。如果进行此设置，则瓦片将控制瓦片放置在瓦片地图上时的颜色。无法通过绘制或使用脚本来更改瓦片的颜色。如果未进行此设置，则可以通过绘制或使用脚本来更改瓦片的颜色。</p>
+
+<p><code>
+LockTransform = 1 &lt;&lt; 1
+</code></p>
+
+<p>如果瓦片脚本控制瓦片的变换，请设置此标志。如果进行此设置，则瓦片将控制瓦片放置在瓦片地图上时的变换。无法通过绘制或使用脚本来旋转或更改瓦片的变换。如果未进行此设置，则可以通过绘制或使用脚本来更改瓦片的变换。</p>
+
+<p><code>
+LockAll = LockColor | LockTransform
+</code></p>
+
+<p>这是 TileBase 使用的所有锁定标志的组合。</p>
+
+<p><code>
+InstantiateSpawnGameObjectRuntimeOnly = 1 &lt;&lt; 2
+</code></p>
+
+<p>如果瓦片脚本仅应当在项目运行时且不在 Editor 模式下才生成其游戏对象，请设置此标志。</p>
+
+<h2>Tile.ColliderType</h2>
+
+<p><code>
+None = 0
+</code></p>
+
+<p>此瓦片不生成任何碰撞体形状。</p>
+
+<p><code>
+Sprite = 1
+</code></p>
+
+<p>此瓦片生成的碰撞体形状是由瓦片返回的精灵所设置的物理形状。如果在精灵中未设置任何物理形状，则会尝试根据精灵的轮廓生成一个形状。</p>
+
+<p>注意：如果需要在运行时生成瓦片的碰撞体形状，请为精灵设置一个物理形状或将精灵的纹理设置为可读，以便 Unity 根据轮廓生成形状。</p>
+
+<p><code>
+Grid = 2
+</code></p>
+
+<p>此瓦片生成的碰撞体形状是由网格布局定义的单元格的形状。</p>
+
+<h2>ITilemap</h2>
+
+<p><code>ITilemap</code> 是基类；在此基类中，当瓦片地图尝试从瓦片检索数据时，<code>Tile</code> 可从瓦片地图检索数据。</p>
+
+<pre><code>Vector3Int origin { get; }
+</code></pre>
+
+<p>返回瓦片地图在单元格空间中的原点。</p>
+
+<pre><code>Vector3Int size { get; }
+</code></pre>
+
+<p>返回瓦片地图在单元格空间中的大小。</p>
+
+<pre><code>Bounds localBounds { get; }
+</code></pre>
+
+<p>返回瓦片地图在局部空间中的边界。</p>
+
+<pre><code>BoundsInt cellBounds { get; }
+</code></pre>
+
+<p>返回瓦片地图在单元格空间中的边界。</p>
+
+<pre><code>Sprite GetSprite(Vector3Int location);
+</code></pre>
+
+<p>返回瓦片地图中给定位置的瓦片使用的精灵。</p>
+
+<pre><code>Color GetColor(Vector3Int location);
+</code></pre>
+
+<p>返回瓦片地图中给定位置的瓦片使用的颜色。</p>
+
+<pre><code>Matrix4x4 GetTransformMatrix(Vector3Int location);
+</code></pre>
+
+<p>返回瓦片地图中给定位置的瓦片使用的变换矩阵。</p>
+
+<pre><code>TileFlags GetTileFlags(Vector3Int location);
+</code></pre>
+
+<p>返回瓦片地图中给定位置的瓦片使用的瓦片标志。</p>
+
+<pre><code>TileBase GetTile(Vector3Int location);
+</code></pre>
+
+<p>返回瓦片地图中给定位置的瓦片。如果该位置没有瓦片，则返回 null。</p>
+
+<pre><code>T GetTile&lt;T&gt;(Vector3Int location) where T : TileBase;
+</code></pre>
+
+<p>返回瓦片地图中给定位置的 T 类型瓦片。如果该位置没有与该类型匹配的瓦片，则返回 null。</p>
+
+<pre><code>void RefreshTile(Vector3Int location);
+</code></pre>
+
+<p>请求刷新瓦片地图中给定位置的瓦片。</p>
+
+<pre><code>T GetComponent&lt;T&gt;();
+</code></pre>
+
+<p>返回附加到瓦片地图游戏对象的组件 T。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2017–09–06 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Tilemap-ScriptableTiles-TileAnimationData.html"></a></span><div class="tip">TileAnimationData</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Tilemap-ScriptableTiles-Example.html"></a></span><div class="tip">可编程瓦片示例</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

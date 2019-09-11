@@ -1,0 +1,241 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="内存性能分析器 (Memory Profiler) - Unity Manual">
+<title>内存性能分析器 (Memory Profiler) - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/ProfilerMemorySimple.png">
+<meta name="description" content="Memory Profiler 中提供了两种模式来检查应用程序的内存使用情况。在下方面板左上角的下拉选单中可选择模式。">
+<meta property="og:description" content="Memory Profiler 中提供了两种模式来检查应用程序的内存使用情况。在下方面板左上角的下拉选单中可选择模式。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'ProfilerMemory';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/ProfilerMemory.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/ProfilerMemory.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/ProfilerMemory.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/ProfilerMemory.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/ProfilerMemory.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/ProfilerMemory.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/ProfilerMemory.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/ProfilerMemory.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/ProfilerMemory.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/ProfilerMemory.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/ProfilerMemory.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/ProfilerMemory.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/ProfilerMemory.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/ProfilerMemory.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/ProfilerMemory.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/ProfilerMemory.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/ProfilerMemory.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/ProfilerMemory.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/ProfilerMemory.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/ProfilerMemory.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/ProfilerMemory.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/ProfilerMemory.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/ProfilerMemory.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/ProfilerMemory.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="AdvancedDevelopment.html">高级开发</a></li>
+<li><a href="Profiler.html">性能分析器概述</a></li>
+<li>内存性能分析器 (Memory Profiler)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ProfilerRendering.html"></a></span><div class="tip">渲染性能分析器 (Rendering Profiler)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ProfilerAudio.html"></a></span><div class="tip">音频性能分析器 (Audio Profiler)</div>
+</div>
+</div></div>
+<h1>内存性能分析器 (Memory Profiler)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Memory Profiler 中提供了两种模式来检查应用程序的内存使用情况。在下方面板左上角的下拉选单中可选择模式。</p>
+
+<h2>Simple</h2>
+
+<p><strong>Simple</strong> 视图提供每个帧在整个 Unity 中的实时内存使用量的简单概况。</p>
+
+<figure>
+<img src="../uploads/Main/ProfilerMemorySimple.png" alt="">
+</figure>
+
+<p>Unity 保留了可供分配的内存池，以免过于频繁向操作系统索取内存。此部分显示为保留量以及已用量。</p>
+
+<p>此部分涵盖的方面包括：</p>
+
+<ul>
+<li>
+<strong>Unity</strong>：本机 Unity 代码中的分配所跟踪的内存量</li>
+<li>
+<strong>Mono</strong>：托管代码使用的总堆大小和已用堆大小。此内存量是垃圾收集量</li>
+<li>
+<strong>GfxDriver</strong>：驱动程序对纹理、渲染目标、着色器和网格数据使用的估计内存量。</li>
+<li>
+<strong>FMOD</strong>：音频驱动程序的估计内存使用量</li>
+<li>
+<strong>Profiler</strong>：用于性能分析器数据的内存</li>
+</ul>
+
+<p>显示的数字与任务管理器或活动监视器不同，因为 Memory Profiler 未对某些用途进行跟踪。这些用途包括一些驱动程序使用的内存和用于可执行代码的内存。</p>
+
+<p>此性能分析器会显示某些最常见的资源/对象类型的内存统计信息。这些统计信息包括计数和已用内存（主内存和视频内存）：</p>
+
+<ul>
+<li><strong>纹理 (Textures)</strong></li>
+<li><strong>网格 (Meshes)</strong></li>
+<li><strong>材质 (Materials)</strong></li>
+<li><strong>动画 (Animations)</strong></li>
+<li><strong>音频 (Audio)</strong></li>
+<li><strong>对象计数 (Object Count)</strong></li>
+</ul>
+
+<p><strong>Object Count</strong> 是创建的对象总数。如果此数字随着时间的推移而上升，表明游戏创建了一些永不销毁的对象。</p>
+
+<h2>Detailed</h2>
+
+<p><strong>Detailed</strong> 视图用于创建当前状态的快照。使用 <strong>Take Sample</strong> 按钮可捕获详细的内存使用情况。获取此数据需要一些时间，因此不要期望 Detailed 视图能提供实时详细信息。在采样之后，Profiler 窗口将更新为树视图，可在其中查看内存使用情况。</p>
+
+<figure>
+<img src="../uploads/Main/ProfilerMemoryDetailed.png" alt="">
+</figure>
+
+<p>此视图将显示各个资源和游戏对象的内存使用情况。此外还显示游戏对象位于内存中的原因。常见原因包括：</p>
+
+<ul>
+<li>
+<strong>Assets</strong>：从用户或本机代码引用的资源</li>
+<li>
+<strong>Built-in Resources</strong>：Unity Editor 资源或 Unity 默认资源</li>
+<li>
+<strong>Not Saved</strong>：标记为 DontSave 的游戏对象</li>
+<li>
+<strong>Scene Memory</strong>：游戏对象和附加的组件</li>
+<li>
+<strong>Other</strong>：未在上述类别中标记的游戏对象</li>
+</ul>
+
+<p>单击列表中的游戏对象可在 Project 或 Scene 视图中查看该游戏对象。</p>
+
+<p>在 Editor 中进行性能分析时，Memory Profiler 显示的所有数字都表示 Editor 中的内存使用情况。这些数字通常比在播放器中运行时更大，因为运行 Unity Editor 会增加额外的内存。如需了解应用程序更精确的数字和内存使用情况，请使用性能分析器连接来连接到正在运行的播放器。这样将给出目标设备上的实际使用情况。</p>
+
+<p>在 <code>System.ExecutableAndDlls</code> 下报告的内存是只读内存，因此操作系统可能会根据需要丢弃这些页面，然后从文件系统重新加载它们。这样可以降低内存使用量，而且通常不会直接导致操作系统决定终止应用程序。此外，其中一些页面也可能与使用相同框架的其他应用程序共享。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ProfilerRendering.html"></a></span><div class="tip">渲染性能分析器 (Rendering Profiler)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ProfilerAudio.html"></a></span><div class="tip">音频性能分析器 (Audio Profiler)</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

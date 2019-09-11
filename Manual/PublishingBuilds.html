@@ -1,0 +1,230 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="发布构建 - Unity Manual">
+<title>发布构建 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/BuildSettings.png">
+<meta name="description" content="在创建游戏的任何时候，都可能希望看到游戏在 Editor 之外独立构建和运行时的外观。本部分将介绍如何访问 Build Settings 以及如何创建不同版本的游戏。">
+<meta property="og:description" content="在创建游戏的任何时候，都可能希望看到游戏在 Editor 之外独立构建和运行时的外观。本部分将介绍如何访问 Build Settings 以及如何创建不同版本的游戏。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'PublishingBuilds';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PublishingBuilds.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PublishingBuilds.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PublishingBuilds.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PublishingBuilds.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PublishingBuilds.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PublishingBuilds.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PublishingBuilds.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PublishingBuilds.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PublishingBuilds.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PublishingBuilds.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/PublishingBuilds.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/PublishingBuilds.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/PublishingBuilds.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/PublishingBuilds.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PublishingBuilds.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PublishingBuilds.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PublishingBuilds.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PublishingBuilds.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PublishingBuilds.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PublishingBuilds.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PublishingBuilds.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PublishingBuilds.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PublishingBuilds.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PublishingBuilds.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="CreatingGameplay.html">创建游戏玩法</a></li>
+<li>发布构建</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="CrossPlatformConsiderations.html"></a></span><div class="tip">跨平台注意事项</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="TroubleShooting.html"></a></span><div class="tip">故障排除</div>
+</div>
+</div></div>
+<h1>发布构建</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>在创建游戏的任何时候，都可能希望看到游戏在 Editor 之外独立构建和运行时的外观。本部分将介绍如何访问 <strong>Build Settings</strong> 以及如何创建不同版本的游戏。</p>
+
+<p>应通过 <strong>File</strong> &gt; <strong>Build Settings…</strong> 菜单项访问 Build Settings 窗口。此时会弹出一个可编辑的场景列表，这些场景将在构建游戏时包含在其中。</p>
+
+<figure>
+<img src="../uploads/Main/BuildSettings.png" alt="Build Settings 窗口">
+<figcaption>Build Settings 窗口</figcaption>
+</figure>
+
+<p>第一次在项目中查看此窗口时，它将显示为空白。如果在此列表为空白时构建游戏，则只有当前打开的场景才会包含在构建中。如果希望快速构建只有一个场景文件的测试播放器，只需构建一个带有空白场景列表的播放器即可。</p>
+
+<p>可以轻松将场景文件添加到列表中来进行多场景构建。有两种方式可以添加场景文件。第一种方式是单击 <strong>Add Open Scenes</strong> 按钮。此时将看到当前打开的场景出现在列表中。添加场景文件的第二种方式是将它们从 __Project 视图__拖到列表中。</p>
+
+<p>此时，请注意每个场景都有不同的索引值。<strong>Scene 0</strong> 是构建游戏时将加载的第一个场景。如果要加载新场景，请在脚本中使用 <a href="../ScriptReference/SceneManagement.SceneManager.LoadScene.html">SceneManager.LoadScene</a>。</p>
+
+<p>如果添加了多个场景文件并想要重新排列它们，只需在列表中单击场景并上下拖动，直到按所需顺序排列它们为止。</p>
+
+<p>如果要从列表中删除场景，请单击场景以使其突出显示，然后按 <strong>Command-Delete</strong>。该场景将从列表中消失，不会包含在构建中。</p>
+
+<p>当准备好发布构建时，请选择 <strong>Platform</strong> 并确保平台旁边出现 Unity 徽标；如果没有，请单击 <strong>Switch Platform</strong> 按钮让 Unity 知道您的目标构建平台。最后，按 <strong>Build</strong> 按钮。随后可使用标准的 Save 对话框为游戏选择名称和位置。单击 <strong>Save</strong> 时，Unity 便会立即构建游戏。就是这么简单。如果不确定要将构建的游戏保存到何处，请考虑将其保存到项目根文件夹中。不能将构建保存到 Assets 文件夹中。</p>
+
+<p>在播放器上启用 <strong>Development Build</strong> 复选框将启用<a href="ProfilerWindow.html">性能分析器 (Profiler)</a> 功能，并提供 Autoconnect Profiler 和 Script Debugging 选项。</p>
+
+<p>有关 Build Settings 窗口的更多信息，请参阅 <a href="BuildSettings.html">Build Settings</a> 页面。</p>
+
+<h2>构建独立平台播放器</h2>
+
+<p>使用 Unity 可为 Windows、Mac 和 Linux 构建独立应用程序。只需在 Build Settings 对话框中选择构建目标，然后点击“Build”按钮即可。
+构建独立平台播放器时，生成的文件将根据构建目标而有所不同。如果是 Windows 构建目标，则会构建可执行文件 (.exe) 以及包含应用程序所有资源的 Data 文件夹。如果是 Mac 构建目标，则会构建一个应用程序捆绑包，其中包含运行应用程序所需的文件以及资源。</p>
+
+<p>在 Mac 上分发独立版其实就是提供应用程序捆绑包（所有内容都包含在此包中）。在 Windows 上，则需要提供 .exe 文件和 Data 文件夹以供其他人运行。可以这样想：就像 Unity 为您构建的结果文件一样，其他人也必须在他们的计算机上拥有相同的文件，这样才能运行您的游戏。</p>
+
+<h2>构建过程详解</h2>
+
+<p>构建过程将在指定的任何位置放置构建的游戏应用程序的空白副本。然后，对构建设置中的场景列表进行处理，在 Editor 中逐个打开场景，对场景进行优化，然后将场景集成到应用程序包中。此外，还会计算这些场景所需的所有资源，并将这些数据存储在应用程序包中的单独文件内。</p>
+
+<ul>
+<li><p>场景中使用“EditorOnly”标记的所有__游戏对象__都不会包含在发布的构建中。这些游戏对象对于调试脚本非常有用，但不需要包含在最终游戏中。</p></li>
+<li><p>加载新关卡时，前一关卡中的所有对象都将被销毁。要阻止此行为，请对不希望销毁的对象使用 <a href="../ScriptReference/Object.DontDestroyOnLoad.html">DontDestroyOnLoad()</a>。此功能最常用于在加载关卡时保持音乐播放，或者供游戏控制器脚本用于保持游戏状态和进度。</p></li>
+<li><p>使用 <a href="../ScriptReference/SceneManagement.SceneManager-sceneLoaded.html">SceneManager.sceneLoaded</a> 可定义在加载新关卡后发送给所有激活状态游戏对象的消息。</p></li>
+<li><p>有关创建具有多个场景的游戏的更多信息，请参阅我们的<a href="http://unity3d.com/learn/tutorials/modules">教程</a>。</p></li>
+</ul>
+
+<h2>预加载</h2>
+
+<p>发布的构建会在场景加载时自动预加载场景中的所有资源。此规则的例外是 Scene 0。这是因为第一个场景通常是一个启动画面，所以希望尽快显示它。</p>
+
+<p>要确保预加载所有内容，可创建一个调用 <strong>Application.LoadLevel(1)</strong> 的空场景。在构建设置中，使此空场景的索引为 0。所有后续关卡都将进行预加载。</p>
+
+<h2>现在准备好构建游戏了</h2>
+
+<p>到目前为止，已经学习了如何使用 Unity 的界面、如何使用资源、如何创建场景以及如何发布构建。所以，尽情制作自己梦想的游戏吧！在此过程中肯定还需要学习更多知识，我们乐意随时为您提供帮助。</p>
+
+<p>要了解有关构建游戏关卡的更多信息，请参阅关于<a href="CreatingScenes.html">创建场景</a>的部分。</p>
+
+<p>要了解有关脚本的更多信息，请参阅<a href="ScriptingSection.html">脚本部分</a>。</p>
+
+<p>要了解有关创建艺术资源和导入资源的更多信息，请参阅本手册的<a href="AssetWorkflow.html">资源工作流程</a>。</p>
+
+<p>如需在 Unity 用户和开发人员社区中进行交流，请访问 <a href="http://forum.unity3d.com">Unity Forums</a>。在论坛中可以提问，分享项目，建立团队，做想做的任何事情。至少务必访问一次论坛，可展示自己制作的游戏，或寻求其他开发人员的支持。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="CrossPlatformConsiderations.html"></a></span><div class="tip">跨平台注意事项</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="TroubleShooting.html"></a></span><div class="tip">故障排除</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

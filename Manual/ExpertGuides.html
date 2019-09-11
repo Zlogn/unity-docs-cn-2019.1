@@ -1,0 +1,287 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="专家指南 - Unity Manual">
+<title>专家指南 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/TimeToShineHeader.jpg">
+<meta name="description" content="本部分中的专家指南由 Unity 各领域的专家用自己的语言编写而成。在这些文档中，Unity 开发者详细探讨了 Unity 的各种功能以及与高效使用 Unity 相关的主题。">
+<meta property="og:description" content="本部分中的专家指南由 Unity 各领域的专家用自己的语言编写而成。在这些文档中，Unity 开发者详细探讨了 Unity 的各种功能以及与高效使用 Unity 相关的主题。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'ExpertGuides';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/ExpertGuides.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/ExpertGuides.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/ExpertGuides.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/ExpertGuides.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/ExpertGuides.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/ExpertGuides.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/ExpertGuides.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/ExpertGuides.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/ExpertGuides.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/ExpertGuides.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/ExpertGuides.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/ExpertGuides.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/ExpertGuides.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/ExpertGuides.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/ExpertGuides.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/ExpertGuides.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/ExpertGuides.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/ExpertGuides.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/ExpertGuides.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/ExpertGuides.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/ExpertGuides.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/ExpertGuides.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/ExpertGuides.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/ExpertGuides.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li>专家指南</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeLightingPipelines.html"></a></span><div class="tip">Best Practice: Setting up the Lighting Pipeline</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="WhatsNew20191.html"></a></span><div class="tip">New in Unity 2019.1</div>
+</div>
+</div></div>
+<h1>专家指南</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<figure>
+<img src="../uploads/Main/TimeToShineHeader.jpg" alt="">
+</figure>
+
+<p>本部分中的专家指南由 Unity 各领域的专家用自己的语言编写而成。在这些文档中，Unity 开发者详细探讨了 Unity 的各种功能以及与高效使用 Unity 相关的主题。</p>
+
+<p>有些文档是由开发者专门撰写的博客文章，他们希望能将自己的知识直接传达给您。由于这些内容的长度和格式与用户手册的正常样式不同，因此我们以可供下载的 PDF 或 Google 文档形式将这些文档提供给您。</p>
+
+<h2>指南</h2>
+<div class="timetoshineitem">
+<div class="timetoshineicon"><a href="../uploads/ExpertGuides/Create_High-Quality_Light_Fixtures_in_Unity.pdf"><img src="../uploads/Main/TimeToShinePDFDownloadIcon.png" alt=""></a></div>
+<a href="../uploads/ExpertGuides/Create_High-Quality_Light_Fixtures_in_Unity.pdf"><strong><em>Create High-Quality Light Fixtures in Unity</em></strong></a><br>
+<strong>Author:</strong> Pierre Donzallaz, Senior Lighting &amp; Rendering Artist<br>
+<strong>Date:</strong> 2019–01–10<br>
+<strong>Checked with Unity version:</strong> 2018.3<br>
+<strong>Synopsis:</strong> This expert guide presents several advanced techniques to create high-quality light fixtures in Unity, using 2D and cubemap light cookies, and taking advantage of the advanced shaders available in Unity’s High Definition Render Pipeline. You can use these workflows in projects such as games, architectural visualizations, films, and simulations.
+</div>
+<div class="timetoshineitem">
+<div class="timetoshineicon"><a href="../uploads/ExpertGuides/Collaborate_-_Keep_The_User_Safe.pdf"><img src="../uploads/Main/TimeToShinePDFDownloadIcon.png" alt=""></a></div>
+<a href="../uploads/ExpertGuides/Collaborate_-_Keep_The_User_Safe.pdf"><strong><em>Collaborate - 保证用户安全 (Collaborate - Keep The User Safe)</em></strong></a><br>
+<strong>作者：__Hollie Figueroa，Collaborate 软件测试工程师<br>
+</strong>日期：__2017–07–19<br>
+<strong>已使用以下 Unity 版本进行验证：__2017.1<br>
+</strong>提要：__Collaborate 位于 Unity Editor 与 Unity 拥有的服务器之间，用于进行基于云的客户端/服务器配对。本指南将指导您完成设置和运行 Collaborate 的过程，并提供有关使用 Unity 进行并行开发的最佳实践建议和注意事项。
+</div>
+<div class="timetoshineitem">
+<div class="timetoshineicon"><a href="../uploads/ExpertGuides/Dark_Dielectric_Materials.pdf"><img src="../uploads/Main/TimeToShinePDFDownloadIcon.png" alt=""></a></div>
+<a href="../uploads/ExpertGuides/Dark_Dielectric_Materials.pdf"><strong><em>材质制作指南：深色介电材质 (Materials Authoring Guidelines: Dark Dielectric Materials)</em></strong></a><br>
+<strong>作者：__Laurent Harduin，高级灯光师<br>
+</strong>日期：__2017–07–04<br>
+<strong>已使用以下 Unity 版本进行验证：__2017.1<br>
+</strong>提要：__本指南提供了在 Unity 物理着色系统中创作人造（非天然）材质时的提示信息和经校准的反照率颜色测量。
+</div>
+<div class="timetoshineitem">
+<div class="timetoshineicon"><a href="../uploads/ExpertGuides/Creating_Assets_with_Photogrammetry_using_a_rotating_surface.pdf"><img src="../uploads/Main/TimeToShinePDFDownloadIcon.png" alt=""></a></div>
+<a href="../uploads/ExpertGuides/Creating_Assets_with_Photogrammetry_using_a_rotating_surface.pdf"><strong><em>Photogrammetry using a Rotating Surface</em></strong></a><br>
+<strong>Author:</strong> Sébastien Lachambre, Senior Technical Artist - Rendering Research <br>
+<strong>Date:</strong> 2018–11–29<br>
+<strong>Checked with Unity version:</strong> 2018.3<br>
+<strong>Synopsis:</strong> This guide shows you how to use a rotating surface to rapidly produce photorealistic Assets from a composition of objects. Using this technique, you can make large models of real-life small objects. For example, to create a life-like model of some large rocks, you can use photogrammetry to capture small rocks on a rotating surface, and then increase the scale for the model.
+</div>
+<div class="timetoshineitem">
+<div class="timetoshineicon"><a href="https://github.com/Unity-Technologies/DeLightingTool/blob/master/Assets/DeLightingTool/Documentation/De-LightingTool.pdf"><img src="../uploads/Main/TimeToShinePDFDownloadIcon.png" alt=""></a></div>
+<a href="https://github.com/Unity-Technologies/DeLightingTool/blob/master/Assets/DeLightingTool/Documentation/De-LightingTool.pdf"><strong><em>De-Lighting in Unity</em></strong></a><br>
+<strong>Author:</strong> Cyril Jover, Senior Technical Artist - Rendering Research <br>
+<strong>Date:</strong> 2017–10–20<br>
+<strong>Checked with Unity version:</strong> 2017.1<br>
+<strong>Synopsis:</strong> Photogrammetry is becoming more and more popular in the CG industry. Being able to use a regular camera as a powerful 3D scanner is now an essential tool when creating realistic 3D assets. However, when you generate raw textures in this way, they often contain a lot of lighting information that you should remove to obtain the true base color for rendering. This document shows you how to solve this problem using the Unity De-Lighting Tool.
+</div>
+<div class="timetoshineitem">
+<div class="timetoshineicon"><a href="https://docs.google.com/document/d/1bULvVgAA3MGePuRlB3-_KFWp9Oc2o3Drv1OwT6dkL0w/preview"><img src="../uploads/Main/TimeToShineGdocIcon.png" alt=""></a></div>
+<a href="https://docs.google.com/document/d/1bULvVgAA3MGePuRlB3-_KFWp9Oc2o3Drv1OwT6dkL0w/preview"><strong><em>Unity Photogrammetry Workflow</em></strong></a><br>
+<strong>Author:</strong> Sébastien Lachambre, Senior Technical Artist - Rendering Research <br>
+<strong>Date:</strong> 2017–06–23<br>
+<strong>Checked with Unity version:</strong> 2017.1<br>
+<strong>Synopsis:</strong> This document is aimed at game studios. It describes a photogrammetry workflow dedicated to authoring game assets on an affordable budget. While it is possible to create extremely high quality assets for non-game use using photogrammetry, this documents focuses on using photogrammetry for game development. It describes how to get the best results within the typical time and budget constraints of game development.
+</div>
+<div class="timetoshineitem">
+<div class="timetoshineicon"><a href="../uploads/ExpertGuides/High_Dynamic_Range_Imaging_HDRI.pdf"><img src="../uploads/Main/TimeToShinePDFDownloadIcon.png" alt=""></a></div>
+<a href="../uploads/ExpertGuides/High_Dynamic_Range_Imaging_HDRI.pdf"><strong><em>高动态范围成像 (High Dynamic Range Imaging, HDRI)</em></strong></a><br>
+<strong>作者：__Sébastien Lagarde，开发者 - 渲染研究<br>
+</strong>日期：__2017–03–09<br>
+<strong>已使用以下 Unity 版本进行验证：__5.5<br>
+</strong>提要：__本全面性指南详细介绍了捕获和使用 HDRI 的许多方面。Sébastien Lagarde 说明了在 Unity 中实现和校准 HDRI 的方法，旨在帮助您实现准确的真实世界环境光照。
+</div>
+<div class="timetoshineitem">
+<div class="timetoshineicon"><a href="../uploads/ExpertGuides/Using_Enlighten_with_Unity.pdf"><img src="../uploads/Main/TimeToShinePDFDownloadIcon.png" alt=""></a></div>
+<a href="../uploads/ExpertGuides/Using_Enlighten_with_Unity.pdf"><strong><em>Enlighten 与 Unity 结合使用 (Using Enlighten with Unity)</em></strong></a><br>
+<strong>作者：__Kasper Engelstoft，开发者 - 光照团队<br>
+</strong>日期：__2017–01–17<br>
+<strong>已使用以下 Unity 版本进行验证：</strong> 5.5<br>
+__提要：__本指南详细介绍了 Unity 如何使用 Enlighten 计算全局光照 (GI)。Kasper Englestoft 说明了 Unity 用于计算光照的工作流程和方程式以及使用光照的好处。
+</div>
+<div class="timetoshineitem">
+<div class="timetoshineicon"><a href="../uploads/ExpertGuides/Monitor_Calibration_Tutorial.pdf"><img src="../uploads/Main/TimeToShinePDFDownloadIcon.png" alt=""></a></div>
+<a href="../uploads/ExpertGuides/Monitor_Calibration_Tutorial.pdf"><strong><em>显示器校准 (Monitor Calibration)</em></strong></a><br>
+<strong>作者：__Laurent Harduin，高级灯光师<br>
+</strong>日期：__2016–10–28<br>
+<strong>已使用以下 Unity 版本进行验证：__5.5<br>
+</strong>提要：__通过显示器校准可确保在显示器上获得真实一致的色彩和亮度。在与美术师或开发人员合作时，这是一项经常被忽视的开发实践。本指南将逐步指导您完成校准显示器的过程。
+</div>
+<div class="timetoshineitem">
+<div class="timetoshineicon"><a href="../uploads/ExpertGuides/Particle_System_Modules.pdf"><img src="../uploads/Main/TimeToShinePDFDownloadIcon.png" alt=""></a></div>
+<a href="../uploads/ExpertGuides/Particle_System_Modules.pdf"><strong><em>粒子系统模块常见问题解答 (Particle System Modules FAQ)</em></strong></a><br>
+<strong>作者：__Karl Jones，开发者 - 持续性工程<br>
+</strong>日期：__2016–04–20<br>
+_<em>提要：__Karl 探讨了如何通过脚本访问粒子系统模块，并说明了在代码中访问和编辑粒子系统属性时在底层发生了什么。</em>（最初发布在 Unity 博客上）_
+</div>
+<div class="timetoshineitem">
+<div class="timetoshineicon"><a href="../uploads/ExpertGuides/Analyzing_your_game_performance_using_Event_Tracing_for_Windows.pdf"><img src="../uploads/Main/TimeToShinePDFDownloadIcon.png" alt=""></a></div>
+<a href="../uploads/ExpertGuides/Analyzing_your_game_performance_using_Event_Tracing_for_Windows.pdf"><strong><em>Windows 性能分析 (Windows Performance Analysis)</em></strong></a><br>
+<strong>作者：__Tautvydas Zilys，开发者 - Windows 团队 <br>
+</strong>日期：__2016–06–15<br>
+_<em>提要：__Tautvydas 提供的这套全面指南说明了如何使用 </em>Event Tracing for Windows_ 来分析基于 Windows 平台的游戏，包括在所有 PC 和设备上运行的独立平台播放器和通用 Windows 平台播放器游戏以及 Unity Editor 中的游戏。
+<span class="search-words">
+本专家指南中使用的示例文件：
+<a href="../uploads/Examples/Unity+CPU+MF+DotNet+DXGI.wprp">Unity+CPU+MF+DotNet+DXGI</a>
+<a href="../uploads/Examples/Unity+CPU+MF+DXGI.wprp">Unity+CPU+MF+DXGI</a>
+<a href="../uploads/Examples/VirtualAlloc.wprp">VirtualAlloc</a>
+</span>
+</div>
+<div class="timetoshineitem">
+<div class="timetoshineicon"><a href="../uploads/ExpertGuides/Realtime_GI_on_desktops_and_consoles.pdf"><img src="../uploads/Main/TimeToShinePDFDownloadIcon.png" alt=""></a></div>
+<a href="../uploads/ExpertGuides/Realtime_GI_on_desktops_and_consoles.pdf"><strong><em>台式机和游戏主机上的实时 GI (Realtime GI on desktops and consoles)</em></strong></a><br>
+<strong>作者：__Jesper Mortensen，图形工程师 - GI 和光照负责人<br>
+</strong>日期：__2015–11–05<br>
+<strong>已使用以下 Unity 版本进行验证：__5<br>
+</strong>提要：__Jesper 详细介绍了用于制作 <em>The Courtyard</em> 演示的技术，该演示充分利用了 Unity 5 中预先计算的实时全局光照 (GI) 功能。<em>（最初发布在 Unity 博客上）</em>
+</div>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2019–01–10 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 Unity [2017.3] 中更新了去光照工具 (De-Lighting Tool) 文档</span></p></li>
+<li><p><span class="page-history">Expert guide on creating Assets using photogrammetry added in <a href="https://docs.unity3d.com/2018.3/Documentation/Manual/30_search.html?q=newin20183">2018.3</a> <span class="search-words">NewIn20183</span></span></p></li>
+<li><p><span class="page-history">Expert guide "Create High-Quality Light Fixtures in Unity" added in <a href="https://docs.unity3d.com/2018.3/Documentation/Manual/30_search.html?q=newin20183">2018.3</a> <span class="search-words">NewIn20183</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeLightingPipelines.html"></a></span><div class="tip">Best Practice: Setting up the Lighting Pipeline</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="WhatsNew20191.html"></a></span><div class="tip">New in Unity 2019.1</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

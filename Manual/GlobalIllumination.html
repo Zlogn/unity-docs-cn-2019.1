@@ -1,0 +1,568 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Lighting 窗口 - Unity Manual">
+<title>Lighting 窗口 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/GlobalIllumination-0.png">
+<meta name="description" content="The Lighting window (menu: Window &gt; Rendering &gt; Lighting Settings) is the main control point for Unity’s Global Illumination (GI) features. Although GI in Unity gives good results with default settings, the Lighting window’s properties allow you to adjust many aspects of the GI process, to customise your Scene or optimise for quality, speed and storage space as you need. This window also includes settings for ambient light, halos, cookies and fog.">
+<meta property="og:description" content="The Lighting window (menu: Window &gt; Rendering &gt; Lighting Settings) is the main control point for Unity’s Global Illumination (GI) features. Although GI in Unity gives good results with default settings, the Lighting window’s properties allow you to adjust many aspects of the GI process, to customise your Scene or optimise for quality, speed and storage space as you need. This window also includes settings for ambient light, halos, cookies and fog.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'GlobalIllumination';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/GlobalIllumination.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/GlobalIllumination.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/GlobalIllumination.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/GlobalIllumination.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/GlobalIllumination.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/GlobalIllumination.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/GlobalIllumination.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/GlobalIllumination.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/GlobalIllumination.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/GlobalIllumination.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/GlobalIllumination.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/GlobalIllumination.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/GlobalIllumination.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/GlobalIllumination.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/GlobalIllumination.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/GlobalIllumination.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/GlobalIllumination.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/GlobalIllumination.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/GlobalIllumination.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/GlobalIllumination.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/GlobalIllumination.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/GlobalIllumination.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/GlobalIllumination.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/GlobalIllumination.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="LightingOverview.html">光照</a></li>
+<li>Lighting 窗口</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LightingInUnity.html"></a></span><div class="tip">光照概述</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightingExplorer.html"></a></span><div class="tip">光源资源管理器 (Light Explorer)</div>
+</div>
+</div></div>
+<h1>Lighting 窗口</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The Lighting window (menu: <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong>) is the main control point for Unity’s <a href="GIIntro.html">Global Illumination</a> (GI) features. Although GI in Unity gives good results with default settings, the Lighting window’s properties allow you to adjust many aspects of the GI process, to customise your Scene or optimise for quality, speed and storage space as you need. This window also includes settings for ambient light, halos, cookies and fog.</p>
+
+<h2>概述</h2>
+
+<p>Lighting 窗口的控件分为三个选项卡：</p>
+
+<ul>
+<li><p><strong>Scene</strong> 选项卡设置适用于整体场景，而不是个别游戏对象。这些设置控制光照效果和优化选项。</p></li>
+<li><p><strong>Global maps</strong> 选项卡显示 GI 光照过程生成的所有光照贴图资源文件。</p></li>
+<li><p><strong>Object maps</strong> 选项卡显示当前所选游戏对象的 GI 光照贴图纹理（包括阴影遮罩）的预览。</p></li>
+</ul>
+
+<p>此窗口还会在内容下面显示 <strong>Auto Generate</strong> 复选框。如果您勾选此复选框，则 Unity 将在您编辑场景时更新光照贴图数据。请注意，更新通常需要几秒钟时间，而不是立即完成。如果您不勾选 <strong>Auto Generate</strong> 复选框，则该复选框右侧的 <strong>Generate Lighting</strong> 按钮将激活；使用此按钮可在您需要的时候触发光照贴图更新。如果要在不清除 <a href="GICache.html">GI 缓存</a>的情况下清除场景中的烘焙数据，请使用 <strong>Generate Lighting</strong> 按钮。</p>
+
+<h2>Scene 选项卡</h2>
+
+<p><strong>Scene</strong> 选项卡包含适用于整体场景（而不是个别游戏对象）的设置。<strong>Scene</strong> 选项卡包含若干部分：</p>
+
+<ul>
+<li><a href="#Environment">Environment</a></li>
+<li><a href="#RealtimeLighting">Realtime Lighting</a></li>
+<li><a href="#MixedLighting">Mixed Lighting</a></li>
+<li><a href="#LightmappingSettings">Lightmapping Settings</a></li>
+<li><a href="#OtherSettings">Other Settings</a></li>
+<li><a href="#DebugSettings">Debug Settings</a></li>
+</ul>
+
+<p><a name="Environment"> </a> </p>
+
+<h3>Environment</h3>
+
+<p>Environmental Lighting 部分包含天空盒、漫射光照和反射的设置。</p>
+
+<figure>
+<img src="../uploads/Main/GlobalIllumination-0.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Skybox Material</strong></td>
+	<td style="text-align:left;">天空盒是一种材质，它出现在场景中的所有其他对象后方，用于模拟天空或其他遥远的背景。使用此属性可选择要用于场景的天空盒材质。默认值是<a href="AssetTypes.html#Standard">标准资源 (Standard Assets)</a> 中的 <strong>Default-Skybox</strong> 材质。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Sun Source</strong></td>
+	<td style="text-align:left;">使用程序化天空盒时，使用此选项可指定带有方向光组件的游戏对象，从而指示“太阳”（或任何照亮场景的大型远距离光源）的方向。如果设置为 <strong>None__（默认值），则假设场景中最亮的方向光代表太阳。 |
+| </strong>Environment Lighting__</td>
+	<td style="text-align:left;">这些设置会影响来自远处环境的光线。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Source</strong></td>
+	<td style="text-align:left;">漫射环境光（也称为环境光）是场景周围存在的光，并非来自任何特定的光源对象。此项可用于定义光源颜色。默认值为 <strong>Skybox</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Color</td>
+	<td style="text-align:left;">选择此选项可将单调颜色用于场景中的所有环境光。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Gradient</td>
+	<td style="text-align:left;">选择此选项可为来自天空、地平线和地面的环境光选择单独的颜色，并在它们之间平滑混合。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Skybox</td>
+	<td style="text-align:left;">选择此选项可使用天空盒的颜色（如果已通过 <strong>Skybox Material</strong> 指定）来确定来自不同角度的环境光。这可以实现比 <strong>Gradient</strong> 更精细的效果。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Intensity Multiplier</strong></td>
+	<td style="text-align:left;">使用此属性可设置场景中漫射环境光的亮度，定义为 0 到 8 之间的值。默认值为 1。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Ambient Mode</strong></td>
+	<td style="text-align:left;">使用此属性可指定应该用于处理场景中的环境光的全局光照模式。仅当场景中同时启用了<a href="LightMode-Realtime.html">实时光照</a>和<a href="LightMode-Baked.html">烘焙光照</a>时，此属性才可用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Realtime</td>
+	<td style="text-align:left;">如果希望实时计算和更新场景中的环境光，请选择 <strong>Realtime</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Baked</td>
+	<td style="text-align:left;">如果希望预先计算环境光并在运行时将其放入到场景中，请选择 <strong>Baked</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Environment </strong><strong>Reflections</strong>
+</td>
+	<td style="text-align:left;">这些设置用于控制<a href="class-ReflectionProbe.html">反射探针</a>烘焙中涉及的全局设置，以及影响全局反射的设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Source</strong></td>
+	<td style="text-align:left;">使用此设置指定是要将天空盒用于反射效果，还是使用您选择的立方体贴图。默认值为 <strong>Skybox</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Skybox</td>
+	<td style="text-align:left;">选择此选项可对反射使用天空盒。如果您选择 <strong>Skybox__，则将显示一个名为 </strong>Resolution__ 的额外选项。使用此选项可设置用于反射的天空盒的分辨率。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Custom</td>
+	<td style="text-align:left;">选择此选项可对反射使用立方体贴图。如果您选择 Custom，则将显示一个名为 <strong>Cubemap</strong> 的额外选项。使用此选项可设置用于反射的立方体贴图的分辨率。<br>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Compression</strong></td>
+	<td style="text-align:left;">使用此属性可定义是否压缩反射纹理。默认设置是 <strong>Auto</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Auto</td>
+	<td style="text-align:left;">如果压缩格式合适，则压缩反射纹理。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Uncompressed</td>
+	<td style="text-align:left;">反射纹理以非压缩状态存储在内存中。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Compressed</td>
+	<td style="text-align:left;">压缩纹理。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Intensity Multiplier</strong></td>
+	<td style="text-align:left;">反射源（在 <strong>Reflection Source</strong> 属性中指定的天空盒或立方体贴图）在反射对象中可见的程度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Bounces</strong></td>
+	<td style="text-align:left;">当来自一个对象的反射随后被另一个对象反射时，便发生反射“反弹”。应通过使用<a href="ReflectionProbes.html">反射探针</a>在场景中捕获反射。使用此属性可设置反射探针评估对象之间来回反弹的次数。如果设置为 1，则 Unity 只会考虑初始反射（来自 <strong>Reflection Source</strong> 属性中指定的天空盒和立方体贴图）。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="RealtimeLighting"> </a> </p>
+
+<h3>Realtime Lighting</h3>
+
+<figure>
+<img src="../uploads/Main/GlobalIllumination-1.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Realtime Global Illumination</strong></td>
+	<td style="text-align:left;">如果勾选此复选框，则 Unity 将实时计算和更新光照。请参阅有关<a href="LightMode-Realtime.html">实时全局光照</a>的文档以了解更多信息。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="MixedLighting"> </a> </p>
+
+<h3>Mixed Lighting</h3>
+
+<figure>
+<img src="../uploads/Main/GlobalIllumination-2.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">属性：</th>
+	<th style="text-align:left;">功能：</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Baked Global Illumination</strong></td>
+	<td style="text-align:left;">如果选中此复选框，则 Unity 将预计算光照并在运行时将其放入到场景中。请参阅有关<a href="LightMode-Baked.html">烘焙全局光照</a>的文档以了解更多信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Lighting Mode</strong></td>
+	<td style="text-align:left;">
+<strong>Lighting Mode</strong> 确定<a href="LightMode-Mixed.html">混合光源</a>和阴影在场景中作用于游戏对象的方式。<br><strong>注意__：当您更改 </strong>Lighting Mode__ 时，您还需要重新烘焙场景。如果在 Lighting 窗口中启用了 <strong>Auto Generate__，则会自动进行此操作。如果未启用 </strong>Auto Generate__，则单击 <strong>Generate Lighting</strong> 即可看到更新后的光照效果。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Realtime Shadow Color</strong></td>
+	<td style="text-align:left;">定义用于渲染实时阴影的颜色。仅当 <strong>Lighting Mode</strong> 设置为 <strong>Subtractive</strong> 时，此设置才可用。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="LightmappingSettings"> </a> </p>
+
+<h3>Lightmapping Settings</h3>
+
+<p>Lightmapping Settings（光照贴图设置）特定于光照贴图后端。与其他设置不同，这些设置并不共享，并且具有自己的参数。要了解每个光照系统的完整设置信息，请参阅有关<a href="ProgressiveLightmapper.html">渐进光照贴图</a>和 <a href="GI-Enlighten.html">Enlighten</a> 的文档。</p>
+
+<p><a name="OtherSettings"> </a></p>
+
+<h4>Other Settings</h4>
+
+<p>本节提供了有关 <strong>Other Settings</strong> 部分的文档。</p>
+
+<figure>
+<img src="../uploads/Main/LightmappingOtherSettings.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="3"></th>
+	<th style="text-align:left;">属性：</th>
+	<th style="text-align:left;">功能：</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="4"><strong>Other Settings</strong></td>
+	<td style="text-align:left;">雾效、<a href="class-Halo.html">光环</a>、<a href="class-Flare.html">光晕</a>和<a href="Cookies.html">剪影</a>的设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="4"><strong>Fog</strong></td>
+	<td style="text-align:left;">在场景中启用或禁用雾效。请注意，此模式无法用于<a href="RenderingPaths.html">延迟渲染路径</a>。对于延迟渲染，<a href="PostProcessing-Fog.html">后期处理雾效</a>效果可能比较合适。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="3">Color</td>
+	<td style="text-align:left;">使用拾色器设置 Unity 用于在场景中绘制雾的颜色。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="3">Mode</td>
+	<td style="text-align:left;">定义雾化效果随着与摄像机距离变化而积累的方式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;" colspan="2"><strong>Linear</strong></td>
+	<td style="text-align:left;">雾效强度随着距离线性增加。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"></td>
+	<td style="text-align:left;">Start</td>
+	<td style="text-align:left;">设置在距离摄像机多远时开始雾效。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"></td>
+	<td style="text-align:left;">End</td>
+	<td style="text-align:left;">设置在距离摄像机多远时雾效完全遮挡场景游戏对象。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;" colspan="2"><strong>Exponential</strong></td>
+	<td style="text-align:left;">雾效强度随着距离呈指数增加。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"></td>
+	<td style="text-align:left;">Density</td>
+	<td style="text-align:left;">用于控制雾效的强度。雾效随着 <strong>Density</strong> 增加而显示为更强。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;" colspan="2"><strong>Exponential Squared</strong></td>
+	<td style="text-align:left;">雾效强度随着距离更快速增加（指数和平方）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"></td>
+	<td style="text-align:left;">Density</td>
+	<td style="text-align:left;">用于控制雾效的强度。雾效随着 <strong>Density</strong> 增加而显示为更强。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="4"><strong>Halo Texture</strong></td>
+	<td style="text-align:left;">设置要用于在光源周围绘制<a href="class-Halo.html">光环</a>的纹理。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="4"><strong>Halo Strength</strong></td>
+	<td style="text-align:left;">定义光源周围光环的可见性，值在 0 到 1 之间。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="4"><strong>Flare Fade Speed</strong></td>
+	<td style="text-align:left;">定义最初出现<a href="class-LensFlare.html">镜头光晕</a>之后从视图中淡出的时间（以秒为单位）。默认情况下，该值设置为 3。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="4"><strong>Flare Strength</strong></td>
+	<td style="text-align:left;">定义光源下镜头光晕的可见性，值在 0 到 1 之间。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="4"><strong>Spot Cookie</strong></td>
+	<td style="text-align:left;">设置要用于<a href="Lighting.html">点光源</a>的<a href="HOWTO-LightCookie.html">剪影</a>纹理。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="DebugSettings"> </a> </p>
+
+<h3>Debug Settings</h3>
+
+<figure>
+<img src="../uploads/Main/GlobalIllumination-5.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Debug Settings</strong></td>
+	<td style="text-align:left;">这些设置可帮助您调试场景。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Light Probe Visualization</strong></td>
+	<td style="text-align:left;">用于过滤哪些<a href="LightProbes.html">光照探针</a>显示在 Scene 视图中。默认值为 <strong>Only Probes Used By Selection</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Only Probes Used By Selection</td>
+	<td style="text-align:left;">只有影响当前选择的光照探针才会显示在 Scene 视图中。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    All Probes No Cells</td>
+	<td style="text-align:left;">所有光照探针都将显示在 Scene 视图中。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    All Probes With Cells</td>
+	<td style="text-align:left;">所有光照探针都将显示在 Scene 视图中，还会显示用于光照探针数据插值的四面体。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    None</td>
+	<td style="text-align:left;">任何光照探针都不显示在 Scene 视图中。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Display Weights</strong></td>
+	<td style="text-align:left;">勾选此复选框时，Unity 将从用于有效选择的光照探针到用于插值的四面体上的位置绘制一条线。这是一种调试探针插值和放置问题的方法。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Display Occlusion</strong></td>
+	<td style="text-align:left;">勾选此复选框时，如果混合光照模式为 <a href="LightMode-Mixed-DistanceShadowmask.html">Distance Shadowmask</a> 或 <a href="LightMode-Mixed-Shadowmask.html">Shadowmask</a>，则 Unity 将显示光照探针的遮挡数据。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Global maps 选项卡</h2>
+
+<p>使用 <strong>Global maps</strong> 选项卡可查看光照系统正在使用的实际纹理。这些内容包括强度光照贴图、阴影遮罩和方向贴图。仅当使用<a href="LightMode-Baked.html">烘焙光照</a>或<a href="LightMode-Mixed.html">混合光照</a>时可用；对于<a href="LightMode-Realtime.html">实时光照</a>，预览为空白。</p>
+
+<figure>
+<img src="../uploads/Main/GlobalIllumination-7.png" alt="">
+</figure>
+
+<h2>Object maps 选项卡</h2>
+
+<p>使用 <strong>Object maps</strong> 选项卡可查看仅限当前所选<em>游戏对象</em>的烘焙纹理的预览，包括阴影遮罩。</p>
+
+<figure>
+<img src="../uploads/Main/GlobalIllumination-8.png" alt="">
+</figure>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2017–06–08 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">5.6 版更新</span></p></li>
+<li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2018.1/Documentation/Manual/30_search.html?q=newin20181">2018.1</a> 版中更新了光照贴图部分和调试设置 <span class="search-words">NewIn20181</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LightingInUnity.html"></a></span><div class="tip">光照概述</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightingExplorer.html"></a></span><div class="tip">光源资源管理器 (Light Explorer)</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

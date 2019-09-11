@@ -1,0 +1,314 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Responding to Events - Unity Manual">
+<title>Responding to Events - Unity Manual</title>
+<meta name="description" content="You can make a visual element react to an event that it receives in two ways:">
+<meta property="og:description" content="You can make a visual element react to an event that it receives in two ways:">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UIE-Events-Handling';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UIE-Events-Handling.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UIE-Events-Handling.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UIE-Events-Handling.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UIE-Events-Handling.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UIE-Events-Handling.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UIE-Events-Handling.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UIE-Events-Handling.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UIE-Events-Handling.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UIE-Events-Handling.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UIE-Events-Handling.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UIE-Events-Handling.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UIE-Events-Handling.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UIE-Events-Handling.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UIE-Events-Handling.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UIE-Events-Handling.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UIE-Events-Handling.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UIE-Events-Handling.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UIE-Events-Handling.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UIE-Events-Handling.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UIE-Events-Handling.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UIE-Events-Handling.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UIE-Events-Handling.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UIE-Events-Handling.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UIE-Events-Handling.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UIToolkits.html">UI</a></li>
+<li><a href="UIElements.html">UIElements Developer Guide</a></li>
+<li><a href="UIE-Events.html">The Event System</a></li>
+<li>Responding to Events</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIE-Events-Dispatching.html"></a></span><div class="tip">Dispatching Events</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UIE-Events-Synthesizing.html"></a></span><div class="tip">Synthesizing Events</div>
+</div>
+</div></div>
+<h1>Responding to Events</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>You can make a visual element react to an event that it receives in two ways:</p>
+
+<ul>
+<li>by registering an event callback,</li>
+<li>by implementing a default action.</li>
+</ul>
+
+<p>Whether you should register an event callback or implement default actions depends on many factors.</p>
+
+<p>For example, if you instantiate objects from an existing class and you want the instance to react in a specific way when it receive events, your only option is to register callbacks on this instance.</p>
+
+<p>However, if you derive a new class from VisualElement and you want all instances of this class to react to events in the same way, you can either register callbacks on all instances of this class in the constructor, or implement default actions for the class.</p>
+
+<p>The fundamental differences between callbacks and default actions are as follows:</p>
+
+<ul>
+<li>Callbacks must be registered on instances of the class. Default actions are implemented as virtual functions on the class.</li>
+<li>Callbacks are executed for all elements along the propagation path. Default actions are executed for the event target only.</li>
+</ul>
+
+<p>You can prevent default actions from executing by calling <code>event.PreventDefault()</code>. Some event types cannot be cancelled which means that their default actions cannot be cancelled. You can prevent callbacks from executing by calling <code>event.StopPropagation()</code> or <code>event.StopImmediatePropagation()</code>, even for events that are not cancellable.</p>
+
+<p>You should view default actions as the behaviors that an element of a specific type should have when it receives an event. </p>
+
+<p>For example, a checkbox should respond to a click event by toggling its state. This behavior should be implemented by overriding a default action virtual function rather than registering callbacks on all checkboxes. </p>
+
+<p>In general, you should prefer implementing the behaviors that are naturally expected from your element with default actions. This ensures that default element behaviors can be cancelled on an instance by instance basis by calling <code>PreventDefault()</code> in a callback attached to an instance.</p>
+
+<p>Additional benefits of implementing behaviors as default actions are that their execution do not require a lookup in the callback registry and instances without callbacks are optimized out of the trickle down/bubble-up propagation process.</p>
+
+<p>For greater flexibility, default actions of the event target can be executed at two moments during the event dispatch process:</p>
+
+<ul>
+<li>between the trickle down and the bubble up propagation phase, immediately after the target callbacks are executed, by overriding <code>ExecuteDefaultActionsAtTarget()</code>;</li>
+<li>at the end of the event dispatch process, by overriding <code>ExecuteDefaultActions()</code>.</li>
+</ul>
+
+<p>Whenever possible, implement your class default actions in <code>ExecuteDefaultActions()</code>. This gives the users of your class more options to override them: they can call <code>PreventDefault()</code> either during the trickle down phase or the bubble up phase of the event propagation process.</p>
+
+<p>Sometimes, however, you must enforce that an event executing a default action on your class is not propagated to the parent of the element. For example, a text field receives key down events that modifies its value. These key down events are not propagated to the parent that might, for example, use the Delete key to delete content. In this case, implement your default action using <code>ExecuteDefaultActionsAtTarget()</code> and call <code>StopPropagation()</code>. This ensures that the event is not processed by callbacks during the bubble up phase.</p>
+
+<p>Default actions are only executed for the target of an event. They are not executed when the element receives the event as a result of the event propagation process. If you want your class to react to events targeted at their children or at their parents, you must register a callback on each instance of your class. This is sometimes necessary, but for better expandability and better performance, try to avoid registering callbacks on every instance of your class.</p>
+
+<h2>Registering an event callback</h2>
+
+<p>To add a custom behavior to a specific instance of a visual element, you must register a callback for the event that triggers the custom behavior. </p>
+
+<p>The advantage of registering an event callback is that it lets you customize the behavior of an individual instance of an existing class. The disadvantage of registering an event callback is that it is less performant because it takes longer to execute. It takes longer to execute because, whenever an event is received, the registered event is checked to determine which callback should be executed. </p>
+
+<p>For example, the following code registers two callbacks for the <code>MouseDownEvent</code>:</p>
+
+<pre><code class="csharp">    // Register a callback on a mouse down event
+    myElement.RegisterCallback&lt;MouseDownEvent&gt;(MyCallback);
+    // Same, but also send some user data to the callback
+    myElement.RegisterCallback&lt;MouseDownEvent, MyType&gt;(MyCallbackWithData, myData);
+</code></pre>
+
+<p>Your callback signature should look like this:</p>
+
+<pre><code class="csharp">void MyCallback(MouseDownEvent evt) { /* ... */ }
+void MyCallbackWithData(MouseDownEvent evt, MyType data) { /* ... */ }
+</code></pre>
+
+<p>You can register as many callbacks as you wish for an event. However, the callback registration system prevents you from registering the same callback function more than once on a given event and propagation phase. You can remove a callback from a <code>VisualElement</code> by calling the <code>myElement.UnregisterCallback()</code> method.</p>
+
+<p>Each element along the propagation path, except the target, receives the event twice: once during the trickle down phase and once during the bubble-up phase. To avoid executing a registered callback twice, use the optional <code>RegisterCallback</code> to specify during which phase a callback is executed.</p>
+
+<p>By default, a registered callback is executed during the target phase and the bubble-up phase. This default behavior ensures that a parent element reacts after its children. If, for example, you want a parent to react first, to override the behaviour of its children, you would register your callback with the <code>TrickleDown.TrickleDown</code> option:</p>
+
+<pre><code class="csharp">    // Register a callback for the trickle down phase
+    myElement.RegisterCallback&lt;MouseDownEvent&gt;(MyCallback, TrickleDown.TrickleDown);
+</code></pre>
+
+<p>This informs the dispatcher to execute the callback at the target phase and the trickle down phase.</p>
+
+<h2>Implementing a default action</h2>
+
+<p>A default action applies to all instances of the class. This means that one or both methods are called for every event the element receives. </p>
+
+<p>A class that implements default actions can also have callbacks registered on its instances.</p>
+
+<p>An event class implements behaviors that are executed either before or after processing an event. The events class does this by overriding the <code>PreDispatch()</code> of <code>PostDispatch()</code> method of the <code>EventBase</code> class. Since events are queued, these methods can update the state or perform tasks when the event is handled instead of when the event is emitted. For example, the <code>BlurEvent</code>changes the currently focused element before it proceses the element.</p>
+
+<p>Implementing a default action requires deriving a new subclass of <code>VisualElement</code> and implementing either the <code>ExecuteDefaultActionAtTarget()</code> method, the <code>ExecuteDefaultAction()</code> method, or both. </p>
+
+<p>Default actions are actions that are executed by each instance of a visual element sub-class when it receives an event. You can customize default actions by overriding <code>ExecuteDefaultActionAtTarget()</code> and <code>ExecuteDefaultAction()</code>:</p>
+
+<pre><code class="csharp">override void ExecuteDefaultActionAtTarget(EventBase evt)
+{
+    // Do not forget to call the base function.
+    base.ExecuteDefaultActionAtTarget(evt);
+
+    if (evt.GetEventTypeId() == MouseDownEvent.TypeId())
+    {
+        // ...
+    }
+    else if (evt.GetEventTypeId() == MouseUpEvent.TypeId())
+    {
+        // ...
+    }
+    // More event types
+}
+</code></pre>
+
+<p>For greater flexibility, you should implement your default actions in <code>ExecuteDefaultAction()</code>. This allows users to stop or prevent the execution of a default action, if needed. </p>
+
+<p>If you want the target default action to be executed before its parent callback, implement the default actions in <code>ExecuteDefaultActionAtTarget()</code>.</p>
+
+<h1>The event handling sequence</h1>
+
+<p>When an event occurs, it is sent along the propagation path in the visual element tree. Assuming that the event type demands that all phases of event propagation be followed, the event is sent to each visual element. The event handling sequence is a follows:</p>
+
+<ol>
+<li>Execute event callbacks on elements from the root element down to the parent of the event target. This is the <em>trickle down phase</em> of the dispatch process.</li>
+<li>Execute event callbacks on the event target. This is the <em>target phase</em> of the dispatch process.</li>
+<li>Call the target <code>ExecuteDefaultActionAtTarget()</code>.</li>
+<li>Execute event callbacks on elements from the event target parent up to the root. This is the <em>bubble-up phase</em> of the dispatch process.</li>
+<li>Call the target <code>ExecuteDefaultAction()</code>.</li>
+</ol>
+
+<p>As an event is sent along the propagation path, <code>Event.currentTarget</code> is updated to the element currently handling the event. This means that within an event callback function, <code>Event.currentTarget</code> is the element on which the callback was registered and <code>Event.target</code> is the element on which the event occured.</p>
+
+<h2>Stopping event propagation and cancelling default actions</h2>
+
+<p>You can use callbacks to stop, prevent, and cancel actions from being executed. However, you cannot prevent the <code>EventBase.PreDispatch()</code> and <code>EventBase.PostDispatch()</code>methods from being executed.</p>
+
+<p>The following methods affect event propagation and default actions: </p>
+
+<ul>
+<li>
+<code>StopImmediatePropagation()</code> stops the event propagation process immediately. No other callbacks are executed for this event. However, the <code>ExecuteDefaultActionAtTarget()</code> and <code>ExecuteDefaultAction()</code> default actions are still executed.</li>
+<li>
+<code>StopPropagation()</code> stops the event propagation process after the last callback on the current element. This ensure that all callbacks on the current element are executed, but that no further elements react to the event. The <code>ExecuteDefaultActionAtTarget()</code> and <code>ExecuteDefaultAction()</code> default actions are still be executed.</li>
+<li>
+<code>PreventDefaultAction()</code> prevents the <code>ExecuteDefaultActionAtTarget()</code> and
+ <code>ExecuteDefaultAction()</code> default actions from being called. <code>PreventDefaultAction()</code> does not prevent other callbacks from being executed. In addition, if you call <code>PreventDefaultAction()</code> during the bubble-up phase, the <code>ExecuteDefaultActionAtTarget()</code> default action is not prevented because it has already been executed. The <code>ExecuteDefaultActionAtTarget()</code> default action is executed during the trickle down phase.</li>
+</ul>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–11–02 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIE-Events-Dispatching.html"></a></span><div class="tip">Dispatching Events</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UIE-Events-Synthesizing.html"></a></span><div class="tip">Synthesizing Events</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

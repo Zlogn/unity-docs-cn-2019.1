@@ -1,0 +1,199 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="通过脚本创建 UI 元素 - Unity Manual">
+<title>通过脚本创建 UI 元素 - Unity Manual</title>
+<meta name="description" content="如果要创建动态 UI，使 UI 元素根据用户操作或游戏中的其他操作来显示、消失或变化，则可能需要创建基于自定义逻辑来实例化新 UI 元素的脚本。">
+<meta property="og:description" content="如果要创建动态 UI，使 UI 元素根据用户操作或游戏中的其他操作来显示、消失或变化，则可能需要创建基于自定义逻辑来实例化新 UI 元素的脚本。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'HOWTO-UICreateFromScripting';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/HOWTO-UICreateFromScripting.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/HOWTO-UICreateFromScripting.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/HOWTO-UICreateFromScripting.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/HOWTO-UICreateFromScripting.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/HOWTO-UICreateFromScripting.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/HOWTO-UICreateFromScripting.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/HOWTO-UICreateFromScripting.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/HOWTO-UICreateFromScripting.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/HOWTO-UICreateFromScripting.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/HOWTO-UICreateFromScripting.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/HOWTO-UICreateFromScripting.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/HOWTO-UICreateFromScripting.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/HOWTO-UICreateFromScripting.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/HOWTO-UICreateFromScripting.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/HOWTO-UICreateFromScripting.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/HOWTO-UICreateFromScripting.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/HOWTO-UICreateFromScripting.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/HOWTO-UICreateFromScripting.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/HOWTO-UICreateFromScripting.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/HOWTO-UICreateFromScripting.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/HOWTO-UICreateFromScripting.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/HOWTO-UICreateFromScripting.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/HOWTO-UICreateFromScripting.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/HOWTO-UICreateFromScripting.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UIToolkits.html">UI</a></li>
+<li><a href="UISystem.html">Unity UI: Unity User Interface</a></li>
+<li><a href="UIHowTos.html">UI 操作方法</a></li>
+<li>通过脚本创建 UI 元素</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="HOWTO-UIWorldSpace.html"></a></span><div class="tip">创建 World Space UI</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="HOWTO-UIScreenTransition.html"></a></span><div class="tip">创建屏幕过渡</div>
+</div>
+</div></div>
+<h1>通过脚本创建 UI 元素</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>如果要创建动态 UI，使 UI 元素根据用户操作或游戏中的其他操作来显示、消失或变化，则可能需要创建基于自定义逻辑来实例化新 UI 元素的脚本。</p>
+
+<h2>创建 UI 元素预制件</h2>
+
+<p>为了能够轻松地动态实例化 UI 元素，第一步是为希望能够实例化的 UI 元素类型创建预制件。首先设置 UI 元素，使其在场景中具有所需的显示效果，然后将该元素拖动到 Project 视图中以使其成为预制件。</p>
+
+<p>例如，按钮的预制件可以是具有图像组件和按钮组件的游戏对象以及具有文本组件的子游戏对象。根据需求不同，设置可能会有所不同。</p>
+
+<p>您可能想知道为什么我们没有提供 API 方法来创建各种类型的控件（包括视觉效果和所有内容）。原因在于，比如对于按钮而言，有无数种设置方式。该控件使用图像、文本还是两者兼而有之？甚至可能使用多个图像？文本字体、颜色、字体大小和对齐方式是什么？图像应该使用哪个精灵或哪些精灵？通过创建预制件并对其进行实例化，即可完全按照所需的方式进行设置。如果稍后想更改 UI 的外观，只需更改预制件，然后更改就会反映在 UI 中，包括动态创建的 UI。</p>
+
+<h2>实例化 UI 元素</h2>
+
+<p>UI 元素的预制件由 Instantiate 方法进行正常实例化。在设置实例化的 UI 元素的父项时，建议使用 Transform.SetParent 方法并将 worldPositionStays 参数设置为 false。</p>
+
+<h2>定位 UI 元素</h2>
+
+<p>UI 元素通常借助其矩形变换 (Rect Transform) 定位。如果 UI 元素是布局组的子元素，则会自动定位，因此可跳过定位步骤。</p>
+
+<p>在定位矩形变换时，首先应确定其是否具有或应该具有任何拉伸行为，这种做法很有用。当 anchorMin 和 anchorMax 属性不相同时，便会发生拉伸行为。</p>
+
+<p>对于非拉伸的矩形变换，设置位置最轻松的方法是设置 anchoredPosition 和 sizeDelta 属性。anchoredPosition 指定了轴心相对于锚点的位置。sizeDelta 与没有拉伸时的大小相同。</p>
+
+<p>对于拉伸的矩形变换，使用 offsetMin 和 offsetMax 属性来设置位置可能更简单。offsetMin 属性指定了矩形左下角相对于左下锚点的角点。offsetMax 属性指定了矩形右上角相对于右上锚点的角点。</p>
+
+<h2>自定义 UI 元素</h2>
+
+<p>如果要动态实例化多个 UI 元素，通常不太可能希望它们看起来都相同并执行相同的操作。无论是菜单中的按钮、库存中的商品还是其他元素，可能都希望具体项目具有不同的文本或图像，并在与之交互时执行不同的操作。</p>
+
+<p>实现此目标的方法是获取各种组件并更改其属性。请参阅图像和文本组件的脚本参考，了解如何通过脚本处理 UnityEvent。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="HOWTO-UIWorldSpace.html"></a></span><div class="tip">创建 World Space UI</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="HOWTO-UIScreenTransition.html"></a></span><div class="tip">创建屏幕过渡</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

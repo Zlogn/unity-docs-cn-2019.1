@@ -1,0 +1,198 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="全局光照 - Unity Manual">
+<title>全局光照 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/GIExamplePic.png">
+<meta name="description" content="全局光照 (GI) 系统可对光从表面反射到其他表面（间接光）的方式进行建模，不仅仅局限于直接从光源照射到表面的光（直射光）。间接光照建模使得构成虚拟世界的效果看起来更逼真且具有相关性，因为对象会影响彼此的外观。一个典型的例子是&amp;#8220;渗色&amp;#8221;，例如，阳光照射到红色沙发上会导致红光反射到其后面的墙壁上。另一个例子是阳光在洞穴入口照射到地面上并在内部反射，因此洞穴的内部也被照亮。">
+<meta property="og:description" content="全局光照 (GI) 系统可对光从表面反射到其他表面（间接光）的方式进行建模，不仅仅局限于直接从光源照射到表面的光（直射光）。间接光照建模使得构成虚拟世界的效果看起来更逼真且具有相关性，因为对象会影响彼此的外观。一个典型的例子是&amp;#8220;渗色&amp;#8221;，例如，阳光照射到红色沙发上会导致红光反射到其后面的墙壁上。另一个例子是阳光在洞穴入口照射到地面上并在内部反射，因此洞穴的内部也被照亮。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'GIIntro';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/GIIntro.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/GIIntro.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/GIIntro.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/GIIntro.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/GIIntro.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/GIIntro.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/GIIntro.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/GIIntro.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/GIIntro.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/GIIntro.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/GIIntro.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/GIIntro.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/GIIntro.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/GIIntro.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/GIIntro.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/GIIntro.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/GIIntro.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/GIIntro.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/GIIntro.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/GIIntro.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/GIIntro.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/GIIntro.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/GIIntro.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/GIIntro.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="LightingOverview.html">光照</a></li>
+<li>全局光照</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="DirLightShadows.html"></a></span><div class="tip">方向光阴影</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Lightmappers.html"></a></span><div class="tip">Lightmapping</div>
+</div>
+</div></div>
+<h2>全局光照</h2>
+
+<p><strong>全局光照</strong> (GI) 系统可对光从表面反射到其他表面（间接光）的方式进行建模，不仅仅局限于直接从光源照射到表面的光（直射光）。间接光照建模使得构成虚拟世界的效果看起来更逼真且具有相关性，因为对象会影响彼此的外观。一个典型的例子是“渗色”，例如，阳光照射到红色沙发上会导致红光反射到其后面的墙壁上。另一个例子是阳光在洞穴入口照射到地面上并在内部反射，因此洞穴的内部也被照亮。</p>
+
+<p><img src="../uploads/Main/GIExamplePic.png" alt="">
+Scene 视图中的全局光照。注意间接光照的微妙效果。</p>
+
+<h2>GI 概念</h2>
+
+<p>视频游戏和其他实时图形应用程序一直以来仅限于直接光照，而间接光照所需的计算运行太慢，因此它们只能用于非实时情况，例如 CG 动画电影。对于游戏来说，解决此限制的一种方法是：仅为事先已知不会移动的对象和表面（也就是处于静态）计算间接光照。这样，慢速计算可以提前完成，但由于对象不移动，因此以这种方式预先计算的间接光在运行时仍然是正确的。Unity 支持这种称为“烘焙 GI”（也称为“烘焙光照贴图”）的技术，该技术以“烘焙”命名，是指间接光预先计算和存储（烘焙）的过程。除了间接光之外，烘焙 GI 可以利用的计算时间更长，与实时技术通常能够实现的效果相比，烘焙 GI 可以通过面光源和间接光生成更逼真的柔和阴影。</p>
+
+<p>此外，Unity 5.0 还增加了对称为“预计算实时 GI”的新技术的支持。它仍然需要类似于上面提到的烘焙的预计算阶段，并且它仍然限于静态对象。然而，这项技术不仅在构建场景时预先计算场景中光线反射的方式，而且还会预先计算所有可能的光线反射并对此信息进行编码以便在运行时使用。因此，它主要针对所有静态对象回答了以下问题：“如果光线照射到这个表面，光线会反射到哪里？”Unity 然后保存关于光可以传播的路径的信息以备后用。最终光照将在运行时完成，方法是将存在的实际光馈送到这些先前计算的光传播路径中。</p>
+
+<p>这意味着光照的数量和类型、位置、方向和其他属性都可以更改，而且间接光照也会相应更新。同样，也可以改变对象的材质属性，例如它们的颜色、它们吸收的光量或它们自身发出的光量。</p>
+
+<p>虽然预计算实时 GI 也会产生柔和阴影，但较之于使用烘焙 GI 可以实现的精细程度，预计算实时 GI 通常必须更加粗糙，除非场景非常小。另外请注意，虽然预计算实时 GI 在运行时执行最终光照，但它会对多个帧迭代执行，因此如果在光照中进行了重要更改，则需要更多帧后才能完全生效。虽然这对于实时应用程序来说足够快，但如果目标平台具有非常有限的资源，那么最好是使用烘焙 GI 以获得更好的运行时性能。</p>
+
+<h2>GI 的局限性</h2>
+
+<p>烘焙 GI 和预计算实时 GI 都有局限性：只有静态对象可以包含在烘焙/预计算中，因此移动的对象不能将光反射到其他对象上，反之亦然。然而，这两种 GI 仍然可以使用<a href="LightProbes.html">光照探针</a>从静态对象中拾取反射光。光照探针是在烘焙/预计算期间测量（探测）光照的场景位置，然后在运行时，系统将使用来自某些探针（对象在任何给定时刻最接近的探针）的值来估算照射到非静态对象的间接光。例如，在白色墙壁旁边卷起的红色球不会将其颜色渗透到墙壁上，但是红色墙壁旁边的白色球可以通过光照探针从墙壁上拾取红色。</p>
+
+<h2>GI 效果示例</h2>
+
+<ul>
+<li><p>改变方向光的方向和颜色来模拟太阳在天空中移动的效果。通过修改天空盒以及方向光，可以创建在运行时更新的逼真时间变化效果。（实际上，新的内置程序化天空盒可以轻松实现这一点）。</p></li>
+<li><p>随着一天中时间的推移，通过窗户流入的阳光穿过地板移动，这种光照逼真地在房间周围反射，并反射到天花板。当阳光照射到红色沙发上时，红色光会反射到它背后的墙壁上。
+将沙发的颜色从红色变为绿色会导致其后面墙壁上的颜色也从红色变为绿色。</p></li>
+<li><p>模拟霓虹灯招牌材质的放射性的动画效果，开启后便会在周围开始发光。</p></li>
+</ul>
+
+<p>以下各部分将详细介绍如何使用此功能。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="DirLightShadows.html"></a></span><div class="tip">方向光阴影</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Lightmappers.html"></a></span><div class="tip">Lightmapping</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

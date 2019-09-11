@@ -1,0 +1,205 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Model Import Settings 窗口 - Unity Manual">
+<title>Model Import Settings 窗口 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/classFBXImporter-Inspector.png">
+<meta name="description" content="Note: These settings are for importing Models and animation created in most 3D modeling applications. However, Models created in SpeedTree have special settings. For more information, see the SpeedTree Import Settings window.">
+<meta property="og:description" content="Note: These settings are for importing Models and animation created in most 3D modeling applications. However, Models created in SpeedTree have special settings. For more information, see the SpeedTree Import Settings window.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-FBXImporter';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-FBXImporter.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-FBXImporter.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-FBXImporter.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-FBXImporter.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-FBXImporter.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-FBXImporter.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-FBXImporter.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-FBXImporter.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-FBXImporter.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-FBXImporter.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-FBXImporter.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-FBXImporter.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-FBXImporter.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-FBXImporter.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-FBXImporter.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-FBXImporter.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-FBXImporter.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-FBXImporter.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-FBXImporter.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-FBXImporter.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-FBXImporter.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-FBXImporter.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-FBXImporter.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-FBXImporter.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="ImportingAssets.html">导入</a></li>
+<li>Model Import Settings 窗口</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="GenericAnimations.html"></a></span><div class="tip">导入非人形动画</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="FBXImporter-Model.html"></a></span><div class="tip">Model tab</div>
+</div>
+</div></div>
+<h1>Model Import Settings 窗口</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<figure>
+<img src="../uploads/Main/classFBXImporter-Inspector.png" alt="Import Settings 窗口">
+<figcaption>Import Settings 窗口</figcaption>
+</figure>
+
+<blockquote>
+<p><strong>Note:</strong> These settings are for importing Models and animation created in most 3D modeling applications. However, Models created in SpeedTree have special settings. For more information, see the <a href="class-SpeedTreeImporter.html">SpeedTree Import Settings</a> window. </p>
+</blockquote>
+
+<p>将模型文件放在 Unity 项目下的 Assets 文件夹中时，Unity 会自动导入这些文件并将它们存储为 Unity 资源。要在 <strong>Inspector</strong> 中查看导入设置，请在 <strong>Project</strong> 窗口中单击该文件。通过在此窗口的四个选项卡上设置相应属性可以自定义 Unity 导入所选文件的方式：</p>
+
+<p><a href="FBXImporter-Model.html"><img src="../uploads/Main/class-FBXImporter_Model-tab.png" alt="Model 选项卡"></a><br>一个 3D <a href="FBXImporter-Model.html">模型</a>可表示角色、建筑物或家具。在这些情况下，Unity 从单个模型文件创建多个资源。在 Project 窗口中，主导入对象是模型__预制件__。通常，该模型预制件还会引用多个__网格__对象。</p>
+
+<p><a href="FBXImporter-Rig.html"><img src="../uploads/Main/class-FBXImporter_Rig-tab.png" alt="Rig tab"></a><br>A <a href="FBXImporter-Rig.html">Rig</a> (sometimes called a <em>skeleton</em>) comprises a set of deformers arranged in a hierarchy that animate a Mesh (sometimes called <em>skin</em>) on one or more models created in a 3D modeling application such as as Autodesk® 3ds Max® or Autodesk® Maya®. For <strong>Humanoid</strong> and <strong>Generic</strong> (non-humanoid) Models, Unity creates an <strong>Avatar</strong> to reconcile the imported Rig with the Unity <strong>GameObject</strong>.</p>
+
+<p><a href="class-AnimationClip.html"><img src="../uploads/Main/class-FBXImporter_Animation-tab.png" alt="Animation 选项卡"></a><br>可以定义一组帧上发生的任何不同姿势（例如行走、奔跑甚至空闲状态（从一只脚移动到另一只脚））的序列作为<a href="class-AnimationClip.html">动画剪辑</a>。可以对任何具有相同骨架的模型重用剪辑。通常，单个文件包含多个不同的动作，可将每个动作定义为特定的__动画剪辑__。</p>
+
+<p><a href="FBXImporter-Materials.html"><img src="../uploads/Main/class-FBXImporter_Materials-tab.png" alt="Materials 选项卡"></a><br>可以提取<a href="FBXImporter-Materials.html">材质和纹理</a>或将它们嵌入模型中。还可以调整材质在模型中的贴图方式。</p>
+
+<h3>另请参阅</h3>
+
+<ul>
+<li>
+<a href="ImportingModelFiles.html">模型导入工作流程</a>：有关导入模型文件的概述</li>
+<li>
+<a href="3D-formats.html">模型文件格式</a>：Unity 支持的文件格式（包括专有和通用格式）以及各种 3D 建模软件应用程序特有的问题</li>
+<li>
+<a href="HOWTO-exportFBX.html">从其他应用程序导出</a>：有关如何从 3D 建模应用程序导出 FBX 文件（和专有文件）的一般准则</li>
+</ul>
+
+<hr>
+
+<ul>
+<li><span class="page-edit"> 2018–04–25 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="GenericAnimations.html"></a></span><div class="tip">导入非人形动画</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="FBXImporter-Model.html"></a></span><div class="tip">Model tab</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

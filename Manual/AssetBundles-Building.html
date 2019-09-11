@@ -1,0 +1,253 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="构建 AssetBundle - Unity Manual">
+<title>构建 AssetBundle - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/AssetBundles-Building-0.png">
+<meta name="description" content="在有关 AssetBundle 工作流程的文档中，我们有一个代码示例将三个参数传递给 BuildPipeline.BuildAssetBundles 函数。让我们深入了解一下这方面。">
+<meta property="og:description" content="在有关 AssetBundle 工作流程的文档中，我们有一个代码示例将三个参数传递给 BuildPipeline.BuildAssetBundles 函数。让我们深入了解一下这方面。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'AssetBundles-Building';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AssetBundles-Building.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AssetBundles-Building.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AssetBundles-Building.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AssetBundles-Building.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AssetBundles-Building.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AssetBundles-Building.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AssetBundles-Building.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AssetBundles-Building.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AssetBundles-Building.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AssetBundles-Building.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/AssetBundles-Building.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/AssetBundles-Building.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/AssetBundles-Building.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/AssetBundles-Building.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AssetBundles-Building.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AssetBundles-Building.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AssetBundles-Building.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AssetBundles-Building.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AssetBundles-Building.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AssetBundles-Building.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AssetBundles-Building.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AssetBundles-Building.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AssetBundles-Building.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AssetBundles-Building.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="AdvancedDevelopment.html">高级开发</a></li>
+<li><a href="AssetBundlesIntro.html">AssetBundle</a></li>
+<li>构建 AssetBundle</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetBundles-Preparing.html"></a></span><div class="tip">为 AssetBundle 准备资源</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetBundles-Dependencies.html"></a></span><div class="tip">AssetBundle 依赖项</div>
+</div>
+</div></div>
+<h1>构建 AssetBundle</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>在有关 <a href="AssetBundles-Workflow.html">AssetBundle 工作流程</a>的文档中，我们有一个代码示例将三个参数传递给 <code>BuildPipeline.BuildAssetBundles</code> 函数。让我们深入了解一下这方面。</p>
+
+<p>_Assets/AssetBundles_：这是 AssetBundle 要输出到的目录。可以将其更改为所需的任何输出目录，只需确保在尝试构建之前文件夹实际存在。</p>
+
+<h4>BuildAssetBundleOptions</h4>
+
+<p>可以指定几个具有各种效果的不同 <code>BuildAssetBundleOptions</code>。请参阅关于 <a href="../ScriptReference/BuildAssetBundleOptions.html">BuildAssetBundleOptions</a> 的脚本 API 参考查看所有这些选项的表格。</p>
+
+<p>虽然可以根据需求变化和需求出现而自由组合 <code>BuildAssetBundleOptions</code>，但有三个特定的 <code>BuildAssetBundleOptions</code> 可以处理 AssetBundle 压缩：</p>
+
+<ul>
+<li><p><code>BuildAssetBundleOptions.None</code>: This bundle option uses LZMA Format compression, which is a single compressed LZMA stream of serialized data files. LZMA compression requires that the entire bundle is decompressed before it’s used. This results in the smallest possible file size but a slightly longer load time due to the decompression. It is worth noting that when using this BuildAssetBundleOptions, in order to use any assets from the bundle the entire bundle must be uncompressed initially. <br> Once the bundle has been decompressed, it will be recompressed on disk using LZ4 compression which doesn’t require the entire bundle be decompressed before using assets from the bundle. This is best used when a bundle contains assets such that to use one asset from the bundle would mean all assets are going to be loaded. Packaging all assets for a character or scene are some examples of bundles that might use this. <br> Using LZMA compression is only recommended for the initial download of an AssetBundle from an off-site host due to the smaller file size. LZMA compressed asset bundles loaded through <a href="../ScriptReference/Networking.UnityWebRequestAssetBundle.html">UnityWebRequestAssetBundle</a> are automatically recompressed to LZ4 compression and cached on the local file system. If you download and store the bundle through other means, you can recompress it with the <a href="../ScriptReference/AssetBundle.RecompressAssetBundleAsync.html">AssetBundle.RecompressAssetBundleAsync</a> API.</p></li>
+<li><p><code>BuildAssetBundleOptions.UncompressedAssetBundle</code>：此捆绑包选项采用使数据完全未压缩的方式构建捆绑包。未压缩的缺点是文件下载大小增大。但是，下载后的加载时间会快得多。</p></li>
+<li><p><code>BuildAssetBundleOptions.ChunkBasedCompression</code>：此捆绑包选项使用称为 LZ4 的压缩方法，因此压缩文件大小比 LZMA 更大，但不像 LZMA 那样需要解压缩整个包才能使用捆绑包。LZ4 使用基于块的算法，允许按段或“块”加载 AssetBundle。解压缩单个块即可使用包含的资源，即使 AssetBundle 的其他块未解压缩也不影响。</p></li>
+</ul>
+
+<p>使用 <code>ChunkBasedCompression</code> 时的加载时间与未压缩捆绑包大致相当，额外的优势是减小了占用的磁盘大小。</p>
+
+<h4>BuildTarget</h4>
+
+<p><code>BuildTarget.Standalone</code>：这里我们告诉构建管线，我们要将这些 AssetBundle 用于哪些目标平台。可以在关于 <a href="../ScriptReference/BuildTarget.html">BuildTarget</a> 的脚本 API 参考中找到可用显式构建目标的列表。但是，如果不想在构建目标中进行硬编码，请充分利用 <code>EditorUserBuildSettings.activeBuildTarget</code>，它将自动找到当前设置的目标构建平台，并根据该目标构建 AssetBundle。</p>
+
+<p>一旦正确设置构建脚本，最后便可以开始构建资源包了。如果是按照上面的脚本示例进行的操作，请单击 <strong>Assets</strong> &gt; <strong>Build AssetBundles</strong> 以开始该过程。</p>
+
+<p>现在已经成功构建了 AssetBundle，您可能会注意到 AssetBundles 目录包含的文件数量超出了最初的预期。确切地说，是多出了 2*(n+1) 个文件。让我们花点时间详细了解一下 <code>BuildPipeline.BuildAssetBundles</code> 产生的结果。</p>
+
+<p>对于在编辑器中指定的每个 AssetBundle，可以看到一个具有 AssetBundle 名称+“.manifest”的文件。</p>
+
+<p>随后会有一个额外捆绑包和清单的名称不同于先前创建的任何 AssetBundle。相反，此包以其所在的目录（构建 AssetBundle 的目录）命名。这就是清单捆绑包。我们以后会对此进行详细讨论并介绍使用方法。</p>
+
+<h4>AssetBundle 文件</h4>
+
+<p>这是缺少 .manifest 扩展名的文件，其中包含在运行时为了加载资源而需要加载的内容。</p>
+
+<p>AssetBundle 文件是一个存档，在内部包含多个文件。此存档的结构根据它是 AssetBundle 还是场景 AssetBundle 可能会略有不同。以下是普通 AssetBundle 的结构：</p>
+
+<figure>
+<img src="../uploads/Main/AssetBundles-Building-0.png" alt="">
+</figure>
+
+<p>场景 AssetBundle 与普通 AssetBundle 的不同之处在于，它针对场景及其内容的串流加载进行了优化。</p>
+
+<h4>清单文件</h4>
+
+<p>对于生成的每个捆绑包（包括附加的清单捆绑包），都会生成关联的清单文件。清单文件可以使用任何文本编辑器打开，并包含诸如循环冗余校验 (CRC) 数据和捆绑包的依赖性数据之类的信息。对于普通 AssetBundle，它们的清单文件将如下所示：</p>
+
+<pre><code>ManifestFileVersion: 0
+CRC: 2422268106
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8b6db55a2344f068cf8a9be0a662ba15
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 37ad974993dbaa77485dd2a0c38f347a
+HashAppended: 0
+ClassTypes:
+- Class: 91
+  Script: {instanceID: 0}
+Assets:
+  Asset_0: Assets/Mecanim/StateMachine.controller
+Dependencies: {}
+</code></pre>
+
+<p>其中显示了包含的资源、依赖项和其他信息。</p>
+
+<p>生成的清单捆绑包将有一个清单，但看起来更可能如下所示：</p>
+
+<pre><code>ManifestFileVersion: 0
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: scene1assetbundle
+      Dependencies: {}
+</code></pre>
+
+<p>这将显示 AssetBundle 之间的关系以及它们的依赖项。就目前而言，只需要了解这个捆绑包中包含 AssetBundleManifest 对象，这对于确定在运行时加载哪些捆绑包依赖项非常有用。要了解有关如何使用此捆绑包和清单对象的更多信息，请参阅有关<a href="AssetBundles-Native.html">本机使用 AssetBundle</a> 的文档。</p>
+
+<hr>
+
+<p><span class="page-edit">• 2017–05–15 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span><br></p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetBundles-Preparing.html"></a></span><div class="tip">为 AssetBundle 准备资源</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetBundles-Dependencies.html"></a></span><div class="tip">AssetBundle 依赖项</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

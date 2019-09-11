@@ -1,0 +1,290 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Enlighten - Unity Manual">
+<title>Enlighten - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/GI-Enlighten-LightingWindow.jpg">
+<meta name="description" content="Unity 提供了两种不同的技术来预先计算全局光照 (GI) 和反射光照。它们分别是__烘焙全局光照 (Baked Global Illumination)__ 和__预计算实时全局光照 (Precomputed Realtime Global Illumination)__。Enlighten 光照系统提供了这两种技术的解决方案。">
+<meta property="og:description" content="Unity 提供了两种不同的技术来预先计算全局光照 (GI) 和反射光照。它们分别是__烘焙全局光照 (Baked Global Illumination)__ 和__预计算实时全局光照 (Precomputed Realtime Global Illumination)__。Enlighten 光照系统提供了这两种技术的解决方案。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'GI-Enlighten';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/GI-Enlighten.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/GI-Enlighten.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/GI-Enlighten.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/GI-Enlighten.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/GI-Enlighten.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/GI-Enlighten.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/GI-Enlighten.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/GI-Enlighten.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/GI-Enlighten.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/GI-Enlighten.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/GI-Enlighten.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/GI-Enlighten.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/GI-Enlighten.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/GI-Enlighten.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/GI-Enlighten.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/GI-Enlighten.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/GI-Enlighten.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/GI-Enlighten.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/GI-Enlighten.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/GI-Enlighten.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/GI-Enlighten.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/GI-Enlighten.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/GI-Enlighten.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/GI-Enlighten.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="LightingOverview.html">光照</a></li>
+<li><a href="GIIntro.html">全局光照</a></li>
+<li><a href="Lightmappers.html">Lightmapping</a></li>
+<li>Enlighten</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ProgressiveLightmapper-CustomFallOff.html"></a></span><div class="tip">自定义衰减</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UsingPrecomputedLighting.html"></a></span><div class="tip">使用预计算光照</div>
+</div>
+</div></div>
+<h1>Enlighten</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 提供了两种不同的技术来预先计算全局光照 (GI) 和反射光照。它们分别是__烘焙全局光照 (Baked Global Illumination)__ 和__预计算实时全局光照 (Precomputed Realtime Global Illumination)__。Enlighten 光照系统提供了这两种技术的解决方案。</p>
+
+<p>To find the following settings, navigate to Unity’s top menu and go to <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting</strong>.</p>
+
+<figure>
+<img src="../uploads/Main/GI-Enlighten-LightingWindow.jpg" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Realtime Global Illumination</strong></td>
+	<td style="text-align:left;">使 Unity 实时计算和更新光照。有关更多信息，请参阅<a href="LightMode-Realtime.html">实时全局光照</a>文档以及有关<a href="https://unity3d.com/learn/tutorials/topics/graphics/introduction-precomputed-realtime-gi?playlist=17102">预计算实时 GI</a> 的 Unity 教程。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Lighting Mode</strong></td>
+	<td style="text-align:left;">指定要在场景中用于所有混合光源的光照模式。选项包括 <a href="LightMode-Mixed-BakedIndirect.html">Baked Indirect</a>、<a href="LightMode-Mixed-DistanceShadowmask.html">Distance Shadowmask</a>、<a href="LightMode-Mixed-Shadowmask.html">Shadowmask</a> 和 <a href="LightMode-Mixed-Subtractive.html">Subtractive</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Lightmapper</strong></td>
+	<td style="text-align:left;">指定用于计算场景中的光照贴图的内部光照计算软件。选项包括 <strong>Progressive</strong> 和 <strong>Enlighten</strong>。默认值为 <strong>Progressive__；将其设置为 </strong>Enlighten__ 便可以使用本页面中描述的系统。如果要使用 <strong>Progressive</strong> 系统，请参阅有关<a href="ProgressiveLightmapper.html">渐进光照贴图</a>的文档。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Indirect Resolution</strong></td>
+	<td style="text-align:left;">仅当启用了 <strong>Realtime Global Illumination</strong> 选项时，此属性才可用。使用此值指定用于间接光照计算的每个单位的纹理像素数。增大此值可提高间接光的视觉质量，但也会增加烘焙光照贴图所需的时间。默认值为 2。要了解有关间接分辨率 (Indirect Resolution) 的详细信息，请参阅有关<a href="https://unity3d.com/learn/tutorials/topics/graphics/realtime-resolution?playlist=17102">实时分辨率 (Realtime Resolution)</a> 的 Unity 教程。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Lightmap Resolution</strong></td>
+	<td style="text-align:left;">指定用于光照贴图的每个单位的纹理像素数。增大此值可提高光照贴图质量，但也会增加烘焙时间。新场景中的默认值为 40。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Lightmap Padding</strong></td>
+	<td style="text-align:left;">指定烘焙光照贴图中不同形状之间的间距（以纹理像素为单位）。默认值为 2。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Lightmap Size</strong></td>
+	<td style="text-align:left;">完整光照贴图纹理的大小（以像素为单位），其中包含单个对象纹理的单独区域。默认值为 1024。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Compress Lightmaps</strong></td>
+	<td style="text-align:left;">压缩光照贴图，以减少其所需要的存储空间。但是，压缩过程可能会在纹理中引入不需要的视觉效果。默认情况下会选中此属性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Ambient Occlusion</strong></td>
+	<td style="text-align:left;">打开一组设置，允许您控制<a href="LightingBakedAmbientOcclusion.html">环境光遮挡</a>中的表面的相对亮度。值越高，表示遮挡区域和完全照亮区域之间的对比度越大。这仅适用于 GI 系统计算的间接光照。默认情况下会启用此属性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Max Distance</td>
+	<td style="text-align:left;">设置一个值以控制光照系统投射光线的距离，从而确定是否将遮挡应用于对象。较大的值会产生较长的光线并为光照贴图提供更多阴影，而较小的值会产生较短的光线，只有当对象彼此非常接近时才会产生阴影。值为 0 会投射无限长光线，没有最大距离。默认值为 1。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Indirect Contribution</td>
+	<td style="text-align:left;">使用滑动条在值 0 到 10 之间缩放最终光照贴图中的间接光（即环境光，或从对象反射和发出的光）的亮度。默认值为 1。小于 1 的值会减小强度，大于 1 的值会增加强度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Direct Contribution</td>
+	<td style="text-align:left;">使用滑动条可以从值 0 到 10 之间缩放直射光的亮度。默认值为 0。此值越大，应用于直接光照的对比度越大。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Final Gather</strong></td>
+	<td style="text-align:left;">如果希望 Unity 使用与烘焙光照贴图相同的分辨率来计算 GI 计算中的最终光反射，请启用此选项。这样可以提高光照贴图的视觉质量，但代价是 Editor 中的烘焙时间增加。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Ray Count</td>
+	<td style="text-align:left;">定义每个最终聚集点发射的光线数量。默认值为 256。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Denoising</td>
+	<td style="text-align:left;">对 <strong>Final Gather</strong> 输出应用去噪滤波器。默认情况下会选中此属性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Directional Mode</strong></td>
+	<td style="text-align:left;">您可以设置光照贴图，以存储有关游戏对象表面上每个点的主要入射光的信息。请参阅有关<a href="LightmappingDirectional.html">方向光照贴图</a>的文档以了解更多详细信息。默认模式为 <strong>Directional</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Directional</td>
+	<td style="text-align:left;">在 <strong>Directional</strong> 模式下，Unity 将再生成一个光照贴图以存储入射光的主要方向。因此，可将漫射法线贴图材质用于 GI。Directional 模式需要大约两倍的存储空间来存储额外的光照贴图数据。Unity 无法在 SM2.0 硬件上或使用 GLES2.0 时解码方向光照贴图。此时将回退到非方向光照贴图。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Non-directional</td>
+	<td style="text-align:left;">在 <strong>Non-directional</strong> 模式下，Unity 不会为入射光的主要方向生成第二个光照贴图，而是将所有光照信息存储在同一位置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Indirect Intensity</strong></td>
+	<td style="text-align:left;">控制 Unity 在实时和烘焙光照贴图中存储的间接光的亮度，值在 0 到 5 之间。大于 1 的值会增加间接光的强度，小于 1 的值会降低间接光强度。默认值为 1。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Albedo Boost</strong></td>
+	<td style="text-align:left;">通过增强场景中材质的反照率来控制 Unity 在表面之间反弹的光量，值在 1 到 10 之间。增加此值会将反照率值倾向于绘制为白色以进行间接光计算。默认值为 1，这在物理上是准确的。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Lightmap Parameters</strong></td>
+	<td style="text-align:left;">Unity uses a set of general parameters for the lightmapping in addition to Lighting window properties of the. A few defaults are available from the menu for this property, but you can also use the <strong>Create New</strong> option to create your own lightmap parameter file. See the <a href="class-LightmapParameters.html">Lightmap Parameters</a> page for further details. The default value is <strong>Default-Medium</strong>.</td>
+</tr>
+</tbody>
+</table>
+
+<p>请参阅<a href="https://unity3d.com/learn/tutorials/topics/graphics/introduction-precomputed-realtime-gi?playlist=17102">预计算实时 GI 教程</a>以详细了解 Enlighten 优化。</p>
+
+<hr>
+
+<p><span class="page-history">在 <a href="https://docs.unity3d.com/2018.1/Documentation/Manual/30_search.html?q=newin20181">2018.1</a> 版中添加了渐进光照贴图 <span class="search-words">NewIn20181</span></span></p>
+
+<p><span class="page-edit"> 2017–05–18 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ProgressiveLightmapper-CustomFallOff.html"></a></span><div class="tip">自定义衰减</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UsingPrecomputedLighting.html"></a></span><div class="tip">使用预计算光照</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

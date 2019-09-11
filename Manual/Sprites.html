@@ -1,0 +1,287 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="精灵 - Unity Manual">
+<title>精灵 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/TextureTypeSprite.png">
+<meta name="description" content="__精灵__是 2D 图形对象。如果习惯于在 3D 空间中工作，__精灵__本质上只是标准纹理，但可通过一些特殊技巧在开发过程中组合和管理精灵纹理以提高效率和方便性。">
+<meta property="og:description" content="__精灵__是 2D 图形对象。如果习惯于在 3D 空间中工作，__精灵__本质上只是标准纹理，但可通过一些特殊技巧在开发过程中组合和管理精灵纹理以提高效率和方便性。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'Sprites';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Sprites.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Sprites.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Sprites.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Sprites.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Sprites.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Sprites.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Sprites.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Sprites.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Sprites.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Sprites.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/Sprites.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/Sprites.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/Sprites.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/Sprites.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Sprites.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Sprites.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Sprites.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Sprites.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Sprites.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Sprites.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Sprites.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Sprites.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Sprites.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Sprites.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Unity2D.html">2D</a></li>
+<li>精灵</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="2DSorting.html"></a></span><div class="tip">2D Sorting</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-SpriteRenderer.html"></a></span><div class="tip">精灵渲染器 (Sprite Renderer)</div>
+</div>
+</div></div>
+<h1>精灵</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>__精灵__是 2D 图形对象。如果习惯于在 3D 空间中工作，__精灵__本质上只是标准纹理，但可通过一些特殊技巧在开发过程中组合和管理精灵纹理以提高效率和方便性。</p>
+
+<p>Unity 提供一个占位的 <a href="SpriteCreator.html">Sprite Creator</a>、一个内置的 <a href="SpriteEditor.html">Sprite Editor</a>、一个 <a href="class-SpriteRenderer.html">Sprite Renderer</a> 和一个 <a href="SpritePacker.html">Sprite Packer</a></p>
+
+<p>请参阅下面的<strong>导入和设置精灵</strong>，了解有关在 Unity 项目中将资源设置为__精灵__的信息。</p>
+
+<h2>精灵工具</h2>
+
+<h3>Sprite Creator</h3>
+
+<p>使用 <a href="SpriteCreator.html">Sprite Creator</a> 可在项目中创建占位精灵，这样就可以继续开发而无需获取或等待图形。</p>
+
+<h3>Sprite Editor</h3>
+
+<p><a href="SpriteEditor.html">Sprite Editor</a> 允许从较大的图像中提取精灵图形，并在图像编辑器中编辑单个纹理内的多个分量图像。例如，可以使用此工具将角色的手臂、腿和身体保持为一个图像中的单独元素。</p>
+
+<h3>Sprite Renderer</h3>
+
+<p>应使用 <a href="class-SpriteRenderer.html">Sprite Renderer</a> 组件而不是用于 3D 对象的 <a href="class-MeshRenderer.html">Mesh Renderer</a> 来渲染精灵。使用该组件可将图像显示为__精灵__，以便在 2D 和 3D 场景中均可使用。</p>
+
+<h3>Sprite Packer</h3>
+
+<p>使用 <a href="SpritePacker.html">Sprite Packer</a> 可根据项目来优化视频内存的使用和性能。</p>
+
+<h2>导入和设置精灵</h2>
+
+<p><strong>精灵__是 Unity 项目中的一种__资源</strong>。可通过 <strong>Project</strong> 视图查看精灵，并可立即使用。</p>
+
+<p>可通过两种方式将__精灵__引入项目：</p>
+
+<p>1.在计算机的 Finder (Mac OS X) 或文件资源管理器 (Windows) 中，直接将图像放入 Unity 项目的 <strong>Assets</strong> 文件夹中。</p>
+
+<pre><code>Unity 会检测到此图像并将其显示在项目的 __Project__ 视图中。
+</code></pre>
+
+<p>2.在 Unity 中，选择 <strong>Assets</strong> &gt; <strong>Import New Asset</strong> 以显示计算机的 Finder (Mac OS X) 或文件资源管理器 (Windows)。</p>
+
+<pre><code>从该位置中选择所需的图像，Unity 会将其放在 __Project__ 视图中。
+</code></pre>
+
+<p>请参阅<a href="ImportingAssets.html">导入</a>，了解与此相关的更多详细信息以及有关组织 <strong>Assets</strong> 文件夹的重要信息。</p>
+
+<h3>将图像设置为精灵</h3>
+
+<p>如果项目模式设置为 2D，则导入的图像将自动设置为__精灵 (Sprite)__。有关将项目模式设置为 2D 的详细信息，请参阅 <a href="2Dor3D.html">2D 还是 3D 项目</a>。</p>
+
+<p>但是，如果项目模式设置为 3D，则图像将设置为__纹理 (Texture)<strong>，因此需要更改资源的__纹理类型 (Texture Type)</strong>：</p>
+
+<p>1.单击该资源以查看其 <strong>Import Inspector</strong>。
+2.将 <strong>Texture Type</strong> 设置为 <strong>Sprite (2D and UI)</strong>：</p>
+
+<figure>
+<img src="../uploads/Main/TextureTypeSprite.png" alt="在资源的 Inspector 中将 Texture Type 设置为 Sprite (2D and UI)">
+<figcaption>在资源的 Inspector 中将 Texture Type 设置为 Sprite (2D and UI)</figcaption>
+</figure>
+
+<p>有关精灵 <strong>Texture Type</strong> 设置的详细信息，请参阅 <a href="https://docs.unity3d.com/Manual/TextureTypes.html#Sprite">Texture type: Sprite (2D and UI)</a>。</p>
+
+<h2>对精灵排序</h2>
+
+<p>Renderers in Unity are sorted by several criteria, such as their Layer order or their distance from the Camera. Unity’s GraphicsSettings (menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Graphics</strong> category) provide a setting called <strong>Transparency Sort Mode</strong>, which allows you to control how Sprites are sorted depending on where they are in relation to the Camera. More specifically, it uses the Sprite’s position on an axis to determine which ones are transparent against others, and which are not. </p>
+
+<p>例如，若要沿 Y 轴对精灵进行排序，可使用此设置。这种情况在 2D 游戏中很常见，通常需要将较高的精灵排在较低的精灵之后，这样会看起来更远。</p>
+
+<figure>
+<img src="../uploads/Main/AxisDistanceSort2.png" alt="">
+</figure>
+
+<p><strong>Transparency Sort Mode</strong> 有四个可用选项：</p>
+
+<figure>
+<img src="../uploads/Main/AxisDistanceSort.png" alt="">
+</figure>
+
+<ul>
+<li><p><strong>Default</strong> - 根据摄像机的 <strong>Projection</strong> 模式设置为 <strong>Perspective</strong> 还是 <strong>Orthographic</strong> 来进行排序</p></li>
+<li><p><strong>Perspective</strong> - 根据透视图进行排序。透视图根据从摄像机位置到精灵中心的距离对精灵进行排序。</p></li>
+<li><p><strong>Orthographic</strong> - 根据正交视图进行排序。正交视图根据沿视图方向的距离对精灵进行排序。</p></li>
+<li><p><strong>Custom Axis</strong> - 根据 Transparency Sort Axis 中设置的指定轴进行排序</p></li>
+</ul>
+
+<p>如果已将 <strong>Transparency Sort Mode</strong> 设置为 <strong>Custom__，则需要设置 </strong>Transparency Sort Axis__：</p>
+
+<figure>
+<img src="../uploads/Main/AxisDistanceSort1.png" alt="">
+</figure>
+
+<p>如果 <strong>Transparency Sort Mode</strong> 设置为 __Custom Axis__，则 Scene 视图中的渲染器将根据此轴与摄像机之间的距离进行排序。应使用介于 –1 和 1 之间的值来定义此轴。例如：X=0、Y=1、Z=0 将此轴方向设置为向上。X=1、Y=1、Z=0 将此轴方向设置为 X 和 Y 之间的对角线方向。</p>
+
+<p>例如，如果希望精灵的行为类似于上图中的精灵（在 y 轴值较高的精灵将站在 y 轴值较低的精灵的后面），请将 <strong>Transparency Sort Mode</strong> 设置为 <strong>Custom Axis__，并将 </strong>Transparency Sort Axis__ 的 <strong>Y</strong> 值设置为大于 0 的值。</p>
+
+<h2>使用脚本对精灵排序</h2>
+
+<p>还可以使用脚本通过修改每个摄像机的以下属性来按照每个摄像机对精灵排序：</p>
+
+<ul>
+<li><p><a href="../ScriptReference/Camera-transparencySortMode.html">TransparencySortMode</a>（对应于 __Transparency Sort Mode__）</p></li>
+<li><p><a href="../ScriptReference/Camera-transparencySortAxis.html">TransparencySortAxis</a>（对应于 __Transparency Sort Axis__）</p></li>
+</ul>
+
+<p>例如：</p>
+
+<pre><code>var camera = GetComponent&lt;Camera&gt;();
+
+camera.transparencySortMode = TransparencySortMode.CustomAxis;
+
+camera.transparencySortAxis = new Vector3(0.0f, 1.0f, 0.0f);
+</code></pre>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2018–04–25 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-edit">2017–05–24 Page amended with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 5.6 版中添加了 Transparancy Sort Mode</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="2DSorting.html"></a></span><div class="tip">2D Sorting</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-SpriteRenderer.html"></a></span><div class="tip">精灵渲染器 (Sprite Renderer)</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

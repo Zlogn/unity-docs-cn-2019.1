@@ -1,0 +1,265 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="2D 摩擦关节 (Friction Joint 2D) - Unity Manual">
+<title>2D 摩擦关节 (Friction Joint 2D) - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/FrictionJoint2DInspector.png">
+<meta name="description" content="__2D 摩擦关节__连接由 2D 刚体物理组件控制的游戏对象。2D 摩擦关节将对象之间的线速度和角速度降低到零（即，将对象减速）。例如，可以使用此关节来模拟自上而下的摩擦。">
+<meta property="og:description" content="__2D 摩擦关节__连接由 2D 刚体物理组件控制的游戏对象。2D 摩擦关节将对象之间的线速度和角速度降低到零（即，将对象减速）。例如，可以使用此关节来模拟自上而下的摩擦。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-FrictionJoint2D';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-FrictionJoint2D.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-FrictionJoint2D.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-FrictionJoint2D.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-FrictionJoint2D.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-FrictionJoint2D.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-FrictionJoint2D.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-FrictionJoint2D.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-FrictionJoint2D.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-FrictionJoint2D.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-FrictionJoint2D.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-FrictionJoint2D.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-FrictionJoint2D.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-FrictionJoint2D.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-FrictionJoint2D.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-FrictionJoint2D.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-FrictionJoint2D.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-FrictionJoint2D.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-FrictionJoint2D.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-FrictionJoint2D.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-FrictionJoint2D.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-FrictionJoint2D.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-FrictionJoint2D.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-FrictionJoint2D.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-FrictionJoint2D.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Unity2D.html">2D</a></li>
+<li><a href="Physics2DReference.html">2D 物理系统参考</a></li>
+<li><a href="Joints2D.html">2D 关节</a></li>
+<li>2D 摩擦关节 (Friction Joint 2D)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-FixedJoint2D.html"></a></span><div class="tip">2D 固定关节 (Fixed Joint 2D)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-HingeJoint2D.html"></a></span><div class="tip">2D 铰链关节 (Hinge Joint 2D)</div>
+</div>
+</div></div>
+<h1>2D 摩擦关节 (Friction Joint 2D)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>__2D 摩擦关节__连接由 2D 刚体物理组件控制的游戏对象。2D 摩擦关节将对象之间的线速度和角速度降低到零（即，将对象减速）。例如，可以使用此关节来模拟自上而下的摩擦。</p>
+
+<figure>
+<img src="../uploads/Main/FrictionJoint2DInspector.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Enable Collision</strong></td>
+	<td style="text-align:left;">选中此框可允许两个连接的游戏对象之间发生碰撞。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Connected Rigid Body</strong></td>
+	<td style="text-align:left;">指定此 2D 摩擦关节连接到的另一个游戏对象。如果将此属性保留为 <strong>None__，2D 摩擦关节的另一端将固定到空间中由 </strong>Connected Anchor__ 设置所定义的点。选择字段右侧的圆圈可查看要连接到的游戏对象的列表。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Auto Configure Connected Anchor</strong></td>
+	<td style="text-align:left;">选中此框可为该 2D 摩擦关节连接到的另一个游戏对象自动设置锚点位置。如果选中此框，则无需填写 <strong>Connected Anchor</strong> 字段。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Anchor</strong></td>
+	<td style="text-align:left;">定义 2D 摩擦关节的端点连接到此游戏对象的位置（以 <strong>2D 刚体__上的 x、y 坐标表示）。 |
+|</strong>Connected Anchor__</td>
+	<td style="text-align:left;">定义 2D 摩擦关节的端点连接到另一游戏对象的位置（以 <strong>2D 刚体__上的 x、y 坐标表示）。 |
+|</strong>Max Force__</td>
+	<td style="text-align:left;">设置连接的游戏对象之间的线性（或直线）移动。较高的值将阻碍游戏对象之间的线性移动。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max Torque</strong></td>
+	<td style="text-align:left;">设置连接的游戏对象之间的角度（或旋转）移动。较高的值将阻碍游戏对象之间的旋转移动。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Break Force</strong></td>
+	<td style="text-align:left;">指定破坏并进而删除 2D 摩擦关节所需的作用力水平。<strong>Infinity</strong> 表示关节牢不可破。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Break Torque</strong></td>
+	<td style="text-align:left;">指定破坏并进而删除 2D 摩擦关节所需的扭矩水平。<strong>Infinity</strong> 表示关节牢不可破。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>注意</h2>
+
+<p>使用 2D 摩擦关节可以使两点之间的运动减速至停止为止。此关节的目的是将两点之间的相对线性偏移和角度偏移保持为零。这两个点可以是两个 <strong>2D 刚体__组件，或一个 </strong>2D 刚体__组件和世界中的一个固定位置。（将 <strong>Connected Rigidbody</strong> 设置为 None，即可连接到世界中的固定位置）。</p>
+
+<h3>阻力</h3>
+
+<p>此关节对两个 2D 刚体点施加线性力 (<strong>Force</strong>) 和角力 (<strong>Torque</strong>)。此关节使用的模拟电机已预配置较小的电机功率（因此，阻力小）。可以更改阻力来使其减弱或加强。</p>
+
+<p>强阻力：</p>
+
+<ul>
+<li>较高的 <strong>Max Force</strong> 值（最高为 1,000,000）将产生强大的线性阻力。2D 刚体游戏对象相互之间不会进行幅度很大的直线移动。</li>
+<li>较高的 <strong>Max Torque</strong> 值（最高为 1,000,000）将产生强大的角度阻力。2D 刚体游戏对象不会以很大的相对角度移动。</li>
+</ul>
+
+<p>弱阻力：</p>
+
+<ul>
+<li>较低的 <strong>Max Force</strong> 值将产生弱小的线性阻力。2D 刚体游戏对象相互之间会很容易直线移动。</li>
+<li>较低的 <strong>Max Torque</strong> 值将产生弱小的角度阻力。2D 刚体游戏对象会很容易以相对角度移动。</li>
+</ul>
+
+<h3>约束</h3>
+
+<p>2D 摩擦关节同时有两个约束：</p>
+
+<ul>
+<li>将两个 2D 刚体上的两个锚点之间的相对线速度保持为零</li>
+<li>将两个 2D 刚体上的两个锚点之间的相对角速度保持为零</li>
+</ul>
+
+<p>使用此关节可以构建需要有相互摩擦的物理游戏对象。这些阻力可以阻碍线性运动和/或角运动。例如：</p>
+
+<ul>
+<li>一个平台可旋转，但会抵抗施加的力，使玩家很难但可以移动此平台。</li>
+<li>一个抵抗线性运动的球。球的摩擦力与游戏对象的速度有关，而与碰撞无关。此作用力就像 <strong>2D 刚体__中设置的 </strong>Linear Drag__ 和 <strong>Angular Drag</strong>。区别是 2D 摩擦关节具有最大 <strong>Force</strong> 和 <strong>Torque</strong> 设置选项。</li>
+</ul>
+
+<p>请参阅 <a href="Joints2D.html">2D 关节</a>中的<em>详情和提示</em>以了解所有 2D 关节的有用背景信息。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-FixedJoint2D.html"></a></span><div class="tip">2D 固定关节 (Fixed Joint 2D)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-HingeJoint2D.html"></a></span><div class="tip">2D 铰链关节 (Hinge Joint 2D)</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

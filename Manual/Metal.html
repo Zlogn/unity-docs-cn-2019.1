@@ -1,0 +1,266 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Metal - Unity Manual">
+<title>Metal - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/XcodeEditScheme.png">
+<meta name="description" content="Metal 是 Apple 设备的标准图形 API。Unity 支持 iOS、tvOS 和 macOS 上的 Metal（Standalone 和 Editor）。">
+<meta property="og:description" content="Metal 是 Apple 设备的标准图形 API。Unity 支持 iOS、tvOS 和 macOS 上的 Metal（Standalone 和 Editor）。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'Metal';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Metal.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Metal.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Metal.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Metal.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Metal.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Metal.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Metal.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Metal.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Metal.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Metal.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/Metal.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/Metal.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/Metal.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/Metal.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Metal.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Metal.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Metal.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Metal.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Metal.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Metal.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Metal.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Metal.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Metal.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Metal.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li>高级渲染功能</li>
+<li><a href="GraphicsAPIs.html">Graphics API support</a></li>
+<li>Metal</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UsingDX11GL3Features.html"></a></span><div class="tip">DirectX</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="OpenGLCoreDetails.html"></a></span><div class="tip">OpenGL Core</div>
+</div>
+</div></div>
+<h1>Metal</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Metal 是 Apple 设备的标准图形 API。Unity 支持 iOS、tvOS 和 macOS 上的 Metal（Standalone 和 Editor）。</p>
+
+<p>Metal 在 Apple 平台上具有比 OpenGL ES 更丰富的功能集。请参阅下面关于使用 Metal 的优缺点。</p>
+
+<p><strong>使用 Metal 的优点</strong></p>
+
+<ul>
+<li>降低图形 API 调用的 CPU 开销</li>
+<li>API 级别验证层</li>
+<li>在多 GPU 系统上实现更好的 GPU 控制</li>
+<li>支持无内存渲染目标（在 iOS/tvOS 上）</li>
+<li>Apple 的新 Apple 标准</li>
+<li>计算着色器</li>
+<li>曲面细分着色器</li>
+</ul>
+
+<p><strong>使用 Metal 的缺点</strong></p>
+
+<ul>
+<li>不支持低端设备</li>
+<li>不支持几何着色器</li>
+</ul>
+
+<h2>限制和要求</h2>
+
+<ul>
+<li><p>iOS 和 tvOS 为 <a href="https://en.wikipedia.org/wiki/Apple_A7">Apple A7</a> 或更新的 SoC 提供 Metal 支持。</p></li>
+<li><p>macOS 为 HD 4000 系列或更高的 Intel HD 和 Iris Graphics、AMD GCN 架构 GPU 以及 Nvidia Kepler 架构 GPU 或更新版本提供 Metal 支持。</p></li>
+<li><p>最低<a href="SL-ShaderCompileTargets.html">着色器编译目标为 3.5</a>。</p></li>
+<li><p>Metal 不支持几何着色器。</p></li>
+</ul>
+
+<h2>启用 Metal</h2>
+
+<p>要使 Unity Editor 和独立平台播放器将 Metal 用作默认图形 API，请执行以下操作之一：</p>
+
+<ul>
+<li><p>In the Editor, go to menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Player</strong> category, and enable <strong>Metal Editor Support</strong>.</p></li>
+<li><p>如果使用 MacOS，打开 <strong>Terminal</strong> 并使用 <code>-force-gfx-metal</code> <a href="CommandLineArguments.html">命令行参数</a>。</p></li>
+</ul>
+
+<p>默认情况下，iOS、tvOS 和 macOS 独立平台播放器上均启用 Metal。</p>
+
+<p><a name="MetalAPIValidation"></a> </p>
+
+<h2>验证 Metal API</h2>
+
+<p>Xcode 提供 Metal API 验证功能，可用于跟踪隐蔽的问题。要在 Xcode 中启用 Metal API 验证，请执行以下操作：</p>
+
+<p>1.在 Unity 中，针对 iOS 构建项目。结果将生成 Xcode 项目。</p>
+
+<p>2.在 Xcode 中打开生成的 Xcode 项目，然后选择 <strong>Edit Scheme</strong>。</p>
+
+<p><img src="../uploads/Main/XcodeEditScheme.png" alt="打开 Edit Scheme 窗口"></p>
+
+<p>3.选择 <strong>Run</strong> &gt; <strong>Options</strong> &gt; <strong>Metal API Validation__，然后选择 </strong>Enabled__</p>
+
+<p><img src="../uploads/Main/XcodeOptions.png" alt="更改 Metal API 验证级别"></p>
+
+<p>验证错误会中断 XCode 编辑器中的代码执行，并显示在设备日志中。</p>
+
+<p>__注意__：启用验证会增加 CPU 使用率，因此仅在进行调试时启用。</p>
+
+<h2>选择 GPU 设备</h2>
+
+<p>Metal 允许您在运行应用程序时选择 GPU 设备。因此，可使用不同的 GPU 设置来测试项目，或使用低功耗 GPU 省电。</p>
+
+<p>要更改 Unity Editor 目标 GPU 设备，请选择菜单：__Unity__ &gt; <strong>Preferences…</strong> &gt; <strong>General</strong> 并设置 __Device To Use__：</p>
+
+<figure>
+<img src="../uploads/Main/MetalDeviceToUseEditor.png" alt="在 Editor 中更改目标 GPU">
+<figcaption>在 Editor 中更改目标 GPU</figcaption>
+</figure>
+
+<p>要更改独立平台播放器目标 GPU 设备，请启动应用程序（或选择菜单：__File__ &gt; <strong>Build and run__）并将 </strong>Graphics device to use__ 设置为随后显示的对话框中的相关 GPU：</p>
+
+<figure>
+<img src="../uploads/Main/MetalDeviceToUsePlayer.png" alt="更改独立平台播放器上的目标 GPU">
+<figcaption>更改独立平台播放器上的目标 GPU</figcaption>
+</figure>
+
+<h2>使用无内存渲染目标</h2>
+
+<p>Metal 允许您使用 iOS 和 tvOS 10.0 中引入的无内存渲染目标来优化移动设备上的内存。借助此功能，您在渲染场景到渲染纹理 (RenderTexture)时，无需将其备份到系统内存，内容仅在渲染期间临时存储在 on-tile 内存中。</p>
+
+<p>有关更多信息，请参阅<a href="../ScriptReference/RenderTexture-memorylessMode.html">RenderTexture.memorylessMode</a>。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–05–22 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 2017.4 版中添加了关于使用 Metal 的建议</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UsingDX11GL3Features.html"></a></span><div class="tip">DirectX</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="OpenGLCoreDetails.html"></a></span><div class="tip">OpenGL Core</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="构建适用于 Apple TV 的游戏 - Unity Manual">
+<title>构建适用于 Apple TV 的游戏 - Unity Manual</title>
+<meta name="description" content="本手册页的主要目的是帮助开发者从 iOS 过渡到 tvOS。Apple TV 平台（也称为 tvOS）建立在 iOS 平台的基础上，为游戏开发者带来了新的模式和挑战。只需点击一下即可在 tvOS 上部署现有的移动端游戏，但游戏内容通常需要适应 Unity 的新输入控制方式以及游戏在大屏幕上显示的这一事实。">
+<meta property="og:description" content="本手册页的主要目的是帮助开发者从 iOS 过渡到 tvOS。Apple TV 平台（也称为 tvOS）建立在 iOS 平台的基础上，为游戏开发者带来了新的模式和挑战。只需点击一下即可在 tvOS 上部署现有的移动端游戏，但游戏内容通常需要适应 Unity 的新输入控制方式以及游戏在大屏幕上显示的这一事实。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'tvOS';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/tvOS.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/tvOS.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/tvOS.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/tvOS.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/tvOS.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/tvOS.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/tvOS.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/tvOS.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/tvOS.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/tvOS.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/tvOS.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/tvOS.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/tvOS.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/tvOS.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/tvOS.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/tvOS.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/tvOS.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/tvOS.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/tvOS.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/tvOS.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/tvOS.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/tvOS.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/tvOS.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/tvOS.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
+<li><a href="AppleTV.html">Apple TV</a></li>
+<li>构建适用于 Apple TV 的游戏</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AppleTV.html"></a></span><div class="tip">Apple TV</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-PlayerSettingstvOS.html"></a></span><div class="tip">Apple TV Player settings</div>
+</div>
+</div></div>
+<h1>构建适用于 Apple TV 的游戏</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>本手册页的主要目的是帮助开发者从 iOS 过渡到 tvOS。Apple TV 平台（也称为 tvOS）建立在 iOS 平台的基础上，为游戏开发者带来了新的模式和挑战。只需点击一下即可在 tvOS 上部署现有的移动端游戏，但游戏内容通常需要适应 Unity 的新输入控制方式以及游戏在大屏幕上显示的这一事实。</p>
+
+<h2>先决条件</h2>
+
+<p>要进行 tvOS 开发，必须满足以下先决条件：</p>
+
+<ul>
+<li>第 4 代 Apple TV 设备（还需要 USB C &lt;-&gt; USB 3.0 线缆，此部件不包含在消费者套件中）。</li>
+<li>Xcode 7.1 或更高版本。</li>
+<li>需要使用与 iOS 设备相同的方式为此设备设置资源调配。建议使用 Xcode 创建一个空的 tvOS 应用程序，由此测试该资源调配是否正常工作。</li>
+</ul>
+
+<h2>开始前的注意事项</h2>
+
+<ul>
+<li>许多 iOS 插件与 Apple TV 不兼容，因为该设备只支持 iOS 框架的一个子集。建议创建一个单独的游戏分支或副本，并在此基础上移植到 Apple TV。请联系插件提供商，要求他们更新不兼容的插件。</li>
+<li>如果游戏的磁盘使用量超过 200 MB，应将游戏分成更小的部分并使用__按需加载资源 (On Demand Resources)__。如需了解 Unity 中的按需加载资源支持情况，请参阅下面的<a href="#OnDemandResources"><em>按需加载资源</em></a>部分。请注意，Bitcode 会包含在 tvOS 构建中，使可执行文件的大小增加约 130 MB。这一增加的大小不计入分发大小，因为 App Store 服务器会将其剥离。要估计 Bitcode 大小，可使用 <code>otool -l</code> 从命令行分析可执行文件中的 LLVM 部分。</li>
+</ul>
+
+<h2>实现输入</h2>
+
+<p>Apple TV 遥控器（Siri 遥控器）可用作多功能输入设备，既可用作传统菜单导航控制器、游戏控制器、陀螺仪和加速度传感器，也可用作触摸手势设备。Apple TV 遥控器输入由 Unity 进行最低限度的处理，而主要路由到相应的 Unity API。</p>
+
+<p>通常，每个游戏都需要对其输入方案进行微调，以利用独特的 Apple TV 遥控器输入功能。一些游戏将受益于将该遥控器用作传统游戏控制器（具有一个模拟轴和一个额外的动作按钮），而其他游戏将受益于使用加速度计（例如，用于转向目的）。建议在将游戏移植到 tvOS 时尝试各种方案。</p>
+
+<p>以下是关于访问特定 TV 遥控器功能的一些技术细节：</p>
+
+<ul>
+<li>If you have not yet added Made For iOS (MFi) Game Controller support to your game, see the dedicated <a href="iphone-joystick.html">MFi Game Controller</a> page. Use the mappings listed there while setting up your custom action mappings in the Unity Editor (<strong>Edit &gt; Project Settings</strong>, then select the <strong>Input</strong> category).</li>
+<li>Apple TV 遥控器触摸区域同时映射到 <code>Input.touches</code>（<code>Touch.type</code> 设置为 <code>Indirect</code> 并被 Unity GUI 忽略）和常规游戏杆输入 API（例如 <code>Input.GetAxis("Horizontal");</code>）</li>
+<li>Apple TV 遥控器加速度和陀螺仪相应地映射到 <code>Input.acceleration</code> 和 <code>Input.gyro</code>。<code>Input.acceleration</code> 派生自内部陀螺仪 API，可能有一定的不稳定性。遗憾的是，tvOS SDK 中没有专用的加速度计 API。<code>Input.gyro.attitude</code> 派生自重力矢量，因此缺乏围绕平行于重力矢量的轴的旋转。<code>Input.gyro.rotationRate</code> 也是同样的情况。</li>
+<li>遥控器上的 Pause/Play 按钮映射到按钮“X”（后者再映射到<a href="iphone-joystick.html">游戏杆按钮 15</a>）。</li>
+<li>Apple TV 遥控器触摸区域点击映射到按钮“A”（后者再映射到<a href="iphone-joystick.html">游戏杆按钮 14</a>）。</li>
+<li>Menu 按钮在此设备上具有特殊行为；长按调用 tvOS 任务切换器。无法覆盖此行为。短按有两种处理方式：
+
+<ul>
+<li>
+<strong>a)</strong> 返回 tvOS 系统主屏幕（如果 <code>UnityEngine.Apple.TV.Remote.allowExitToHome</code> 为 <strong>true</strong>）</li>
+<li>
+<strong>b)</strong> 当 <code>UnityEngine.Apple.TV.Remote.allowExitToHome</code> 为 <strong>false</strong> 时，让应用程序响应点击（映射到按钮“Pause”/<a href="iphone-joystick.html">游戏杆按钮 0</a>）。这是默认行为。</li>
+<li>应用程序应根据游戏的当前状态在 <strong>a)</strong> 和 <strong>b)</strong> 之间切换。如果用户正在与顶层菜单交互，则启用行为 <strong>a)</strong>；如果他们正在与游戏实时交互，应启用行为 <strong>b)</strong>，并在按下此按钮时调入游戏内暂停菜单。</li>
+</ul>
+</li>
+<li>当您轻扫至 Apple TV 遥控器的边缘时，遥控器还会生成方向键盘上/下/左/右按钮按压。请参阅 <a href="iphone-joystick.html">iOS 游戏控制器</a>手册页以了解映射。</li>
+<li>可通过专用 API 控制 Apple TV 遥控器操作模式：
+
+<ul>
+<li><code>UnityEngine.Apple.TV.Remote.allowExitToHome</code></li>
+<li><code>UnityEngine.Apple.TV.Remote.allowRemoteRotation</code></li>
+<li><code>UnityEngine.Apple.TV.Remote.reportAbsoluteDpadValues</code></li>
+<li><code>UnityEngine.Apple.TV.Remote.touchesEnabled</code></li>
+</ul>
+</li>
+<li>可将另外两个无线 Made For iOS (MFi) 游戏控制器连接到 Apple TV 设备，从而有效地将该设备转换为游戏主机。游戏可能会像 iOS MFi 控制器一样使用这些控制器（如上所述），但应该仍能单独使用 Apple TV 遥控器玩游戏。目前，附加控制器的数量限制为两个；这是文档中明确指出的 tvOS 系统限制。</li>
+</ul>
+
+<p><strong>Warning:</strong> due to the Apple TV Remote “Menu” button being reported as <a href="iphone-joystick.html">joystick button 0</a> when <code>UnityEngine.Apple.TV.Remote.allowExitToHome</code> is set to <strong>false</strong>, and the default <a href="class-InputManager.html">Input</a> window binding <strong>Submit</strong> virtual button being mapped to the same <a href="iphone-joystick.html">joystick button 0</a>, this button triggers actions on UI elements when pressing the <strong>Menu</strong> button. To work around this issue, remove or modify the <strong>Submit</strong> virtual button bindings in the <a href="class-InputManager.html">Input</a> window.</p>
+
+<h2>设置通过 Apple TV 遥控器进行 Unity GUI 导航</h2>
+
+<ul>
+<li>Open the <a href="class-InputManager.html">Input</a> window in the Unity Editor. Find the first occurrence of the <strong>Submit</strong> virtual input, expand it and change its <strong>Alt Positive Button</strong> to <strong>joystick button 14</strong>.</li>
+<li>Select the EventSystem GameObject in your Scene. In the Inspector, find the EventSystem component and set a reference to the UI GameObject that should receive initial focus the <strong>First Selected</strong> property . You may need to enable the <strong>Force input module</strong> property in the <strong>Standalone Input Module</strong> component.</li>
+</ul>
+
+<p>进行这些设置后，即可在 Editor 中运行时通过键盘导航 UI，而在设备上运行时通过 Apple TV 遥控器轻扫并完全停止点击。</p>
+
+<p><strong>注意</strong>：在电视模拟器中运行时，Apple TV 遥控器导航无效。</p>
+
+<h2>将排行榜资源添加到 Xcode 项目</h2>
+
+<p>游戏中心 (Game Center) 要求为其原生排行榜 UI 提供自定义可视化资源。以下是有关如何在 Xcode 中设置这些资源的快速说明：</p>
+
+<ul>
+<li>在 Xcode 项目中选择 Images.xcassets</li>
+<li>右键单击下面列出的文件，然后从菜单中选择 <strong>Game Center &gt; New AppleTV Leaderboard</strong>。</li>
+<li>添加图像。</li>
+<li>Select <strong>Leaderboard</strong> and on the right pane click <strong>Edit View</strong>. Find the <strong>Identifier</strong> property and enter your leaderboard ID there.</li>
+<li>在这些修改之后，如果资源编译开始失败，请尝试在 Xcode 的“Build Settings”中禁用“On Demand Resources”。</li>
+</ul>
+
+<p><a name="OnDemandResources"></a> </p>
+
+<h2>实现按需加载资源 (On Demand Resources) 支持</h2>
+
+<p>对于应用程序可以保留的磁盘空间量，tvOS 有严格的要求。主应用程序安装包大小不能超过 200 MB。但是，其他可下载内容的大小上限要高得多（正在使用的资源最多可达 2GB，总共可下载内容最多可达 20GB）。Apple 建议对 tvOS 的可下载内容采用按需加载资源 (On Demand Resources, ODR)，因为此功能为 tvOS 提供了最佳的磁盘空间管理策略。Unity 通过资源包支持 ODR。在关于该主题的专用<a href="http://blogs.unity3d.com/2015/11/26/mastering-on-demand-resources-for-apple-platforms/">博客文章</a>中可找到一份 ODR 实现指南。</p>
+
+<h2>已知限制</h2>
+
+<ul>
+<li>屏幕键盘仅限于单行输入。</li>
+<li>tvOS 模拟器不会将 Apple TV 遥控器模拟为游戏控制器，因此无法将其输入提供给游戏。</li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AppleTV.html"></a></span><div class="tip">Apple TV</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-PlayerSettingstvOS.html"></a></span><div class="tip">Apple TV Player settings</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

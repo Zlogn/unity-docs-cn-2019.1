@@ -1,0 +1,245 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Supported Model file formats - Unity Manual">
+<title>Supported Model file formats - Unity Manual</title>
+<meta name="description" content="Note: This section provides information about proprietary file formats that use FBX conversion. However, there are two file formats that do not use FBX as an intermediary: SketchUp and SpeedTree. For more information about importing these file formats, see the SketchUp Settings and SpeedTree topics.">
+<meta property="og:description" content="Note: This section provides information about proprietary file formats that use FBX conversion. However, there are two file formats that do not use FBX as an intermediary: SketchUp and SpeedTree. For more information about importing these file formats, see the SketchUp Settings and SpeedTree topics.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = '3D-formats';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/3D-formats.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/3D-formats.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/3D-formats.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/3D-formats.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/3D-formats.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/3D-formats.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/3D-formats.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/3D-formats.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/3D-formats.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/3D-formats.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/3D-formats.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/3D-formats.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/3D-formats.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/3D-formats.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/3D-formats.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/3D-formats.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/3D-formats.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/3D-formats.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/3D-formats.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/3D-formats.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/3D-formats.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/3D-formats.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/3D-formats.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/3D-formats.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="ImportingAssets.html">导入</a></li>
+<li>Supported Model file formats</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SpeedTreeImporter-Materials.html"></a></span><div class="tip">Materials tab</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="HOWTO-ImportObjectsFrom3DApps.html"></a></span><div class="tip">从其他应用程序导入时的限制</div>
+</div>
+</div></div>
+<h1>Supported Model file formats</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><strong>Note:</strong> This section provides information about proprietary file formats that use FBX conversion. However, there are two file formats that do not use FBX as an intermediary: <a href="https://www.sketchup.com/">SketchUp</a> and <a href="https://store.speedtree.com/unity/">SpeedTree</a>. For more information about importing these file formats, see the <a href="HOWTO-ImportObjectSketchUp.html">SketchUp Settings</a> and <a href="SpeedTree.html">SpeedTree</a> topics. </p>
+
+<p>Unity 支持从两种不同类型的文件导入<a href="class-Mesh.html">网格</a>和<a href="AnimationClips.html">动画</a>：</p>
+
+<ul>
+<li><p><a href="#Exported3DFiles">导出的 3D 文件格式</a>，如 .fbx 或 .obj。您可以使用通用格式从 3D 建模软件导出文件，此类格式的文件可以由各种不同的软件导入和编辑。</p></li>
+<li><p><a href="#Proprietary3DappFiles">Proprietary 3D or DCC (Digital Content Creation) application files</a>, such as .max and .blend file formats from <a href="https://www.autodesk.com/products/3ds-max/overview">Autodesk® 3ds Max®</a> or <a href="https://www.blender.org/">Blender</a>, for example. You can only edit proprietary files in the software that created them. Proprietary files are generally not directly editable by other software without first being converted and imported. </p></li>
+</ul>
+
+<p>Unity 可以导入和使用这两种类型的文件，每种文件都有各自的优缺点。</p>
+
+<p><a name="Exported3DFiles"></a> </p>
+
+<h2>导出的 3D 格式</h2>
+
+<p>Unity can read <a href="https://www.autodesk.com/products/fbx/overview">.fbx</a>, <a href="https://www.khronos.org/collada/">.dae (Collada)</a>, .3ds, .dxf, and .obj files. For information about exporting 3D files, see <a href="HOWTO-exportFBX.html">Exporting from other applications</a> or read the documentation for your 3D modeling software.</p>
+
+<p><strong>优点：</strong></p>
+
+<ul>
+<li>可以只导入所需的模型部分，而无需将整个模型导入 Unity。</li>
+<li>导出的通用文件通常小于专有的同等文件。</li>
+<li>使用导出的通用文件有利于采用模块化方法（例如，为碰撞类型或交互使用不同的组件）。</li>
+<li>可以从 Unity 不直接支持的软件导入这些文件。</li>
+<li>可以将已导出的 3D 文件（.fbx、.obj）重新导入 3D 建模软件，以此确保所有信息都已正确导出。</li>
+</ul>
+
+<p><strong>缺点：</strong></p>
+
+<ul>
+<li>如果原始文件发生更改，则必须手动重新导入模型。</li>
+<li>需要跟踪源文件和导入 Unity 的文件之间的版本。</li>
+</ul>
+
+<p><a name="Proprietary3DappFiles"></a> </p>
+
+<h2>专用的 3D 应用程序文件</h2>
+
+<p>Unity 可以从以下 3D 建模软件导入专有文件：</p>
+
+<ul>
+<li><a href="https://www.autodesk.com/products/3ds-max/overview">Autodesk® 3ds Max®</a></li>
+<li><a href="https://www.autodesk.com/products/maya/overview">Autodesk® Maya®</a></li>
+<li><a href="https://www.blender.org/">Blender</a></li>
+<li><a href="https://www.maxon.net/en/products/cinema-4d/overview/">Cinema4D</a></li>
+<li><a href="https://www.foundry.com/products/modo">Modo</a></li>
+<li><a href="https://www.lightwave3d.com/">LightWave</a></li>
+<li><a href="https://www.cheetah3d.com/">Cheetah3D</a></li>
+</ul>
+
+<p><strong>警告：</strong>Unity 在导入过程中将专有文件转换为 .fbx 文件。但是，建议导出 FBX，而不是直接保存为工程应用中的默认格式。建议不要在生产中直接使用原生文件格式。</p>
+
+<p><strong>优点：</strong></p>
+
+<ul>
+<li>如果原始模型更改，Unity 会自动重新导入文件。</li>
+<li>这最初很简单；但是在开发后期会变得更复杂。</li>
+</ul>
+
+<p><strong>缺点：</strong></p>
+
+<ul>
+<li>必须在使用 Unity 项目的每台计算机上安装所用软件的授权副本。</li>
+<li>使用 Unity 项目的每台计算机上的软件版本应相同。使用不同的软件版本可能会在导入 3D 模型时导致错误或意外行为。</li>
+<li>文件可能会因不必要的数据而变得臃肿。</li>
+<li>大文件可能会降低 Unity 项目导入或资源重新导入的速度，因为在将模型导入 Unity 时必须运行 3D 建模软件作为后台进程。</li>
+<li>在导入过程中，Unity 会在内部将专有文件导出到 .fbx。因此难以验证 .fbx 数据和进行故障排除。</li>
+</ul>
+
+<p><strong>Note:</strong> Assets saved as .ma, .mb, .max, .c4d, or .blend files fail to import unless you have the corresponding 3D modeling software installed on your computer. This means that everybody working on your Unity Project must have the correct software installed. For example, if you use <a href="https://www.autodesk.com/products/maya-lt/overview">the Autodesk® Maya LT™ license</a> to create <code>ExampleModel.mb</code> and copy it into your Project, anyone else opening that Project also needs to have Autodesk® Maya LT™ installed on their computer too. </p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit"> 2018–04–25 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SpeedTreeImporter-Materials.html"></a></span><div class="tip">Materials tab</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="HOWTO-ImportObjectsFrom3DApps.html"></a></span><div class="tip">从其他应用程序导入时的限制</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

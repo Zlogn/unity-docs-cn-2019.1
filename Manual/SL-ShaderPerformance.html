@@ -1,0 +1,225 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="编写着色器时的性能技巧 - Unity Manual">
+<title>编写着色器时的性能技巧 - Unity Manual</title>
+<meta name="description" content="着色器代码需要执行的计算和处理越多，它对游戏性能的影响就越大。例如，支持每种材质的颜色可以使着色器更加灵活，但如果始终将该颜色设置为白色，则会对屏幕上渲染的每个顶点或像素执行无用的计算。">
+<meta property="og:description" content="着色器代码需要执行的计算和处理越多，它对游戏性能的影响就越大。例如，支持每种材质的颜色可以使着色器更加灵活，但如果始终将该颜色设置为白色，则会对屏幕上渲染的每个顶点或像素执行无用的计算。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'SL-ShaderPerformance';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-ShaderPerformance.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-ShaderPerformance.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-ShaderPerformance.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-ShaderPerformance.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-ShaderPerformance.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-ShaderPerformance.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-ShaderPerformance.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-ShaderPerformance.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-ShaderPerformance.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-ShaderPerformance.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/SL-ShaderPerformance.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/SL-ShaderPerformance.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/SL-ShaderPerformance.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/SL-ShaderPerformance.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-ShaderPerformance.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-ShaderPerformance.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-ShaderPerformance.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-ShaderPerformance.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-ShaderPerformance.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-ShaderPerformance.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-ShaderPerformance.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-ShaderPerformance.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-ShaderPerformance.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-ShaderPerformance.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="SL-Reference.html">着色器参考</a></li>
+<li><a href="SL-AdvancedTopics.html">高级 ShaderLab 主题</a></li>
+<li>编写着色器时的性能技巧</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-RenderPipeline.html"></a></span><div class="tip">Unity 的渲染管线</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-ShaderReplacement.html"></a></span><div class="tip">使用替换的着色器进行渲染</div>
+</div>
+</div></div>
+<h1>编写着色器时的性能技巧</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>仅执行所需的计算</h2>
+
+<p>着色器代码需要执行的计算和处理越多，它对游戏性能的影响就越大。例如，支持每种材质的颜色可以使着色器更加灵活，但如果始终将该颜色设置为白色，则会对屏幕上渲染的每个顶点或像素执行无用的计算。</p>
+
+<p>计算的频率也会影响游戏的性能。通常，与顶点数（顶点着色器执行次数）相比，渲染的像素数会更多（因此像素着色器执行次数也更多），而渲染的顶点数比渲染的对象更多。在可能的情况下，可将计算从像素着色器代码移动到顶点着色器代码中，或者将它们完全移出着色器并在脚本中设置值。</p>
+
+<h2>优化的表面着色器</h2>
+
+<p><a href="SL-SurfaceShaders.html">表面着色器</a>非常适合编写与光照交互的着色器。但是，它们的默认选项已调整为涵盖大量的一般情况。可针对特定情况调整这些选项以使着色器运行速度更快，或至少让着色器变得更小巧：</p>
+
+<ul>
+<li>使用视图方向（即镜面反射）的着色器的 <code>approxview</code> 指令使视图方向按照顶点（而不是按像素）进行标准化。这是近似值，但通常足够好。</li>
+<li>适用于镜面反射着色器类型的 <code>halfasview</code> 速度更快。半矢量（光照方向和视图矢量之间）按照顶点进行计算和标准化，并且<a href="SL-SurfaceShaderLighting.html">光照函数</a>接受半矢量作为参数，而不是视图矢量。</li>
+<li>
+<code>noforwardadd</code> 使着色器仅完全支持前向渲染中的单方向光。其余的光源仍然可提供每顶点光源或球谐函数光源的效果。这样可以使着色器更小并确保它始终在一个通道中渲染，即使存在多个光源也是如此。</li>
+<li>
+<code>noambient</code> 在着色器中禁用环境光照和球谐函数光源。这样可以稍稍提高性能。</li>
+</ul>
+
+<h2>计算的精度</h2>
+
+<p>用 Cg/HLSL 编写着色器时，有三种基本数字类型：<code>float</code>、<code>half</code> 和 <code>fixed</code>（请参阅<a href="SL-DataTypesAndPrecision.html">数据类型和精度</a>）。</p>
+
+<p>为获得良好性能，请始终使用尽可能低的精度。这在移动平台（如 iOS 和 Android）上尤为重要。重要的经验法则如下：</p>
+
+<ul>
+<li>对于世界空间位置和纹理坐标，请使用 <code>float</code> 精度。</li>
+<li>对于所有其他情况（矢量、HDR 颜色等），请首先尝试 <code>half</code> 精度。仅在必要的情况下再提高精度。</li>
+<li>要对纹理数据进行非常简单的运算，请使用 <code>fixed</code> 精度。</li>
+</ul>
+
+<p>实际上，具体应该使用哪种数字类型取决于平台和 GPU。一般来说：</p>
+
+<ul>
+<li>所有新款的桌面端 GPU 将始终以完整 <code>float</code> 精度进行所有计算，因此 <code>float/half/fixed</code> 最终产生完全相同的结果。这可能会使测试变得困难，因为更难以确定 half/fixed 精度是否真正够用，因此请始终在目标设备上测试着色器以获得准确的结果。</li>
+<li>移动端 GPU 实际支持 <code>half</code> 精度。这种精度通常速度更快，并且使用更少的性能来执行计算。</li>
+<li>
+<code>Fixed</code> 精度通常仅对于较旧的移动端 GPU 有用。大部分新款 GPU（可运行 OpenGL ES 3 或 Metal 的 GPU）在内部以相同方式来处理 <code>fixed</code> 和 <code>half</code> 精度。</li>
+</ul>
+
+<p>有关更多详细信息，请参阅<a href="SL-DataTypesAndPrecision.html">数据类型和精度</a>。</p>
+
+<h2>Alpha 测试</h2>
+
+<p>固定函数 <a href="SL-AlphaTest.html">AlphaTest</a>（或者其可编程的等效函数 <code>clip()</code>）在不同平台上具有不同的性能特征：</p>
+
+<ul>
+<li>通常，在使用该函数来移除大多数平台上的完全透明像素时，可获得少量优势。</li>
+<li>但是，在 iOS 和某些 Android 设备的 PowerVR GPU 上，Alpha 测试是资源密集型任务。不要试图在这些平台上使用这种测试进行性能优化，因为它会导致游戏运行速度比平常慢。</li>
+</ul>
+
+<h2>颜色遮罩 (Color Mask)</h2>
+
+<p>在某些平台（主要是 iOS 和 Android 设备的移动端 GPU）上，使用 <a href="SL-Pass.html">ColorMask</a> 省略一些通道（例如 <code>ColorMask RGB</code>）可能是资源密集型的操作，所以除非绝对需要，否则请不要使用。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-RenderPipeline.html"></a></span><div class="tip">Unity 的渲染管线</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-ShaderReplacement.html"></a></span><div class="tip">使用替换的着色器进行渲染</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

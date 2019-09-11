@@ -1,0 +1,277 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Upgrading to Unity 2018.3 - Unity Manual">
+<title>Upgrading to Unity 2018.3 - Unity Manual</title>
+<meta name="description" content="This page lists any changes in 2018.3 which might affect existing projects when you upgrade from earlier versions of Unity">
+<meta property="og:description" content="This page lists any changes in 2018.3 which might affect existing projects when you upgrade from earlier versions of Unity">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UpgradeGuide20183';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UpgradeGuide20183.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UpgradeGuide20183.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UpgradeGuide20183.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UpgradeGuide20183.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UpgradeGuide20183.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UpgradeGuide20183.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UpgradeGuide20183.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UpgradeGuide20183.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UpgradeGuide20183.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UpgradeGuide20183.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UpgradeGuide20183.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UpgradeGuide20183.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UpgradeGuide20183.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UpgradeGuide20183.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UpgradeGuide20183.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UpgradeGuide20183.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UpgradeGuide20183.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UpgradeGuide20183.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UpgradeGuide20183.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UpgradeGuide20183.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UpgradeGuide20183.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UpgradeGuide20183.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UpgradeGuide20183.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UpgradeGuide20183.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="UpgradeGuides.html">升级指南</a></li>
+<li>Upgrading to Unity 2018.3</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide20191.html"></a></span><div class="tip">Upgrading to Unity 2019.1</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide20182.html"></a></span><div class="tip">Upgrading to Unity 2018.2</div>
+</div>
+</div></div>
+<h1>Upgrading to Unity 2018.3</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This page lists any changes in 2018.3 which might affect existing projects when you upgrade from earlier versions of Unity</p>
+
+<hr>
+
+<h3>Improved Prefabs</h3>
+
+<ul>
+<li>Prefabs automatically upgrade to the <a href="https://unity3d.com/prefabs">new Prefabs system</a>.</li>
+<li>To support prefab nesting, the prefab workflow has changed. To edit Prefabs, you now need to open them in Prefab Mode. You can no longer edit Prefabs in the Project Browser.</li>
+<li>You also make structural changes in Prefab Mode, such as deleting GameObjects, reparenting GameObjects, or replacing a Transform with a RectTransform. Alternatively, you can unpack a Prefab instance if you want to entirely remove its link to its Prefab Asset and thus be able to restructure the resulting plain GameObjects as necessary. You can no longer disconnect a Prefab instance.</li>
+<li>The Editor tooling that creates GameObjects should use <a href="../ScriptReference/ObjectFactory.CreateGameObject.html">ObjectFactory.CreateGameObject</a> to make sure that the GameObject ends up in the Prefab Scene if a Prefab Asset is currently being edited in Prefab Mode.</li>
+<li>As a safety precaution, scripts with the [ExecuteInEditMode] attribute cause the Editor to exit Prefab Mode when going into Play Mode, if any script on the open Prefab has that attribute. For details on how to make such scripts compatible with Prefab Mode, see the Scripting Reference pages for <a href="../ScriptReference/ExecuteInEditMode.html">ExecuteInEditMode</a> and the new <a href="../ScriptReference/ExecuteAlways.html">ExecuteAlways</a> attribute.</li>
+<li>It’s no longer possible to make arbitrary modifications to Prefab Assets from scripts because Prefabs are now imported assets. Instead you need to use <a href="../ScriptReference/PrefabUtility.LoadPrefabContents.html">PrefabUtility.LoadPrefabContents</a>, <a href="../ScriptReference/PrefabUtility.SaveAsPrefabAsset.html">PrefabUtility.SaveAsPrefabAsset</a> and <a href="../ScriptReference/PrefabUtility.UnloadPrefabContents.html">PrefabUtility.UnloadPrefabContents</a>.</li>
+<li>If you use <a href="../ScriptReference/AssetDatabase.AddObjectToAsset.html">AssetDatabase.AddObjectToAsset</a> to add additional assets to Prefabs, you must now call <a href="../ScriptReference/PrefabUtility.SavePrefabAsset.html">PrefabUtility.SavePrefabAsset</a> after adding the requisite objects.</li>
+</ul>
+
+<hr>
+
+<h3>USS flex shorthand expansion now follows CSS standard</h3>
+
+<ul>
+<li>The USS flex directive now accepts up to three parameters representing <code>flex-grow</code>, <code>flex-shrink</code> and <code>flex-basis</code>. The flex-shrink and flex-basis parameters are optional. If omitted, flex-basis defaults to 0 and flex-shrink defaults to 1.</li>
+<li>Before 2018.3, <code>flex: N</code> was equivalent to <code>flex N 0 auto</code>. This now follows the CSS standard by making it equivalent to <code>flex: N 1 0</code>. To preserve the old semantic, you should replace all <code>flex: N</code> directives with <code>flex: N 0 auto</code> in your USS files.</li>
+</ul>
+
+<hr>
+
+<h3>Support for logging unhandled exceptions in managed user threads</h3>
+
+<ul>
+<li>Before 2018.3, the Unity Editor did not log unhandled exceptions thrown in managed user threads. From 2018.3 onwards, unhandled exceptions thrown in managed user threads are logged on the Unity Editor console.</li>
+<li>Because logging now includes all managed user threads, you may see exceptions that have always been thrown in your Projects, but were never emitted to the console until now.</li>
+</ul>
+
+<hr>
+
+<h3>The VFACE shader variable is now inverted in DirectX (11 &amp; 12)</h3>
+
+<ul>
+<li>The VFACE shader variable was not coherent between DirectX and other graphics APIs when rendering to a cubemap. Now it has the same behavior.</li>
+<li>If you are using a VFACE bool shader variable in a DirectX shader to render a cubemap, then you have to flip the logic in your code.</li>
+<li>See <a href="https://issuetracker.unity3d.com/issues/the-vface-variable-is-incorrect-in-shaders-when-rendered-from-a-reflection-probe">Issue ID 1027670</a>.</li>
+</ul>
+
+<hr>
+
+<h3>Upgraded PhysX from 3.3.1 to 3.4.2</h3>
+
+<p>Physics behaviour has changed and some Projects may behave differently with the new version. In particular:</p>
+
+<ul>
+<li>The contact patches now contain up to 6 contacts in the <strong>Persistent Contact Manifold</strong> mode. This is an increase from 5 contacts per patch in previous versions. There is new code that merges patches in the manifold, and new code that selects contacts. Collisions appear to be a lot more accurate than before. You may need to work on Projects that rely on a particular arrangement of contacts to make them compatible with the new code. You are most likely to notice this when convex bodies collide with meshes and primitives.</li>
+<li>A new algorithm is now used to compute <strong>contacts with terrains</strong>. It used to be special-cased, but now it’s the same mesh-primitive code that is used with MeshColliders. It’s robust, more accurate and performs well. However, it doesn’t support TerrainData.thickness, which means the tunneling effect with terrains is now possible. To avoid this, you need to enable continuous collision detection on the fast moving objects. Before that, if a body was discovered to be no deeper than TerrainData.thickness under the terrain, it was popped up automatically, but the normals were never correct. To get the old behaviour, uncheck the <strong>Enable Unified Heightmaps</strong> option in the Physics settings.</li>
+<li>
+<strong>Negative mesh scaling</strong> no longer leads directly to mesh baking in all the cases. Concave meshes are not baked any more. However, Convex meshes still need to have scaling to be baked. With this change, negative scaling inverts the mesh normals when scale.x * scale.y * scale.z &lt; 0. Additionally, non-trivial scaling like skew and shear still have to be baked, as before.</li>
+<li>
+<strong>Convex mesh inflation</strong> is deprecated because it doesn’t seem to be needed with the new convex hull computation algorithm (Quickhull) that is more tolerant towards all sorts of imperfections in the input mesh.</li>
+</ul>
+
+<hr>
+
+<h3>The AssetBundle.mainAsset property has been marked Obsolete</h3>
+
+<ul>
+<li>In Unity versions prior to 5.0, users had to build asset bundles using the AssetBundleBuildAssetBundle API which required providing an Object that would be returned when loaded using the AssetBundle’s mainAsset property.</li>
+<li>The AssetBundle.BuildAssetBundle API was marked obsolete in Unity 5.0 and was replaced by AssetBundle.BuildAssetBundles, which changed how you get Assets from an AssetBundle.</li>
+<li>You now need to get the Asset’s name, or path with the AssetBundle.LoadAsset API to get content from the AssetBundle. See documentation on Building AssetBundles, Using AssetBundles Natively, and the AssetBundle Scripting API.</li>
+</ul>
+
+<hr>
+
+<h3>Upgrading Projects that use NavMesh components</h3>
+
+<ul>
+<li>If you are moving a Project from 2018.2 or earlier to 2018.3b and it uses NavMesh components obtained from Unity’s GitHub repository, you now need to use this <a href="https://github.com/Unity-Technologies/NavMeshComponents/tree/2018.3">branch</a>.</li>
+</ul>
+
+<hr>
+
+<h3>Particle System bug fixes</h3>
+
+<p>Unity 2018.3 includes some particle bugs fixes and this can affect your projects that were created in a previous version.</p>
+
+<ul>
+<li>When using non-uniform Transform scale on billboard particles, the Y and Z axes were inverted. This has now been fixed.</li>
+<li>When using non-uniform Transform scale on mesh particles, rotation was applied after scaling. This was a regression in 2017.x. It behaved correctly in 5.6 and earlier, but was broken in the 2017 cycle. Fixing this bug corrects content created in 5.6 and earlier, but changes content created in 2017.x.</li>
+<li>Spherical wind zones had the opposite effect on particles compared to trees. This has been corrected so the spherical wind zones now repel particles instead of attracting them. You can restore the previous behavior by negating the External Forces Multiplier, or the Wind Zone strength. Unity can’t change this automatically as Scenes with trees or directional wind zones could be incorrectly affected.</li>
+</ul>
+
+<hr>
+
+<h3>C# compiler upgrade to Roslyn</h3>
+
+<p>Before 2018.3, the Unity Editor used the mono C# compiler (mcs) when compiling C# files in a project. From 2018.3 onwards, the Roslyn C# compiler (csc) is used for projects targeting the new scripting runtime (.NET 4.x Equivalent). Different behavior may be noticed from the switch to Roslyn:</p>
+
+<ul>
+<li>C# 7.3 is the supported</li>
+<li>Additional warnings may be reported</li>
+<li>Response files for the Roslyn compiler should be named <code>csc.rsp</code>. See <a href="PlatformDependentCompilation.html">PlatformDependentCompilation</a>.</li>
+</ul>
+
+<hr>
+
+<h3>The UnityScript and Boo scripts compiler has been removed</h3>
+
+<p>UnityScript (.js) and Boo (.boo) script files can no longer be compiled in the Editor.</p>
+
+<p>For more information see this <a href="https://blogs.unity3d.com/2017/08/11/unityscripts-long-ride-off-into-the-sunset/">blog post</a> from August 2017 and you can use the <a href="https://github.com/Unity-Technologies/unityscript2csharp">unityscript2csharp</a> tool to convert UnityScript to C#.</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide20191.html"></a></span><div class="tip">Upgrading to Unity 2019.1</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide20182.html"></a></span><div class="tip">Upgrading to Unity 2018.2</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

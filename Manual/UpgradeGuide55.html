@@ -1,0 +1,306 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="升级到 Unity 5.5 - Unity Manual">
+<title>升级到 Unity 5.5 - Unity Manual</title>
+<meta name="description" content="基于物理着色的相关代码在 Unity 5.5 中已重构
+（文件 UnityStandardBRDF.cginc 等）。在大多数
+情况下，这不会直接影响着色器代码，除非
+手动直接调用某些函数。下面
+列出了一些值得注意的更改。">
+<meta property="og:description" content="基于物理着色的相关代码在 Unity 5.5 中已重构
+（文件 UnityStandardBRDF.cginc 等）。在大多数
+情况下，这不会直接影响着色器代码，除非
+手动直接调用某些函数。下面
+列出了一些值得注意的更改。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UpgradeGuide55';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UpgradeGuide55.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UpgradeGuide55.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UpgradeGuide55.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UpgradeGuide55.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UpgradeGuide55.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UpgradeGuide55.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UpgradeGuide55.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UpgradeGuide55.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UpgradeGuide55.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UpgradeGuide55.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UpgradeGuide55.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UpgradeGuide55.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UpgradeGuide55.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UpgradeGuide55.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UpgradeGuide55.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UpgradeGuide55.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UpgradeGuide55.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UpgradeGuide55.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UpgradeGuide55.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UpgradeGuide55.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UpgradeGuide55.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UpgradeGuide55.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UpgradeGuide55.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UpgradeGuide55.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="UpgradeGuides.html">升级指南</a></li>
+<li>升级到 Unity 5.5</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide56.html"></a></span><div class="tip">升级到 Unity 5.6</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide54.html"></a></span><div class="tip">升级到 Unity 5.4</div>
+</div>
+</div></div>
+<h1>升级到 Unity 5.5</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h3>着色器：基于物理着色代码更改</h3>
+
+<p>基于物理着色的相关代码在 Unity 5.5 中已重构
+（文件 <code>UnityStandardBRDF.cginc</code> 等）。在大多数
+情况下，这不会直接影响着色器代码，除非
+手动直接调用某些函数。下面
+列出了一些值得注意的更改。</p>
+
+<ul>
+<li><p>现在可以使用函数在平滑度、粗糙度和感知粗糙度之间
+进行转换：
+<code>PerceptualRoughnessToRoughness</code>、
+<code>RoughnessToPerceptualRoughness</code>、<code>SmoothnessToRoughness</code>、
+<code>RoughnessToSmoothness</code>。</p></li>
+<li><p><code>UnityStandardBRDF.cginc</code> 中的可见性术语采用 <code>roughness</code> 而不是 <code>perceptualRoughness</code>。</p></li>
+<li><p>在旧版本的 Unity 中，可使用 Marmoset 粗糙度进行重新映射。转移到 GGX 后便不再匹配，并且已删除 <code>UNITY_GLOSS_MATCHES_MARMOSET_TOOLBAG2</code> 定义和相关代码。</p></li>
+<li><p>对 Gbuffer 的所有读写操作都应该通过新函数 <code>UnityStandardDataToGbuffer</code> / <code>UnityStandardDataFromGbuffer</code> 进行。</p></li>
+<li><p>着色器代码应调用 <code>UnityGlossyEnvironmentSetup()</code> 来初始化 <code>Unity_GlossyEnvironmentData</code> 结构而不是手动执行初始化。</p></li>
+<li><p><code>Unity_GlossyEnvironmentData</code> 的 <code>roughness</code> 变量实际上是“感知粗糙度”，但它尚未经过重命名来避免现有着色器代码的错误。注意：<code>UnityGlossyEnvironmentSetup</code> 采用 <code>smoothness</code> 作为参数并计算感知粗糙度。</p></li>
+<li><p>现在可以动态计算 <code>UnityLight</code> 中的 <code>ndotl</code> 变量值，并会忽略写入该变量的任何值。</p></li>
+<li><p><code>UNITY_GI</code> 宏已弃用，不应再使用。</p></li>
+</ul>
+
+<h3>着色器：DirectX 9 半像素偏移问题</h3>
+
+<p>Unity 5.5 现在在后台处理 DX9 半像素偏移光栅化，这意味着您不再需要在着色器或代码中修复 DX9 半像素问题。请参阅<a href="http://aras-p.info/blog/2016/04/08/solving-dx9-half-pixel-offset/">此博客文章</a>了解更多详细信息。如果在代码中使用了以下任何检查，现在可以删除它们：</p>
+
+<ul>
+<li>检查着色器中的 UNITY_HALF_TEXEL_OFFSET，并据此移动顶点/UV 的问题。</li>
+<li>通过 SystemInfo.graphicsDeviceType 或 SystemInfo.graphicsDeviceVersion 检查 D3D9，并据此移动顶点/UV。</li>
+</ul>
+
+<p>Unity 现在解决这个问题的方法是将半像素调整代码插入到正在编译的所有顶点着色器中。结果，Unity 会保留顶点着色器常量寄存器 c255，还会向所有着色器添加两条指令，并使用一个额外的临时寄存器。这样应该不会产生问题，除非顶点着色器将所有可用资源（常量/临时寄存器和指令字段）用尽至绝对最大值。</p>
+
+<h3>着色器：Z 缓冲区浮点数反转</h3>
+
+<p>Z 缓冲区（深度缓冲区）方向已被反转，这意味着现在 Z 缓冲区在近平面处包含1.0，而在远平面处包含 0.0。这种设置与浮点深度缓冲区相结合可显著提高深度缓冲精度，从而减少 Z 冲突并改善阴影，尤其是在使用小的近平面和大的远平面时。</p>
+
+<p>图形 API 更改：</p>
+
+<ul>
+<li>裁剪空间范围是 [near, 0] 而不是 [0, far]</li>
+<li>_CameraDepthTexture 纹理范围是 [1,0] 而不是 [0,1]</li>
+<li>在应用 Z-bias 之前对其求反</li>
+<li>24 位深度缓冲区切换为 32 位浮点格式</li>
+</ul>
+
+<p>以下宏/函数将处理反转 Z 的情况，无需任何其他步骤。如果您的着色器已经在使用它们，那么您无需进行任何更改：</p>
+
+<ul>
+<li>Linear01Depth(float z)</li>
+<li>LinearEyeDepth(float z)</li>
+<li>UNITY_CALC_FOG_FACTOR(coord)</li>
+</ul>
+
+<p>但是，如果要手动获取 Z 缓冲区值，则需要执行如下所示的编写代码：</p>
+
+<pre><code>float z = tex2D(_CameraDepthTexture, uv);
+# if defined(UNITY_REVERSED_Z)
+    z = 1.0f - z;
+# endif
+</code></pre>
+
+<p>对于裁剪空间深度，可以使用以下宏。请<strong>注意</strong>这个宏不会改变 OpenGL/ES 平台上的裁剪空间，但会保持 <code>[-near, far]</code>：</p>
+
+<pre><code>float clipSpaceRange01 = UNITY_Z_0_FAR_FROM_CLIPSPACE(rawClipSpace);
+</code></pre>
+
+<p>现在，<strong>_ZBufferParams</strong> 在具有反转深度缓冲区的平台上包含以下值。请参阅有关<a href="SL-PlatformDifferences.html">平台特定的渲染差异</a>的文档以了解更多信息。</p>
+
+<pre><code>x = -1+far/near
+y = 1
+z = x/far
+w = 1/far
+</code></pre>
+
+<p>Z-bias 由 Unity 自动处理，但是，如果要使用本机代码渲染插件，则需要针对匹配的平台在 C/C++ 代码中反转该偏差。</p>
+
+<h2>特殊文件夹：名称为“Resources”的 Unity Editor 子文件夹</h2>
+
+<p>名为<strong>“Editor”</strong>的文件夹的所有子文件夹都将排除在构建之外，并且不会在 Unity Editor 中以播放模式加载。以前一个名为<strong>“Resources”</strong>的子文件夹会将其资源包含在构建中。通过在 Editor 脚本中调用 Resources.Load()，仍可加载这些资源。</p>
+
+<p>例如，以下文件会排除在构建之外，并在 Editor 中处于播放模式时__不会__加载，但如果从脚本进行调用则会__加载__：</p>
+
+<ul>
+<li>Editor/Foo/Resources/Bar.png<em>（从 Editor 代码中加载为“Bar.png”）</em>
+</li>
+<li>Editor/Resources/Foo.png</li>
+<li>Editor/Resources/Editor/Resources/Foo.png<em>（从 Editor 代码中加载为“Foo.png”而不是加载为“Editor/Resources/Foo.png”）</em>
+</li>
+</ul>
+
+<p>以下资源将在所有情况下加载：</p>
+
+<ul>
+<li>Resources/Editor/Foo.png</li>
+<li>Resources/Foo/Editor/Bar.png<em>（加载为“Foo/Editor/Bar.png”）</em>
+</li>
+<li>Resources/Editor/Resources/Foo.png<em>（加载为“Foo.png”而不是加载为“Editor/Resources/Foo.png”）</em>
+</li>
+</ul>
+
+<h2>Backface Tolerance（背面公差）和 Final Gather（最终收集）</h2>
+
+<p>Previously the ‘Backface Tolerance’ parameter in <a href="class-LightmapParameters.html">Lightmap Parameters</a> was not applied when using final gather for baked GI. It is now applied correctly. The parameter now affects both the realtime GI and baked GI stages (including the final gather).</p>
+
+<p>受影响的场景主要是具有单面几何体（如公告牌）的场景，这种情况下需要调整“Backface Tolerance”以避免使看到单面几何体背面的纹素无效。在使用公告牌和最终收集的场景中，现在可以通过调整“Backface Tolerance”来改善光照贴图，但是如果应用非默认的“Backface Tolerance”，其他场景也可能会受到影响，因为现在在最终收集阶段可对其进行正确计算。</p>
+
+<h2>标准着色器 BRDF2 现在使用 GGX 近似算法</h2>
+
+<p>BRDF2 是在移动平台上默认设置的标准着色器类型，现在使用 GGX 近似算法而不是 Blinn-Phong。这使其看起来更接近 BRDF1（默认情况下在桌面平台上使用）并可改善视觉质量。</p>
+
+<p>如果需要保留旧版近似算法，则应修改 UnityStandardBRDF.cginc 中的 BRDF2 代码，它在 #if UNITY_BRDF_GGX 语句中具有新实现（这也由 BRDF1 用来选取 GGX）。请更改 UnityStandardConfig.cginc 中的定义，或将 #if UNITY_BRDF_GGX 更改为 #if 0 in the BRDF2_Unity_PBS 函数。</p>
+
+<h2>Gradle for Android</h2>
+
+<p>现在可以使用 <a href="android-gradle-overview.html">Gradle</a> 进行以 Android 为目标的构建。</p>
+
+<p>与现有的 Unity Android 构建系统相比，Gradle 对错误并不严格，这意味着一些现有项目可能很难转换为 Gradle。请参阅有关 <a href="android-gradle-troubleshooting.html">Gradle 故障排除</a>的文档来识别并解决这些构建故障。</p>
+
+<h2>实例化对象重载已更改</h2>
+
+<p>Instantiate 函数的特定重载在默认情况下为原始游戏对象采用一个参数并为父变换组件采用一个参数，现在已更改为以不同方式工作。它不再将原始游戏对象的位置和旋转解释为世界空间位置和旋转，因此会忽略指定的父变换组件的位置和旋转。</p>
+
+<p>现在，它默认将位置和旋转解释为指定父变换组件空间内的局部位置和旋转。这与 Editor 中的行为一致。您的脚本不会自动更新。这意味着，如果运行的脚本包含对此 Instantiate 重载的调用但尚未更新来体现此更改，则可能会遇到意外行为。</p>
+
+<h2>渲染器和 LOD 组 (LOD Group) 组件的行为</h2>
+
+<p>禁用 LOD 组 (LOD Group) 组件不再禁用附加到该组件上的渲染器。LOD 组设置仅在启用 LOD 组组件时才适用于渲染器。升级项目时，Unity 会自动应用此更改，并且无法还原更改。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide56.html"></a></span><div class="tip">升级到 Unity 5.6</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide54.html"></a></span><div class="tip">升级到 Unity 5.4</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

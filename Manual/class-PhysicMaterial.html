@@ -1,0 +1,254 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="物理材质 - Unity Manual">
+<title>物理材质 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/Inspector-PhysicMaterial.png">
+<meta name="description" content="物理材质 (Physic Material) 用于调整碰撞对象的摩擦力和反弹效果。">
+<meta property="og:description" content="物理材质 (Physic Material) 用于调整碰撞对象的摩擦力和反弹效果。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-PhysicMaterial';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-PhysicMaterial.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-PhysicMaterial.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-PhysicMaterial.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-PhysicMaterial.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-PhysicMaterial.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-PhysicMaterial.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-PhysicMaterial.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-PhysicMaterial.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-PhysicMaterial.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-PhysicMaterial.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-PhysicMaterial.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-PhysicMaterial.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-PhysicMaterial.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-PhysicMaterial.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-PhysicMaterial.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-PhysicMaterial.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-PhysicMaterial.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-PhysicMaterial.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-PhysicMaterial.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-PhysicMaterial.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-PhysicMaterial.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-PhysicMaterial.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-PhysicMaterial.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-PhysicMaterial.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="PhysicsSection.html">物理系统</a></li>
+<li><a href="Physics3DReference.html">3D 物理系统参考</a></li>
+<li>物理材质</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-TerrainCollider.html"></a></span><div class="tip">地形碰撞体</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PhysicsHowTos.html"></a></span><div class="tip">物理系统操作方法</div>
+</div>
+</div></div>
+<h1>物理材质</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><strong>物理材质 (Physic Material)</strong> 用于调整碰撞对象的摩擦力和反弹效果。</p>
+
+<p>要创建物理材质，请从菜单栏中选择 <strong>Assets &gt; Create &gt; Physic Material</strong>。然后将物理材质从 Project 视图拖入到场景中的__碰撞体__。</p>
+
+<h2>属性</h2>
+
+<figure>
+<img src="../uploads/Main/Inspector-PhysicMaterial.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Dynamic Friction</strong></td>
+	<td style="text-align:left;">已在移动时使用的摩擦力。通常为 0 到 1 之间的值。值为零就像冰一样，值为 1 将使对象迅速静止（除非用很大的力或重力推动对象）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Static Friction</strong></td>
+	<td style="text-align:left;">当对象静止在表面上时使用的摩擦力。通常为 0 到 1 之间的值。值为零就像冰一样，值为 1 将导致很难让对象移动。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Bounciness</strong></td>
+	<td style="text-align:left;">表面的弹性如何？值为 0 将不会反弹。值为 1 将在反弹时不产生任何能量损失，预计会有一些近似值，但可能只会给模拟增加少量能量。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Friction Combine</strong></td>
+	<td style="text-align:left;">两个碰撞对象的摩擦力的组合方式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">- <strong>Average</strong>
+</td>
+	<td style="text-align:left;">对两个摩擦值求平均值。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">- <strong>Minimum</strong>
+</td>
+	<td style="text-align:left;">使用两个值中的最小值。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">- <strong>Maximum</strong>
+</td>
+	<td style="text-align:left;">使用两个值中的最大值。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">- <strong>Multiply</strong>
+</td>
+	<td style="text-align:left;">两个摩擦值相乘。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Bounce Combine</strong></td>
+	<td style="text-align:left;">两个碰撞对象的弹性的组合方式。其模式与 Friction Combine 模式相同</td>
+</tr>
+</tbody>
+</table>
+
+<h2>详细信息</h2>
+
+<p>摩擦力是防止表面相互滑落的量。尝试堆叠对象时，此值很重要。摩擦力有两种形式：动态和静态。对象静止时使用__静态摩擦力<strong>。静态摩擦力会阻止对象开始移动。如果向对象施加足够大的力，对象将开始移动。随后，__动态摩擦力__将发挥作用。</strong>动态摩擦力__现在将尝试在与另一个对象接触时减慢对象的速度。</p>
+
+<p>当两个对象接触时，根据所选择的模式对它们两者施加相同的弹性和摩擦力效果。当两个接触的碰撞体具有不同的组合模式设置时，存在一种特殊情况。在这种特殊情况下，使用具有最高优先级的函数。优先级顺序如下：__Average__ &lt; <strong>Minimum</strong> &lt; <strong>Multiply</strong> &lt; <strong>Maximum</strong>。例如，如果一种材质设置了 <strong>Average__，但另一种材质设置了 </strong>Maximum__，那么要使用的组合函数是 __Maximum__，因为它具有更高的优先级。</p>
+
+<p>请注意，Nvidia PhysX 引擎使用的摩擦力模型针对模拟的性能和稳定性进行了调整，并不一定代表真实物理的高度近似值。具体而言，大于单个点的接触面（例如两个相互叠放在一起的盒子）将计算为具有两个接触点，其摩擦力将是现实世界物理学中的两倍。在这种情况下，可能希望将摩擦系数乘以 0.5 以获得更真实的结果。</p>
+
+<p>同样的逻辑适用于弹性模型。由于各种模拟细节（如位置校正），Nvidia PhysX 无法保证完美的能量守恒效果。因此，比如说，如果受重力影响的对象的弹性值为 1，并与弹性为 1 的地面碰撞，则对象的弹跳高度应该会高于初始位置。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–07–17 Page amended with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">5.5 版中的更新功能</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-TerrainCollider.html"></a></span><div class="tip">地形碰撞体</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PhysicsHowTos.html"></a></span><div class="tip">物理系统操作方法</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

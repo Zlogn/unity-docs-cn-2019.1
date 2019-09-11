@@ -1,0 +1,235 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Using an Oblique Frustum - Unity Manual">
+<title>Using an Oblique Frustum - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/ObliqueFrustum.png">
+<meta name="description" content="By default, the view frustum is arranged symmetrically around the camera&amp;#8217;s center line, but it doesn&amp;#8217;t necessarily need to be. You can make the frustum &amp;#8220;oblique&amp;#8221;, which means that one side is at a smaller angle to the centre line than the opposite side. This makes the perspective on one side of the image seem more condensed, giving the impression that the viewer is very close to the object visible at that edge. An example of how this can be used is a car racing game; if the frustum is flattened at its bottom edge, it appears to the viewer that they are closer to the road, accentuating the feeling of speed.">
+<meta property="og:description" content="By default, the view frustum is arranged symmetrically around the camera&amp;#8217;s center line, but it doesn&amp;#8217;t necessarily need to be. You can make the frustum &amp;#8220;oblique&amp;#8221;, which means that one side is at a smaller angle to the centre line than the opposite side. This makes the perspective on one side of the image seem more condensed, giving the impression that the viewer is very close to the object visible at that edge. An example of how this can be used is a car racing game; if the frustum is flattened at its bottom edge, it appears to the viewer that they are closer to the road, accentuating the feeling of speed.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'ObliqueFrustum';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/ObliqueFrustum.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/ObliqueFrustum.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/ObliqueFrustum.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/ObliqueFrustum.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/ObliqueFrustum.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/ObliqueFrustum.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/ObliqueFrustum.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/ObliqueFrustum.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/ObliqueFrustum.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/ObliqueFrustum.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/ObliqueFrustum.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/ObliqueFrustum.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/ObliqueFrustum.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/ObliqueFrustum.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/ObliqueFrustum.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/ObliqueFrustum.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/ObliqueFrustum.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/ObliqueFrustum.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/ObliqueFrustum.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/ObliqueFrustum.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/ObliqueFrustum.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/ObliqueFrustum.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/ObliqueFrustum.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/ObliqueFrustum.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="CamerasOverview.html">摄像机</a></li>
+<li><a href="CameraTricks.html">摄像机技巧</a></li>
+<li>Using an Oblique Frustum</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="CameraRays.html"></a></span><div class="tip">摄像机射线</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ImpressionOfSize.html"></a></span><div class="tip">创建尺寸大小的效果</div>
+</div>
+</div></div>
+<h1>Using an Oblique Frustum</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>By default, the view frustum is arranged symmetrically around the camera’s center line, but it doesn’t necessarily need to be. You can make the frustum “oblique”, which means that one side is at a smaller angle to the centre line than the opposite side. This makes the perspective on one side of the image seem more condensed, giving the impression that the viewer is very close to the object visible at that edge. An example of how this can be used is a car racing game; if the frustum is flattened at its bottom edge, it appears to the viewer that they are closer to the road, accentuating the feeling of speed.</p>
+
+<figure>
+<img src="../uploads/Main/ObliqueFrustum.png" alt="">
+</figure>
+
+<p>Although the Camera component does not have functions specifically for setting the obliqueness of the frustum, you can do it by either enabling the camera’s <a href="PhysicalCameras.html">Physical Camera</a> properties and applying a Lens Shift, or by adding a script to alter the camera’s projection matrix.</p>
+
+<h2>Setting Frustum Obliqueness with a Lens Shift</h2>
+
+<p>Enable a camera’s <strong>Physical Camera</strong> properties to expose the <strong>Lens Shift</strong> options. You can use these to offset the camera’s focal center along the X and Y axes in a way that minimizes distortion of the rendered image. </p>
+
+<p>Shifting the lens reduces the frustum angle on the side opposite the direction of the shift. For example, as you shift the lens up, the angle between the bottom of the frustum and the camera’s center line gets smaller.</p>
+
+<figure>
+<img src="../uploads/Main/ObliqueFrustum_LensShift.png" alt="Normally a camera’s frustum is symmetrical (left), meaning the angles on either side of the center line are equal. Shifting the lens (right) makes the frustum oblique, meaning the angle is smaller on one side than on the other. ">
+<figcaption>Normally a camera’s frustum is symmetrical (left), meaning the angles on either side of the center line are equal. Shifting the lens (right) makes the frustum oblique, meaning the angle is smaller on one side than on the other.
+</figcaption>
+</figure>
+
+<p>For further information about the Physical Camera options, see documentation on <a href="PhysicalCameras.html">Physical Cameras</a>.</p>
+
+<p>For further information about setting individual Physical Camera properties, see the <a href="class-Camera.html">Camera Component reference</a>.</p>
+
+<h2>Setting Frustum Obliqueness Using a Script</h2>
+
+<p>The following script example shows how to quickly achieve an oblique frustum by altering the camera’s projection matrix. Note that you can only see the effect of the script while the game is running Play mode.</p>
+
+<pre><code>using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    void SetObliqueness(float horizObl, float vertObl) {
+        Matrix4x4 mat  = Camera.main.projectionMatrix;
+        mat[0, 2] = horizObl;
+        mat[1, 2] = vertObl;
+        Camera.main.projectionMatrix = mat;
+    }
+} 
+</code></pre>
+
+<p><em>C# 脚本示例</em></p>
+
+<pre><code>function SetObliqueness(horizObl: float, vertObl: float) {
+    var mat: Matrix4x4 = camera.projectionMatrix;
+    mat[0, 2] = horizObl;
+    mat[1, 2] = vertObl;
+    camera.projectionMatrix = mat;
+}
+
+</code></pre>
+
+<p><em>JS 脚本示例</em></p>
+
+<p>幸运的是，没有必要了解投影矩阵如何使用它。horizObl 和 vertObl 值分别设置水平和垂直倾斜量。值为零表示无倾斜。正值使视锥体向右或向上移动，从而使左边或底边变平。负值使视锥体向左或向下移动，从而使视锥体的右边或顶边变平。如果将此脚本添加到摄像机并在游戏运行时将游戏切换到 Scene 视图，则可以直接看到效果；在检视面板中改变 horizObl 和 vertObl 的值时，摄像机视锥体的线框会发生变化。任一变量中的值为 1 或 –1 表示视锥体的一侧与中心线完全齐平。此范围之外的值也是允许使用的，但通常没有必要。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–10–05 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Lens Shift options added in Unity 2018.2</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="CameraRays.html"></a></span><div class="tip">摄像机射线</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ImpressionOfSize.html"></a></span><div class="tip">创建尺寸大小的效果</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

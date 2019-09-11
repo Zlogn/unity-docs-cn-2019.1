@@ -1,0 +1,688 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="控件 - Unity Manual">
+<title>控件 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/gsg-LabelExample.png">
+<meta name="description" content="可以创建许多不同的 IMGUI 控件。本部分列出了所有可用的显示控件和交互式控件。此外还有其他影响控件布局的 IMGUI 函数；在本指南的布局部分介绍了这些函数。">
+<meta property="og:description" content="可以创建许多不同的 IMGUI 控件。本部分列出了所有可用的显示控件和交互式控件。此外还有其他影响控件布局的 IMGUI 函数；在本指南的布局部分介绍了这些函数。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'gui-Controls';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/gui-Controls.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/gui-Controls.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/gui-Controls.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/gui-Controls.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/gui-Controls.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/gui-Controls.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/gui-Controls.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/gui-Controls.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/gui-Controls.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/gui-Controls.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/gui-Controls.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/gui-Controls.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/gui-Controls.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/gui-Controls.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/gui-Controls.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/gui-Controls.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/gui-Controls.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/gui-Controls.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/gui-Controls.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/gui-Controls.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/gui-Controls.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/gui-Controls.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/gui-Controls.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/gui-Controls.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UIToolkits.html">UI</a></li>
+<li><a href="GUIScriptingGuide.html">即时模式 GUI (IMGUI)</a></li>
+<li>控件</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="gui-Basics.html"></a></span><div class="tip">IMGUI 基础知识</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="gui-Customization.html"></a></span><div class="tip">自定义</div>
+</div>
+</div></div>
+<h1>控件</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>IMGUI 控件类型</h2>
+
+<p>可以创建许多不同的 IMGUI <strong>控件</strong>。本部分列出了所有可用的显示控件和交互式控件。此外还有其他影响控件布局的 IMGUI 函数；在本指南的<a href="gui-Layout.html">布局</a>部分介绍了这些函数。</p>
+
+<h3><a href="../ScriptReference/GUI.Label.html">Label</a></h3>
+
+<p><strong>Label</strong> 为非交互式控件。此控件仅用于显示目的。不能单击，也不能以其他方式进行移动。此控件最适合于纯粹显示信息之用。</p>
+
+<pre><code>/* GUI.Label example */
+
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour 
+{
+                    
+    void OnGUI () 
+    {
+        GUI.Label (new Rect (25, 25, 100, 30), "Label");
+    }
+
+}
+
+
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/gsg-LabelExample.png" alt="示例代码创建的 Label">
+<figcaption>示例代码创建的 Label</figcaption>
+</figure>
+
+<h3><a href="../ScriptReference/GUI.Button.html">Button</a></h3>
+
+<p><strong>Button</strong> 是典型的交互式按钮。点击按钮时，无论鼠标按下多久，都只会响应一次。松开鼠标按键后会立即响应。</p>
+
+<h4>基本用法</h4>
+
+<p>在 UnityGUI 中，点击 Button 时将返回 <strong>true</strong>。要在点击 Button 时执行某些代码，应将 GUI.Button 函数包裹在 <strong>if</strong> 语句中。<strong>if</strong> 语句内部是点击 Button 时将执行的代码。</p>
+
+<pre><code>/* GUI.Button example */
+
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour 
+{
+                    
+    void OnGUI () 
+    {
+        if (GUI.Button (new Rect (25, 25, 100, 30), "Button")) 
+        {
+            // This code is executed when the Button is clicked
+        }
+    }
+
+}
+
+
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/gsg-ButtonExample.png" alt="示例代码创建的 Button">
+<figcaption>示例代码创建的 Button</figcaption>
+</figure>
+
+<h3><a href="../ScriptReference/GUI.RepeatButton.html">RepeatButton</a></h3>
+
+<p><strong>RepeatButton</strong> 是常规 <strong>Button</strong> 的变体。区别在于，__RepeatButton__ 将响应鼠标按键保持按下状态的每一帧。由此可以创建单击并保持功能。</p>
+
+<h4>基本用法</h4>
+
+<p>在 UnityGUI 中，点击 RepeatButton 的每一帧都将返回 <strong>true</strong>。要在 Button 保持点击状态时执行某些代码，应将 GUI.RepeatButton 函数包裹在 <strong>if</strong> 语句中。<strong>if</strong> 语句内部是 RepeatButton 保持点击状态时将执行的代码。</p>
+
+<pre><code>/* GUI.RepeatButton example */
+
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour 
+{
+                    
+    void OnGUI () 
+    {
+        if (GUI.RepeatButton (new Rect (25, 25, 100, 30), "RepeatButton")) 
+        {
+            // This code is executed every frame that the RepeatButton remains clicked
+        }
+    }
+
+}
+
+
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/gsg-RepeatButtonExample.png" alt="示例代码创建的 Repeat Button">
+<figcaption>示例代码创建的 Repeat Button</figcaption>
+</figure>
+
+<h3><a href="../ScriptReference/GUI.TextField.html">TextField</a></h3>
+
+<p><strong>TextField</strong> 控件是一个包含文本字符串的交互式可编辑单行字段。</p>
+
+<h4>基本用法</h4>
+
+<p>TextField 将始终显示一个字符串。必须提供要在 TextField 中显示的字符串。对字符串进行编辑时，TextField 函数将返回已编辑的字符串。</p>
+
+<pre><code>/* GUI.TextField example */
+
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour 
+{
+                    
+    private string textFieldString = "text field";
+    
+    void OnGUI () 
+    {
+        textFieldString = GUI.TextField (new Rect (25, 25, 100, 30), textFieldString);
+    }
+
+}
+
+
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/gsg-TextFieldExample.png" alt="示例代码创建的 TextField">
+<figcaption>示例代码创建的 TextField</figcaption>
+</figure>
+
+<h3><a href="../ScriptReference/GUI.TextArea.html">TextArea</a></h3>
+
+<p><strong>TextArea</strong> 控件是一个包含文本字符串的交互式可编辑多行区域。</p>
+
+<h4>基本用法</h4>
+
+<p>TextArea 将始终显示一个字符串。必须提供要在 TextArea 中显示的字符串。对字符串进行编辑时，TextArea 函数将返回已编辑的字符串。</p>
+
+<pre><code>/* GUI.TextArea example */
+
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour
+{
+                    
+    private string textAreaString = "text area";
+    
+    void OnGUI ()
+    {
+        textAreaString = GUI.TextArea (new Rect (25, 25, 100, 30), textAreaString);
+    }
+
+}
+
+
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/gsg-TextAreaExample.png" alt="示例代码创建的 TextArea">
+<figcaption>示例代码创建的 TextArea</figcaption>
+</figure>
+
+<h3><a href="../ScriptReference/GUI.Toggle.html">Toggle</a></h3>
+
+<p><strong>Toggle</strong> 控件创建具有持久开/关状态的复选框。用户可通过点击该复选框来更改状态。</p>
+
+<h4>基本用法</h4>
+
+<p>Toggle 开/关状态由 true/false 布尔值表示。必须提供布尔值作为参数来使 Toggle 表示实际状态。如果点击，则 Toggle 函数将返回一个新的布尔值。为了捕获此交互性，必须指定布尔值来接受 Toggle 函数的返回值。</p>
+
+<pre><code>/* GUI.Toggle example */
+
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour 
+{
+    private bool toggleBool = true;
+    
+    void OnGUI () 
+    {
+        toggleBool = GUI.Toggle (new Rect (25, 25, 100, 30), toggleBool, "Toggle");
+    }
+}
+
+
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/gsg-ToggleExample.png" alt="示例代码创建的 Toggle">
+<figcaption>示例代码创建的 Toggle</figcaption>
+</figure>
+
+<h3><a href="../ScriptReference/GUI.Toolbar.html">Toolbar</a></h3>
+
+<p><strong>Toolbar</strong> 控件本质上是一行 <strong>Button</strong>。在 Toolbar 上，一次只能有一个 Button 处于激活状态，并且此 Button 将一直保持激活状态，直到点击其他 Button。此行为模拟典型 Toolbar 的行为。在 Toolbar 上可以定义任意数量的 Button。</p>
+
+<h4>基本用法</h4>
+
+<p>Toolbar 中处于激活状态的 Button 通过整数加以跟踪。必须在函数中提供整数作为参数。要使 Toolbar 具有交互性，必须将整数分配给函数的返回值。提供的内容数组中的元素数将决定 Toolbar 中显示的 Button 数。</p>
+
+<pre><code>/* GUI.Toolbar example */
+
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour 
+{
+                    
+    private int toolbarInt = 0;
+    private string[] toolbarStrings = {"Toolbar1", "Toolbar2", "Toolbar3"};
+    
+    void OnGUI () 
+    {
+        toolbarInt = GUI.Toolbar (new Rect (25, 25, 250, 30), toolbarInt, toolbarStrings);
+    }
+
+}
+
+
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/gsg-ToolbarExample.png" alt="示例代码创建的 Toolbar">
+<figcaption>示例代码创建的 Toolbar</figcaption>
+</figure>
+
+<h3><a href="../ScriptReference/GUI.SelectionGrid.html">SelectionGrid</a></h3>
+
+<p><strong>SelectionGrid</strong> 控件是一种多行 <strong>Toolbar</strong>。您可以决定网格中的列数和行数。一次只能激活一个 Button。</p>
+
+<h4>基本用法</h4>
+
+<p>SelectionGrid 中处于激活状态的 Button 通过整数加以跟踪。必须在函数中提供整数作为参数。要使 SelectionGrid 具有交互性，必须将整数分配给函数的返回值。提供的内容数组中的元素数将决定 SelectionGrid 中显示的 Button 数。还可以通过函数参数指定列数。</p>
+
+<pre><code>/* GUI.SelectionGrid example */
+
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour 
+{
+                    
+    private int selectionGridInt = 0;
+    private string[] selectionStrings = {"Grid 1", "Grid 2", "Grid 3", "Grid 4"};
+    
+    void OnGUI () 
+    {
+        selectionGridInt = GUI.SelectionGrid (new Rect (25, 25, 300, 60), selectionGridInt, selectionStrings, 2);
+    
+    }
+
+}
+
+
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/gsg-SelectionGridExample.png" alt="示例代码创建的 SelectionGrid">
+<figcaption>示例代码创建的 SelectionGrid</figcaption>
+</figure>
+
+<h3><a href="../ScriptReference/GUI.HorizontalSlider.html">HorizontalSlider</a></h3>
+
+<p><strong>HorizontalSlider</strong> 控件是一个典型的水平滑钮，可拖动该滑钮来更改介于预定最小值和最大值之间的值。</p>
+
+<h4>基本用法</h4>
+
+<p>滑钮的位置存储为浮点数。要显示滑钮的位置，请将该浮点数作为函数中的参数之一。此外还有两个值用于确定最小值和最大值。如果希望滑钮可调，请将滑动条值浮点数指定为 Slider 函数的返回值。</p>
+
+<pre><code>/* Horizontal Slider example */
+
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour 
+{
+                    
+    private float hSliderValue = 0.0f;
+    
+    void OnGUI () 
+    {
+        hSliderValue = GUI.HorizontalSlider (new Rect (25, 25, 100, 30), hSliderValue, 0.0f, 10.0f);
+    }
+
+}
+
+
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/gsg-HorizontalSliderExample.png" alt="示例代码创建的 Horizontal Slider">
+<figcaption>示例代码创建的 Horizontal Slider</figcaption>
+</figure>
+
+<h3><a href="../ScriptReference/GUI.VerticalSlider.html">VerticalSlider</a></h3>
+
+<p><strong>VerticalSlider</strong> 控件是一个典型的垂直滑钮，可拖动该滑钮来更改介于预定最小值和最大值之间的值。</p>
+
+<h4>基本用法</h4>
+
+<p>滑钮的位置存储为浮点数。要显示滑钮的位置，请将该浮点数作为函数中的参数之一。此外还有两个值用于确定最小值和最大值。如果希望滑钮可调，请将滑动条值浮点数指定为 Slider 函数的返回值。</p>
+
+<pre><code>/* Vertical Slider example */
+
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour 
+{
+                    
+    private float vSliderValue = 0.0f;
+    
+    void OnGUI () 
+    {
+        vSliderValue = GUI.VerticalSlider (new Rect (25, 25, 100, 30), vSliderValue, 10.0f, 0.0f);
+    }
+
+}
+
+
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/gsg-VerticalSliderExample.png" alt="示例代码创建的 Vertical Slider">
+<figcaption>示例代码创建的 Vertical Slider</figcaption>
+</figure>
+
+<h3><a href="../ScriptReference/GUI.HorizontalScrollbar.html">HorizontalScrollbar</a></h3>
+
+<p><strong>HorizontalScrollbar</strong> 控件类似于 <strong>Slider</strong> 控件，但在视觉上类似于 Web 浏览器或文字处理程序的滚动元素。此控件用于导航 <strong>ScrollView</strong> 控件。</p>
+
+<h4>基本用法</h4>
+
+<p>Horizontal Scrollbar 的实现方式与 Horizontal Slider 相同，但有一个例外：还有一个参数用于控制滚动条滑钮本身的宽度。</p>
+
+<pre><code>/* Horizontal Scrollbar example */
+
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour 
+{
+    private float hScrollbarValue;
+    
+    void OnGUI () 
+    {
+        hScrollbarValue = GUI.HorizontalScrollbar (new Rect (25, 25, 100, 30), hScrollbarValue, 1.0f, 0.0f, 10.0f);
+    }
+
+}
+
+
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/gsg-HorizontalScrollbarExample.png" alt="示例代码创建的 Horizontal Scrollbar">
+<figcaption>示例代码创建的 Horizontal Scrollbar</figcaption>
+</figure>
+
+<h3><a href="../ScriptReference/GUI.VerticalScrollbar.html">VerticalScrollbar</a></h3>
+
+<p><strong>VerticalScrollbar</strong> 控件类似于 <strong>Slider</strong> 控件，但在视觉上类似于 Web 浏览器或文字处理程序的滚动元素。此控件用于导航 <strong>ScrollView</strong> 控件。</p>
+
+<h4>基本用法</h4>
+
+<p>Vertical Scrollbar 的实现方式与 Vertical Slider 相同，但有一个例外：还有一个参数用于控制滚动条滑钮本身的高度。</p>
+
+<pre><code>/* Vertical Scrollbar example */
+
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour
+{
+                    
+    private float vScrollbarValue;
+    
+    void OnGUI ()
+    {
+        vScrollbarValue = GUI. VerticalScrollbar (new Rect (25, 25, 100, 30), vScrollbarValue, 1.0f, 10.0f, 0.0f);
+    }
+}
+
+
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/gsg-VerticalScrollbarExample.png" alt="示例代码创建的 Vertical Scrollbar">
+<figcaption>示例代码创建的 Vertical Scrollbar</figcaption>
+</figure>
+
+<h3><a href="../ScriptReference/GUI.BeginScrollView.html">ScrollView</a></h3>
+
+<p><strong>ScrollView</strong> 控件可显示一个包含更大控件集合的可视区域。</p>
+
+<h4>基本用法</h4>
+
+<p>ScrollView 需要两个 <strong>Rect</strong> 作为参数。第一个 <strong>Rect</strong> 定义 ScrollView 可视区域在屏幕上的位置和大小。第二个 <strong>Rect</strong> 定义可视区域内包含的空间大小。如果可视区域内的空间大于可视区域，则会根据需要显示滚动条。还必须分配并提供 2D 矢量，该矢量用于存储显示的可视区域的位置。</p>
+
+<pre><code>/* ScrollView example */
+
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour 
+{
+                    
+    private Vector2 scrollViewVector = Vector2.zero;
+    private string innerText = "I am inside the ScrollView";
+    
+    void OnGUI () 
+    {
+        // Begin the ScrollView
+        scrollViewVector = GUI.BeginScrollView (new Rect (25, 25, 100, 100), scrollViewVector, new Rect (0, 0, 400, 400));
+    
+        // Put something inside the ScrollView
+        innerText = GUI.TextArea (new Rect (0, 0, 400, 400), innerText);
+    
+        // End the ScrollView
+        GUI.EndScrollView();
+    }
+
+}
+
+
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/gsg-ScrollViewExample.png" alt="示例代码创建的 ScrollView">
+<figcaption>示例代码创建的 ScrollView</figcaption>
+</figure>
+
+<h3><a href="../ScriptReference/GUI.Window.html">Window</a></h3>
+
+<p><strong>Window</strong> 是可拖动的控件容器。点击时，Window 可获得和失去焦点。因此，实现方式与其他控件略有不同。每个 Window 都有一个 <strong>id</strong> 编号，并且其内容在一个单独的函数内声明，该函数在 Window 获得焦点时调用。</p>
+
+<h4>基本用法</h4>
+
+<p>Window 是唯一需要额外函数才能正常工作的控件。必须为 Window 提供 <strong>id</strong> 编号和要执行的函数名称。在 Window 函数中，可以创建实际行为或包含的控件。</p>
+
+<pre><code>/* Window example */
+
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour 
+{
+                    
+    private Rect windowRect = new Rect (20, 20, 120, 50);
+    
+    void OnGUI ()
+    {
+        windowRect = GUI.Window (0, windowRect, WindowFunction, "My Window");
+    }
+    
+    void WindowFunction (int windowID) 
+    {
+        // Draw any Controls inside the window here
+    }
+
+}
+
+
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/gsg-WindowExample.png" alt="示例代码创建的 Window">
+<figcaption>示例代码创建的 Window</figcaption>
+</figure>
+
+<h3><a href="../ScriptReference/GUI-changed.html">GUI.changed</a></h3>
+
+<p>要检测用户是否在 GUI 中执行了任何操作（点击按钮、拖动滑动条等），应从脚本中读取 <strong>GUI.changed</strong> 值。当用户执行了操作时，结果将获得 true，因此可以轻松验证用户输入。</p>
+
+<p>常见的情况是 Toolbar，这种情况下会希望根据 Toolbar 中已点击的 Button 来更改特定值。通常不希望在每次的调用 <strong>OnGUI()</strong> 中都分配该值，而只在点击其中一个 Button 时才分配该值。</p>
+
+<pre><code>/* GUI.changed example */
+
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour
+{
+                    
+    private int selectedToolbar = 0;
+    private string[] toolbarStrings = {"One", "Two"};
+    
+    void OnGUI () 
+    {
+        // Determine which button is active, whether it was clicked this frame or not
+        selectedToolbar = GUI.Toolbar (new Rect (50, 10, Screen.width - 100, 30), selectedToolbar, toolbarStrings);
+    
+        // If the user clicked a new Toolbar button this frame, we'll process their input
+        if (GUI.changed)
+        {
+            Debug.Log("The toolbar was clicked");
+    
+            if (0 == selectedToolbar)
+            {
+                Debug.Log("First button was clicked");
+            }
+            else
+            {
+                Debug.Log("Second button was clicked");
+            }
+        }
+    }
+
+}
+
+
+</code></pre>
+
+<p>如果用户操作了前面放置的任何 GUI 控件，__GUI.changed__ 将返回 true。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="gui-Basics.html"></a></span><div class="tip">IMGUI 基础知识</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="gui-Customization.html"></a></span><div class="tip">自定义</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

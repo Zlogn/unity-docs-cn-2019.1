@@ -1,0 +1,242 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="延迟着色渲染路径 - Unity Manual">
+<title>延迟着色渲染路径 - Unity Manual</title>
+<meta name="description" content="本页面将详细介绍延迟着色渲染路径。有关介绍性的技术概述，请参阅 Wikipedia：延迟着色 (deferred shading)。">
+<meta property="og:description" content="本页面将详细介绍延迟着色渲染路径。有关介绍性的技术概述，请参阅 Wikipedia：延迟着色 (deferred shading)。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'RenderTech-DeferredShading';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/RenderTech-DeferredShading.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/RenderTech-DeferredShading.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/RenderTech-DeferredShading.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/RenderTech-DeferredShading.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/RenderTech-DeferredShading.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/RenderTech-DeferredShading.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/RenderTech-DeferredShading.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/RenderTech-DeferredShading.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/RenderTech-DeferredShading.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/RenderTech-DeferredShading.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/RenderTech-DeferredShading.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/RenderTech-DeferredShading.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/RenderTech-DeferredShading.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/RenderTech-DeferredShading.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/RenderTech-DeferredShading.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/RenderTech-DeferredShading.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/RenderTech-DeferredShading.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/RenderTech-DeferredShading.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/RenderTech-DeferredShading.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/RenderTech-DeferredShading.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/RenderTech-DeferredShading.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/RenderTech-DeferredShading.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/RenderTech-DeferredShading.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/RenderTech-DeferredShading.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="Rendering-Tech.html">渲染管线详细信息</a></li>
+<li>延迟着色渲染路径</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Rendering-Tech.html"></a></span><div class="tip">渲染管线详细信息</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="RenderTech-ForwardRendering.html"></a></span><div class="tip">前向渲染路径详细信息</div>
+</div>
+</div></div>
+<h1>延迟着色渲染路径</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>本页面将详细介绍延迟着色<a href="RenderingPaths.html">渲染路径</a>。有关介绍性的技术概述，请参阅 <a href="http://en.wikipedia.org/wiki/Deferred_shading">Wikipedia：延迟着色 (deferred shading)</a>。</p>
+
+<h2>概述</h2>
+
+<p>使用延迟着色时，可影响游戏对象的光源数量没有限制。所有光源都按像素进行评估，这意味着它们都能与法线贴图等正确交互。此外，所有光源都可以有剪影和阴影。</p>
+
+<p>延迟着色的优点是，光照的处理开销与接受光照的像素数成正比。这取决于场景中的光量大小，而不管接受光照的游戏对象有多少。因此，可通过减少光源数量来提高性能。延迟着色还具有高度一致和可预测的行为。每个光源的效果都是按像素计算的，因此不会有在大三角形上分解的光照计算。</p>
+
+<p>在缺点方面，延迟着色并不支持抗锯齿，也无法处理半透明游戏对象（这些对象使用<a href="RenderTech-ForwardRendering.html">前向</a>渲染进行渲染）。此外，它也不支持网格渲染器 (Mesh Renderer) 的接受阴影 (Receive Shadows) 标志，并且仅在有限程度上支持剔除遮罩。最多只能使用四个剔除遮罩。也就是说，剔除层遮罩必须至少包含所有层减去四个任意层，即必须设置 32 个层中的 28 个层。否则，会产生图形瑕疵。</p>
+
+<h2>要求</h2>
+
+<p>延迟着色要求显卡具有多渲染目标 (MRT)、着色器模型 3.0（或更高版本）并支持深度渲染纹理。从 GeForce 8xxx、Radeon X2400、Intel G45 开始，2006 年以后制造的大多数 PC 显卡都支持延迟着色。</p>
+
+<p>On mobile, deferred shading is supported on all devices running at least OpenGL ES 3.0.</p>
+
+<p><strong>注意：</strong>使用正交投影 (Orthographic projection) 时不支持延迟渲染。如果摄像机的投影模式设置为正交模式，则摄像机将回退到前向渲染。</p>
+
+<h2>性能注意事项</h2>
+
+<p>延迟着色中的实时光源的渲染开销与接受光照的像素数成比例，并_不_依赖于场景复杂度。所以小型点光源或聚光灯的渲染成本非常低，如果它们被场景游戏对象完全或部分遮挡，那么成本甚至更低。</p>
+
+<p>当然，有阴影的光源比没有阴影的光源的成本高得多。在延迟着色中，对于每个阴影投射光源，仍然需要将投射阴影的游戏对象渲染一次或多次。此外，应用阴影的光照着色器的渲染开销高于禁用阴影时的渲染开销。</p>
+
+<h2>实现详细信息</h2>
+
+<p>如果对象的着色器不支持延迟着色，则会在延迟着色结束后使用<a href="RenderTech-ForwardRendering.html">前向渲染</a>路径来渲染这些对象。</p>
+
+<p>下面列出了几何缓冲区（G 缓冲区）中渲染目标 (RT0 - RT4) 的默认布局。数据类型放置在每个渲染目标的各个通道中。使用的通道显示在括号内。</p>
+
+<ul>
+<li>RT0，ARGB32 格式：漫射颜色 (RGB)，遮挡 (A)。</li>
+<li>RT1，ARGB32 格式：镜面反射颜色 (RGB)，粗糙度 (A)。</li>
+<li>RT2，ARGB2101010 格式：世界空间法线 (RGB)，未使用 (A)。</li>
+<li>RT3，ARGB2101010（非 HDR）或 ARGBHalf (HDR) 格式：发射 + 光照 + 光照贴图 + 反射探针缓冲区。</li>
+<li>深度+模板缓冲区。</li>
+</ul>
+
+<p>因此，默认的 G 缓冲区布局为 160 位/像素（非 HDR）或 192 位/像素 (HDR)。</p>
+
+<p>如果混合光照模式为 <a href="LightMode-Mixed-Shadowmask.html">Shadowmask</a> 或 <a href="LightMode-Mixed-DistanceShadowmask.html">Distance Shadowmask</a>，则使用第五个目标：</p>
+
+<p>*RT4，ARGB32 格式：光照遮挡值 (RGBA)。</p>
+
+<p>因此，G 缓冲区布局为 192 位/像素（非 HDR）或 224 位/像素 (HDR)。</p>
+
+<p>如果硬件不支持五个并发渲染目标，则使用阴影遮罩的对象将回退到前向渲染路径。
+当摄像机不使用 HDR 时，发射+光照缓冲区 (RT3) 采用对数编码，因此提供的动态范围高于 ARGB32 纹理通常可能提供的范围。</p>
+
+<p>请注意，当摄像机使用 HDR 渲染时，不会为发射 + 光照缓冲区 (RT3) 创建单独的渲染目标；而是将摄像机渲染到的渲染目标（即传递给图像效果的渲染目标）用作 RT3。</p>
+
+<h3>G 缓冲区通道</h3>
+
+<p>G 缓冲区通道将每个游戏对象渲染一次。漫射和镜面反射颜色、表面平滑度、世界空间法线和发射+环境+反射+光照贴图都将渲染到 G 缓冲区纹理中。G 缓冲区纹理设置为全局着色器属性供着色器以后访问 (<em>CameraGBufferTexture0 ..</em>CameraGBufferTexture3 names)。</p>
+
+<h3>光照通道</h3>
+
+<p>光照通道根据 G 缓冲区和深度来计算光照。光照是在屏幕空间内计算的，因此处理所需的时间与场景复杂性无关。光照将添加到发射缓冲区。</p>
+
+<p>不与摄像机近平面相交的点光源和聚光灯将渲染为 3D 形状，并会启用 Z 缓冲区对场景的测试。因此，部分或完全遮挡的点光源和聚光灯的渲染成本很低。方向光以及与近平面相交的点光源/聚光灯将渲染为全屏四边形。</p>
+
+<p>如果光源启用了阴影，那么也会在此通道中渲染并应用阴影。请注意，阴影并非是“无成本”的；需要渲染阴影投射物，并且必须应用更复杂的光照着色器。</p>
+
+<p>The only lighting model available is Standard. If a different model is wanted you can modify the lighting pass shader, by placing the modified version of the Internal-DeferredShading.shader file from the <a href="http://unity3d.com/support/resources/assets/built-in-shaders">Built-in shaders</a> into a folder named “Resources” in your “Assets” folder. Then open the <strong>Graphics</strong> settings (menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then click the Graphics category). Change the “Deferred” dropdown to “Custom Shader”. Then change the Shader option which appears to the shader you are using.</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2017–06–08 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 5.6 版中添加了光照模式（__Shadowmask__ 和 __Distance Shadowmask__）</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Rendering-Tech.html"></a></span><div class="tip">渲染管线详细信息</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="RenderTech-ForwardRendering.html"></a></span><div class="tip">前向渲染路径详细信息</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="启动画面 (Splash Screen) - Unity Manual">
+<title>启动画面 (Splash Screen) - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/SplashScreenSettings.png">
+<meta name="description" content="The Unity Editor allows you to configure a Splash Screen for your project. The level to which you can customize the Unity Splash Screen depends on your Unity subscription; depending on whehether you have Unity Personal, Unity Plus or Unity Pro, you can disable the Unity Splash Screen entirely, disable the Unity logo, and add your own logos, among other options.">
+<meta property="og:description" content="The Unity Editor allows you to configure a Splash Screen for your project. The level to which you can customize the Unity Splash Screen depends on your Unity subscription; depending on whehether you have Unity Personal, Unity Plus or Unity Pro, you can disable the Unity Splash Screen entirely, disable the Unity logo, and add your own logos, among other options.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-PlayerSettingsSplashScreen';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-PlayerSettingsSplashScreen.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-PlayerSettingsSplashScreen.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-PlayerSettingsSplashScreen.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-PlayerSettingsSplashScreen.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-PlayerSettingsSplashScreen.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-PlayerSettingsSplashScreen.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-PlayerSettingsSplashScreen.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-PlayerSettingsSplashScreen.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-PlayerSettingsSplashScreen.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-PlayerSettingsSplashScreen.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-PlayerSettingsSplashScreen.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-PlayerSettingsSplashScreen.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-PlayerSettingsSplashScreen.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-PlayerSettingsSplashScreen.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-PlayerSettingsSplashScreen.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-PlayerSettingsSplashScreen.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-PlayerSettingsSplashScreen.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-PlayerSettingsSplashScreen.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-PlayerSettingsSplashScreen.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-PlayerSettingsSplashScreen.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-PlayerSettingsSplashScreen.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-PlayerSettingsSplashScreen.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-PlayerSettingsSplashScreen.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-PlayerSettingsSplashScreen.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="EditorFeatures.html">编辑器功能</a></li>
+<li><a href="comp-ManagerGroup.html">Project Settings</a></li>
+<li><a href="class-PlayerSettings.html">Player</a></li>
+<li>启动画面 (Splash Screen)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-PlayerSettings.html"></a></span><div class="tip">Player</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-PresetManager.html"></a></span><div class="tip">Preset Manager</div>
+</div>
+</div></div>
+<h1>启动画面 (Splash Screen)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The Unity Editor allows you to configure a Splash Screen for your project. The level to which you can customize the Unity Splash Screen depends on your Unity subscription; depending on whehether you have Unity Personal, Unity Plus or Unity Pro, you can disable the Unity Splash Screen entirely, disable the Unity logo, and add your own logos, among other options. </p>
+
+<p>You can also make your own introductory screens or animations to introduce your Project in your first <a href="CreatingScenes.html">Scene</a>, using the Unity <a href="UISystem.html">UI System</a>. These can be in addition to or instead of using the Unity Splash Screen, depending on your subscription.</p>
+
+<p>Unity 启动画面在所有平台上都是一致的。它会迅速显示，在显示的同时，第一个场景在后台异步加载。这与您自己的介绍性画面或动画有所不同，您自己的画面或动画可能需要一段时间才能出现；这是因为 Unity 必须首先加载整个引擎和第一个场景，然后才会显示它们。</p>
+
+<p><strong>Note:</strong> Unity copies these options directly to the <em>Package.appxmanifest</em> file.</p>
+
+<h2>Subscription limitations</h2>
+
+<p>The Unity Pro and Plus subscriptions have no limitations to customisation of the Unity Splash Screen.</p>
+
+<p>The Unity Personal subscription has the following limitations:</p>
+
+<ul>
+<li>无法禁用 Unity 启动画面。</li>
+<li>无法禁用 Unity 徽标。</li>
+<li>不透明度级别可以设置为最小值 0.5。</li>
+</ul>
+
+<h2>Unity 启动画面设置</h2>
+
+<p>To access the Unity Splash Screen settings, open <strong>Edit</strong> &gt; <strong>Project Settings</strong> from the main menu in Unity and select the <strong>Player</strong> category. Then expand the <strong>Splash Image</strong> section and scroll down to the <strong>Splash Screen</strong> property.</p>
+
+<figure>
+<img src="../uploads/Main/SplashScreenSettings.png" alt="启动画面 (Splash Screen) 设置">
+<figcaption>启动画面 (Splash Screen) 设置</figcaption>
+</figure>
+
+<p>The screen contains the following sections:</p>
+
+<p><img src="../uploads/Main/LetterCircle_A.png" alt="A"> <a href="#Preview">Preview</a></p>
+
+<p><img src="../uploads/Main/LetterCircle_B.png" alt="B"> <a href="#Style">Style</a></p>
+
+<p><img src="../uploads/Main/LetterCircle_C.png" alt="C"><a href="#Animation">Animation</a></p>
+
+<p><img src="../uploads/Main/LetterCircle_D.png" alt="D"> <a href="#Logos">Logos</a></p>
+
+<p><img src="../uploads/Main/LetterCircle_E.png" alt="E"> <a href="#Background">Background</a></p>
+
+<p><a name="Preview"></a></p>
+
+<h3>Preview</h3>
+
+<p>Enable the <strong>Show Splash Screen</strong> option to display the Splash Screen at the start of the game. If you are using the Unity Personal subscription you cannot disable this option.</p>
+
+<figure>
+<img src="../uploads/Main/SplashScreenSettings-Preview.png" alt="Splash Screen and Preview settings">
+<figcaption>Splash Screen and Preview settings</figcaption>
+</figure>
+
+<p>Use the <strong>Preview</strong> button to see a preview of the Splash Screen in the Game view. The preview reflects the resolution and aspect ratio of the Game view. Use multiple Game views to preview multiple different resolutions and aspect ratios simultaneously. This is particularly useful for simulating the Splash Screen’s appearance on multiple different devices.</p>
+
+<figure>
+<img src="../uploads/Main/SplashScreenPreviews.jpg" alt="图 A：__预览__ - 多个预览">
+<figcaption>图 A：__预览__ - 多个预览</figcaption>
+</figure>
+
+<p><a name="Style"></a></p>
+
+<h3>Style</h3>
+
+<p>Use the <strong>Splash Style</strong> setting to control the style of the Unity branding. </p>
+
+<figure>
+<img src="../uploads/Main/SplashScreenSettings-Style.png" alt="Style setting">
+<figcaption>Style setting</figcaption>
+</figure>
+
+<p>Choose either <strong>Light on Dark</strong> (the default) or <strong>Dark on White</strong> from the <strong>Splash Style</strong> drop-down menu.</p>
+
+<figure>
+<img src="../uploads/Main/LogoStylesSideBySide.png" alt="图 B：__Splash Style__ - 左侧是 Light on Dark 样式。右侧是 Dark on Light 样式。">
+<figcaption>图 B：__Splash Style__ - 左侧是 Light on Dark 样式。右侧是 Dark on Light 样式。</figcaption>
+</figure>
+
+<p><a name="Animation"></a></p>
+
+<h3>Animation</h3>
+
+<p>Use the <strong>Animation</strong> setting to define how the Splash Screen appears and disappears from the screen. </p>
+
+<figure>
+<img src="../uploads/Main/SplashScreenSettings-Animation.png" alt="Animation settings">
+<figcaption>Animation settings</figcaption>
+</figure>
+
+<p>Choose one of the following values from the <strong>Animation</strong> drop-down menu:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>值</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Static</strong></td>
+	<td style="text-align:left;">Do not apply animation.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Dolly</strong></td>
+	<td style="text-align:left;">The logo and background zoom to create a visual dolly effect. This is the default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Custom</strong></td>
+	<td style="text-align:left;">配置背景和徽标变焦以实现修改后的推拉变焦效果。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Logos"></a></p>
+
+<h3>Logos</h3>
+
+<p>Use the settings in the <strong>Logos</strong> section to customize your application’s logos.</p>
+
+<figure>
+<img src="../uploads/Main/SplashScreenSettings-Logos.png" alt="Logos settings">
+<figcaption>Logos settings</figcaption>
+</figure>
+
+<p>Your application is co-branded with the Unity logo by default. If you are using the Unity Personal subscription you cannot disable this option. If you are using Unity Pro or Plus subscriptions, you can disable the <strong>Show Unity Logo</strong> option to remove the Unity logo from your application.</p>
+
+<p>If you are using Unity co-branding, you can control how it appears by choosing one of the following values from the <strong>Draw Mode</strong> drop-down box:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>值</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Unity Logo Below</strong></td>
+	<td style="text-align:left;">Draw the co-branding Unity logo beneath all logos that are shown.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>All Sequential</strong></td>
+	<td style="text-align:left;">Insert the co-branding Unity logo as a logo into the <strong>Logos</strong> list.</td>
+</tr>
+</tbody>
+</table>
+
+<p>You can customize the list of logos to appear on the Splash Screen:</p>
+
+<figure>
+<img src="../uploads/Main/SplashScreenLogos.png" alt="图 C：__Logos__ - 徽标列表和 Logo Duration 设置">
+<figcaption>图 C：__Logos__ - 徽标列表和 <strong>Logo Duration</strong> 设置</figcaption>
+</figure>
+
+<p>Each logo must be a Sprite Asset. You can change the aspect ratio of the logo by changing the dimensions of the Sprite on the <a href="SpriteEditor.html">Sprite Editor</a>. Make sure the <strong>Sprite Mode</strong> is set to <em>Multiple</em>.</p>
+
+<p>To add and remove logos, use the plus (+) and minus (-) buttons. </p>
+
+<p>To reorder logos, drag and drop them in the list. </p>
+
+<p>You can control the length of time each Sprite Asset appears on the screen by setting its <strong>Logo Duration</strong> setting. Use a value between 2 and 10 seconds.</p>
+
+<p>If an entry in the Logos list has no logo Sprite Asset assigned, no logo is shown for the duration of that entry. You can use this to create delays between logos.</p>
+
+<p>The entire duration of the Splash Screen is the total of all logos plus 0.5 seconds for fading out. This might be longer if the first Scene is not ready to play, in which case the Splash Screen shows only the background image or color and then fades out when the first Scene is ready to play.</p>
+
+<p><a name="Background"></a></p>
+
+<h3>Background</h3>
+
+<p>Use the settings in the <strong>Background</strong> section to customize the background of your application’s Splash Screen.</p>
+
+<figure>
+<img src="../uploads/Main/SplashScreenSettings-Background.png" alt="Logos settings">
+<figcaption>Logos settings</figcaption>
+</figure>
+
+<h4>Overlay Opacity</h4>
+
+<p>Adjust the strength of the <strong>Overlay Opacity</strong> setting to make the logos stand out. This affects the background color and image color, based on how you set up your <a href="#Style">Splash Style</a>. </p>
+
+<p>You can set the opacity to a lower number to reduce this effect. You can also completely disable the effect by setting it to 0. For example, if the Splash Screen style is <strong>Light on Dark,</strong> with a white background, the background becomes gray when <strong>Overlay Opacity</strong> is set to 1, and white when <strong>Overlay Opacity</strong> is set to 0. In the Unity Personal subscription, this option has a minimum value of 0.5.</p>
+
+<h4>Background Color</h4>
+
+<p>Set the <strong>Background Color</strong> when no background image is set. Note that the actual background color may be affected by the <strong>Overlay Opacity</strong> setting, and might not match the assigned color.</p>
+
+<h4>Background Image</h4>
+
+<p>Specify a reference to a Sprite image in the <strong>Background Image</strong> setting instead of using a color background. Unity adjusts the background image so that it fills the screen. The image is uniformly scaled until it fits both the width and height of the screen. This means that parts of the image might extend beyond the screen edges in some aspect ratios. To adjust the background image’s response to aspect ratio, change the Sprite’s <strong>Position</strong> values in the Sprite Editor.</p>
+
+<h4>Alternate Portrait Image</h4>
+
+<p>Set an <strong>Alternate Portrait Image</strong> with portrait aspect ratios (for example, a mobile device in portrait mode). If there is no <strong>Alternate Portrait Image</strong> Sprite assigned, the Unity Editor uses the Sprite assigned as the <strong>Background Image</strong> for both portrait and landscape mode.</p>
+
+<p>You can adjust the <strong>Position</strong> and dimensions of the Sprite in the <a href="SpriteEditor.html">Sprite Editor</a> to control the aspect ratio and position of the background image on the Splash Screen. In this example, the same image is being used for both landscape and portrait; however, the portrait position has been adjusted.</p>
+
+<figure>
+<img src="../uploads/Main/SplashScreenSpriteEdit.jpg" alt="图 D：__Background Image__ - 对于横向和纵向布局使用了相同的背景图像">
+<figcaption>图 D：__Background Image__ - 对于横向和纵向布局使用了相同的背景图像</figcaption>
+</figure>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-PlayerSettings.html"></a></span><div class="tip">Player</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-PresetManager.html"></a></span><div class="tip">Preset Manager</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,722 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Native Promos - Unity Manual">
+<title>Native Promos - Unity Manual</title>
+<meta name="description" content="Unity IAP provides a simple webview interface for you to display IAP promotional assets through Placements. To control the rendering process for these assets, use Native Promo to implement custom promotional displays.">
+<meta property="og:description" content="Unity IAP provides a simple webview interface for you to display IAP promotional assets through Placements. To control the rendering process for these assets, use Native Promo to implement custom promotional displays.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'IAPPromoNative';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/IAPPromoNative.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/IAPPromoNative.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/IAPPromoNative.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/IAPPromoNative.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/IAPPromoNative.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/IAPPromoNative.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/IAPPromoNative.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/IAPPromoNative.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/IAPPromoNative.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/IAPPromoNative.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/IAPPromoNative.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/IAPPromoNative.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/IAPPromoNative.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/IAPPromoNative.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/IAPPromoNative.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/IAPPromoNative.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/IAPPromoNative.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/IAPPromoNative.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/IAPPromoNative.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/IAPPromoNative.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/IAPPromoNative.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/IAPPromoNative.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/IAPPromoNative.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/IAPPromoNative.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="IAPPromo.html">IAP Promo</a></li>
+<li>Native Promos</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="IAPPromoPromotions.html"></a></span><div class="tip">推荐 (Promotions)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityCollaborate.html"></a></span><div class="tip">Unity Collaborate</div>
+</div>
+</div></div>
+<h1>Native Promos</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><a name="overview"></a>
+Unity IAP provides a simple webview interface for you to display IAP promotional assets through Placements. To control the rendering process for these assets, use Native Promo to implement custom promotional displays.</p>
+
+<h2>要求</h2>
+
+<p>To use Native Promo, you must download and install the <a href="https://assetstore.unity.com/packages/add-ons/services/unity-ads-66123">latest SDK</a> (3.0+) from the Asset Store.</p>
+
+<h2>Configuring IAP Promos</h2>
+
+<p>Follow the instructions for setting up IAP <a href="https://unityads.unity3d.com/help/monetization/placements">Placements</a>, <a href="IAPPromoProducts.html">Products</a>, and <a href="IAPPromoPromotions.html">Promos</a>, but note that you should not upload creative assets when configuring your IAP Products.</p>
+
+<h2>Using a Native Promo adapter</h2>
+
+<p>The SDK provides a Native Promo adapter interface with methods for handling promotional asset interactions. Use these methods in your custom scripts to inform the SDK when the Promo begins, finishes, and initiates the purchase flow.</p>
+
+<ul>
+<li>View implementation guide for <a href="#Unity">Unity (C#)</a>
+</li>
+<li>View implementation guide for <a href="#iOS">iOS (Objective-C)</a>
+</li>
+<li>View implementation guide for <a href="#Android">Android (Javascript)</a>
+</li>
+</ul>
+
+<p><a name="Unity"></a></p>
+
+<h2>Unity (C#)</h2>
+
+<h3>Implementation</h3>
+
+<p>Every developer’s Native Promo implementation varies greatly. The following abstract sample code illustrates an implementation. </p>
+
+<pre><code>using UnityEngine.Monetization;
+
+public class NativePromoDisplay : MonoBehaviour {    
+
+    PlacementContent placementContent = Monetization.GetPlacementContent (placementId);
+
+    PromoAdPlacementContent promoContent = placementContent as PromoAdPlacementContent;
+
+    INativePromoAdapter adapter = Monetization.CreateNativePromoAdapter (promoContent);
+
+    void ShowPromo () {
+
+        LogPromoInfo ();
+
+        // Use promoContent’s associated Product ID (e.g. adapter.metadata.premiumProduct.productID) to determine which assets to show
+
+        // Call adapter.OnShown () to tell the SDK the Promo has started, then execute your custom display for those assets
+
+        // Call adapter.OnClicked () to tell the SDK the player clicked the purchase button and to initiate the purchase flow
+
+        // Call adapter.OnClosed () to tell the SDK the Promo has ended     
+
+    }
+
+    void LogPromoInfo () {
+
+        Debug.LogFormat ("Product ID: \t{0}", adapter.metadata.premiumProduct.productId);
+
+        Debug.LogFormat ("Localized Title: \t{0}", adapter.metadata.premiumProduct.localizedTitle);
+
+        Debug.LogFormat ("Localized Description: \t{0}", adapter.metadata.premiumProduct.localizedDescription);
+
+        Debug.LogFormat ("ISO Currency Code: \t{0}", adapter.metadata.premiumProduct.isoCurrencyCode);
+
+        Debug.LogFormat ("Localized Price: \t{0}", adapter.metadata.premiumProduct.localizedPrice);
+
+        Debug.LogFormat ("Localized Price String: \t{0}", adapter.metadata.premiumProduct.localizedPriceString);
+
+    }
+}
+</code></pre>
+
+<p><a name="UnityAPI"></a></p>
+
+<h3>API Reference</h3>
+
+<p><a name="UnityPromoAdPlacementContent"></a></p>
+
+<h4>PromoAdPlacementContent</h4>
+
+<p>Extends the <a href="https://unityads.unity3d.com/help/unity/integration-guide-unity#showadplacementcontent"><code>ShowAdPlacementContent</code></a> class, providing functionality for IAP Promo content. </p>
+
+<h4>Product</h4>
+
+<p>A Unity IAP Product object.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>Retrieval method</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>string productId</code></td>
+	<td style="text-align:left;"><code>GetProductId ()</code></td>
+	<td style="text-align:left;">An internal reference ID for the Product.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>string localizedTitle</code></td>
+	<td style="text-align:left;"><code>GetlocalizedTitle ()</code></td>
+	<td style="text-align:left;">A consumer-facing name for the Product, for store UI purposes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>string localizedPriceString</code></td>
+	<td style="text-align:left;"><code>GetLocalizedPriceString ()</code></td>
+	<td style="text-align:left;">A consumer-facing price string, including the currency sign, for store UI purposes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>double localizedPrice</code></td>
+	<td style="text-align:left;"><code>GetLocalizedPrice ()</code></td>
+	<td style="text-align:left;">The internal system value for the Product’s price.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>string isoCurrencyCode</code></td>
+	<td style="text-align:left;"><code>GetIsoCurrencyCode ()</code></td>
+	<td style="text-align:left;">The ISO code for the Product’s localized currency.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>string localizedDescription</code></td>
+	<td style="text-align:left;"><code>GetLocalizedDescription ()</code></td>
+	<td style="text-align:left;">A consumer-facing Product description, for store UI purposes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>string productType</code></td>
+	<td style="text-align:left;"><code>GetProductType ()</code></td>
+	<td style="text-align:left;">Unity supports “Consumable”, “Non-consumable”, and “Subscription” Product Types.</td>
+</tr>
+</tbody>
+</table>
+
+<p>For more details on Product properties, see documentation on <a href="https://docs.unity3d.com/2018.1/Documentation/Manual/UnityIAPDefiningProducts.html">Defining Products</a>.</p>
+
+<p><a name="UnityCreateNativePromoAdapter"></a></p>
+
+<h4>CreateNativePromoAdapter</h4>
+
+<p>Pass a <code>PromoAdPlacementContent</code> object through this function to create a new <code>INativePromoAdapter</code>. For example:</p>
+
+<pre><code>INativePromoAdapter adapter = Monetization.CreateNativePromoAdapter (promoContent);
+</code></pre>
+
+<p><a name="UnityINativePromoAdapter"></a></p>
+
+<h4>INativePromoAdapter</h4>
+
+<p>This interface provides access methods for handling user interaction with promotional assets. Use these methods to pass in your custom assets and define expected behavior. </p>
+
+<p><a name="UnityPromoMetadata"></a></p>
+
+<h4>PromoMetadata</h4>
+
+<p>This property contains information for a <code>PromoAdPlacementContent</code> object passed through the adapter.</p>
+
+<pre><code>public struct PromoMetadata {
+    public Product premiumProduct;
+}
+
+public PromoMetadata metadata { get; };
+</code></pre>
+
+<p>例如：</p>
+
+<pre><code>string cc = nativePromoAdapter.metadata.premiumProduct.isoCurrencyCode;
+</code></pre>
+
+<p><a name="UnityOnShown"></a></p>
+
+<h4>OnShown</h4>
+
+<p>Call this function when the Promo is shown. It should include your custom method for displaying promotional assets.</p>
+
+<pre><code>void OnShown ();
+</code></pre>
+
+<p><a name="UnityOnClosed"></a></p>
+
+<h4>OnClosed</h4>
+
+<p>Call this function when the player dismisses the Promo offer. </p>
+
+<pre><code>void OnClosed ();
+</code></pre>
+
+<p><a name="UnityOnClicked"></a></p>
+
+<h4>OnClicked</h4>
+
+<p>Call this function when the player clicks the button to purchase the Product. It should initiate the purchase flow. </p>
+
+<pre><code>void OnClicked ();
+</code></pre>
+
+<p><a href="#overview">Back to top</a></p>
+
+<p><a name="iOS"></a></p>
+
+<h2>iOS (Objective-C)</h2>
+
+<h3>Implementation</h3>
+
+<p>Every developer’s Native Promo implementation varies greatly. The following abstract sample code illustrates an implementation. </p>
+
+<pre><code>@interface ViewController: UIViewController &lt;USRVUnityPurchasingDelegate&gt;
+
+-(void) showPromo: (UMONPromoAdPlacementContent *) placementContent {
+    self.nativePromoAdapter = [[UMONNativePromoAdapter alloc] initWithPromo: placementContent];
+    UMONPromoMetaData *metaData = placementContent.metadata;
+    UPURProduct *product = metaData.premiumProduct;
+    NSString *price = (product == nil || product.localizedPriceString == nil) ? @"$0.99": product.localizedPriceString;
+    
+    self.nativePromoView.hidden = NO;
+    NSString *title = [NSString stringWithFormat: @"Buy for only %@", price];
+    [self.purchaseButton setTitle: title forState: UIControlStateNormal];
+    [self.nativePromoAdapter promoDidShow];    
+}
+
+// If the player clicked the purchase button:
+(IBAction) purchaseButtonTapped: (id) sender {
+    [self.nativePromoAdapter promoDidClick];
+    [self.nativePromoAdapter promoDidClose];
+    self.nativePromoView.hidden = YES;
+}
+
+// If the player closed the promotional asset:
+-(IBAction) promoCloseButtonTapped: (id) sender {
+    self.nativePromoView.hidden = YES;
+    [self.nativePromoAdapter promoDidClose];
+}
+
+- (void) loadProducts: (UnityPurchasingLoadProductsCompletionHandler) completionHandler {
+    // Retrieve your Products list (see purchasing integration docs) 
+}
+
+- (void) purchaseProduct: (NSString *) productId
+     // Insert logic for successful or failed product purchase (see purchasing integration docs) 
+}
+</code></pre>
+
+<p>Read the <a href="https://unityads.unity3d.com/help/ios/purchasing-integration-ios">purchasing integration for iOS</a> documentation for more details on the <code>USRVUnityPurchasingDelegate</code> class referenced here. </p>
+
+<p><a name="iOSAPI"></a></p>
+
+<h3>API Reference</h3>
+
+<p><a name="iOSPromoAdPlacementContent"></a></p>
+
+<h4>UMONPromoAdPlacementContent</h4>
+
+<p>Extends the <code>UMONShowAdPlacementContent</code> class, providing functionality for IAP Promo content.</p>
+
+<p><a name="iOSPromoProduct"></a></p>
+
+<h4>UMONPromoProduct</h4>
+
+<p>A Unity IAP Product object.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>@property (strong, nonatomic, readonly) NSString *productId</code></td>
+	<td style="text-align:left;">An internal reference ID for the Product.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>@property (strong, nonatomic, readonly) NSString *localizedTitle ()</code></td>
+	<td style="text-align:left;">A consumer-facing name for the Product, for store UI purposes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>@property (strong, nonatomic, readonly) NSString *localizedPriceString</code></td>
+	<td style="text-align:left;">A consumer-facing price string, including the currency sign, for store UI purposes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>@property (nonatomic, readonly) double *localizedPrice</code></td>
+	<td style="text-align:left;">The internal system value for the Product’s price.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>@property (strong, nonatomic, readonly) NSString *isoCurrencyCode</code></td>
+	<td style="text-align:left;">The ISO code for the Product’s localized currency.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>@property (strong, nonatomic, readonly) NSString *localizedDescription</code></td>
+	<td style="text-align:left;">A consumer-facing Product description, for store UI purposes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>@property (strong, nonatomic, readonly) NSString *productType</code></td>
+	<td style="text-align:left;">Unity supports “Consumable”, “Non-consumable”, and “Subscription” Product Types.</td>
+</tr>
+</tbody>
+</table>
+
+<p>For more details on Product properties, see documentation on <a href="UnityIAPDefiningProducts.html">Defining Products</a>.</p>
+
+<p><a name="iOSinitWithPromo"></a></p>
+
+<h4>initWithPromo</h4>
+
+<p>Pass a <code>UMONPromoAdPlacementContent</code> object through this function to create a new <code>UMONNativePromoAdapter</code>.</p>
+
+<pre><code>-(instancetype) initWithPromo: (UMONPromoAdPlacementContent *) promo;
+</code></pre>
+
+<p><a name="iOSNativePromoAdapter"></a></p>
+
+<h4>UMONNativePromoAdapter</h4>
+
+<p>This delegate provides access methods for handling user interaction with promotional assets. Use these methods to pass in your custom assets and define expected behavior. </p>
+
+<p><a name="iOSPromoMetaData"></a></p>
+
+<h4>UMONPromoMetaData</h4>
+
+<p>This property contains information for a <code>UMONPromoAdPlacementContent</code> object passed through the adapter.</p>
+
+<pre><code>@interface UMONPromoAdPlacementContent: UMONShowAdPlacementContent
+
+-(instancetype) initWithPlacementId: (NSString *) placementId withParams: (NSDictionary *) params;
+
+@property (nonatomic, strong, readonly) UMONPromoMetaData *metadata;
+
+@end
+</code></pre>
+
+<p><a name="iOSpromoDidShow"></a></p>
+
+<h4>promoDidShow</h4>
+
+<p>Call this function when the Promo shows. It should include your custom method for displaying promotional assets.</p>
+
+<pre><code>-(void) promoDidShow;
+
+-(void) promoDidShow: (UMONNativePromoShowType) showType;
+</code></pre>
+
+<p>You can pass a <code>UMONNativePromoShowType</code> enum value to reference the preview type of your Promo asset. <code>kNativePromoShowTypeFull</code> indicates a full promotional view, while <code>kNativePromoShowTypePreview</code> indicates a minimized view that can expand to display the full Promo.</p>
+
+<p><a name="iOSpromoDidClose"></a></p>
+
+<h4>promoDidClose</h4>
+
+<p>Call this function when the player dismisses the Promo offer. </p>
+
+<pre><code>-(void) promoDidClose;
+</code></pre>
+
+<h4><code>promoDidClick</code></h4>
+
+<p>Call this function when the player clicks the button to purchase the Product. It should initiate the purchase flow. </p>
+
+<pre><code>-(void) promoDidClick;
+</code></pre>
+
+<p><a href="#overview">Back to top</a></p>
+
+<p><a name="Android"></a></p>
+
+<h2>Android (Java)</h2>
+
+<h3>Implementation</h3>
+
+<p>Every developer’s Native Promo implementation varies greatly. The following abstract sample code illustrates an implementation.</p>
+
+<pre><code>UnityPurchasing.setAdapter (new UnityPurchasingAdapter ());
+
+private class UnityPurchasingAdapter implements IPurchasingAdapter {
+
+    @Override
+    public void retrieveProducts (IRetrieveProductsListener listener) {
+        // Retrieve your Products list (see purchasing integration docs)    
+    }
+
+    @Override
+    public void onPurchase (String productID, ITransactionListener listener, Map&lt;String, Object&gt; extras) {
+        // Insert logic for successful or failed product purchase (see purchasing integration docs)
+    }
+
+    private void showPromo (final PromoAdPlacementContent placementContent) {
+        final NativePromoAdapter nativePromoAdapter = new NativePromoAdapter (placementContent);
+
+        PromoMetadata metadata = placementContent.getMetadata ();
+        Product product = metadata.getPremiumProduct ();
+        String price = product == null ? "$0.99": product.getLocalizedPriceString ();
+
+        final View root = getLayoutInflater ().inflate (R.layout.unitymonetization_native_promo, (ViewGroup) findViewById (R.id.unityads_example_layout_root));
+
+        Button buyButton = root.findViewById(R.id.native_promo_buy_button);
+        Button closeButton = root.findViewById (R.id.native_promo_close_button);
+        buyButton.setText ("Buy now for only " + price + "!");
+
+        nativePromoAdapter.onShown();
+        buyButton.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick (View v) {
+            // Do purchase then call
+            nativePromoAdapter.onClosed ();
+            ((ViewGroup)root).removeView (findViewById (R.id.native_promo_root));
+        }
+    });
+
+    closeButton.setOnClickListener (new View.OnClickListener () {
+        @Override
+        public void onClick(View v) {
+            nativePromoAdapter.onClosed ();
+            ((ViewGroup)root).removeView (findViewById (R.id.native_promo_root));
+        }
+    });
+}
+</code></pre>
+
+<p>Read the <a href="https://unityads.unity3d.com/help/android/purchasing-integration-android">purchasing integration for Android</a> documentation for more details on the <code>UnityPurchasingAdapter</code> class referenced here.</p>
+
+<p><a name="AndroidAPI"></a></p>
+
+<h3>API Reference</h3>
+
+<p><a name="AndroidPromoAdPlacementContent"></a></p>
+
+<h4>PromoAdPlacementContent</h4>
+
+<p>Extends the <code>ShowAdPlacementContent</code> class, providing functionality for IAP Promo content. </p>
+
+<p><a name="AndroidProduct"></a></p>
+
+<h4>Product</h4>
+
+<p>A Unity IAP product object.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>Retrieval method</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>String productId</code></td>
+	<td style="text-align:left;"><code>getProductId ()</code></td>
+	<td style="text-align:left;">An internal reference ID for the Product.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>String localizedTitle</code></td>
+	<td style="text-align:left;"><code>getlocalizedTitle ()</code></td>
+	<td style="text-align:left;">A consumer-facing name for the Product, for store UI purposes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>String localizedPriceString</code></td>
+	<td style="text-align:left;"><code>getLocalizedPriceString ()</code></td>
+	<td style="text-align:left;">A consumer-facing price string, including the currency sign, for store UI purposes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>Double localizedPrice</code></td>
+	<td style="text-align:left;"><code>getLocalizedPrice ()</code></td>
+	<td style="text-align:left;">The internal system value for the Product’s price.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>String isoCurrencyCode</code></td>
+	<td style="text-align:left;"><code>getIsoCurrencyCode ()</code></td>
+	<td style="text-align:left;">The ISO code for the Product’s localized currency.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>String localizedDescription</code></td>
+	<td style="text-align:left;"><code>getLocalizedDescription ()</code></td>
+	<td style="text-align:left;">A consumer-facing Product description, for store UI purposes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>String productType</code></td>
+	<td style="text-align:left;"><code>getProductType ()</code></td>
+	<td style="text-align:left;">Unity supports “Consumable”, “Non-consumable”, and “Subscription” Product Types.</td>
+</tr>
+</tbody>
+</table>
+
+<p>For more details on Product properties, see documentation on <a href="UnityIAPDefiningProducts.html">Defining Products</a>.</p>
+
+<p><a name="AndroidNativePromoAdapter"></a></p>
+
+<h4>NativePromoAdapter</h4>
+
+<p>This delegate provides access methods for handling user interaction with promotional assets. Use these methods to pass in your custom assets and define expected behavior. Pass a <code>PromoAdPlacementContent</code> object through the <code>NativePromoAdapter</code> function to create a new adapter. For example:</p>
+
+<pre><code>final NativePromoAdapter nativePromoAdapter = new NativePromoAdapter (placementContent);
+</code></pre>
+
+<p><a name="AndroidPromoMetaData"></a></p>
+
+<h4>PromoMetaData</h4>
+
+<p>This property contains information for a <code>PromoAdPlacementContent</code> object passed through the adapter.</p>
+
+<pre><code>public PromoMetadata getMetadata ();
+</code></pre>
+
+<p><a name="AndroidOnShown"></a></p>
+
+<h4>onShown</h4>
+
+<p>Call this function when the Promo is shown. It should include your custom method for displaying promotional assets.</p>
+
+<pre><code>public void onShown (NativePromoShowType type);
+</code></pre>
+
+<p>You can pass a <code>NativePromoShowType</code> enum value to reference the preview type of your Promo asset. <code>FULL</code> indicates a full promotional view, while <code>PREVIEW</code> indicates a minimized view that can expand to display the full Promo.</p>
+
+<p><a name="AndroidOnClosed"></a></p>
+
+<h4>onClosed</h4>
+
+<p>Call this function when the player dismisses the Promo offer. </p>
+
+<pre><code>public void onClicked
+</code></pre>
+
+<p><a name="AndroidOnClicked"></a></p>
+
+<h4>onClicked</h4>
+
+<p>Call this function when the player clicks the button to purchase the Product. It should initiate the purchase flow. </p>
+
+<pre><code>public void promoClicked;
+</code></pre>
+
+<p><a href="#overview">Back to top</a></p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="IAPPromoPromotions.html"></a></span><div class="tip">推荐 (Promotions)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityCollaborate.html"></a></span><div class="tip">Unity Collaborate</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

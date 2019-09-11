@@ -1,0 +1,267 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="AssetBundle 工作流程 - Unity Manual">
+<title>AssetBundle 工作流程 - Unity Manual</title>
+<meta name="description" content="要开始使用 AssetBundle，请按照以下步骤操作。有关每个工作流程的更多详细信息，请参阅本文档这一部分的其他页面。">
+<meta property="og:description" content="要开始使用 AssetBundle，请按照以下步骤操作。有关每个工作流程的更多详细信息，请参阅本文档这一部分的其他页面。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'AssetBundles-Workflow';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AssetBundles-Workflow.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AssetBundles-Workflow.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AssetBundles-Workflow.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AssetBundles-Workflow.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AssetBundles-Workflow.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AssetBundles-Workflow.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AssetBundles-Workflow.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AssetBundles-Workflow.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AssetBundles-Workflow.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AssetBundles-Workflow.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/AssetBundles-Workflow.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/AssetBundles-Workflow.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/AssetBundles-Workflow.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/AssetBundles-Workflow.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AssetBundles-Workflow.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AssetBundles-Workflow.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AssetBundles-Workflow.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AssetBundles-Workflow.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AssetBundles-Workflow.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AssetBundles-Workflow.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AssetBundles-Workflow.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AssetBundles-Workflow.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AssetBundles-Workflow.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AssetBundles-Workflow.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="AdvancedDevelopment.html">高级开发</a></li>
+<li><a href="AssetBundlesIntro.html">AssetBundle</a></li>
+<li>AssetBundle 工作流程</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetBundlesIntro.html"></a></span><div class="tip">AssetBundle</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetBundles-Preparing.html"></a></span><div class="tip">为 AssetBundle 准备资源</div>
+</div>
+</div></div>
+<h1>AssetBundle 工作流程</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>要开始使用 AssetBundle，请按照以下步骤操作。有关每个工作流程的更多详细信息，请参阅本文档这一部分的其他页面。</p>
+
+<h2>为 AssetBundle 分配资源</h2>
+
+<p>要为 AssetBundle 分配指定资源，请按照下列步骤操作：</p>
+
+<p>1.从 Project 视图中选择要为捆绑包分配的资源
+2.在 Inspector 中检查对象
+3.在 Inspector 底部，应该会看到一个用于分配 AssetBundle 和变体的部分：
+4.左侧下拉选单分配 AssetBundle，而右侧下拉选单分配变量
+5.单击左侧下拉选单，其中显示“None”，表示当前注册的 AssetBundle 名称
+6.单击“New…”以创建新的 AssetBundle
+7.输入所需的 AssetBundle 名称。请注意，AssetBundle 名称支持某种类型的文件夹结构，具体取决于您输入的内容。要添加子文件夹，请用“/”分隔文件夹名称。例如：AssetBundle 名称“environment/forest”将在 environment 子文件夹下创建名为 forest 的捆绑包
+8.一旦选择或创建了 AssetBundle 名称，便可以重复此过程在右侧下拉选单中分配或创建变体名称（如果需要）。构建 AssetBundle 不需要变体名称</p>
+
+<p>要阅读有关 AssetBundle 分配和相关策略的更多信息，请参阅关于<a href="AssetBundles-Preparing.html">为 AssetBundle 准备资源</a>
+的文档。</p>
+
+<h2>构建 AssetBundle</h2>
+
+<p>在 Assets 文件夹中创建一个名为 Editor 的文件夹，并将包含以下内容的脚本放在该文件夹中：</p>
+
+<pre><code>using UnityEditor;
+using System.IO;
+
+public class CreateAssetBundles
+{
+    [MenuItem("Assets/Build AssetBundles")]
+    static void BuildAllAssetBundles()
+    {
+        string assetBundleDirectory = "Assets/AssetBundles";
+        if(!Directory.Exists(assetBundleDirectory))
+{
+    Directory.CreateDirectory(assetBundleDirectory);
+}
+BuildPipeline.BuildAssetBundles(assetBundleDirectory, BuildAssetBundleOptions.None, BuildTarget.StandaloneWindows);
+    }
+}
+</code></pre>
+
+<p>此脚本将在 Assets 菜单底部创建一个名为“Build AssetBundles”的菜单项，该菜单项将执行与该标签关联的函数中的代码。单击 Build AssetBundles 时，将随构建对话框一起显示一个进度条。此过程将会获取带有 AssetBundle 名称标签的所有资源，并将它们放在 assetBundleDirectory 定义的路径中的文件夹中。</p>
+
+<p>有关此代码执行情况的更多详细信息，请参阅关于<a href="AssetBundles-Building.html">构建 AssetBundle</a> 的文档。</p>
+
+<h2>将 AssetBundle 上传到场外存储</h2>
+
+<p>此步骤对每个用户都是不同的，因此 Unity 不能告诉您应该具体如何操作。如果计划将 AssetBundle 上传到第三方托管站点，请在此步中执行该操作。如果正在严格执行本地开发并打算将所有 AssetBundle 都放在磁盘上，请跳转到下一步。</p>
+
+<h2>加载 AssetBundle 和资源</h2>
+
+<p>打算从本地存储加载的用户可能会对 AssetBundles.LoadFromFile API 感兴趣。该 API 如下所示：</p>
+
+<pre><code>public class LoadFromFileExample extends MonoBehaviour {
+    function Start() {
+        var myLoadedAssetBundle = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, "myassetBundle"));
+        if (myLoadedAssetBundle == null) {
+            Debug.Log("Failed to load AssetBundle!");
+            return;
+        }
+        var prefab = myLoadedAssetBundle.LoadAsset.&lt;GameObject&gt;("MyObject");
+        Instantiate(prefab);
+    }
+}
+</code></pre>
+
+<p><code>LoadFromFile</code> 获取捆绑包文件的路径。</p>
+
+<p>如果是自己托管 AssetBundle 并需要将它们下载到游戏中，应使用 UnityWebRequest API。下面是一个示例：</p>
+
+<pre><code>IEnumerator InstantiateObject()
+
+    {
+        string uri = "file:///" + Application.dataPath + "/AssetBundles/" + assetBundleName;
+        UnityEngine.Networking.UnityWebRequest request = UnityEngine.Networking.UnityWebRequest.GetAssetBundle(uri, 0);
+        yield return request.Send();
+        AssetBundle bundle = DownloadHandlerAssetBundle.GetContent(request);
+        GameObject cube = bundle.LoadAsset&lt;GameObject&gt;("Cube");
+        GameObject sprite = bundle.LoadAsset&lt;GameObject&gt;("Sprite");
+        Instantiate(cube);
+        Instantiate(sprite);
+    }
+</code></pre>
+
+<p><code>GetAssetBundle(string, int)</code> 获取 AssetBundle 的位置以及要下载的捆绑包的版本。在这个例子中，我们仍然指向一个本地文件，但字符串 uri 可以指向托管 AssetBundle 的任何 url。</p>
+
+<p>UnityWebRequest 有一个特定的句柄来处理 AssetBundle：<code>DownloadHandlerAssetBundle</code>，可根据请求获取 AssetBundle。</p>
+
+<p>无论使用哪种方法，现在都可以访问 AssetBundle 对象了。对该对象需要使用 <code>LoadAsset&lt;T&gt;(string)</code>，此函数将获取尝试加载的资源的类型 <code>T</code> 以及对象的名称（作为捆绑包内部的字符串）。这将返回从 AssetBundle 加载的任何对象。可以像使用 Unity 中的任何对象一样使用这些返回的对象。例如，如果要在场景中创建游戏对象，只需调用 <code>Instantiate(gameObjectFromAssetBundle)</code>。</p>
+
+<p>有关用于加载 AssetBundle 的 API 的更多信息，请参阅关于<a href="AssetBundles-Native.html">本机使用 AssetBundle</a> 的文档。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2017–05–15 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetBundlesIntro.html"></a></span><div class="tip">AssetBundle</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetBundles-Preparing.html"></a></span><div class="tip">为 AssetBundle 准备资源</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

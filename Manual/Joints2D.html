@@ -1,0 +1,219 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="2D 关节 - Unity Manual">
+<title>2D 关节 - Unity Manual</title>
+<meta name="description" content="顾名思义，关节用于将游戏对象连接在一起。只能将 2D 关节附加到游戏对象（已附加 2D 刚体组件）或者附加到世界空间中的固定位置。">
+<meta property="og:description" content="顾名思义，关节用于将游戏对象连接在一起。只能将 2D 关节附加到游戏对象（已附加 2D 刚体组件）或者附加到世界空间中的固定位置。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'Joints2D';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Joints2D.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Joints2D.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Joints2D.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Joints2D.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Joints2D.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Joints2D.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Joints2D.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Joints2D.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Joints2D.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Joints2D.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/Joints2D.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/Joints2D.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/Joints2D.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/Joints2D.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Joints2D.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Joints2D.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Joints2D.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Joints2D.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Joints2D.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Joints2D.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Joints2D.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Joints2D.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Joints2D.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Joints2D.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Unity2D.html">2D</a></li>
+<li><a href="Physics2DReference.html">2D 物理系统参考</a></li>
+<li>2D 关节</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-PhysicsMaterial2D.html"></a></span><div class="tip">2D 物理材质</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-DistanceJoint2D.html"></a></span><div class="tip">2D 距离关节 (Distance Joint 2D)</div>
+</div>
+</div></div>
+<h1>2D 关节</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>顾名思义，关节用于将游戏对象连接在一起。只能将 2D 关节附加到游戏对象（已附加 2D 刚体组件）或者附加到世界空间中的固定位置。</p>
+
+<p>所有 2D 关节的名称都以“2D”结尾。名称不以“2D”结尾的关节是 3D 关节。2D 关节用于 2D 游戏对象，而 3D 关节用于 3D 游戏对象。</p>
+
+<p>（请参阅以下的<strong>详情和提示</strong>以了解所有 2D 关节的有用背景信息。）</p>
+
+<p>2D 关节包括不同类型。请参阅每个关节参考页面以了解有关各自属性的详细信息：</p>
+
+<ul>
+<li><p><a href="class-DistanceJoint2D.html">2D 距离关节 (Distance Joint 2D)</a> - 连接由刚体物理组件控制的两个游戏对象，使这两个对象保持一定距离。</p></li>
+<li><p><a href="class-FixedJoint2D.html">2D 固定关节 (Fixed Joint 2D)</a> - 将两个对象保持在相对于彼此的位置，确保对象始终以给定位置和角度偏移。例如，对象好像是采用刚性连接方式相连一样：对象不能彼此远离，不能相互靠近，也不能相对于彼此旋转。还可以使用此关节来创建刚度稍低的柔性连接。</p></li>
+<li><p><a href="class-FrictionJoint2D.html">2D 摩擦关节 (Friction Joint 2D)</a> - 将刚体物理组件控制的两个游戏对象之间的线速度和角速度降低到零（即：此关节使对象减速并停止）。例如，一个平台在旋转但抵抗该运动。</p></li>
+<li><p><a href="class-HingeJoint2D.html">2D 铰链关节 (Hinge Joint 2D)</a> - 允许由刚体物理组件控制的游戏对象连接到空间中的一个点，使游戏对象可围绕该点旋转。例如，一把剪刀上的轴心。</p></li>
+<li><p><a href="class-RelativeJoint2D.html">2D 相对关节 (Relative Joint 2D)</a> - 允许由刚体物理组件控制的两个游戏对象基于彼此的位置来保持相对位置。使用此关节可将两个对象保持相互偏移。例如，在空间射击游戏中，玩家身后有额外的排炮。</p></li>
+<li><p><a href="class-SliderJoint2D.html">2D 滑动关节 (Slider Joint 2D)</a> - 允许由刚体物理组件控制的游戏对象沿着空间中的一条线滑动（例如滑门）。</p></li>
+<li><p><a href="class-SpringJoint2D.html">2D 弹簧关节 (Spring Joint 2D)</a> - 允许由刚体物理组件控制的两个游戏对象就像通过弹簧连接在一起一样。</p></li>
+<li><p><a href="class-TargetJoint2D.html">2D 目标关节 (Target Joint 2D)</a> - 连接到指定目标，而不是像其他关节那样连接到另一个刚体对象。这是一种弹簧式关节，例如可将其用于拾取和移动处于重力作用下的对象。</p></li>
+<li><p><a href="class-WheelJoint2D.html">2D 车轮关节 (Wheel Joint 2D)</a> - 模拟车轮和悬架。</p></li>
+</ul>
+
+<h2>详情和提示</h2>
+
+<p><a name="constraints"></a></p>
+
+<h3>约束</h3>
+
+<p>所有关节都提供适用于 2D 刚体行为的一个或多个约束。一个约束是一条“规则”，关节将尝试确保不会永久打破规则。约束的类型有多种，但通常关节只提供其中一些约束，有时只提供一个约束。有些约束会限制行为，例如确保刚体保持在一条线上或在特定位置中。有些是“驱动性”约束，例如用于旋转或移动刚体对象的电机会试图保持一定速度。</p>
+
+<h3>暂时打破约束</h3>
+
+<p>物理系统会期望暂时打破约束，对象移动的距离可能超过约束规定的距离，或者对象的移动速度可能超过其电机速度约束。未打破约束时，关节不施加任何作用力，而且不做功。只有打破约束时，关节才施加作用力来修复约束：因此，对于上文提到的“驱动性”约束，关节将保持距离或确保电机速度。然而，该力并不总是立即修复约束。虽然此修复通常进行得很快，但是也要在一段时间内进行。</p>
+
+<p>此时间延迟会导致关节“拉伸”或看起来“很软”。发生延迟是因为物理系统试图施加关节作用力来修复约束，而同时其他游戏物理作用力正在发挥作用来打破约束。除了作用于游戏对象的冲突力之外，一些关节比其他关节更稳定并且反应更快。</p>
+
+<p>无论关节提供什么约束，关节仅使用作用力来修复约束。这些力为线性（直线）力或角力（扭力）。</p>
+
+<p><strong>提示：</strong>考虑到作用在关节上的冲突力，在对已附加关节的刚体对象施加大力时始终要谨慎，特别是那些质量大的对象。</p>
+
+<h2>永久破坏关节</h2>
+
+<p>作用力超过指定限值时，所有关节都能够完全停止工作（即破坏）。由于线性力过大而导致破坏的限值称为“破坏力”。由于扭力过大而导致破坏的限值称为“破坏扭矩”。</p>
+
+<ul>
+<li>如果关节施加线性力，则会有一个 <strong>Break Force</strong> 选项。</li>
+<li>如果关节施加角度（旋转）力，则会有一个 <strong>Break Torque</strong> 选项。</li>
+</ul>
+
+<p>这些限值预先设置为 __Infinity__：这意味着没有限制。</p>
+
+<p>超过 <strong>Break Force__或 </strong>Break Torque__ 限值时，关节会破坏且该组件将从游戏对象中自我删除。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-PhysicsMaterial2D.html"></a></span><div class="tip">2D 物理材质</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-DistanceJoint2D.html"></a></span><div class="tip">2D 距离关节 (Distance Joint 2D)</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

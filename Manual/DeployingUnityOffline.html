@@ -1,0 +1,203 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Installing Unity offline without the Hub - Unity Manual">
+<title>Installing Unity offline without the Hub - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/DeployingUnityOffline-DownloadAssistant.png">
+<meta name="description" content="Unity 下载助手 (Download Assistant) 支持离线部署。在这种部署方式中，可下载用于安装 Unity 的所有文件，然后生成脚本以便在未接入互联网的其他计算机上重复相同的安装。">
+<meta property="og:description" content="Unity 下载助手 (Download Assistant) 支持离线部署。在这种部署方式中，可下载用于安装 Unity 的所有文件，然后生成脚本以便在未接入互联网的其他计算机上重复相同的安装。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'DeployingUnityOffline';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/DeployingUnityOffline.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/DeployingUnityOffline.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/DeployingUnityOffline.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/DeployingUnityOffline.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/DeployingUnityOffline.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/DeployingUnityOffline.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/DeployingUnityOffline.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/DeployingUnityOffline.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/DeployingUnityOffline.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/DeployingUnityOffline.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/DeployingUnityOffline.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/DeployingUnityOffline.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/DeployingUnityOffline.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/DeployingUnityOffline.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/DeployingUnityOffline.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/DeployingUnityOffline.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/DeployingUnityOffline.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/DeployingUnityOffline.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/DeployingUnityOffline.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/DeployingUnityOffline.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/DeployingUnityOffline.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/DeployingUnityOffline.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/DeployingUnityOffline.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/DeployingUnityOffline.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="GettingStartedInstallingUnity.html">Installing Unity</a></li>
+<li>Installing Unity offline without the Hub</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="InstallingUnity.html"></a></span><div class="tip">Installing Unity from the command line</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="GettingStartedHubAdvancedConsiderations.html"></a></span><div class="tip">Unity Hub advanced deployment considerations</div>
+</div>
+</div></div>
+<h1>Installing Unity offline without the Hub</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 下载助手 (Download Assistant) 支持离线部署。在这种部署方式中，可下载用于安装 Unity 的所有文件，然后生成脚本以便在未接入互联网的其他计算机上重复相同的安装。</p>
+
+<h2>准备</h2>
+
+<p>运行下载助手，并在一台计算机上正常安装 Unity。此计算机必须有足够的可用磁盘空间来下载所有文件。
+单击下拉选单并选择 __Custom__，然后选择要将文件下载到的位置。</p>
+
+<figure>
+<img src="../uploads/Main/DeployingUnityOffline-DownloadAssistant.png" alt="">
+</figure>
+
+<h2>检查是否已准备好所需的一切</h2>
+
+<p>打开 PC 的文件管理器，导航到之前指定的自定义位置文件夹，然后在该文件夹内查找 <code>.sh</code> 或 <code>.bat</code> 文件。检查此文件的内容。文件内容应该类似于以下示例：</p>
+
+<figure>
+<img src="../uploads/Main/DeployingUnityOffline-installsh.png" alt="">
+</figure>
+
+<h2>将 Unity 部署到其他计算机</h2>
+
+<h3>Windows</h3>
+
+<p>1.将整个文件夹复制到目标 Windows PC，然后运行提供的 <code>.bat</code> 文件。
+1.为了避免 Windows UAC 提示，请从管理员 shell 运行 <code>install.bat</code>。在 <strong>Start</strong> 菜单中，搜索 <code>cmd.exe</code>，右键单击并选择 <strong>Run as administrator</strong>。
+1.导航到包含脚本的文件夹。该文件夹通常在 Downloads 文件夹 (<code>cd C:\Users\[YourName]\Download\UnityPackages</code>) 中。</p>
+
+<h3>Mac</h3>
+
+<p>1.将整个文件夹复制到目标 Mac OS X 计算机，然后运行提供的 <code>.sh</code> 文件。
+运行 <code>sudo install.sh</code>。
+1.导航到包含脚本的文件夹。该文件夹通常在 Downloads 文件夹 (<code>cd ~/Downloads/UnityPackages</code>) 中。
+1.可以根据需要，为要安装 Unity 的每台计算机重复执行这些指令。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="InstallingUnity.html"></a></span><div class="tip">Installing Unity from the command line</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="GettingStartedHubAdvancedConsiderations.html"></a></span><div class="tip">Unity Hub advanced deployment considerations</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

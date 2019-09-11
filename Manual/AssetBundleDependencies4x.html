@@ -1,0 +1,243 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="在 Unity 4 中管理资源依赖关系 - Unity Manual">
+<title>在 Unity 4 中管理资源依赖关系 - Unity Manual</title>
+<meta name="description" content="在早于 Unity 5 的 Unity 版本中，必须单独使用编辑器脚本来定义资源依赖关系。（在 Unity 5 中，我们在编辑器中提供了工具，以方便将资源分配给特定的Bundle，并且依赖关系处理是自动进行的）。本页面的信息适用于在 Unity 4 中处理旧版项目的用户，并假设使用的是 Unity 4。">
+<meta property="og:description" content="在早于 Unity 5 的 Unity 版本中，必须单独使用编辑器脚本来定义资源依赖关系。（在 Unity 5 中，我们在编辑器中提供了工具，以方便将资源分配给特定的Bundle，并且依赖关系处理是自动进行的）。本页面的信息适用于在 Unity 4 中处理旧版项目的用户，并假设使用的是 Unity 4。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'AssetBundleDependencies4x';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AssetBundleDependencies4x.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AssetBundleDependencies4x.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AssetBundleDependencies4x.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AssetBundleDependencies4x.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AssetBundleDependencies4x.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AssetBundleDependencies4x.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AssetBundleDependencies4x.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AssetBundleDependencies4x.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AssetBundleDependencies4x.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AssetBundleDependencies4x.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/AssetBundleDependencies4x.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/AssetBundleDependencies4x.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/AssetBundleDependencies4x.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/AssetBundleDependencies4x.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AssetBundleDependencies4x.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AssetBundleDependencies4x.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AssetBundleDependencies4x.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AssetBundleDependencies4x.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AssetBundleDependencies4x.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AssetBundleDependencies4x.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AssetBundleDependencies4x.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AssetBundleDependencies4x.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AssetBundleDependencies4x.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AssetBundleDependencies4x.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="LegacyTopics.html">旧版主题</a></li>
+<li><a href="AssetBundles4x.html">旧版 Asset Bundle</a></li>
+<li>在 Unity 4 中管理资源依赖关系</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BuildingAssetBundles4x.html"></a></span><div class="tip">在 Unity 4 中创建 Asset Bundle</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Animations.html"></a></span><div class="tip">旧版动画系统</div>
+</div>
+</div></div>
+<h1>在 Unity 4 中管理资源依赖关系</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><em>在早于 Unity 5 的 Unity 版本中，必须单独使用编辑器脚本来定义资源依赖关系。（在 Unity 5 中，我们在编辑器中提供了工具，以方便将资源分配给特定的Bundle，并且依赖关系处理是自动进行的）。本页面的信息适用于在 Unity 4 中处理旧版项目的用户，并假设使用的是 Unity 4。</em></p>
+
+<p>Bundle 中的任何给定资源可能依赖于其他资源。例如，模型可能包含材质，而这些材质又会使用纹理和着色器。在资源的 Bundle 中可以附带该资源的所有依赖项。但是，来自不同 Bundle 的若干资源可能全部依赖于一组共同的其他资源（例如，若干不同的建筑物模型可以使用相同的砖块纹理）。如果一个共享依赖项的单独副本与使用该依赖项的对象一起包含在每个 Bundle 中，则在加载 Bundle 时将创建冗余的资源实例。这种情况将导致内存浪费。</p>
+
+<p>为了避免这种浪费，可将共享的依赖项分离到一个单独的 Bundle 中，然后只需在需要这些依赖项的资源所在的 Bundle 中引用它们。首先，需要通过调用 <a href="../ScriptReference/BuildPipeline.PushAssetDependencies.html">BuildPipeline.PushAssetDependencies</a> 来启用引用功能。然后，需要构建包含所引用依赖项的 Bundle。接下来，在构建引用第一个 Bundle 中的资源的 Bundle 之前，应再次调用 PushAssetDependencies。通过对 PushAssetDependencies 的进一步调用，可引入更深层次的依赖关系。引用级别存储在栈中，因此可以使用相应的 <a href="../ScriptReference/BuildPipeline.PopAssetDependencies.html">BuildPipeline.PopAssetDependencies</a> 函数返回到某个级别。需要平衡 push 和 pop 调用，包括在构建之前发生的初始 push。</p>
+
+<p>在运行时，必须先加载包含依赖项的 Bundle，然后再加载引用这些依赖项的任何其他 Bundle。例如，必须先加载一个包含共享纹理的 Bundle，然后再加载引用这些纹理的单独材质 Bundle。</p>
+
+<h2>资源 ID</h2>
+
+<p>如果您预计需要重新构建作为依赖关系链一部分的 Asset Bundle，则应在启用 <a href="../ScriptReference/BuildAssetBundleOptions.DeterministicAssetBundle.html">BuildAssetBundleOptions.DeterministicAssetBundle</a> 选项的情况下构建它们。这样可以保证用于标识资源的内部 ID 值在每次重新构建 Bundle 时都相同。</p>
+
+<p>使用此方法构建 Asset Bundle 时，会为 Asset Bundle 中的对象分配一个 32 位哈希码；它是使用 Asset Bundle 文件的名称、资源的 GUID 以及资源内对象的本地 ID 进行计算得出的。因此，请确保在重新构建时使用相同的文件名。另外请注意，包含大量对象时可能会导致哈希冲突，从而阻止 Unity 构建 Asset Bundle。</p>
+
+<h2>着色器依赖关系</h2>
+
+<p>每次将着色器作为参数在 <a href="../ScriptReference/BuildPipeline.BuildAssetBundle.html">BuildPipeline.BuildAssetBundle</a> 中直接引用时，或通过选项 <a href="../ScriptReference/BuildAssetBundleOptions.CollectDependencies.html">BuildAssetBundleOptions.CollectDependencies</a> 间接引用时，着色器的代码都将包含在 Asset Bundle 中。如果您单独使用 BuildAssetBundle 创建多个 Asset Bundle，这种情况可能会导致问题，因为引用的着色器将包含在每个生成的 Asset Bundle 中。这可能会存在冲突（例如您混合了着色器的不同版本时），因而不得不在修改着色器后重新构建所有 Bundle。此外，着色器的代码也会增加 Bundle 的大小。为了避免这些问题，可使用 <a href="../ScriptReference/BuildPipeline.PushAssetDependencies.html">BuildPipeline.PushAssetDependencies</a> 将着色器分离到单个 Bundle 中，这样便可以仅更新着色器 Bundle。例如，为了实现此工作流程，可创建一个预制件以包含对所需着色器的引用：</p>
+
+<h3>C# 示例</h3>
+
+<pre><code>using UnityEngine;
+
+public class ShadersList : MonoBehaviour {
+    public Shader[] list;
+} 
+
+
+</code></pre>
+
+<p>创建一个空对象，分配脚本，将着色器添加到列表中，并创建预制件（即“ShadersList”）。然后，您可以创建一个导出器，通过该导出器生成所有 Bundle 并更新着色器 Bundle：</p>
+
+<h3>C# 示例</h3>
+
+<pre><code>using UnityEngine;
+using UnityEditor;
+
+public class Exporter : MonoBehaviour {
+    
+    [MenuItem("Assets/Export all asset Bundles")]
+    static void Export() {
+        BuildAssetBundleOptions options = 
+            BuildAssetBundleOptions.CollectDependencies | 
+            BuildAssetBundleOptions.CompleteAssets | 
+            BuildAssetBundleOptions.DeterministicAssetBundle;
+        
+        BuildPipeline.PushAssetDependencies();
+        BuildPipeline.BuildAssetBundle(AssetDatabase.LoadMainAssetAtPath("Assets/ShadersList.prefab"), null, "Data/ShadersList.unity3d", options);
+            
+        BuildPipeline.PushAssetDependencies();
+        BuildPipeline.BuildAssetBundle(AssetDatabase.LoadMainAssetAtPath("Assets/Scene1.prefab"), null, "Data/Scene1.unity3d", options);
+        BuildPipeline.BuildAssetBundle(AssetDatabase.LoadMainAssetAtPath("Assets/Scene2.prefab"), null, "Data/Scene2.unity3d", options);        
+        
+        BuildPipeline.PopAssetDependencies();
+        BuildPipeline.PopAssetDependencies();
+    }
+    
+    [MenuItem("Assets/Update shader bundle")]
+    static void ExportShaders() {
+        BuildAssetBundleOptions options = 
+            BuildAssetBundleOptions.CollectDependencies | 
+            BuildAssetBundleOptions.CompleteAssets | 
+            BuildAssetBundleOptions.DeterministicAssetBundle;
+        
+        BuildPipeline.PushAssetDependencies();
+        BuildPipeline.BuildAssetBundle(AssetDatabase.LoadMainAssetAtPath("Assets/ShadersList.prefab"), null, "Data/ShadersList.unity3d", options);
+        
+        BuildPipeline.PopAssetDependencies();
+    }
+}
+
+
+</code></pre>
+
+<p>请记住，必须先加载着色器 Bundle。此方法有一个缺点：当对象数量太大时，选项 <a href="../ScriptReference/BuildAssetBundleOptions.DeterministicAssetBundle.html">BuildAssetBundleOptions.DeterministicAssetBundle</a> 会因哈希冲突而产生冲突。在这种情况下，构建将失败，并且无法单独更新着色器 Bundle。此情况下必须删除该选项，然后重新构建所有 Asset Bundle。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BuildingAssetBundles4x.html"></a></span><div class="tip">在 Unity 4 中创建 Asset Bundle</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Animations.html"></a></span><div class="tip">旧版动画系统</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

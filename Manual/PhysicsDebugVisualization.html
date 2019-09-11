@@ -1,0 +1,382 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="物理调试可视化 - Unity Manual">
+<title>物理调试可视化 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/PhysicsDebugVizImage0.jpg">
+<meta name="description" content="物理调试可视化工具 (Physics Debug Visualiser) 可用于快速检查场景中的碰撞体几何体，并分析常见的基于物理的情形。该工具提供了游戏对象之间是否应相互碰撞的可视化表示。当场景中有许多碰撞体时，或者渲染和碰撞网格不同步的情况下，这会很有用。">
+<meta property="og:description" content="物理调试可视化工具 (Physics Debug Visualiser) 可用于快速检查场景中的碰撞体几何体，并分析常见的基于物理的情形。该工具提供了游戏对象之间是否应相互碰撞的可视化表示。当场景中有许多碰撞体时，或者渲染和碰撞网格不同步的情况下，这会很有用。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'PhysicsDebugVisualization';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PhysicsDebugVisualization.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PhysicsDebugVisualization.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PhysicsDebugVisualization.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PhysicsDebugVisualization.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PhysicsDebugVisualization.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PhysicsDebugVisualization.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PhysicsDebugVisualization.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PhysicsDebugVisualization.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PhysicsDebugVisualization.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PhysicsDebugVisualization.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/PhysicsDebugVisualization.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/PhysicsDebugVisualization.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/PhysicsDebugVisualization.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/PhysicsDebugVisualization.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PhysicsDebugVisualization.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PhysicsDebugVisualization.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PhysicsDebugVisualization.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PhysicsDebugVisualization.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PhysicsDebugVisualization.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PhysicsDebugVisualization.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PhysicsDebugVisualization.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PhysicsDebugVisualization.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PhysicsDebugVisualization.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PhysicsDebugVisualization.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="PhysicsSection.html">物理系统</a></li>
+<li><a href="PhysicsOverview.html">物理系统概述</a></li>
+<li>物理调试可视化</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ContinuousCollisionDetection.html"></a></span><div class="tip">Continuous collision detection (CCD)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Physics3DReference.html"></a></span><div class="tip">3D 物理系统参考</div>
+</div>
+</div></div>
+<h1>物理调试可视化</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>物理调试可视化工具 (Physics Debug Visualiser) 可用于快速检查<a href="CreatingScenes.html">场景</a>中的<a href="CollidersOverview.html">碰撞体</a>几何体，并分析常见的基于物理的情形。该工具提供了游戏对象之间是否应相互碰撞的可视化表示。当场景中有许多碰撞体时，或者<a href="class-MeshRenderer.html">渲染</a>和<a href="class-MeshCollider.html">碰撞网格</a>不同步的情况下，这会很有用。</p>
+
+<p>有关改善项目物理性能的详细指导，请参阅有关 <a href="ProfilerPhysics.html">Physics Profiler</a> 的文档。</p>
+
+<p>To open the Physics Debug window in the Unity Editor, go to <strong>Window </strong>&gt; <strong>Analysis</strong> &gt; <strong>Physics Debugger</strong>. </p>
+
+<figure>
+<img src="../uploads/Main/PhysicsDebugVizImage0.jpg" alt="默认的物理调试可视化设置和立方体图元">
+<figcaption>默认的物理调试可视化设置和立方体图元</figcaption>
+</figure>
+
+<p>通过此窗口可以自定义视觉设置，并指定要在可视化工具中显示或隐藏的游戏对象类型。</p>
+
+<figure>
+<img src="../uploads/Main/PhysicsDebugVizImage1.jpg" alt="Physics Debug 窗口以及折叠选项和覆盖面板">
+<figcaption>Physics Debug 窗口以及折叠选项和覆盖面板</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/PhysicsDebugVizImage2.png" alt="物理调试覆盖面板">
+<figcaption>物理调试覆盖面板</figcaption>
+</figure>
+
+<p>默认模式为 <strong>Hide Selected Items</strong>。这意味着每项都出现在可视化工具中，必须勾选每项的复选框才能隐藏该项。要将此模式更改为 __Show Selected Items__，请使用窗口顶部的下拉选单。这意味着可视化工具中不显示任何项，必须勾选每项的复选框才能显示该项。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Reset</strong></td>
+	<td style="text-align:left;">单击此按钮可将 Physics Debug 窗口重置为默认设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Hide Layers</strong></td>
+	<td style="text-align:left;">使用下拉菜单来确定是否显示选定<a href="Layers.html">层</a>中的碰撞体。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Hide Static Colliders</strong></td>
+	<td style="text-align:left;">勾选此复选框可从可视化中删除静态碰撞体（不含任何刚体组件的碰撞体）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Hide Triggers</strong></td>
+	<td style="text-align:left;">勾选此复选框可从可视化中删除也是触发器的碰撞体。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Hide Rigidbodies</strong></td>
+	<td style="text-align:left;">勾选此复选框可从可视化中删除<a href="class-Rigidbody.html">刚体组件</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Hide Kinematic Bodies</strong></td>
+	<td style="text-align:left;">勾选此复选框可从可视化中删除包含__运动__刚体组件（不受物理引擎控制）的碰撞体。请参阅有关<a href="RigidbodiesOverview.html">刚体组件</a>的文档以了解更多详细信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Hide Sleeping Bodies</strong></td>
+	<td style="text-align:left;">勾选此复选框可从可视化中删除包含__睡眠__刚体组件（当前无法与物理引擎互动）的碰撞体。请参阅有关<a href="RigidbodiesOverview.html">刚体组件：睡眠</a>的文档以了解更多详细信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Collider Types</strong></td>
+	<td style="text-align:left;">使用以下选项可从物理可视化中删除特定碰撞体类型。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;Hide <br>&amp;#160;&amp;#160;&amp;#160;&amp;#160;BoxColliders</td>
+	<td style="text-align:left;">勾选此复选框可从可视化中删除<a href="class-BoxCollider.html">盒型碰撞体</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;Hide <br>&amp;#160;&amp;#160;&amp;#160;&amp;#160;SphereColliders</td>
+	<td style="text-align:left;">勾选此复选框可从可视化中删除<a href="class-SphereCollider.html">球形碰撞体</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;Hide <br>&amp;#160;&amp;#160;&amp;#160;&amp;#160;CapsuleColliders</td>
+	<td style="text-align:left;">勾选此复选框可从可视化中删除<a href="class-CapsuleCollider.html">胶囊碰撞体</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;Hide <br>&amp;#160;&amp;#160;&amp;#160;&amp;#160;MeshColliders <br>&amp;#160;&amp;#160;&amp;#160;&amp;#160;(convex)</td>
+	<td style="text-align:left;">勾选此复选框可从可视化中删除<strong>凸面</strong><a href="class-MeshCollider.html">网格碰撞体</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;Hide <br>&amp;#160;&amp;#160;&amp;#160;&amp;#160;MeshColliders <br>&amp;#160;&amp;#160;&amp;#160;&amp;#160;(concave)</td>
+	<td style="text-align:left;">勾选此复选框可从可视化中删除<strong>凹面</strong><a href="class-MeshCollider.html">网格碰撞体</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;Hide <br>&amp;#160;&amp;#160;&amp;#160;&amp;#160;TerrainColliders</td>
+	<td style="text-align:left;">勾选此复选框可从可视化中删除<a href="class-TerrainCollider.html">地形碰撞体</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Hide None</strong></td>
+	<td style="text-align:left;">单击 <strong>Hide None</strong> 可清除所有过滤条件并在可视化中显示所有碰撞体类型。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Hide All</strong></td>
+	<td style="text-align:left;">单击 <strong>Hide All</strong> 可启用所有过滤条件并从可视化中移除所有碰撞体类型。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Colors</strong></td>
+	<td style="text-align:left;">使用以下设置可定义 Unity 在可视化中显示物理组件的方式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;Static <br>&amp;#160;&amp;#160;&amp;#160;&amp;#160;Colliders</td>
+	<td style="text-align:left;">使用此颜色选择器可定义用何种颜色在可视化中指示静态碰撞体（不含任何刚体组件的碰撞体）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;Triggers</td>
+	<td style="text-align:left;">使用此颜色选择器可定义用何种颜色在可视化中指示也是触发器的碰撞体。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;刚体</td>
+	<td style="text-align:left;">使用此颜色选择器可定义用何种颜色在可视化中指示刚体组件。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;Kinematic <br>&amp;#160;&amp;#160;&amp;#160;&amp;#160;Bodies</td>
+	<td style="text-align:left;">使用此颜色选择器可定义用何种颜色在可视化中指示__运动__刚体组件（不受物理引擎控制）。请参阅有关<a href="RigidbodiesOverview.html">刚体组件</a>的文档以了解更多详细信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;Sleeping <br>&amp;#160;&amp;#160;&amp;#160;&amp;#160;Bodies</td>
+	<td style="text-align:left;">使用此颜色选择器可定义用何种颜色在可视化中指示__睡眠__刚体组件（当前无法与物理引擎互动）。请参阅有关<a href="RigidbodiesOverview.html">刚体组件：睡眠</a>的文档以了解更多详细信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;Variation</td>
+	<td style="text-align:left;">使用滑动条设置介于 0 和 1 之间的值。此设置用于定义所选颜色与随机颜色混合的程度。使用此设置可按颜色直观区分碰撞体以及查看游戏对象的结构。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Rendering</strong></td>
+	<td style="text-align:left;">使用这些设置可定义 Unity 渲染和显示物理可视化的方式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;Transparency</td>
+	<td style="text-align:left;">使用滑动条设置 0 到 1 之间的值。此设置用于定义可视化中绘制的碰撞几何体的透明度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;Force <br>&amp;#160;&amp;#160;&amp;#160;&amp;#160;Overdraw</td>
+	<td style="text-align:left;">正常渲染几何体有时可能让碰撞体变得模糊（例如，地板下面的网格碰撞体平面）。勾选 <strong>Force Overdraw</strong> 复选框可让可视化渲染器在渲染几何体上绘制碰撞体几何体。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;View <br>&amp;#160;&amp;#160;&amp;#160;&amp;#160;Distance</td>
+	<td style="text-align:left;">用于设置可视化的视图距离。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;Terrain <br>&amp;#160;&amp;#160;&amp;#160;&amp;#160;Tiles Max</td>
+	<td style="text-align:left;">用于设置可视化中地形区块的最大数量。</td>
+</tr>
+</tbody>
+</table>
+
+<p>覆盖面板具有更多选项：</p>
+
+<figure>
+<img src="../uploads/Main/PhysicsDebugVizImage2.png" alt="物理调试覆盖面板">
+<figcaption>物理调试覆盖面板</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Collision Geometry</strong></td>
+	<td style="text-align:left;">勾选此复选框可启用碰撞几何体可视化。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Mouse Select</strong></td>
+	<td style="text-align:left;">勾选此复选框可启用鼠标悬停突出显示和鼠标选择功能。如果在可视化工具中有大型游戏对象相互阻碍，此功能可能很有用。</td>
+</tr>
+</tbody>
+</table>
+
+<h3>性能分析</h3>
+
+<p>可以使用“物理调试”来分析和解决游戏中的物理活动问题。可以自定义在可视化工具中可见的碰撞体或刚体组件类型，从而有助于找到活动源。最有帮助的两个做法是：</p>
+
+<p><strong>仅查看激活的刚体组件</strong>：要仅查看处于激活状态并因此使用 CPU/GPU 资源的刚体组件，请勾选 <strong>Hide Static Colliders</strong> 和 <strong>Hide Sleeping Bodies</strong>。</p>
+
+<p><strong>仅查看非凸面网格碰撞体：</strong>非凸面（基于三角形）网格碰撞体附加的刚体组件即将与另一个刚体或碰撞体发生碰撞时，往往会产生最多的接触。要仅可视化非凸面网格碰撞体，请将窗口设置为 <strong>Show Selected Items</strong> 模式，单击 <strong>Select None</strong> 按钮，然后勾选 <strong>Show MeshColliders (concave)</strong> 复选框。</p>
+
+<h3>脚本 API 参考</h3>
+
+<p>请参阅 Unity Scripting API 参考中的以下内容：</p>
+
+<ul>
+<li><p><a href="../ScriptReference/PhysicsDebugWindow.html">PhysicsDebugWindow</a></p></li>
+<li><p><a href="../ScriptReference/PhysicsVisualizationSettings.html">PhysicsVisualizationSettings</a></p></li>
+</ul>
+
+<p><br> </p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–06–01 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">物理调试可视化是 Unity 5.6 中的新增功能</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ContinuousCollisionDetection.html"></a></span><div class="tip">Continuous collision detection (CCD)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Physics3DReference.html"></a></span><div class="tip">3D 物理系统参考</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

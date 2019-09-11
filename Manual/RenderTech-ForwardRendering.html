@@ -1,0 +1,230 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="前向渲染路径详细信息 - Unity Manual">
+<title>前向渲染路径详细信息 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/ForwardLightsExample.png">
+<meta name="description" content="本页面将详细介绍__前向__渲染路径。">
+<meta property="og:description" content="本页面将详细介绍__前向__渲染路径。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'RenderTech-ForwardRendering';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/RenderTech-ForwardRendering.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/RenderTech-ForwardRendering.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/RenderTech-ForwardRendering.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/RenderTech-ForwardRendering.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/RenderTech-ForwardRendering.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/RenderTech-ForwardRendering.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/RenderTech-ForwardRendering.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/RenderTech-ForwardRendering.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/RenderTech-ForwardRendering.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/RenderTech-ForwardRendering.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/RenderTech-ForwardRendering.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/RenderTech-ForwardRendering.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/RenderTech-ForwardRendering.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/RenderTech-ForwardRendering.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/RenderTech-ForwardRendering.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/RenderTech-ForwardRendering.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/RenderTech-ForwardRendering.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/RenderTech-ForwardRendering.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/RenderTech-ForwardRendering.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/RenderTech-ForwardRendering.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/RenderTech-ForwardRendering.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/RenderTech-ForwardRendering.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/RenderTech-ForwardRendering.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/RenderTech-ForwardRendering.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="Rendering-Tech.html">渲染管线详细信息</a></li>
+<li>前向渲染路径详细信息</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="RenderTech-DeferredShading.html"></a></span><div class="tip">延迟着色渲染路径</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="RenderTech-DeferredLighting.html"></a></span><div class="tip">旧版延迟光照渲染路径</div>
+</div>
+</div></div>
+<h1>前向渲染路径详细信息</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>本页面将详细介绍__前向__<a href="RenderingPaths.html">渲染路径</a>。</p>
+
+<p>前向渲染路径根据影响对象的光源在一个或多个通道中渲染每个对象。光源本身也可以通过前向渲染进行不同的处理，具体取决于它们的设置和强度。</p>
+
+<h2>实现详细信息</h2>
+
+<p>在前向渲染中，影响每个对象的一些最亮的光源以完全逐像素光照模式渲染。然后，最多 4 个点光源采用每顶点计算方式。其他光源以球谐函数 (SH) 计算，这种计算方式会快得多，但仅得到近似值。光源是否为每像素光源根据以下原则而定：</p>
+
+<ul>
+<li>Render Mode 设置为 <strong>Not Important</strong> 的光源始终为每顶点或 SH 光源。</li>
+<li>最亮的方向光始终为每像素光源。</li>
+<li>Render Mode 设置为 <strong>Important</strong> 的光源始终为每像素光源。</li>
+<li>如果上述情况导致光源数少于当前的 <strong>Pixel Light Count</strong> <a href="class-QualitySettings.html">质量设置</a>，则按照亮度降低的顺序，更多光源采用每像素渲染方式。</li>
+</ul>
+
+<p>每个对象的渲染按如下方式进行：</p>
+
+<ul>
+<li>基础通道应用一个每像素方向光和所有每顶点/SH 光源。</li>
+<li>其他每像素光源在额外的通道中渲染（每个光源对应一个通道）。</li>
+</ul>
+
+<p>例如，如果某个对象受到许多光源的影响（下图中的圆形受光源 A 到 H 的影响）：</p>
+
+<figure>
+<img src="../uploads/Main/ForwardLightsExample.png" alt="">
+</figure>
+
+<p>让我们假设光源 A 到 H 具有相同的颜色和强度，并且所有光源都具有自动渲染模式，因此它们将严格按照此对象的以下顺序排序。最亮的光源将以每像素光照模式渲染（A 到 D），然后最多 4 个光源以每顶点光照模式渲染（D 到 G），最后其余光源以 SH 进行渲染（G 到 H）：</p>
+
+<figure>
+<img src="../uploads/Main/ForwardLightsClassify.png" alt="">
+</figure>
+
+<p>请注意，光源组会重叠；例如，最后一个每像素光源混合到每顶点光照模式，因此当对象和光源移动时，“光射量”(light popping) 较少。</p>
+
+<h3>基础通道</h3>
+
+<p>基础通道使用一个每像素方向光和所有 SH/每顶点光源来渲染对象。此通道还会添加着色器中的所有光照贴图、环境光照和发射光照。在此通道中渲染的方向光可以具有阴影。请注意，光照贴图的对象不会从 SH 光源获得光照。</p>
+
+<p>请注意，在着色器中使用“OnlyDirectional”<a href="SL-PassTags.html">通道标志</a>时，前向基础通道仅渲染主方向光、环境光/光照探针和光照贴图（SH 和顶点光源不包括在通道数据中）。</p>
+
+<h3>其他通道</h3>
+
+<p>对于影响此对象的每个额外的每像素光源，需要额外的渲染通道。默认情况下，这些通道中的光源没有阴影（因此在结果中，前向渲染支持一个带阴影的方向光），除非使用 <a href="SL-MultipleProgramVariants.html">multi_compile_fwdadd_fullshadows</a> 变体快捷方式。</p>
+
+<h2>性能注意事项</h2>
+
+<p>球谐函数光源的渲染速度_很_快。这些光源的 CPU 成本很低，并且使用 GPU 的_成本基本为零_（也就是说，基础通道始终会计算 SH 光照；但由于 SH 光源工作方式的原因，无论 SH 光源有多少，成本都完全相同）。</p>
+
+<p>SH 光源的缺点：</p>
+
+<ul>
+<li>按对象的顶点而不是按像素计算。这意味着它们不支持光照剪影和法线贴图。</li>
+<li>SH 光照的频率很低。SH 光源无法实现快速的光照过渡。它们也只影响漫射光照（频率对镜面高光而言太低）。</li>
+<li>SH 光照不是局部光照；SH 点光源或聚光灯在靠近某种表面时“看起是错误的”。</li>
+</ul>
+
+<p>总的来说，SH 光源通常足以达到小型动态对象的光照要求。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="RenderTech-DeferredShading.html"></a></span><div class="tip">延迟着色渲染路径</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="RenderTech-DeferredLighting.html"></a></span><div class="tip">旧版延迟光照渲染路径</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="WebGL：与浏览器脚本交互 - Unity Manual">
+<title>WebGL：与浏览器脚本交互 - Unity Manual</title>
+<meta name="description" content="构建适用于 Web 的内容时，可能需要与网页上的其他元素进行通信。或者，您可能希望使用 Unity 当前在默认情况下未公开的 Web API 来实现功能。在这两种情况下，都需要直接与浏览器的 JavaScript 引擎连接。Unity WebGL 提供了不同的方法来执行此操作。">
+<meta property="og:description" content="构建适用于 Web 的内容时，可能需要与网页上的其他元素进行通信。或者，您可能希望使用 Unity 当前在默认情况下未公开的 Web API 来实现功能。在这两种情况下，都需要直接与浏览器的 JavaScript 引擎连接。Unity WebGL 提供了不同的方法来执行此操作。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'webgl-interactingwithbrowserscripting';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/webgl-interactingwithbrowserscripting.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/webgl-interactingwithbrowserscripting.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/webgl-interactingwithbrowserscripting.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/webgl-interactingwithbrowserscripting.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/webgl-interactingwithbrowserscripting.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/webgl-interactingwithbrowserscripting.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/webgl-interactingwithbrowserscripting.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/webgl-interactingwithbrowserscripting.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/webgl-interactingwithbrowserscripting.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/webgl-interactingwithbrowserscripting.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/webgl-interactingwithbrowserscripting.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/webgl-interactingwithbrowserscripting.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/webgl-interactingwithbrowserscripting.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/webgl-interactingwithbrowserscripting.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/webgl-interactingwithbrowserscripting.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/webgl-interactingwithbrowserscripting.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/webgl-interactingwithbrowserscripting.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/webgl-interactingwithbrowserscripting.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/webgl-interactingwithbrowserscripting.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/webgl-interactingwithbrowserscripting.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/webgl-interactingwithbrowserscripting.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/webgl-interactingwithbrowserscripting.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/webgl-interactingwithbrowserscripting.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/webgl-interactingwithbrowserscripting.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
+<li><a href="webgl.html">WebGL</a></li>
+<li><a href="webgl-gettingstarted.html">WebGL 开发入门</a></li>
+<li>WebGL：与浏览器脚本交互</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="webgl-memory.html"></a></span><div class="tip">Memory in WebGL</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="webgl-templates.html"></a></span><div class="tip">使用 WebGL 模板</div>
+</div>
+</div></div>
+<h1>WebGL：与浏览器脚本交互</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>构建适用于 Web 的内容时，可能需要与网页上的其他元素进行通信。或者，您可能希望使用 Unity 当前在默认情况下未公开的 Web API 来实现功能。在这两种情况下，都需要直接与浏览器的 JavaScript 引擎连接。Unity WebGL 提供了不同的方法来执行此操作。</p>
+
+<h2>从 Unity 脚本调用 JavaScript 函数</h2>
+
+<p>The recommended way of using browser JavaScript in your project is to add your JavaScript sources to your project, and then call those functions directly from your script code. To do so, place files with JavaScript code using the .jslib extension under a “Plugins” subfolder in your Assets folder. The plugin file needs to have a syntax like this:</p>
+
+<pre><code>mergeInto(LibraryManager.library, {
+
+  Hello: function () {
+    window.alert("Hello, world!");
+  },
+
+  HelloString: function (str) {
+    window.alert(Pointer_stringify(str));
+  },
+
+  PrintFloatArray: function (array, size) {
+    for(var i = 0; i &lt; size; i++)
+    console.log(HEAPF32[(array &gt;&gt; 2) + i]);
+  },
+
+  AddNumbers: function (x, y) {
+    return x + y;
+  },
+
+  StringReturnValueFunction: function () {
+    var returnStr = "bla";
+    var bufferSize = lengthBytesUTF8(returnStr) + 1;
+    var buffer = _malloc(bufferSize);
+    stringToUTF8(returnStr, buffer, bufferSize);
+    return buffer;
+  },
+
+  BindWebGLTexture: function (texture) {
+    GLctx.bindTexture(GLctx.TEXTURE_2D, GL.textures[texture]);
+  },
+
+});
+</code></pre>
+
+<p>然后，可从 C# 脚本调用这些函数，如下所示：</p>
+
+<pre><code>using UnityEngine;
+using System.Runtime.InteropServices;
+
+public class NewBehaviourScript : MonoBehaviour {
+
+    [DllImport("__Internal")]
+    private static extern void Hello();
+
+    [DllImport("__Internal")]
+    private static extern void HelloString(string str);
+
+    [DllImport("__Internal")]
+    private static extern void PrintFloatArray(float[] array, int size);
+
+    [DllImport("__Internal")]
+    private static extern int AddNumbers(int x, int y);
+
+    [DllImport("__Internal")]
+    private static extern string StringReturnValueFunction();
+
+    [DllImport("__Internal")]
+    private static extern void BindWebGLTexture(int texture);
+
+    void Start() {
+        Hello();
+        
+        HelloString("This is a string.");
+        
+        float[] myArray = new float[10];
+        PrintFloatArray(myArray, myArray.Length);
+        
+        int result = AddNumbers(5, 7);
+        Debug.Log(result);
+        
+        Debug.Log(StringReturnValueFunction());
+        
+        var texture = new Texture2D(0, 0, TextureFormat.ARGB32, false);
+        BindWebGLTexture(texture.GetNativeTextureID());
+    }
+}
+</code></pre>
+
+<p>简单的数字类型可在函数参数中传递给 JavaScript，无需进行任何转换。其他数据类型将作为 emscripten 堆（实际上就是 JavaScript 中的一个大型数组）中的指针进行传递。对于字符串，可使用 <code>Pointer_stringify</code> helper 函数转换为 JavaScript 字符串。要返回字符串值，必须调用 <code>_malloc</code> 来分配一些内存，并调用 <code>stringToUTF8</code> helper 函数向其中写入 JavaScript 字符串。如果字符串是返回值，则 il2cpp 运行时将负责为您释放内存。对于原始类型的数组，<code>emscripten</code> 针对内存的不同大小的整数、无符号整数或浮点数表示形式，提供其堆的不同 <code>ArrayBufferViews</code>：__HEAP8、HEAPU8、HEAP16、HEAPU16、HEAP32、HEAPU32、HEAPF32、HEAPF64__。为了在 WebGL 中访问纹理，emscripten 提供了 <code>GL.textures</code> 数组，该数组将本机纹理 ID 从 Unity 映射到 WebGL 纹理对象。可在 emscripten 的 WebGL 上下文 <code>GLctx</code> 中调用 WebGL 函数。</p>
+
+<p>有关如何与 JavaScript 交互的更多信息，请参阅 <a href="https://kripken.github.io/emscripten-site/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html">emscripten 文档</a>。</p>
+
+<p>另外，请注意，在 Unity 安装文件夹中有几个插件可供参考（位于 <code>PlaybackEngines/WebGLSupport/BuildTools/lib</code> 和 <code>PlaybackEngines/WebGLSupport/BuildTools/Emscripten/src/library*</code> 中）。</p>
+
+<h3>从 Unity 调用 JavaScript 代码的传统方法</h3>
+
+<p><em>注意：从 Unity 5.6 开始，从 Unity 调用 JavaScript 代码的建议方法是通过 .jslib 插件。下述方法受到支持仅出于兼容性原因，并可能在 Unity 的未来版本中被弃用。</em></p>
+
+<p>可使用 <a href="../ScriptReference/Application.ExternalCall.html">Application.ExternalCall()</a> 和 <a href="../ScriptReference/Application.ExternalEval.html">Application.ExternalEval()</a> 函数在嵌入网页上调用 JavaScript 代码。请注意，表达式在构建的局部作用域内进行计算。如果希望在全局作用域内执行 JavaScript 代码，请参阅下面的<em>代码可见性</em>部分。</p>
+
+<h2>从 JavaScript 调用 Unity 脚本函数</h2>
+
+<p>有时需要从浏览器的 JavaScript 向 Unity 脚本发送一些数据或通知。建议的做法是调用内容中的游戏对象上的方法。如果要从嵌入在项目中的 JavaScript 插件执行调用，可使用以下代码：</p>
+
+<p><code>SendMessage(objectName, methodName, value);</code></p>
+
+<p>其中，__objectName__ 是场景中的对象名称；__methodName__ 是当前附加到该对象的脚本中的方法名称；__value__ 可以是字符串、数字，也可为空。例如：</p>
+
+<pre><code>SendMessage('MyGameObject', 'MyFunction');
+SendMessage('MyGameObject', 'MyFunction', 5);
+
+SendMessage('MyGameObject', 'MyFunction', 'MyString');
+</code></pre>
+
+<p>如果希望从嵌入页面的全局作用域内执行调用，请参阅下面的<em>代码可见性</em>部分。</p>
+
+<h2>Calling C functions from Unity scripts</h2>
+
+<p>Unity compiles your sources into JavaScript from C/C++ code using emscripten, so you can also write plugins in C/C++ code, and call these functions from C#. So, instead of the jslib file in the example above, you could have a C/C++ file in your project - it will automatically get compiled with your scripts, and you can call functions from it, just like in the JavaScript example above.</p>
+
+<p>If you are using C++ (.cpp) to implement the plugin then you must ensure the functions are declared with C linkage to avoid name mangling issues:</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+extern "C" void Hello ()
+{
+    printf("Hello, world!\n");
+}
+
+extern "C" int AddNumbers (int x, int y)
+{
+    return x + y;
+}
+</code></pre>
+
+<h3>代码可见性</h3>
+
+<p>Starting from Unity 5.6 all the build code is executed in its own scope. This approach makes it possible to embed your content on an arbitrary page without causing conflicts with the embedding page code, as well as makes it possible to embed more than one build on the same page.</p>
+
+<p>如果项目中包含 <em>.jslib</em> 插件形式的所有 JavaScript 代码，则此 JavaScript 代码的运行作用域将与编译的构建相同，并且代码应该与 Unity 先前版本中的工作方式非常相似（例如，以下对象和函数应该在 JavaScript 插件代码中直接可见：<em>Module、SendMessage、HEAP8、ccall 等</em>）。</p>
+
+<p>However, if you are planning to call the internal JavaScript functions from the global scope of the embedding page, you should always assume that there are multiple builds embedded on the page, so you should explicitly specify which build you are referencing to. For example, if the content has been instantiated as:</p>
+
+<p><code>var unityInstance = UnityLoader.instantiate("unityContainer", "Build/build.json", {onProgress: UnityProgress});</code></p>
+
+<p>Then you can send a message to the build using <em>unityInstance.SendMessage()</em>, or access the build Module object using <em>unityInstance.Module</em>.</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–10–18 Page amended with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">修复了代码示例中的错误。</span></p></li>
+<li><p><span class="page-history">WebGL instance renamed from gameInstance to unityInstance in 2019.1</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="webgl-memory.html"></a></span><div class="tip">Memory in WebGL</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="webgl-templates.html"></a></span><div class="tip">使用 WebGL 模板</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

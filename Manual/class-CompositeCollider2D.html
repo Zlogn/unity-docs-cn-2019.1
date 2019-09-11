@@ -1,0 +1,250 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="2D 复合碰撞体 (Composite Collider 2D) - Unity Manual">
+<title>2D 复合碰撞体 (Composite Collider 2D) - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/class-CompositeCollider2D.png">
+<meta name="description" content="2D 复合碰撞体组件是用于 2D 物理的碰撞体。与大多数碰撞体不同，此碰撞体没有定义固有的形状。相反，此碰撞体将合并所设置的 2D 盒型碰撞体 (Box Collider 2D) 或 2D 多边形碰撞体 (Polygon Collider 2D) 的形状。2D 复合碰撞体使用所有此类碰撞体的顶点（几何体），并将这些顶点合并为由 2D 复合碰撞体本身控制的新几何体。">
+<meta property="og:description" content="2D 复合碰撞体组件是用于 2D 物理的碰撞体。与大多数碰撞体不同，此碰撞体没有定义固有的形状。相反，此碰撞体将合并所设置的 2D 盒型碰撞体 (Box Collider 2D) 或 2D 多边形碰撞体 (Polygon Collider 2D) 的形状。2D 复合碰撞体使用所有此类碰撞体的顶点（几何体），并将这些顶点合并为由 2D 复合碰撞体本身控制的新几何体。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-CompositeCollider2D';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-CompositeCollider2D.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-CompositeCollider2D.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-CompositeCollider2D.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-CompositeCollider2D.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-CompositeCollider2D.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-CompositeCollider2D.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-CompositeCollider2D.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-CompositeCollider2D.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-CompositeCollider2D.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-CompositeCollider2D.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-CompositeCollider2D.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-CompositeCollider2D.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-CompositeCollider2D.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-CompositeCollider2D.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-CompositeCollider2D.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-CompositeCollider2D.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-CompositeCollider2D.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-CompositeCollider2D.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-CompositeCollider2D.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-CompositeCollider2D.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-CompositeCollider2D.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-CompositeCollider2D.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-CompositeCollider2D.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-CompositeCollider2D.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Unity2D.html">2D</a></li>
+<li><a href="Physics2DReference.html">2D 物理系统参考</a></li>
+<li><a href="Collider2D.html">2D 碰撞体</a></li>
+<li>2D 复合碰撞体 (Composite Collider 2D)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-CapsuleCollider2D.html"></a></span><div class="tip">2D 胶囊碰撞体 (Capsule Collider 2D)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-PhysicsMaterial2D.html"></a></span><div class="tip">2D 物理材质</div>
+</div>
+</div></div>
+<h1>2D 复合碰撞体 (Composite Collider 2D)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>2D 复合碰撞体<a href="UsingComponents.html">组件</a>是用于 2D 物理的<a href="CollidersOverview.html">碰撞体</a>。与大多数碰撞体不同，此碰撞体没有定义固有的形状。相反，此碰撞体将合并所设置的 <a href="class-BoxCollider2D.html">2D 盒型碰撞体 (Box Collider 2D)</a> 或 <a href="class-PolygonCollider2D.html">2D 多边形碰撞体 (Polygon Collider 2D)</a> 的形状。2D 复合碰撞体使用所有此类碰撞体的顶点（几何体），并将这些顶点合并为由 2D 复合碰撞体本身控制的新几何体。</p>
+
+<p>2D 盒型碰撞体和 2D 多边形碰撞体组件具有 <strong>Used By Composite</strong> 复选框。勾选此复选框即可将这些碰撞体附加到 2D 复合碰撞体。这些碰撞体还与 2D 复合碰撞体附加到同一 <a href="class-Rigidbody2D.html">2D 刚体</a>。启用 <strong>Used by Composite</strong> 时，其他属性会从该组件中消失，因为这些属性现在由附加的 2D 复合碰撞体控制。</p>
+
+<p>请参阅关于 <a href="../ScriptReference/CompositeCollider2D.html">2D 复合碰撞体</a>的 API 文档以了解有关使用 2D 复合碰撞体进行编程的更多信息。</p>
+
+<figure>
+<img src="../uploads/Main/class-CompositeCollider2D.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Density</strong></td>
+	<td style="text-align:left;">通过更改密度可更改<a href="GameObjects.html">游戏对象</a>关联的 2D 刚体的质量计算。如果将该值设置为 0，则其关联的 2D 刚体将在所有质量计算（包括质心计算）中忽略 2D 碰撞体。请注意，只有在关联的 2D 刚体组件中启用 <strong>Use Auto Mass</strong> 时，此选项才可用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Material</strong></td>
+	<td style="text-align:left;">一种 <a href="class-PhysicsMaterial2D.html">2D 物理材质</a>，可用于确定碰撞的属性（例如摩擦和弹性）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Is Trigger</strong></td>
+	<td style="text-align:left;">如果希望 2D 复合碰撞体作为触发器运行，请选中此框（请参阅关于<a href="CollidersOverview.html">碰撞体</a>的概述文档以了解有关触发器的更多信息）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Used by Effector</strong></td>
+	<td style="text-align:left;">如果希望 2D 复合碰撞体由附加的 <a href="Effectors2D.html">2D 效应器</a>组件使用，请选中此框。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Offset</strong></td>
+	<td style="text-align:left;">设置 2D 碰撞体几何形状的局部偏移。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Geometry Type</strong></td>
+	<td style="text-align:left;">合并碰撞体时，所选碰撞体的顶点将组合为两种不同几何体类型之一。使用此下拉选单，可将几何体类型设置为 <strong>Outlines</strong> 或 <strong>Polygons</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Outlines</td>
+	<td style="text-align:left;">生成具有空心轮廓的 2D 碰撞体，与 <a href="class-EdgeCollider2D.html">2D 边界碰撞体 (Edge Collider 2D)</a> 生成的结果一样。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Polygons</td>
+	<td style="text-align:left;">生成具有实心多边形的 2D 碰撞体，与 <a href="class-PolygonCollider2D.html">2D 多边形碰撞体 (Polygon Collider 2D)</a> 生成的结果一样。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Generation Type</strong></td>
+	<td style="text-align:left;">该方法用于控制在更改 2D 复合碰撞体时或者更改其任何成员碰撞体时何时生成几何体。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Synchronous</td>
+	<td style="text-align:left;">对 2D 复合碰撞体或其使用的任何碰撞体进行更改时，Unity 立即生成新几何体。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Manual</td>
+	<td style="text-align:left;">仅在手动请求时才生成新几何体。要请求生成几何体，请调用 <a href="../ScriptReference/CompositeCollider2D.GenerateGeometry.html">CompositeCollider2D.GenerateGeometry</a> 脚本 API，或者单击选择项下方显示的 <strong>Regenerate Geometry</strong> 按钮。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Vertex Distance</strong></td>
+	<td style="text-align:left;">设置从复合碰撞体收集的任何顶点允许的最小间距值。比此限值更近的任何顶点都将被删除。此设置可用于控制顶点合成的有效分辨率。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Edge Radius</strong></td>
+	<td style="text-align:left;">控制边缘周围的半径，使顶点为圆形。这会产生一个具有圆凸角的更大 2D 碰撞体。此设置的默认值是 0（无半径）。仅当 <strong>Geometry Type</strong> 设置为 <strong>Outlines</strong> 时，此设置才有效。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-CapsuleCollider2D.html"></a></span><div class="tip">2D 胶囊碰撞体 (Capsule Collider 2D)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-PhysicsMaterial2D.html"></a></span><div class="tip">2D 物理材质</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

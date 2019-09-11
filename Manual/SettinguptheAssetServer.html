@@ -1,0 +1,354 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="设置 Asset Server - Unity Manual">
+<title>设置 Asset Server - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/AssetServer-settings.png">
+<meta name="description" content="Asset Server 只需在服务器计算机上进行简单的一次性安装。与 Asset Server 的交互是通过 Unity 完成的。Unity 可以安装在服务器计算机上，但不需要这样做。必须从客户端计算机管理它，在其中可以添加项目和用户。必须使用特定的用户凭据来配置每个额外的客户端以便与项目同步。">
+<meta property="og:description" content="Asset Server 只需在服务器计算机上进行简单的一次性安装。与 Asset Server 的交互是通过 Unity 完成的。Unity 可以安装在服务器计算机上，但不需要这样做。必须从客户端计算机管理它，在其中可以添加项目和用户。必须使用特定的用户凭据来配置每个额外的客户端以便与项目同步。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'SettinguptheAssetServer';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SettinguptheAssetServer.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SettinguptheAssetServer.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SettinguptheAssetServer.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SettinguptheAssetServer.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SettinguptheAssetServer.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SettinguptheAssetServer.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SettinguptheAssetServer.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SettinguptheAssetServer.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SettinguptheAssetServer.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SettinguptheAssetServer.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/SettinguptheAssetServer.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/SettinguptheAssetServer.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/SettinguptheAssetServer.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/SettinguptheAssetServer.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SettinguptheAssetServer.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SettinguptheAssetServer.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SettinguptheAssetServer.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SettinguptheAssetServer.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SettinguptheAssetServer.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SettinguptheAssetServer.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SettinguptheAssetServer.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SettinguptheAssetServer.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SettinguptheAssetServer.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SettinguptheAssetServer.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="LegacyTopics.html">旧版主题</a></li>
+<li><a href="AssetServer.html">Asset Server（团队许可证）</a></li>
+<li>设置 Asset Server</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetServer.html"></a></span><div class="tip">Asset Server（团队许可证）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetBundles4x.html"></a></span><div class="tip">旧版 Asset Bundle</div>
+</div>
+</div></div>
+<h1>设置 Asset Server</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>警告：这是旧版文档</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">注意，从 2017.1 版开始，Asset Server 产品已弃用。我们建议在您的Unity项目中使用 Plastic SCM 或 Perforce 进行版本控制。2017–06–30</td>
+</tr>
+</tbody>
+</table>
+
+<h2>服务器端安装</h2>
+
+<p>Asset Server 只需在服务器计算机上进行简单的一次性安装。与 Asset Server 的交互是通过 Unity 完成的。Unity 可以安装在服务器计算机上，但不需要这样做。必须从客户端计算机管理它，在其中可以添加项目和用户。必须使用特定的用户凭据来配置每个额外的客户端以便与项目同步。</p>
+
+<p>You can install the Asset Server on Mac OS X 10.4 or later, Windows Vista and various Linux distributions including CentOS, Ubuntu and Suse Linux.
+<a href="http://www.unity3d.com/asset-server">Download Unity Asset Server</a> from here.</p>
+
+<p>安装程序将安装所有必要的文件、设置数据库并启动 Asset Server。在安装过程结束时，系统将要求创建__管理员密码__。从 Unity 中管理 Asset Server 时需要此密码。必须先以管理员身份连接到 Asset Server，然后才能创建项目或用户。</p>
+
+<h2>管理 Asset Server</h2>
+
+<p>Asset Server 允许任意数量的__用户__连接到__项目__。管理员必须首先使用 Unity 作为客户端连接到服务器并创建新的项目和用户。</p>
+
+<p>本指南将介绍如何启动和运行服务器并使其随时可用。</p>
+
+<p>请注意，__Asset Server__ 现在是旧版产品。我们建议使用 <strong>Plastic SCM</strong> 或 <strong>Perforce</strong> 在 Unity 项目中进行版本控制。</p>
+
+<p><a href="plasticSCMIntegration.html">PlasticSCM</a>
+<a href="perForceIntegration.html">PerForce</a></p>
+
+<p><strong>1.</strong>
+Launch <strong>Unity</strong> and open up a blank project. Select <strong>Window</strong> &gt; <strong>Asset Management</strong> &gt; <strong>Version Control</strong>, then click the <strong>Settings</strong> button.</p>
+
+<figure>
+<img src="../uploads/Main/AssetServer-settings.png" alt="Versioning 选项卡">
+<figcaption><strong>Versioning</strong> 选项卡</figcaption>
+</figure>
+
+<p>随后将在 <strong>Inspector</strong> 中显示 <strong>Version Control</strong> 设置，现在请从 <strong>Mode</strong> 下拉菜单中选择 <strong>Asset Server</strong>。</p>
+
+<figure>
+<img src="../uploads/Main/AssetServer-modeSelection.png" alt="版本控制设置">
+<figcaption><strong>版本控制设置</strong></figcaption>
+</figure>
+
+<p><strong>2.</strong> 现在我们要运行 Asset Server。找到并运行以下文件：</p>
+
+<p><strong>Windows：</strong>C:\Program Files (x86)\Unity\AssetServer\bin\AssetServerControl.exe</p>
+
+<p><strong>Macintosh：</strong>/Library/UnityAssetServer</p>
+
+<p><em>注意：Yosemite 10.10.3 用户需要通过硬盘驱动器的库目录（而不是用户的库目录）进行搜索。</em></p>
+
+<p><strong>3.</strong> You can now select <strong>Window</strong> &gt; <strong>Asset Management</strong> &gt; <strong>Version Control</strong>. This will open the asset server’s management tab.</p>
+
+<p>单击 Administration 按钮。</p>
+
+<figure>
+<img src="../uploads/Main/AssetServer-AdministrateDialog.png" alt="Administration 选项卡">
+<figcaption><strong>Administration</strong> 选项卡</figcaption>
+</figure>
+
+<p><strong>4.</strong> 在 <strong>Server Address</strong> 字段中，输入您要管理的 Asset Server 所在的计算机的 <strong>IP 地址__或__主机名</strong>。如果 Asset Server 安装在本地计算机上，则可在 <strong>Server Address</strong> 字段中输入“localhost”。接下来，提供管理员名称和密码。管理员名称始终为“admin”，密码是安装 Asset Server 时输入的密码。最后，单击 <strong>Connect</strong> 按钮。您现在已连接到 Asset Server，并可以执行初始设置。</p>
+
+<figure>
+<img src="../uploads/Main/AssetServer-ServerConnection.png" alt="Administration 选项卡">
+<figcaption><strong>Administration</strong> 选项卡</figcaption>
+</figure>
+
+<h3>管理项目和用户</h3>
+
+<p>每个服务器可以包含多个项目，每个用户可以拥有一个或多个项目的权限。项目通常互不相关，并且在资源集合中是唯一的。最好是“将一个项目视为一个游戏”。</p>
+
+<p>可通过单击 <strong>Server Administration</strong> 选项卡中的 <strong>Create</strong> 按钮创建新项目。</p>
+
+<figure>
+<img src="../uploads/Main/AssetServer-NewProject.png" alt="单击 Create，然后输入新项目的名称">
+<figcaption>单击 Create，然后输入新项目的名称</figcaption>
+</figure>
+
+<p>首先选择现有项目，然后单击 <strong>New User</strong> 按钮，即可创建新用户。</p>
+
+<figure>
+<img src="../uploads/Main/AssetServer-NewUser.png" alt="创建新用户">
+<figcaption>创建新用户</figcaption>
+</figure>
+
+<p>在一个项目中创建用户后，可通过启用用户列表中用户名左侧的复选框将用户添加到另一个项目。</p>
+
+<p>您可以为单个项目启用或禁用用户访问权限。
+要从服务器中完全删除项目或用户，请使用 <strong>Delete Project</strong> 和 <strong>Delete User</strong> 按钮。</p>
+
+<h3>防火墙设置</h3>
+
+<p>Unity Asset Server 使用 TCP 端口 <strong>10733</strong>。您可能需要在防火墙和/或路由器中启用与此端口的连接。</p>
+
+<h2>高级</h2>
+
+<p>Asset Server 是使用 PostgreSQL 的修改版本构建的。直接访问 SQL 数据库需要一些关于 SQL 和 Unix/Linux 命令行的技术知识。建议用户谨慎操作。</p>
+
+<h3>备份</h3>
+
+<p>我们提供了一个命令行工具来备份 Asset Server。应在运行 Asset Server 的计算机上使用管理员帐户运行该工具。将 BACKUP_LOCATION 替换为您希望备份工具放置备份的路径名：</p>
+
+<p>Mac OS X
+<code>sudo /Library/UnityAssetServer/bin/as_backup</code> BACKUP_LOCATION</p>
+
+<p>Linux
+<code>sudo /opt/unity_asset_server/bin/as_backup</code> BACKUP_LOCATION</p>
+
+<p>Windows
+<code>"%ProgramFiles%\Unity\AssetServer\bin\as_backup.cmd"</code> BACKUP_LOCATION</p>
+
+<p>as_backup 将在 BACKUP_LOCATION 位置创建一个目录，其中包含每个项目的一个或多个文件，还有一些文件包含每个项目的相关信息以及所有用户及其密码的备份。</p>
+
+<h3>恢复备份</h3>
+
+<p>要恢复通过 as_backup 生成的 Asset Server 备份，请首先执行 Asset Server 的全新安装，不要创建任何项目。（恢复过程将拒绝覆盖同名的现有项目。）</p>
+
+<p>然后运行提供的备份恢复工具 <code>as_restore</code>，将其指向使用 as_backup 创建的备份的位置：</p>
+
+<p>Mac OS X
+<code>sudo /Library/UnityAssetServer/bin/as_restore</code> BACKUP_LOCATION</p>
+
+<p>Linux
+<code>sudo /opt/unity_asset_server/bin/as_restore</code> BACKUP_LOCATION</p>
+
+<p>Windows
+<code>"%ProgramFiles%\Unity\AssetServer\bin\as_restore.cmd"</code> BACKUP_LOCATION</p>
+
+<p>请注意，您还可以使用 as_backup 和 as_restore 将 Asset Server 安装结果从一台计算机移动到另一台计算机，方法是在源计算机上执行备份，将备份目录移动到目标计算机（或通过网络文件共享方式安装该目录），然后运行 as_restore 将数据插入新安装的 Asset Server 实例。即使源和目标 Asset Server 具有不同版本或在不同操作系统上运行，这种做法也是有效的。</p>
+
+<h3>找到 Asset Server 项目的数据库名称</h3>
+
+<p>要查看项目数据库中的表，首先需要确定实际数据库的名称。在托管 Asset Server 的计算机上运行以下命令行命令：</p>
+
+<p>Mac OS X
+<code>/Library/UnityAssetServer/bin/psql -U admin -h localhost -d postgres -c 'select * from all_databases**view'</code></p>
+
+<p>Linux
+<code>/opt/unity_asset_server/bin/psql -U admin -h localhost -d postgres -c 'select * from all_databases**view'</code></p>
+
+<p>Windows
+<code>"%ProgramFiles%\Unity\AssetServer\bin\psql.exe" -U admin -h localhost -d postgres -c "select * from all_databases**view"</code></p>
+
+<p>此命令及其他命令将提示您输入密码。每次发生这种情况时，请输入在安装期间设置的数据库管理员密码。得到的结果将是遵循以下基本布局的表：</p>
+
+<pre><code>    databasename | projectname | description | version 
+    --------------------+--------------------+--------------------------+---------
+     sandbox | Sandbox | Created with Unity 2.0.0 | 1.0
+     game | Game | Created with Unity 2.0.0 | 1.0
+     my_game_project | My Game Project | Created with Unity 2.0.0 | 1.0
+    (3 rows)
+
+
+</code></pre>
+
+<p>现在您需要确定要备份的项目的“databasename”。创建数据库时，默认的“databasename”与 Unity 中显示的“projectname”相同，但采用小写字母并将空格替换为下划线。</p>
+
+<p>请注意，如果您的服务器在不同端口上托管多个 PostgreSQL 数据库，可能需要显式提供用于连接到 Asset Server 数据库的端口。在这种情况下，请将 -p 10733 添加到给定的命令（假设您的实例使用了默认端口 10733）。例如：</p>
+
+<p>Linux
+<code>/opt/unity_asset_server/bin/psql -U admin -h localhost -d postgres -c 'select * from all_databases**view' -p 10733</code></p>
+
+<h3>其他 SQL 功能</h3>
+
+<p>这些命令及所有其他命令将使用 PostgreSQL 发行版中的工具。您可以在此处阅读更多关于这些工具的信息：http://www.postgresql.org/docs/8.3/interactive/reference-client.html</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–06–30 Page amended with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2017.1/Documentation/Manual/30_search.html?q=newin20171">2017.1</a> 中已弃用 Asset Server</span></p></li>
+<li><p><span class="page-history">Windows XP support in Standalone Player removed in 2018.1</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetServer.html"></a></span><div class="tip">Asset Server（团队许可证）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetBundles4x.html"></a></span><div class="tip">旧版 Asset Bundle</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="绘制调用批处理 - Unity Manual">
+<title>绘制调用批处理 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/StaticTagInspector.png">
+<meta name="description" content="要在屏幕上绘制游戏对象，引擎必须向图形 API（例如 OpenGL 或 Direct3D）发出绘制调用。绘制调用通常为资源密集型操作，图形 API 为每次绘制调用执行大量工作，从而导致 CPU 端的性能开销。此开销的主要原因是绘制调用之间的状态变化（例如切换到不同材质），而这种情况会导致图形驱动程序中执行资源密集型验证和转换步骤。">
+<meta property="og:description" content="要在屏幕上绘制游戏对象，引擎必须向图形 API（例如 OpenGL 或 Direct3D）发出绘制调用。绘制调用通常为资源密集型操作，图形 API 为每次绘制调用执行大量工作，从而导致 CPU 端的性能开销。此开销的主要原因是绘制调用之间的状态变化（例如切换到不同材质），而这种情况会导致图形驱动程序中执行资源密集型验证和转换步骤。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'DrawCallBatching';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/DrawCallBatching.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/DrawCallBatching.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/DrawCallBatching.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/DrawCallBatching.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/DrawCallBatching.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/DrawCallBatching.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/DrawCallBatching.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/DrawCallBatching.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/DrawCallBatching.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/DrawCallBatching.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/DrawCallBatching.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/DrawCallBatching.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/DrawCallBatching.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/DrawCallBatching.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/DrawCallBatching.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/DrawCallBatching.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/DrawCallBatching.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/DrawCallBatching.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/DrawCallBatching.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/DrawCallBatching.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/DrawCallBatching.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/DrawCallBatching.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/DrawCallBatching.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/DrawCallBatching.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="OptimizingGraphicsPerformance.html">优化图形性能</a></li>
+<li>绘制调用批处理</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="OptimizingGraphicsPerformance.html"></a></span><div class="tip">优化图形性能</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ModelingOptimizedCharacters.html"></a></span><div class="tip">角色建模的性能优化</div>
+</div>
+</div></div>
+<h1>绘制调用批处理</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>要在屏幕上绘制游戏对象，引擎必须向图形 API（例如 OpenGL 或 Direct3D）发出绘制调用。绘制调用通常为资源密集型操作，图形 API 为每次绘制调用执行大量工作，从而导致 CPU 端的性能开销。此开销的主要原因是绘制调用之间的状态变化（例如切换到不同材质），而这种情况会导致图形驱动程序中执行资源密集型验证和转换步骤。</p>
+
+<p>Unity 使用两种方法来应对此情况：</p>
+
+<ul>
+<li>__动态批处理__：对于足够小的网格，此方法会在 CPU 上转换网格的顶点，将许多相似顶点组合在一起，并一次性绘制它们。</li>
+<li>__静态批处理__：将静态（不移动）游戏对象组合成大网格，并以较快的速度渲染它们。</li>
+</ul>
+
+<p>与手动合并游戏对象相比，内置批处理有几个好处；最值得注意的是，仍然可以单独剔除游戏对象。但是，也有一些缺点；静态批处理会导致内存和存储开销，动态批处理会产生一些 CPU 开销。</p>
+
+<h3>批处理的材质设置</h3>
+
+<p>只有共享相同材质的游戏对象才可一起接受批处理。因此，如果想要实现良好批处理，应在尽可能多的不同游戏对象之间共享材质。</p>
+
+<p>如果两种相同材质仅在纹理上不同，可将这些纹理组合成单个大纹理。此过程通常称为纹理镶嵌（请参阅有关<a href="http://en.wikipedia.org/wiki/Texture_atlas">纹理图集 (Texture atlases)</a>的 Wikipedia 页面以了解更多信息）。一旦纹理位于相同图集中，即可使用单个材质。</p>
+
+<p>如果需要从脚本访问共享材质属性，必须注意，修改 <a href="../ScriptReference/Renderer-material.html">Renderer.material</a> 将创建该材质的副本。应改用 <a href="../ScriptReference/Renderer-sharedMaterial.html">Renderer.sharedMaterial</a> 来保留共享的材质。</p>
+
+<p>阴影投射物即使材质不同，通常也可以在渲染时接受批处理。Unity 中的阴影投射物即使具有不同材质也可以使用动态批处理，只要阴影 pass 所需材质中的值相同即可。例如，许多板条箱可能使用具有不同纹理的材质，但是由于渲染纹理的阴影投射物不相关，所以在此情况下，它们可以一起接受批处理。</p>
+
+<h2>Dynamic batching (Meshes)</h2>
+
+<p>如果移动的游戏对象共享相同材质并满足其他条件，则 Unity 可自动在同一绘制调用中批处理这些游戏对象。动态批处理是自动完成的，无需您进行任何额外工作。</p>
+
+<ul>
+<li>Batching dynamic GameObjects has certain overhead per vertex, so batching is applied only to Meshes containing no more than 900 vertex attributes, and no more than 300 vertices.
+
+<ul>
+<li>如果着色器使用顶点位置、法线和单个 UV，最多可以批处理 300 个顶点，而如果着色器使用顶点位置、法线、UV0、UV1 和切线，则只能批处理 180 个顶点。</li>
+<li>__注意__：将来可能会更改属性数量限制。</li>
+</ul>
+</li>
+<li>如果游戏对象在变换中包含镜像，则不会对这些对象进行批处理（例如，具有 +1 缩放的游戏对象 A 和具有 –1 缩放的游戏对象 B 无法一起接受批处理）。</li>
+<li>即使游戏对象基本相同，使用不同的材质实例也会导致游戏对象不能一起接受批处理。例外情况是阴影投射物渲染。</li>
+<li>带有光照贴图的游戏对象具有其他渲染器参数：光照贴图索引和光照贴图偏移/缩放。通常，动态光照贴图的游戏对象应指向要批处理的完全相同的光照贴图位置。</li>
+<li>多 pass 着色器会中断批处理。
+
+<ul>
+<li>几乎所有的 Unity 着色器都支持前向渲染中的多个光照，有效地为它们执行额外 pass。“其他每像素光照”的绘制调用不进行批处理。</li>
+<li>旧版延迟（光照 pre-pass）渲染路径会禁用动态批处理，因为它必须绘制两次游戏对象。</li>
+</ul>
+</li>
+</ul>
+
+<p>Dynamic batching works by transforming all GameObject vertices into world space on the CPU, so it is only an advantage if that work is smaller than doing a draw call. The resource requirements of a draw call depends on many factors, primarily the graphics API used. For example, on consoles or modern APIs like Apple Metal, the draw call overhead is generally much lower, and often dynamic batching cannot be an advantage at all.</p>
+
+<h2>Dynamic batching (Particle Systems, Line Renderers, Trail Renderers)</h2>
+
+<p>For components with geometry that Unity generates dynamically, dynamic batching works differently compared to how it works for Meshes.</p>
+
+<ul>
+<li>For each compatible renderer type, Unity builds all batchable content into 1 large Vertex Buffer.</li>
+<li>The renderer sets up the Material state for the batch.</li>
+<li>Unity binds the Vertex Buffer to the Graphics Device.</li>
+<li>For each Renderer in the batch, Unity updates the offset into the Vertex Buffer, and then submits a new draw call.</li>
+</ul>
+
+<p>When measuring the cost of the Graphics Device calls, the slowest part of rendering a Component is the set-up of the Material state. Submitting draw calls at different offsets into a shared Vertex Buffer is very fast by comparison.</p>
+
+<p>This approach is very similar to how Unity submits draw calls when using Static batching.</p>
+
+<h2>静态批处理</h2>
+
+<p>使用静态批处理，引擎可减少任何大小的几何体的绘制调用，但前提是它共享相同材质并且不移动。这种处理方式通常比动态批处理更高效（它不会在 CPU 上转换顶点），但是使用更多内存。</p>
+
+<p>为了利用静态批处理，您需要显式指定某些游戏对象是静态对象且不会在游戏中移动、旋转或缩放。为此，请使用 Inspector 中的 <strong>Static</strong> 复选框，将游戏对象标记为静态：</p>
+
+<figure>
+<img src="../uploads/Main/StaticTagInspector.png" alt="">
+</figure>
+
+<p>使用静态批处理需要额外的内存来存储组合的几何体。如果多个游戏对象在静态批处理之前共享相同几何体，则会在 Editor 中或运行时为每个游戏对象创建几何体的副本。这可能并非总是好办法；有时您必须避免为某些游戏对象进行静态批处理，这样会牺牲渲染性能，但可保持较小的内存占用量。例如，在茂密森林关卡中，将树标记为静态可能会产生严重的内存影响。</p>
+
+<p>Internally, static batching works by transforming the static GameObjects into world space and building one shared vertex and index buffer for them. If you have enabled <strong>Optimized Mesh Data</strong> (in the <strong>Player</strong> settings) then Unity removes any vertex elements that are not being used by any shader variant when building the vertex buffer. There are some special keyword checks to perform this; for example, if Unity does not detect the LIGHTMAP_ON keyword, it removes lightmap UVs from a batch. Then, for visible GameObjects in the same batch, Unity performs a series of simple draw calls, with almost no state changes in between each one. Technically, Unity does not save API draw calls, but instead saves on state changes between them (which is the resource-intensive part). Batch limits are 64k vertices and 64k indices on most platforms (48k indices on OpenGLES, 32k indices on macOS).</p>
+
+<h2>提示</h2>
+
+<p>当前，仅对<a href="class-MeshRenderer.html">网格渲染器</a>、<a href="class-TrailRenderer.html">轨迹渲染器</a>、<a href="class-LineRenderer.html">线渲染器</a>、<a href="class-ParticleSystem.html">粒子系统</a>和<a href="class-SpriteRenderer.html">精灵渲染器</a>进行批处理。这意味着不会对蒙皮网格、布料和其他类型的渲染组件进行批处理。</p>
+
+<p>渲染器仅与其他相同类型的渲染器一起接受批处理。</p>
+
+<p>半透明着色器通常要求游戏对象按照从后到前的顺序进行渲染，从而实现透明性。Unity 首先按此顺序对游戏对象排序，然后尝试对它们进行批处理，但是因为必须严格满足顺序，所以这通常意味着可以实现比不透明游戏对象更少的批处理。</p>
+
+<p>手动组合彼此接近的游戏对象可以是绘制调用批处理的极好替代方法。例如，一个带有大量抽屉的静态橱柜通常只需在 3D 建模应用程序中或者使用 <a href="../ScriptReference/Mesh.CombineMeshes.html">Mesh.CombineMeshes</a> 来组合成一个网格。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–10–26 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 2017.2 版中添加了有关动态批处理与图形作业不兼容的备注</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="OptimizingGraphicsPerformance.html"></a></span><div class="tip">优化图形性能</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ModelingOptimizedCharacters.html"></a></span><div class="tip">角色建模的性能优化</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

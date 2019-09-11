@@ -1,0 +1,301 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="立方体贴图 - Unity Manual">
+<title>立方体贴图 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/CubeMapExample.jpg">
+<meta name="description" content="__立方体贴图__是六个正方形纹理的集合，
+这些纹理代表环境中的反射。六个正方形组成一个包围着对象的虚构立方体的各面；
+每个面代表沿世界轴方向（向上、向下、向左、向右、
+向前和向后）的视图。">
+<meta property="og:description" content="__立方体贴图__是六个正方形纹理的集合，
+这些纹理代表环境中的反射。六个正方形组成一个包围着对象的虚构立方体的各面；
+每个面代表沿世界轴方向（向上、向下、向左、向右、
+向前和向后）的视图。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-Cubemap';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-Cubemap.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-Cubemap.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-Cubemap.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-Cubemap.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-Cubemap.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-Cubemap.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-Cubemap.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-Cubemap.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-Cubemap.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-Cubemap.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-Cubemap.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-Cubemap.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-Cubemap.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-Cubemap.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-Cubemap.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-Cubemap.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-Cubemap.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-Cubemap.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-Cubemap.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-Cubemap.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-Cubemap.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-Cubemap.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-Cubemap.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-Cubemap.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="comp-RenderingGroup.html">渲染组件</a></li>
+<li>立方体贴图</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="comp-RenderingGroup.html"></a></span><div class="tip">渲染组件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-OcclusionArea.html"></a></span><div class="tip">遮挡区域</div>
+</div>
+</div></div>
+<h1>立方体贴图</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>__立方体贴图__是六个正方形纹理的集合，
+这些纹理代表环境中的反射。六个正方形组成一个包围着对象的虚构立方体的各面；
+每个面代表沿世界轴方向（向上、向下、向左、向右、
+向前和向后）的视图。</p>
+
+<p>立方体贴图常用于捕获对象的反射或“周围环境”；例如
+<a href="class-Skybox.html">天空盒</a>和<a href="class-ReflectionProbe.html">环境反射</a>通常使用立方体贴图。</p>
+
+<figure>
+<img src="../uploads/Main/CubeMapExample.jpg" alt="Cubemapped skybox and reflections">
+<figcaption>Cubemapped skybox and reflections</figcaption>
+</figure>
+
+<h2>从纹理创建立方体贴图</h2>
+
+<p>创建立方体贴图的最快方法是从专门布局的<a href="class-TextureImporter.html">纹理</a>导入它们。
+在 Project 窗口中选择纹理，从而在 Inspector 窗口中查看 Import Settings。在 Import Settings 中，将 <strong>Texture Type</strong> 设置为 <strong>Default</strong>、<strong>Normal Map</strong> 或 <strong>Single Channel__，并将 </strong>Texture Shape__ 设置为 <strong>Cube</strong>。然后，Unity 自动将纹理设置为立方体贴图。</p>
+
+<figure>
+<img src="../uploads/Textures/CubeImportInspector.png" alt="立方体贴图纹理导入类型">
+<figcaption>立方体贴图纹理导入类型</figcaption>
+</figure>
+
+<p>系统支持几种常用的立方体贴图布局（在大多数情况下，Unity 会自动检测到它们）。</p>
+
+<p>支持垂直和水平交叉布局以及立方体贴图面的列和行：</p>
+
+<figure>
+<img src="../uploads/Textures/CubeLayout6Faces.png" alt="">
+</figure>
+
+<p>另一种常见布局是 <code>LatLong</code>（纬度/经度，有时称为圆柱形）。全景图像
+常采用此布局：</p>
+
+<figure>
+<img src="../uploads/Textures/CubeLayoutLatLong.png" alt="">
+</figure>
+
+<p>还可以找到 <code>SphereMap</code>（球形环境贴图）图像：</p>
+
+<figure>
+<img src="../uploads/Textures/CubeLayoutSphereMap.png" alt="">
+</figure>
+
+<p>默认情况下，Unity 会查看导入纹理的宽高比以确定上述布局中最合适的
+布局。导入时，会生成一个立方体贴图，可将其用于天空盒和反射：</p>
+
+<figure>
+<img src="../uploads/Textures/CubeImportedView.png" alt="">
+</figure>
+
+<p><code>Glossy Reflection</code> 选项可用于立方体贴图纹理，而这些纹理将由
+<a href="class-ReflectionProbe.html">反射探针</a>使用。该模式以特殊方式（镜面卷积）处理
+立方体贴图 Mip 级别，然后可用于模拟不同平滑度表面的反射：</p>
+
+<figure>
+<img src="../uploads/Textures/CubeOptionGlossyReflections.png" alt="在变化平滑度表面上用于反射探针的立方体贴图">
+<figcaption>在变化平滑度表面上用于反射探针的立方体贴图</figcaption>
+</figure>
+
+<h2>旧版立方体贴图资源</h2>
+
+<p>Unity 还支持从六个单独的<a href="class-TextureImporter.html">纹理</a>创建立方体贴图。
+从菜单中选择 __Assets &gt; Create &gt; Legacy &gt; Cubemap__，
+然后将六个纹理拖入检视面板中的空字段内。</p>
+
+<figure>
+<img src="../uploads/Main/Inspector-CubeMap.jpg" alt="旧版立方体贴图检视面板">
+<figcaption>旧版立方体贴图检视面板</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">
+<strong>Right..Back</strong> 字段</td>
+	<td style="text-align:left;">相应立方体贴图面的纹理。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Face Size</strong></td>
+	<td style="text-align:left;">每个立方体贴图面的宽度和高度（以像素为单位）。纹理将自动缩放以适应此大小。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Mipmap</strong></td>
+	<td style="text-align:left;">是否应该创建 Mipmap？</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Linear</strong></td>
+	<td style="text-align:left;">立方体贴图是否应该使用线性颜色？</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Readable</strong></td>
+	<td style="text-align:left;">立方体贴图是否应当允许脚本访问像素数据？</td>
+</tr>
+</tbody>
+</table>
+
+<p>请注意，最好使用立方体贴图纹理导入类型来创建立方体贴图（见上文），
+这样就可以压缩立方体贴图纹理数据；可进行边缘修正和光泽反射卷积；
+并支持 HDR 立方体贴图。</p>
+
+<h2>其他技巧</h2>
+
+<p>另一种有用的技巧是使用脚本从 Unity 场景的内容生成立方体贴图。
+<a href="../ScriptReference/Camera.RenderToCubemap.html">Camera.RenderToCubemap</a> 函数可从场景中的
+任何所需位置记录六个面图像；该函数的脚本参考页面上的代码示例
+添加了一条菜单命令来简化此任务。</p>
+
+<hr>
+
+<p><span class="page-edit"> 2018–01–31 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="comp-RenderingGroup.html"></a></span><div class="tip">渲染组件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-OcclusionArea.html"></a></span><div class="tip">遮挡区域</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

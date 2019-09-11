@@ -1,0 +1,403 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Unity Analytics 概述 - Unity Manual">
+<title>Unity Analytics 概述 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/AnalyticsOverview1.png">
+<meta name="description" content="Unity Analytics 可提供所需的数据来管理您与玩家的关系。">
+<meta property="og:description" content="Unity Analytics 可提供所需的数据来管理您与玩家的关系。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UnityAnalyticsOverview';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityAnalyticsOverview.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityAnalyticsOverview.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityAnalyticsOverview.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityAnalyticsOverview.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityAnalyticsOverview.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityAnalyticsOverview.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityAnalyticsOverview.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityAnalyticsOverview.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityAnalyticsOverview.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityAnalyticsOverview.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UnityAnalyticsOverview.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UnityAnalyticsOverview.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UnityAnalyticsOverview.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UnityAnalyticsOverview.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityAnalyticsOverview.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityAnalyticsOverview.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityAnalyticsOverview.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityAnalyticsOverview.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityAnalyticsOverview.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityAnalyticsOverview.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityAnalyticsOverview.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityAnalyticsOverview.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityAnalyticsOverview.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityAnalyticsOverview.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="UnityAnalytics.html">Unity Analytics</a></li>
+<li>Unity Analytics 概述</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalytics.html"></a></span><div class="tip">Unity Analytics</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsSetup.html"></a></span><div class="tip">设置 Analytics</div>
+</div>
+</div></div>
+<h1>Unity Analytics 概述</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity Analytics 可提供所需的数据来管理您与玩家的关系。</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsOverview1.png" alt="Unity Analytics Dashboard">
+<figcaption>Unity Analytics Dashboard</figcaption>
+</figure>
+
+<p>了解您的玩家，了解他们为什么要玩您的游戏，了解他们为什么不再玩您的游戏。应根据数据而不是猜测来做决定。</p>
+
+<p>只需在项目中启用 Unity Analytics，即可获取首次开始玩游戏的人数、每天玩游戏的人数、在指定月份玩游戏的人数以及其他基于会话的使用数据。如果您还使用 Unity Ads 和 IAP 服务，则 Analytics 数据会自动包含这些来源的收入。此类会话数据提供了游戏运营情况的重要信息。通过这些数据可以解答如下问题：“我是否在不断迎来新玩家？”、“他们玩游戏的频度和时长如何？”、“他们第二天还会玩吗？下周呢？下个月呢？”、“我具体一天从每名玩家获得的收入是多少？”</p>
+
+<p>您通过玩家在游戏中执行关键操作时分发标准 Analytics 事件，即可扩展可用的 Analytics 数据，从而通过这些数据了解玩家在玩游戏时的实际行为。他们是否通过入门教程取得了成效？他们是否访问您的 IAP 商店？他们是否像您期望的那样通过游戏关卡？</p>
+
+<p>Analytics 数据可以帮助您专注于最有成效的领域来改进应用程序，从而更好地为玩家提供服务。您可以通过发布更新来应用这些更改，但是也可以创建 <strong>Remote Settings</strong> 以便在不发布更新的情况下直接调整和优化游戏。</p>
+
+<p>了解您的玩家以及他们如何玩游戏，您就可以改进游戏。而当数据显示您的玩家正在改变时，您可以做出反应并进行调整。</p>
+
+<p>请参阅 <a href="UnityAnalyticsTerminology.html">Analytics 指标、细分段和术语</a>以了解整个 Analytics 文档中使用的特定术语的定义。</p>
+
+<h2>核心使用数据</h2>
+
+<p>启用 Analytics 时，Unity 便会跟踪<a href="#SupportedPlatforms">受支持平台</a>上的核心使用指标，而无需您投入任何精力或进行任何操作。这些<a href="UnityAnalyticsTerminology.html">核心指标</a>包括：</p>
+
+<ul>
+<li>新安装 [New installs]</li>
+<li>每日活跃用户 (DAU) [Daily active users (DAU)]</li>
+<li>每月活跃用户 (MAU) [Monthly active users (MAU)]</li>
+<li>会话总数 [Total sessions]</li>
+<li>每个用户的会话数 [Sessions per user]</li>
+<li>在应用程序中花费的时间 [Time spent in app]</li>
+<li>按国家/地区和平台划分的用户细分段 [User Segments for Country and Platform]</li>
+</ul>
+
+<p>这些都是用来监控游戏运营情况的良好指标。这些指标会告诉您，有多少人安装您的游戏、他们玩游戏的频度以及他们会坚持多久。许多外部因素也会影响这些数字，但您应该观察这些因素以找出可能的问题征兆，从而及时纠正。</p>
+
+<p><a href="UnityAnalyticsDashboard.html">Analytics Dashboard</a> 的 Overview 选项卡中显示的以下图表有三条数据曲线：__New Users__（新用户）、<strong>DAU__（Daily Active Users，即每日活跃用户）和 </strong>MAU__（Monthly Active Users，即每月活跃用户）：</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsOverview2.png" alt="DAU、MAU、New Users 图表">
+<figcaption>DAU、MAU、New Users 图表</figcaption>
+</figure>
+
+<p><strong>New Users</strong> 曲线显示在某一天有多少人第一次玩您的游戏。因为新玩家对您的游戏接触不多（即使有一些），所以该图表通常反映了外部因素。如果您启动营销活动或其他推荐活动来吸引新玩家，您会希望在 <strong>New Users</strong> 曲线中发现人数激增的情况。</p>
+
+<p><strong>DAU</strong> 曲线显示您的玩家中有多少人在指定日期玩游戏。与 <strong>DAU</strong> 曲线相似，__MAU__ 曲线显示您的玩家中有多少人在指定的 30 天内玩游戏。</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsOverview3.png" alt="Sticky Factor 图">
+<figcaption>Sticky Factor 图</figcaption>
+</figure>
+
+<p>__Sticky Factor__（粘性系数）图显示了在指定日期的玩家占每月玩家的百分比 (DAU/MAU)。该指标的主要目的是揭示玩家反复玩该游戏的频度。（换言之，就是游戏的玩家“粘性”如何。）</p>
+
+<p>活跃玩家数量大可能表明游戏很受欢迎，但孤立解读这一数据可能会有偏差。特别要注意是，这些指标没有将新用户与回头用户的影响分开。例如，新玩家的涌入可能掩盖更多老牌玩家流失的问题。（在常见的分析术语中，损失玩家称为“流失”。）__DAU<strong>、</strong>MAU__ 和__粘性系数__指标常常用于游戏行业，因为 DAU 和 MAU 是历来用于比较不同游戏的最普遍公用数据。</p>
+
+<p>请参阅 <a href="UnityAnalyticsDashboard.html">Analytics Dashboard</a> 以了解有关如何查看 Analytics 数据的信息。</p>
+
+<h2>玩家行为数据</h2>
+
+<p>要了解游戏特有的玩家行为，您可以在游戏中的适当时间发送 Analytics 事件。Unity 提供方便易用的 API 来发送标准化事件和完全自定义的事件。您可以使用这些事件来测试游戏，从而观察玩家行为，特别是在以下方面：</p>
+
+<ul>
+<li>入门 — 玩家是否通过入门机制（例如教程或起始关卡）成功入门？</li>
+<li>进度 — 玩家是否能通过关卡？</li>
+<li>经济性 — 游戏经济效益是否符合预期？</li>
+<li>设计验证 — 游戏设计选项是否符合预期？</li>
+<li>应用程序验证 — 应用程序的所有区域是否按照预期得到利用？是否存在玩家忽略或未注意的部分？</li>
+<li>变现 — 变现策略是否为最佳？玩家进行购买是否有障碍？</li>
+</ul>
+
+<p>请参阅 <a href="UnityAnalyticsCustomEvents.html">Analytics 事件</a>以了解有关收集玩家行为数据的信息。</p>
+
+<p>Analytics Dashboard 提供了漏斗图构建器 (Funnel Builder) 来帮助您分析玩家行为。漏斗图可显示玩家在一系列线性步骤中取得的进度。例如，您可以为教程创建漏斗图，由此显示用户完成教程步骤的百分比。漏斗图可用于了解您的应用程序中玩家流失的位置。</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsOverview4.png" alt="关卡进度漏斗图">
+<figcaption>关卡进度漏斗图</figcaption>
+</figure>
+
+<p>此漏斗图示例显示了玩家在游戏中的完成进度。漏斗图中的每一步代表完成一个游戏关卡。虽然通常情况下能预想到在关卡之间会损失一些玩家，但是在指定的关卡之后玩家减少过多可能表明该关卡存在问题。虽然漏斗图不能显示这一问题的具体原因（这可能是游戏玩法问题、错误或该关卡可能太难），但漏斗图能指出值得调查的问题区域。</p>
+
+<p>请参阅<a href="UnityAnalyticsFunnels.html">漏斗图</a>以了解有关实现漏斗图的信息。</p>
+
+<h2>收入数据</h2>
+
+<p>您可以分析应用内购 (IAP) 收入以及其他数据。如果使用 Unity IAP 服务，则会自动提供收入数据。否则，您可以在玩家每次进行购买时向 Analytics 服务发送事件。如果使用了 Unity Ads 服务，您还可以在 Analytics Dashboard 上分析广告收入。（但是，无法通过任何方式向 Analytics 服务报告外部广告收入。）</p>
+
+<p>Analytics Dashboard 的 Overview 选项卡中显示的以下图表会显示项目的每日收入金额：</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsOverview5.png" alt="收入总计">
+<figcaption>收入总计</figcaption>
+</figure>
+
+<p>第一个图表显示已验证的 IAP 收入和交易以及来自 Unity Ads 服务的广告收入。<strong>Overview</strong> 选项卡上的图表仅显示已验证的 IAP 收入，但您可以在 <strong>Data Explorer</strong> 中查看所有上报的收入。未经验证的收入来源包括测试交易、欺诈交易、来自不支持收据验证的平台（如 Amazon 和 Windows 应用商店）的交易以及使用缺失或不正确信息或者未配置必要应用商店 API 密钥而上报的交易。如果使用 Unity IAP 服务，则会自动上报并验证 IAP 交易。如果使用外部 IAP API，则可通过 <a href="UnityAnalyticsReceiptVerification.html">Unity Analytics API</a> 来上报并验证 IAP 收入。</p>
+
+<p>第二个图表显示按付费用户和活跃用户分类的每日收入平均值：</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsOverview6.png" alt="平均收入">
+<figcaption>平均收入</figcaption>
+</figure>
+
+<p><strong>Average Revenue Per Paying User__（付费用户的平均收入，简称 ARPPU）显示在指定日期进行 IAP 交易的玩家花费的平均金额。</strong>Average Revenue Per Daily Active User__（每日活跃用户的平均收入，简称 ARPDAU）显示所有用户的平均收入，包含指定日期的 IAP 收入和广告收入。</p>
+
+<p>概览图表显示所有用户的收入。为了更好地了解不同玩家群体的货币消费情况，请使用 <a href="UnityAnalyticsDataExplorer.html">Data Explorer</a> 通过细分段查看收入。标准细分段包括生命周期群组、地理位置、变现类别、受众特征（上报时）以及平台。您也可以定义自己的细分段。</p>
+
+<p>控制面板的 Data Explorer 页面提供了额外的若干变现指标和细分段：</p>
+
+<p><strong>变现指标</strong>：</p>
+
+<ul>
+<li>ARPDAU（每日活跃用户的平均收入）[ARPDAU (Average Revenue Per Daily Active User)]</li>
+<li>ARPPU（付费用户的平均收入）[ARPPU (Average revenue Per Paying User)]</li>
+<li>未验证交易的数量 [Number of Unverified Transactions]</li>
+<li>已验证交易的数量 [Number of Verified Transactions]</li>
+<li>IAP 总收入 [Total IAP Revenue]</li>
+<li>已验证的总收入 [Total Verified Revenue]</li>
+<li>未验证的 IAP 收入 [Unverified IAP Revenue]</li>
+<li>已验证的 IAP 收入 [Verified IAP Revenue]</li>
+<li>已验证的付费用户 [Verified Paying Users]</li>
+</ul>
+
+<p><strong>广告指标</strong>：</p>
+
+<ul>
+<li>广告 ARPU（用户的平均收入）[Ad ARPU (Average Revenue Per User)]</li>
+<li>广告收入 [Ad Revenue]</li>
+<li>广告启动次数 [Ad Starts]</li>
+<li>每个 DAU 的广告数 [Ads per DAU]</li>
+<li>eCPM（估计的每千次展示费用）[eCPM (estimated Cost Per Thousand Impressions)]</li>
+</ul>
+
+<p><strong>变现细分段</strong>：</p>
+
+<ul>
+<li>鲸鱼 [Whales]</li>
+<li>海豚 [Dolphins]</li>
+<li>小鱼 [Minnows]</li>
+<li>从未变现 [Never Monetized]</li>
+<li>所有付费者 [All Spenders]</li>
+</ul>
+
+<p>请参阅<a href="UnityAnalyticsMonetization.html">变现</a>以了解有关收入分析的更多信息。</p>
+
+<h2>数据细分</h2>
+
+<p>细分段有助于更好地了解玩家行为。标准的预定义细分段按以下类别将玩家分组：</p>
+
+<ul>
+<li>
+<strong>Lifecycle</strong>（生命周期）– 按安装以来的天数将玩家分组。生命周期群组可用于分析玩家的行为如何随其在应用程序中的经验增多而变化。</li>
+<li>
+<strong>Geography</strong>（地理位置）– 按国家/地区将玩家分组。</li>
+<li>
+<strong>Monetization</strong>（变现）– 按消费类别将玩家分组。变现类别有助于通过玩家产生的收入金额来了解玩家的行为。</li>
+<li>
+<strong>Platform</strong>（平台）– 按玩家的计算机操作系统或设备类型分组。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/AnalyticsOverview7.png" alt="按生命周期群组细分的 MAU 指标">
+<figcaption>按生命周期群组细分的 MAU 指标</figcaption>
+</figure>
+
+<p>您可以使用 <strong>Segment Builder</strong> 来定义自己的类别。但是，任何新的类别都只能运用于在创建这些类别之后收集的数据。例如，如果为直布罗陀的玩家添加细分段，则该细分段最初为空；只有直布罗陀的玩家新发生的活动才会显示在该细分段中。</p>
+
+<p>您可以在 <a href="UnityAnalyticsDataExplorer.html">Data Explorer</a> 和<a href="UnityAnalyticsFunnels.html">漏斗图</a>报告中使用这些细分段。</p>
+
+<p>有关自行创建细分段的更多信息，请参阅 <a href="UnityAnalyticsSegmentBuilder.html">Segment Builder</a>。</p>
+
+<h2>Remote Settings</h2>
+
+<p><strong>Remote Settings</strong> 功能允许从 Analytics Dashboard 更改游戏中的变量的值。您可以在开发游戏时创建任意数量的 __Remote Settings__，然后在 Editor 中将它们分配给游戏对象 (GameObject) 变量。启动游戏后，您可以随时更改这些变量的值，因此可以在不发布更新的情况下调整游戏行为。</p>
+
+<p>使用 <strong>Remote Settings</strong> 可以执行如下任务：</p>
+
+<ul>
+<li>调整游戏优化变量</li>
+<li>启用或禁用功能</li>
+<li>更改图形主题</li>
+</ul>
+
+<p>请参阅 <a href="UnityAnalyticsDashboardRemoteSettings.html">Remote Settings</a> 以了解更多信息。</p>
+
+<p><a name="Heatmaps"></a></p>
+
+<h2>热图</h2>
+
+<p>热图 (Heatmaps) 在游戏中以空间方式显示 Analytics 事件。</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsOverview8.jpg" alt="热图在 Unity Editor 内显示 Analytics 事件在场景中发生的位置">
+<figcaption>热图在 Unity Editor 内显示 Analytics 事件在场景中发生的位置</figcaption>
+</figure>
+
+<p>在试玩游戏时使用热图可发现性能和游戏玩法的瓶颈。因为热图需要大量 Analytics 事件，所以在游戏发布后以及生产环境不支持使用热图。</p>
+
+<p>请参阅有关<a href="https://bitbucket.org/Unity-Technologies/heatmaps/wiki/v2.md">热图 (Heatmaps)</a> 的 BitBucket 文档以了解更多信息。</p>
+
+<p>热图需要 <strong>Raw Data Export</strong> 功能；只有在订阅 Unity Pro 后才能使用该功能。</p>
+
+<h2>访问原始数据</h2>
+
+<p>Analytics Dashboard 上提供的报告不支持您要执行的分析类型时，可使用 <strong>Raw Data Export</strong> 来导出 Analytics 事件。您可以从 Analytics Dashboard 或使用 Raw Data Export REST API 以 JSON 或制表符分隔值格式导出数据。随后可以将数据导入数据库或分析工具。</p>
+
+<p>要使用 __Raw Data Export__，必须订阅 Unity-Pro。请参阅 <a href="UnityAnalyticsRawDataExport.html">Raw Data Export</a> 以了解更多信息。</p>
+
+<p><a name="SupportedPlatforms"></a> </p>
+
+<h2>支持的平台</h2>
+
+<p>Unity Analytics 服务支持以下平台：</p>
+
+<ul>
+<li>iOS</li>
+<li>Android</li>
+<li>Tizen</li>
+<li>Windows Phone 8.1</li>
+<li>Windows 应用商店 8.1（桌面版）</li>
+<li>Windows 应用商店 10.0（桌面版）</li>
+<li>Mac、PC、Linux 单机</li>
+<li>WebGL - 在 5.3 及后续版本中集成</li>
+</ul>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–06–22 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Unity 2017.1 中的新功能</span></p></li>
+<li><p><span class="page-history">Removed Demographics section.</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalytics.html"></a></span><div class="tip">Unity Analytics</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsSetup.html"></a></span><div class="tip">设置 Analytics</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="光照探针代理体 (Light Probe Proxy Volume) 组件 - Unity Manual">
+<title>光照探针代理体 (Light Probe Proxy Volume) 组件 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/LPPV.png">
+<meta name="description" content="光照探针代理体 (LPPV) 组件允许不能使用烘焙光照贴图的大型动态游戏对象（例如，大型粒子系统或蒙皮网格）使用更多光照信息。">
+<meta property="og:description" content="光照探针代理体 (LPPV) 组件允许不能使用烘焙光照贴图的大型动态游戏对象（例如，大型粒子系统或蒙皮网格）使用更多光照信息。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-LightProbeProxyVolume';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-LightProbeProxyVolume.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-LightProbeProxyVolume.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-LightProbeProxyVolume.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-LightProbeProxyVolume.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-LightProbeProxyVolume.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-LightProbeProxyVolume.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-LightProbeProxyVolume.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-LightProbeProxyVolume.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-LightProbeProxyVolume.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-LightProbeProxyVolume.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-LightProbeProxyVolume.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-LightProbeProxyVolume.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-LightProbeProxyVolume.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-LightProbeProxyVolume.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-LightProbeProxyVolume.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-LightProbeProxyVolume.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-LightProbeProxyVolume.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-LightProbeProxyVolume.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-LightProbeProxyVolume.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-LightProbeProxyVolume.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-LightProbeProxyVolume.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-LightProbeProxyVolume.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-LightProbeProxyVolume.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-LightProbeProxyVolume.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="LightingOverview.html">光照</a></li>
+<li><a href="GIIntro.html">全局光照</a></li>
+<li><a href="LightProbes.html">光照探针</a></li>
+<li>光照探针代理体 (Light Probe Proxy Volume) 组件</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LightProbes-MeshRenderer.html"></a></span><div class="tip">光照探针和网格渲染器</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ReflectionProbes.html"></a></span><div class="tip">反射探针</div>
+</div>
+</div></div>
+<h1>光照探针代理体 (Light Probe Proxy Volume) 组件</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<figure>
+<img src="../uploads/Main/LPPV.png" alt="">
+</figure>
+
+<p><strong>光照探针代理体</strong> (LPPV) 组件允许不能使用烘焙光照贴图的大型动态游戏对象（例如，大型粒子系统或蒙皮网格）使用更多光照信息。</p>
+
+<p>默认情况下，探针光照渲染器从插入于场景内周围光照探针之间的单个<a href="LightProbes.html">光照探针</a>接受光照。因此，游戏对象在整个表面上具有恒定的环境光照。此光照使用球谐函数，因此具有旋转渐变，但没有空间渐变。在更大的游戏对象或粒子系统上，这一点更明显。游戏对象上的光照与锚点处的光照相匹配，如果游戏对象跨越光照渐变，游戏对象的某些部分可能看起来不正确。</p>
+
+<p>__光照探针代理体__组件在包围体内生成插值光照探针的 3D 网格。可以在该组件的 UI 中指定此网格的分辨率。插值光照探针的球谐函数 (SH) 系数将上传到 3D 纹理中。随后在渲染时会对包含 SH 系数的 3D 纹理进行采样以便计算对漫射环境光照的影响。这会向探针光照游戏对象添加空间渐变。</p>
+
+<p><a href="shader-StandardShader.html">标准着色器</a>支持此功能。为了将此功能添加到自定义着色器，请使用 <code>ShadeSHPerPixel</code> 函数。要了解如何实现此函数，请参阅本页底部的<a href="#SampleShader">粒子系统示例着色器</a>代码示例。</p>
+
+<h2>何时使用该组件</h2>
+
+<p>Unity 中的大多数渲染器组件都包含光照探针。光照探针有三个选项：</p>
+
+<ul>
+<li><p>__Off__：渲染器不使用任何插值光照探针。</p></li>
+<li><p>__Blend Probes__（默认值）：渲染器使用一个插值光照探针。</p></li>
+<li><p>__Use Proxy Volume__：渲染器使用插值光照探针的 3D 网格。</p></li>
+</ul>
+
+<p>将 <strong>Light Probes</strong> 属性设置为 <strong>Use Proxy Volume</strong> 时，游戏对象必须已连接__光照探针代理体__ (LPPV) 组件。可以在同一游戏对象上添加 LPPV 组件，也可通过 <strong>Proxy Volume Override</strong> 属性使用（借用）来自另一个游戏对象的 LPPV 组件。如果 Unity 无法在当前游戏对象或 Proxy Volume Override 游戏对象中找到 LPPV 组件，则会在渲染器的底部显示一条警告消息。</p>
+
+<figure>
+<img src="../uploads/Main/LightProbeProxyVolumeMeshRendererWindow.png" alt="">
+</figure>
+
+<h3>示例</h3>
+
+<figure>
+<img src="../uploads/Main/LightProbeProxyVolumeExample.png" alt="使用光照探针代理体组件的简单网格渲染器的示例">
+<figcaption>使用光照探针代理体组件的简单网格渲染器的示例</figcaption>
+</figure>
+
+<p>在以上场景中，地板上有两个平面使用发出大量光线的材质。请注意：</p>
+
+<ul>
+<li><p>使用 LPPV 组件时，环境光会在几何体上发生变化。应使用一个插值光照探针在几何体的每一侧创建一个恒定颜色。</p></li>
+<li><p>几何体没有使用静态光照贴图，球体表示插值光照探针。它们是 <strong>Gizmo Renderer</strong> 的一部分。</p></li>
+</ul>
+
+<h3>如何使用该组件</h3>
+
+<p>生成插值光照探针 3D 网格的区域受 <strong>Bounding Box Mode</strong> 属性的影响。</p>
+
+<figure>
+<img src="../uploads/Main/LPPVBoundingBoxMode.png" alt="">
+</figure>
+
+<p>有三个可用选项：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Bounding Box Mode：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">
+<strong>Automatic Local__（默认值）| 此模式下将计算局部空间包围盒。在此包围盒内生成插值光照探针位置。如果渲染器组件未附加到游戏对象，则会生成默认包围盒。包围盒计算围绕当前渲染器进行，并将沿着层级视图往下的所有渲染器的 </strong>Light Probes__ 属性设置为 <strong>Use Proxy Volume</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Automatic World</strong></td>
+	<td style="text-align:left;">此模式下围绕当前渲染器计算包围盒，且沿着层级视图往下的所有渲染器的 <strong>Light Probes</strong> 属性均设置为 <strong>Use Proxy Volume</strong>。该包围盒采用世界空间。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Custom</strong></td>
+	<td style="text-align:left;">此模式下使用自定义包围盒。在游戏对象的局部空间中指定包围盒。提供了包围盒编辑工具。可以修改 UI 中的 <strong>Size</strong> 和 <strong>Origin</strong> 值来手动编辑包围体。</td>
+</tr>
+</tbody>
+</table>
+
+<figure>
+<img src="../uploads/Main/LightProbeProxyVolumeWindow2.png" alt="">
+</figure>
+
+<p><strong>Automatic Local</strong> 与 <strong>Automatic World</strong> 之间的主要区别在于，在 <strong>Automatic Local</strong> 中，大型层级视图中的游戏对象使用来自父游戏对象的相同 LPPV 组件时，包围盒的计算需要耗费更多资源。然而，生成的包围盒大小可能更小，这意味着光照数据更紧凑。</p>
+
+<p>包围体内的插值光照探针的数量受 <strong>Proxy Volume Resolution</strong> 属性的影响。有两个选项：</p>
+
+<ul>
+<li><p>__Automatic__（默认值）- 使用指定的单位面积的插值光照探针数量以及包围盒大小来计算每个轴上的分辨率。</p></li>
+<li><p><strong>Custom</strong> - 允许在每个轴上指定不同分辨率（见下文）。</p></li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/LightProbeProxyVolumeWindow3.png" alt="">
+</figure>
+
+<p><strong>注意：</strong>每个轴上的最终分辨率必须是 2 的幂，并且分辨率的最大值为 32。</p>
+
+<p><strong>Probe Position Mode</strong> 指定插值光照探针相对于单元格中心的位置。在某些插值光照探针穿过墙壁或其他几何体并导致光照泄漏时，此选项可能很有用。以下示例使用 4x4 网格分辨率来显示 2D 视图中的 <strong>Cell Corner</strong> 与 <strong>Cell Center</strong> 之间的区别：</p>
+
+<figure>
+<img src="../uploads/Main/LightProbeProxyVolumeWindow4.png" alt="">
+</figure>
+
+<h2>比较图像</h2>
+
+<p>1.使用标准着色器的简单网格渲染器：</p>
+
+<pre><code>![具有光照探针代理体（分辨率：4x1x1）](../uploads/Main/LightProbeProxyVolumeExample1.png)
+
+![没有光照探针代理体](../uploads/Main/LightProbeProxyVolumeExample2.png)
+</code></pre>
+
+<p>2.使用标准着色器的带蒙皮的网格渲染器：</p>
+
+<pre><code>![具有光照探针代理体（分辨率：2x2x2）](../uploads/Main/LightProbeProxyVolumeExample3.png)
+
+![没有光照探针代理体](../uploads/Main/LightProbeProxyVolumeExample4.png)
+</code></pre>
+
+<p><a name="SampleShader"></a> </p>
+
+<h2>使用 ShadeSHPerPixel 函数的粒子系统示例着色器</h2>
+
+<pre><code>Shader "Particles/AdditiveLPPV" {
+Properties {
+    _MainTex ("Particle Texture", 2D) = "white" {}
+    _TintColor ("Tint Color", Color) = (0.5,0.5,0.5,0.5)
+}
+
+Category {
+    Tags { "Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent" }
+    Blend SrcAlpha One
+    ColorMask RGB
+    Cull Off Lighting Off ZWrite Off
+    
+    SubShader {
+        Pass {
+        
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #pragma multi_compile_particles
+            #pragma multi_compile_fog
+
+            // 指定目标
+            #pragma target 3.0
+            
+            #include "UnityCG.cginc"
+            
+            // 必须包含此头才能访问 ShadeSHPerPixel
+            #include "UnityStandardUtils.cginc"
+                        
+            fixed4 _TintColor;
+            sampler2D _MainTex;
+            
+            struct appdata_t {
+                float4 vertex : POSITION;
+                float3 normal : NORMAL;
+                fixed4 color : COLOR;
+                float2 texcoord : TEXCOORD0;                
+            };
+
+            struct v2f {
+                float4 vertex : SV_POSITION;
+                fixed4 color : COLOR;
+                float2 texcoord : TEXCOORD0;
+                UNITY_FOG_COORDS(1)
+                float3 worldPos : TEXCOORD2;
+                float3 worldNormal : TEXCOORD3;
+            };
+            
+            float4 _MainTex_ST;
+
+            v2f vert (appdata_t v)
+            {
+                v2f o;
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                o.worldNormal = UnityObjectToWorldNormal(v.normal);
+                o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
+                o.color = v.color;
+                o.texcoord = TRANSFORM_TEX(v.texcoord,_MainTex);
+                UNITY_TRANSFER_FOG(o,o.vertex);
+                return o;
+            }
+            
+            fixed4 frag (v2f i) : SV_Target
+            {           
+                half3 currentAmbient = half3(0, 0, 0);
+                half3 ambient = ShadeSHPerPixel(i.worldNormal, currentAmbient, i.worldPos);
+                fixed4 col = _TintColor * i.color * tex2D(_MainTex, i.texcoord);
+                col.xyz += ambient;
+                UNITY_APPLY_FOG_COLOR(i.fogCoord, col, fixed4(0,0,0,0)); // 根据混合模式，雾效变为黑色
+                return col;
+            }
+            ENDCG 
+        }
+    }   
+}
+}
+
+</code></pre>
+
+<h2>硬件要求</h2>
+
+<p>该组件至少需要 Shader Model 4 图形硬件和 API 支持，包括对具有 32 位浮点格式和线性过滤的 3D 纹理的支持。</p>
+
+<p>要正常工作，场景需要通过__光照探针组__组件来包含光照探针。如果未满足要求，则渲染器或光照探针代理体组件检视面板将显示一条警告消息。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LightProbes-MeshRenderer.html"></a></span><div class="tip">光照探针和网格渲染器</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ReflectionProbes.html"></a></span><div class="tip">反射探针</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

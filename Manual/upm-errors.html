@@ -1,0 +1,362 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="故障排除 - Unity Manual">
+<title>故障排除 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/PackageManagerUI-StatusBar_Network.png">
+<meta name="description" content="This section provides information on the following issues:">
+<meta property="og:description" content="This section provides information on the following issues:">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'upm-errors';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/upm-errors.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/upm-errors.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/upm-errors.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/upm-errors.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/upm-errors.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/upm-errors.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/upm-errors.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/upm-errors.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/upm-errors.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/upm-errors.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/upm-errors.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/upm-errors.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/upm-errors.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/upm-errors.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/upm-errors.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/upm-errors.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/upm-errors.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/upm-errors.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/upm-errors.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/upm-errors.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/upm-errors.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/upm-errors.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/upm-errors.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/upm-errors.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="Packages.html">Packages</a></li>
+<li>故障排除</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="upm-conflicts-override.html"></a></span><div class="tip">Overriding Unity's conflict resolution</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="upm-network.html"></a></span><div class="tip">Network issues</div>
+</div>
+</div></div>
+<h1>故障排除</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This section provides information on the following issues:</p>
+
+<ul>
+<li><a href="#Errors">Error messages in the Packages window</a></li>
+<li><a href="#Missing">Package Manager missing or window doesn’t open</a></li>
+<li><a href="#Upgrade">Problems after upgrading Unity to new version</a></li>
+<li><a href="#Failed">Package installation fails</a></li>
+<li><a href="#Unrecognized">Packages not recognized</a></li>
+<li><a href="#HostFXR">Loading error for hostfxr.dll on Windows</a></li>
+<li><a href="#Reset">Resetting your Project’s package configuration</a></li>
+<li><a href="#ssh-add">Authentication issues with Git URLs</a></li>
+</ul>
+
+<p><a name="Errors"></a></p>
+
+<h2>Error messages in the Packages window</h2>
+
+<p>The Package Manager displays error indicators in the <a href="upm-ui.html">Packages window</a> when it encounters problems:</p>
+
+<ul>
+<li><strong>System-wide issues</strong></li>
+</ul>
+
+<p>Error messages that appear in the <a href="upm-ui-details.html#StatusBar">status bar</a> indicate the Package Manager has detected an issue that is not related to a specific package. For example, if the Package Manager cannot access the <a href="upm-concepts.html#Registry">package registry server</a>, it displays this message in the status bar:</p>
+
+<p><img src="../uploads/Main/PackageManagerUI-StatusBar_Network.png" alt="Network error message"> </p>
+
+<p>If your network cannot reach the package registry server, it is probably because there is a connection problem with the network. When you or your system administrator <a href="upm-network.html">fix the network error</a>, the status bar clears.</p>
+
+<ul>
+<li><strong>Package-specific issues</strong></li>
+</ul>
+
+<p>If a specific package has a problem when loading or installing, the error icon (<img src="../uploads/Main/PackageManagerUI-errorflag.png" alt="error indicator">) appears in the <a href="upm-ui-list.html">package list</a> next to the compromised package. To find out what the problem is, open the compromised package’s <a href="upm-ui-details.html">details view</a>.</p>
+
+<p><a name="Missing"></a></p>
+
+<h2>Package Manager missing or window doesn’t open</h2>
+
+<p>If your <code>package.manifest</code> file is malformed, an error similar to this appears in your Unity console:</p>
+
+<pre><code>Failed to resolve packages: The file [&lt;project-path&gt;/Packages/manifest.json] is not valid JSON:
+  Unexpected token '}' at 44:1
+  }
+</code></pre>
+
+<p>You can use the information contained in the error message to fix the JSON. There are a number of online validators that you can use to try to correct the problem. Once you save the corrected file, Unity reloads the <strong>Packages</strong> window. </p>
+
+<p>If your <code>package.manifest</code> file is missing the reference to the <strong>com.unity.package-manager-ui</strong> package, you might not see any error messages in the console, and your packages might appear in the Project view, but you can’t open the <strong>Packages</strong> window because the <strong>Package Manager</strong> menu item does not appear in the <strong>Window</strong> menu. You can either <a href="#Reset">reset your Project’s package configuration</a> or add the following to the dependencies list:</p>
+
+<pre><code class="json">    "com.unity.package-manager-ui": "2.1.1",
+</code></pre>
+
+<p>If the <strong>Packages</strong> window is still missing, then restart Unity. </p>
+
+<p>If you are still experiencing problems, check to see if your Project manifest uses <strong>“exclude”</strong> as a package version. This is an obsolete value for the <a href="upm-manifestPrj.html#dependencies">dependencies</a> attribute. If you find any lines like these, remove the entire line. Package Manager only installs packages that are explicitly included as a dependency in your Project, so once you remove that entry, Package Manager ignores the package and doesn’t install it.</p>
+
+<p>If the Package Manager still fails to load, follow the procedures under <a href="#Unrecognized">Packages not recognized</a> and <a href="#Reset">Resetting your Project’s package configuration</a>.</p>
+
+<p><a name="Upgrade"></a></p>
+
+<h2>Problems after upgrading Unity to new version</h2>
+
+<p>When you upgrade a Project to a newer Unity version, the Package Manager automatically updates incompatible packages to newer compatible versions. However, if your package doesn’t compile, the Package Manager displays error messages in the Console.</p>
+
+<p>To correct these messages, read the error messages and fix any problems you can. For example, a package might be missing a dependency on another package or version. In that case, you can try and install the package yourself. </p>
+
+<p>You can also try the following sequence of solutions until you find something that works:</p>
+
+<ul>
+<li>Back up and then delete the <code>Packages</code> folder under your Project.</li>
+<li>Back up and then delete the package sources in your Project’s <code>Packages</code> folder, leaving only the <code>manifest.json</code> file. Then try to reload the Project.</li>
+<li>Create a new empty Project. If the Packages window loads successfully, replace the <code>Library/PackageCache/com.unity.package-manager-ui@&lt;version&gt;</code> folder in the failing Project with the same folder from the newly created Project.</li>
+<li>As a last resort, you can <a href="#Reset">reset your Project</a> to the default package configuration and add back packages one at a time until it works.</li>
+</ul>
+
+<p><a name="Failed"></a></p>
+
+<h2>Package installation fails</h2>
+
+<p>If you are trying to install a new package from the registry and it is not working, it might be due to permission problems. </p>
+
+<p>You must have full permissions on the cache folder: </p>
+
+<ul>
+<li>Windows: <code>C:\Users\yourname\AppData\Local\Unity\cache</code>
+</li>
+<li>MacOS: <code>~/Users/Library/Unity/cache on MacOS</code>
+</li>
+</ul>
+
+<p>It might be a problem with the network. Check your <a href="upm-network.html#Firewall">firewall</a> and <a href="upm-network.html#Proxy">proxy</a> settings.</p>
+
+<p>Sometimes institutional environments, such as schools, government offices, or network-protected workplaces set up proxy servers to control traffic between the network and the Internet, and use their own server certificates which are not recognized by Unity or the Package Manager. Talk to your network administrator.</p>
+
+<p><a name="Unrecognized"></a></p>
+
+<h2>Packages not recognized</h2>
+
+<p>If you see a lot of compilation errors, this might indicate that Unity is not recognizing the packages in your existing Project. In this case, you might be missing a .NET component.</p>
+
+<p>For Windows:</p>
+
+<ol>
+<li>Download and install <a href="https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio">Visual Studio 2017 version 15.9.0</a> or higher with the <strong>.NET Core cross-platform development workload</strong> selected under <strong>Other Toolsets</strong>.</li>
+<li>Download and install the <a href="https://dotnet.microsoft.com/download">.NET SDK v2.2.101</a> component.</li>
+</ol>
+
+<p>For MacOS: </p>
+
+<ol>
+<li><p>Download and install the <a href="https://dotnet.microsoft.com/download">.NET SDK v2.2.101</a> component. </p></li>
+<li><p>Install any recommended updates in Visual Studio</p></li>
+<li><p>Use <a href="https://brew.sh/">homebrew</a> to brew and install <strong>mono</strong>:</p></li>
+</ol>
+
+<pre><code class="shell">  brew update
+  brew install mono # optional
+  brew upgrade mono
+</code></pre>
+
+<ol>
+<li><p>If necessary, delete the <code>Library/obj/temp</code> folder under your Project and restart Unity. </p></li>
+<li><p>If you are still experiencing difficulties, try rebooting your computer as well. </p></li>
+</ol>
+
+<p><a name="HostFXR"></a></p>
+
+<h2>Loading error for hostfxr.dll on Windows</h2>
+
+<p>If the Console reports that the <code>hostfxr.dll</code> library was found, but Unity failed to load it from <code>C:\&lt;path_to_app&gt;\hostfxr.dll</code>, you can fix this error on Windows 7 or Windows Server 2008 R2 by installing both <a href="https://support.microsoft.com/en-ca/help/2999226/update-for-universal-c-runtime-in-windows">KB2999226</a> and <a href="https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot">KB2533623</a> patches.</p>
+
+<p><a name="Reset"></a></p>
+
+<h2>Resetting your Project’s package configuration</h2>
+
+<p>If a Project has too many package issues, you can reset your Project back to the <strong>default package configuration</strong> for the Editor’s version of Unity. This operation resets all packages in your Project. This might not fix the source of the problem, but it can help you figure out what the problem is. </p>
+
+<p><strong>NOTE:</strong> You can’t undo resetting your package configuration, so make sure you back up the <code>manifest.json</code> file first or make sure your Project is under source control. You can also take extra precautions by <a href="#Cloning">cloning your Project</a> and testing out the operation on the clone before proceeding.</p>
+
+<p>To return to the default package configuration, select <strong>Reset Packages to defaults</strong> from the Help menu.</p>
+
+<figure>
+<img src="../uploads/Main/upm-errors-reset.png" alt="Help &gt; Reset Packages to defaults">
+<figcaption>Help &gt; Reset Packages to defaults</figcaption>
+</figure>
+
+<p><a name="Cloning"></a></p>
+
+<h3>Resetting a clone of your Project</h3>
+
+<p>You can also test the return to the default packages before you perform the final change:</p>
+
+<ol>
+<li><p>Clone your Project by copy-pasting your Project folder and renaming it so that it is easy to find (for example, if your Project is called <code>MyProject</code> then you could use something like <code>clone_MyProject</code>).</p></li>
+<li><p>Load your newly cloned Project.</p></li>
+<li>
+<p>From the Help menu, select <strong>Reset Packages to defaults</strong>. </p>
+
+<p>Depending on the size of your Project, this might take a few minutes. </p>
+</li>
+<li><p>Check that it successfully reset the packages. If so, you can perform the operation safely on the original Project. </p></li>
+</ol>
+
+<p><a name="ssh-add"></a></p>
+
+<h2>Authentication issues with Git URLs</h2>
+
+<p>If you are using the SSH protocol to <a href="upm-git.html#Git-SSH">install a package by Git URL</a>, you might get an authentication error from Git, even if you are running an <strong>ssh-agent</strong> in the background and your PID environment variables are set properly.</p>
+
+<p>While your script can successfully start the <strong>ssh-agent</strong> in the background, the exported environment variables are only available to the Bash shell running the script and to any child process it launches from that point on. This is because your script cannot change environment variables from parent processes, unrelated processes, or previously created child processes. And even if the script is located in <code>.bashrc</code>, it only gets executed in Bash shells.</p>
+
+<p>When you launch Unity or the Unity Hub (both in Windows and macOS) by double-clicking the Unity icon or using the Hub, it is not running in a shell, so the script is not executed. This means that the Unity Editor process doesn’t have these variables set, so ultimately the Git process invoked by Unity doesn’t have them either. </p>
+
+<p>To solve this issue, you can either: </p>
+
+<ul>
+<li>Open a Bash shell first (before opening the Hub) and <a href="https://docs.unity3d.com/Manual/CommandLineArguments.html">manually launch the Unity Editor</a> from that shell.</li>
+<li>If you are on Windows, you can use the <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/setx">setx</a> command to permanently set the environment variables in the Windows registry before the Hub process starts. This solution works best if you can ensure that the script runs once on startup and that the Hub does not start with Windows. For example:</li>
+</ul>
+
+<pre><code class="bash"># Expose env variables to native windows
+setx SSH_AGENT_PID "$SSH_AGENT_PID"
+setx SSH_AUTH_SOCK "$SSH_AUTH_SOCK"
+</code></pre>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2019–04–11 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="upm-conflicts-override.html"></a></span><div class="tip">Overriding Unity's conflict resolution</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="upm-network.html"></a></span><div class="tip">Network issues</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

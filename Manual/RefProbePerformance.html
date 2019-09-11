@@ -1,0 +1,231 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="反射探针性能和优化 - Unity Manual">
+<title>反射探针性能和优化 - Unity Manual</title>
+<meta name="description" content="由于诸多原因，渲染反射探针的立方体贴图需要大量的处理器时间：">
+<meta property="og:description" content="由于诸多原因，渲染反射探针的立方体贴图需要大量的处理器时间：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'RefProbePerformance';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/RefProbePerformance.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/RefProbePerformance.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/RefProbePerformance.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/RefProbePerformance.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/RefProbePerformance.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/RefProbePerformance.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/RefProbePerformance.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/RefProbePerformance.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/RefProbePerformance.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/RefProbePerformance.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/RefProbePerformance.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/RefProbePerformance.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/RefProbePerformance.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/RefProbePerformance.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/RefProbePerformance.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/RefProbePerformance.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/RefProbePerformance.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/RefProbePerformance.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/RefProbePerformance.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/RefProbePerformance.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/RefProbePerformance.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/RefProbePerformance.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/RefProbePerformance.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/RefProbePerformance.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="LightingOverview.html">光照</a></li>
+<li><a href="GIIntro.html">全局光照</a></li>
+<li><a href="ReflectionProbes.html">反射探针</a></li>
+<li>反射探针性能和优化</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AdvancedRefProbe.html"></a></span><div class="tip">高级反射探针功能</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightModes.html"></a></span><div class="tip">光照模式</div>
+</div>
+</div></div>
+<h1>反射探针性能和优化</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>由于诸多原因，渲染反射探针的立方体贴图需要大量的处理器时间：</p>
+
+<p>1.必须使用探针原点处的“摄像机”单独渲染立方体贴图六个面中的每一面。</p>
+
+<p>2.对于反射的每个反弹级别，探针都需要单独的时间进行渲染（请参阅<a href="AdvancedRefProbe.html">高级反射探针</a>的文档以了解更多详细信息）。</p>
+
+<p>3.立方体贴图的各种 Mipmap 级别必须经过模糊处理才能进行光泽反射。</p>
+
+<p>渲染探针所花费的时间会影响 Editor 中的烘焙工作流程，更重要的是会影响播放器的运行时性能。以下是将反射探针的性能影响降至最低的一些提示。</p>
+
+<h2>一般提示</h2>
+
+<p>以下问题会同时影响脱机烘焙<em>和</em>运行时性能。</p>
+
+<h3>分辨率</h3>
+
+<p>立方体贴图的分辨率越高，渲染时间就越长。可以通过在反射细节不太重要的位置设置较低分辨率来优化探针（例如，如果反射对象较小和/或较远，自然就会显示较少的细节）。在细节明显的位置仍应当使用较高的分辨率。</p>
+
+<h3>剔除遮罩 (Culling Mask)</h3>
+
+<p>提高普通摄像机性能的一项标准技术是使用 <strong>Culling Mask</strong> 属性来避免渲染无关紧要的对象；该技术同样适用于反射探针。例如，如果场景包含许多小对象（例如，岩石和植物），可以考虑将它们全部放在同一层上，然后使用剔除遮罩来避免在反射中渲染它们。</p>
+
+<h3>纹理压缩</h3>
+
+<p>To optimize the rendering time and lower the GPU memory consumption, use texture compression. To control texture compression for baked Reflection Probes, open the Lighting window (menu: <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong>), navigate to <strong>Environmental Lighting</strong> &gt; <strong>Reflections</strong> and use the <strong>Compression</strong> drop-down menu. Note that real-time Reflection Probes are not compressed in memory, and their size in memory depends on Resolution and HDR settings. Because of this, sampling real-time Reflection Probes is usually more resource-intensive than sampling baked Reflection Probes.</p>
+
+<h2>实时探针优化</h2>
+
+<p>实时探针的渲染开销通常高于 Editor 中的烘焙探针。实时探针的更新可能非常频繁，如果管理不当，可能会对帧率产生影响。考虑到这一点，实时探针提供了以下属性，让您尽可能高效处理探针渲染：</p>
+
+<h3>刷新模式 (Refresh Mode)</h3>
+
+<p>通过 <strong>Refresh Mode</strong> 可选择探针的更新时间。就处理器时间而言，最耗费资源的选项是 <strong>Every Frame</strong>。此模式可通过最少的编程工作提供最频繁的更新，但如果对所有探针都使用此模式，可能会遇到性能问题。</p>
+
+<p>如果此模式设置为 __On Awake__，探针将在运行时更新，但只在场景开始时更新一次。如果场景（或场景的一部分）在运行时设置好，而在其生命周期内不再改变，则此模式非常有用。</p>
+
+<p>最后一个模式 <strong>Via Scripting</strong> 允许您从脚本控制探针更新。尽管在编写脚本时需要耗费一些精力，但这种方法确实可以实现有用的优化。例如，您可以根据经过对象的表观大小更新探针（即，小对象或远处的大对象不值得更新）。</p>
+
+<h3>时间切片 (Time Slicing)</h3>
+
+<p>上述 <strong>Refresh Mode</strong> 设置为 <strong>Every Frame</strong> 时，处理负载可能相当繁重。<strong>Time Slicing</strong> 允许您在几个帧之间分摊更新成本，从而减少任何给定时间的负载。此属性有三个不同的选项：</p>
+
+<p>1.<strong>All Faces at Once</strong> 将立即渲染立方体贴图的六个面（在同一帧上），但六个第一级 Mipmap 中每一个的模糊操作将在不同的帧上进行。然后，剩余的 Mipmap 将在单个帧上进行模糊处理，并将结果复制到另一个帧上的立方体贴图。因此，完整更新需要九帧才能完成。</p>
+
+<p>2.<strong>Individual Faces</strong> 与 <strong>All Faces at Once</strong> 的工作方式相同，只是立方体贴图每个面的初始渲染都在自己的帧上进行（而不是所有六个面都在第一帧上进行渲染）。完整更新需要十四帧才能完成；此选项对帧率的影响最小，但是假如光照条件突然改变时（例如，突然开灯），更新时间可能明显会相对较长。</p>
+
+<p>3.<strong>No Time Slicing</strong> 完全禁用时间切片操作，因此每次探针更新都在一个帧内进行。这样确保了反射与周围对象的外观精确同步，但是处理成本可能过高。</p>
+
+<p>与其他优化一样，您应该考虑在反射不太重要的位置使用质量较低的选项，而在能注意到细节的位置保留 <strong>No Time Slicing</strong> 选项。</p>
+
+<p><br></p>
+
+<h2><br></h2>
+
+<ul>
+<li><p><span class="page-history">5.6 版更新</span></p></li>
+<li><p><span class="page-edit">2017–06–06 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AdvancedRefProbe.html"></a></span><div class="tip">高级反射探针功能</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightModes.html"></a></span><div class="tip">光照模式</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

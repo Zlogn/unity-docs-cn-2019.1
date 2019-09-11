@@ -1,0 +1,250 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="NetworkReader 和 NetworkWriter 序列化程序 - Unity Manual">
+<title>NetworkReader 和 NetworkWriter 序列化程序 - Unity Manual</title>
+<meta name="description" content="使用 NetworkReader 和 NetworkWriter 类可将数据写入到字节流。">
+<meta property="og:description" content="使用 NetworkReader 和 NetworkWriter 类可将数据写入到字节流。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UNetReaderWriter';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UNetReaderWriter.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UNetReaderWriter.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UNetReaderWriter.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UNetReaderWriter.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UNetReaderWriter.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UNetReaderWriter.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UNetReaderWriter.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UNetReaderWriter.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UNetReaderWriter.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UNetReaderWriter.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UNetReaderWriter.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UNetReaderWriter.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UNetReaderWriter.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UNetReaderWriter.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UNetReaderWriter.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UNetReaderWriter.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UNetReaderWriter.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UNetReaderWriter.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UNetReaderWriter.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UNetReaderWriter.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UNetReaderWriter.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UNetReaderWriter.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UNetReaderWriter.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UNetReaderWriter.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UNet.html">多玩家和联网</a></li>
+<li><a href="UNetUsingHLAPI.html">多玩家高级 API</a></li>
+<li><a href="UNetUsingTransport.html">使用传输层 API</a></li>
+<li>NetworkReader 和 NetworkWriter 序列化程序</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetUsingTransport.html"></a></span><div class="tip">使用传输层 API</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityMultiplayerSettingUp.html"></a></span><div class="tip">设置 Unity Multiplayer</div>
+</div>
+</div></div>
+<h1>NetworkReader 和 NetworkWriter 序列化程序</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>使用 <a href="../ScriptReference/Networking.NetworkReader.html">NetworkReader</a> 和 <a href="../ScriptReference/Networking.NetworkWriter.html">NetworkWriter</a> 类可将数据写入到字节流。</p>
+
+<p>多玩家<a href="UNetUsingHLAPI.html">高级 API</a> 是用这些类构建的，并广泛使用这些类。但是，如果要实现自己的自定义传输功能，可直接使用这些类。这些类具有用于大量 Unity 类型的特定序列化函数（有关类型的完整列表，请参阅 <a href="../ScriptReference/Networking.NetworkWriter.Write.html">NetworkWriter.Write</a>）。</p>
+
+<p>要使用这些类，请创建一个写入器实例，并将单独变量写入到其中。这些变量在内部序列化为字节数组，并可通过网络来发送该数组。在接收端，字节数组的读取器实例按照完全相同的写入顺序对变量进行回读。</p>
+
+<p>这可与 <a href="../ScriptReference/Networking.MessageBase.html">MessageBase</a> 类结合使用来生成包含序列化网络消息的字节数组。</p>
+
+<pre><code>void SendMessage(short msgType, MessageBase msg, int channelId)
+{
+    // 将消息写入本地缓冲区
+    NetworkWriter writer = new NetworkWriter();
+    writer.StartMessage(msgType);
+    msg.Serialize(writer);
+    writer.FinishMessage();
+
+    myClient.SendWriter(writer, channelId);
+}
+</code></pre>
+
+<p>此消息经过正确的格式设置，从而可为其调用消息处理程序函数。</p>
+
+<h2>将 NetworkReader 和 NetworkWriter 类与 NetworkServerSimple 和 NetworkClient 类结合使用</h2>
+
+<p>以下代码示例是很低级的演示，使用了高级 API 中的最低级类来设置连接。</p>
+
+<p>以下是用于将客户端和服务器连接在一起的代码：</p>
+
+<pre><code>using UnityEngine;
+using UnityEngine.Networking;
+public class Serializer : MonoBehaviour {
+    NetworkServerSimple m_Server;
+    NetworkClient m_Client;
+    const short k_MyMessage = 100;
+
+    // 使用这样的服务器实例时，必须手动将其送入
+    void Update() {
+        if (m_Server != null)
+            m_Server.Update();
+    }
+
+    void StartServer() {
+        m_Server = new NetworkServerSimple();
+        m_Server.RegisterHandler(k_MyMessage, OnMyMessage);
+        if (m_Server.Listen(5555))
+            Debug.Log("Started listening on 5555");
+    }
+
+    void StartClient() {
+        m_Client = new NetworkClient();
+        m_Client.RegisterHandler(MsgType.Connect, OnClientConnected);
+        m_Client.Connect("127.0.0.1", 5555);
+    }
+
+    void OnClientConnected(NetworkMessage netmsg) {
+        Debug.Log("Client connected to server");
+        SendMessage();
+    }
+}
+</code></pre>
+
+<p>代码的下一部分使用网络读取器和网络写入器来发送消息，但会使用这些类中内置的消息处理程序：</p>
+
+<p>void SendMessage() {
+ NetworkWriter writer = new NetworkWriter();
+ writer.StartMessage(k_MyMessage);
+ writer.Write(42);
+ writer.Write(“What is the answer”);
+ writer.FinishMessage();
+ m_Client.SendWriter(writer, 0);
+}</p>
+
+<p>void OnMyMessage(NetworkMessage netmsg) {
+ Debug.Log(“Got message, size=” + netmsg.reader.Length);
+ var someValue = netmsg.reader.ReadInt32();
+ var someString = netmsg.reader.ReadString();
+ Debug.Log(“Message value=” + someValue + “ Message string=‘“ + someString + ”’”);
+}</p>
+
+<p>为消息处理程序设置消息时，应始终使用 <code>NetworkWriter.StartMessage()</code>（包括消息类型 ID）和 NetworkWriter.FinishMessage() 调用。如果不使用字节数组，可跳过该步骤。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetUsingTransport.html"></a></span><div class="tip">使用传输层 API</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityMultiplayerSettingUp.html"></a></span><div class="tip">设置 Unity Multiplayer</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

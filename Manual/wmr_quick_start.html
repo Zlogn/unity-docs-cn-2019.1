@@ -1,0 +1,452 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="*WMR* quick start guide - Unity Manual">
+<title>*WMR* quick start guide - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/hololens_camera_settings.png">
+<meta name="description" content="Windows Mixed Reality (WMR) 应用程序是通用 Windows 应用程序，并遵循与其他 Windows 应用商店应用程序相同的一般准则。此类应用程序的开发环境为 Visual Studio 2017，不需要安装额外的 SDK（Visual Studio 会安装必要的 SDK）。">
+<meta property="og:description" content="Windows Mixed Reality (WMR) 应用程序是通用 Windows 应用程序，并遵循与其他 Windows 应用商店应用程序相同的一般准则。此类应用程序的开发环境为 Visual Studio 2017，不需要安装额外的 SDK（Visual Studio 会安装必要的 SDK）。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'wmr_quick_start';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/wmr_quick_start.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/wmr_quick_start.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/wmr_quick_start.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/wmr_quick_start.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/wmr_quick_start.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/wmr_quick_start.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/wmr_quick_start.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/wmr_quick_start.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/wmr_quick_start.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/wmr_quick_start.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/wmr_quick_start.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/wmr_quick_start.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/wmr_quick_start.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/wmr_quick_start.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/wmr_quick_start.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/wmr_quick_start.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/wmr_quick_start.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/wmr_quick_start.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/wmr_quick_start.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/wmr_quick_start.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/wmr_quick_start.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/wmr_quick_start.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/wmr_quick_start.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/wmr_quick_start.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="XR.html">XR</a></li>
+<li><a href="XR-SDK_overviews.html">XR SDK</a></li>
+<li><a href="wmr_sdk_overview.html">Windows Mixed Reality</a></li>
+<li>*WMR* quick start guide</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="wmr_requirements.html"></a></span><div class="tip">WMR 硬件和软件要求</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="wmr_input_types.html"></a></span><div class="tip">WMR 输入和交互概念</div>
+</div>
+</div></div>
+<h1>
+<em>WMR</em> quick start guide</h1>
+
+<p>Windows Mixed Reality (WMR) 应用程序是通用 Windows 应用程序，并遵循与其他 <a href="windowsstore-gettingstarted.html">Windows 应用商店应用程序</a>相同的一般准则。此类应用程序的开发环境为 Visual Studio 2017，不需要安装额外的 SDK（Visual Studio 会安装必要的 SDK）。</p>
+
+<h2>安装所需的工具</h2>
+
+<p>在开发 Windows Mixed Reality 应用程序之前，必须在 PC 和头盔上安装许多工具。这些工具包括：</p>
+
+<ul>
+<li><p><a href="https://www.visualstudio.com/downloads/">Visual Studio 2017</a> 以及安装的所需工作负载（通用 Windows 平台开发和 Unity 游戏开发）。</p></li>
+<li><p><a href="https://go.microsoft.com/fwlink/?linkid=852626">HoloLens 模拟器和全息模板</a>（仅在 HoloLens 开发时需要）。</p></li>
+</ul>
+
+<p>为确保安装所有必需的工具来开发 Windows Mixed Reality 应用程序（在 HoloLens 和沉浸式头盔上），请按照 Microsoft 有关<a href="https://developer.microsoft.com/en-us/windows/mixed-reality/install_the_tools">安装工具 (Installing the Tools)</a> 的文档中的说明进行操作。</p>
+
+<p>有关 Windows Mixed Reality 开发的详细信息，请参阅 <a href="https://developer.microsoft.com/en-us/windows/mixed-reality/development_overview">Microsoft 的 WMR 文档</a>。</p>
+
+<p>安装所需工具后，请按照下面的简短指南来设置 Unity 项目并在 Windows Mixed Reality 设备上进行发布。</p>
+
+<h2>项目设置</h2>
+
+<p>Windows Mixed Reality 平台的 Unity 项目与其他平台的 Unity 项目非常相似，但有一些值得注意的例外。要完全支持 Windows Mixed Reality 功能，必须更改摄像机、性能和发布设置，如以下部分所述。</p>
+
+<h3>摄像机设置</h3>
+
+<p>确保要用于跟踪 HMD 位置的摄像机的 <strong>Tag</strong> 设置为 <strong>MainCamera</strong>。若要检查此设置，请选择要使用的摄像机，然后在 Inspector 窗口中查看 <strong>Tag</strong> 下拉选单。Unity 会自动将此标签应用于场景中的默认摄像机。</p>
+
+<figure>
+<img src="../uploads/Main/hololens_camera_settings.png" alt="HoloLens 的摄像机设置">
+<figcaption>HoloLens 的摄像机设置</figcaption>
+</figure>
+
+<p>对于 HoloLens，应将 <strong>Main Camera</strong> 的 <strong>Clear Flags</strong> 属性设置为 <strong>Solid Color</strong> 而非默认的 <strong>Skybox__，并将 </strong>Background__ 颜色设置为黑色 (R = 0, G = 0, B = 0, A = 0)。此外，还应该确保摄像机的 <strong>Transform</strong> 位置设置为 (0, 0, 0)。</p>
+
+<h3>性能设置</h3>
+
+<p>For HoloLens only, use the <strong>Fastest</strong> quality setting in <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Quality</strong> category. This maximizes performance and reduces power consumption. In particular, avoid soft shadows and shadow cascades, because they require too many resources to use on the HoloLens.</p>
+
+<figure>
+<img src="../uploads/Main/hololens_quality_settings.png" alt="Setting Quality for HoloLens">
+<figcaption>Setting Quality for HoloLens</figcaption>
+</figure>
+
+<p>要了解有关优化 Windows Mixed Reality 应用程序的更多信息，请参阅 Microsoft 关于 <a href="https://dev.windows.com/en-us/holographic/Performance_recommendations_for_Unity">Unity 性能建议 (Performance recommendations for Unity)</a> 的文档。</p>
+
+<h3>发布设置 (Publishing Settings)</h3>
+
+<p>To enable important system capabilities for a Windows Mixed Reality application, go to the <strong>Publishing Settings</strong> panel of the <strong>Player</strong> settings and check the box for each option you want to use from the <strong>Capabilities </strong>list.</p>
+
+<figure>
+<img src="../uploads/Main/capabilities.png" alt="System capability settings found in Publishing Settings panel">
+<figcaption>System capability settings found in Publishing Settings panel</figcaption>
+</figure>
+
+<p><strong>Note:</strong> Not all of the publishing settings in the <strong>Capabilities</strong> list are specific to Windows Mixed Reality. For more information, see the <a href="class-PlayerSettingsWSA.html">Player settings for the Universal Windows platform</a>.</p>
+
+<p>下表介绍了关于发布 Windows Mixed Reality 应用程序的重要功能设置：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>功能设置</strong></th>
+	<th style="text-align:left;"><strong>沉浸式头盔支持</strong></th>
+	<th style="text-align:left;"><strong>HoloLens<br>支持</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>InternetClient</strong></td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">提供对互联网连接的访问，以便与互联网建立传出连接。WMR 需要此功能来进行语音识别。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>InternetClientServer</strong></td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">提供对互联网连接的访问，包括来自互联网的未经请求的传入连接。应用程序可穿过防火墙来与计算机之间发送信息。WMR 需要此功能来进行语音识别。<br>注意：如果激活此功能，则无需使用 <strong>InternetClient</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>MusicLibrary</strong></td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">否</td>
+	<td style="text-align:left;">提供对音乐库和播放列表的访问，包括添加、更改或删除文件的功能。此设置允许在 WMR 应用程序中使用 <strong>VideoCapture</strong> 音频录制功能。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>PicturesLibrary</strong></td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">图片库，包括添加、更改或删除文件的功能。此功能还包括 HomeGroup 计算机上的图片库，以及本地连接的媒体服务器上的图片文件类型。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>VideosLibrary</strong></td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">否</td>
+	<td style="text-align:left;">视频库，包括添加、更改或删除文件的功能。此功能还包括 HomeGroup 计算机上的视频库，以及本地连接的媒体服务器上的视频文件类型。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>WebCam</strong></td>
+	<td style="text-align:left;">否</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">允许在应用程序中使用 <strong>PhotoCapture</strong> 和 <strong>VideoCapture</strong> 功能。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Microphone</strong></td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">允许在应用程序中使用语音识别功能。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Bluetooth</strong></td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">在应用程序中启用蓝牙通信。WMR 需要此功能才能启用 Windows Mixed Reality 空间控制器。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>SpatialPerception </strong></td>
+	<td style="text-align:left;">否</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">允许在应用程序中使用<a href="SpatialMapping.html">空间映射</a>。</td>
+</tr>
+</tbody>
+</table>
+
+<p>有关这些功能的更多详细信息，请参阅 <a href="https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/appxmanifestschema/element-capability">Microsoft 文档</a>。</p>
+
+<h2>导出 Visual Studio 解决方案</h2>
+
+<p>创建完项目并准备好对其进行测试后，请将项目导出到 Visual Studio 解决方案。要部署 WMR 应用程序，必须首先使用 Unity 构建 Visual Studio 解决方案。</p>
+
+<p>选择 <strong>File</strong> &gt; <strong>Build Settings__，然后从 </strong>Platform__ 列表中选择 <strong>Universal Windows Platform</strong>。现在单击窗口左下角的 <strong>Switch Platform</strong> 按钮来配置 Editor 以 Windows 为构建目标。</p>
+
+<figure>
+<img src="../uploads/Main/Build_setting_UWP.png" alt="Build Settings window showing Universal Windows Platform default settings">
+<figcaption>Build Settings window showing Universal Windows Platform default settings</figcaption>
+</figure>
+
+<p>对于标准构建，默认设置适合于 Windows Mixed Reality 沉浸式头盔。</p>
+
+<p>要以 HoloLens 为构建目标，应将 <strong>Target Device</strong> 设置更改为 <strong>HoloLens</strong>。</p>
+
+<p>下表列出了用于通用 Windows 平台的构建设置 (Build Settings)，并介绍了这些设置的用法。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>Setting</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Target Device</strong></td>
+	<td style="text-align:left;">以沉浸式头盔为构建目标时选择 <strong>Any Device__，而以 HoloLens 为构建目标时选择 </strong>HoloLens<strong>。此设置对于优化非常重要。 |
+|</strong>Build Type<strong>||选择 D3D (Direct3D) 或 XAML。|
+|| </strong>D3D<strong>| 提供比 XAML 更快的结果，因为应用程序中没有 XAML 层。这种情况下将在 3D 独占空间中构建应用程序，并且无法切换到 2D XAML 应用程序，也不能在生成后对此进行修改。 |
+|| </strong>XAML<strong>| 在应用程序上添加一个 XAML 代码层，允许用户从 3D 应用程序进行切换并打开 2D 应用程序。生成后可以修改 XAML 代码。采用这种设置最常见的例子是使用 HoloLens 的触摸键盘。 |
+| </strong>SDK<strong>||选择应用程序使用的特定 Windows 10 SDK 版本。默认情况下，此设置为 </strong>Latest installed<strong>。 |
+| </strong>Visual Studio Version<strong>|| 选择特定的 Visual Studio 版本来为其生成解决方案 (.sln)。默认设置为 </strong>Latest installed__，如果安装的是 Visual Studio 2017，则建议使用此设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Build and Run on</strong></td>
+	<td style="text-align:left;">选择在单击 <strong>Build and Run</strong> 按钮时运行应用程序的设备。默认设置为 <strong>Local Machine__，应该不需要更改此设置。<br></strong>注意__：单击 <strong>Build</strong> 按钮时，Unity 会忽略此选项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Copy References</strong></td>
+	<td style="text-align:left;">允许将 UnityPlayer.dll、关联的 dll 和数据复制到生成的解决方案文件夹，而不是直接从 Unity 安装文件夹中引用它们。这种情况下需要额外的空间，但生成的解决方案可移植（即使另一台计算机上没有安装 Unity，也可以将该解决方案复制到该计算机上并进行构建）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Unity C# Projects</strong></td>
+	<td style="text-align:left;">允许在生成的解决方案中包含项目中的脚本文件。仅当 <strong>Scripting Backend</strong> 设置为 <strong>.NET</strong> 时，此设置才可用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Development Build</strong></td>
+	<td style="text-align:left;">解锁调试功能，允许开发人员测试和调试构建的项目。这种情况下允许将构建的项目连接到 Unity Profiler，并提供了其他开发功能，例如更详细的调试日志输出。启用此设置还会使 <strong>Scripts Only Build</strong> 和 <strong>Autoconnect Profiler</strong> 设置变为可用状态。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Autoconnect Profiler</strong></td>
+	<td style="text-align:left;">允许 Unity 的内置性能分析器自动连接到构建版本。仅当启用了 <strong>Development Build</strong> 时，此设置才可用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Scripts Only Build</strong></td>
+	<td style="text-align:left;">仅构建项目的脚本。仅当启用了 <strong>Development Build</strong> 时，此设置才可用。</td>
+</tr>
+</tbody>
+</table>
+
+<p>Before you can build your app, you should configure your <strong>Player</strong> settings to build Windows Mixed Reality applications correctly:</p>
+
+<ol>
+<li>From the Build Settings window, click the <strong>Player Settings</strong> button, and then naigate to the <strong>XR Settings</strong> panel.</li>
+</ol>
+
+<p>2.启用 <strong>Virtual Reality Supported</strong>。</p>
+
+<p>3.单击 <strong>Virtual Reality Devices</strong> 列表中的 <strong>+</strong> 按钮，然后选择 <strong>Windows Mixed Reality</strong>。</p>
+
+<p>配置 Build Settings 后，单击 <strong>Build</strong> 按钮。将项目构建到新文件夹，并记住该位置。</p>
+
+<p>要从 Visual Studio 部署应用程序，请执行以下操作：</p>
+
+<p>1.在 Visual Studio 中，打开在构建项目的文件夹内已生成的解决方案文件 (.sln)。</p>
+
+<p>2.在 Visual Studio 主任务栏（下图从左到右）中，更改解决方案的目标平台，然后选择要运行解决方案的设备。</p>
+
+<pre><code>![](../uploads/Main/VS_buildOptions.png) 
+</code></pre>
+
+<p>3.单击 Run 按钮右侧的下拉箭头（标有绿色箭头），随后将显示可能的设备列表。</p>
+
+<p>从 Visual Studio 测试和运行 Windows Mixed Reality 应用程序时有四个主要选项：</p>
+
+<ul>
+<li><strong>Local Machine</strong></li>
+<li><strong>Remote Machine</strong></li>
+<li><strong>Device</strong></li>
+<li><strong>HoloLens Emulator</strong></li>
+</ul>
+
+<p>以下部分将详细介绍这些选项。并非这些选项全部适用于所有 WMR 设备；有些选项是 HoloLens 或沉浸式头盔所特有的。</p>
+
+<h3>Local Machine（仅限于沉浸式头盔）</h3>
+
+<p><strong>Local Machine</strong> 允许构建应用程序并将其安装到 Windows 10 PC 上的 Mixed Reality Portal 中。构建后，应用程序会自动在 PC 上运行，可通过沉浸式头盔对其进行测试。</p>
+
+<p>可随时通过“开始”菜单从 Mixed Reality Portal 中再次启动应用程序。</p>
+
+<h3>Remote Machine（仅限 HoloLens）</h3>
+
+<p><strong>Remote Machine</strong> 会提示输入要部署到的 HoloLens 或其他头盔的 IP 地址。如果在选择 <strong>Remote Machine</strong> 的情况下单击 __Run__，则会显示一个对话框，要求提供设备的 PIN。</p>
+
+<p>要获取此 PIN，请执行以下操作：</p>
+
+<p>1.开启 HoloLens 并选择 <strong>HoloLens Settings</strong>。</p>
+
+<p>2.选择 <strong>For Developers</strong> 选项卡，然后使用提供的开关按钮启用 <strong>Developer Mode</strong>。</p>
+
+<p>3.选择 <strong>Pair</strong> 按钮以获取 __PIN__，然后将其输入 Visual Studio 中的弹出框中。</p>
+
+<p>应用程序将远程安装到 HoloLens 上，并在构建过程完成后自动在设备上运行。</p>
+
+<h3>Device（仅限 HoloLens）</h3>
+
+<p><strong>Device</strong> 允许构建 Visual Studio 项目并将其部署到通过 USB 线缆连接到 PC 的 HoloLens 设备。</p>
+
+<p>单击 <strong>Run</strong> 时，Visual Studio 将构建项目，在连接的 HoloLens 上安装应用程序，并在构建过程完成后自动在设备上运行。</p>
+
+<h3>HoloLens Emulator（仅限 HoloLens）</h3>
+
+<p><strong>HoloLens Emulator</strong> 允许构建 Visual Studio 项目并在已安装的 HoloLens 模拟器上运行应用程序。此模拟器允许在将应用程序部署到 HoloLens 设备之前在 PC 上测试应用程序并模拟手势和其他输入。</p>
+
+<h3>在生成的解决方案中包含脚本（可选）</h3>
+
+<p>Tick the <strong>Unity C# Projects</strong> checkbox to include the scripting files from your project in the generated solution. This allows you to edit and debug your scripts without needing to re-export from Unity. You only need to re-export when your <strong>Project Settings</strong> or content change. This setting is only available when you set the <strong>Scripting Backend</strong> to <strong>.NET</strong>. </p>
+
+<p>You can use either <strong>IL2CPP</strong> or <strong>.NET</strong> scripting backends for your application. To change the <strong>Scripting Backend</strong>, navigate to the <strong>Other Settings</strong> panel on the <strong>Player</strong> settings and select the relevant backend in the <strong>Configuration</strong> section.</p>
+
+<p>有关 ILCPP 的更多信息，请参阅 Unity 关于 <a href="IL2CPP-HowItWorks.html">IL2CCP 的工作原理</a>的文档。</p>
+
+<p>有关构建到 Windows Mixed Reality 设备的更多信息，请参阅 Microsoft 关于<a href="https://dev.windows.com/en-us/holographic/Exporting_and_building_a_Unity_Visual_Studio_solution">导出和构建 Unity Visual Studio 解决方案 (Exporting and building a Unity Visual Studio solution)</a> 的文档。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–03–27 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 2017.3 版中添加了关于 XR API 变更的新内容</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="wmr_requirements.html"></a></span><div class="tip">WMR 硬件和软件要求</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="wmr_input_types.html"></a></span><div class="tip">WMR 输入和交互概念</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

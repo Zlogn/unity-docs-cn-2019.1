@@ -1,0 +1,455 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="视频播放器 (Video Player) 组件 - Unity Manual">
+<title>视频播放器 (Video Player) 组件 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/Video-1.jpg">
+<meta name="description" content="使用视频播放器组件可将视频文件附加到游戏对象，然后在运行时在游戏对象的纹理上播放。">
+<meta property="og:description" content="使用视频播放器组件可将视频文件附加到游戏对象，然后在运行时在游戏对象的纹理上播放。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-VideoPlayer';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-VideoPlayer.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-VideoPlayer.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-VideoPlayer.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-VideoPlayer.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-VideoPlayer.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-VideoPlayer.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-VideoPlayer.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-VideoPlayer.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-VideoPlayer.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-VideoPlayer.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-VideoPlayer.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-VideoPlayer.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-VideoPlayer.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-VideoPlayer.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-VideoPlayer.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-VideoPlayer.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-VideoPlayer.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-VideoPlayer.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-VideoPlayer.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-VideoPlayer.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-VideoPlayer.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-VideoPlayer.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-VideoPlayer.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-VideoPlayer.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="VideoPlayer.html">视频概述</a></li>
+<li>视频播放器 (Video Player) 组件</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="VideoPlayer.html"></a></span><div class="tip">视频概述</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="VideoPlayer-MigratingFromMovieTexture.html"></a></span><div class="tip">Migrating from MovieTexture to VideoPlayer</div>
+</div>
+</div></div>
+<h1>视频播放器 (Video Player) 组件</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>使用视频播放器<a href="Components.html">组件</a>可将<a href="Video.html">视频文件</a>附加到<a href="GameObjects.html">游戏对象</a>，然后在运行时在游戏对象的<a href="Textures.html">纹理</a>上播放。</p>
+
+<p>以下截屏显示了一个连接到球形游戏对象的视频播放器组件。</p>
+
+<p>默认情况下，视频播放器组件的__材质属性 (Material Property)__ 设置为 <em>_</em>MainTex__，这意味着视频播放器组件附加到具有渲染器的游戏对象时，它会自动将自身分配给该渲染器上的纹理（因为这是该游戏对象的主纹理）。此处，游戏对象有一个网格渲染器 (Mesh Renderer) 组件，因此视频播放器会自动将其分配给 Renderer 字段，这意味着视频剪辑会在网格渲染器的纹理上播放。</p>
+
+<figure>
+<img src="../uploads/Main/Video-1.jpg" alt="视频播放器组件附加到球形游戏对象，在游戏对象的主纹理（在本例中，为网格渲染器的纹理）上播放视频剪辑">
+<figcaption>视频播放器组件附加到球形游戏对象，在游戏对象的主纹理（在本例中，为网格渲染器的纹理）上播放视频剪辑</figcaption>
+</figure>
+
+<p>还可设置要播放视频的特定目标，包括：</p>
+
+<ul>
+<li><p><a href="class-Camera.html">摄像机</a>平面</p></li>
+<li><p><a href="class-RenderTexture.html">渲染纹理</a></p></li>
+<li><p><a href="Materials.html">材质</a>纹理参数</p></li>
+<li><p>组件中的任何<a href="class-TextureImporter.html">纹理</a>字段</p></li>
+</ul>
+
+<h2>VideoPlayer 组件参考</h2>
+
+<figure>
+<img src="../uploads/Main/Video-2.png" alt="视频播放器 (Video Player) 组件">
+<figcaption>视频播放器 (Video Player) 组件</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性</em></strong></th>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"><strong><em>功能</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Source</strong></td>
+	<td style="text-align:left;">选择视频源类型。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>Video Clip</strong></td>
+	<td style="text-align:left;">将<a href="class-VideoClip.html">视频剪辑</a>分配给视频编辑器。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Video Clip</strong></td>
+	<td style="text-align:left;">使用此字段来定义分配给视频播放器组件的视频剪辑。将视频文件拖放到此字段中，或单击该字段右侧的圆圈，然后从资源列表中选择文件（如果该文件位于 Project 文件夹中）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>URL</strong></td>
+	<td style="text-align:left;">从 URL（例如 http:// 或 file://）分配视频。Unity 在运行时从此 URL 读取视频。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>URL</strong></td>
+	<td style="text-align:left;">输入要分配给视频播放器的视频的 URL。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Browse…</strong></td>
+	<td style="text-align:left;">单击此项可快速浏览本地文件系统并打开以 file:// 开头的 URL。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Play On Awake</strong></td>
+	<td style="text-align:left;">勾选 <strong>Play On Awake</strong> 复选框可在场景启动时播放视频。如果希望在运行时的另一个点触发视频播放，请取消勾选此复选框。此情况下可使用 <code>Play()</code> 命令通过脚本触发视频播放。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Wait For First Frame</strong></td>
+	<td style="text-align:left;">如果勾选 <strong>Wait For First Frame</strong> 复选框，Unity 将在游戏开始前等待源视频的第一帧准备好显示。如果取消勾选此复选框，可能会丢弃前几帧以使视频时间与游戏的其余部分保持同步。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Loop</strong></td>
+	<td style="text-align:left;">勾选 <strong>Loop</strong> 复选框可使视频播放器组件在源视频到达结尾时循环播放视频。如果未勾选此复选框，视频到达结尾时将停止播放。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Playback Speed</strong></td>
+	<td style="text-align:left;">此滑动条和数字字段表示播放速度的乘数，为 0 到 10 之间的值。默认情况下，该字段设置为 1（正常速度）。如果该字段设置为 2，则视频以其正常速度的两倍进行播放。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Render Mode</strong></td>
+	<td style="text-align:left;">使用下拉选单来定义视频的渲染方式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>Camera Far Plane</strong></td>
+	<td style="text-align:left;">在摄像机的<a href="class-Camera.html">远平面</a>上渲染视频。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>Camera Near Plane</strong></td>
+	<td style="text-align:left;">在摄像机的<a href="class-Camera.html">近平面</a>上渲染视频。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Camera</strong></td>
+	<td style="text-align:left;">定义接收视频的<a href="class-Camera.html">摄像机</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Alpha</strong></td>
+	<td style="text-align:left;">添加到源视频的全局透明度级别。此属性允许透过平面看到平面背后的元素。请参阅<a href="VideoTransparency.html">视频透明度支持</a>文档以了解有关 Alpha 通道的更多信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>Render Texture</strong></td>
+	<td style="text-align:left;">将视频渲染到<a href="class-RenderTexture.html">渲染纹理</a>中。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Target Texture</strong></td>
+	<td style="text-align:left;">定义视频播放器组件用于渲染图像的渲染纹理。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>Material Override</strong></td>
+	<td style="text-align:left;">通过游戏对象渲染器的<a href="../ScriptReference/Material.html">材质</a>将视频渲染到游戏对象的选定纹理属性中。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Renderer</strong></td>
+	<td style="text-align:left;">视频播放器组件用于渲染图像的<a href="../ScriptReference/Renderer.html">渲染器</a>。设置为 <strong>None</strong> 时，使用与视频播放器组件位于同一游戏对象上的__渲染器<strong>。 |
+||| </strong>Material Property__</td>
+	<td style="text-align:left;">接受视频播放器组件图像的<a href="../ScriptReference/Material.SetTexture.html">材质纹理属性</a>的名称。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>API Only</strong></td>
+	<td style="text-align:left;">将视频渲染到 <a href="../ScriptReference/Video.VideoPlayer-texture.html">VideoPlayer.texture</a> 脚本 API 属性中。必须使用脚本将纹理分配给其预期目标。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Aspect Ratio</strong></td>
+	<td style="text-align:left;">在使用相应的__渲染模式 (Render Mode)<strong>时，用于填充__摄像机近平面 (Camera Near Plane)</strong>、<strong>摄像机远平面 (Camera Far Plane)</strong> 或__渲染纹理 (Render Texture)__ 的图像的宽高比。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>No Scaling</strong></td>
+	<td style="text-align:left;">不使用缩放。视频在目标矩形内居中。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>Fit Vertically</strong></td>
+	<td style="text-align:left;">对源进行缩放以垂直适应目标矩形，在必要时裁剪左侧和右侧或在每侧留下黑色区域。此情况下保留源宽高比。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>Fit Horizontally</strong></td>
+	<td style="text-align:left;">对源进行缩放以水平适应目标矩形，在必要时裁剪顶部和底部区域或在顶部和底部留下黑色区域。此情况下保留源宽高比。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>Fit Inside</strong></td>
+	<td style="text-align:left;">对源进行缩放以适合目标矩形而不必裁剪。根据需要，在左侧和右侧或上方和下方留下黑色区域。此情况下保留源宽高比。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>Fit Outside</strong></td>
+	<td style="text-align:left;">对源进行缩放以适应目标矩形，而不必在左侧和右侧或上方和下方留下黑色区域，可根据需要进行裁剪。此情况下保留源宽高比。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>Stretch</strong></td>
+	<td style="text-align:left;">在水平和垂直方向均进行缩放以适应目标矩形。不会保留源宽高比。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Audio Output Mode</strong></td>
+	<td style="text-align:left;">定义如何输出源的音频轨道。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>None</strong></td>
+	<td style="text-align:left;">不播放音频。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>Audio Source</strong></td>
+	<td style="text-align:left;">音频样本发送到选定<a href="class-AudioSource.html">音频源</a>，允许应用 Unity 的音频处理。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>Direct</strong></td>
+	<td style="text-align:left;">音频样本绕过 Unity 的音频处理，直接发送到音频输出硬件。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Controlled Tracks</strong></td>
+	<td style="text-align:left;">视频中的音频轨道数量。<br><br>仅在 <strong>Source</strong> 为 <strong>URL</strong> 时显示。<strong>Source</strong> 为 <strong>Video Clip</strong> 时，通过检查视频文件来确定轨道数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Track Enabled</strong></td>
+	<td style="text-align:left;">勾选相关复选框进行启用后，关联的音频轨道将用于播放。必须在播放前设置此项。<br><br>复选框左侧的文本提供有关音频轨道的信息，具体而言就是音频轨道编号、语言和通道数。<br><br>例如，在以上截屏中，文本为 Track 0 [und.1 ch]。这表示它是第一个音频轨道 (Track 0)，语言未定义 (und.)，并且该音频轨道有一个声道 (1 ch)，表示它是单声道音频轨道。<br><br>当源为 URL 时，此信息仅在播放期间可用。<br><br>仅当源是具有一个或多个音频轨道的视频剪辑或源为 URL（允许您指示在播放期间预计来自 URL 的音频轨道数）时，才显示此属性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>Audio Source</strong></td>
+	<td style="text-align:left;">用于播放音频轨道的<a href="class-AudioSource.html">音频源</a>。目标音频源也可以播放音频剪辑。<br><br>音频源的播放控件（脚本 API 中的 <code>Play On Awake</code> 和 <code>Play()</code>）不适用于视频源的音频轨道。<br><br>仅当 <strong>Audio Output Mode</strong> 设置为 <strong>Audio Source</strong> 时，才显示此属性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>Mute</strong></td>
+	<td style="text-align:left;">将关联的音频轨道静音。在 <strong>Audio Source</strong> 模式中，将使用音频源的控件。<br><br>仅当 <strong>Audio Output Mode</strong> 设置为 <strong>Direct</strong> 时，才显示此属性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>Volume</strong></td>
+	<td style="text-align:left;">关联音频轨道的音量。在 <strong>Audio Source</strong> 模式中，将使用音频源的音量。<br><br>仅当 <strong>Audio Output Mode</strong> 设置为 <strong>Direct</strong> 时，才显示此属性。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Video Player Scripting Example</h2>
+
+<p>The following script demonstrates a few of the VideoPlayer component’s features.</p>
+
+<pre><code>// Examples of VideoPlayer function
+
+using UnityEngine;
+
+public class Example : MonoBehaviour
+{
+    void Start()
+    {
+        // Will attach a VideoPlayer to the main camera.
+        GameObject camera = GameObject.Find("Main Camera");
+
+        // VideoPlayer automatically targets the camera backplane when it is added
+        // to a camera object, no need to change videoPlayer.targetCamera.
+        var videoPlayer = camera.AddComponent&lt;UnityEngine.Video.VideoPlayer&gt;();
+
+        // Play on awake defaults to true. Set it to false to avoid the url set
+        // below to auto-start playback since we're in Start().
+        videoPlayer.playOnAwake = false;
+
+        // By default, VideoPlayers added to a camera will use the far plane.
+        // Let's target the near plane instead.
+        videoPlayer.renderMode = UnityEngine.Video.VideoRenderMode.CameraNearPlane;
+
+        // This will cause our Scene to be visible through the video being played.
+        videoPlayer.targetCameraAlpha = 0.5F;
+
+        // Set the video to play. URL supports local absolute or relative paths.
+        // Here, using absolute.
+        videoPlayer.url = "/Users/graham/movie.mov";
+
+        // Skip the first 100 frames.
+        videoPlayer.frame = 100;
+
+        // Restart from beginning when done.
+        videoPlayer.isLooping = true;
+
+        // Each time we reach the end, we slow down the playback by a factor of 10.
+        videoPlayer.loopPointReached += EndReached;
+
+        // Start playback. This means the VideoPlayer may have to prepare (reserve
+        // resources, pre-load a few frames, etc.). To better control the delays
+        // associated with this preparation one can use videoPlayer.Prepare() along with
+        // its prepareCompleted event.
+        videoPlayer.Play();
+    }
+
+    void EndReached(UnityEngine.Video.VideoPlayer vp)
+    {
+        vp.playbackSpeed = vp.playbackSpeed / 10.0F;
+    }
+}
+</code></pre>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–05–07 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Unity 5.6 中的新功能</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="VideoPlayer.html"></a></span><div class="tip">视频概述</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="VideoPlayer-MigratingFromMovieTexture.html"></a></span><div class="tip">Migrating from MovieTexture to VideoPlayer</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

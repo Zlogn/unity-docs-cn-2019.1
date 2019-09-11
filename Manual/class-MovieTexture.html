@@ -1,0 +1,312 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Movie Textures - Unity Manual">
+<title>Movie Textures - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/MovieTextureInInspector.png">
+<meta name="description" content="Note: MovieTexture is due to be deprecated in a future version of Unity. You should use VideoPlayer for video download and movie playback.">
+<meta property="og:description" content="Note: MovieTexture is due to be deprecated in a future version of Unity. You should use VideoPlayer for video download and movie playback.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-MovieTexture';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-MovieTexture.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-MovieTexture.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-MovieTexture.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-MovieTexture.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-MovieTexture.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-MovieTexture.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-MovieTexture.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-MovieTexture.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-MovieTexture.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-MovieTexture.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-MovieTexture.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-MovieTexture.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-MovieTexture.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-MovieTexture.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-MovieTexture.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-MovieTexture.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-MovieTexture.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-MovieTexture.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-MovieTexture.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-MovieTexture.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-MovieTexture.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-MovieTexture.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-MovieTexture.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-MovieTexture.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="comp-Textures.html">纹理组件</a></li>
+<li>Movie Textures</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-CustomRenderTexture.html"></a></span><div class="tip">自定义渲染纹理</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-Texture3D.html"></a></span><div class="tip">3D 纹理</div>
+</div>
+</div></div>
+<h1>Movie Textures</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><strong>Note:</strong> MovieTexture is due to be deprecated in a future version of Unity. You should use <a href="../ScriptReference/Video.VideoPlayer.html">VideoPlayer</a> for video download and movie playback.</p>
+
+<p><strong>电影纹理__是从视频文件创建的动画__纹理</strong>。通过在项目的 __Assets 文件夹__中放置视频文件，即可导入视频，随后就能就像常规<a href="class-TextureImporter.html">纹理</a>一样使用视频。</p>
+
+<p>应通过 Apple QuickTime 导入视频文件。支持的文件类型是 QuickTime 程序可以播放的类型（通常为 <strong>.mov</strong>、<strong>.mpg</strong>、<strong>.mpeg</strong>、<strong>.mp4</strong>、<strong>.avi</strong>、<strong>.asf</strong>）。在 Windows 上，需要安装 Quicktime 才能进行电影导入。请从 <a href="https://support.apple.com/downloads/quicktime">Apple 支持网站的下载页面 (Apple Support Downloads)</a> 下载 Quicktime。</p>
+
+<h2>属性</h2>
+
+<p>电影纹理 <strong>Inspector</strong> 与常规的<a href="class-TextureImporter.html">纹理</a> Inspector 非常相似。</p>
+
+<figure>
+<img src="../uploads/Main/MovieTextureInInspector.png" alt="视频文件用作 Unity 中的电影纹理">
+<figcaption>视频文件用作 Unity 中的电影纹理</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Aniso Level</strong></td>
+	<td style="text-align:left;">以大角度查看纹理时提高纹理质量。适用于地板和地面纹理</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Filtering Mode</strong></td>
+	<td style="text-align:left;">选择纹理在通过 3D 变换拉伸时如何进行过滤</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Loop</strong></td>
+	<td style="text-align:left;">如果启用此选项，电影将在完成播放时循环播放</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Quality</strong></td>
+	<td style="text-align:left;">压缩 Ogg Theora 视频文件。值越高意味着质量越高，但文件越大</td>
+</tr>
+</tbody>
+</table>
+
+<h2>详细信息</h2>
+
+<p>将视频文件添加到项目时，该文件将自动导入并转换为 <strong>Ogg Theora</strong> 格式。导入电影纹理后，即可像常规纹理一样将其附加到任何__游戏对象__或__材质__。</p>
+
+<h3>播放电影</h3>
+
+<p>游戏开始运行时不会自动播放电影纹理。必须使用简短的脚本告诉它何时播放。</p>
+
+<pre><code>// 这行代码将使电影纹理开始播放
+((MovieTexture)GetComponent&lt;Renderer&gt;().material.mainTexture).Play();
+
+
+</code></pre>
+
+<p>附加以下脚本可在按下空格键时切换电影播放：</p>
+
+<pre><code>public class PlayMovieOnSpace : MonoBehaviour {
+    void Update () {
+        if (Input.GetButtonDown ("Jump")) {
+            
+            Renderer r = GetComponent&lt;Renderer&gt;();
+            MovieTexture movie = (MovieTexture)r.material.mainTexture;
+            
+            if (movie.isPlaying) {
+                movie.Pause();
+            }
+            else {
+                movie.Play();
+            }
+        }
+    }
+}
+
+
+</code></pre>
+
+<p>有关播放电影纹理的更多信息，请参阅<a href="../ScriptReference/MovieTexture.html">电影纹理脚本参考</a>页面</p>
+
+<h3>电影音频</h3>
+
+<p>导入电影纹理时，也会导入视觉效果伴随的音频轨道。此音频显示为电影纹理的__音频剪辑 (AudioClip)__ 子级。</p>
+
+<figure>
+<img src="../uploads/Main/MovieTextureAudio.png" alt="视频的音频轨道在 Project 视图中显示为电影纹理的子级">
+<figcaption>视频的音频轨道在 Project 视图中显示为电影纹理的子级</figcaption>
+</figure>
+
+<p>要播放此音频，必须将音频剪辑附加到游戏对象，就像任何其他音频剪辑一样。将音频剪辑从 Project 视图拖到 Scene 或 Hierarchy 视图中的任何游戏对象上。通常，此游戏对象就是显示电影的游戏对象。然后，使用 <a href="../ScriptReference/GameObject-audio.html">audio.Play()</a> 使电影的音频轨道随其视频一起播放。</p>
+
+<h3>iOS</h3>
+
+<p>在 iOS 上不支持电影纹理。取而代之的是使用 <a href="../ScriptReference/Handheld.PlayFullScreenMovie.html">Handheld.PlayFullScreenMovie</a> 提供的全屏流媒体播放功能。</p>
+
+<h3>需要将视频保存在项目的 <em>Assets</em> 文件夹中的 <em>StreamingAssets</em> 文件夹内。</h3>
+
+<p>Unity iOS 支持 iOS 设备上能正常播放的任何电影文件类型（即扩展名为 <strong>.mov</strong>、<strong>.mp4</strong>、<strong>.mpv</strong> 和 <strong>.3gp</strong> 的文件）并使用以下压缩标准之一：</p>
+
+<ul>
+<li>H.264 Baseline Profile Level 3.0 视频</li>
+<li>MPEG–4 Part 2 视频</li>
+</ul>
+
+<p>有关受支持的压缩标准的更多信息，请参阅 iPhone SDK <a href="http://developer.apple.com/library/ios/#documentation/MediaPlayer/Reference/MPMoviePlayerController_Class/MPMoviePlayerController/MPMoviePlayerController.html">MPMoviePlayerController 类参考</a>。</p>
+
+<p>一旦调用 <a href="../ScriptReference/Handheld.PlayFullScreenMovie.html">Handheld.PlayFullScreenMovie</a>，屏幕就会从当前的内容淡出并淡入到指定的背景颜色。电影准备播放的过程可能需要一些时间，但与此同时，播放器将继续显示背景颜色，还可能显示进度指示条让用户知道电影正在加载。播放完成后，屏幕将淡出并淡入先前的内容。</p>
+
+<h3>视频播放器不支持在播放视频时切换为静音</h3>
+
+<p>如上所述，视频文件使用 Apple 的嵌入式播放器进行播放（截至 SDK 3.2 和 iPhone OS 3.1.2 及更早版本）。目前存在阻止 Unity 切换为静音的错误。</p>
+
+<h3>视频播放器不遵循设备的方向</h3>
+
+<p>Apple 视频播放器和 iPhone SDK 未提供调整视频方向的方法。一种常见的方法是以横向和纵向方向手动创建每个电影的两个副本。然后，可在播放之前确定设备的方向，从而选择正确的电影版本。</p>
+
+<h3>Android</h3>
+
+<p>在 Android 上不支持电影纹理。取而代之的是使用 <a href="../ScriptReference/Handheld.PlayFullScreenMovie.html">Handheld.PlayFullScreenMovie</a> 提供的全屏流媒体播放功能。</p>
+
+<h3>需要将视频保存在项目的 <em>Assets</em> 文件夹中的 <em>StreamingAssets</em> 文件夹内。</h3>
+
+<p>Unity Android 支持 Android 所支持的任何电影文件类型（即扩展名为 <strong>.mp4</strong> 和 <strong>.3gp</strong> 的文件），并使用以下压缩标准之一：</p>
+
+<ul>
+<li>H.263</li>
+<li>H.264 AVC</li>
+<li>MPEG–4 SP</li>
+</ul>
+
+<p>但是，设备供应商热衷于扩展此列表，因此一些 Android 设备能够播放除所列格式之外的其他格式，例如高清 (HD) 视频。</p>
+
+<p>有关受支持的压缩标准的更多信息，请参阅 Android SDK <a href="http://developer.android.com/guide/appendix/media-formats.html">核心媒体格式 (Core Media Formats) 文档</a>。</p>
+
+<p>一旦调用 <a href="../ScriptReference/Handheld.PlayFullScreenMovie.html">Handheld.PlayFullScreenMovie</a>，屏幕就会从当前的内容淡出并淡入到指定的背景颜色。电影准备播放的过程可能需要一些时间，但与此同时，播放器将继续显示背景颜色，还可能显示进度指示条让用户知道电影正在加载。播放完成后，屏幕将淡出并淡入先前的内容。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-CustomRenderTexture.html"></a></span><div class="tip">自定义渲染纹理</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-Texture3D.html"></a></span><div class="tip">3D 纹理</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

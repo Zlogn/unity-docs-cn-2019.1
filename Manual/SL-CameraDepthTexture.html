@@ -1,0 +1,250 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="摄像机的深度纹理 - Unity Manual">
+<title>摄像机的深度纹理 - Unity Manual</title>
+<meta name="description" content="摄像机可生成深度、深度+法线或运动矢量纹理。这是一种极简化的 G 缓冲纹理，可用于后期处理效果或实现自定义光照模型（例如光照预通道）。还可以使用着色器替换功能来自行构建类似纹理。">
+<meta property="og:description" content="摄像机可生成深度、深度+法线或运动矢量纹理。这是一种极简化的 G 缓冲纹理，可用于后期处理效果或实现自定义光照模型（例如光照预通道）。还可以使用着色器替换功能来自行构建类似纹理。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'SL-CameraDepthTexture';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-CameraDepthTexture.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-CameraDepthTexture.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-CameraDepthTexture.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-CameraDepthTexture.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-CameraDepthTexture.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-CameraDepthTexture.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-CameraDepthTexture.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-CameraDepthTexture.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-CameraDepthTexture.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-CameraDepthTexture.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/SL-CameraDepthTexture.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/SL-CameraDepthTexture.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/SL-CameraDepthTexture.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/SL-CameraDepthTexture.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-CameraDepthTexture.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-CameraDepthTexture.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-CameraDepthTexture.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-CameraDepthTexture.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-CameraDepthTexture.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-CameraDepthTexture.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-CameraDepthTexture.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-CameraDepthTexture.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-CameraDepthTexture.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-CameraDepthTexture.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="SL-Reference.html">着色器参考</a></li>
+<li><a href="SL-AdvancedTopics.html">高级 ShaderLab 主题</a></li>
+<li>摄像机的深度纹理</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-DepthTextures.html"></a></span><div class="tip">使用深度纹理</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-PlatformDifferences.html"></a></span><div class="tip">平台特定的渲染差异</div>
+</div>
+</div></div>
+<h1>摄像机的深度纹理</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><a href="class-Camera.html">摄像机</a>可生成深度、深度+法线或运动矢量纹理。这是一种极简化的 G 缓冲纹理，可用于后期处理效果或实现自定义光照模型（例如光照预通道）。还可以使用<a href="SL-ShaderReplacement.html">着色器替换</a>功能来自行构建类似纹理。</p>
+
+<p>可使用脚本中的 <a href="../ScriptReference/Camera-depthTextureMode.html">Camera.depthTextureMode</a> 变量来启用摄像机的深度纹理模式。</p>
+
+<p>有三种可能的深度纹理模式：</p>
+
+<ul>
+<li>__DepthTextureMode.Depth__：<a href="SL-DepthTextures.html">深度纹理</a>。</li>
+<li>__DepthTextureMode.DepthNormals__：打包到一个纹理中的深度和视图空间法线。*</li>
+<li>__DepthTextureMode.MotionVectors__：当前帧的每个屏幕纹理像素的每像素屏幕空间运动。打包到 RG16 纹理中。</li>
+</ul>
+
+<p>这些是标志，因此可以指定上述纹理的任何组合。</p>
+
+<h2>DepthTextureMode.Depth 纹理</h2>
+
+<p>这将构建一个屏幕大小的<a href="SL-DepthTextures.html">深度纹理</a>。</p>
+
+<p>渲染深度纹理时使用的着色器通道与用于阴影投射物渲染的着色器通道相同（<code>ShadowCaster</code> 通道类型）。因此，通过扩展，如果着色器不支持阴影投射（即在着色器或任何后备着色器中没有阴影投射物通道），则使用该着色器的对象将不会显示在深度纹理中。</p>
+
+<ul>
+<li>让着色器<a href="SL-Fallback.html">回退</a>到另一个具有阴影投射通道的着色器，或者</li>
+<li>如果您在使用<a href="SL-SurfaceShaders.html">表面着色器</a>，那么添加 <code>addshadow</code> 指令也能让它们生成阴影通道。</li>
+</ul>
+
+<p>请注意，仅“不透明”对象（这些对象的材质和着色器设置为使用小于等于 2500 的<a href="SL-SubShaderTags.html">渲染队列</a>）会渲染到深度纹理中。</p>
+
+<h2>DepthTextureMode.DepthNormals 纹理</h2>
+
+<p>这将构建屏幕大小的 32 位（8 位/通道）纹理，其中视图空间法线编码到 R&amp;G 通道中，而深度编码到 B&amp;A 通道中。法线使用立体投影进行编码，深度是打包到两个 8 位通道中的 16 位值。</p>
+
+<p><a href="SL-BuiltinIncludes.html"><code>UnityCG.cginc</code> include 文件</a>具有一个 helper 函数 <code>DecodeDepthNormal</code>，可从编码的像素值中解码深度和法线。返回的深度在 0 到 1 范围内。</p>
+
+<p>有关如何使用深度和法线纹理的示例，请参阅着色器替换示例项目中的 EdgeDetection 图像效果或<a href="PostProcessing-AmbientOcclusion.html">屏幕空间环境光遮挡图像效果</a>。</p>
+
+<h2>DepthTextureMode.MotionVectors 纹理</h2>
+
+<p>这将构建屏幕大小的 RG16（16 位浮点/通道）纹理，其中屏幕空间像素运动编码到 R＆G 通道中。像素运动编码到屏幕 UV 空间中。</p>
+
+<p>从该纹理运动采样时，将返回 –1 到 1 范围内的编码像素。这将是从最后一帧到当前帧的 UV 偏移。</p>
+
+<h2>提示和技巧</h2>
+
+<p><a href="class-Camera.html">摄像机检视面板</a>会指示摄像机何时渲染深度或深度+法线纹理。</p>
+
+<p>从摄像机请求深度纹理的方式 (<a href="../ScriptReference/Camera-depthTextureMode.html">Camera.depthTextureMode</a>) 可能意味着在禁用需要深度纹理的效果后，摄像机可能仍会继续渲染深度纹理。若摄像机上存在多个效果，其中每个效果都需要深度纹理，则无法在禁用单个效果的情况下自动禁用深度纹理渲染。</p>
+
+<p>在实现复杂的着色器或图像效果时，切记<a href="SL-PlatformDifferences.html">平台之间的渲染差异</a>。尤其是，在图像效果中使用深度纹理通常需要对 Direct3D 和抗锯齿进行特殊处理。</p>
+
+<p>在某些情况下，深度纹理可能直接来自本机 Z 缓冲区。如果在深度纹理中看到了瑕疵，请确保使用该纹理的着色器<strong>未</strong>写入 Z 缓冲区（使用 <a href="SL-CullAndDepth.html">ZWrite Off</a>）。</p>
+
+<h2>着色器变量</h2>
+
+<p>深度纹理可用于在着色器中作为全局着色器属性进行采样。通过声明名为 <code>_CameraDepthTexture</code> 的采样器，您将能够为摄像机采样主深度纹理。</p>
+
+<p><code>_CameraDepthTexture</code> 始终引用摄像机的主深度
+纹理。相比之下，您可以使用 <code>_LastCameraDepthTexture</code> 来引用任何摄像机渲染的最后一个深度纹理。例如，如果您使用辅助摄像机渲染脚本中的半分辨率深度纹理并希望将其提供给后期处理着色器，这种做法可能很有用。</p>
+
+<p>运动矢量纹理（启用时）在着色器中可用作全局着色器属性。通过声明名为“_CameraMotionVectorsTexture”的采样器，您可以为当前执行渲染的摄像机采样纹理。</p>
+
+<h2>背景</h2>
+
+<p>深度纹理可以直接来自实际深度缓冲区，
+也可以在单独通道中渲染，具体取决于使用的渲染
+路径和硬件。通常，在使用延迟
+着色或旧版延迟光照渲染路径时，会自动采用深度纹理，因为它们始终都是
+G 缓冲区渲染的产物。</p>
+
+<p>当 DepthNormals 纹理在单独通道中渲染时，此过程通过<a href="SL-ShaderReplacement.html">着色器替换</a>完成。因此，务必在您的着色器中设置正确的“<strong>RenderType</strong>”标签。</p>
+
+<p>启用时，MotionVectors 纹理始终来自额外的渲染通道。Unity 会将移动的游戏对象渲染到此缓冲区中，并构建从最后一帧到当前帧的运动。</p>
+
+<h2>另请参阅</h2>
+
+<ul>
+<li><a href="https://docs.unity3d.com/Packages/com.unity.postprocessing@latest">Post Processing package</a></li>
+<li><a href="SL-DepthTextures.html">深度纹理</a></li>
+<li><a href="SL-ShaderReplacement.html">着色器替换</a></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-DepthTextures.html"></a></span><div class="tip">使用深度纹理</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-PlatformDifferences.html"></a></span><div class="tip">平台特定的渲染差异</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

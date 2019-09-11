@@ -1,0 +1,301 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="在 Unity 中使用粒子系统 - Unity Manual">
+<title>在 Unity 中使用粒子系统 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/PartSysEffectPanel.png">
+<meta name="description" content="Unity 使用组件实现粒子系统，因此将粒子系统放置在场景中涉及到添加预制的游戏对象（菜单：__GameObject__ &gt; Effects &gt; Particle System__）或将组件添加到现有游戏对象（菜单：__Component &gt; Effects &gt; Particle System__）。由于组件非常复杂，因此 Inspector 分为多个可折叠子部分或__模块__，每个子部分或模块都包含一组相关属性。此外，可使用单独的 Editor 窗口（通过 Inspector 中的 Open Window__ 按钮访问）同时编辑一个或多个系统。请参阅有关粒子系统组件和各个粒子系统模块的文档，了解更多信息。">
+<meta property="og:description" content="Unity 使用组件实现粒子系统，因此将粒子系统放置在场景中涉及到添加预制的游戏对象（菜单：__GameObject__ &gt; Effects &gt; Particle System__）或将组件添加到现有游戏对象（菜单：__Component &gt; Effects &gt; Particle System__）。由于组件非常复杂，因此 Inspector 分为多个可折叠子部分或__模块__，每个子部分或模块都包含一组相关属性。此外，可使用单独的 Editor 窗口（通过 Inspector 中的 Open Window__ 按钮访问）同时编辑一个或多个系统。请参阅有关粒子系统组件和各个粒子系统模块的文档，了解更多信息。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'PartSysUsage';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PartSysUsage.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PartSysUsage.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PartSysUsage.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PartSysUsage.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PartSysUsage.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PartSysUsage.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PartSysUsage.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PartSysUsage.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PartSysUsage.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PartSysUsage.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/PartSysUsage.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/PartSysUsage.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/PartSysUsage.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/PartSysUsage.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PartSysUsage.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PartSysUsage.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PartSysUsage.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PartSysUsage.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PartSysUsage.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PartSysUsage.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PartSysUsage.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PartSysUsage.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PartSysUsage.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PartSysUsage.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="ParticleSystems.html">粒子系统</a></li>
+<li>在 Unity 中使用粒子系统</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PartSysWhatIs.html"></a></span><div class="tip">什么是粒子系统？</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ParticleSystemHowTo.html"></a></span><div class="tip">粒子系统操作方法</div>
+</div>
+</div></div>
+<h1>在 Unity 中使用粒子系统</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 使用组件实现粒子系统，因此将粒子系统放置在场景中涉及到添加预制的游戏对象（菜单：__GameObject__ &gt; <strong>Effects</strong> &gt; <strong>Particle System__）或将组件添加到现有游戏对象（菜单：__Component</strong> &gt; <strong>Effects</strong> &gt; <strong>Particle System__）。由于组件非常复杂，因此 Inspector 分为多个可折叠子部分或__模块__，每个子部分或模块都包含一组相关属性。此外，可使用单独的 Editor 窗口（通过 Inspector 中的 </strong>Open Window__ 按钮访问）同时编辑一个或多个系统。请参阅有关<a href="class-ParticleSystem.html">粒子系统组件</a>和各个<a href="ParticleSystemModules.html">粒子系统模块</a>的文档，了解更多信息。</p>
+
+<p>选择带有粒子系统的游戏对象时，Scene 视图包含一个小的 <strong>Particle Effect</strong> 面板，其中有一些简单控件，用于显示对系统设置的更改。</p>
+
+<figure>
+<img src="../uploads/Main/PartSysEffectPanel.png" alt="">
+</figure>
+
+<p><strong>Playback Speed</strong> 用于加快或减慢粒子模拟速度，可以直观查看在高级状态下的效果。<strong>Playback Time</strong> 表示自系统启动以来经过的时间；这可能比实时更快或更慢，具体取决于播放速度。<strong>Particle Count</strong> 表示系统中当前有多少粒子。通过单击 <strong>Playback Time</strong> 标签并向左和向右拖动鼠标，即可前后移动播放时间。面板顶部的按钮可用于暂停和恢复模拟，或停止模拟并重置为初始状态。</p>
+
+<p><a name="VaryOverTime"></a></p>
+
+<h2>随时间推移而变化的属性</h2>
+
+<p>粒子甚至整个粒子系统的许多数字属性都可能随时间而变化。Unity 提供了几种不同的方法来指定这种变化的发生方式：</p>
+
+<ul>
+<li>__Constant：__属性的值在其整个生命周期内是固定的。</li>
+<li>__Curve：__该值由曲线/图形指定。</li>
+<li>__Random Between Two Constants：__两个常量值定义了值的上限和下限；实际值随着时间的推移在这些边界之间随机变化。</li>
+<li>
+<strong>Random Between Two Curves:</strong> Two curves define the upper and lower bounds of the value at a given point in its lifetime; the current value varies randomly between those bounds.</li>
+</ul>
+
+<p>When you set a property to <strong>Curve</strong> or <strong>Random Between Two Curves</strong>, the Particle System Curves editor appears at the bottom of the Inspector:</p>
+
+<figure>
+<img src="../uploads/Main/ParticleSystemCurve.png" alt="">
+</figure>
+
+<p>To edit a curve, click and drag an end point or key to reshape the curve:</p>
+
+<figure>
+<img src="../uploads/Main/ParticleSystemCurveKeys.png" alt="">
+</figure>
+
+<p>Particle System curves are similar to <a href="animeditor-AnimationCurves.html">Animation curves</a>. For information on using curves, see the documentation on <a href="EditingCurves.html">Editing Curves</a>.</p>
+
+<p>The Particle System Curves editor has the following buttons:</p>
+
+<ul>
+<li>
+<strong>Optimize</strong>: Fits the curve into four or fewer keys to build a fast evaluator called a Polynomial, which is more efficient than reading the unoptimized curve.</li>
+<li>
+<strong>Remove</strong>: Deletes the selected curve.</li>
+</ul>
+
+<p>To edit the way in which the Particle System plays curves, click the cog next to a selected key and choose one of the following options: </p>
+
+<ul>
+<li>
+<strong>Loop</strong>: Plays the curve the specified number times over a particle’s life. For example, if you make a curve that scales a particle’s size up and down, you can tell it to loop multiple times, which causes the “up and down” animation to happen multiple times before the particle dies, instead of just once.</li>
+<li>
+<strong>Ping Pong</strong>: Similar to <strong>Loop</strong>, but plays the curve forwards then backwards in a continuous oscillation.</li>
+<li>
+<strong>Clamp</strong>: Limits particle queries that fall outside the curve time range to the first or last value of the curve.</li>
+</ul>
+
+<p>The <strong>Start Color</strong> property in the main module has the following options:</p>
+
+<ul>
+<li>
+<strong>Color:</strong> All particles start with this color throughout the lifetime of the Particle System. Particles can still change color during their lifetime.</li>
+<li>
+<strong>Gradient:</strong> The Particle System emits particles which start with the colour at the beginning of the gradient, and end at the colour at the end of the gradient. The gradient line represents the lifetime of the Particle System; the Particle System picks a color from the gradient at the point corresponding to the current age of the Particle System.</li>
+<li>
+<strong>Random Between Two Colors:</strong> The Particle System chooses a starting particle color from a random linear interpolation between the two given colors.</li>
+<li>
+<strong>Random Between Two Gradients:</strong> The Particle System chooses a color from each of the given gradients at the point corresponding to the current age of the system. The starting particle color is chosen as a random linear interpolation between the two chosen colors.</li>
+<li>
+<strong>Random Color:</strong> Similar to <strong>Gradient</strong> mode, where particles take their initial color from the defined <strong>Gradient</strong>. However, in this mode, the Particle System does not choose samples based on the age of the Particle System, but instead it selects them at random. This mode also works well with the <strong>Fixed Gradient Mode</strong>, which is inside the Gradient Editor. When enabled, you can select a predefined list of precise starting colors, and apply a probability to each color.</li>
+</ul>
+
+<p>Other color properties, such as <strong>Color over Lifetime</strong>, can use the <strong>Gradient</strong> or <strong>Random Between Two Gradients</strong> modes.</p>
+
+<p>To calculate the final particle color result, the Particle System multiplies color properties in various modules together per channel.</p>
+
+<p>When you set the <strong>Gradient</strong> color for particles, the Gradient Editor appears:</p>
+
+<figure>
+<img src="../uploads/Main/ParticleSystemGradientEditor.png" alt="">
+</figure>
+
+<ul>
+<li>
+<strong>Mode:</strong> Determines whether the particle color settings are blended or not.</li>
+<li>
+<strong>Color:</strong> Displays the color of the currently selected key in the Gradient. Use this to edit the color at that position of the Gradient.</li>
+<li>
+<strong>Location:</strong> Shows how far along on the Gradient the currently selected key is.</li>
+<li>
+<strong>Presets:</strong> Allows you to save Gradient settings. Click New to make the current set of values a Gradient preset.</li>
+</ul>
+
+<p>各种模块中的颜色属性按照每个通道相乘，从而计算出最终的粒子颜色结果。</p>
+
+<h2>动画绑定</h2>
+
+<p>动画系统可以访问所有粒子属性，这意味着可以将它们设置到关键帧中并从动画中控制它们。</p>
+
+<p>要访问粒子系统的属性，必须有一个 Animator 组件连接到粒子系统的游戏对象。此外还需要动画控制器 (Animation Controller) 和动画。</p>
+
+<figure>
+<img src="../uploads/Main/ParticleSystemAnimatorComponent.png" alt="要动画化粒子系统，请添加 Animator 组件，并为动画控制器 (Animator Controller) 分配动画。">
+<figcaption>要动画化粒子系统，请添加 Animator 组件，并为动画控制器 (Animator Controller) 分配动画。</figcaption>
+</figure>
+
+<p>要动画化粒子系统属性，请打开 <strong>Animation 窗口__，并选择包含 Animator 和粒子系统的游戏对象。单击 </strong>Add Property__ 以添加属性。</p>
+
+<figure>
+<img src="../uploads/Main/ParticleSystemAnimationWindow.png" alt="在 Animation 窗口中为动画添加属性。">
+<figcaption>在 Animation 窗口中为动画添加属性。</figcaption>
+</figure>
+
+<p>向右滚动以显示__添加控件__。</p>
+
+<figure>
+<img src="../uploads/Main/ParticleSystemAnimationScrollRight.png" alt="">
+</figure>
+
+<p>请注意，对于曲线，只能对整体__曲线乘数__进行关键帧设置（可在 <strong>Inspector</strong> 中的曲线编辑器旁边找到该曲线乘数）。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2019–04–16 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 Unity 4.6 中更改了 GameObject 菜单</span></p></li>
+<li><p><span class="page-history">Particle System loop/ping-pong curve playing added in <a href="https://docs.unity3d.com/2018.3/Documentation/Manual/30_search.html?q=newin20183">2018.3</a> <span class="search-words">NewIn20183</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PartSysWhatIs.html"></a></span><div class="tip">什么是粒子系统？</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ParticleSystemHowTo.html"></a></span><div class="tip">粒子系统操作方法</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

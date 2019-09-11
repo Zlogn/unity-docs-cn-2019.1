@@ -1,0 +1,291 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Installing the Unity Hub - Unity Manual">
+<title>Installing the Unity Hub - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/gs_choose_components.png">
+<meta name="description" content="Unity Hub 是一种管理工具，可让您管理自己的所有 Unity 项目和安装。使用 Hub 可以管理 Unity Editor 的多个安装及其关联组件，创建新项目，以及打开现有项目。">
+<meta property="og:description" content="Unity Hub 是一种管理工具，可让您管理自己的所有 Unity 项目和安装。使用 Hub 可以管理 Unity Editor 的多个安装及其关联组件，创建新项目，以及打开现有项目。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'GettingStartedInstallingHub';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/GettingStartedInstallingHub.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/GettingStartedInstallingHub.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/GettingStartedInstallingHub.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/GettingStartedInstallingHub.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/GettingStartedInstallingHub.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/GettingStartedInstallingHub.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/GettingStartedInstallingHub.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/GettingStartedInstallingHub.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/GettingStartedInstallingHub.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/GettingStartedInstallingHub.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/GettingStartedInstallingHub.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/GettingStartedInstallingHub.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/GettingStartedInstallingHub.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/GettingStartedInstallingHub.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/GettingStartedInstallingHub.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/GettingStartedInstallingHub.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/GettingStartedInstallingHub.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/GettingStartedInstallingHub.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/GettingStartedInstallingHub.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/GettingStartedInstallingHub.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/GettingStartedInstallingHub.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/GettingStartedInstallingHub.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/GettingStartedInstallingHub.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/GettingStartedInstallingHub.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="GettingStartedInstallingUnity.html">Installing Unity</a></li>
+<li>Installing the Unity Hub</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="GettingStartedUnityHub.html"></a></span><div class="tip">Unity Hub</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="GettingStartedAddingEditorComponents.html"></a></span><div class="tip">Adding components to the Unity Editor</div>
+</div>
+</div></div>
+<h1>Installing the Unity Hub</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity Hub 是一种管理工具，可让您管理自己的所有 Unity 项目和安装。使用 Hub 可以管理 Unity Editor 的多个安装及其关联组件，创建新项目，以及打开现有项目。</p>
+
+<p>To install the Unity Hub, visit <a href="https://store.unity.com/download?ref=personal">Download Unity Personal</a> on the Unity website.</p>
+
+<p>To install and use the Unity Editor, you must have a Unity Developer Network (UDN) account. If you already have an account, sign in, choose your licenses type, and proceed to the <a href="#install">Installing the Unity Editor</a> section.</p>
+
+<p>If you do not have an account, follow the prompts to create one. You can choose to create a Unity ID or use one of the social sign-ins. For more information on accounts and subscriptions, see <a href="OrgsUnityOrganizations.html">Unity Organizations</a>.</p>
+
+<p><a name="install"></a> </p>
+
+<h2>安装 Unity Editor</h2>
+
+<p>要安装 Editor，请执行以下操作：</p>
+
+<p>1.单击 <strong>Installs</strong> 选项卡。默认安装位置为：</p>
+
+<pre><code>Windows：
+
+```
+C:\Program Files\Unity\Hub\Editor
+```
+
+Mac：
+
+```
+/Application/Unity/Hub/Editor
+```
+
+1. Optionally, to change the default installation location, click the Gear icon. ![Gear icon](../uploads/Main/gs_gear_icon.png)
+
+2.在 __Editor Folder Location__ 对话框中，输入新安装位置，然后单击 __Done__。
+</code></pre>
+
+<p>2.如果要安装已发布的 Editor 版本，请单击 <strong>Official Releases__；如果要安装 Editor 的最新测试版，请单击 </strong>Beta Releases__。</p>
+
+<pre><code>![Hub install screen](../uploads/Main//gs_hub_installs_screen.png)
+</code></pre>
+<!--../uploads/Main/-->
+
+<ol>
+<li><p>Click the <strong>Download</strong> button of the Editor version to install. This opens a dialog box called <strong>Add components to your install</strong>.</p></li>
+<li>
+<p>In the <strong>Add components to your install</strong> dialog box, select the components to install with the Editor, and click <strong>Done</strong>. If you don’t install a component now, you can add it later if you need to.</p>
+
+<figure>
+<img src="../uploads/Main/gs_choose_components.png" alt="Components install">
+<figcaption>Components install</figcaption>
+</figure>
+</li>
+</ol>
+
+<p>如果要安装多个 Editor 版本，第一个安装会在下载完成后立即启动。其他选定版本同时下载并排队，从而在当前安装完成时启动。</p>
+
+<p>Hub 会在相应的版本标签下显示每个 Editor 的安装位置。</p>
+
+<p>要将某个 Editor 版本设置为首选版本、向其中添加组件或将其卸载，请单击该 Editor 版本旁边的三个点。</p>
+
+<figure>
+<img src="../uploads/Main/gs_hub_installs_screen2.png" alt="Setting preferred version">
+<figcaption>Setting preferred version</figcaption>
+</figure>
+
+<p>如果已删除或卸载首选 Editor 版本，则另一个安装的 Editor 版本将成为首选版本。</p>
+
+<h2>将 Editor 的现有实例添加到 Hub</h2>
+
+<p>可以将 Hub 外部安装的 Editor 的实例添加到 Hub 中。</p>
+
+<p>1.单击 <strong>Installs</strong> 选项卡。
+2.单击 <strong>On my machine</strong> 选项卡。要查找 Editor 的现有安装，请单击 <strong>Locate a Version</strong>。
+3.在文件对话框中，导航到 Editor 的安装位置，然后选择 Unity 可执行文件。在 MacOS 中，此文件是 <em>Unity.app</em>。在 Windows 中，此文件是 <em>Unity.exe</em>。</p>
+
+<p>On macOS, the typical location of the <em>Unity.app</em> is:</p>
+
+<pre><code>/Applications/Unity/Hub/Editor/&lt;version&gt;/Unity.app
+</code></pre>
+
+<p>On Windows, the typical location of the <em>Unity.exe</em> is:</p>
+
+<pre><code>C:\Program Files\Unity\Editor\Unity.exe
+</code></pre>
+
+<p>或者</p>
+
+<pre><code>C:\Program Files\Unity&lt;version&gt;\Editor\Unity.exe
+</code></pre>
+
+<ol>
+<li>Click the <strong>Select editor</strong> button.</li>
+</ol>
+
+<p>要将 Editor 设置为首选版本，或从 Hub 删除 Editor，请单击 Editor 版本旁边的三个点。</p>
+
+<p>Removing an Editor that you added in this manner does not uninstall it or modify it in any way.</p>
+
+<h2>对 2017.1 之前的 Editor 版本的支持</h2>
+
+<p>对于通过 Hub 打开的 2017.1 之前的 Editor 版本，不会共享登录状态。执行__管理许可证 (Manage License)<strong>、</strong>打开项目 (Open Project)<strong>、</strong>创建项目 (Create Project)__ 和__登录 (Sign in)__ 等任务将打开 Unity Launcher 而不是 Hub。</p>
+
+<p>如果尝试使用 Unity Hub 来打开 Editor 版本 5 或更早版本但没有相应的许可证文件，Editor 将在启动画面阶段挂起。</p>
+
+<p>为了避免此问题，请直接在 Unity Hub 外部运行 Editor；即使未检测到许可证文件，Editor 也会正确加载。</p>
+
+<p><a name="installer"></a></p>
+
+<h2>Using the Unity Installer to install the Unity Editor</h2>
+
+<p>Unity 安装程序是一个小型的可执行程序（大小约为 1 MB），可选择要下载和安装 Unity Editor 的哪些组件。</p>
+
+<p>To install previous versions of the Unity Editor using the Installer, visit the <a href="https://unity3d.com/get-unity/download/archive">Unity download archive</a>. The archive page provides Unity Installer download links for all released versions of the Editor.</p>
+
+<p>For additional information on installing the Editor using the Installer, see the 2018.3 version of the <a href="http://docs.unity3d.com">Unity Manual</a>.</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–12–19 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li><span class="page-edit">2018–06–12 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="GettingStartedUnityHub.html"></a></span><div class="tip">Unity Hub</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="GettingStartedAddingEditorComponents.html"></a></span><div class="tip">Adding components to the Unity Editor</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

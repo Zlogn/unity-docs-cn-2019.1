@@ -1,0 +1,459 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="使用 NetworkTransport 进行集成 - Unity Manual">
+<title>使用 NetworkTransport 进行集成 - Unity Manual</title>
+<meta name="description" content="如果在集成 Unity Multiplayer 服务时需要最大程度的灵活性，可直接使用 NetworkTransport 类。此方法需要更多代码，但可用于控制游戏与 Multiplayer 服务集成的所有细节。">
+<meta property="og:description" content="如果在集成 Unity Multiplayer 服务时需要最大程度的灵活性，可直接使用 NetworkTransport 类。此方法需要更多代码，但可用于控制游戏与 Multiplayer 服务集成的所有细节。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UnityMultiplayerIntegratingLowLevel';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityMultiplayerIntegratingLowLevel.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityMultiplayerIntegratingLowLevel.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityMultiplayerIntegratingLowLevel.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityMultiplayerIntegratingLowLevel.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityMultiplayerIntegratingLowLevel.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityMultiplayerIntegratingLowLevel.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityMultiplayerIntegratingLowLevel.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityMultiplayerIntegratingLowLevel.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityMultiplayerIntegratingLowLevel.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityMultiplayerIntegratingLowLevel.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UnityMultiplayerIntegratingLowLevel.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UnityMultiplayerIntegratingLowLevel.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UnityMultiplayerIntegratingLowLevel.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UnityMultiplayerIntegratingLowLevel.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityMultiplayerIntegratingLowLevel.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityMultiplayerIntegratingLowLevel.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityMultiplayerIntegratingLowLevel.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityMultiplayerIntegratingLowLevel.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityMultiplayerIntegratingLowLevel.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityMultiplayerIntegratingLowLevel.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityMultiplayerIntegratingLowLevel.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityMultiplayerIntegratingLowLevel.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityMultiplayerIntegratingLowLevel.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityMultiplayerIntegratingLowLevel.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UNet.html">多玩家和联网</a></li>
+<li><a href="UNetUsingHLAPI.html">多玩家高级 API</a></li>
+<li><a href="UnityMultiplayerSettingUp.html">设置 Unity Multiplayer</a></li>
+<li>使用 NetworkTransport 进行集成</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityMultiplayerIntegratingHighLevel.html"></a></span><div class="tip">使用 Unity 的高级 API 进行集成</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityMultiplayerCommonErrors.html"></a></span><div class="tip">常见错误</div>
+</div>
+</div></div>
+<h1>使用 NetworkTransport 进行集成</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>如果在集成 Unity Multiplayer 服务时需要最大程度的灵活性，可直接使用 <code>NetworkTransport</code> 类。此方法需要更多代码，但可用于控制游戏与 Multiplayer 服务集成的所有细节。</p>
+
+<p>以下示例说明了如何直接使用 <code>NetworkTransport</code> 类进行连接：</p>
+
+<pre><code>using UnityEngine;
+using UnityEngine.Networking;
+using UnityEngine.Networking.Types;
+using UnityEngine.Networking.Match;
+using System.Collections.Generic;
+
+public class DirectSetup : MonoBehaviour
+{
+    // 与 Matchmaker 相关
+    List&lt;MatchInfoSnapshot&gt; m_MatchList = new List&lt;MatchInfoSnapshot&gt;();
+    bool m_MatchCreated;
+    bool m_MatchJoined;
+    MatchInfo m_MatchInfo;
+    string m_MatchName = "NewRoom";
+    NetworkMatch m_NetworkMatch;
+
+    // 与连接/通信相关
+    int m_HostId = -1;
+    // 在服务器上将有多个连接，在客户端上将只包含一个 ID
+    List&lt;int&gt; m_ConnectionIds = new List&lt;int&gt;();
+    byte[] m_ReceiveBuffer;
+    string m_NetworkMessage = "Hello world";
+    string m_LastReceivedMessage = "";
+    NetworkWriter m_Writer;
+    NetworkReader m_Reader;
+    bool m_ConnectionEstablished;
+
+    const int k_ServerPort = 25000;
+    const int k_MaxMessageSize = 65535;
+
+    void Awake()
+    {
+        m_NetworkMatch = gameObject.AddComponent&lt;NetworkMatch&gt;();
+    }
+
+    void Start()
+    {
+        m_ReceiveBuffer = new byte[k_MaxMessageSize];
+        m_Writer = new NetworkWriter();
+        // 在一台机器上使用多个独立玩家进行测试时，需要启用此功能
+        Application.runInBackground = true;
+    }
+
+    void OnApplicationQuit()
+    {
+        NetworkTransport.Shutdown();
+    }
+
+    void OnGUI()
+    {
+        if (string.IsNullOrEmpty(Application.cloudProjectId))
+            GUILayout.Label("You must set up the project first.See the Multiplayer tab in the Service Window");
+        else
+            GUILayout.Label("Cloud Project ID: " + Application.cloudProjectId);
+
+        if (m_MatchJoined)
+            GUILayout.Label("Match joined '" + m_MatchName + "' on Matchmaker server");
+        else if (m_MatchCreated)
+            GUILayout.Label("Match '" + m_MatchName + "' created on Matchmaker server");
+
+        GUILayout.Label("Connection Established: " + m_ConnectionEstablished);
+
+        if (m_MatchCreated || m_MatchJoined)
+        {
+            GUILayout.Label("Relay Server: " + m_MatchInfo.address + ":" + m_MatchInfo.port);
+            GUILayout.Label("NetworkID: " + m_MatchInfo.networkId + " NodeID: " + m_MatchInfo.nodeId);
+            GUILayout.BeginHorizontal();
+            GUILayout.Label("Outgoing message:");
+            m_NetworkMessage = GUILayout.TextField(m_NetworkMessage);
+            GUILayout.EndHorizontal();
+            GUILayout.Label("Last incoming message: " + m_LastReceivedMessage);
+
+            if (m_ConnectionEstablished &amp;&amp; GUILayout.Button("Send message"))
+            {
+                m_Writer.SeekZero();
+                m_Writer.Write(m_NetworkMessage);
+                byte error;
+                for (int i = 0; i &lt; m_ConnectionIds.Count; ++i)
+                {
+                    NetworkTransport.Send(m_HostId,
+                        m_ConnectionIds[i], 0, m_Writer.AsArray(), m_Writer.Position, out error);
+                    if ((NetworkError)error != NetworkError.Ok)
+                        Debug.LogError("Failed to send message: " + (NetworkError)error);
+                }
+            }
+
+            if (GUILayout.Button("Shutdown"))
+            {
+                m_NetworkMatch.DropConnection(m_MatchInfo.networkId,
+                    m_MatchInfo.nodeId, 0, OnConnectionDropped);
+            }
+        }
+        else
+        {
+            if (GUILayout.Button("Create Room"))
+            {
+                m_NetworkMatch.CreateMatch(m_MatchName, 4, true, "", "", "", 0, 0, OnMatchCreate);
+            }
+
+            if (GUILayout.Button("Join first found match"))
+            {
+                m_NetworkMatch.ListMatches(0, 1, "", true, 0, 0, (success, info, matches) =&gt;
+                {
+                    if (success &amp;&amp; matches.Count &gt; 0)
+                        m_NetworkMatch.JoinMatch(matches[0].networkId, "", "", "", 0, 0, OnMatchJoined);
+                });
+            }
+
+            if (GUILayout.Button("List rooms"))
+            {
+                m_NetworkMatch.ListMatches(0, 20, "", true, 0, 0, OnMatchList);
+            }
+
+            if (m_MatchList.Count &gt; 0)
+            {
+                GUILayout.Label("Current rooms:");
+            }
+            foreach (var match in m_MatchList)
+            {
+                if (GUILayout.Button(match.name))
+                {
+                    m_NetworkMatch.JoinMatch(match.networkId, "", "", "", 0, 0, OnMatchJoined);
+                }
+            }
+        }
+    }
+
+    public void OnConnectionDropped(bool success, string extendedInfo)
+    {
+        Debug.Log("Connection has been dropped on matchmaker server");
+        NetworkTransport.Shutdown();
+        m_HostId = -1;
+        m_ConnectionIds.Clear();
+        m_MatchInfo = null;
+        m_MatchCreated = false;
+        m_MatchJoined = false;
+        m_ConnectionEstablished = false;
+    }
+
+    public virtual void OnMatchCreate(bool success, string extendedInfo, MatchInfo matchInfo)
+    {
+        if (success)
+        {
+            Debug.Log("Create match succeeded");
+            Utility.SetAccessTokenForNetwork(matchInfo.networkId, matchInfo.accessToken);
+           
+            m_MatchCreated = true;
+            m_MatchInfo = matchInfo;
+
+            StartServer(matchInfo.address, matchInfo.port, matchInfo.networkId,
+                matchInfo.nodeId);
+        }
+        else
+        {
+            Debug.LogError("Create match failed: " + extendedInfo);
+        }
+    }
+
+    public void OnMatchList(bool success, string extendedInfo, List&lt;MatchInfoSnapshot&gt; matches)
+    {
+        if (success &amp;&amp; matches != null)
+        {
+            m_MatchList = matches;
+        }
+    else if(!success)
+    {
+        Debug.LogError("List match failed: " + extendedInfo);
+    }
+    }
+
+    // 当我们配对后，我们连接到服务器/主机
+    public virtual void OnMatchJoined(bool success, string extendedInfo, MatchInfo matchInfo)
+    {
+        if (success)
+        {
+            Debug.Log("Join match succeeded");
+            Utility.SetAccessTokenForNetwork(matchInfo.networkId, matchInfo.accessToken);
+
+            m_MatchJoined = true;
+            m_MatchInfo = matchInfo;
+
+            Debug.Log("Connecting to Address:" + matchInfo.address +
+                " Port:" + matchInfo.port +
+                " NetworKID: " + matchInfo.networkId +
+                " NodeID: " + matchInfo.nodeId);
+            ConnectThroughRelay(matchInfo.address, matchInfo.port, matchInfo.networkId,
+                matchInfo.nodeId);
+        }
+        else
+        {
+            Debug.LogError("Join match failed: " + extendedInfo);
+        }
+    }
+
+    void SetupHost(bool isServer)
+    {
+        Debug.Log("Initializing network transport");
+        NetworkTransport.Init();
+        var config = new ConnectionConfig();
+        config.AddChannel(QosType.Reliable);
+        config.AddChannel(QosType.Unreliable);
+        var topology = new HostTopology(config, 4);
+        if (isServer)
+            m_HostId = NetworkTransport.AddHost(topology, k_ServerPort);
+        else
+            m_HostId = NetworkTransport.AddHost(topology);
+    }
+
+    void StartServer(string relayIp, int relayPort, NetworkID networkId, NodeID nodeId)
+    {
+        SetupHost(true);
+
+        byte error;
+        NetworkTransport.ConnectAsNetworkHost(
+            m_HostId, relayIp, relayPort, networkId, Utility.GetSourceID(), nodeId, out error);
+    }
+
+    void ConnectThroughRelay(string relayIp, int relayPort, NetworkID networkId, NodeID nodeId)
+    {
+        SetupHost(false);
+
+        byte error;
+        NetworkTransport.ConnectToNetworkPeer(
+            m_HostId, relayIp, relayPort, 0, 0, networkId, Utility.GetSourceID(), nodeId, out error);
+    }
+
+    void Update()
+    {
+        if (m_HostId == -1)
+            return;
+
+        var networkEvent = NetworkEventType.Nothing;
+        int connectionId;
+        int channelId;
+        int receivedSize;
+        byte error;
+
+        // 从中继连接中获取事件
+        networkEvent = NetworkTransport.ReceiveRelayEventFromHost(m_HostId, out error);
+        if (networkEvent == NetworkEventType.ConnectEvent)
+            Debug.Log("Relay server connected");
+        if (networkEvent == NetworkEventType.DisconnectEvent)
+            Debug.Log("Relay server disconnected");
+
+        do
+        {
+            // 从服务器/客户端游戏连接中获取事件
+            networkEvent = NetworkTransport.ReceiveFromHost(m_HostId, out connectionId, out channelId,
+                m_ReceiveBuffer, (int)m_ReceiveBuffer.Length, out receivedSize, out error);
+            if ((NetworkError)error != NetworkError.Ok)
+            {
+                Debug.LogError("Error while receiveing network message: " + (NetworkError)error);
+            }
+
+            switch (networkEvent)
+            {
+                case NetworkEventType.ConnectEvent:
+                    {
+                        Debug.Log("Connected through relay, ConnectionID:" + connectionId +
+                            " ChannelID:" + channelId);
+                        m_ConnectionEstablished = true;
+                        m_ConnectionIds.Add(connectionId);
+                        break;
+                    }
+                case NetworkEventType.DataEvent:
+                    {
+                        Debug.Log("Data event, ConnectionID:" + connectionId +
+                            " ChannelID: " + channelId +
+                            " Received Size: " + receivedSize);
+                        m_Reader = new NetworkReader(m_ReceiveBuffer);
+                        m_LastReceivedMessage = m_Reader.ReadString();
+                        break;
+                    }
+                case NetworkEventType.DisconnectEvent:
+                    {
+                        Debug.Log("Connection disconnected, ConnectionID:" + connectionId);
+                        break;
+                    }
+                case NetworkEventType.Nothing:
+                    break;
+            }
+        } while (networkEvent != NetworkEventType.Nothing);
+    }
+}
+</code></pre>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityMultiplayerIntegratingHighLevel.html"></a></span><div class="tip">使用 Unity 的高级 API 进行集成</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityMultiplayerCommonErrors.html"></a></span><div class="tip">常见错误</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

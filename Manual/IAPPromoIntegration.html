@@ -1,0 +1,377 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="内购推荐 (IAP Promo) 集成 - Unity Manual">
+<title>内购推荐 (IAP Promo) 集成 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/Enable_IAP.jpg">
+<meta name="description" content="重要注意事项：游戏必须在初始化 Unity Ads 之前先初始化 Unity IAP 才能正常使用内购推荐 (IAP Promo)。">
+<meta property="og:description" content="重要注意事项：游戏必须在初始化 Unity Ads 之前先初始化 Unity IAP 才能正常使用内购推荐 (IAP Promo)。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'IAPPromoIntegration';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/IAPPromoIntegration.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/IAPPromoIntegration.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/IAPPromoIntegration.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/IAPPromoIntegration.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/IAPPromoIntegration.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/IAPPromoIntegration.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/IAPPromoIntegration.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/IAPPromoIntegration.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/IAPPromoIntegration.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/IAPPromoIntegration.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/IAPPromoIntegration.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/IAPPromoIntegration.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/IAPPromoIntegration.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/IAPPromoIntegration.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/IAPPromoIntegration.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/IAPPromoIntegration.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/IAPPromoIntegration.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/IAPPromoIntegration.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/IAPPromoIntegration.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/IAPPromoIntegration.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/IAPPromoIntegration.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/IAPPromoIntegration.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/IAPPromoIntegration.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/IAPPromoIntegration.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="IAPPromo.html">IAP Promo</a></li>
+<li>内购推荐 (IAP Promo) 集成</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="IAPPromo.html"></a></span><div class="tip">IAP Promo</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="IAPPromoProducts.html"></a></span><div class="tip">内购推荐 (IAP Promo) 商品目录</div>
+</div>
+</div></div>
+<h1>内购推荐 (IAP Promo) 集成</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>概述</h2>
+
+<p><strong>重要注意事项</strong>：游戏必须在初始化 Unity Ads 之前先初始化 Unity IAP 才能正常使用内购推荐 (IAP Promo)。</p>
+
+<p>本集成指南涵盖四个主要步骤：</p>
+
+<ul>
+<li><a href="#Preparation">在 Unity Editor 中准备项目</a></li>
+<li>
+<a href="#Implementation">实现</a>
+
+<ul>
+<li><a href="#ImplementingIAP">内购 (IAP)</a></li>
+<li><a href="#ImplementingAds">Ads</a></li>
+</ul>
+</li>
+<li><a href="#ConfiguringPromotions">配置推荐 (Promotions)</a></li>
+<li><a href="#Testing">测试集成结果</a></li>
+</ul>
+
+<p><a name="Preparation"></a> </p>
+
+<h2>在 Unity Editor 中准备项目</h2>
+
+<h3>设置 Unity 服务</h3>
+
+<p>要使用内购推荐 (IAP Promo)，您需要：</p>
+
+<p>1.<a href="https://docs.unity3d.com/Manual/SettingUpProjectServices.html">配置项目以使用 Unity 服务</a>。
+2. Enable the <a href="https://assetstore.unity.com/packages/add-ons/services/billing/unity-iap-68207">Unity IAP SDK</a> (1.2+) and <a href="https://assetstore.unity.com/packages/add-ons/services/unity-ads-66123">Unity Ads SDK</a> (2.3+) in your Project.</p>
+
+<h4>设置 Unity IAP</h4>
+
+<p>IAP Promo requires a supported version of the Unity IAP SDK (1.17+). To acquire the latest IAP SDK, either enable <strong>In-App Purchasing</strong> in the Services window (<strong>Window</strong> &gt; <strong>Services</strong>), or import it from the <a href="https://assetstore.unity.com/packages/add-ons/services/billing/unity-iap-68207">Asset store</a>. If you’re enabling it from the Services window, be sure to <strong>Import</strong> the Asset package when prompted.</p>
+
+<figure>
+<img src="../uploads/Main/Enable_IAP.jpg" alt="在 Editor 的 Services 窗口中启用 Unity IAP">
+<figcaption>在 Editor 的 Services 窗口中启用 Unity IAP</figcaption>
+</figure>
+
+<p>请参阅有关<a href="https://docs.unity3d.com/Manual/UnityIAPSettingUp.html">设置 IAP</a> 的文档以了解其他信息。</p>
+
+<h4>设置 Unity Ads</h4>
+
+<p>IAP Promo requires a supported version of the Unity Ads SDK. Unity recommends acquiring the latest Ads SDK (3.0+) by importing it from the <a href="https://assetstore.unity.com/packages/add-ons/services/unity-ads-66123">Asset store</a>.</p>
+
+<p>请参阅<a href="https://docs.unity3d.com/Manual/UnityAdsUnityIntegration.html">设置 Unity Ads</a> 以了解其他信息。</p>
+
+<p><a name="Implementation"></a> </p>
+
+<h2>实现</h2>
+
+<p>在设置所需服务后，即可在游戏中实现它们。</p>
+
+<p><a name="ImplementingIAP"></a> </p>
+
+<h3>实现 IAP</h3>
+
+<p>There are two options for initialization: codeless or scripting. </p>
+
+<h4>使用 Codeless IAP</h4>
+
+<p><a href="https://docs.unity3d.com/Manual/UnityIAPCodelessIAP.html">Codeless IAP</a> 能为您处理初始化。如果使用 Codeless IAP 初始化，必须在代码的其他位置调用 Unity Ads 初始化方法。</p>
+
+<p>要使用 Codeless IAP，请填充__商品目录__ (Product Catalog)，然后创建 <strong>IAP 监听器</strong> (IAP Listener) 来获取该目录：</p>
+
+<ol>
+<li><p>In the Editor, select <strong>Window</strong> &gt; <strong>UnityIAP</strong> &gt; <strong>IAP Catalog</strong> to open the <strong>IAP Catalog</strong> window. This window lists all of your previously configured Products. You must have at least one <strong>Product</strong> configured in your <strong>Product Catalog</strong>. For a complete walkthrough on setting up Products, see <a href="https://docs.unity3d.com/Manual/UnityIAPCodelessIAP.html">Codeless IAP</a>.</p></li>
+<li><p>In the <strong>IAP Catalog</strong> window, select <strong>App Store Export</strong> &gt; <strong>Cloud JSON</strong> to export a local copy of the <strong>Product Catalog</strong>.<br><img src="../uploads/Main/IAP_Catalog_Window.png" alt="Exporting an IAP Product Catalog to JSON"></p></li>
+</ol>
+
+<p>3.创建 <strong>IAP 监听器</strong>。选择 <strong>Window</strong> &gt; <strong>Unity IAP</strong> &gt; <strong>Create IAP Listener</strong>，然后将其添加到游戏的第一个场景。游戏一启动，监听器就会获取__商品目录<strong>。这样可以避免在游戏请求__推荐 (Promotions)</strong> 而__商品__没有准备好（因为无码按钮尚未出现在场景中）时发生错误。</p>
+
+<h4>使用脚本</h4>
+
+<p>If you do not use Codeless IAP, you must <a href="https://docs.unity3d.com/Manual/UnityIAPInitialization.html">initialize Unity IAP manually</a> through a script. See the following code example: </p>
+
+<pre><code>using UnityEngine;
+using UnityEngine.Purchasing;
+
+public class IAPManager : MonoBehaviour, IStoreListener {
+  private IStoreController controller;
+  
+  //The following products must be added to the Product Catalog in the Editor:
+  private const string coins100 = "100.gold.coins";
+  private const string coins500 = "500.gold.coins";
+
+  public int coin_count = 0;
+
+  void Awake () { 
+    StandardPurchasingModule module = StandardPurchasingModule.Instance (); 
+    ProductCatalog catalog = ProductCatalog.LoadDefaultCatalog (); 
+    ConfigurationBuilder builder = ConfigurationBuilder.Instance (module);
+    IAPConfigurationHelper.PopulateConfigurationBuilder (ref builder, catalog); 
+    UnityPurchasing.Initialize (this, builder); 
+  }
+
+  public void OnInitialized (IStoreController controller, IExtensionProvider extensions) { 
+    this.controller = controller; Debug.Log ("Initialization Successful"); 
+  }
+  
+  public void OnInitializeFailed(InitializationFailureReason error) { 
+    Debug.Log ("UnityIAP.OnInitializeFailed (" + error + ")")
+  }
+  
+  public void OnPurchaseFailed (Product item, PurchaseFailureReason reason) { 
+    Debug.Log("UnityIAP.OnPurchaseFailed (" + item + ", " + reason + ")"); 
+  }
+
+  public PurchaseProcessingResult ProcessPurchase (PurchaseEventArgs e) {
+    string purchasedItem = e.purchasedProduct.definition.id;
+    
+    switch (purchasedItem) { 
+      case coins100: Debug.Log ("Congratulations, you are richer!"); 
+      coin_count += 100; 
+      Debug.Log ("IAPLog: Coin count: " + coin_count); 
+      break; 
+      
+      case coins500: Debug.Log ("Congratulations, you are richer!"); 
+      coin_count += 500; 
+      Debug.Log ("IAPLog: Coin count: " + coin_count);
+      break;
+    }
+    return PurchaseProcessingResult.Complete;
+  }
+
+  public void Buy(string productId) { 
+    Debug.Log ("UnityIAP.BuyClicked (" + productId + ")");
+    controller.InitiatePurchase (productId);
+  }
+}
+</code></pre>
+
+<p><a name="ImplementingAds"></a> </p>
+
+<h3>实现 Unity Ads</h3>
+
+<p>You must also <a href="https://unityads.unity3d.com/help/monetization/integration-guide-unity">initialize Unity Ads</a>, whether or not you use the Codeless or manual IAP initialization method. The following code sample illustrates an initialization method to invoke:</p>
+
+<pre><code>using UnityEngine;
+using UnityEngine.Monetization;
+
+public class AdManager : MonoBehaviour {
+
+  public bool testMode = true;
+  private const string adPlacement = "video";
+  private const string promoPlacement = "promo";
+
+  #if UNITY_IOS
+    private string gameId = "0000000"; // Your iOS game ID here
+  #elif UNITY_ANDROID
+    private string gameId = "9999999"; // Your Android game ID here
+  #else
+    private string gameId = "0123456"; // Prevents Editor Errors
+  #endif
+
+  private void Awake () {
+    if (Monetization.isSupported &amp;&amp; !Monetization.isInitialized) {
+      Monetization.Initialize (gameId, testMode); 
+    }
+  }
+
+  public void ShowVideoAd () { 
+    ShowAdPlacementContent ad = Monetization.GetPlacementContent (adPlacement) as ShowAdPlacementContent; ad.Show (); 
+  }
+
+  public void ShowPromo () { 
+    PromoAdPlacementContent promo = Monetization.GetPlacementContent (promoPlacement) as PromoAdPlacementContent; promo.Show (); 
+  }
+}
+</code></pre>
+
+<p><a name="ConfiguringPromotions"></a> </p>
+
+<h2>在开发者控制面板 (Developer Dashboard) 中配置推荐 (Promotions)</h2>
+
+<p>Navigate to the <a href="https://operate.dashboard.unity3d.com/"><strong>Monetization</strong> section of the Operate Dashboard</a> to configure your IAP Promo offers: </p>
+
+<ul>
+<li>Use <strong>Placements</strong> to control when and how your <strong>Promotions</strong> display in-game. Follow the <a href="https://unityads.unity3d.com/help/monetization/placements#placement-settings"><strong>Placements</strong> guide</a> to create and configure your Promo <strong>Placements</strong> for <strong>IAP</strong> content.</li>
+<li>使用<a href="https://docs.unity3d.com/Manual/IAPPromoProducts">商品</a>界面可导入__商品目录__并管理每个商品的创意资源。</li>
+<li>定义<a href="https://docs.unity3d.com/Manual/IAPPromoPromotions">推荐 (Promotions)</a> 的参数，例如运行时间、包含的__广告位__和__商品__以及目标用户。</li>
+</ul>
+
+<p><a name="Testing"></a> </p>
+
+<h2>测试集成结果</h2>
+
+<p>通过实现以下示例代码来调用内购推荐 (IAP Promo) 内容：</p>
+
+<pre><code>public void ShowPromo()
+{
+    Advertisement.Show (placementID);
+}
+</code></pre>
+
+<p>Press <strong>Play</strong> in the Editor to check that a test ad appears when the <strong>Placement</strong> makes its request. To see real promotional creative assets, you must build the game to a device in production mode.</p>
+
+<p><br>
+<br></p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2019–04–11 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="IAPPromo.html"></a></span><div class="tip">IAP Promo</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="IAPPromoProducts.html"></a></span><div class="tip">内购推荐 (IAP Promo) 商品目录</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

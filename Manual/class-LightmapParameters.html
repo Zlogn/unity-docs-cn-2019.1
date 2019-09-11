@@ -1,0 +1,409 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="光照贴图参数 - Unity Manual">
+<title>光照贴图参数 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/LightmapParameters1.png">
+<meta name="description" content="光照贴图参数资源存储了一组用于控制 Unity 全局光照 (GI) 功能的参数值。这些资源允许定义和保存不同的光照值集合，以便用于不同的情况。">
+<meta property="og:description" content="光照贴图参数资源存储了一组用于控制 Unity 全局光照 (GI) 功能的参数值。这些资源允许定义和保存不同的光照值集合，以便用于不同的情况。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-LightmapParameters';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-LightmapParameters.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-LightmapParameters.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-LightmapParameters.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-LightmapParameters.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-LightmapParameters.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-LightmapParameters.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-LightmapParameters.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-LightmapParameters.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-LightmapParameters.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-LightmapParameters.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-LightmapParameters.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-LightmapParameters.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-LightmapParameters.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-LightmapParameters.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-LightmapParameters.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-LightmapParameters.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-LightmapParameters.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-LightmapParameters.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-LightmapParameters.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-LightmapParameters.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-LightmapParameters.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-LightmapParameters.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-LightmapParameters.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-LightmapParameters.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="LightingOverview.html">光照</a></li>
+<li><a href="GIIntro.html">全局光照</a></li>
+<li>光照贴图参数</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ProgressiveLightmapper-CustomFallOff.html"></a></span><div class="tip">自定义衰减</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightingBakedAmbientOcclusion.html"></a></span><div class="tip">烘焙环境光遮挡</div>
+</div>
+</div></div>
+<h1>光照贴图参数</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>光照贴图参数资源存储了一组用于控制 Unity <a href="GIIntro.html">全局光照</a> (GI) 功能的参数值。这些资源允许定义和保存不同的光照值集合，以便用于不同的情况。</p>
+
+<p>要创建新的光照贴图参数资源，请在 Project 窗口中右键单击，然后选择 <strong>Create</strong> &gt; <strong>New Parameters Asset</strong>。Unity 将此资源存储在 Project 文件夹中。</p>
+
+<figure>
+<img src="../uploads/Main/LightmapParameters1.png" alt="名为 New LightmapParameters 的光照贴图参数资源显示在 Project 窗口中">
+<figcaption>名为 <strong>New LightmapParameters</strong> 的光照贴图参数资源显示在 Project 窗口中</figcaption>
+</figure>
+
+<p>光照贴图参数资源可以用来为不同类型的游戏对象或为不同平台和不同场景类型（例如，室内或室外场景）创建优化的预设。</p>
+
+<p>在 Project 窗口中单击某个光照贴图参数资源时，Inspector 窗口将显示该资源中定义的值。下表中列出了参数及其描述。</p>
+
+<figure>
+<img src="../uploads/Main/LightmapParameters2.png" alt="">
+</figure>
+
+<h2>Precomputed Realtime GI</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Resolution</strong></td>
+	<td style="text-align:left;">This value scales the <strong>Realtime Resolution</strong> value in the Scene tab of the Lighting Window (menu: <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong> &gt; <strong>Scene</strong>) to give the final resolution of the lightmap in texels per unit of distance.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cluster Resolution</strong></td>
+	<td style="text-align:left;">聚类分辨率（内部计算光反射的分辨率）与最终光照贴图分辨率的比率。请参阅有关 <a href="GIVis.html">Scene 视图中的 GI 可视化</a>的文档以了解更多信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Irradiance Budget</strong></td>
+	<td style="text-align:left;">此值确定用于照射光照贴图中每个纹理像素的入射光数据的精度。从纹理像素的位置对场景的“视图”采样来获得每个纹理像素的光照。较低的辐照度预算值会导致样本更模糊。值越高，样本的清晰度越高。较高的辐照度预算会改善光照，但这会增大运行时内存使用量并可能增大 CPU 使用率。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Irradiance Quality</strong></td>
+	<td style="text-align:left;">使用滑动条来定义投射的射线数量，并计算影响给定输出光照贴图纹理像素的集合。较高的值可在光照贴图中实现视觉改善，但会增加 Unity Editor 中的预计算时间。该值不会影响运行时性能。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Modelling Tolerance</strong></td>
+	<td style="text-align:left;">此值控制网格几何体中允许光线通过的间隙的最小大小。降低此值可允许光线穿过环境中更小的间隙。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Edge Stitching</strong></td>
+	<td style="text-align:left;">如果启用此属性，则表示光照贴图中的 UV 图表应无缝连接在一起，从而避免不必要的视觉瑕疵。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Is Transparent</strong></td>
+	<td style="text-align:left;">如果启用此属性，在全局光照计算期间，对象显示将为透明。背面对这些计算没有影响，光线将穿过表面。这可用于不可见的发光表面。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>System Tag</strong></td>
+	<td style="text-align:left;">光照贴图纹理组合在同一个光照贴图图集内的一组对象称为“系统”。如果无法将所有对象放入单个图集中，Unity Editor 会自动定义其他系统及其附带的图集。但是，有时自己定义单独的系统会非常有用（例如，确保不同房间内的对象分组到每个房间的一个系统中）。更改 <strong>System Tag</strong> 号可强制创建新的系统和光照贴图。标签的确切数字序列值不重要。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Baked GI</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Enlighten</strong></td>
+	<td style="text-align:left;"><strong>渐进光照贴图 (Progressive Lightmapper)</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Blur Radius</strong></td>
+	<td style="text-align:left;">后期处理过程中应用于直接光照的模糊过滤器的半径（单位：纹理像素）。此半径基本上是相邻纹理像素的平均距离。半径越大，效果越模糊。较高的模糊度往往会减少视觉瑕疵，但也会软化阴影的边缘。</td>
+	<td style="text-align:left;">使用渐进光照贴图时，__Blur Radius__ 不可用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Anti-aliasing Samples</strong></td>
+	<td style="text-align:left;">应用的抗锯齿程度（减少“块状”瑕疵）。数字越大，质量越高且烘焙时间越长。</td>
+	<td style="text-align:left;">对纹理像素进行超级采样以减少锯齿的次数。采样次数为 [1;3] 将禁用超级采样，采样次数为 [4;8] 将提供 2x 超级采样，而采样次数为 [9;256] 提供 4x 超级采样。此设置主要影响用于位置和法线缓冲区的内存量（2x 使用 4 倍的内存量，4x 使用 16 倍的内存量）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Direct Light Quality</strong></td>
+	<td style="text-align:left;">用于评估直接光照的光线数量。较高数量的光线往往会产生更准确的柔和阴影，但会增加烘焙时间。</td>
+	<td style="text-align:left;">使用渐进光照贴图时，__Direct Light Quality__ 不可用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Backface Tolerance</strong></td>
+	<td style="text-align:left;">网格的结构有时会导致某些纹理像素含有背面带有几何体的“视图”。来自背面的入射光在任何场景中都无意义。因此，此属性用于选择有多少光量（百分比阈值）来自正面几何体才能将纹理像素视为有效。无效纹理像素的光照值通过相邻纹理像素的值估算得出。降低此值可以解决由背面入射光引起的光照问题。</td>
+	<td style="text-align:left;">必须照射到正面才会被视为可用的输出纹理像素发射光线的百分比。如果从纹理像素投射的太多光线照射到背面（纹理像素在某个几何体内），纹理像素无效处理。这种情况下通过从周围纹理像素克隆有效值来避免瑕疵。例如，如果 Backface Tolerance 为 0.0，则仅在纹理像素只能看到背面的情况下才会拒绝该纹理像素。如果此设置为 1.0，即使射线原点有一条射线照射到背面，也会拒绝该原点。在“Baked Texel Validity”Scene 视图模式中，一个箱子可看到有效（绿色）和无效（红色）纹理像素。如果场景中有单面网格，可能需要通过将值设置为零来禁用此功能。稍后将在 Editor 中添加双面标志以解决此问题。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Pushoff</strong></td>
+	<td style="text-align:left;">开始在建模单元中跟踪射线之前从表面几何体推离的距离。此属性适用于所有烘焙光照贴图，因此会影响直射光、间接光和 AO。<strong>Pushoff</strong> 可用于摆脱不必要的 AO 或阴影。使用此设置可解决对象表面自身阴影遮挡问题，该问题会导致斑点阴影图案出现在表面上而找不到明显来源。也可以使用此设置去除巨型对象上不必要的瑕疵（这种情况下的浮点精度不够高，无法准确地对精细细节进行射线追踪）。</td>
+	<td style="text-align:left;">在建模单元中沿着射线追踪的法线将射线原点从几何体推离的量。此属性适用于所有烘焙光照贴图，因此会影响直射光、间接光和环境光遮挡。可用于摆脱不必要的遮挡/阴影。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Baked Tag</strong></td>
+	<td style="text-align:left;" colspan="2">与上文的 <strong>System Tag</strong> 属性相似，此数字表示单独的烘焙光照贴图将特定对象集组合在一起。与 System Tag 一样，确切的数值并不重要。具有不同 Baked Tag 值的对象绝不会放在同一图集中；但是，也无法保证具有相同标签的对象最终处于同一图集中，因为这些对象可能不一定适合放入同一个光照贴图（有关此情况的示例，请参阅以下的图像 A）。使用多场景烘焙 API 时不必设置此项，因为分组是自动完成的（使用 <strong>Baked Tag</strong> 来复制 <strong>Lock Atlas</strong> 选项的某些行为）。请参阅下文的<a href="#BakedTags">烘焙标签 (Baked Tags)：详细信息</a>以了解更多信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Limit Lightmap Count</strong></td>
+	<td style="text-align:left;">
+<strong>Limit Lightmap Count</strong> is not available when you use Enlighten.</td>
+	<td style="text-align:left;">
+<strong>Limit Lightmap Count</strong> applies a maximum number of lightmaps that Unity can use when packing GameObjects with the same Baked GI settings. When you enable <strong>Limit Lightmap Count</strong>, a setting appears underneath it called <strong>Max Lightmaps</strong>; use this to set the maximum number of lightmaps Unity can use. <br><br>Unity considers GameObjects to have the same Baked GI settings if they have equal values for <strong>Anti-aliasing Samples</strong>, <strong>Pushoff</strong>, <strong>Baked Tag</strong>, and <strong>Backface Tolerance</strong>. This means that Unity might pack together GameObjects associated with different lightmap parameter Assets. To pack the GameObjects, Unity gradually scales down the UV layouts until all GameObjects fit inside the specified number of lightmaps. The <a href="https://docs.unity3d.com/Manual/ProgressiveLightmapper.html">Lightmapper Settings</a> define the size of these lightmaps. This process might reduce the GameObjects’ lightmap resolution.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="BakedTags"> </a> </p>
+
+<h3>烘焙标签 (Baked Tags)：详细信息</h3>
+
+<figure>
+<img src="../uploads/Main/LightmapParameters.jpg" alt="">
+</figure>
+
+<p>上图显示同一场景的两个视图：</p>
+
+<p>1.<strong>左：__一切都在一个图集内，因为所有的游戏对象都有相同的__烘焙标签</strong>。</p>
+
+<p>2.__右：__向一个游戏对象分配了其他__烘焙标签__，并强制其进入第二个光照贴图。</p>
+
+<h2>Baked AO</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Quality</strong></td>
+	<td style="text-align:left;">评估环境光遮挡 (AO) 时投射的射线数量。射线数量越多，AO 质量越高，但烘焙时间也越长。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Anti-aliasing Samples</strong></td>
+	<td style="text-align:left;">进行 AO 抗锯齿时要采集的样本数。样本数量越多，AO 质量越高，但烘焙时间也越长。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>General GI</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Backface Tolerance</strong></td>
+	<td style="text-align:left;">必须照射到光照系统正面才会被视为可用的输出纹理像素发射光线的百分比。如果从纹理像素投射的太多光线照射到背面（例如，如果纹理像素在某个几何体内），此设置允许 Unity 让纹理像素无效。光照系统从周围纹理像素克隆有效值来避免意外的瑕疵。<br><br>如果 <strong>Backface Tolerance</strong> 设置为 0.0，则光照系统仅在纹理像素只能看到背面的情况下才会拒绝该纹理像素。如果此设置为 1.0，即使射线原点有一条射线照射到背面，光照系统也会拒绝该原点。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>分配光照贴图参数资源</h2>
+
+<h3>场景</h3>
+
+<p>To assign a Lightmap Parameters Asset to the whole Scene, open the <a href="GlobalIllumination.html">Lighting window</a> (<strong>Window</strong> &gt; <strong>rendering</strong> &gt; <strong>Lighting Settings</strong>), click the <strong>Scene</strong> tab, and navigate to the <strong>General GI</strong> settings.</p>
+
+<figure>
+<img src="../uploads/Main/LightmapParameters3.png" alt="">
+</figure>
+
+<p>使用 <strong>Default Parameters</strong> 下拉选单来分配默认的光照贴图参数资源。此下拉选单会列出所有可用的光照贴图参数资源。</p>
+
+<figure>
+<img src="../uploads/Main/LightmapParameters4.png" alt="">
+</figure>
+
+<h3>游戏对象</h3>
+
+<p>要将光照贴图参数资源分配给单个游戏对象，请确保游戏对象已附加网格渲染器 (Mesh Renderer) 或地形 (Terrain) 组件。</p>
+
+<figure>
+<img src="../uploads/Main/LightmapParameters5.png" alt="">
+</figure>
+
+<p>要将光照贴图参数资源分配给网格渲染器，请勾选该组件的 <strong>Lightmap Static</strong> 复选框，然后从 <strong>Lightmap Settings</strong> 下的 <strong>Lightmap Parameters __ 中选择一个选项。选择 </strong>Scene Default Parameter__ 即可使用分配给整个场景的同一光照贴图参数资源。</p>
+
+<figure>
+<img src="../uploads/Main/LightmapParameters6.png" alt="">
+</figure>
+
+<p>要将光照贴图参数资源分配给地形，请勾选该地形的 <strong>Lightmap Static</strong> 复选框，然后从 <strong>Advanced Parameters</strong> 中选择一个选项。选择 <strong>Scene Default Parameters</strong> 即可使用分配给整个场景的同一光照贴图参数资源。</p>
+
+<hr>
+
+<p><span class="page-edit"> 2019–03–28 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p>
+
+<p><span class="page-edit"> 2018–03–28 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p>
+
+<p><span class="page-history">Limit Lightmap Count added in <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/30_search.html?q=newin20191">2019.1</a> <span class="search-words">NewIn20191</span></span></p>
+
+<p><span class="page-history">在 <a href="https://docs.unity3d.com/2018.1/Documentation/Manual/30_search.html?q=newin20181">2018.1</a> 版中添加了渐进光照贴图 <span class="search-words">NewIn20181</span></span></p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ProgressiveLightmapper-CustomFallOff.html"></a></span><div class="tip">自定义衰减</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightingBakedAmbientOcclusion.html"></a></span><div class="tip">烘焙环境光遮挡</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

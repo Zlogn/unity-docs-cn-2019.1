@@ -1,0 +1,254 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="ShaderLab 语法 - Unity Manual">
+<title>ShaderLab 语法 - Unity Manual</title>
+<meta name="description" content="Unity 中的所有着色器文件都是用名为&amp;#8220;ShaderLab&amp;#8221;的声明性语言编写的。在文件中，通过嵌套括号
+语法声明着色器的各个描述，例如，材质检视面板中应显示的着色器属性；
+要执行哪些类型的硬件回退；要使用哪些类型的混合模式等；而且实际&amp;#8220;着色器代码&amp;#8221;
+编写在同一着色器文件中的 CGPROGRAM 代码片段中（请参阅表面着色器和顶点和片元着色器）。">
+<meta property="og:description" content="Unity 中的所有着色器文件都是用名为&amp;#8220;ShaderLab&amp;#8221;的声明性语言编写的。在文件中，通过嵌套括号
+语法声明着色器的各个描述，例如，材质检视面板中应显示的着色器属性；
+要执行哪些类型的硬件回退；要使用哪些类型的混合模式等；而且实际&amp;#8220;着色器代码&amp;#8221;
+编写在同一着色器文件中的 CGPROGRAM 代码片段中（请参阅表面着色器和顶点和片元着色器）。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'SL-Shader';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-Shader.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-Shader.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-Shader.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-Shader.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-Shader.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-Shader.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-Shader.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-Shader.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-Shader.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-Shader.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/SL-Shader.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/SL-Shader.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/SL-Shader.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/SL-Shader.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-Shader.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-Shader.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-Shader.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-Shader.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-Shader.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-Shader.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-Shader.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-Shader.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-Shader.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-Shader.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="SL-Reference.html">着色器参考</a></li>
+<li>ShaderLab 语法</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-SamplerStates.html"></a></span><div class="tip">使用采样器状态</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-Properties.html"></a></span><div class="tip">ShaderLab：Properties</div>
+</div>
+</div></div>
+<h1>ShaderLab 语法</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 中的所有<a href="class-Shader.html">着色器</a>文件都是用名为“ShaderLab”的声明性语言编写的。在文件中，通过嵌套括号
+语法声明着色器的各个描述，例如，材质检视面板中应显示的着色器属性；
+要执行哪些类型的硬件回退；要使用哪些类型的混合模式等；而且实际“着色器代码”
+编写在同一着色器文件中的 <code>CGPROGRAM</code> 代码片段中（请参阅<a href="SL-SurfaceShaders.html">表面着色器</a>和<a href="SL-ShaderPrograms.html">顶点和片元着色器</a>）。</p>
+
+<p>本页以及子页面将介绍嵌套括号“ShaderLab”语法。<code>CGPROGRAM</code> 代码片段是用常规
+HLSL/Cg 着色语言编写的，请参阅<a href="SL-ShaderPrograms.html">相关文档页面</a>。</p>
+
+<p><strong>Shader</strong> 是着色器文件的根命令。每个文件必须定义一个（且仅一个）Shader。Shader 指定当对象的材质使用此着色器时如何渲染此类对象。</p>
+
+<h2>语法</h2>
+
+<pre><code>Shader "name" { [Properties] Subshaders [Fallback] [CustomEditor] }
+</code></pre>
+
+<p>定义着色器。此着色器将以指定的<strong>名称</strong>显示在材质检视面板中。着色器可以选择性地定义在材质检视面板中显示的<strong>属性</strong>列表。在此之后是子着色器的列表，以及可选的回退和/或自定义编辑器声明。</p>
+
+<h2>详细信息</h2>
+
+<h3>属性</h3>
+
+<p>着色器可以具有<a href="SL-Properties.html">属性</a>列表。着色器中声明的所有属性都会显示在 Unity 中的<a href="class-Material.html">材质检视面板</a>中。典型的属性包括对象颜色、纹理或者着色器要使用的任意值。</p>
+
+<h3>子着色器和回退</h3>
+
+<p>每个着色器均包含一组<a href="SL-SubShader.html">子着色器</a>。必须至少包含一个子着色器。加载着色器时，Unity 将检查子着色器的列表，并选取最终用户的机器支持的第一个子着色器。如果不支持任何子着色器，Unity 将尝试使用<a href="SL-Fallback.html">回退着色器</a>。</p>
+
+<p>不同显卡具有不同功能。这给游戏开发者带来了一个永恒的问题；您希望游戏在最新款硬件上呈现出色的画面，但又不希望这些出色画面只能在数量仅占 3% 的最新款硬件上呈现。这时候就需要使用子着色器。可创建一个子着色器，使其包含您所能想象的所有奇幻图形特效，然后为型号更老的显卡添加更多子着色器。这些子着色器可能会以更慢的速度来实现您想要的效果，或者可能选择不实现某些细节。</p>
+
+<p>着色器的“细节级别”(LOD) 和“着色器替换”是两种同样基于子着色器的技术，请参阅<a href="SL-ShaderLOD.html">着色器 LOD</a> 和<a href="SL-ShaderReplacement.html">着色器替换</a>以了解想象信息。</p>
+
+<h2>示例</h2>
+
+<p>下面是最简单的着色器之一：</p>
+
+<pre><code>// 有色顶点光照
+Shader "Simple colored lighting"
+{
+    // 单个颜色属性
+    Properties {
+        _Color ("Main Color", Color) = (1,.5,.5,1)
+    }
+    // 定义一个子着色器
+    SubShader
+    {
+        // 子着色器中的单个通道
+        Pass
+        {
+            // 使用固定函数每顶点光照
+            Material
+            {
+                Diffuse [_Color]
+            }
+            Lighting On
+        }
+    }
+}
+</code></pre>
+
+<p>此着色器定义了颜色属性 <strong>_Color__（在材质检视面板中显示为 _Main Color_），默认值为 </strong>(1,0.5,0.5,1)__。然后，定义了单个子着色器。该子着色器包含一个 <a href="SL-Pass.html">Pass</a>，用于启用固定函数顶点光照并为其设置基本材质。</p>
+
+<p>请参阅<a href="SL-SurfaceShaderExamples.html">表面着色器示例</a>或
+<a href="SL-VertexFragmentShaderExamples.html">顶点和片元着色器示例</a>中提供的更复杂示例。</p>
+
+<h2>另请参阅</h2>
+
+<ul>
+<li>
+<a href="SL-Properties.html">Properties 语法</a>。</li>
+<li>
+<a href="SL-SubShader.html">SubShader 语法</a>。</li>
+<li>
+<a href="SL-Pass.html">Pass 语法</a>。</li>
+<li>
+<a href="SL-Fallback.html">Fallback 语法</a>。</li>
+<li>
+<a href="SL-CustomEditor.html">CustomEditor 语法</a>。</li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-SamplerStates.html"></a></span><div class="tip">使用采样器状态</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-Properties.html"></a></span><div class="tip">ShaderLab：Properties</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

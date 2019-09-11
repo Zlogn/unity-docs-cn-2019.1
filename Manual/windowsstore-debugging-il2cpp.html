@@ -1,0 +1,304 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="通用 Windows 平台：IL2CPP 脚本后端上的调试 - Unity Manual">
+<title>通用 Windows 平台：IL2CPP 脚本后端上的调试 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/IL2CPP_Debugging_1.png">
+<meta name="description" content="To debug C# code with IL2CPP, enable Script Debugging in the Build Settings before building the Project, and enable the InternetClient, InternetClientServer and PrivateNetworkClientServer capabilities in the Player settings or the manifest. The manifest is not overwrriten when you build on top of a previous build, so if you want to change the capabilities, you need to do it from Visual Studio manifest editor.">
+<meta property="og:description" content="To debug C# code with IL2CPP, enable Script Debugging in the Build Settings before building the Project, and enable the InternetClient, InternetClientServer and PrivateNetworkClientServer capabilities in the Player settings or the manifest. The manifest is not overwrriten when you build on top of a previous build, so if you want to change the capabilities, you need to do it from Visual Studio manifest editor.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'windowsstore-debugging-il2cpp';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/windowsstore-debugging-il2cpp.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/windowsstore-debugging-il2cpp.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/windowsstore-debugging-il2cpp.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/windowsstore-debugging-il2cpp.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/windowsstore-debugging-il2cpp.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/windowsstore-debugging-il2cpp.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/windowsstore-debugging-il2cpp.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/windowsstore-debugging-il2cpp.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/windowsstore-debugging-il2cpp.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/windowsstore-debugging-il2cpp.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/windowsstore-debugging-il2cpp.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/windowsstore-debugging-il2cpp.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/windowsstore-debugging-il2cpp.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/windowsstore-debugging-il2cpp.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/windowsstore-debugging-il2cpp.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/windowsstore-debugging-il2cpp.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/windowsstore-debugging-il2cpp.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/windowsstore-debugging-il2cpp.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/windowsstore-debugging-il2cpp.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/windowsstore-debugging-il2cpp.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/windowsstore-debugging-il2cpp.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/windowsstore-debugging-il2cpp.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/windowsstore-debugging-il2cpp.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/windowsstore-debugging-il2cpp.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
+<li><a href="Windows.html">Windows</a></li>
+<li><a href="WindowsStore.html">通用 Windows 平台</a></li>
+<li><a href="windowsstore-il2cpp.html">通用 Windows 平台：IL2CPP 脚本后端</a></li>
+<li>通用 Windows 平台：IL2CPP 脚本后端上的调试</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="windowsstore-plugins-il2cpp.html"></a></span><div class="tip">通用 Windows 平台：IL2CPP 脚本后端上的插件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="windowsstore-faq.html"></a></span><div class="tip">常见问题解答</div>
+</div>
+</div></div>
+<h1>通用 Windows 平台：IL2CPP 脚本后端上的调试</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>Debugging C# code</h2>
+
+<p>To debug C# code with IL2CPP, enable <strong>Script Debugging</strong> in the <a href="BuildSettings.html">Build Settings</a> before building the Project, and enable the <strong>InternetClient</strong>, <strong>InternetClientServer</strong> and <strong>PrivateNetworkClientServer</strong> capabilities in the <a href="class-PlayerSettingsWSA.html">Player settings</a> or the manifest. The manifest is not overwrriten when you build on top of a previous build, so if you want to change the capabilities, you need to do it from Visual Studio manifest editor.</p>
+
+<p>The debugging procedure is the same as any other Unity platform. For more information, see <a href="ManagedCodeDebugging.html">Debugging C# code in Unity</a>.</p>
+
+<h2>Debugging generated C++ code</h2>
+
+<p>In addition to debugging C# code, you can debug generated C++ code using Visual Studio. </p>
+
+<h2>生成的 C++ 代码中的类和方法命名</h2>
+
+<p>IL2CPP 类如下所示：<code>&lt;ClassName&gt;_t#number</code>，其中的 <code>&lt;ClassName&gt;</code> 是类的普通名称，而 #number 是唯一的类型编号。某些核心类型不存在 #number。例如：</p>
+
+<pre><code>String_t
+Object_t
+Type_t
+Char_t34
+StringBuilder_t26
+GuidParser_t1539
+</code></pre>
+
+<p>IL2CPP 方法如下所示：<code>&lt;ClassName&gt;_&lt;MethodName&gt;_m#number</code>，其中的 <code>&lt;ClassName&gt;</code> 是声明类型的方法的普通类名，<code>&lt;MethodName&gt;</code> 是普通方法名称，而 <code>#number</code> 是唯一的方法编号。例如：</p>
+
+<pre><code>GuidParser_ParseHex_m10003
+ConfigurationSection_DoDeserializeSection_m1275
+String_Format_m4102
+Mathf_Sqrt_m289
+Thing_Start_m1
+</code></pre>
+
+<p>静态字段结构的命名如下所示：<code>&lt;ClassName&gt;_t#number_StaticFields</code>，其中结构名称的第一部分与声明类型相同，例如：</p>
+
+<pre><code>StringBuilder_t26_StaticFields
+Thing_t24_StaticFields
+</code></pre>
+
+<p>此外，在每个类/方法定义上面都有一条 C++ 注释，指出完整的类/方法名称。例如：</p>
+
+<pre><code>// System.String
+struct String_t : public Object_t
+{
+    // System.Int32 System.String::length
+    int32_t _length_0;
+    // System.Char System.String::start_char
+    uint16_t _start_char_1;
+};
+
+// System.Text.StringBuilder
+struct StringBuilder_t26  : public Object_t
+{
+    // System.Int32 System.Text.StringBuilder::_length
+    int32_t length_1;
+    // System.String System.Text.StringBuilder::_str
+    String_t* str_2;
+    // System.String System.Text.StringBuilder::_cached_str
+    String_t* cached_str_3;
+    // System.Int32 System.Text.StringBuilder::_maxCapacity
+    int32_t maxCapacity_4;
+};
+
+// System.Void MyData::.ctor()
+extern "C" void MyData_ctor_m0 (MyData_t2 * this, const MethodInfo* method)
+{
+    ...
+}
+
+// Thing
+struct Thing_t24 : public MonoBehaviour_t25
+{
+    // MyData Thing::m_Data
+    MyData_t2 * _m_Data_2;
+    // System.Text.StringBuilder Thing::m_Builder
+    StringBuilder_t26 * _m_Builder_3;
+};
+struct Thing_t24_StaticFields
+{
+    // System.Int32 Thing::s_SomeStaticField
+    int32_t _s_SomeStaticField_4;
+};
+</code></pre>
+
+<h2>观察变量值</h2>
+
+<p>调试最重要的部分之一是观察各种变量的值。Visual Studio 允许将鼠标悬停在变量上以将变量添加到监视窗口中，从而通过相对容易的方式观察变量的值。例如：</p>
+
+<p><img src="../uploads/Main/IL2CPP_Debugging_1.png" alt="">
+<img src="../uploads/Main/IL2CPP_Debugging_2.png" alt=""></p>
+
+<p>观察静态字段有点困难。在 IL2CPP 中，静态字段存储在 Il2CppClass 实例本身上。因此，为了观察静态字段，我们首先需要一个指向该类型 Il2CppClass 结构的指针。这些指针位于使用它们的方法的作用域内，但在观察一次之后，指针将在应用程序运行期间保持在相同的内存地址。Il2CppClass 结构具有“static_fields”字段，该字段便是一个指针，指向包含该特定类型的静态字段的内存块。要查看实际值，必须将此指针强制转换为适当的静态字段结构：每种类型都有自己的字段。例如，我们来观察 <code>Thing_t24</code> 类的静态字段：</p>
+
+<figure>
+<img src="../uploads/Main/IL2CPP_Debugging_3.png" alt="">
+</figure>
+
+<h2>调查异常</h2>
+
+<p>IL2CPP 使用本机 C++ 异常来实现 .NET 异常。当应该抛出某种异常时，IL2CPP 将抛出 Il2CppExceptionWrapper 对象，其定义如下：</p>
+
+<pre><code>struct Il2CppExceptionWrapper
+{
+    Il2CppException* ex;
+
+    Il2CppExceptionWrapper (Il2CppException* ex) : ex (ex) {}
+};
+</code></pre>
+
+<p>可在监视窗口中轻松调查这些异常对象：</p>
+
+<figure>
+<img src="../uploads/Main/IL2CPP_Debugging_4.png" alt="">
+</figure>
+
+<p>最后，对异常启用调试器中断，从而能够当场捕获异常的来源，这样可能有助于发现问题。为此，请在 Visual Studio 中按 CTRL+ALT+E，并确保在打开的窗口中选中了 C++ Exceptions 复选框：</p>
+
+<figure>
+<img src="../uploads/Main/IL2CPP_Debugging_5.png" alt="">
+</figure>
+
+<p>启用此设置后，只要有异常抛出，Visual Studio 就会自动停止执行：</p>
+
+<figure>
+<img src="../uploads/Main/IL2CPP_Debugging_6.png" alt="">
+</figure>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">• 2018–10–18 Page amended with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">C# debugging for IL2CPP on Universal Windows Platform added in <a href="https://docs.unity3d.com/2018.2/Documentation/Manual/30_search.html?q=newin20182">2018.2</a> <span class="search-words">NewIn20182</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="windowsstore-plugins-il2cpp.html"></a></span><div class="tip">通用 Windows 平台：IL2CPP 脚本后端上的插件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="windowsstore-faq.html"></a></span><div class="tip">常见问题解答</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Creating an Isometric Tilemap - Unity Manual">
+<title>Creating an Isometric Tilemap - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/Iso-Tilemap-AxisSorting.png">
+<meta name="description" content="When creating an Isometric Tilemap, there are additional steps to take compared to creating a regular Tilemap. To create an Isometric Tilemap, go to GameObject &gt; 2D Object &gt; Isometric Tilemap/Isometric Z as Y Tilemap.">
+<meta property="og:description" content="When creating an Isometric Tilemap, there are additional steps to take compared to creating a regular Tilemap. To create an Isometric Tilemap, go to GameObject &gt; 2D Object &gt; Isometric Tilemap/Isometric Z as Y Tilemap.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'Tilemap-Isometric-CreateIso';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Tilemap-Isometric-CreateIso.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Tilemap-Isometric-CreateIso.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Tilemap-Isometric-CreateIso.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Tilemap-Isometric-CreateIso.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Tilemap-Isometric-CreateIso.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Tilemap-Isometric-CreateIso.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Tilemap-Isometric-CreateIso.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Tilemap-Isometric-CreateIso.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Tilemap-Isometric-CreateIso.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Tilemap-Isometric-CreateIso.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/Tilemap-Isometric-CreateIso.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/Tilemap-Isometric-CreateIso.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/Tilemap-Isometric-CreateIso.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/Tilemap-Isometric-CreateIso.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Tilemap-Isometric-CreateIso.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Tilemap-Isometric-CreateIso.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Tilemap-Isometric-CreateIso.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Tilemap-Isometric-CreateIso.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Tilemap-Isometric-CreateIso.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Tilemap-Isometric-CreateIso.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Tilemap-Isometric-CreateIso.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Tilemap-Isometric-CreateIso.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Tilemap-Isometric-CreateIso.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Tilemap-Isometric-CreateIso.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Unity2D.html">2D</a></li>
+<li><a href="class-Tilemap.html">Tilemap</a></li>
+<li><a href="Tilemap-Isometric.html">Isometric Tilemaps</a></li>
+<li>Creating an Isometric Tilemap</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Tilemap-Isometric-SpritesImport.html"></a></span><div class="tip">Importing and preparing Sprites</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Tilemap-Isometric-Palette.html"></a></span><div class="tip">Creating a Tile Palette for an Isometric Tilemap</div>
+</div>
+</div></div>
+<h1>Creating an Isometric Tilemap</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>When creating an <strong>Isometric Tilemap</strong>, there are additional steps to take compared to <a href="Tilemap-CreatingTilemaps.html">creating a regular Tilemap</a>. To create an Isometric Tilemap, go to <strong>GameObject &gt; 2D Object &gt; Isometric Tilemap/Isometric Z as Y Tilemap</strong>.</p>
+
+<p>After creating the Isometric Tilemap, there are additional settings that need to set with the Project and Grid settings for the Isometric Tilemap to be rendered properly.</p>
+
+<h2>Custom Axis Sorting</h2>
+
+<p>To render the Tiles of an Isometric Tilemap, Tiles placed further to the ‘back’ of the Tilemap need to be rendered first before those in front to create the <strong>pseudo-depth</strong> of an isometric perspective. To ensure that all Renderers in the Scene conform to this logic, a Custom Axis is used as the <a href="2DSorting.html">Sorting Axis</a>. Set the <strong>Transparency Sort Mode</strong> to ‘Custom Axis’ and enter (0,1,0) for the XYZ values of the <strong>Transparency Sort Axis</strong>.</p>
+
+<p>Go to <strong>Edit &gt; Project Settings… &gt; Graphics &gt; Camera Settings</strong> to set the ‘Custom Axis’ settings.</p>
+
+<figure>
+<img src="../uploads/Main/Iso-Tilemap-AxisSorting.png" alt="Transparency Sort Axis Settings">
+<figcaption>Transparency Sort Axis Settings</figcaption>
+</figure>
+
+<p>Set the <strong>Transparency Sort Axis</strong> XYZ values to (0,1,0) to cause all Renderers which are at a higher Y position in the Scene to be rendered first, and appear behind Renderers at a lower Y position.</p>
+
+<p>With the <strong>Isometric Z as Y Tilemap</strong>, Tiles with different <a href="Tilemap-Isometric-Palette.html">Z-position values</a> are offset along the Y-axis and appear to be at different heights, producing a ‘stacking’ effect with Tiles at the same XY Cell Position. By default, the generic isometric Transparency Sort Axis setting of (0,1,0) does not consider the Tile’s Z-position values during sorting which results in the Tiles being rendered out of intended order (see the example below). </p>
+
+<figure>
+<img src="../uploads/Main/Iso-axis-compare.png" alt="Left: With (0,1,0), Tiles rendered in incorrect order. Right: With (0,1,-0.26), Tiles appear correctly stacked on each other.">
+<figcaption><strong>Left:</strong> With (0,1,0), Tiles rendered in incorrect order. <strong>Right:</strong> With (0,1,–0.26), Tiles appear correctly ‘stacked’ on each other.</figcaption>
+</figure>
+
+<p>Set the <strong>Transparency Sort Axis</strong> to <strong>(0,1,–0.26)</strong> to correctly render Tiles with different Z positions. The Z-axis is set to –0.26 to give a bias to Tiles with higher Z positions to be drawn first.</p>
+
+<h2>Grid Cell Size settings</h2>
+
+<figure>
+<img src="../uploads/Main/2D_IsoTilemap_Gridupdate.png" alt="Grid with default Isometric Layout settings">
+<figcaption>Grid with default Isometric Layout settings</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Isometric</strong></td>
+	<td style="text-align:left;">Creates an Isometric Tilemap with the default settings.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Isometric Z As Y</strong></td>
+	<td style="text-align:left;">Creates an Isometric Tilemap where a Tile’s Z-axis value is added to its Y-axis value. This causes the Tile to be visually offset along the Y-axis by that value, creating the illusion of height as the Tiles are placed on the Tilemap.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Isometric Tilemaps use either <strong>dimetric projection</strong> or true <strong>isometric projection</strong> parallel projection angles. For more information about the two forms of projection, please refer to this <a href="https://en.wikipedia.org/wiki/Isometric_computer_graphics">article</a> for further details.</p>
+
+<p>Changing the Cell Size of the Grid component changes the size of angles that make up each Cell, which affects the type of projection being simulated. By default, Cell Size of the Isometric Cell Layout is <strong>(1, 0.5, 1)</strong> which simulates <strong>dimetric projection</strong> angles. To simulate true <strong>isometric projection</strong> angles instead, set the Y value to <strong>‘0.57735’</strong>.</p>
+
+<hr>
+
+<ul>
+<li><span class="page-history">Isometric Tilemaps added in <a href="https://docs.unity3d.com/2018.3/Documentation/Manual/30_search.html?q=newin20183">2018.3</a> <span class="search-words">NewIn20183</span></span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Tilemap-Isometric-SpritesImport.html"></a></span><div class="tip">Importing and preparing Sprites</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Tilemap-Isometric-Palette.html"></a></span><div class="tip">Creating a Tile Palette for an Isometric Tilemap</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

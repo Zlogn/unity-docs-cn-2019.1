@@ -1,0 +1,318 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="脚本序列化 - Unity Manual">
+<title>脚本序列化 - Unity Manual</title>
+<meta name="description" content="序列化是将数据结构或对象状态转换为 Unity 可存储并在以后可重构的格式的自动过程。Unity 的一些内置功能会使用序列化，比如保存和加载、Inspector 窗口、实例化和预制件等功能。请参阅有关内置序列化使用情况的文档，了解所有相关的背景详情。">
+<meta property="og:description" content="序列化是将数据结构或对象状态转换为 Unity 可存储并在以后可重构的格式的自动过程。Unity 的一些内置功能会使用序列化，比如保存和加载、Inspector 窗口、实例化和预制件等功能。请参阅有关内置序列化使用情况的文档，了解所有相关的背景详情。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'script-Serialization';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/script-Serialization.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/script-Serialization.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/script-Serialization.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/script-Serialization.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/script-Serialization.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/script-Serialization.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/script-Serialization.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/script-Serialization.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/script-Serialization.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/script-Serialization.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/script-Serialization.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/script-Serialization.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/script-Serialization.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/script-Serialization.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/script-Serialization.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/script-Serialization.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/script-Serialization.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/script-Serialization.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/script-Serialization.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/script-Serialization.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/script-Serialization.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/script-Serialization.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/script-Serialization.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/script-Serialization.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="ScriptingSection.html">脚本</a></li>
+<li><a href="ScriptingConcepts.html">脚本概述</a></li>
+<li>脚本序列化</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ScriptingRestrictions.html"></a></span><div class="tip">脚本限制</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="script-Serialization-BuiltInUse.html"></a></span><div class="tip">内置序列化</div>
+</div>
+</div></div>
+<h1>脚本序列化</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>序列化是将数据结构或对象状态转换为 Unity 可存储并在以后可重构的格式的自动过程。Unity 的一些内置功能会使用序列化，比如保存和加载、Inspector 窗口、实例化和预制件等功能。请参阅有关<a href="script-Serialization-BuiltInUse.html">内置序列化使用情况</a>的文档，了解所有相关的背景详情。</p>
+
+<p>数据在 Unity 项目中的组织方式会影响 Unity 序列化该数据的方式，并会对项目的性能产生重大影响。以下是有关 Unity 中的序列化以及如何针对其进行项目优化的一些准则。</p>
+
+<p>另请参阅以下相关文档：<a href="script-Serialization-Errors.html">序列化错误</a>、<a href="script-Serialization-Custom.html">自定义序列化</a>和<a href="script-Serialization-BuiltInUse.html">内置序列化</a>。</p>
+
+<h2>了解热重载</h2>
+
+<h3>热重载</h3>
+
+<p>热重载是在 Editor 打开的状态下创建或编辑脚本并立即应用脚本行为的过程。无需重新启动游戏和 Editor 即可使更改生效。</p>
+
+<p>更改并保存脚本时，Unity 会热重载所有当前加载的脚本数据。它首先将所有可序列化变量存储在所有加载的脚本中，并在加载脚本后恢复它们。热重载后，所有不可序列化的数据都将丢失。</p>
+
+<h3>保存和加载</h3>
+
+<p>Unity 使用序列化技术从计算机的硬盘驱动器加载和保存<a href="CreatingScenes.html">场景</a>、<a href="AssetWorkflow.html">资源</a>和 <a href="AssetBundlesIntro.html">AssetBundle</a>。这包括保存在您自己的脚本 API 对象（如 <a href="../ScriptReference/MonoBehaviour.html">MonoBehaviour</a> 组件和 <a href="class-ScriptableObject.html">ScriptableObject</a>）中的数据。</p>
+
+<p>Unity Editor 中的许多功能都建立在核心序列化系统之上。对于序列化要特别注意的两点是 <a href="UsingTheInspector.html">Inspector 窗口</a>和热重载。</p>
+
+<h3>Inspector 窗口</h3>
+
+<p>在 <a href="UsingTheInspector.html">Inspector 窗口</a>中查看或更改游戏对象的组件字段的值时，Unity 会序列化此数据，然后在 Inspector 窗口中显示数据。Inspector 窗口在显示字段值时不与 Unity Scripting API 通信。</p>
+
+<p>如果在脚本中使用属性，则在 Inspector 窗口中查看或更改值时，绝不会调用任何属性 getter 和 setter，因为 Unity 会直接序列化 Inspector 窗口字段。这意味着：当 Inspector 窗口中的字段值表示脚本属性时，对 Inspector 窗口中值的更改不会调用脚本中的任何属性 getter 和 setter</p>
+
+<h2>序列化规则</h2>
+
+<p>Unity 中的序列化程序在实时游戏环境中运行。这对性能有重大影响。因此，Unity 中的序列化与其他编程环境中的序列化具有不同的行为。下面列出了一些关于如何在 Unity 中使用序列化的技巧。</p>
+
+<p><a name="FieldSerliaized1"></a> </p>
+
+<h4>如何确保脚本中的字段被序列化</h4>
+
+<p>确保其符合以下条件：</p>
+
+<ul>
+<li><p>为 <code>public</code>，或具有 <a href="../ScriptReference/SerializeField.html">SerializeField</a> 属性</p></li>
+<li><p>非 <code>static</code></p></li>
+<li><p>非 <code>const</code></p></li>
+<li><p>非 <code>readonly</code></p></li>
+<li><p>具有可序列化的 <code>fieldtype</code><br>（请参阅下面的<a href="#FieldSerliaized2">可序列化的简单字段类型</a>。）</p></li>
+</ul>
+
+<p><a name="FieldSerliaized2"></a> </p>
+
+<h4>可序列化的简单字段类型</h4>
+
+<ul>
+<li><p>具有 <code>Serializable</code> 属性的自定义非抽象、非泛型类<br>（请参阅下面的<a href="#ClassSerialized">如何确保自定义类可序列化</a>。）</p></li>
+<li><p>具有 <code>Serializable</code> 属性的自定义结构</p></li>
+<li><p>对从 <a href="../ScriptReference/Object.html">UnityEngine.Object</a> 派生的对象的引用</p></li>
+<li><p>原始数据类型（<code>int</code>、<code>float</code>、<code>double</code>、<code>bool</code>、<code>string</code> 等）</p></li>
+<li><p>枚举类型</p></li>
+<li><p>某些 Unity 内置类型：<code>Vector2</code>、<code>Vector3</code>、<code>Vector4</code>、<code>Rect</code>、<code>Quaternion</code>、<code>Matrix4x4</code>、<code>Color</code>、<code>Color32</code>、<code>LayerMask</code>、<code>AnimationCurve</code>、<code>Gradient</code>、<code>RectOffset</code>、<code>GUIStyle</code></p></li>
+</ul>
+
+<h4>可序列化的容器字段类型</h4>
+
+<ul>
+<li><p>可序列化的简单字段类型的数组</p></li>
+<li><p>可序列化的简单字段类型的 <code>List&lt;T&gt;</code></p></li>
+</ul>
+
+<p><strong>注意</strong>：Unity 不支持多级类型（多维数组、交错数组和嵌套容器类型）的序列化。<br>如果要序列化这些类型，可使用两种方法：将嵌套类型包装在类或结构中，或使用序列化回调 <a href="../ScriptReference/ISerializationCallbackReceiver.html">ISerializationCallbackReceiver</a> 执行自定义序列化。有关更多信息，请参阅<a href="script-Serialization-Custom.html">自定义序列化</a>的文档。</p>
+
+<p><a name="ClassSerialized"></a> </p>
+
+<h4>如何确保自定义类可序列化</h4>
+
+<p>确保其符合以下条件：</p>
+
+<ul>
+<li><p>具有 <a href="../ScriptReference/Serializable.html">Serializable</a> 属性</p></li>
+<li><p>非抽象</p></li>
+<li><p>非静态</p></li>
+<li><p>非泛型（但可继承自泛型类）</p></li>
+</ul>
+
+<p>要确保自定义类或结构的字段被序列化，请参阅上面的<a href="#FieldSerliaized1">如何确保脚本中的字段被序列化</a>。
+<br><br></p>
+
+<h3>序列化程序何时可能出现意外行为？</h3>
+
+<h4>自定义类的行为类似于结构</h4>
+
+<p>对于不是从 <a href="../ScriptReference/Object.html">UnityEngine.Object</a> 派生的自定义类，Unity 以内联方式按值对它们进行序列化，类似于结构的序列化方式。如果在多个不同的字段中存储对自定义类的实例的引用，则在序列化时它们将成为单独的对象。然后，当 Unity 反序列化这些字段时，它们将包含具有相同数据的不同对象。</p>
+
+<p>需要序列化具有引用的复杂对象图时，不要让 Unity 自动序列化对象。相反，应使用 <code>ISerializationCallbackReceiver</code> 手动序列化它们。这样可以防止 Unity 从对象引用创建多个对象。有关更多信息，请参阅 <a href="../ScriptReference/ISerializationCallbackReceiver.html">ISerializationCallbackReceiver</a> 的文档。</p>
+
+<p>这种情况仅适用于自定义类。Unity 以“内联”方式对自定义类进行序列化，因为这些类的数据会成为使用这些类的 <a href="../ScriptReference/MonoBehaviour.html">MonoBehaviour</a> 或 <a href="../ScriptReference/ScriptableObject.html">ScriptableObject</a> 的完整序列化数据的一部分。当字段引用 <a href="../ScriptReference/Object.html">UnityEngine.Object</a> 派生的某个类（例如 <code>public Camera myCamera</code>）时，Unity 会序列化对摄像机 <code>UnityEngine.Object</code> 的实际引用。如果脚本派生自 <code>MonoBehaviour</code> 或 <code>ScriptableObject</code>（二者均从 <code>UnityEngine.Object</code> 派生而来），在脚本的实例中也适用相同的序列化原则。</p>
+
+<h4>自定义类不支持 <code>null</code>
+</h4>
+
+<p>思考在反序列化一个使用以下脚本的 <code>MonoBehaviour</code> 时进行了多少次分配。</p>
+
+<pre><code>class Test : MonoBehaviour
+{
+    public Trouble t;
+}
+[Serializable]
+class Trouble
+{
+   public Trouble t1;
+   public Trouble t2;
+   public Trouble t3;
+}
+</code></pre>
+
+<p>出现一次以下分配并不奇怪：<code>Test</code> 对象的一次分配。另外，出现两次以下分配也不奇怪：<code>Test</code> 对象的一次分配和 <code>Trouble</code> 对象的一次分配。</p>
+
+<p>但是，Unity 实际上进行超过一千次的分配。序列化程序不支持 null。如果序列化程序对某个对象进行序列化，并且一个字段为 null，则 Unity 将实例化该类型的新对象，并对该对象进行序列化。显然，这可能导致无限循环，因此存在七级的深度限制。达到该限制时，Unity 停止序列化具有自定义类、结构、列表或数组类型的字段。</p>
+
+<p>由于 Unity 的子系统很多都是在序列化系统之上构建的，因此 <code>Test MonoBehaviour</code> 的这种异常大型的序列化流会导致所有这些子系统的执行速度低于必要速度。</p>
+
+<h4>不支持多态</h4>
+
+<p>如果具有 <code>public Animal[] animals</code> 并输入一个 <code>Dog</code>、一个 <code>Cat</code> 和一个 <code>Giraffe</code> 的实例，则在序列化之后有三个 <code>Animal</code> 实例。</p>
+
+<p>解决此限制的一种方法是认识到它仅适用于内联序列化的自定义类。对其他 <code>UnityEngine.Objects</code> 的引用被序列化为实际引用，对于这些情况，多态确实有效。可创建一个 <code>ScriptableObject</code> 派生类或另一个 <code>MonoBehaviour</code> 派生类，并引用该类。这样做的缺点是需要在某处存储该 <code>Monobehaviour</code> 或脚本化对象，并且无法有效地对其进行内联序列化。</p>
+
+<p>设置这些限制的原因是序列化系统的核心基础之一是提前知道对象的数据流布局；它取决于类的字段类型，而不是存储在字段内的具体内容。</p>
+
+<h3>提示</h3>
+
+<h4>序列化的优化应用</h4>
+
+<p>您可以组织数据来确保从 Unity 的序列化获得最佳使用效果。</p>
+
+<ul>
+<li><p>组织数据的目的是让 Unity 序列化尽可能小的数据集。这样做的主要目的不是为了节省计算机硬盘驱动器上的空间，而是为了确保您可以保持与项目以前版本的向后兼容性。如果使用大型的序列化数据集，那么在开发后期保持向后兼容性会变得更加困难。</p></li>
+<li><p>组织数据时确保绝不会让 Unity 序列化重复的数据或缓存的数据。否则会导致向后兼容性出现严重问题：存在着很高的错误风险，因为数据太容易失去同步。</p></li>
+<li><p>避免使用嵌套的递归结构引用其他类。序列化结构的布局总是必须相同；独立于数据，仅依赖于脚本中公开的内容。引用其他对象的唯一方法是通过 <a href="../ScriptReference/Object.html">UnityEngine.Object</a> 派生的类。这些类是完全独立的；它们只互相引用，没有嵌入内容。</p></li>
+</ul>
+
+<h4>使 Editor 代码可热重载</h4>
+
+<p>重新加载脚本时，Unity 会在所有加载的脚本中序列化并存储所有变量。重新加载脚本后，Unity 会将它们恢复为序列化前的原始值。</p>
+
+<p>When reloading scripts, Unity restores all variables - including private variables - that fulfill the requirements for serialization, even if a variable has no <a href="../ScriptReference/SerializeField.html">SerializeField</a> attribute. In some cases, you specifically need to prevent private variables from being restored: For example, if you want a reference to be null after reloading from scripts. In this case, use the <a href="../ScriptReference/NonSerialized.html">NonSerialized</a> attribute.</p>
+
+<p>Unity 绝不会恢复静态变量，因此对于重新加载脚本后需要保留的状态，不要使用静态变量。
+<br><br></p>
+
+<hr>
+
+<p><span class="page-edit">• 2017–05–15 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span><br></p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ScriptingRestrictions.html"></a></span><div class="tip">脚本限制</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="script-Serialization-BuiltInUse.html"></a></span><div class="tip">内置序列化</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

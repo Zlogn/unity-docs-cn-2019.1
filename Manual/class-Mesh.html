@@ -1,0 +1,246 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="网格 - Unity Manual">
+<title>网格 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/Tris.png">
+<meta name="description" content="__网格__构成了 3D 世界的很大一部分。除了一些 Asset Store 插件外，Unity 不提供建模工具。然而，Unity 与大多数 3D 建模软件包之间有很好的交互性。Unity 支持三角形或四边形的多边形网格。Nurbs、Nurms、Subdiv 曲面必须转换为多边形。">
+<meta property="og:description" content="__网格__构成了 3D 世界的很大一部分。除了一些 Asset Store 插件外，Unity 不提供建模工具。然而，Unity 与大多数 3D 建模软件包之间有很好的交互性。Unity 支持三角形或四边形的多边形网格。Nurbs、Nurms、Subdiv 曲面必须转换为多边形。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-Mesh';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-Mesh.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-Mesh.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-Mesh.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-Mesh.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-Mesh.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-Mesh.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-Mesh.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-Mesh.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-Mesh.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-Mesh.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-Mesh.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-Mesh.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-Mesh.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-Mesh.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-Mesh.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-Mesh.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-Mesh.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-Mesh.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-Mesh.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-Mesh.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-Mesh.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-Mesh.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-Mesh.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-Mesh.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="comp-MeshGroup.html">网格组件</a></li>
+<li>网格</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="comp-MeshGroup.html"></a></span><div class="tip">网格组件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-Material.html"></a></span><div class="tip">材质</div>
+</div>
+</div></div>
+<h1>网格</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>__网格__构成了 3D 世界的很大一部分。除了一些 <a href="http://unity3d.com/unity/asset-store/">Asset Store</a> 插件外，Unity 不提供建模工具。然而，Unity 与大多数 3D 建模软件包之间有很好的交互性。Unity 支持三角形或四边形的多边形网格。Nurbs、Nurms、Subdiv 曲面必须转换为多边形。</p>
+
+<figure>
+<img src="../uploads/Main/Tris.png" alt="">
+</figure>
+
+<h2>纹理</h2>
+
+<p>Unity 将尝试通过遵循特定的搜索计划在导入时自动查找网格使用的纹理。首先，导入器将在与网格相同的文件夹中或任何父文件夹中查找名为 Textures 的子文件夹。如果此过程失败，将对项目中的所有纹理执行穷尽搜索。虽然速度只是稍慢，但穷尽搜索的主要缺点是项目中可能有两个或多个同名的纹理。在这种情况下，不能保证找到合适的纹理。</p>
+
+<figure>
+<img src="../uploads/Main/Mesh-TextureImportHierarchy.png" alt="纹理放置在资源级别或更高级别的 Textures 文件夹中">
+<figcaption>纹理放置在资源级别或更高级别的 <strong>Textures</strong> 文件夹中</figcaption>
+</figure>
+
+<p><a href="FBXImporter-Materials.html">Import Settings 窗口的 Material 选项卡</a></p>
+
+<h2>材质生成和分配</h2>
+
+<p>对于每种导入的材质，Unity 将应用以下规则：</p>
+
+<p>如果禁用材质生成（即取消选中 __Import Materials__），则会分配 Default-Diffuse 材质。如果启用该选项，则执行以下操作：</p>
+
+<ul>
+<li>Unity 将根据 <strong>Material Naming</strong> 设置，为 Unity 材质选择一个名称</li>
+<li>Unity 将尝试查找具有该名称的现有材质。材质搜索范围由 <strong>Material Search</strong> 设置进行定义。</li>
+<li>如果 Unity 成功找到现有材质，则会将该材质用于导入的场景，否则将生成新材质</li>
+</ul>
+
+<h2>碰撞体</h2>
+
+<p>Unity 使用两种主要类型的碰撞体：__网格碰撞体__和__原始碰撞体<strong>。网格碰撞体是使用导入网格数据的组件，可用于环境碰撞。在 Import Settings 中启用 </strong>Generate Colliders__ 后，将网格添加到场景时会自动添加网格碰撞体。就物理系统而言，网格碰撞体被认为是实体的。</p>
+
+<p>如果对象正在移动（例如汽车），则无法使用网格碰撞体。必须改用原始碰撞体。此情况下应禁用 <strong>Generate Colliders</strong> 设置。</p>
+
+<h2>动画</h2>
+
+<p>可从模型文件<a href="ImportingModelFiles.html">导入动画</a>。请先遵循<a href="HOWTO-exportFBX.html">从 3D 建模软件导出 FBX 文件</a>的指南，再将文件导入 Unity。</p>
+
+<h2>法线贴图和角色</h2>
+
+<p>如果一个角色具有从模型的复杂多边形版本生成的法线贴图，则应导入__平滑角__为 180 度的游戏质量版本。这样将防止由于切线分裂而导致光照中出现看起来奇怪的接缝。如果使用这些设置后仍然存在接缝，请启用 <strong>Split tangents across UV seams</strong>。</p>
+
+<p>如果是将灰度图像转换为法线贴图，则无需担心这一点。</p>
+
+<h2>混合形状 (Blendshape)</h2>
+
+<p>Unity 支持 BlendShape（也称为变形目标或顶点级动画）。Unity 可从 <strong>.FBX</strong>（BlendShape 和控制动画）和 <strong>.dae</strong>（仅 BlendShape）导出的 3D 文件导入 BlendShape。Unity BlendShape 支持顶点、法线和切线上的顶点级动画。网格可能同时受到皮肤和 BlendShape 的影响。使用 BlendShape 导入的所有网格都将使用 SkinnedMeshRenderer（无论其是否有皮肤）。BlendShape 动画作为常规动画的一部分导入，仅对 SkinnedMeshRenderer 上的 BlendShape 权重进行动画化。</p>
+
+<p>有两种方法可以导入带法线的 BlendShape：</p>
+
+<p>1.将 <strong>Normals</strong> 导入模式设置为 __Calculate__，这样就会使用相同的逻辑来计算网格和 BlendShape 上的法线。
+1.将平滑组信息导出到源文件。这样，Unity 就会通过网格和 BlendShape 的平滑组计算法线。</p>
+
+<p>如果需要 BlendShape 上的切线，则应将 <strong>Tangents</strong> 导入模式设置为 <strong>Calculate</strong>。</p>
+
+<h2>提示</h2>
+
+<ul>
+<li>尽可能将网格合并在一起。让它们共享材质和纹理。这种做法可大幅提升性能。</li>
+<li>如果需要在 Unity 中进一步设置对象（添加物理设置、脚本或其他酷炫功能），为了给自己减少麻烦，请在 3D 应用程序中妥善命名对象。处理大量 <em>pCube17</em> 或 <em>Box42</em> 之类的对象可一点都不好玩。</li>
+<li>使网格在 3D 应用程序中的世界原点居中。这样将使网格更容易在 Unity 中定位。</li>
+<li>如果网格没有顶点颜色，Unity 将在第一次渲染网格时自动将全白色顶点颜色数组添加到网格。</li>
+</ul>
+
+<h3>Unity Editor 显示太多顶点或三角形（与 3D 应用程序之类的相比）</h3>
+
+<p>这是正常的。您正在查看的是实际发送到 GPU 进行渲染的顶点/三角形数量。除了材质要求发送两次这些顶点/三角形的情况之外，其他诸如硬法线和非连续 UV 的元素与建模应用程序显示的情况相比会显著增加顶点/三角形数量。三角形在 3D 和 UV 空间中都需要处于连续状态以形成条带，因此当有 UV 接缝时，必须使三角形退化以形成条带，而这会增加计数。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit"> 2018–04–25 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="comp-MeshGroup.html"></a></span><div class="tip">网格组件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-Material.html"></a></span><div class="tip">材质</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

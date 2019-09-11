@@ -1,0 +1,273 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="自定义着色器 GUI - Unity Manual">
+<title>自定义着色器 GUI - Unity Manual</title>
+<meta name="description" content="有时着色器中会包含一些有趣的数据类型，而使用内置的 Unity 材质编辑器无法很好地表示这些数据类型。Unity 提供了一种方法来覆盖显示着色器属性的默认方式，以便您可以定义自己的方式。您可以使用此功能来定义自定义控件和数据范围验证。">
+<meta property="og:description" content="有时着色器中会包含一些有趣的数据类型，而使用内置的 Unity 材质编辑器无法很好地表示这些数据类型。Unity 提供了一种方法来覆盖显示着色器属性的默认方式，以便您可以定义自己的方式。您可以使用此功能来定义自定义控件和数据范围验证。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'SL-CustomShaderGUI';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-CustomShaderGUI.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-CustomShaderGUI.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-CustomShaderGUI.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-CustomShaderGUI.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-CustomShaderGUI.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-CustomShaderGUI.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-CustomShaderGUI.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-CustomShaderGUI.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-CustomShaderGUI.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-CustomShaderGUI.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/SL-CustomShaderGUI.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/SL-CustomShaderGUI.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/SL-CustomShaderGUI.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/SL-CustomShaderGUI.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-CustomShaderGUI.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-CustomShaderGUI.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-CustomShaderGUI.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-CustomShaderGUI.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-CustomShaderGUI.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-CustomShaderGUI.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-CustomShaderGUI.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-CustomShaderGUI.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-CustomShaderGUI.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-CustomShaderGUI.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="SL-Reference.html">着色器参考</a></li>
+<li><a href="SL-AdvancedTopics.html">高级 ShaderLab 主题</a></li>
+<li>自定义着色器 GUI</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-ShaderReplacement.html"></a></span><div class="tip">使用替换的着色器进行渲染</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-DepthTextures.html"></a></span><div class="tip">使用深度纹理</div>
+</div>
+</div></div>
+<h1>自定义着色器 GUI</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>有时着色器中会包含一些有趣的数据类型，而使用内置的 Unity 材质编辑器无法很好地表示这些数据类型。Unity 提供了一种方法来覆盖显示着色器属性的默认方式，以便您可以定义自己的方式。您可以使用此功能来定义自定义控件和数据范围验证。</p>
+
+<p>要为着色器的 GUI 编写自定义编辑器，首先要定义一个需要<a href="SL-CustomEditor.html">自定义编辑器</a>的着色器。用于自定义编辑器的名称是 Unity 将为材质编辑器查找的类。</p>
+
+<p>要定义自定义编辑器，请展开 ShaderGUI 类，并将脚本放在 Assets 目录中的 Editor 文件夹下。</p>
+
+<pre><code>using UnityEditor;
+
+public class CustomShaderGUI : ShaderGUI 
+{
+    public override void OnGUI (MaterialEditor materialEditor, MaterialProperty[] properties)
+    {
+        base.OnGUI (materialEditor, properties);
+    }
+} 
+</code></pre>
+
+<p>任何定义了自定义编辑器 (<strong>CustomEditor “CustomShaderGUI”</strong>) 的着色器都将实例化以上列出的着色器 GUI 类，并执行相关联的代码。</p>
+
+<h2>一个简单示例</h2>
+
+<p>我们现在的情况是，有一个着色器能以两种模式工作；该着色器渲染标准漫射光照，或者渲染 50% 的蓝色和绿色通道。</p>
+
+<pre><code>Shader "Custom/Redify" {
+    Properties {
+        _MainTex ("Base (RGB)", 2D) = "white" {}
+    }
+    SubShader {
+        Tags { "RenderType"="Opaque" }
+        LOD 200
+        
+        CGPROGRAM
+        #pragma surface surf Lambert addshadow
+        #pragma shader_feature REDIFY_ON
+
+        sampler2D _MainTex;
+
+        struct Input {
+            float2 uv_MainTex;
+        };
+
+        void surf (Input IN, inout SurfaceOutput o) {
+            half4 c = tex2D (_MainTex, IN.uv_MainTex);
+            o.Albedo = c.rgb;
+            o.Alpha = c.a;
+
+            #if REDIFY_ON
+            o.Albedo.gb *= 0.5;
+            #endif
+        }
+        ENDCG
+    } 
+    CustomEditor "CustomShaderGUI"
+}
+</code></pre>
+
+<p>如您所见，着色器有一个可以设置的关键字：REDIFY_ON。可使用材质的 shaderKeywords 属性按照材质来设置此关键字。以下是执行此操作的 ShaderGUI 实例。</p>
+
+<pre><code>using UnityEngine;
+using UnityEditor;
+using System;
+
+public class CustomShaderGUI : ShaderGUI
+{
+    public override void OnGUI(MaterialEditor materialEditor, MaterialProperty[] properties)
+    {
+        // 渲染默认 GUI
+        base.OnGUI(materialEditor, properties);
+
+        Material targetMat = materialEditor.target as Material;
+
+        // 检查是否设置了 redify 并显示一个复选框
+        bool redify = Array.IndexOf(targetMat.shaderKeywords, "REDIFY_ON") != -1;
+        EditorGUI.BeginChangeCheck();
+        redify = EditorGUILayout.Toggle("Redify material", redify);
+        if (EditorGUI.EndChangeCheck())
+        {
+            // 根据复选框来启用或禁用关键字
+            if (redify)
+                targetMat.EnableKeyword("REDIFY_ON");
+            else
+                targetMat.DisableKeyword("REDIFY_ON");
+        }
+    }
+}
+</code></pre>
+
+<p>有关更全面的 ShaderGUI 示例，请参阅位于“内置着色器”软件包中的 StandardShaderGUI.cs 文件以及 Standard.shader（可从 <a href="http://unity3d.com/unity/download/archive">Unity 下载存档 (Unity Download Archive)</a> 下载该软件包）。</p>
+
+<p>请注意，上面这个简单示例还可以使用 MaterialPropertyDrawers 来更加简便地解决。向 Custom/Redify 着色器的 Properties 部分中添加以下行：</p>
+
+<pre><code>[Toggle(REDIFY_ON)] _Redify("Red?", Int) = 0
+</code></pre>
+
+<p>并删除：</p>
+
+<pre><code>CustomEditor "CustomShaderGUI"
+</code></pre>
+
+<p>另请参阅：<a href="../ScriptReference/MaterialPropertyDrawer.html">MaterialPropertyDrawer</a></p>
+
+<p>对于更复杂的着色器 GUI 解决方案（例如，材质属性彼此依赖或者希望有特殊布局），则应该使用 ShaderGUI。您可以将 MaterialPropertyDrawers 与 ShaderGUI 类组合使用，请参阅 StandardShaderGUI.cs。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-ShaderReplacement.html"></a></span><div class="tip">使用替换的着色器进行渲染</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-DepthTextures.html"></a></span><div class="tip">使用深度纹理</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

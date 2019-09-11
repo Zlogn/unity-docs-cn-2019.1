@@ -1,0 +1,222 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="为 AssetBundle 准备资源 - Unity Manual">
+<title>为 AssetBundle 准备资源 - Unity Manual</title>
+<meta name="description" content="使用 AssetBundle 时，可以任意将任何资源分配给所需的任何捆绑包。但是，在设置捆绑包时需要考虑某些策略。以下分组策略旨在用于您认为适合的具体项目。可以根据需要随意混合和搭配这些策略。">
+<meta property="og:description" content="使用 AssetBundle 时，可以任意将任何资源分配给所需的任何捆绑包。但是，在设置捆绑包时需要考虑某些策略。以下分组策略旨在用于您认为适合的具体项目。可以根据需要随意混合和搭配这些策略。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'AssetBundles-Preparing';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AssetBundles-Preparing.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AssetBundles-Preparing.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AssetBundles-Preparing.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AssetBundles-Preparing.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AssetBundles-Preparing.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AssetBundles-Preparing.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AssetBundles-Preparing.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AssetBundles-Preparing.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AssetBundles-Preparing.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AssetBundles-Preparing.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/AssetBundles-Preparing.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/AssetBundles-Preparing.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/AssetBundles-Preparing.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/AssetBundles-Preparing.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AssetBundles-Preparing.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AssetBundles-Preparing.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AssetBundles-Preparing.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AssetBundles-Preparing.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AssetBundles-Preparing.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AssetBundles-Preparing.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AssetBundles-Preparing.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AssetBundles-Preparing.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AssetBundles-Preparing.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AssetBundles-Preparing.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="AdvancedDevelopment.html">高级开发</a></li>
+<li><a href="AssetBundlesIntro.html">AssetBundle</a></li>
+<li>为 AssetBundle 准备资源</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetBundles-Workflow.html"></a></span><div class="tip">AssetBundle 工作流程</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetBundles-Building.html"></a></span><div class="tip">构建 AssetBundle</div>
+</div>
+</div></div>
+<h1>为 AssetBundle 准备资源</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>使用 AssetBundle 时，可以任意将任何资源分配给所需的任何捆绑包。但是，在设置捆绑包时需要考虑某些策略。以下分组策略旨在用于您认为适合的具体项目。可以根据需要随意混合和搭配这些策略。</p>
+
+<h2>逻辑实体分组</h2>
+
+<p>逻辑实体分组是指根据资源所代表的项目功能部分将资源分配给 AssetBundle。这包括各种不同部分，比如用户界面、角色、环境以及在应用程序整个生命周期中可能经常出现的任何其他内容。</p>
+
+<h3>示例</h3>
+
+<ul>
+<li>捆绑用户界面屏幕的所有纹理和布局数据</li>
+<li>捆绑一个/一组角色的所有模型和动画</li>
+<li>捆绑在多个关卡之间共享的景物的纹理和模型</li>
+</ul>
+
+<p>逻辑实体分组非常适合于可下载内容 (DLC)，因为通过这种方式将所有内容隔离后，可以对单个实体进行更改，而无需下载其他未更改的资源。</p>
+
+<p>为了能够正确实施此策略，最大诀窍在于，负责为各自捆绑包分配资源的开发人员必须熟悉项目使用每个资源的准确时机和场合。</p>
+
+<h2>类型分组</h2>
+
+<p>根据此策略，可以将相似类型的资源（例如音频轨道或语言本地化文件）分配到单个 AssetBundle。</p>
+
+<p>要构建供多个平台使用的 AssetBundle，类型分组是最佳策略之一。例如，如果音频压缩设置在 Windows 和 Mac 平台上完全相同，则可以自行将所有音频数据打包到 AssetBundle 并重复使用这些捆绑包，而着色器往往使用更多特定于平台的选项进行编译，因此为 Mac 构建的着色器捆绑包可能无法在 Windows 上重复使用。此外，这种方法非常适合让 AssetBundle 与更多 Unity 播放器版本兼容，因为纹理压缩格式和设置的更改频率低于代码脚本或预制件。</p>
+
+<h2>并发内容分组</h2>
+
+<p>并发内容分组是指将需要同时加载和使用的资源捆绑在一起。可以将这些类型的捆绑包用于基于关卡的游戏（其中每个关卡包含完全独特的角色、纹理、音乐等）。有时可能希望确保其中一个 AssetBundle 中的资源与该捆绑包中的其余资源同时使用。依赖于并发内容分组捆绑包中的单个资源会导致加载时间显著增加。您将被迫下载该单个资源的整个捆绑包。</p>
+
+<p>并发内容分组捆绑包最常见的用例是针对基于场景的捆绑包。在此分配策略中，每个场景捆绑包应包含大部分或全部场景依赖项。</p>
+
+<p>请注意，项目绝对可以也应该根据您的需求混用这些策略。对任何给定情形使用最优资源分配策略可以大大提高项目的效率。</p>
+
+<p>例如，一个项目可能决定将不同平台的用户界面 (UI) 元素分组到各自的 Platform-UI 特定捆绑包中，但按关卡/场景对其交互式内容进行分组。</p>
+
+<p>无论遵循何种策略，下面这些额外提示都有助于掌控全局：</p>
+
+<ul>
+<li>将频繁更新的对象与很少更改的对象拆分到不同的 AssetBundle 中</li>
+<li>将可能同时加载的对象分到一组。例如模型及其纹理和动画</li>
+<li>如果发现多个 AssetBundle 中的多个对象依赖于另一个完全不同的 AssetBundle 中的单个资源，请将依赖项移动到单独的 AssetBundle。如果多个 AssetBundle 引用其他 AssetBundle 中的同一组资源，一种有价值的做法可能是将这些依赖项拉入一个共享 AssetBundle 来减少重复。</li>
+<li>如果不可能同时加载两组对象（例如标清资源和高清资源），请确保它们位于各自的 AssetBundle 中。</li>
+<li>如果一个 AssetBundle 中只有不到 50% 的资源经常同时加载，请考虑拆分该捆绑包</li>
+<li>考虑将多个小型的（少于 5 到 10 个资源）但经常同时加载内容的 AssetBundle 组合在一起</li>
+<li>如果一组对象只是同一对象的不同版本，请考虑使用 AssetBundle 变体</li>
+</ul>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2017–05–15 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetBundles-Workflow.html"></a></span><div class="tip">AssetBundle 工作流程</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetBundles-Building.html"></a></span><div class="tip">构建 AssetBundle</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

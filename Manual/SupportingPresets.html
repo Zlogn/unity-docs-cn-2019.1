@@ -1,0 +1,349 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Support for custom Menu Item and Editor features - Unity Manual">
+<title>Support for custom Menu Item and Editor features - Unity Manual</title>
+<meta name="description" content="In your Editor scripts, use the ObjectFactory class to create new GameObjects, components and Assets. When creating these items, the ObjectFactory class automatically uses default Presets. Your script does not have to search for and apply default Presets, because ObjectFactory handles this for you.">
+<meta property="og:description" content="In your Editor scripts, use the ObjectFactory class to create new GameObjects, components and Assets. When creating these items, the ObjectFactory class automatically uses default Presets. Your script does not have to search for and apply default Presets, because ObjectFactory handles this for you.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'SupportingPresets';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SupportingPresets.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SupportingPresets.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SupportingPresets.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SupportingPresets.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SupportingPresets.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SupportingPresets.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SupportingPresets.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SupportingPresets.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SupportingPresets.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SupportingPresets.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/SupportingPresets.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/SupportingPresets.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/SupportingPresets.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/SupportingPresets.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SupportingPresets.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SupportingPresets.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SupportingPresets.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SupportingPresets.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SupportingPresets.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SupportingPresets.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SupportingPresets.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SupportingPresets.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SupportingPresets.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SupportingPresets.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="AdvancedEditor.html">Editor 高级主题</a></li>
+<li>Support for custom Menu Item and Editor features</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="DefaultPresetsByFolder.html"></a></span><div class="tip">按文件夹将默认值应用于资源</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AsynchronousShaderCompilation.html"></a></span><div class="tip">Asynchronous Shader compilation</div>
+</div>
+</div></div>
+<h2>Support for custom Menu Item and Editor features</h2>
+
+<p>In your Editor scripts, use the <a href="../ScriptReference/ObjectFactory.html">ObjectFactory</a> class to create new GameObjects, components and Assets. When creating these items, the <code>ObjectFactory</code> class automatically uses default Presets. Your script does not have to search for and apply default <a href="Presets.html">Presets</a>, because <code>ObjectFactory</code> handles this for you.</p>
+
+<h2>Support for new types</h2>
+
+<p>To support and enable Presets by default, your class must inherit from one of the following:</p>
+
+<ul>
+<li><a href="../ScriptReference/MonoBehaviour.html">UnityEngine.Monobehaviour</a></li>
+<li><a href="../ScriptReference/ScriptableObject.html">UnityEngine.ScriptableObject</a></li>
+<li><a href="../ScriptReference/Experimental.AssetImporters.ScriptedImporter.html">UnityEngine.ScriptedImporter</a></li>
+</ul>
+
+<p>The Preset Inspector creates a temporary instance of your class, so that users can modify its values, so make sure your class does not affect or rely on other objects such as static values, Project Assets or Scene instances.</p>
+
+<p><strong>Tip</strong>: Using a <a href="../ScriptReference/CustomEditor.html">CustomEditor</a> attribute is optional.</p>
+
+<h2>Use case example: Preset settings in a custom Editor window</h2>
+
+<p>When setting up a custom <a href="../ScriptReference/EditorWindow.html">EditorWindow</a> class with settings that could use Presets:</p>
+
+<ul>
+<li><p>Use a <a href="../ScriptReference/ScriptableObject.html">ScriptableObject</a> to store a copy of your settings. It can have a <a href="../ScriptReference/CustomEditor.html">CustomEditor</a> attribute too. The Preset system handles this object.</p></li>
+<li><p>Always use this temporary <code>ScriptableObject</code> Inspector to show the Preset settings in your UI. This allows your users to have the same UI in your <code>EditorWindow</code> and when editing saved Presets.</p></li>
+<li><p>Expose a Preset button and use your own <a href="../ScriptReference/Presets.PresetSelectorReceiver.html">PresetSelectorReceiver</a> implementation to keep your <code>EditorWindow</code> settings up-to-date when a Preset is selected in the <strong>Select Preset</strong> window.</p></li>
+</ul>
+
+<p>The following script examples demonstrate how to add Preset settings to a simple <code>EditorWindow</code>.</p>
+
+<p>This script example demonstrates a ScriptableObject that keeps and shows settings in a custom window (saved to a file called <em>Editor/MyWindowSettings.cs</em>):</p>
+
+<pre><code>using UnityEngine;
+
+// Temporary ScriptableObject used by the Preset system
+
+public class MyWindowSettings : ScriptableObject
+{
+    [SerializeField]
+    string m_SomeSettings;
+    
+    public void Init(MyEditorWindow window)
+    {
+        m_SomeSettings = window.someSettings;
+    }
+    
+    public void ApplySettings(MyEditorWindow window)
+    {
+        window.someSettings = m_SomeSettings;
+        window.Repaint();
+    }
+}
+</code></pre>
+
+<p>Script example of a <code>PresetSelectorReceiver</code> that updates the <code>ScriptableObject</code> used in the custom window (saved to a file called <em>Editor/MySettingsReceiver.cs)</em>:</p>
+
+<pre><code>using UnityEditor.Presets;
+
+// PresetSelector receiver to update the EditorWindow with the selected values.
+
+public class MySettingsReceiver : PresetSelectorReceiver
+{
+    Preset initialValues;
+    MyWindowSettings currentSettings;
+    MyEditorWindow currentWindow;
+    
+    public void Init(MyWindowSettings settings, MyEditorWindow window)
+    {
+        currentWindow = window;
+        currentSettings = settings;
+        initialValues = new Preset(currentSettings);
+    }
+    
+    public override void OnSelectionChanged(Preset selection)
+    {
+        if (selection != null)
+        {
+            // Apply the selection to the temporary settings
+            selection.ApplyTo(currentSettings);
+        }
+        else
+        {
+            // None have been selected. Apply the Initial values back to the temporary selection.
+            initialValues.ApplyTo(currentSettings);
+        }
+        
+        // Apply the new temporary settings to our manager instance
+        currentSettings.ApplySettings(currentWindow);
+    }
+    
+    public override void OnSelectionClosed(Preset selection)
+    {
+        // Call selection change one last time to make sure you have the last selection values.
+        OnSelectionChanged(selection);
+        // Destroy the receiver here, so you don't need to keep a reference to it.
+        DestroyImmediate(this);
+    }
+}
+</code></pre>
+
+<p>Script example of an <a href="../ScriptReference/EditorWindow.html">EditorWindow</a> that shows custom settings using a temporary ScriptableObject Inspector and its Preset button (saved to a file called <em>Editor/MyEditorWindow.cs)</em>:</p>
+
+<pre><code>using UnityEngine;
+using UnityEditor;
+using UnityEditor.Presets;
+
+public class MyEditorWindow : EditorWindow
+
+{
+    // get the Preset icon and a style to display it
+    private static class Styles
+    {
+        public static GUIContent presetIcon = EditorGUIUtility.IconContent("Preset.Context");
+        public static GUIStyle iconButton = new GUIStyle("IconButton");
+
+    }
+
+    Editor m_SettingsEditor;
+    MyWindowSettings m_SerializedSettings;
+    
+    public string someSettings
+    {
+        get { return EditorPrefs.GetString("MyEditorWindow_SomeSettings"); }
+        set { EditorPrefs.SetString("MyEditorWindow_SomeSettings", value); }
+    }
+   
+    // Method to open the window
+    [MenuItem("Window/MyEditorWindow")]
+    static void OpenWindow()
+    {
+        GetWindow&lt;MyEditorWindow&gt;();
+    }
+
+    void OnEnable()
+    {
+        // Create your settings now and its associated Inspector
+        // that allows to create only one custom Inspector for the settings in the window and the Preset.
+        m_SerializedSettings = ScriptableObject.CreateInstance&lt;MyWindowSettings&gt;();
+        m_SerializedSettings.Init(this);
+        m_SettingsEditor = Editor.CreateEditor(m_SerializedSettings);
+    }
+
+    void OnDisable()
+    {
+        Object.DestroyImmediate(m_SerializedSettings);
+        Object.DestroyImmediate(m_SettingsEditor);
+    }
+
+    void OnGUI()
+    {
+        EditorGUILayout.BeginHorizontal();
+        EditorGUILayout.LabelField("My custom settings", EditorStyles.boldLabel);
+        GUILayout.FlexibleSpace();
+        // create the Preset button at the end of the "MyManager Settings" line.
+        var buttonPosition = EditorGUILayout.GetControlRect(false, EditorGUIUtility.singleLineHeight, Styles.iconButton);
+
+        if (EditorGUI.DropdownButton(buttonPosition, Styles.presetIcon, FocusType.Passive, Styles.iconButton))
+        {
+            // Create a receiver instance. This destroys itself when the window appears, so you don't need to keep a reference to it.
+            var presetReceiver = ScriptableObject.CreateInstance&lt;MySettingsReceiver&gt;();
+            presetReceiver.Init(m_SerializedSettings, this);
+            // Show the PresetSelector modal window. The presetReceiver updates your data.
+            PresetSelector.ShowSelector(m_SerializedSettings, null, true, presetReceiver);
+        }
+        EditorGUILayout.EndHorizontal();
+        
+        // Draw the settings default Inspector and catch any change made to it.
+        EditorGUI.BeginChangeCheck();
+        m_SettingsEditor.OnInspectorGUI();
+
+        if (EditorGUI.EndChangeCheck())
+        {
+            // Apply changes made in the settings editor to our instance.
+            m_SerializedSettings.ApplySettings(this);
+        }
+    }
+}
+</code></pre>
+
+<hr>
+
+<p><span class="page-edit"> 2017–03–27 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span>
+<span class="page-history"><a href="https://docs.unity3d.com/2018.1/Documentation/Manual/30_search.html?q=newin20181">2018.1</a> 中的新功能 <span class="search-words">NewIn20181</span></span></p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="DefaultPresetsByFolder.html"></a></span><div class="tip">按文件夹将默认值应用于资源</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AsynchronousShaderCompilation.html"></a></span><div class="tip">Asynchronous Shader compilation</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

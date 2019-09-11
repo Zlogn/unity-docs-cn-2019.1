@@ -1,0 +1,485 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="树枝组属性 (Branch Group Properties) - Unity Manual">
+<title>树枝组属性 (Branch Group Properties) - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/TreeNode-BranchPropertiesDistribution.png">
+<meta name="description" content="树枝组节点负责生成树枝和树叶。选择树枝、树叶或树枝+树叶节点时，将显示其属性。">
+<meta property="og:description" content="树枝组节点负责生成树枝和树叶。选择树枝、树叶或树枝+树叶节点时，将显示其属性。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'tree-Branches';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/tree-Branches.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/tree-Branches.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/tree-Branches.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/tree-Branches.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/tree-Branches.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/tree-Branches.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/tree-Branches.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/tree-Branches.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/tree-Branches.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/tree-Branches.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/tree-Branches.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/tree-Branches.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/tree-Branches.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/tree-Branches.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/tree-Branches.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/tree-Branches.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/tree-Branches.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/tree-Branches.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/tree-Branches.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/tree-Branches.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/tree-Branches.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/tree-Branches.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/tree-Branches.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/tree-Branches.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="class-Tree.html">Tree Editor（树编辑器）</a></li>
+<li>树枝组属性 (Branch Group Properties)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="tree-Structure.html"></a></span><div class="tip">树基础知识</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="tree-Leaves.html"></a></span><div class="tip">树叶组属性 (Leaf Group Properties)</div>
+</div>
+</div></div>
+<h1>树枝组属性 (Branch Group Properties)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>树枝组节点负责生成树枝和树叶。选择树枝、树叶或树枝+树叶节点时，将显示其属性。</p>
+
+<h2>Distribution</h2>
+
+<p>调整树枝组中的树枝数量和位置。使用曲线可微调位置、旋转和缩放。曲线相对于父级树枝或者为树干的情况下相对于区域扩散。</p>
+
+<figure>
+<img src="../uploads/Main/TreeNode-BranchPropertiesDistribution.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Group Seed</strong></td>
+	<td style="text-align:left;">此树枝组的种子。修改此设置可改变程序化生成过程。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Frequency</strong></td>
+	<td style="text-align:left;">调整每个父级树枝创建的树枝数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Distribution</strong></td>
+	<td style="text-align:left;">树枝沿着父级分布的方式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Twirl</strong></td>
+	<td style="text-align:left;">在父级树枝周围转动。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Whorled Step</strong></td>
+	<td style="text-align:left;">定义使用轮生 (Whorled) 分布时每个轮生步骤中有多少个节点。对于真正的植物，这通常是斐波纳契数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Growth Scale</strong></td>
+	<td style="text-align:left;">定义沿着父节点生长的节点的比例。使用曲线进行调整并使用滑动条使效果淡入淡出。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Growth Angle</strong></td>
+	<td style="text-align:left;">定义相对于父级的初始生长角度。使用曲线进行调整并使用滑动条使效果淡入淡出。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Geometry</h2>
+
+<p>选择为此树枝组生成的几何体类型以及应用的材质。<strong>LOD Multiplier</strong> 允许您调整此组相对于树的 <strong>LOD Quality</strong> 的质量。</p>
+
+<figure>
+<img src="../uploads/Main/TreeNode-BranchPropertiesGeometry.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>LOD Multiplier</strong></td>
+	<td style="text-align:left;">调整此组相对于树的 LOD Quality 的质量，使其质量高于或低于树的其余部分。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Geometry Mode</strong></td>
+	<td style="text-align:left;">此树枝组的几何体类型：Branch Only、Branch + Fronds、Fronds Only。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Branch Material</strong></td>
+	<td style="text-align:left;">树枝的主要材质。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Break Material</strong></td>
+	<td style="text-align:left;">折断树枝的断面材质。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Frond Material</strong></td>
+	<td style="text-align:left;">树叶的材质。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Shape</h2>
+
+<p>调整树枝的形状和生长。使用曲线微调形状，所有曲线都是相对于树枝本身。</p>
+
+<figure>
+<img src="../uploads/Main/TreeNode-BranchPropertiesShape.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Length</strong></td>
+	<td style="text-align:left;">调整树枝的长度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Relative Length</strong></td>
+	<td style="text-align:left;">确定树枝的半径是否受其长度影响。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Radius</strong></td>
+	<td style="text-align:left;">调整树枝的半径，使用曲线沿树枝的长度微调半径。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cap Smoothing</strong></td>
+	<td style="text-align:left;">定义树枝的断面/尖端的圆度。适用于仙人掌。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Growth</strong></td>
+	<td style="text-align:left;">调整树枝的生长。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Crinkliness</strong></td>
+	<td style="text-align:left;">调整树枝的褶皱/弯曲程度，使用曲线进行微调。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Seek Sun</strong></td>
+	<td style="text-align:left;">使用曲线调整树枝向上/向下弯曲的方式，使用滑动条更改比例。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Surface Noise</strong></td>
+	<td style="text-align:left;">调整树枝的表面噪点。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Noise</strong></td>
+	<td style="text-align:left;">整体噪点系数，使用曲线进行微调。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Noise Scale U</strong></td>
+	<td style="text-align:left;">树枝周围噪点的比例，较低的值将带来较摇摆的外观，而较高的值将带来较随机的外观。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Noise Scale V</strong></td>
+	<td style="text-align:left;">沿着树枝的噪点的比例，较低的值将带来较摇摆的外观，而较高的值将带来较随机的外观。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Flare</strong></td>
+	<td style="text-align:left;">定义树干的光晕。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Flare Radius</strong></td>
+	<td style="text-align:left;">光晕的半径，此值将添加到主半径，因此零值意味着无光晕。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Flare Height</strong></td>
+	<td style="text-align:left;">定义光晕在树干上的跨度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Flare Noise</strong></td>
+	<td style="text-align:left;">定义光晕的噪点，较低的值将带来较摇摆的外观，而较高的值将带来较随机的外观。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Breaking</strong></td>
+	<td style="text-align:left;">控制树枝的折断。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Break Chance</strong></td>
+	<td style="text-align:left;">树枝折断的可能性，即 0 = 没有树枝折断，0.5 = 一半树枝折断，1.0 = 所有树枝折断。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Break Location</strong></td>
+	<td style="text-align:left;">此范围定义树枝将被折断的位置。相对于树枝的长度。</td>
+</tr>
+</tbody>
+</table>
+
+<figure>
+<img src="../uploads/Main/TreeNode-BranchPropertiesShapeFrond.png" alt="">
+</figure>
+
+<p><strong>这些属性仅适用于子树枝，而不适用于树干。</strong></p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">
+<strong>Welding ** | </strong>定义将树枝焊接到其父级树枝上。仅对二级树枝有效。**</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Weld Length</strong></td>
+	<td style="text-align:left;">定义焊接扩散在树枝上的跨度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Spread Top</strong></td>
+	<td style="text-align:left;">树枝顶端的焊接扩散系数，相对于其父级树枝。零表示无扩散。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Spread Bottom</strong></td>
+	<td style="text-align:left;">树枝底端的焊接扩散系数，相对于其父级树枝。零表示无扩散。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Fronds</h2>
+
+<p>此处可调整树叶的数量及其属性。此选项卡仅在 <strong>Geometry</strong> 选项卡中启用了 Frond 几何体时才可用。</p>
+
+<figure>
+<img src="../uploads/Main/TreeNode-BranchPropertiesFronds.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Frond Count</strong></td>
+	<td style="text-align:left;">定义每个树枝的树叶数。树叶总是在树枝周围均匀分布。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Frond Width</strong></td>
+	<td style="text-align:left;">树叶的宽度，使用曲线调整沿树枝长度的具体形状。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Frond Range</strong></td>
+	<td style="text-align:left;">定义树叶的起点和终点。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Frond Rotation</strong></td>
+	<td style="text-align:left;">定义父级树枝周围的旋转。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Frond Crease</strong></td>
+	<td style="text-align:left;">调整以折皱/折叠树叶。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Wind</h2>
+
+<p>调整用于动画化此树枝组的参数。风区仅在播放模式下有效。</p>
+
+<figure>
+<img src="../uploads/Main/TreeNode-BranchPropertiesAnimation.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Main Wind</strong></td>
+	<td style="text-align:left;">主风效果。此效果可产生柔和的摇摆运动，通常是主树枝所需的唯一参数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Edge Turbulence</strong></td>
+	<td style="text-align:left;">沿着树叶边缘的湍流。适用于蕨类植物、棕榈树等。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Create Wind Zone</strong></td>
+	<td style="text-align:left;">创建<a href="class-WindZone.html">风区</a>。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="tree-Structure.html"></a></span><div class="tip">树基础知识</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="tree-Leaves.html"></a></span><div class="tip">树叶组属性 (Leaf Group Properties)</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

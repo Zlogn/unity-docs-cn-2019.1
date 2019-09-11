@@ -1,0 +1,213 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="VR frame timing  - Unity Manual">
+<title>VR frame timing  - Unity Manual</title>
+<meta name="description" content="Frame timing in VR mode works exactly like it does in VSync-enabled non-VR mode (see documentation on the Execution order of event functions). The only difference is that Unity does not depend on the underlying 3D SDK’s VSync, but instead whichever VR SDK it currently renders with. There is no benefit to rendering faster than the display can refresh. Instead, Unity focuses on utilizing the time most efficiently.">
+<meta property="og:description" content="Frame timing in VR mode works exactly like it does in VSync-enabled non-VR mode (see documentation on the Execution order of event functions). The only difference is that Unity does not depend on the underlying 3D SDK’s VSync, but instead whichever VR SDK it currently renders with. There is no benefit to rendering faster than the display can refresh. Instead, Unity focuses on utilizing the time most efficiently.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'VRFrameTiming';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/VRFrameTiming.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/VRFrameTiming.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/VRFrameTiming.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/VRFrameTiming.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/VRFrameTiming.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/VRFrameTiming.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/VRFrameTiming.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/VRFrameTiming.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/VRFrameTiming.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/VRFrameTiming.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/VRFrameTiming.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/VRFrameTiming.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/VRFrameTiming.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/VRFrameTiming.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/VRFrameTiming.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/VRFrameTiming.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/VRFrameTiming.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/VRFrameTiming.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/VRFrameTiming.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/VRFrameTiming.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/VRFrameTiming.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/VRFrameTiming.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/VRFrameTiming.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/VRFrameTiming.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="XR.html">XR</a></li>
+<li>VR frame timing </li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="VRAudioSpatializer.html"></a></span><div class="tip">VR 空间音响</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="OpenSourceRepositories.html"></a></span><div class="tip">开源代码仓库</div>
+</div>
+</div></div>
+<h1>VR frame timing</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Frame timing in VR mode works exactly like it does in VSync-enabled non-VR mode (see documentation on the <a href="ExecutionOrder.html">Execution order of event functions</a>). The only difference is that Unity does not depend on the underlying 3D SDK’s VSync, but instead whichever VR SDK it currently renders with. There is no benefit to rendering faster than the display can refresh. Instead, Unity focuses on utilizing the time most efficiently. </p>
+
+<p>In multithreaded rendering, Unity synchronizes the simulation thread and the rendering thread on the CPU. This reduces latency. The simulation thread primarily executes the scripts, sounds, AI, and other tasks needed for the simulation to run. The render thread focuses on submitting draw calls to the graphics driver, which in turn validates them and sends them to the GPU. To achieve the greatest parallelism between threads, Unity executes graphics commands as they come in, and simulates the next frame at the same time.</p>
+
+<p>Unity waits for the GPU to completely render and display the last frame, then submits rendering commands for the next frame.</p>
+
+<h2>Lowest possible latency</h2>
+
+<p>Before Unity can submit the first rendering command that depends on the view transformation matrix, it must first get the view matrix from the VR SDK. To keep latency as low as possible, the VR SDK predicts the head transform twice per frame:</p>
+
+<ul>
+<li><p>One prediction to render the current frame. This prediction corresponds with where your head actually is, in real space, when the frame arrives on the screen.</p></li>
+<li><p>One prediction to simulate the following frame.</p></li>
+</ul>
+
+<p>Unity applies the rendering prediction for the current frame to cameras, controllers, and anything that needs information for Scene rendering. Unity uses the simulation prediction for the following frame if it is unable to render the following frame. </p>
+
+<p>For more information on how the hardware handles rendering, see the manufacturer documentation for your head-mounted display.</p>
+
+<h2>What happens when Unity drops a frame?</h2>
+
+<p>If Unity doesn’t submit the fully rendered frame in time for it to be ready for the next display refresh, a few things might happen, depending on which VR SDK is active. The VR SDK might:</p>
+
+<ul>
+<li><p>Display the previously submitted frame. This looks like judder, and greatly reduces the quality of the experience.</p></li>
+<li><p>Rotationally reproject the previously submitted frame based on the current head pose. This is a crude approximation that works well as a fallback for static content, but any content with animation or positional movement does not look correct. </p></li>
+<li><p>Apply some form of positional reprojection. This might be temporal to fill in missing details.</p></li>
+</ul>
+
+<p>For more information on reprojection (sometimes called time warping), see the XinReality wiki entry on <a href="https://xinreality.com/wiki/Timewarp">Timewarp</a>.</p>
+
+<p>This all happens automatically. At this point, it’s usually too late for Unity to successfully finish the next frame that it should already be rendering. Instead, the VR SDK takes the last frame it received and reprojects it to the latest predicted pose, and Unity waits until the next opportunity to render a full frame to get back on track. If your app continually drops frames, Unity only renders every other frame.</p>
+
+<p>For more information on how the hardware handles rendering, see the manufacturer documentation for your head-mounted display.</p>
+
+<h2>GPU-bound vs. CPU-bound in VR</h2>
+
+<p>Each display has a specific refresh rate that Unity is bound to. You can get this at run time with <a href="../ScriptReference/XR.XRDevice-refreshRate.html">VRDevice.refreshRate</a>. A value of 1 divided by the <code>refreshRate</code> gives you the time allocated to a single frame. </p>
+
+<p>For example, this might be 11.1 milliseconds in the case of a refresh rate of 90 hz. </p>
+
+<ul>
+<li><p>If your app is GPU-bound, the Unity Profiler displays <code>XR.WaitForGPU</code> in excess of one frame’s time in milliseconds. </p></li>
+<li><p>If your app is CPU-bound, a frame takes longer than the designated frame time, but the Unity Profiler displays <code>XR.WaitForGPU</code> shorter than the one frame.</p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="VRAudioSpatializer.html"></a></span><div class="tip">VR 空间音响</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="OpenSourceRepositories.html"></a></span><div class="tip">开源代码仓库</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

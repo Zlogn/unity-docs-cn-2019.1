@@ -1,0 +1,229 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="优化着色器加载时间 - Unity Manual">
+<title>优化着色器加载时间 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/ShaderVariantCollection.png">
+<meta name="description" content="着色器是在 GPU 上执行的小程序，加载它们可能需要一些时间。每个单独的 GPU 程序通常不会花费很多时间来加载，但着色器通常在内部有很多&amp;#8220;变体&amp;#8221;。">
+<meta property="og:description" content="着色器是在 GPU 上执行的小程序，加载它们可能需要一些时间。每个单独的 GPU 程序通常不会花费很多时间来加载，但着色器通常在内部有很多&amp;#8220;变体&amp;#8221;。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'OptimizingShaderLoadTime';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/OptimizingShaderLoadTime.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/OptimizingShaderLoadTime.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/OptimizingShaderLoadTime.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/OptimizingShaderLoadTime.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/OptimizingShaderLoadTime.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/OptimizingShaderLoadTime.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/OptimizingShaderLoadTime.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/OptimizingShaderLoadTime.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/OptimizingShaderLoadTime.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/OptimizingShaderLoadTime.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/OptimizingShaderLoadTime.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/OptimizingShaderLoadTime.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/OptimizingShaderLoadTime.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/OptimizingShaderLoadTime.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/OptimizingShaderLoadTime.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/OptimizingShaderLoadTime.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/OptimizingShaderLoadTime.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/OptimizingShaderLoadTime.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/OptimizingShaderLoadTime.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/OptimizingShaderLoadTime.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/OptimizingShaderLoadTime.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/OptimizingShaderLoadTime.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/OptimizingShaderLoadTime.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/OptimizingShaderLoadTime.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="OptimizingGraphicsPerformance.html">优化图形性能</a></li>
+<li>优化着色器加载时间</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="FrameDebugger.html"></a></span><div class="tip">帧调试器</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="TextureStreaming.html"></a></span><div class="tip">Texture Streaming</div>
+</div>
+</div></div>
+<h1>优化着色器加载时间</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>着色器是在 GPU 上执行的小程序，加载它们可能需要一些时间。每个单独的 GPU 程序通常不会花费很多时间来加载，但着色器通常在内部有很多“变体”。</p>
+
+<p>例如，<a href="shader-StandardShader.html">标准着色器</a>在完全编译后，最终将成为数千个略微不同的 GPU 程序。这种情况可产生两个潜在问题：</p>
+
+<ul>
+<li>大量的这些着色器变体将增加游戏构建时间和游戏数据大小。</li>
+<li>在游戏过程中加载大量着色器变体将很慢并占用内存。</li>
+</ul>
+
+<h2>着色器构建时剥离</h2>
+
+<p>在构建游戏时，Unity 可能检测到游戏不使用某些内部着色器变体，并从构建数据中跳过它们。构建时剥离将用于以下各项：</p>
+
+<ul>
+<li>各个着色器功能（针对使用 <code>#pragma shader_feature</code> 的着色器）。如果所使用的材质都不使用特定变体，则该变体不会包含在构建中。请参阅<a href="SL-MultipleProgramVariants.html">内部着色器变体</a>文档。在内置着色器中，<a href="shader-StandardShader.html">标准着色器</a>会使用构建时剥离。</li>
+<li>Shader variants to handle Fog and Lightmapping modes not used by any of the scenes are not included into the game data. See the <a href="class-GraphicsSettings.html">Graphics</a> window if you want to override this behavior.</li>
+</ul>
+
+<p>上述的组合通常会大大减小着色器数据大小。例如，完全编译后的标准着色器将占用几百兆字节，但在典型的项目中，通常最终仅占用几兆字节（并且通常会由应用程序打包过程进一步压缩）。</p>
+
+<h2>默认的 Unity 着色器加载行为</h2>
+
+<p>在所有默认设置下，Unity 将 <a href="SL-Shader.html">shaderlab 着色器</a>对象加载到内存中，但在实际需要之前不会创建<a href="SL-MultipleProgramVariants.html">内部着色器变体</a>。</p>
+
+<p>这意味着仍然可以使用包含在游戏构建中的着色器变体，但是在需要它们之前不会有内存或加载时间成本。例如，着色器总是包含一个变体用于处理带阴影的点光源，但是如果一直未能在游戏中使用带阴影的点光源，那么加载这个特定的变体是没有意义的。</p>
+
+<p>然而，这种默认行为有一个缺点，即第一次需要某个着色器变体时可能会出现暂时性中断问题，这是因为必须将新的 GPU 程序代码加载到图形驱动程序中。在游戏过程中通常不希望发生这种问题，因此 Unity 提供了 <strong>ShaderVariantCollection</strong> 资源来帮助解决该问题。</p>
+
+<h3>着色器变体集合</h3>
+
+<p>ShaderVariantCollection 资源基本上是一个<a href="class-Shader.html">着色器</a>列表，对于每个着色器，都要加载一组 pass 类型和着色器关键字组合。</p>
+
+<figure>
+<img src="../uploads/Main/ShaderVariantCollection.png" alt="着色器变体集合检视面板 (Inspector)">
+<figcaption>着色器变体集合检视面板 (Inspector)</figcaption>
+</figure>
+
+<p>To help with creating these assets based on actually used shaders and their variants, the editor can track which shaders and their variants are actually used. In the <a href="class-GraphicsSettings.html">Graphics</a> window, there is a button to create a new ShaderVariantCollection out of currently tracked shaders, or to clear the currently tracked shader list.</p>
+
+<figure>
+<img src="../uploads/Main/GraphicsSettings-NewVariantCollection.svg" alt="Creating ShaderVariantCollection from Shaders used by editor">
+<figcaption>Creating ShaderVariantCollection from Shaders used by editor</figcaption>
+</figure>
+
+<p>Once you have some ShaderVariantCollection assets, you can set for these variants to be automatically preloaded while loading the application (under Preloaded Shaders list on the <a href="class-GraphicsSettings.html">Graphics</a> window), or you can preload an individual shader variant collection from a script. </p>
+
+<p>Preloaded Shaders 列表列出的是常用着色器。此处列出的着色器变体将在应用程序的整个生命周期内加载到内存中。对于包含大量变体的 ShaderVariantCollections 资源，这可能会占用大量内存。为避免这种情况，应以较小的粒度创建 ShaderVariantCollection 资源并从脚本进行加载。一种策略是为每个场景记录使用过的着色器变体，将它们保存到单独的 ShaderVariantCollections 资源中，并在场景启动时加载它们。</p>
+
+<p>请参阅 <a href="../ScriptReference/ShaderVariantCollection.html">ShaderVariantCollection</a> 脚本类。</p>
+
+<h2>另请参阅</h2>
+
+<ul>
+<li><a href="OptimizingGraphicsPerformance.html">优化图形性能</a></li>
+<li>
+<a href="class-GraphicsSettings.html">Graphics</a> settings</li>
+<li><a href="SL-Shader.html">着色器参考</a></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="FrameDebugger.html"></a></span><div class="tip">帧调试器</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="TextureStreaming.html"></a></span><div class="tip">Texture Streaming</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="纹理数组 - Unity Manual">
+<title>纹理数组 - Unity Manual</title>
+<meta name="description" content="类似于常规 2D 纹理（Texture2D 类，着色器中的 sampler2D__）、立方体贴图（Cubemap 类，着色器中的 samplerCUBE__）和 3D 纹理（Texture3D 类，着色器中的 __sampler3D__），Unity 也支持 2D 纹理数组。">
+<meta property="og:description" content="类似于常规 2D 纹理（Texture2D 类，着色器中的 sampler2D__）、立方体贴图（Cubemap 类，着色器中的 samplerCUBE__）和 3D 纹理（Texture3D 类，着色器中的 __sampler3D__），Unity 也支持 2D 纹理数组。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'SL-TextureArrays';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-TextureArrays.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-TextureArrays.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-TextureArrays.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-TextureArrays.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-TextureArrays.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-TextureArrays.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-TextureArrays.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-TextureArrays.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-TextureArrays.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-TextureArrays.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/SL-TextureArrays.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/SL-TextureArrays.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/SL-TextureArrays.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/SL-TextureArrays.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-TextureArrays.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-TextureArrays.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-TextureArrays.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-TextureArrays.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-TextureArrays.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-TextureArrays.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-TextureArrays.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-TextureArrays.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-TextureArrays.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-TextureArrays.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="SL-Reference.html">着色器参考</a></li>
+<li><a href="SL-AdvancedTopics.html">高级 ShaderLab 主题</a></li>
+<li>纹理数组</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-ShaderLOD.html"></a></span><div class="tip">着色器细节级别</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-DebuggingD3D11ShadersWithVS.html"></a></span><div class="tip">Debugging DirectX 11/12 shaders with Visual Studio</div>
+</div>
+</div></div>
+<h1>纹理数组</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>类似于常规 2D 纹理（<a href="class-TextureImporter.html">Texture2D</a> 类，着色器中的 <strong>sampler2D__）、立方体贴图（<a href="class-Cubemap.html">Cubemap</a> 类，着色器中的 </strong>samplerCUBE__）和 3D 纹理（<a href="class-Texture3D.html">Texture3D</a> 类，着色器中的 __sampler3D__），Unity 也支持 2D 纹理数组。</p>
+
+<p>纹理数组是具有相同大小/格式/标记的 2D 纹理的集合，这些纹理对于 GPU 而言像是单个对象，并可在着色器中使用纹理元素索引进行采样。它们可以用于实现自定义地形渲染系统或其他特殊效果，让您高效访问大量相同大小和格式的纹理。2D 纹理数组的元素也称为切片或图层。</p>
+
+<h2>平台支持</h2>
+
+<p>纹理数组需要受到底层图形 API 和 GPU 的支持。纹理数组在以下平台上可用：</p>
+
+<ul>
+<li>Direct3D 11/12（Windows、Xbox One）</li>
+<li>OpenGL Core（Mac OS X、Linux）</li>
+<li>Metal（iOS、Mac OS X）</li>
+<li>OpenGL ES 3.0（Android、iOS、WebGL 2.0）</li>
+<li>PlayStation 4</li>
+</ul>
+
+<p>其他平台（OpenGL ES 2.0 或 WebGL 1.0）不支持纹理数组。可使用 <a href="../ScriptReference/SystemInfo-supports2DArrayTextures.html">SystemInfo.supports2DArrayTextures</a> 在运行时确定纹理数组支持情况。</p>
+
+<h2>创建和填充纹理数组</h2>
+
+<p>由于纹理数组没有纹理导入管线，必须在脚本中创建纹理数组。可使用 <a href="../ScriptReference/Texture2DArray.html">Texture2DArray</a> 类来创建和填充纹理数组。请注意，纹理数组可序列化为资源，因此可以借助 Editor 脚本中的数据创建和填充纹理数组。</p>
+
+<p>通常，纹理数组完全是在 GPU 内存中使用，但您可以使用 <a href="../ScriptReference/Graphics.CopyTexture.html">Graphics.CopyTexture</a>、<a href="../ScriptReference/Texture2DArray.GetPixels.html">Texture2DArray.GetPixels</a> 和 <a href="../ScriptReference/Texture2DArray.SetPixels.html">Texture2DArray.SetPixels</a> 与系统内存之间双向传输像素。</p>
+
+<h2>将纹理数组用作渲染目标</h2>
+
+<p>纹理数组元素也可用作渲染目标。使用 <a href="../ScriptReference/RenderTexture-dimension.html">RenderTexture.dimension</a> 提前指定渲染目标是否是 2D 纹理数组。<a href="../ScriptReference/Graphics.SetRenderTarget.html">Graphics.SetRenderTarget</a> 的 <strong>depthSlice</strong> 参数可指定要渲染到的 Mipmap 级别或立方体贴图面。在支持“分层渲染”（例如，几何着色器）的平台上，可将 <strong>depthSlice</strong> 参数设置为 –1 以便将整个纹理数组设置为渲染目标。此外还可使用几何着色器来渲染到个别元素中。</p>
+
+<h2>在着色器中使用纹理数组</h2>
+
+<p>由于纹理数组并非适用于所有平台，因此着色器需要使用适当的<a href="SL-ShaderCompileTargets.html">编译目标</a>或功能要求来访问纹理数组。支持纹理数组的最低着色器模型编译目标为 <code>3.5</code>，功能名称为 <code>2darray</code>。</p>
+
+<p>使用以下<a href="SL-BuiltinMacros.html">宏</a>可声明和采样纹理数组：</p>
+
+<ul>
+<li>UNITY_DECLARE_TEX2DARRAY(name) 在 HLSL 代码中声明纹理数组采样器变量。</li>
+<li>UNITY_SAMPLE_TEX2DARRAY(name,uv) 使用 <strong>float3</strong> UV 采样纹理数组；坐标的 z 分量是数组元素索引。</li>
+<li>UNITY_SAMPLE_TEX2DARRAY_LOD(name,uv,lod) 使用显式 Mipmap 级别采样纹理数组。</li>
+</ul>
+
+<h2>示例</h2>
+
+<p>以下着色器示例通过使用对象空间顶点位置作为坐标来采样纹理数组：</p>
+
+<pre><code>Shader "Example/Sample2DArrayTexture"
+{
+    Properties
+    {
+        _MyArr ("Tex", 2DArray) = "" {}
+        _SliceRange ("Slices", Range(0,16)) = 6
+        _UVScale ("UVScale", Float) = 1.0
+    }
+    SubShader
+    {
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            // 纹理数组并非在任何地方都可用，
+            // 只能在它们所在的平台上编译着色器
+            #pragma require 2darray
+            
+            #include "UnityCG.cginc"
+
+            struct v2f
+            {
+                float3 uv : TEXCOORD0;
+                float4 vertex : SV_POSITION;
+            };
+
+            float _SliceRange;
+            float _UVScale;
+
+            v2f vert (float4 vertex : POSITION)
+            {
+                v2f o;
+                o.vertex = mul(UNITY_MATRIX_MVP, vertex);
+                o.uv.xy = (vertex.xy + 0.5) * _UVScale;
+                o.uv.z = (vertex.z + 0.5) * _SliceRange;
+                return o;
+            }
+            
+            UNITY_DECLARE_TEX2DARRAY(_MyArr);
+
+            half4 frag (v2f i) : SV_Target
+            {
+                return UNITY_SAMPLE_TEX2DARRAY(_MyArr, i.uv);
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre>
+
+<h2>另请参阅</h2>
+
+<ul>
+<li>Direct3D 文档中的<a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ff476906.aspx#Texture2D_Resource">纹理简介 (Introduction To Textures)</a>。</li>
+<li>OpenGL Wiki 中的<a href="https://www.opengl.org/wiki/Array_Texture">数组纹理 (Array Textures)</a>。</li>
+</ul>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–03–20 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li><span class="page-history">在 Unity 2018.1 中添加了着色器 #pragma 指令</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-ShaderLOD.html"></a></span><div class="tip">着色器细节级别</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-DebuggingD3D11ShadersWithVS.html"></a></span><div class="tip">Debugging DirectX 11/12 shaders with Visual Studio</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

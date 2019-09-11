@@ -1,0 +1,256 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="方向光阴影 - Unity Manual">
+<title>方向光阴影 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/DirShadowAliasing.jpg">
+<meta name="description" content="方向光通常模拟太阳光，单个光源即可照亮整个场景。这意味着阴影贴图通常会同时覆盖场景的大部分，而这使得阴影容易受到称为&amp;#8220;透视锯齿&amp;#8221;的问题的影响。透视锯齿是指靠近摄像机的阴影贴图像素看起来比那些更远的像素更大块。">
+<meta property="og:description" content="方向光通常模拟太阳光，单个光源即可照亮整个场景。这意味着阴影贴图通常会同时覆盖场景的大部分，而这使得阴影容易受到称为&amp;#8220;透视锯齿&amp;#8221;的问题的影响。透视锯齿是指靠近摄像机的阴影贴图像素看起来比那些更远的像素更大块。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'DirLightShadows';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/DirLightShadows.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/DirLightShadows.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/DirLightShadows.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/DirLightShadows.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/DirLightShadows.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/DirLightShadows.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/DirLightShadows.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/DirLightShadows.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/DirLightShadows.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/DirLightShadows.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/DirLightShadows.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/DirLightShadows.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/DirLightShadows.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/DirLightShadows.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/DirLightShadows.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/DirLightShadows.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/DirLightShadows.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/DirLightShadows.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/DirLightShadows.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/DirLightShadows.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/DirLightShadows.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/DirLightShadows.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/DirLightShadows.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/DirLightShadows.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="LightingOverview.html">光照</a></li>
+<li><a href="Shadows.html">阴影</a></li>
+<li>方向光阴影</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ShadowOverview.html"></a></span><div class="tip">阴影</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="GIIntro.html"></a></span><div class="tip">全局光照</div>
+</div>
+</div></div>
+<h1>方向光阴影</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>方向光通常模拟太阳光，单个光源即可照亮整个场景。这意味着阴影贴图通常会同时覆盖场景的大部分，而这使得阴影容易受到称为“透视锯齿”的问题的影响。透视锯齿是指靠近摄像机的阴影贴图像素看起来比那些更远的像素更大块。</p>
+
+<figure>
+<img src="../uploads/Main/DirShadowAliasing.jpg" alt="远处的阴影 (A) 具有适当分辨率，而靠近摄像机的阴影 (B) 显示透视锯齿。">
+<figcaption>远处的阴影 (A) 具有适当分辨率，而靠近摄像机的阴影 (B) 显示透视锯齿。</figcaption>
+</figure>
+
+<p>将柔和阴影和高分辨率用于阴影贴图时，透视锯齿不会那么明显。但是，使用这些功能会增加对图形硬件的需求，因此帧率可能会受到影响。</p>
+
+<h2>阴影级联</h2>
+
+<p>发生透视锯齿的原因是按摄像机的视角不成比例地缩放阴影贴图的不同区域。光照阴影贴图只需覆盖摄像机可见场景的一部分；该部分是按摄像机的<a href="UnderstandingFrustum.html">视锥体</a>定义的。如果想象一种简单情况，方向光直接来自上方，即可看出视锥体和阴影贴图之间的关系。</p>
+
+<figure>
+<img src="../uploads/Main/ShadMapFrustumDiagram.svg" alt="">
+</figure>
+
+<p>视锥体的远端被阴影贴图的 20 个像素覆盖，而近端仅被 4 个像素覆盖。但是，两端都在屏幕上显示为_相同大小_。结果是，对于靠近摄像机的阴影区域，贴图的分辨率实际上低得多。（请注意，在现实中，该分辨率远高于 20x20，并且贴图通常不是摄像机的完美平方。）</p>
+
+<p>对整个贴图使用更高分辨率可以减少大块区域的影响，但这会在渲染时消耗更多的内存和带宽。但是，您会从图中注意到，阴影贴图的大部分会浪费在视锥体的近端，因为它永远不会被看到；远离摄像机的阴影分辨率也可能过高。可以根据与摄像机的距离将视锥体区域分成
+两个区域。近端区域可以使用尺寸减小的单独阴影贴图（但具有相同分辨率），以便在一定程度上平均像素数。</p>
+
+<figure>
+<img src="../uploads/Main/ShadMapCascadeDiagram.svg" alt="">
+</figure>
+
+<p>These staged reductions in shadow map size are known as <strong>cascaded shadow maps</strong> (sometimes called “Parallel Split Shadow Maps”). From the <a href="class-QualitySettings.html">Quality</a> window, you can set zero, two or four cascades for a given quality level.</p>
+
+<figure>
+<img src="../uploads/Main/ShadCascadeQualSettings.png" alt="">
+</figure>
+
+<p>使用的级联越多，阴影受透视锯齿的影响就越少，但增加此数量实际上会带来渲染开销。但是，此开销仍然会低于通常在整个阴影中使用高分辨率贴图的情况。</p>
+
+<figure>
+<img src="../uploads/Main/ShadCascade4.jpg" alt="前面示例采用四个级联后的阴影">
+<figcaption>前面示例采用四个级联后的阴影</figcaption>
+</figure>
+
+<h2>阴影距离</h2>
+
+<p>Shadows from objects tend to become less noticeable the farther the objects are from the camera; they appear smaller onscreen and also, distant objects are usually not the focus of attention. Unity lets you take advantage of this effect by providing a <em>Shadow Distance</em> property in the <a href="class-QualitySettings.html">Quality</a> window. Objects beyond this distance (from the camera) cast no shadows at all, while the shadows from objects approaching this distance gradually fade out.</p>
+
+<p>应将阴影距离设置得尽可能短以帮助提高渲染性能。这种方法会奏效的原因是远处对象根本不需要渲染到阴影贴图中。此外，移除远处阴影后，场景通常看起来更好。正确设置阴影距离对于移动平台上的性能尤为重要，因为移动平台不支持阴影级联。如果当前摄像机远平面小于阴影距离，Unity 将使用摄像机远平面而不是阴影距离。</p>
+
+<h2>可视化阴影参数调整</h2>
+
+<p>Scene 视图具有称为__阴影级联__的<a href="ViewModes.html">绘制模式</a>；该模式使用着色通过不同级联级别显示场景的各个部分。此模式有助于正确设置阴影距离、级联计数和级联分割比率。请注意，此可视化方法会使用通常大于阴影距离的 Scene 视图远平面，因此如果要将摄像机的游戏内行为与小远平面匹配，可能需要缩短阴影距离。</p>
+
+<figure>
+<img src="../uploads/Main/ShadCascade4Visualization.png" alt="Scene 视图中的阴影级联绘制模式">
+<figcaption>Scene 视图中的阴影级联绘制模式</figcaption>
+</figure>
+
+<h2>阴影平坠 (Shadow Pancaking)</h2>
+
+<p>为了进一步防止阴影暗斑，我们采用一种称为__阴影平坠__的技术。该技术旨在减少沿光照方向渲染阴影贴图时使用的光照空间范围。这可以提高阴影贴图的精度，减少阴影暗斑。</p>
+
+<figure>
+<img src="../uploads/Main/PancakingIdea.png" alt="显示阴影平坠原理的图形">
+<figcaption>显示阴影平坠原理的图形</figcaption>
+</figure>
+
+<p>在上图中：</p>
+
+<ul>
+<li>
+<strong>浅蓝圆圈</strong>代表阴影投射物</li>
+<li>
+<strong>深蓝矩形</strong>代表原始光照空间</li>
+<li>
+<strong>绿线</strong>代表优化的近平面（排除了在视锥体中不可见的所有阴影投射物）</li>
+</ul>
+
+<p>将这些阴影投射物钳制在优化空间的近裁剪面（在顶点着色器中）。请注意，虽然这通常很有效，但对于穿过近裁剪面的大型三角形，这会带来瑕疵：</p>
+
+<figure>
+<img src="../uploads/Main/PancakingProblem.png" alt="大三角形问题">
+<figcaption>大三角形问题</figcaption>
+</figure>
+
+<p>在此情况下，只有蓝色三角形的一个顶点位于近裁剪面背后并被钳制到此处。但是，这会改变三角形的形状，并可能产生不正确的阴影。</p>
+
+<p>You can tweak the <strong>Shadow Near Plane Offset</strong> property from the <a href="class-QualitySettings.html">Quality</a> window to avoid this problem. This pulls back the near clip plane. However, setting this value very high eventually introduces shadow acne, because it raises the range that the shadow map needs to cover in the light direction. Alternatively, you can also tesselate the problematic shadow casting triangles. See the <strong>bias</strong> section in <a href="ShadowOverview.html">Shadow Overview</a> for more information.</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ShadowOverview.html"></a></span><div class="tip">阴影</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="GIIntro.html"></a></span><div class="tip">全局光照</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

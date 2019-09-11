@@ -1,0 +1,215 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="常见资源类型 - Unity Manual">
+<title>常见资源类型 - Unity Manual</title>
+<meta name="description" content="Unity 支持最常见的图像文件类型，例如 BMP、TIF、TGA、JPG 和 PSD。如果将分层的 Photoshop (.psd) 文件保存到 Assets 文件夹中，Unity 会将它们导入为展平的图像。如需了解详细信息，请参阅从 Photoshop 导入包含 Alpha 通道的图像或者将图像作为精灵导入">
+<meta property="og:description" content="Unity 支持最常见的图像文件类型，例如 BMP、TIF、TGA、JPG 和 PSD。如果将分层的 Photoshop (.psd) 文件保存到 Assets 文件夹中，Unity 会将它们导入为展平的图像。如需了解详细信息，请参阅从 Photoshop 导入包含 Alpha 通道的图像或者将图像作为精灵导入">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'AssetTypes';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AssetTypes.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AssetTypes.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AssetTypes.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AssetTypes.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AssetTypes.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AssetTypes.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AssetTypes.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AssetTypes.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AssetTypes.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AssetTypes.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/AssetTypes.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/AssetTypes.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/AssetTypes.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/AssetTypes.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AssetTypes.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AssetTypes.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AssetTypes.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AssetTypes.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AssetTypes.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AssetTypes.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AssetTypes.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AssetTypes.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AssetTypes.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AssetTypes.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="AssetWorkflow.html">Asset Workflow</a></li>
+<li>常见资源类型</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetWorkflow.html"></a></span><div class="tip">Asset Workflow</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PrimitiveObjects.html"></a></span><div class="tip">原始对象和占位对象</div>
+</div>
+</div></div>
+<h1>常见资源类型</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>图像文件</h2>
+
+<p>Unity 支持最常见的图像文件类型，例如 BMP、TIF、TGA、JPG 和 PSD。如果将分层的 Photoshop (.psd) 文件保存到 Assets 文件夹中，Unity 会将它们导入为展平的图像。如需了解详细信息，请参阅<a href="HOWTO-alphamaps.html">从 Photoshop 导入包含 Alpha 通道的图像</a>或者<a href="SpriteEditor.html">将图像作为精灵导入</a></p>
+
+<h2>FBX 和模型文件</h2>
+
+<p>由于 Unity 支持 FBX 文件格式，因此可以从任何支持 FBX 的 3D 建模软件导入数据。Unity 也支持本机导入 SketchUp 文件。如需了解如何在从 3D 建模软件导出 FBX 文件时获得最佳结果，请参阅<a href="HOWTO-importObject.html">优化 FBX 文件</a>。</p>
+
+<p><strong>注意：</strong>还可以使用原生格式（例如 .max、.blend、.mb 和 .ma）从最常见的 3D 建模软件中保存 3D 文件。Unity 在 Assets 文件夹中找到这些文件时，会通过回调 3D 建模软件的 FBX 导出插件来导入它们。但是，建议将它们导出为 FBX 格式</p>
+
+<h2>网格和动画</h2>
+
+<p>无论使用哪种 3D 建模软件，Unity 都会从每个文件中导入网格和动画。有关 Unity 支持的 3D 建模软件列表，请参阅<a href="3D-formats.html">模型文件格式</a>。</p>
+
+<p>网格文件不需要导入动画。如果需要使用动画，则可以从单个文件导入所有动画，或导入单独的文件，每个文件包含一个动画。有关导入动画的更多信息，请参阅<a href="ImportingModelFiles.html">模型导入工作流程</a>。</p>
+
+<h2>音频文件</h2>
+
+<p>如果将未压缩的音频文件保存到 Assets 文件夹中，Unity 会根据指定的压缩设置来导入音频文件。有关详细信息，请参阅<a href="AudioFiles.html">导入音频文件</a>。</p>
+
+<h2>其他资源类型</h2>
+
+<p>虽然在 Unity 中可以选择各种方式来压缩、修改或以其他方式处理资源，但在任何情况下，Unity 都不会修改原始的源文件。导入过程会读取源文件，并在内部创建一个可直接用于游戏的资源表示，与所选的导入设置相匹配。如果修改资源的导入设置，或者对 Asset 文件夹中的源文件进行更改，则会导致 Unity 再次重新导入资源以反映这些更改。</p>
+
+<p><strong>Note</strong>: Importing native 3D formats requires that the 3D modeling software be installed on the same computer as Unity. This is because Unity uses the 3D modeling software’s FBX Exporter plug-in to read the file. Alternatively, you can directly export as FBX from your application and save into the Projects folder.</p>
+
+<p><a name="Standard"></a> </p>
+
+<h2>标准资源</h2>
+
+<p>Unity ships with multiple <strong>Standard Assets</strong>. These are collections of Assets that most Unity customers use. These include: 2D, Cameras, Characters, CrossPlatformInput, Effects, Environment, ParticleSystems, Prototyping, Utility, and Vehicles. </p>
+
+<p>To transfer <strong>Standard Assets</strong> in and out of Projects, Unity uses <strong>Asset packages</strong>, available on the Unity <strong>Asset Store</strong>. Asset packages allow you to share and re-use Unity Projects and collections of Assets.</p>
+
+<p><strong>NOTE:</strong> If you chose not to install Standard Assets when you installed Unity, you can <a href="AssetPackages.html#Standard">download them</a> from the <a href="https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-32351">Asset Store</a>.</p>
+
+<h2>Assets in the Unity Package Manager</h2>
+
+<p>You can install a wide range of Assets, including plug-ins, tools, and libraries directly into Unity through the <strong>Unity Package Manager (UPM)</strong>. These are a new type of package, and are available through the <a href="upm-ui.html">Packages window</a>. For more information about packages in general, see the <a href="Packages.html">Packages</a> documentation.</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit"> 2018–04–11 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetWorkflow.html"></a></span><div class="tip">Asset Workflow</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PrimitiveObjects.html"></a></span><div class="tip">原始对象和占位对象</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

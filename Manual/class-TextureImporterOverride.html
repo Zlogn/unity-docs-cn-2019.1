@@ -1,0 +1,507 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="特定于平台的覆盖的纹理压缩格式 - Unity Manual">
+<title>特定于平台的覆盖的纹理压缩格式 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/class-TextureImporterOverride.png">
+<meta name="description" content="虽然 Unity 支持许多常见的图像格式作为导入纹理的源文件（例如 JPG、PNG、PSD 和 TGA），但在 3D 图形硬件（如显卡或移动设备）的实时渲染过程中不会使用这些格式。3D 图形硬件要求纹理以专门格式进行压缩，这些格式针对快速纹理采样进行了优化。各种不同的平台和设备都有自己不同的专有格式。">
+<meta property="og:description" content="虽然 Unity 支持许多常见的图像格式作为导入纹理的源文件（例如 JPG、PNG、PSD 和 TGA），但在 3D 图形硬件（如显卡或移动设备）的实时渲染过程中不会使用这些格式。3D 图形硬件要求纹理以专门格式进行压缩，这些格式针对快速纹理采样进行了优化。各种不同的平台和设备都有自己不同的专有格式。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-TextureImporterOverride';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-TextureImporterOverride.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-TextureImporterOverride.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-TextureImporterOverride.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-TextureImporterOverride.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-TextureImporterOverride.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-TextureImporterOverride.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-TextureImporterOverride.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-TextureImporterOverride.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-TextureImporterOverride.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-TextureImporterOverride.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-TextureImporterOverride.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-TextureImporterOverride.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-TextureImporterOverride.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-TextureImporterOverride.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-TextureImporterOverride.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-TextureImporterOverride.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-TextureImporterOverride.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-TextureImporterOverride.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-TextureImporterOverride.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-TextureImporterOverride.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-TextureImporterOverride.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-TextureImporterOverride.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-TextureImporterOverride.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-TextureImporterOverride.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="comp-Textures.html">纹理组件</a></li>
+<li><a href="class-TextureImporter.html">纹理</a></li>
+<li>特定于平台的覆盖的纹理压缩格式</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="TextureTypes.html"></a></span><div class="tip">纹理类型</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-RenderTexture.html"></a></span><div class="tip">渲染纹理</div>
+</div>
+</div></div>
+<h1>特定于平台的覆盖的纹理压缩格式</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>虽然 Unity 支持许多常见的图像格式作为导入<a href="class-TextureImporter.html">纹理</a>的源文件（例如 JPG、PNG、PSD 和 TGA），但在 3D 图形硬件（如显卡或移动设备）的实时渲染过程中不会使用这些格式。3D 图形硬件要求纹理以专门格式进行压缩，这些格式针对快速纹理采样进行了优化。各种不同的平台和设备都有自己不同的专有格式。</p>
+
+<p>默认情况下，Unity Editor 会自动将纹理转换为最合适的格式，以匹配您选择的构建目标。只有转换后的纹理才会包含在您的构建中；源资源文件保留为原始格式，位于项目的 <em>Assets</em> 文件夹中。但是，在大多数平台上，可选择许多不同的受支持的纹理压缩格式。Unity 为每个平台设置了一些默认格式，但在某些情况下，您可能希望覆盖默认值并为某些纹理选择不同的压缩格式（例如，如果使用纹理作为遮罩，只有一个通道，则可以选择使用 BC4 格式来节省空间，同时保持质量）。</p>
+
+<p>要为每个平台应用自定义设置，请使用<a href="class-TextureImporter.html">纹理导入器 (Texture Importer)</a> 设置默认选项，然后使用__特定于平台的覆盖 (Platform-specific overrides)__ 面板覆盖特定平台的默认设置。</p>
+
+<figure>
+<img src="../uploads/Main/class-TextureImporterOverride.png" alt="每个平台的默认内部纹理表示 ">
+<figcaption>每个平台的默认内部纹理表示
+</figcaption>
+</figure>
+
+<p>下表显示了每个平台使用的默认格式。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>平台</strong></th>
+	<th style="text-align:left;"><strong>颜色模型</strong></th>
+	<th style="text-align:left;"><strong>无</strong></th>
+	<th style="text-align:left;"><strong>正常质量（默认设置）</strong></th>
+	<th style="text-align:left;"><strong>高质量</strong></th>
+	<th style="text-align:left;"><strong>低质量（更高性能）</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Windows、Linux、macOS、PS4、XBox One</td>
+	<td style="text-align:left;">RGB</td>
+	<td style="text-align:left;">RGB 24 位</td>
+	<td style="text-align:left;">RGB Compressed DXT1</td>
+	<td style="text-align:left;">RGB(A) Compressed BC7</td>
+	<td style="text-align:left;">RGB Compressed DXT1</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">RGBA</td>
+	<td style="text-align:left;">RGBA 32 位</td>
+	<td style="text-align:left;">RGBA Compressed DXT5</td>
+	<td style="text-align:left;">RGB(A) Compressed BC7</td>
+	<td style="text-align:left;">RGBA Compressed DXT5</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">HDR</td>
+	<td style="text-align:left;">RGBA Half</td>
+	<td style="text-align:left;">RGB Compressed BC6H</td>
+	<td style="text-align:left;">RGB Compressed BC6H</td>
+	<td style="text-align:left;">RGB Compressed BC6H</td>
+</tr>
+<tr>
+	<td style="text-align:left;">WebGL</td>
+	<td style="text-align:left;">RGB</td>
+	<td style="text-align:left;">RGB 24 位</td>
+	<td style="text-align:left;">RGB Compressed DXT1</td>
+	<td style="text-align:left;">RGB Compressed DXT1</td>
+	<td style="text-align:left;">RGB Compressed DXT1</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">RGBA</td>
+	<td style="text-align:left;">RGBA 32 位</td>
+	<td style="text-align:left;">RGBA Compressed DXT5</td>
+	<td style="text-align:left;">RGBA Compressed DXT5</td>
+	<td style="text-align:left;">RGBA Compressed DXT5</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Android（默认子目标）</td>
+	<td style="text-align:left;">RGB</td>
+	<td style="text-align:left;">RGB 24 位</td>
+	<td style="text-align:left;">RGB Compressed ETC</td>
+	<td style="text-align:left;">RGB Compressed ETC</td>
+	<td style="text-align:left;">RGB Compressed ETC</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">RGBA</td>
+	<td style="text-align:left;">RGBA 32 位</td>
+	<td style="text-align:left;">RGBA Compressed ETC2</td>
+	<td style="text-align:left;">RGBA Compressed ETC2</td>
+	<td style="text-align:left;">RGBA Compressed ETC2</td>
+</tr>
+<tr>
+	<td style="text-align:left;">iOS</td>
+	<td style="text-align:left;">RGB</td>
+	<td style="text-align:left;">RGB 24 位</td>
+	<td style="text-align:left;">RGB Compressed PVRTC 4 位</td>
+	<td style="text-align:left;">RGB Compressed PVRTC 4 位</td>
+	<td style="text-align:left;">RGB Compressed PVRTC 2 位</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">RGBA</td>
+	<td style="text-align:left;">RGBA 32 位</td>
+	<td style="text-align:left;">RGBA Compressed PVRTC 4 位</td>
+	<td style="text-align:left;">RGBA Compressed PVRTC 4 位</td>
+	<td style="text-align:left;">RGBA Compressed PVRTC 2 位</td>
+</tr>
+<tr>
+	<td style="text-align:left;">tvOS</td>
+	<td style="text-align:left;">RGB</td>
+	<td style="text-align:left;">RGB 24 位</td>
+	<td style="text-align:left;">RGB Compressed ASTC 6x6 块</td>
+	<td style="text-align:left;">RGB Compressed ASTC 4x4 块</td>
+	<td style="text-align:left;">RGB Compressed ASTC 8x8 块</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">RGBA</td>
+	<td style="text-align:left;">RGBA 32 位</td>
+	<td style="text-align:left;">RGBA Compressed ASTC 6x6 块</td>
+	<td style="text-align:left;">RGBA Compressed ASTC 4x4 块</td>
+	<td style="text-align:left;">RGBA Compressed ASTC 8x8 块</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">RGBA</td>
+	<td style="text-align:left;">RGBA 32 位</td>
+	<td style="text-align:left;">RGBA 16 位</td>
+	<td style="text-align:left;">RGBA 16 位</td>
+	<td style="text-align:left;">RGBA 16 位</td>
+</tr>
+</tbody>
+</table>
+
+<h3>所有支持的纹理压缩格式</h3>
+
+<p>下表显示了每个平台上可用的纹理压缩格式选项以及生成的压缩文件大小（基于 256 像素平方图像）。选择纹理压缩格式需要在文件大小和质量之间取得平衡；质量越高，文件越大。在下面的描述中，假定游戏纹理的最终文件大小为 256 x 256 像素。</p>
+
+<p>使用目标平台不支持的纹理压缩格式时，纹理将解压缩为 RGBA 32 并与压缩纹理一起存储在内存中。发生这种情况时，解压缩纹理会损失时间，并因为存储两次而导致内存损失。此外，所有平台都有不同的硬件，并经优化后可最有效地处理特定压缩格式；因此，选择不兼容的格式会影响游戏的性能。下表显示了每种压缩格式支持的平台。</p>
+
+<p>关于下表的注意事项：</p>
+
+<ul>
+<li><p><strong>RGB</strong> 是一种颜色模型，其中红色、绿色和蓝色通过各种方式叠加在一起以再现各种<a href="https://en.wikipedia.org/wiki/Color">颜色</a>。</p></li>
+<li><p><strong>RGBA</strong> 是具有 Alpha 通道的 <strong>RGB</strong> 版本，支持混合和不透明度更改。</p></li>
+<li><p>__Crunch 压缩__是一种基于 DXT 或 ETC 纹理压缩的有损压缩格式（意味着压缩过程中会丢失部分<a href="https://simple.wikipedia.org/wiki/Information">数据</a>）。在运行时，纹理在 CPU 上解压缩为 DXT 或 ETC，然后上传到 GPU。Crunch 压缩有助于纹理在磁盘上使用尽可能少的空间并方便下载。Crunch 纹理可能需要很长时间进行压缩，但在运行时的解压缩速度非常快。</p></li>
+</ul>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>纹理压缩格式</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+	<th style="text-align:left;">
+<strong>大小</strong><br>（256x256 像素纹理）</th>
+	<th style="text-align:left;"><strong>平台支持</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">RGB Compressed DXT1</td>
+	<td style="text-align:left;">压缩无符号标准化整数 RGB 纹理。</td>
+	<td style="text-align:left;">32KB（4 位/像素）</td>
+	<td style="text-align:left;">Windows、Linux、macOS、PS4、XBox One、Android（Nvidia Tegra 和 Intel Bay Trail）、WebGL <br><br>注意：对于不支持 sRGB DXT 的 Web 浏览器上的<a href="LinearLighting.html">线性渲染</a>，纹理将在运行时解压缩到 RGBA32。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB Crunched DXT1</td>
+	<td style="text-align:left;">与 RGB Compressed DXT1 类似，但使用 Crunch 压缩方式进行压缩。有关 Crunch 压缩的更多信息，请参阅上面的注意事项。</td>
+	<td style="text-align:left;">可变，取决于纹理中内容的复杂程度。</td>
+	<td style="text-align:left;">Windows、Linux、macOS、PS4、XBox One、Android（Nvidia Tegra 和 Intel Bay Trail）、WebGL <br><br>注意：对于不支持 sRGB DXT 的 Web 浏览器上的<a href="LinearLighting.html">线性渲染</a>，纹理将在运行时解压缩到 RGBA32。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA Compressed DXT5</td>
+	<td style="text-align:left;">压缩无符号标准化整数 RGBA 纹理。8 位/像素。</td>
+	<td style="text-align:left;">64KB（8 位/像素）</td>
+	<td style="text-align:left;">Windows、Linux、macOS、PS4、XBox One、Android（Nvidia Tegra 和 Intel Bay Trail）、WebGL <br><br>注意：对于不支持 sRGB DXT 的 Web 浏览器上的<a href="LinearLighting.html">线性渲染</a>，纹理将在运行时解压缩到 RGBA32。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA Crunched DXT5</td>
+	<td style="text-align:left;">与 RGBA Compressed DXT5 类似，但使用 Crunch 压缩方式进行压缩。有关 Crunch 压缩的更多信息，请参阅上面的注意事项。</td>
+	<td style="text-align:left;">可变，取决于纹理中内容的复杂程度。</td>
+	<td style="text-align:left;">Windows、Linux、macOS、PS4、XBox One、Android（Nvidia Tegra 和 Intel Bay Trail）、WebGL <br><br>注意：对于不支持 sRGB DXT 的 Web 浏览器上的<a href="LinearLighting.html">线性渲染</a>，纹理将在运行时解压缩到 RGBA32。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB Compressed BC6H</td>
+	<td style="text-align:left;">压缩无符号浮点/高动态范围 (HDR) RGB 纹理。</td>
+	<td style="text-align:left;">64KB（8 位/像素）</td>
+	<td style="text-align:left;">Windows Direct3D 11：OpenGL 4、Linux。<br><br>注意：在以下平台配置中，BC6H 纹理在运行时解压缩到 RGBA half：<br>- 搭载 OpenGL 的 macOS<br>- 搭载 Direct3D 10 着色器模型 4 或 OpenGL 3 GPU 的平台。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB(A) Compressed BC7</td>
+	<td style="text-align:left;">高质量压缩无符号标准化整数 RGB 或 RGBA 纹理。</td>
+	<td style="text-align:left;">64KB（8 位/像素）</td>
+	<td style="text-align:left;">Windows Direct3D 11：OpenGL 4、Linux <br><br>注意：在以下平台配置中，BC7 纹理在运行时解压缩到 RGBA 32 位：<br>- 搭载 OpenGL 的 macOS<br>- 搭载 Direct3D 10 着色器模型 4 的平台<br>搭载 OpenGL 3 GPU 的平台。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB Compressed ETC</td>
+	<td style="text-align:left;">压缩 RGB 纹理。这是适用于 Android 项目的不带 Alpha 通道的纹理的默认纹理压缩格式。</td>
+	<td style="text-align:left;">32KB（4 位/像素）</td>
+	<td style="text-align:left;">Android、iOS、tvOS。<br>注意：ETC1 受到所有 OpenGL ES 2.0 GPU 的支持。它不支持 Alpha。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB Crunched ETC</td>
+	<td style="text-align:left;">与 RGB Compressed ETC 类似，但使用 Crunch 压缩方式进行压缩。有关 Crunch 压缩的更多信息，请参阅上面的注意事项。</td>
+	<td style="text-align:left;">可变，取决于纹理中内容的复杂程度。</td>
+	<td style="text-align:left;">Android、iOS、tvOS。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB Compressed ETC2</td>
+	<td style="text-align:left;">压缩 RGB 纹理。</td>
+	<td style="text-align:left;">32KB（4 位/像素）</td>
+	<td style="text-align:left;">Android (OpenGL ES 3.0) <br>注意：在不支持 ETC2 的 Android 平台上，纹理在运行时解压缩为 Build Settings 中的 <strong>ETC2 fallback</strong> 指定的格式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA Compressed ETC2</td>
+	<td style="text-align:left;">压缩 RGBA 纹理。这是适用于 Android 项目的带有 Alpha 通道的纹理的默认纹理压缩格式。</td>
+	<td style="text-align:left;">64KB（8 位/像素）</td>
+	<td style="text-align:left;">Android (OpenGL ES 3.0)、iOS (OpenGL ES 3.0)、tvOS (OpenGL ES 3.0) <br><br>注意：在不支持 ETC2 的 iOS 和 tvOS 设备上，纹理在运行时解压缩为 RGBA32。在不支持 ETC2 的 Android 平台上，纹理在运行时解压缩为 Build Settings 中的 <strong>ETC2 fallback</strong> 指定的格式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA Crunched ETC2</td>
+	<td style="text-align:left;">与 RGBA Compressed ETC2 类似，但使用 Crunch 压缩方式进行压缩。有关 Crunch 压缩的更多信息，请参阅上面的注意事项。</td>
+	<td style="text-align:left;">可变，取决于纹理中内容的复杂程度。</td>
+	<td style="text-align:left;">Android (OpenGL ES 3.0)、iOS (OpenGL ES 3.0)、tvOS (OpenGL ES 3.0) <br><br>注意：在不支持 ETC2 的 iOS 和 tvOS 设备上，纹理在运行时解压缩为 RGBA32。在不支持 ETC2 的 Android 平台上，纹理在运行时解压缩为 Build Settings 中的 <strong>ETC2 fallback</strong> 指定的格式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB(A) Compressed ASTC</td>
+	<td style="text-align:left;">Variable block size compressed RGB or RGBA Texture.</td>
+	<td style="text-align:left;">12x12：0.89 位/像素（256x256 纹理的大小为 7.56KB）<br>10x10：1.28 位/像素（256x256 纹理的大小为 10.56KB）<br>8x8：2 位/像素（256x256 纹理的大小为 16KB）；<br>6x6：3.56 位/像素（256x256 纹理的大小为 28.89KB）<br>5x5：5.12 位/像素（256x256 纹理的大小为 42.25KB）<br>4x4：8 位/像素（256x256 纹理的大小为 64KB）</td>
+	<td style="text-align:left;">tvOS（所有）、iOS (A8)、Android（PowerVR 6XT、Mali T600 系列、Adreno 400 系列、Tegra K1）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB(A) Compressed ASTC HDR</td>
+	<td style="text-align:left;">Variable block size compressed unsigned float/High Dynamic Range (HDR) RGB or RGBA Texture.</td>
+	<td style="text-align:left;">12x12：0.89 位/像素（256x256 纹理的大小为 7744 字节）<br>10x10：1.28 位/像素（256x256 纹理的大小为 10816 字节）<br>8x8：2 位/像素（256x256 纹理的大小为 16KB）；<br>6x6：3.56 位/像素（256x256 纹理的大小为 29584 字节）<br>5x5：5.12 位/像素（256x256 纹理的大小为 43264 字节）<br>4x4：8 位/像素（256x256 纹理的大小为 64KB）</td>
+	<td style="text-align:left;">Android (Mali T700 series, Adreno 500 series).<br><br>Note: On devices that don’t support ASTC HDR, the texture is uncompressed at run time to RGB9e5, losing the alpha channel.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB Compressed PVRTC 2 位</td>
+	<td style="text-align:left;">高压缩 RGB 纹理。质量低，但较小，因此提高了性能。</td>
+	<td style="text-align:left;">16KB（2 位/像素）</td>
+	<td style="text-align:left;">Android (PowerVR)、iOS、tvOS。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA Compressed PVRTC 2 位</td>
+	<td style="text-align:left;">高压缩 RGBA 纹理。质量低，但较小，因此提高了性能。</td>
+	<td style="text-align:left;">16KB（2 位/像素）</td>
+	<td style="text-align:left;">Android (PowerVR)、iOS、tvOS。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB Compressed PVRTC 4 位</td>
+	<td style="text-align:left;">压缩 RGB 纹理。高质量纹理，尤其是颜色数据，但可能需要很长时间压缩。</td>
+	<td style="text-align:left;">32KB（4 位/像素）</td>
+	<td style="text-align:left;">Android (PowerVR)、iOS、tvOS。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA Compressed PVRTC 4 位</td>
+	<td style="text-align:left;">压缩 RGB 纹理。高质量纹理，尤其是颜色数据，但可能需要很长时间压缩。</td>
+	<td style="text-align:left;">32KB（4 位/像素）</td>
+	<td style="text-align:left;">Android (PowerVR)、iOS、tvOS。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB Compressed ATC</td>
+	<td style="text-align:left;">压缩 RGB 纹理。</td>
+	<td style="text-align:left;">32KB（4 位/像素）</td>
+	<td style="text-align:left;">Android (Qualcomm - Adreno)、iOS、tvOS。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA Compressed ATC</td>
+	<td style="text-align:left;">压缩 RGBA 纹理。</td>
+	<td style="text-align:left;">64KB（8 位/像素）</td>
+	<td style="text-align:left;">Android (Qualcomm - Adreno)、iOS、tvOS。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB 16 位</td>
+	<td style="text-align:left;">65,000 种颜色，没有 Alpha。使用比压缩格式更多的内存，但可能更适合没有渐变的 UI 或清晰纹理。</td>
+	<td style="text-align:left;">128KB（16 位/像素）</td>
+	<td style="text-align:left;">所有平台。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGB 24 位</td>
+	<td style="text-align:left;">真实色彩，但没有 Alpha。</td>
+	<td style="text-align:left;">192KB（24 位/像素）</td>
+	<td style="text-align:left;">所有平台</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Alpha 8</td>
+	<td style="text-align:left;">高质量 Alpha 通道，但没有任何颜色。</td>
+	<td style="text-align:left;">64KB（8 位/像素）</td>
+	<td style="text-align:left;">所有平台。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA 16 位</td>
+	<td style="text-align:left;">低质量真实色彩。这是具有 Alpha 通道的纹理的默认压缩格式。</td>
+	<td style="text-align:left;">128KB（16 位/像素）</td>
+	<td style="text-align:left;">所有平台。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RGBA 32 位</td>
+	<td style="text-align:left;">真实色彩，并有 Alpha。这是具有 Alpha 通道的纹理的最高质量压缩格式。</td>
+	<td style="text-align:left;">256KB（32 位/像素）</td>
+	<td style="text-align:left;">所有平台。</td>
+</tr>
+</tbody>
+</table>
+
+<p>可从 DDS 文件导入纹理，但仅支持 DXT、BC 压缩格式或未压缩像素格式。</p>
+
+<h3>关于 Android 的注意事项</h3>
+
+<p>除非针对特定硬件（例如 Tegra），否则 ETC2 压缩是 Android 最高效的选项，可提供最佳的质量与文件大小（及相关的内存大小要求）平衡。如果需要 Alpha 通道，可将其存储在外部，并仍能受益于较低的纹理文件大小。</p>
+
+<p>可对具有 <a href="HOWTO-alphamaps.html">Alpha 通道</a>的纹理使用 ETC1 格式，但仅当构建目标为 Android 且纹理放置在图集上（通过指定打包标签）时才适用。要启用此功能，请勾选纹理的 <strong>Compress using ETC1</strong> 复选框。Unity 会将生成的图集拆分为两个纹理，每个纹理都没有 Alpha 通道，然后将它们组合在渲染管线的最后部分中。</p>
+
+<p>要在纹理中存储 Alpha 通道，请使用 RGBA16 位压缩，这是所有硬件供应商都支持的格式。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2019–04–24 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2017.2/Documentation/Manual/30_search.html?q=newin20172">2017.2</a> 中添加了适用于 WebGL 的线性渲染 <span class="search-words">NewIn20172</span></span></p></li>
+<li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2017.3/Documentation/Manual/30_search.html?q=newin20173">2017.3</a> 版中更新了 Crunch 压缩格式 <span class="search-words">NewIn20173</span></span></p></li>
+<li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2017.3/Documentation/Manual/30_search.html?q=newin20173">2017.3</a> 中停止了 Tizen 和三星电视 (Samsung TV) 支持 <span class="search-words">NewIn20173</span></span></p></li>
+<li><p><span class="page-history">ASTC HDR texture compression for Android added in <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/30_search.html?q=newin20191">2019.1</a> <span class="search-words">NewIn20191</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="TextureTypes.html"></a></span><div class="tip">纹理类型</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-RenderTexture.html"></a></span><div class="tip">渲染纹理</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

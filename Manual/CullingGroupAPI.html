@@ -1,0 +1,279 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="CullingGroup API - Unity Manual">
+<title>CullingGroup API - Unity Manual</title>
+<meta name="description" content="CullingGroup 提供一种将系统集成到 Unity 剔除和 LOD 管线中的方法。这可用于许多目的；例如：">
+<meta property="og:description" content="CullingGroup 提供一种将系统集成到 Unity 剔除和 LOD 管线中的方法。这可用于许多目的；例如：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'CullingGroupAPI';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/CullingGroupAPI.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/CullingGroupAPI.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/CullingGroupAPI.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/CullingGroupAPI.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/CullingGroupAPI.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/CullingGroupAPI.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/CullingGroupAPI.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/CullingGroupAPI.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/CullingGroupAPI.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/CullingGroupAPI.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/CullingGroupAPI.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/CullingGroupAPI.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/CullingGroupAPI.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/CullingGroupAPI.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/CullingGroupAPI.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/CullingGroupAPI.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/CullingGroupAPI.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/CullingGroupAPI.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/CullingGroupAPI.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/CullingGroupAPI.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/CullingGroupAPI.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/CullingGroupAPI.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/CullingGroupAPI.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/CullingGroupAPI.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li>高级渲染功能</li>
+<li>CullingGroup API</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="GraphicsEmulation.html"></a></span><div class="tip">图形硬件功能和仿真</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AsyncTextureUpload.html"></a></span><div class="tip">异步纹理上传</div>
+</div>
+</div></div>
+<h1>CullingGroup API</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>CullingGroup 提供一种将系统集成到 Unity 剔除和 LOD 管线中的方法。这可用于许多目的；例如：</p>
+
+<ul>
+<li>模拟一群人，同时只为现在实际可见的角色提供完整的游戏对象</li>
+<li>构建由 Graphics.DrawProcedural 驱动的 GPU 粒子系统，但是跳过对墙背后的粒子系统的渲染</li>
+<li>跟踪不在摄像机视野范围内的生成点，以便在生成敌人时不让玩家看到他们“弹入”视图</li>
+<li>将角色从近处的全质量动画和 AI 计算切换到远处更低质量、更低成本的行为</li>
+<li>在场景中设置 10,000 个标记点，并在玩家进入其中任何标记点的 1m 范围内时有效发现这一状态</li>
+</ul>
+
+<p>API 的工作原理是让您提供一系列包围球体。然后计算这些球体相对于特定摄像机的可见性，以及可视为 LOD 级别号的“距离带”值。</p>
+
+<h2>CullingGroup 入门</h2>
+
+<p>没有用于处理 CullingGroup 的组件或可视化工具；只能通过脚本访问它们。</p>
+
+<p>可使用“new”运算符来构造 CullingGroup：</p>
+
+<pre><code>CullingGroup group = new CullingGroup();
+</code></pre>
+
+<p>要让 CullingGroup 执行可见性计算，请指定其应使用的摄像机：</p>
+
+<pre><code>group.targetCamera = Camera.main;
+</code></pre>
+
+<p>使用球体的位置和半径来创建并填充 BoundingSphere 结构数组，并将其与实际位于数组中的球体数一起传递给 SetBoundingSpheres。球体数量无需与数组的长度相同；事实上，我们建议创建一个足够大的数组来保存您一次拥有的最多球体（即使您最初在数组中实际拥有的球体数量非常少）。这样就可以避免在添加或删除球体时调整数组大小，这类操作的成本很高。</p>
+
+<pre><code>BoundingSphere[] spheres = new BoundingSphere[1000];
+spheres[0] = new BoundingSphere(Vector3.zero, 1f);
+group.SetBoundingSpheres(spheres);
+group.SetBoundingSphereCount(1);
+</code></pre>
+
+<p>此时，CullingGroup 将开始计算每帧单个球体的可见性。</p>
+
+<p>要清理 CullingGroup 并释放它使用的所有内存，请通过标准的 .NET IDisposable 机制来处置 CullingGroup：</p>
+
+<pre><code>group.Dispose();
+group = null;
+</code></pre>
+
+<h3>通过 onStateChanged 回调来接收结果</h3>
+
+<p>为响应球体而更改其可见性或距离状态的最有效方法是使用 onStateChanged 回调字段。将其设置为一个函数，该函数以 CullingGroupEvent 结构作为参数；对于已改变状态的每个球体，将在剔除完成后调用此函数。CullingGroupEvent 结构的成员会告诉您球体的先前状态和新状态。</p>
+
+<pre><code>group.onStateChanged = StateChangedMethod;
+
+private void StateChangedMethod(CullingGroupEvent evt)
+{
+    if(evt.hasBecomeVisible)
+        Debug.LogFormat("Sphere {0} has become visible!", evt.index);
+    if(evt.hasBecomeInvisible)
+        Debug.LogFormat("Sphere {0} has become invisible!", evt.index);
+}
+</code></pre>
+
+<h3>通过 CullingGroup 查询 API 来接收结果</h3>
+
+<p>除了 onStateChanged 委托之外，CullingGroup 还提供一个 API，用于检索包围球体数组中任何球体的最新可见性和距离结果。要检查单个球体的状态，请使用 IsVisible 和 GetDistance 方法：</p>
+
+<pre><code>bool sphereIsVisible = group.IsVisible(0);
+int sphereDistanceBand = group.GetDistance(0);
+</code></pre>
+
+<p>要检查多个球体的状态，可使用 QueryIndices 方法。此方法将扫描连续范围的球体以查找与指定可见性或距离状态相匹配的球体。</p>
+
+<pre><code>// 分配一个数组来保存生成的球体索引 - 数组的大小决定每次调用检查的最大球体数
+int[] resultIndices = new int[1000];
+// 还要设置一个 int 来存储已放入数组的实际结果数
+int numResults = 0;
+
+// 查找所有可见的球体
+numResults = group.QueryIndices(true, resultIndices, 0);
+// 查找位于距离带 1 中的所有球体
+numResults = group.QueryIndices(1, resultIndices, 0);
+// 查找隐藏在距离带 2 中的所有球体，跳过前 100 个球体
+numResults = group.QueryIndices(false, 2, resultIndices, 100);
+</code></pre>
+
+<p>请记住，仅在 CullingGroup 使用的摄像机实际执行剔除时，才更新查询 API 检索的信息。</p>
+
+<h2>CullingGroup API 最佳实践</h2>
+
+<p>在考虑如何将 CullingGroup 应用于项目时，请考虑 CullingGroup 设计的以下方面。</p>
+
+<h3>利用可见性</h3>
+
+<p>CullingGroup 为其计算可见性的所有体积都由包围球体定义；实际上，由位置（球体中心）和半径值定义。出于性能原因，不支持其他包围形状。在实践中，这意味着您将定义一个球体来完全包围希望剔除的对象。如果需要更紧密拟合，请考虑使用多个球体来覆盖对象的不同部分，并根据所有球体的可见性状态做出决定。</p>
+
+<p>为了评估可见性，CullingGroup 需要知道应该从哪个摄像机可见性开始计算。目前，单个 CullingGroup 仅支持单个摄像机。如果需要评估多个摄像机的可见性，应为每个摄像机使用一个 CullingGroup 并合并结果。</p>
+
+<p>CullingGroup 将仅基于视锥体剔除和静态遮挡剔除来计算可见性。它不会将动态对象视为潜在遮挡物。</p>
+
+<h3>利用距离</h3>
+
+<p>CullingGroup 能够计算某个参考点（例如，摄像机或玩家的位置）与每个球体上最近点之间的距离。此距离值不会直接提供给您，而是使用您提供的一组阈值来量化，以便计算离散的“距离带”整数结果。目的是将这些距离带解读为“近距离”、“中距离”、“远距离”等。</p>
+
+<p>一个对象从一个区域移到另一个区域时，CullingGroup 将提供回调，让您有机会进行某些操作，例如将该对象的行为更改为 CPU 使用强度较低的操作。</p>
+
+<p>超出最后一个距离的任何球体都将被视为不可见，这使您可以轻松构建一个剔除实现来完全停用非常远的对象。如果不想要此行为，只需将最终阈值设置为无限远的距离。</p>
+
+<p>每个 CullingGroup 仅支持一个参考点。</p>
+
+<h3>性能和设计</h3>
+
+<p>CullingGroup API 不允许您对场景进行更改后立即请求包围球体的新可见性状态。出于性能原因，CullingGroup 仅在执行整个摄像机剔除期间计算新的可见性信息；此时，您可以通过回调或 CullingGroup 查询 API 来获取信息。实际上，这意味着您应该以异步方式处理 CullingGroup。</p>
+
+<p>提供给 CullingGroup 的包围球体数组将由 CullingGroup 引用，而不是复制。这意味着您应该保留对传递给 SetBoundingSpheres 的数组的引用，并可修改此数组的内容，而无需再次调用 SetBoundingSpheres。如果需要多个 CullingGroup 来计算同一组球体的可见性和距离（例如，对于多个摄像机），那么让所有 CullingGroup 共享相同的包围球体数组实例会很高效。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="GraphicsEmulation.html"></a></span><div class="tip">图形硬件功能和仿真</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AsyncTextureUpload.html"></a></span><div class="tip">异步纹理上传</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

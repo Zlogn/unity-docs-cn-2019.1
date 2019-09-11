@@ -1,0 +1,263 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="着色器资源 - Unity Manual">
+<title>着色器资源 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Shaders/Inspector-Shader.png">
+<meta name="description" content="着色器是包含显卡执行代码和指令的资源。
+材质将引用着色器并设置其参数（纹理、颜色等）。">
+<meta property="og:description" content="着色器是包含显卡执行代码和指令的资源。
+材质将引用着色器并设置其参数（纹理、颜色等）。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-Shader';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-Shader.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-Shader.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-Shader.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-Shader.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-Shader.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-Shader.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-Shader.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-Shader.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-Shader.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-Shader.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-Shader.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-Shader.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-Shader.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-Shader.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-Shader.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-Shader.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-Shader.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-Shader.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-Shader.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-Shader.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-Shader.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-Shader.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-Shader.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-Shader.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="SL-Reference.html">着色器参考</a></li>
+<li>着色器资源</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-Other.html"></a></span><div class="tip">ShaderLab：其他命令</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-AdvancedTopics.html"></a></span><div class="tip">高级 ShaderLab 主题</div>
+</div>
+</div></div>
+<h1>着色器资源</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>着色器是包含显卡执行代码和指令的资源。
+<a href="class-Material.html">材质</a>将引用着色器并设置其参数（纹理、颜色等）。</p>
+
+<p>Unity 包含一些在项目中始终可用的内置着色器（例如，
+<a href="shader-StandardShader.html">标准着色器</a>）。您也可以<a href="ShadersOverview.html">编写自己的着色器</a>并应用<a href="PostProcessingOverview.html">后期处理效果</a>。</p>
+
+<h2>创建新着色器</h2>
+
+<p>要创建新着色器，请从主菜单或 <strong>Project 视图__上下文菜单中
+选择 </strong>Assets__ &gt; <strong>Create</strong> &gt; <strong>Shader</strong>。着色器是
+类似于 C# 脚本的文本文件，以 Cg/HLSL 和 ShaderLab 语言的组合编写而成
+（请参阅<a href="ShadersOverview.html">编写着色器</a>页面以了解详细信息）。</p>
+
+<figure>
+<img src="../uploads/Shaders/Inspector-Shader.png" alt="着色器检视面板 (Shader Inspector)。">
+<figcaption>着色器检视面板 (Shader Inspector)。</figcaption>
+</figure>
+
+<h3>着色器导入设置</h3>
+
+<p>在此检视面板部分可为着色器指定默认纹理。每当使用
+此着色器创建新<a href="class-Material.html">材质</a>时，都会自动分配
+这些纹理。</p>
+
+<h3>着色器检视面板</h3>
+
+<p>着色器检视面板显示有关着色器的基本信息（主要是<a href="SL-SubShaderTags.html">着色器标签</a>），
+并允许编译和检查低级编译代码。</p>
+
+<p>对于<a href="SL-SurfaceShaders.html">表面着色器 (Surface Shader)</a>，__Show generated code__
+按钮将显示 Unity 生成的用于处理光照和阴影的所有代码。如果确实想要
+自定义生成的代码，只需将其全部复制并粘贴回原始着色器文件
+并开始调整即可。</p>
+
+<figure>
+<img src="../uploads/Shaders/Inspector-ShaderCompilePopup.png" alt="着色器编译弹出菜单。">
+<figcaption>着色器编译弹出菜单。</figcaption>
+</figure>
+
+<p><strong>Compile and show code</strong> 按钮的弹出菜单可检查选定平台
+最终编译的着色器代码（例如 Direct3D9 上的程序集，或适用于 OpenGL ES 的
+低级优化 GLSL）。此功能在优化着色器性能时非常有用；通常情况下，您会想知道最后在此处生成了
+多少低级指令。</p>
+
+<p>生成的低级代码可用于粘贴到 GPU 着色器性能分析工具（如
+<a href="http://developer.amd.com/tools-and-sdks/graphics-development/gpu-shaderanalyzer/">AMD GPU ShaderAnalyzer</a>
+或 <a href="http://community.imgtec.com/developers/powervr/tools/pvrshadereditor/">PVRShaderEditor</a>）。</p>
+
+<h2>着色器编译详细信息</h2>
+
+<p>在着色器导入时，Unity 不会编译整个着色器。这是因为大多数着色器
+内部都有很多<a href="SL-MultipleProgramVariants.html">变体</a>，因此为所有可能的平台编译所有这些变体
+将需要很长时间。实际的操作过程为：</p>
+
+<ul>
+<li>在导入时，仅对着色器进行最低限度的处理（表面着色器生成等）。</li>
+<li>只在需要时实际编译着色器变体。</li>
+<li>不会在导入时执行编译 100–10000 个内部着色器的典型工作，此过程通常最终只编译少数着色器。</li>
+</ul>
+
+<p>在播放器构建时，所有“尚未编译”的着色器变体都将被编译，因此即使 Editor 不会使用这些着色器变体，它们也会存在于游戏数据中。</p>
+
+<p>但是，这确实意味着着色器可能具有在着色器导入时未检测到的
+错误。例如，正在使用 Direct3D 11 运行 Editor，但如果着色器是针对 OpenGL 进行编译的，
+则会出错。此外，还可能着色器的某些<a href="SL-MultipleProgramVariants.html">变体</a>不符合着色器模型 2.0
+指令限制等。如果 Editor 需要了解这些错误，它们将显示在检视面板中；但是，为了检查错误，手动为所需平台
+完全编译着色器也是一种很好的做法。使用着色器检视面板
+中的 <strong>Compile and show code</strong> 弹出菜单即可执行此操作。</p>
+
+<p>着色器编译是使用名为 <code>UnityShaderCompiler</code> 的后台进程执行的，该进程由 Unity
+在需要编译着色器时即时启动。可启动多个编译器进程（通常在机器中每个 CPU
+核心对应一个），这样在播放器构建时就可以并行完成着色器编译。当
+Editor 不编译着色器时，编译器进程不执行任何操作，也不消耗计算机资源，
+所以不必担心它们。Unity Editor 退出时也将关闭这些进程。</p>
+
+<p>各个着色器变体编译结果将缓存在项目中的 <code>Library/ShaderCache</code> 文件夹下。
+这意味着 100% 相同的着色器或其代码片段将重用以前编译的结果。此外还
+意味着，如果有许多经常更改的着色器，着色器缓存文件夹可能会变得
+非常大。删除文件夹内容通常是安全的；只会导致重新编译着色器变体。</p>
+
+<h2>阅读更多信息</h2>
+
+<ul>
+<li>
+<a href="class-Material.html">材质</a>资源。</li>
+<li>
+<a href="ShadersOverview.html">编写着色器概述</a>。</li>
+<li>
+<a href="SL-Reference.html">着色器参考</a>。</li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-Other.html"></a></span><div class="tip">ShaderLab：其他命令</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-AdvancedTopics.html"></a></span><div class="tip">高级 ShaderLab 主题</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

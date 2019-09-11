@@ -1,0 +1,213 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="WebGL 网络 - Unity Manual">
+<title>WebGL 网络 - Unity Manual</title>
+<meta name="description" content="由于存在安全隐患，JavaScript 代码无法直接访问 IP 套接字来实现网络连接。因此，.NET 网络类（即 System.Net 命名空间中的所有内容，具体而言就是 System.Net.Sockets）在 WebGL 中不起作用。Unity 旧有的 UnityEngine.Network* 类也是如此，以 WebGL 为构建目标时无法使用这些类。">
+<meta property="og:description" content="由于存在安全隐患，JavaScript 代码无法直接访问 IP 套接字来实现网络连接。因此，.NET 网络类（即 System.Net 命名空间中的所有内容，具体而言就是 System.Net.Sockets）在 WebGL 中不起作用。Unity 旧有的 UnityEngine.Network* 类也是如此，以 WebGL 为构建目标时无法使用这些类。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'webgl-networking';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/webgl-networking.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/webgl-networking.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/webgl-networking.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/webgl-networking.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/webgl-networking.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/webgl-networking.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/webgl-networking.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/webgl-networking.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/webgl-networking.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/webgl-networking.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/webgl-networking.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/webgl-networking.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/webgl-networking.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/webgl-networking.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/webgl-networking.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/webgl-networking.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/webgl-networking.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/webgl-networking.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/webgl-networking.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/webgl-networking.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/webgl-networking.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/webgl-networking.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/webgl-networking.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/webgl-networking.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
+<li><a href="webgl.html">WebGL</a></li>
+<li><a href="webgl-gettingstarted.html">WebGL 开发入门</a></li>
+<li>WebGL 网络</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="webgl-graphics.html"></a></span><div class="tip">WebGL 图形</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="webgl-audio.html"></a></span><div class="tip">使用 WebGL 中的音频</div>
+</div>
+</div></div>
+<h1>WebGL 网络</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>无法直接访问套接字</h2>
+
+<p>由于存在安全隐患，JavaScript 代码无法直接访问 IP 套接字来实现网络连接。因此，.NET 网络类（即 <code>System.Net</code> 命名空间中的所有内容，具体而言就是 <code>System.Net.Sockets</code>）在 WebGL 中不起作用。Unity 旧有的 <code>UnityEngine.Network*</code> 类也是如此，以 WebGL 为构建目标时无法使用这些类。</p>
+
+<p>如果需要在 WebGL 中使用网络，当前可选择的做法是使用 Unity 中的 <code>WWW</code> 或 <code>UnityWebRequest</code> 类或使用支持 WebGL 的新型 <a href="UNetOverview.html">Unity 网络</a>功能，或者使用 JavaScript 中的 WebSockets 或 WebRTC 来实现您自己的网络。</p>
+
+<h2>使用 WebGL 中的 WWW 或 WebRequest 类</h2>
+
+<p>WebGL 支持 <strong><a href="../ScriptReference/WWW.html">WWW</a></strong> 和 <strong><a href="../ScriptReference/Networking.UnityWebRequest.html">UnityWebRequest</a></strong> 类。这些类是使用 JavaScript 中的 <code>XMLHttpRequest</code> 类实现的（使用浏览器来处理 WWW 请求）。这种情况下对访问跨域资源施加了一些安全限制。基本上，任何 WWW 请求若是发送到与托管 WebGL 内容的服务器不同的服务器，都需要由您尝试访问的服务器进行授权。为了在 WebGL 中访问跨域 WWW 资源，您尝试访问的服务器需要使用 CORS 对此访问进行授权。</p>
+
+<p>如果您尝试使用 <code>WWW</code> 或 <code>UnityWebReqest</code> 来访问内容，但远程服务器未正确设置或配置 CORS，浏览器控制台中将显示如下错误：</p>
+
+<pre><code>Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at http://myserver.com/.This can be fixed by moving the resource to the same domain or enabling CORS.
+</code></pre>
+
+<p>CORS 表示跨源资源共享 (Cross-Origin Resource Sharing)，请参阅<a href="http://www.w3.org/TR/cors/">此处</a>的说明。基本原理是，服务器需要向发出的 http 响应中添加一些 <code>Access-Control</code> 标头，从而告诉浏览器允许网页访问服务器上的内容。下面的标头设置示例将会允许 Unity WebGL 从任何源点访问 Web 服务器上的资源，此处采用了公共请求标头并使用 http <code>GET</code>、<code>POST</code> 或 <code>OPTIONS</code> 方法：</p>
+
+<pre><code>"Access-Control-Allow-Credentials": "true",
+"Access-Control-Allow-Headers": "Accept, X-Access-Token, X-Application-Name, X-Request-Sent-Time",
+"Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+"Access-Control-Allow-Origin": "*",
+</code></pre>
+
+<p>请注意，根据 CORS 规范 <a href="http://www.w3.org/TR/cors/#handling-a-response-to-a-cross-origin-request">7.1.1</a>，WWW.responseHeaders 的范围仅限于实际响应标头的子集。</p>
+
+<p>另外，请注意，XMLHttpRequest 不允许数据流，因此 WebGL 上的 WWW 类只会在下载完成后才处理数据（所以，和其他平台一样，在下载时不能对 AssestBundle 进行解压缩和加载）。</p>
+
+<h3>不要阻止 WWW 或 WebRequest 下载</h3>
+
+<p>不要使用如下所示的代码阻止 WWW 或 WebRequest 下载：</p>
+
+<pre><code>while(!www.isDone) {}
+</code></pre>
+
+<p>阻止 WWW 或 WebRequest 下载的做法在 Unity WebGL 上不起作用。因为 WebGL 采用单线程机制，并且由于 JavaScript 中的 <code>XMLHttpRequest</code> 类是异步的，所以除非您将控制权交回给浏览器，否则下载永远不会完成；相反，您的内容将发生死锁。取而代之的做法是使用<a href="Coroutines.html">协程</a>和 <code>yield</code> 语句等待下载完成。</p>
+
+<h2>使用 Unity 网络</h2>
+
+<p><a href="UNetOverview.html">Unity 网络</a>通过 WebSockets 协议实现通信，从而支持 WebGL。请参阅 <strong><a href="../ScriptReference/Networking.NetworkManager-useWebSockets.html">Networking.NetworkManager.useWebSockets</a></strong>。</p>
+
+<h2>使用 JavaScript 中的 Web Sockets 或 WebRTC</h2>
+
+<p>如上所述，在 WebGL 中无法直接访问 IP 套接字。但是，如果需要 WWW 类之外的网络功能，可使用 Web Sockets 或 WebRTC，这两种网络协议都受到浏览器的支持。Web Sockets 具有更广泛的支持，但 WebRTC 允许浏览器之间的 p2p 连接以及不可靠连接。这些协议均尚未通过 Unity 中的内置 API 公开，但可以使用 <a href="webgl-interactingwithbrowserscripting.html">JavaScript 插件</a>来实现此目的。<a href="https://www.assetstore.unity3d.com/en/#!/content/38367e">AssetStore</a> 上提供了一个在 Unity WebGL 中实现 WebSocket 网络的插件示例。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="webgl-graphics.html"></a></span><div class="tip">WebGL 图形</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="webgl-audio.html"></a></span><div class="tip">使用 WebGL 中的音频</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

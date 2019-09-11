@@ -1,0 +1,398 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Package manifest  - Unity Manual">
+<title>Package manifest  - Unity Manual</title>
+<meta name="description" content="Unity uses the package manifest file (package.json) to manage information about a specific version of a specific package. The package manifest is always at the root of the package and contains crucial information about the package, such as its registered name and version number. It also defines useful information to communicate to the user, such as a user-friendly name that appears in the UI and a brief description of the package, as well as the earliest version of Unity the package is compatible with.">
+<meta property="og:description" content="Unity uses the package manifest file (package.json) to manage information about a specific version of a specific package. The package manifest is always at the root of the package and contains crucial information about the package, such as its registered name and version number. It also defines useful information to communicate to the user, such as a user-friendly name that appears in the UI and a brief description of the package, as well as the earliest version of Unity the package is compatible with.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'upm-manifestPkg';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/upm-manifestPkg.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/upm-manifestPkg.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/upm-manifestPkg.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/upm-manifestPkg.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/upm-manifestPkg.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/upm-manifestPkg.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/upm-manifestPkg.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/upm-manifestPkg.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/upm-manifestPkg.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/upm-manifestPkg.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/upm-manifestPkg.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/upm-manifestPkg.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/upm-manifestPkg.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/upm-manifestPkg.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/upm-manifestPkg.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/upm-manifestPkg.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/upm-manifestPkg.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/upm-manifestPkg.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/upm-manifestPkg.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/upm-manifestPkg.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/upm-manifestPkg.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/upm-manifestPkg.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/upm-manifestPkg.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/upm-manifestPkg.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="AdvancedDevelopment.html">高级开发</a></li>
+<li><a href="CustomPackages.html">Custom packages</a></li>
+<li>Package manifest </li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="cus-tests.html"></a></span><div class="tip">Adding tests to a package</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="cus-asmdef.html"></a></span><div class="tip">Assembly definition and packages</div>
+</div>
+</div></div>
+<h1>Package manifest</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity uses the package manifest file (<code>package.json</code>) to manage information about a specific version of a specific package. The package manifest is always at the root of the package and contains crucial information about the package, such as its registered name and version number. It also defines useful information to communicate to the user, such as a user-friendly name that appears in the UI and a brief description of the package, as well as the earliest version of Unity the package is compatible with.</p>
+
+<p>The package manifest uses the JSON (JavaScript Object Notation) syntax to describe what the package contains. The file’s format is similar to <a href="https://www.npmjs.com/">npm</a>’s <code>package.json</code> format, but uses different semantics for some of its attributes.</p>
+
+<p>The Package Manager reads this manifest to find out what the package contains, how to unpack its contents, and what information to show the user in the <a href="upm-ui.html">Packages window</a>. The manifest stores this information in a series of <a href="#required">required</a>, <a href="#mandatory">mandatory</a>, and <a href="#optional">optional</a> attributes.</p>
+
+<p><a name="required"></a></p>
+
+<h2>Required attributes</h2>
+
+<p>These attributes are required. If they are not present, either the registry refuses the package when it is published, or the Package Manager cannot fetch or load the package.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Attribute</strong></th>
+	<th style="text-align:left;"><strong>JSON Type</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">
+<a name="name"></a><strong>name</strong>
+</td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">The officially registered package name. This name must conform to the Unity Package Manager naming convention, which uses reverse domain name notation. <br><br>The name must:<br>- Start with <strong>com.&lt;company-name&gt;</strong>.<br>- Have a length of 50 characters or less to appear in the Editor; otherwise, 214 characters or less.<br>- Contain only lowercase letters, digits, hyphens (-), underscores (_), and periods (.) <br>- To indicate nested namespaces, suffix the namespace with an additional period. <br><br>For example, <strong>com.unity.timeline</strong> is the name of the package that implements <a href="TimelineSection.html">Timeline</a> in Unity. <br><br><strong>NOTE</strong>: This is a unique identifier, not the <a href="#displayName">user-friendly name</a> that appears in the list view on the Package Manager window.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<a name="version"></a><strong>version</strong>
+</td>
+	<td style="text-align:left;">string</td>
+	<td style="text-align:left;">The package version number (**’MAJOR.MINOR.PATCH“**). This value must respect <a href="http://semver.org/">semantic versioning</a>. For more information, see <a href="#pkg-ver">Package version</a>. <br><br>For example, ”3.2.1" indicates that this is the 3rd major release, the 2nd minor release, and the first patch.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="mandatory"></a></p>
+
+<h2>Mandatory attributes</h2>
+
+<p>These attributes are technically optional, and the Package Manager can still install them in a Projects even if they do not contain valid values or are missing. However, you should give these attributes values in order to make your package easily discoverable and provide package consumers with a better experience. </p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Attribute</strong></th>
+	<th style="text-align:left;"><strong>JSON Type</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">
+<a name="displayName"></a><strong>displayName</strong>
+</td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">A user-friendly name to appear in the Unity Editor (for example, in the Project Browser, the Package Manager window, etc.). <br><br>For example, <strong>Unity Timeline</strong>, <strong>ProBuilder</strong>, <strong>In App Purchasing</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<a name="description"></a><strong>description</strong>
+</td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">A brief description of the package. This is the text that appears in the <a href="upm-ui-details.html">details view</a> of the Packages window. Any <a href="https://en.wikipedia.org/wiki/UTF-8">UTF–8</a> character code is supported. This means that you can use special formatting character codes, such as line breaks (<strong>\n</strong>) and bullets (<strong>\u25AA</strong>).</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<a name="unity"></a><strong>unity</strong>
+</td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">Indicates the lowest Unity version the package is compatible with. If omitted, the package is considered compatible with all Unity versions. <br><br>The expected format is “<strong>&lt;MAJOR&gt;.&lt;MINOR&gt;</strong>” (for example, <strong>2018.3</strong>). To point to a specific patch, use the <a href="#unityRelease">unityRelease</a> attribute as well.<br><br><strong>NOTE</strong>: A package that is not compatible with Unity will not appear in the <a href="upm-ui.html">Packages window</a>.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="optional"></a></p>
+
+<h2>Optional attributes</h2>
+
+<p>These attributes are optional, meaning that you can omit them. However, if they are present, they must have a valid value. </p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Attribute</strong></th>
+	<th style="text-align:left;"><strong>JSON Type</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">
+<a name="unityRelease"></a><strong>unityRelease</strong>
+</td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">Part of a Unity version indicating the specific release of Unity that the package is compatible with. You can use this attribute when an updated package requires changes made during the Unity alpha/beta development cycle (for example, if it needs newly introduced APIs, or uses existing APIs that changed in a non-backward-compatible way without API Updater rules). <br><br>The expected format is “<strong>&lt;UPDATE&gt;&lt;RELEASE&gt;</strong>” (for example, <strong>0b4</strong>). <br><br><strong>NOTE</strong>: If you omit the <a href="#unity">unity</a> attribute, this attribute has no effect. <br><br>A package that is not compatible with Unity does not appear in the <a href="upm-ui.html">Packages window</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<a name="dependencies"></a><strong>dependencies</strong>
+</td>
+	<td style="text-align:left;">Object</td>
+	<td style="text-align:left;">A map of package dependencies. Keys are package names, and values are specific versions. They indicate other packages that this package depends on. <br><br><strong>NOTE</strong>: The Package Manager does not support range syntax, only <strong>SemVer</strong> versions.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>keywords</strong></td>
+	<td style="text-align:left;">Array of Strings</td>
+	<td style="text-align:left;">An array of keywords used by the Package Manager search APIs. This helps users find relevant packages.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>type</strong></td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">A constant that provides additional information to the Package Manager. <br><br><strong>Reserved for internal use.</strong>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>author</strong></td>
+	<td style="text-align:left;">Object</td>
+	<td style="text-align:left;">Author of the package. <br><br>This object contains one required field (<em>name</em>) and two optional fields (<em>email</em>) and (<em>url</em>). <br><br>For example: <br><code>{ "name" : "John Doe",</code><br>   <code>"email" : "john.doe@example.com",</code><br>   <code>"url" : "http://john.doe.example.com/"</code><br><code>}</code>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Package manifest example</h2>
+
+<pre><code class="json">{
+  "name": "com.unity.example",
+  "version": "1.2.3",
+  "displayName": "Package Example",
+  "description": "This is an example package",
+  "unity": "2019.1",
+  "unityRelease": "0b5",
+  "dependencies": {
+    "com.unity.some-package": "1.0.0",
+    "com.unity.other-package": "2.0.0"
+ },
+ "keywords": [
+    "keyword1",
+    "keyword2",
+    "keyword3"
+  ],
+  "author": {
+    "name": "Unity",
+    "email": "unity@example.com",
+    "url": "https://www.unity3d.com"
+  } 
+}
+
+</code></pre>
+
+<p><a name="pkg-ver"></a></p>
+
+<h2>Package version</h2>
+
+<p>Package versioning must follow <a href="http://semver.org/">Semantic Versioning</a> (SemVer). SemVer is a versioning strategy that allows package authors to provide information on the type of changes included in a given version, compared to the previous version, in a format that automated tools can use.</p>
+
+<p>SemVer expresses versions as <strong>MAJOR.MINOR.PATCH</strong>, and provides a definition for compatibility using these guidelines:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Increment this value:</strong></th>
+	<th style="text-align:left;"><strong>Under these conditions:</strong></th>
+	<th style="text-align:left;"><strong>Example:</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>MAJOR</strong></td>
+	<td style="text-align:left;">There is at least one breaking change. <br><br>Neither version of the package can be substituted for the other.</td>
+	<td style="text-align:left;">Versions 1.2.3 and 2.0.0 are not compatible and cannot be used interchangeably without any risk.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>MINOR</strong> (same <strong>MAJOR</strong> value)</td>
+	<td style="text-align:left;">The highest <strong>MINOR</strong> introduces functionality in a backward-compatible way.</td>
+	<td style="text-align:left;">Use Version 1.3.0 to fulfill a dependency on 1.2.0 because 1.3.0 is backward-compatible. <br><br> You can’t use 1.2.0 to fulfill a dependency on 1.3.0.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>PATCH</strong> (same <strong>MAJOR.MINOR</strong> values)</td>
+	<td style="text-align:left;">The highest <strong>PATCH</strong> introduces bug fixes without changing the API at all, in a backward-compatible way.</td>
+	<td style="text-align:left;">Versions 1.3.0 and 1.3.1 should be interchangeable because they have the same API, even though 1.3.1 contains a bug fix not present in 1.3.0.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Following these versioning practices allows the Package Manager to automatically solve conflicts (when possible), or upgrade packages to newer, backward-compatible versions.</p>
+
+<p>For more information, see the <a href="http://semver.org/">Semantic Versioning</a> web site.</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2019–04–11 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="cus-tests.html"></a></span><div class="tip">Adding tests to a package</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="cus-asmdef.html"></a></span><div class="tip">Assembly definition and packages</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

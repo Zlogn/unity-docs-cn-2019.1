@@ -1,0 +1,248 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Building Plugins for iOS - Unity Manual">
+<title>Building Plugins for iOS - Unity Manual</title>
+<meta name="description" content="This page describes Native Code Plugins for the iOS platform.">
+<meta property="og:description" content="This page describes Native Code Plugins for the iOS platform.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'PluginsForIOS';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PluginsForIOS.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PluginsForIOS.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PluginsForIOS.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PluginsForIOS.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PluginsForIOS.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PluginsForIOS.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PluginsForIOS.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PluginsForIOS.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PluginsForIOS.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PluginsForIOS.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/PluginsForIOS.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/PluginsForIOS.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/PluginsForIOS.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/PluginsForIOS.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PluginsForIOS.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PluginsForIOS.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PluginsForIOS.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PluginsForIOS.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PluginsForIOS.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PluginsForIOS.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PluginsForIOS.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PluginsForIOS.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PluginsForIOS.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PluginsForIOS.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
+<li><a href="iphone.html">iOS</a></li>
+<li>iOS 高级主题</li>
+<li>Building Plugins for iOS</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="iphone-Optimizing-Physics.html"></a></span><div class="tip">优化物理性能</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="iphone-Downloadable-Content.html"></a></span><div class="tip">Preparing your application for In-App Purchases (IAP)</div>
+</div>
+</div></div>
+<h1>Building Plugins for iOS</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This page describes <a href="Plugins.html">Native Code Plugins</a> for the iOS platform.</p>
+
+<h2>Building an application with a native plugin for iOS</h2>
+
+<ol>
+<li>
+<p>Define your extern method in the C# file as follows:</p>
+
+<pre><code>[DllImport ("__Internal")]
+private static extern float FooPluginFunction();
+</code></pre>
+</li>
+<li><p>Set the editor to the iOS build target.</p></li>
+<li><p>Add your native code source files to the generated Xcode project’s <em>Classes</em> folder (this folder is not overwritten when the project is updated, but don’t forget to backup your native code).</p></li>
+</ol>
+
+<p>If you are using C++ (.cpp) or Objective-C++ (.mm) to implement the plugin you must ensure the functions are declared with C linkage to avoid <a href="http://en.wikipedia.org/wiki/Name_mangling">name mangling issues</a>. </p>
+
+<pre><code>extern "C" {
+  float FooPluginFunction();
+}
+</code></pre>
+
+<p>Plugins written in C or Objective-C do not need this since these languages do not use name-mangling.</p>
+
+<h2>使用 C# 中的插件</h2>
+
+<p>iOS native plugins can be called only when deployed on the actual device, so it is recommended to wrap all native code methods with an additional C# code layer. This code should check Application.platform and call native methods only when the app is running on the device; dummy values can be returned when the app runs in the Editor. See the Bonjour browser sample application for an example.</p>
+
+<h2>Calling C# back from native code</h2>
+
+<p>Unity iOS supports limited native-to-managed callback functionality via <em>UnitySendMessage</em>:</p>
+
+<pre><code>UnitySendMessage("GameObjectName1", "MethodName1", "Message to send");
+</code></pre>
+
+<p>This function has three parameters: the name of the target GameObject, the script method to call on that object and the message string to pass to the called method.</p>
+
+<p>Known limitations:</p>
+
+<ol>
+<li>Only script methods that correspond to the following signature can be called from native code: <code>function MethodName(message:string)</code>
+</li>
+<li>Calls to <em>UnitySendMessage</em> are asynchronous and have a delay of one frame.</li>
+</ol>
+
+<h2>Automated plugin integration</h2>
+
+<p>Unity iOS supports automated plugin integration in a limited way. All files with extensions <strong>.a</strong>,<strong>.m</strong>,<strong>.mm</strong>,<strong>.c</strong>,<strong>.cpp</strong> located in the <em>Assets\Plugins\iOS</em> folder will be merged into the generated Xcode project automatically. However, merging is done by symlinking files from <em>Assets\Plugins\iOS</em> to the final destination, which might affect some workflows. The <strong>.h</strong> files are not included in the Xcode project tree, but they appear on the destination file system, thus allowing compilation of .m/.mm/.c/.cpp files.</p>
+
+<p><strong>Note:</strong> Subfolders are currently not supported.</p>
+
+<h2>iOS Tips</h2>
+
+<ol>
+<li>Managed-to-unmanaged calls are quite processor intensive on iOS. Try to avoid calling multiple native methods per frame.</li>
+<li>As mentioned above, wrap your native methods with an additional C# layer that calls native code on the device and returns dummy values in the Editor.</li>
+<li>String values returned from a native method should be UTF–8 encoded and allocated on the heap. Mono marshalling calls are free for strings like this.</li>
+<li>As mentioned above, the Xcode project’s <em>Classes</em> folder is a good place to store your native code because it is not overwritten when the project is updated.</li>
+<li>Another good place for storing native code is the <em>Assets</em> folder or one of its subfolders. Just add references from the Xcode project to the native code files: right click on the <em>Classes</em> subfolder and choose <strong>Add</strong> &gt; <strong>Existing files</strong>.</li>
+</ol>
+
+<h2>示例</h2>
+
+<h3>Bonjour Browser Sample</h3>
+
+<p>A simple example of the use of a native code plugin can be found <a href="../uploads/Examples/iPhoneNativeCodeSample.zip">here</a></p>
+
+<p>This sample demonstrates how objective-C code can be invoked
+from a Unity iOS application. This application implements a very simple Bonjour client.
+The application consists of a Unity iOS project (<em>Plugins\Bonjour.cs</em> is the C# interface to the native code, while <em>BonjourTest.cs</em> is the script that implements the application logic) and native code (<em>Assets\Code</em>) that should be added to the built Xcode project.</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–06–14 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="iphone-Optimizing-Physics.html"></a></span><div class="tip">优化物理性能</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="iphone-Downloadable-Content.html"></a></span><div class="tip">Preparing your application for In-App Purchases (IAP)</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="使用 Unity 开发者控制面板 (Developer Dashboard) 对 Unity Cloud Build 进行 Git 配置 - Unity Manual">
+<title>使用 Unity 开发者控制面板 (Developer Dashboard) 对 Unity Cloud Build 进行 Git 配置 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/dashgit_1.jpg">
+<meta name="description" content="Unity Cloud Build 支持存储在 Git 代码仓库中的项目。您的代码仓库可以托管在 GitHub、GitLab、Bitbucket 或私有服务器上。">
+<meta property="og:description" content="Unity Cloud Build 支持存储在 Git 代码仓库中的项目。您的代码仓库可以托管在 GitHub、GitLab、Bitbucket 或私有服务器上。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UnityCloudBuildVcsGit';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityCloudBuildVcsGit.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityCloudBuildVcsGit.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityCloudBuildVcsGit.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityCloudBuildVcsGit.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityCloudBuildVcsGit.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityCloudBuildVcsGit.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityCloudBuildVcsGit.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityCloudBuildVcsGit.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityCloudBuildVcsGit.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityCloudBuildVcsGit.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UnityCloudBuildVcsGit.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UnityCloudBuildVcsGit.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UnityCloudBuildVcsGit.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UnityCloudBuildVcsGit.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityCloudBuildVcsGit.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityCloudBuildVcsGit.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityCloudBuildVcsGit.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityCloudBuildVcsGit.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityCloudBuildVcsGit.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityCloudBuildVcsGit.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityCloudBuildVcsGit.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityCloudBuildVcsGit.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityCloudBuildVcsGit.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityCloudBuildVcsGit.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="UnityCloudBuild.html">Unity Cloud Build</a></li>
+<li><a href="UnityCloudBuildVcs.html">版本控制系统</a></li>
+<li>使用 Unity 开发者控制面板 (Developer Dashboard) 对 Unity Cloud Build 进行 Git 配置</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityCloudBuildVcs.html"></a></span><div class="tip">版本控制系统</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityCloudBuildVcsGitUsingEditor.html"></a></span><div class="tip">使用 Unity Editor 对 Unity Cloud Build 进行 Git 配置</div>
+</div>
+</div></div>
+<h1>使用 Unity 开发者控制面板 (Developer Dashboard) 对 Unity Cloud Build 进行 Git 配置</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity Cloud Build 支持存储在 Git 代码仓库中的项目。您的代码仓库可以托管在 <a href="https://github.com/">GitHub</a>、<a href="https://about.gitlab.com/">GitLab</a>、<a href="https://bitbucket.org/">Bitbucket</a> 或私有服务器上。</p>
+
+<p><strong>Note</strong>: This feature requires a subscription to Unity Teams Advanced. For more information, see the <a href="https://unity3d.com/teams">Unity Teams</a> page.</p>
+
+<p>本主题介绍：</p>
+
+<ul>
+<li><p><a href="#configure">在控制面板中配置 GIT</a></p></li>
+<li><p><a href="#private">使用私有代码仓库</a></p></li>
+<li><p><a href="#target">设置目标编译平台</a></p></li>
+<li><p><a href="#submodules">使用 Git 子模块</a></p></li>
+</ul>
+
+<p><a name="configure"></a> </p>
+
+<h2>在控制面板上配置 Git</h2>
+
+<p>To configure Cloud Build to build your Project from a GitHub repository:</p>
+
+<ol>
+<li>Sign in to the <a href="https://developer.cloud.unity3d.com/">Unity Developer Dashboard</a>.</li>
+<li>On the <strong>Projects</strong> page, select your Project.</li>
+<li>In the dashboard <strong>Overview</strong> window, on the <strong>Cloud Build</strong> tile, click <strong>OPEN CLOUD BUILD DASHBOARD</strong>.</li>
+<li>In the <strong>Build History</strong> window, click <strong>Set up Cloud Build</strong>.</li>
+</ol>
+
+<p>You can configure access to your repository using the following authorization protocols:</p>
+
+<ul>
+<li>OAuth (default)</li>
+<li>SSH</li>
+</ul>
+
+<p>To configure Cloud Build to use OAuth to access your repository:</p>
+
+<ol>
+<li>In the <strong>Source Control</strong> window, click the <strong>GitHub</strong>, <strong>Bitbucket</strong>, or <strong>GitLab</strong> tile.</li>
+<li>Authorize access to your account as appropriate for the selected source code control service.</li>
+<li>In the <strong>Select a Repository</strong> window, choose a repository from which to build the Project and then click the <strong>NEXT: TARGET SETUP</strong> button.</li>
+</ol>
+
+<p><strong>Note</strong>: If you are currently signed into the source code management service, Cloud Build uses your current credentials to retrieve the repository list. To configure a Project that retrieves a repository from a different account, sign out of the source code management service first, then configure the Project.</p>
+
+<p>For the next step, see the <a href="#target">Setting up a target build platform</a> section.</p>
+
+<p>To configure Cloud Build to use SSH to access your repository:</p>
+
+<ol>
+<li><p>In the <strong>Source Control</strong> window, click the <strong>Manual</strong> tab.</p></li>
+<li>
+<p>In the <strong>SCM URL</strong> field, enter the URL of your Git server in either of the following formats:</p>
+
+<ul>
+<li>非 SSL：host:port</li>
+<li>SSL：ssl:host:port</li>
+</ul>
+</li>
+<li><p>To connect to your repository, you must specify the URL to your Git server. For information on the format of the URL, see the <strong>URL syntax</strong> section below.</p></li>
+<li><p>From the <strong>SCM Type</strong> drop-down menu, select <strong>GIT</strong>.</p></li>
+<li><p>Click the <strong>NEXT: ACCESS</strong> button.</p></li>
+</ol>
+
+<p>When Unity Cloud Build connects to the hosting site, it automatically detects whether your repository is public or private. If your repository is public, Cloud Build automatically connects to it and you can skip to <a href="#target">Setting up a target build platform</a>. If your repository is private, see the <a href="#private">Using private repositories</a>section.</p>
+
+<p>Unity Cloud Build 连接到托管站点时，它会自动检测您的仓库是公开还是私有代码仓库。如果仓库是公开代码仓库，Cloud Build 自动与其连接，而您可以跳至<a href="#target">设置目标编译平台</a>。</p>
+
+<h3>URL 语法</h3>
+
+<p>要连接到代码仓库，必须指定 Git 服务器的 URL。您可以指定 URL 使用以下协议：</p>
+
+<ul>
+<li>HTTPS</li>
+<li>GIT</li>
+<li>SSH</li>
+</ul>
+
+<p>以下是 <a href="https://github.com/">GitHub</a>、<a href="https://bitbucket.org/">bitbucket</a> 和 <a href="https://about.gitlab.com/">GitLab</a> 的 URL 示例：</p>
+
+<ul>
+<li>https://github.com/youraccount/yourrepo</li>
+<li>git://github.com/youraccount/yourrepo.git</li>
+<li>git@bitbucket.org:youraccount/yourrepo.git</li>
+<li>git@gitlab.com:youracccount/yourrepo.git</li>
+</ul>
+
+<p><strong>注意</strong>：如果在私有服务器上托管 Git，必须使用 SSH 连接到代码仓库。</p>
+
+<p>请使用最适合您的格式。Unity Cloud Build 会自动将 URL 重写为所需的格式。</p>
+
+<p><a name="private"></a> </p>
+
+<h2>使用私有代码仓库</h2>
+
+<p>如果代码仓库为私有仓库，则 Cloud Build 必须使用 SSH 来连接它。Cloud Build 检测到代码仓库为私有仓库时，会显示 <strong>Grant us access to your source control</strong> 屏幕。</p>
+
+<figure>
+<img src="../uploads/Main/dashgit_1.jpg" alt="">
+</figure>
+
+<h3>在 GitHub 上设置 SSH 密钥</h3>
+
+<p>要在 GitHub 中将 SSH 密钥添加到项目中：</p>
+
+<p>1.登录 <a href="https://github.com/">GitHub</a>。</p>
+
+<p>2.在任何 GitHub 页面的右上角，单击您的个人资料照片，然后单击您的个人资料。</p>
+
+<p>3.在您的个人资料页面上，单击 __Repositories__，然后单击代码仓库的名称。</p>
+
+<p>4.在代码仓库中，单击 <strong>Settings</strong> 选项卡。</p>
+
+<p>5.在边栏中，单击 <strong>Deploy Keys__，然后单击 </strong>Add deploy key__ 按钮。</p>
+
+<p>6.在 <strong>Title</strong> 文本框中，键入用于识别此密钥的名称。</p>
+
+<p>7.在 <strong>Key</strong> 字段中，粘贴来自 <strong>Grant us access to your source control</strong> 窗口的公钥，然后单击 <strong>Add key </strong>按钮。</p>
+
+<p>有关部署密钥的更多信息，请参阅 GitHub 文档中的<a href="https://developer.github.com/v3/guides/managing-deploy-keys/">管理部署密钥 (Managing Deploy Keys)</a>。</p>
+
+<p>您还可以将 SSH 密钥添加到您的 GitHub 帐户，以便 Cloud Build 可访问帐户中的所有代码仓库。有关更多信息，请参阅 GitHub 文档中的<a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">将新的 SSH 密钥添加到您的 GitHub 帐户 (Adding a new SSH key to your GitHub account)</a>。</p>
+
+<h3>在 Bitbucket 上设置 SSH 密钥</h3>
+
+<p>要将 SSH 密钥添加到 Bitbucket 帐户：</p>
+
+<p>1.登录 <a href="https://bitbucket.org/">Bitbucket</a>。</p>
+
+<p>2.在页面左下角单击您的头像。</p>
+
+<p>3.单击 <strong>Bitbucket Settings</strong>。</p>
+
+<p>4.在 <strong>Settings</strong> 页面上的 <strong>SECURITY</strong> 部分中，单击 <strong>SSH Keys</strong>。</p>
+
+<p>5.在 <strong>SSH Keys</strong> 中，单击 <strong>Add key</strong> 按钮。</p>
+
+<p>6.在 <strong>Label</strong> 字段中，为密钥输入一个便于识别的名称（例如 __Unity Cloud Build__）。</p>
+
+<p>7.将来自 <strong>Grant us access to your source control</strong> 窗口的 Unity Cloud Build SSH 密钥粘贴到 <strong>Key</strong> 字段中。</p>
+
+<p>8.单击 <strong>Add Key</strong>。</p>
+
+<p>在 <strong>Grant us access to your source control</strong> 窗口上，单击 <strong>Next: Target Setup</strong>。</p>
+
+<p><a name="target"></a> </p>
+
+<h2>设置目标编译平台</h2>
+
+<p>在控制面板中的 <strong>NEW BUILD TARGET: BASIC INFO</strong> 窗口上：</p>
+
+<p>1.在 <strong>Target Label</strong> 字段中，输入编译名称。</p>
+
+<p>2.如果代码仓库的根文件夹未包含您的资源和项目设置，请在 <strong>Project Subfolder</strong> 字段中输入包含所需资源和项目设置的文件夹的 URL。</p>
+
+<p>3.从 <strong>Unity Version</strong> 下拉菜单中，选择用于编译项目的 Unity 版本。</p>
+
+<p>4.如果不希望每次更新代码仓库时便自动编译项目，请单击 <strong>Auto-build</strong> 切换开关以禁用此功能。</p>
+
+<p>如果要针对 iOS 或 Android 平台进行编译，则下一步是输入编译的凭据。单击 <strong>Next: Credentials</strong>。对于所有其他平台，请单击 <strong>Next: Build</strong> 以完成配置并开始初始编译。</p>
+
+<h3>Android 凭据</h3>
+
+<p>在 IOS <strong>SIGNING CREDS</strong> 窗口中，提供以下信息：</p>
+
+<ul>
+<li><p>__Bundle ID__，用于在设备上和 Google Play 商店中唯一标识您的应用程序。</p></li>
+<li><p>输入您的 Android 密钥库凭据或选择 <strong>Auto Generated Debug Keystore</strong> 来使用开发密钥库。有关 Android 密钥库的更多信息，请参阅 <a href="https://developer.android.com/training/articles/keystore.html">Android 密钥库系统 (Android Keystore System)</a>。</p></li>
+</ul>
+
+<h3>iOS 凭据</h3>
+
+<p>在 IOS <strong>SIGNING CREDS</strong> 窗口中，提供以下信息：</p>
+
+<ul>
+<li><p>__Bundle ID__，用于在设备上唯一标识您的应用程序。</p></li>
+<li><p>用于编译应用程序的 Xcode 版本。</p></li>
+<li><p>输入您的 IOS 凭据。有关 iOS 凭据的更多信息，请参阅<a href="UnityCloudBuildiOS.html">发布到 iOS</a>。</p></li>
+</ul>
+
+<p><a name="submodules"></a> </p>
+
+<h2>使用 Git 子模块</h2>
+
+<p>如果项目使用私有 Git 子模块，请确保 <em>.gitmodules</em> 文件中存在的 URL 使用的是 <code>git@</code> 语法而不是 <code>https://</code> 或 <code>git://</code>。</p>
+
+<p>例如：</p>
+
+<ul>
+<li><p>git@github.com:youraccount/yourrepo.git（对于 GitHub）</p></li>
+<li><p>git@bitbucket.org:youraccount/yourrepo.git（对于 Bitbucket）</p></li>
+<li><p>git@gitlab.com:youracccount/yourrepo.git（对于 GitLab）</p></li>
+</ul>
+
+<hr>
+
+<p><span class="page-edit">2018–07–16Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityCloudBuildVcs.html"></a></span><div class="tip">版本控制系统</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityCloudBuildVcsGitUsingEditor.html"></a></span><div class="tip">使用 Unity Editor 对 Unity Cloud Build 进行 Git 配置</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,680 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="了解托管堆 - Unity Manual">
+<title>了解托管堆 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/UnderstandingPerformanceinUnity-AssetAuditingSection_image_0.png">
+<meta name="description" content="许多 Unity 开发者面临的另一个常见问题是托管堆的意外扩展。在 Unity 中，托管堆的扩展比收缩容易得多。此外，Unity 的垃圾收集策略往往会使内存碎片化，因此可能阻止大型堆的收缩。">
+<meta property="og:description" content="许多 Unity 开发者面临的另一个常见问题是托管堆的意外扩展。在 Unity 中，托管堆的扩展比收缩容易得多。此外，Unity 的垃圾收集策略往往会使内存碎片化，因此可能阻止大型堆的收缩。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'BestPracticeUnderstandingPerformanceInUnity4-1';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/BestPracticeUnderstandingPerformanceInUnity4-1.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="BestPracticeGuides.html">最佳实践指南</a></li>
+<li><a href="BestPracticeUnderstandingPerformanceInUnity.html">了解 Unity 中的优化</a></li>
+<li>了解托管堆</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeUnderstandingPerformanceInUnity4.html"></a></span><div class="tip">资源审核</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeUnderstandingPerformanceInUnity5.html"></a></span><div class="tip">字符串和文本</div>
+</div>
+</div></div>
+<h1>了解托管堆</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>许多 Unity 开发者面临的另一个常见问题是托管堆的意外扩展。在 Unity 中，托管堆的扩展比收缩容易得多。此外，Unity 的垃圾收集策略往往会使内存碎片化，因此可能阻止大型堆的收缩。</p>
+
+<h2>托管堆的工作原理及其扩展原因</h2>
+
+<p>“托管堆”是由项目脚本运行时（Mono 或 IL2CPP）的内存管理器自动管理的一段内存。必须在托管堆上分配托管代码中创建的所有对象(2)（__注意：__严格来说，必须在托管堆上分配所有非 null 引用类型对象和所有装箱值类型对象）。</p>
+
+<figure>
+<img src="../uploads/Main/UnderstandingPerformanceinUnity-AssetAuditingSection_image_0.png" alt="">
+</figure>
+
+<p>在上图中，白框表示分配给托管堆的内存量，而其中的彩色框表示存储在托管堆的内存空间中的数据值。当需要更多值时，将从托管堆中分配更多空间。</p>
+
+<p>垃圾回收器定期运行(3)（__注意：__具体运行时间视平台而定）。这时将扫描堆上的所有对象，将任何不再引用的对象标记为删除。然后会删除未引用的对象，从而释放内存。</p>
+
+<p>至关重要的是，Unity 的垃圾收集（使用 <a href="https://en.wikipedia.org/wiki/Boehm_garbage_collector">Boehm GC 算法</a>）是非分代的，也是非压缩的。“非分代”意味着 GC 在执行每遍收集时必须扫描整个堆，因此随着堆的扩展，其性能会下降。“非压缩”意味着不会为内存中的对象重新分配内存地址来消除对象之间的间隙。</p>
+
+<figure>
+<img src="../uploads/Main/UnderstandingPerformanceinUnity-AssetAuditingSection_image_1.png" alt="">
+</figure>
+
+<p>上图为内存碎片化示例。释放对象时，将释放其内存。但是，释放的空间<strong>不会</strong>整合成为整个“可用内存”池的一部分。位于释放的对象两侧的对象可能仍在使用中。因此，释放的空间成为其他内存段之间的“间隙”（该间隙由上图中的红色圆圈指示）。因此，新释放的空间仅可用于存储与释放相同大小或更小的对象的数据。</p>
+
+<p>分配对象时，请注意对象在内存空间中的分配地址必须始终为连续空间块。</p>
+
+<p>这导致了内存碎片化这个核心问题：虽然堆中的可用空间总量可能很大，但是可能其中的部分或全部的可分配空间对象之间存在小的“间隙”。这种情况下，即使可用空间总量高于要分配的空间量，托管堆可能也找不到足够大的连续内存块来满足该分配需求。</p>
+
+<figure>
+<img src="../uploads/Main/UnderstandingPerformanceinUnity-AssetAuditingSection_image_2.png" alt="">
+</figure>
+
+<p>但是，如果分配了大型对象，却没有足够的连续可用空间来容纳该对象（如上所示），Unity 内存管理器将执行两个操作。</p>
+
+<p>首先，如果垃圾回收器尚未运行，则运行垃圾回收器。此工具会尝试释放足够的空间来满足分配请求。</p>
+
+<p>如果在 GC 运行后，仍然没有足够的连续空间来满足请求的内存量，则必须扩展堆。堆的具体扩展量视平台而定；但是，大多数 Unity 平台会使托管堆的大小翻倍。</p>
+
+<h2>堆的主要问题</h2>
+
+<p>托管堆扩展方面的核心问题有两个：</p>
+
+<ul>
+<li><p>Unity 在扩展托管堆后不会经常释放分配给托管堆的内存页；它会乐观地保留扩展后的堆，即使该堆的大部分为空时也如此。这是为了防止再次发生大量分配时需要重新扩展堆。</p></li>
+<li><p>在大多数平台上，Unity 最终会将托管堆的空置部分使用的页面释放回操作系统。发生此行为的间隔时间是不确定的，因此不要指望靠这种方法释放内存。</p></li>
+<li><p>托管堆使用的地址空间始终不会归还给操作系统。</p></li>
+<li><p>对于 32 位程序，如果托管堆多次扩展和收缩，则可能导致地址空间耗尽。如果一个程序的可用内存地址空间已耗尽，操作系统将终止该程序。</p></li>
+<li><p>对于 64 位程序而言，地址空间足够大到可以运行时间超过人类平均寿命的程序，因此地址空间耗尽的这种情况极几乎不可能发生。</p></li>
+</ul>
+
+<h2>临时分配</h2>
+
+<p>许多 Unity 项目在每帧都有几十或几百 KB 的临时数据分配给托管堆。这种情况通常对项目的性能极为不利。请考虑以下数学计算：</p>
+
+<p>如果一个程序每帧分配一千字节 (1 KB) 的临时内存，并且以每秒 60 帧的速率运行，那么它必须每秒分配 60 KB 的临时内存。在一分钟内，这会在内存中增加 3.6 MB 的垃圾。每秒调用一次垃圾回收器可能会对性能产生不利影响，但对于内存不足的设备而言每分钟分配 3.6 MB 的内存是个问题。</p>
+
+<p>此外，请考虑加载操作。如果在大型资源加载操作期间生成了大量临时对象，并且对这些对象的引用一直持续到操作完成，则垃圾回收器无法释放这些临时对象，并且托管堆需要进行扩展，即使它包含的许多对象将在不久后释放也是如此。</p>
+
+<figure>
+<img src="../uploads/Main/UnderstandingPerformanceinUnity-AssetAuditingSection_image_3.png" alt="">
+</figure>
+
+<p>跟踪托管内存分配情况相对简单。在 Unity 的 CPU 性能分析器中，Overview 表有一个“GC Alloc”列。此列显示了在特定帧中的托管堆上分配的字节数(4)（__注意：__这与给定帧期间临时分配的字节数不同。性能分析器会显示特定帧中分配的字节数，不考虑在后续帧中是否重用了部分/全部已分配的内存）。启用“Deep Profiling”选项后，可以跟踪执行这些分配的方法。</p>
+
+<p><strong>Unity Profiler 不会跟踪在主线程之外发生的分配。</strong>因此，“GC Alloc”列不能用于统计用户创建的线程中发生的托管分配。请将代码执行从单独线程切换到主线程以进行调试，或使用 <a href="../ScriptReference/Profiling.Profiler.BeginThreadProfiling.html">BeginThreadProfiling</a> API 在时间轴性能分析器 (Timeline Profiler) 中显示例程。</p>
+
+<p>务必使用目标设备上的开发版来分析托管分配。</p>
+
+<p>请注意，某些脚本方法在 Editor 中运行时会产生分配内存，但在构建项目后不会产生分配内存。<code>GetComponent</code> 是最常见的示例；此方法始终在 Editor 中执行时分配内存，而不会在已构建的项目中分配内存。</p>
+
+<p>通常，强烈建议所有开发人员在项目处于交互状态时最大限度减少托管堆内存分配。非交互操作（例如场景加载）期间的内存分配很少产生问题。</p>
+
+<p>适用于 Visual Studio 的 <a href="https://resharper-plugins.jetbrains.com/packages/ReSharper.HeapView/0.9.1">Jetbrains Resharper 插件</a>可以帮助找到代码中的内存分配。</p>
+
+<p>使用 Unity 的<a href="ProfilerWindow.html">深度性能分析 (Deep Profile)</a> 模式可找到托管分配的具体原因。在深度性能分析模式下，所有方法调用都是单独记录的，可更清晰地查看方法调用树中发生托管分配的位置。请注意，深度性能分析模式不仅可在 Editor 中使用，还可借助命令行参数 <code>-deepprofiling</code> 在 Android 和桌面平台上运行。Deep Profiler 按钮在性能分析期间保持灰色。</p>
+
+<h2>基本的内存节省方法</h2>
+
+<p>可使用一些相对简单的技术来减少托管堆分配。</p>
+
+<h3>集合和数组重用</h3>
+
+<p>使用 C# 的集合类或数组时，尽可能考虑重用或汇集已分配的集合或数组。集合类开放了一个 <em>Clear</em> 方法，该方法会消除集合内的值，但不会释放分配给集合的内存。</p>
+
+<pre><code>
+void Update() {
+
+    List&lt;float&gt; nearestNeighbors = new List&lt;float&gt;();
+
+    findDistancesToNearestNeighbors(nearestNeighbors);
+
+    nearestNeighbors.Sort();
+
+    // … 以某种方式使用排序列表 …
+
+}
+
+</code></pre>
+
+<p>在为复杂计算分配临时“helper”集合时，这尤其有用。下面的代码是一个非常简单的示例：</p>
+
+<p>在此示例中，为了收集一组数据点，每帧都为 <code>nearestNeighbors</code> List（列表）分配一次内存。将此 List 从方法中提升到包含类中是非常简单的，这样做避免了每帧都为新 List 分配内存：</p>
+
+<pre><code>
+List&lt;float&gt; m_NearestNeighbors = new List&lt;float&gt;();
+
+void Update() {
+
+    m_NearestNeighbors.Clear();
+
+    findDistancesToNearestNeighbors(NearestNeighbors);
+
+    m_NearestNeighbors.Sort();
+
+    // … 以某种方式使用排序列表 …
+
+}
+
+</code></pre>
+
+<p>在此版本中，List 的内存被保留并在多个帧之间重用。仅在 List 需要扩展时才分配新内存。</p>
+
+<h2>闭包和匿名方法</h2>
+
+<p>使用闭包和匿名方法时需要注意两点。</p>
+
+<p>首先，C# 中的所有方法引用都是引用类型，因此在堆上进行分配。通过将方法引用作为参数传递，可以轻松分配临时内存。无论传递的方法是匿名方法还是预定义的方法，都会发生此分配。</p>
+
+<p>其次，将匿名方法转换为闭包后，为了将闭包传递给接收闭包的方法，所需的内存量将显著增加。</p>
+
+<p>请参考以下代码：</p>
+
+<pre><code>
+List&lt;float&gt; listOfNumbers = createListOfRandomNumbers();
+
+listOfNumbers.Sort( (x, y) =&gt;
+
+(int)x.CompareTo((int)(y/2)) 
+
+);
+
+</code></pre>
+
+<p>这段代码使用简单的匿名方法来控制在第一行创建的数字列表的排序顺序。但是，如果程序员希望使该代码段可重用，很容易想到将常量 <code>2</code> 替换为局部作用域内的变量，如下所示：</p>
+
+<pre><code>
+List&lt;float&gt; listOfNumbers = createListOfRandomNumbers();
+
+int desiredDivisor = getDesiredDivisor();
+
+listOfNumbers.Sort( (x, y) =&gt;
+
+(int)x.CompareTo((int)(y/desiredDivisor))
+
+);
+
+</code></pre>
+
+<p>匿名方法现在要求该方法能够访问方法作用域之外的变量状态，因此已成为闭包。必须以某种方式将 <code>desiredDivisor</code> 变量传递给闭包，以便闭包的实际代码可以使用该变量。</p>
+
+<p>为此，C# 将生成一个匿名类，该类可保存闭包所需的外部作用域变量。当闭包传递给 <code>Sort</code> 方法时，将实例化此类的副本，并用 <code>desiredDivisor</code> 整数的值初始化该副本。</p>
+
+<p>因为执行闭包需要实例化闭包生成类的副本，并且所有类都是 C# 中的引用类型，所以执行闭包需要在托管堆上分配对象。</p>
+
+<p>通常，请尽可能在 C# 中避免使用闭包。应在性能敏感的代码中尽可能减少匿名方法和方法引用，尤其是那些每帧都需要执行的代码中。</p>
+
+<h3>IL2CPP 下的匿名方法</h3>
+
+<p>目前，通过查看 IL2CPP 所生成的代码得知，对<code>System.Function</code> 类型变量的声明和赋值将会分配一个新对象。无论变量是显式的（在方法/类中声明）还是隐式的（声明为另一个方法的参数），都是如此。</p>
+
+<p>因此，使用 IL2CPP 脚本后端下的匿名方法必定会分配托管内存。在 Mono 脚本后端下则不是这种情况。</p>
+
+<p>此外，由于方法参数的声明方式不同，将导致IL2CPP 显示出托管内存分配量产生巨大差异。正如预期的那样，闭包的每次调用会消耗最多的内存。</p>
+
+<p>预定义的方法在 IL2CPP 脚本后端下作为参数传递时，其__分配的内存几乎与闭包一样多__，但这不是很直观。匿名方法在堆上生成最少量的临时垃圾（一个或多个数量级）。</p>
+
+<p>因此，如果打算在 IL2CPP 脚本后端上发布项目，有三个主要建议：</p>
+
+<ul>
+<li><p>最好选择不需要将方法作为参数传递的编码风格。</p></li>
+<li><p>当不可避免时，最好选择匿名方法而不是预定义方法。</p></li>
+<li><p>无论脚本后端为何，都要避免使用闭包。</p></li>
+</ul>
+
+<h2>装箱 (Boxing)</h2>
+
+<p>装箱是 Unity 项目中最常见的非预期临时内存分配来源之一。只要将值类型的值用作引用类型就会发生装箱；这种情况最常发生在将原始值类型的变量（例如 <code>int</code> 和 <code>float</code>）传递给对象类型的方法时。</p>
+
+<p>在下面非常简单的示例中，对 <em>x</em> 中的整数进行了装箱以便传递给 <code>object.Equals</code> 方法，因为 <code>object</code> 上的 <code>Equals</code> 方法要求将 <code>object</code> 作为参数传递给它。</p>
+
+<pre><code>
+int x = 1;
+
+object y = new object();
+
+y.Equals(x);
+
+</code></pre>
+
+<p>C# IDE（集成开发环境）和编译器通常不会发出关于装箱的警告，即使导致意外的内存分配时也是如此。这是因为 C# 语言的设计理念认为，小型临时分配可以被分代垃圾回收器和对分配大小敏感的内存池有效处理。</p>
+
+<p>虽然 Unity 的分配器实际会使用不同的内存池进行小型和大型分配，但 Unity 的垃圾回收器“不是”分代的，因此无法有效清除由装箱生成的小型、频繁的临时分配。</p>
+
+<p>在为 Unity 运行时编写 C# 代码时，应尽可能避免使用装箱。</p>
+
+<h3>识别装箱</h3>
+
+<p>装箱在 CPU 跟踪中显示为对某几种特定方法的调用，具体形式取决于使用的脚本后端。这些调用通常采用以下形式之一，其中 <code>&lt;some class&gt;</code> 是其他类或结构的名称，而 <code>...</code> 是一些参数：</p>
+
+<ul>
+<li><p><code>&lt;some class&gt;::Box(…)</code></p></li>
+<li><p><code>Box(…)</code></p></li>
+<li><p><code>&lt;some class&gt;_Box(…)</code></p></li>
+</ul>
+
+<p>也可以通过搜索反编译器或 IL 查看器（例如 ReSharper 中内置的 IL 查看器工具或 dotPeek 反编译器）的输出来定位装箱。IL 指令为“box”。</p>
+
+<h3>字典和枚举</h3>
+
+<p>装箱的一个常见原因是使用 <code>enum</code> 类型作为字典的键。声明 <code>enum</code> 会创建一个新值类型，此类型在后台视为整数，但在编译时实施类型安全规则。</p>
+
+<p>By default, a call to <code>Dictionary.add(key, value)</code> results in a call to <code>Object.getHashCode(Object)</code>. This method is used to obtain the appropriate hash code for the Dictionary’s key, and is used in all methods that accept a key: <code>Dictionary.tryGetValue</code>, <code>Dictionary.remove</code>, etc.</p>
+
+<p><code>Object.getHashCode</code> 方法为引用类型，但 <code>enum</code> 值始终为值类型。因此，对于枚举键字典，每次方法调用都会导致键被装箱至少一次。</p>
+
+<p>以下代码片段展示的一个简单示例说明了此装箱问题：</p>
+
+<pre><code>
+enum MyEnum { a, b, c };
+
+var myDictionary = new Dictionary&lt;MyEnum, object&gt;();
+
+myDictionary.Add(MyEnum.a, new object());
+
+</code></pre>
+
+<p>要解决此问题，则需要编写一个实现 <code>IEqualityComparer</code> 接口的自定义类，并将该类的实例指定为字典的比较器（__注意：__此对象通常是无状态的，因此可与不同的字典实例一起重复使用以节省内存）。</p>
+
+<p>以下是上述代码片段 IEqualityComparer 的简单示例。</p>
+
+<pre><code>
+public class MyEnumComparer : IEqualityComparer&lt;MyEnum&gt; {
+
+    public bool Equals(MyEnum x, MyEnum y) {
+
+        return x == y;
+
+    }
+
+    public int GetHashCode(MyEnum x) {
+
+        return (int)x;
+
+    }
+
+} 
+
+</code></pre>
+
+<p>可将上述类的实例传递给字典的构造函数。</p>
+
+<h3>Foreach 循环</h3>
+
+<p>在 Unity 的 Mono C# 编译器版本中，使用 <code>foreach</code> 循环会在每次循环终止时强制 Unity 将一个值装箱（__注意：__是在每次整个循环完整执行完成后将该值装箱一次，并非在循环的每次迭代中装箱一次，因此无论循环运行两次还是 200 次，内存使用量都保持不变）。这是因为 Unity 的 C# 编译器生成的 IL 会构造一个通用值类型的枚举器来遍历值集合。</p>
+
+<p>此枚举器将实现 <code>IDisposable</code> 接口；当循环终止时必须调用该接口。但是，在值类型的对象（例如结构和枚举器）上调用接口方法需要将它们装箱。</p>
+
+<p>请参考下面非常简单的示例代码：</p>
+
+<pre><code>
+int accum = 0;
+
+foreach(int x in myList) {
+
+    accum += x;
+
+}
+
+</code></pre>
+
+<p>以上代码通过 Unity 的 C# 编译器运行后将生成以下中间语言：</p>
+
+<pre><code>
+   .method private hidebysig instance void 
+
+       ILForeach() cil managed 
+
+     {
+
+       .maxstack 8
+
+       .locals init (
+
+         [0] int32 num,
+
+         [1] int32 current,
+
+         [2] valuetype [mscorlib]System.Collections.Generic.List`1/Enumerator&lt;int32&gt; V_2
+
+       )
+
+       // [67 5 - 67 16]
+
+       IL_0000: ldc.i4.0     
+
+       IL_0001: stloc.0      // num
+
+       // [68 5 - 68 74]
+
+       IL_0002: ldarg.0      // this
+
+       IL_0003: ldfld        class [mscorlib]System.Collections.Generic.List`1&lt;int32&gt; test::myList
+
+       IL_0008: callvirt     instance valuetype [mscorlib]System.Collections.Generic.List`1/Enumerator&lt;!0/*int32*/&gt; class [mscorlib]System.Collections.Generic.List`1&lt;int32&gt;::GetEnumerator()
+
+       IL_000d: stloc.2      // V_2
+
+       .try
+
+       {
+
+         IL_000e: br           IL_001f
+
+       // [72 9 - 72 41]
+
+         IL_0013: ldloca.s     V_2
+
+         IL_0015: call         instance !0/*int32*/ valuetype [mscorlib]System.Collections.Generic.List`1/Enumerator&lt;int32&gt;::get_Current()
+
+         IL_001a: stloc.1      // current
+
+       // [73 9 - 73 23]
+
+         IL_001b: ldloc.0      // num
+
+         IL_001c: ldloc.1      // current
+
+         IL_001d: add          
+
+         IL_001e: stloc.0      // num
+
+       // [70 7 - 70 36]
+
+         IL_001f: ldloca.s     V_2
+
+         IL_0021: call         instance bool valuetype [mscorlib]System.Collections.Generic.List`1/Enumerator&lt;int32&gt;::MoveNext()
+
+         IL_0026: brtrue       IL_0013
+
+         IL_002b: leave        IL_003c
+
+       } // .try 结束
+
+       finally
+
+       {
+
+         IL_0030: ldloc.2      // V_2
+
+         IL_0031: box          valuetype [mscorlib]System.Collections.Generic.List`1/Enumerator&lt;int32&gt;
+
+         IL_0036: callvirt     instance void [mscorlib]System.IDisposable::Dispose()
+
+         IL_003b: endfinally   
+
+       } // finally 结束
+
+       IL_003c: ret          
+
+     } // 方法 test::ILForeach结束
+
+   } // test 类结束
+
+</code></pre>
+
+<p>最相关的代码是靠近底部的 <code>__finally { … }__</code> 代码块。<code>callvirt</code> 指令在调用 <code>IDisposable.Dispose</code> 方法之前先发现该方法在内存中的位置，并要求将枚举器装箱。</p>
+
+<p>通常，应在 Unity 中避免使用 <code>foreach</code> 循环。原因不仅是这些循环会进行装箱，而且通过枚举器遍历集合的方法调用成本更高，通常比通过 <code>for</code> 或 <code>while</code> 循环进行的手动迭代慢得多。</p>
+
+<p>请注意，Unity 5.5 中的 C# 编译器升级版本显著提高了 Unity 生成 IL 的能力。特别值得注意的是，已从 <code>foreach</code> 循环中消除装箱操作。因此，节约了与 <code>foreach</code> 循环相关的内存开销。但是，由于方法调用开销，与基于数组的等效代码相比，CPU 性能差距仍然存在。</p>
+
+<h3>Unity 数组值 API</h3>
+
+<p>虚数组分配的一种更有害和更不明显的原因是重复访问返回数组的 Unity API。返回数组的所有 Unity API 每次被访问时都会创建一个新的数组副本。在不必要的情况下访问数组值 Unity API 是极不适宜的。</p>
+
+<p>例如，下面的代码在每次循环迭代时都会虚化创建 <code>vertices</code> 数组的四个副本。每次访问 <code>.vertices</code> 属性时都会发生分配。</p>
+
+<pre><code>
+for(int i = 0; i &lt; mesh.vertices.Length; i++)
+
+{
+
+    float x, y, z;
+
+    x = mesh.vertices[i].x;
+
+    y = mesh.vertices[i].y;
+
+    z = mesh.vertices[i].z;
+
+    // ...
+
+    DoSomething(x, y, z);   
+
+}
+
+</code></pre>
+
+<p>通过在进入循环之前捕获 <code>vertices</code> 数组，无论循环迭代次数是多少，都可以简单地重构为单个数组分配：</p>
+
+<pre><code>
+var vertices = mesh.vertices;
+
+for(int i = 0; i &lt; vertices.Length; i++)
+
+{
+
+    float x, y, z;
+
+    x = vertices[i].x;
+
+    y = vertices[i].y;
+
+    z = vertices[i].z;
+
+    // ...
+
+    DoSomething(x, y, z);   
+
+}
+
+</code></pre>
+
+<p>虽然访问一次属性的 CPU 成本不是很高，但在紧凑循环内重复访问会使得 CPU 性能过热。此外，重复访问会导致托管堆出现不必要的扩展。</p>
+
+<p>此问题在移动端极其常见，因为 <code>Input.touches</code> API 的行为与上述类似。项目包含以下类似代码是极为常见的，此情况下每次访问 <code>.touches</code> 属性时都会发生分配。</p>
+
+<pre><code>
+for ( int i = 0; i &lt; Input.touches.Length; i++ )
+
+{
+
+   Touch touch = Input.touches[i];
+
+    // …
+
+}
+
+</code></pre>
+
+<p>当然，通过将数组分配从循环条件中提升出来，可轻松改善该问题：</p>
+
+<pre><code>
+Touch[] touches = Input.touches;
+
+for ( int i = 0; i &lt; touches.Length; i++ )
+
+{
+
+   Touch touch = touches[i];
+
+   // …
+
+}
+
+</code></pre>
+
+<p>但是，现在有许多 Unity API 的版本不会导致内存分配。如果能使用这些版本时，请尽量选择这种版本。</p>
+
+<pre><code>
+int touchCount = Input.touchCount;
+
+for ( int i = 0; i &lt; touchCount; i++ )
+
+{
+
+   Touch touch = Input.GetTouch(i);
+
+   // …
+
+}
+
+</code></pre>
+
+<p>将上面的示例转换为无分配的 Touch API 很简单：</p>
+
+<p>请注意，为了节省调用属性的 <code>get</code> 方法的 CPU 成本，属性访问 (<code>Input.touchCount</code>) 仍然保持在循环条件之外。</p>
+
+<h3>空数组重用</h3>
+
+<p>当数组值方法需要返回空集时，有些开发团队更喜欢返回空数组而不是 <code>null</code>。这种编码模式在许多托管语言中很常见，特别是 C# 和 Java。</p>
+
+<p>通常情况下，从方法返回零长度数组时，返回零长度数组的预分配单例实例比重复创建空数组要高效得多(5)（__注意：__当然，在返回数组后调整数组大小时是个例外）。</p>
+
+<p><strong>脚注</strong></p>
+
+<ul>
+<li><p><strong>(1)</strong> 这是因为大多数平台上从 GPU 内存回读的速度极慢。将纹理从 GPU 内存读入临时缓冲区以供 CPU 代码（例如 <code>Texture.GetPixel</code>）使用将是非常不高效的。</p></li>
+<li><p><strong>(2)</strong> 严格来说，必须在托管堆上分配所有非 null 引用类型对象和所有装箱值类型对象。</p></li>
+<li><p><strong>(3)</strong> 具体运行时间视平台而定。</p></li>
+<li><p><strong>(4)</strong> 注意，这与给定帧期间临时分配的字节数<strong>不</strong>同。性能分析器会显示特定帧中分配的字节数，不考虑在后续帧中是否重用了部分/全部已分配的内存。</p></li>
+<li><p><strong>(5)</strong> 当然，在返回数组后调整数组大小时是个例外。</p></li>
+</ul>
+
+<hr>
+
+<ul>
+<li>
+<span class="page-edit">2018–03–05 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span><br>
+</li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeUnderstandingPerformanceInUnity4.html"></a></span><div class="tip">资源审核</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeUnderstandingPerformanceInUnity5.html"></a></span><div class="tip">字符串和文本</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="自定义 - Unity Manual">
+<title>自定义 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/gsg-ToggleStyles.png">
+<meta name="description" content="虽然 Unity 的 IMGUI 系统主要用于创建开发者工具和调试界面，但仍可以通过多种方式进行自定义并设置样式。在 Unity 的 IMGUI 系统中，可微调控件的外观，为控件添加大量细节。控件外观由 GUIStyle 决定。默认情况下，如果创建控件时未定义 GUIStyle，则会应用 Unity 的默认 GUIStyle。此样式是 Unity 的内部样式，可在已发布的游戏中将此样式用于快速原型设计，或者如果选择不对控件进行样式设置，则会采用此样式。">
+<meta property="og:description" content="虽然 Unity 的 IMGUI 系统主要用于创建开发者工具和调试界面，但仍可以通过多种方式进行自定义并设置样式。在 Unity 的 IMGUI 系统中，可微调控件的外观，为控件添加大量细节。控件外观由 GUIStyle 决定。默认情况下，如果创建控件时未定义 GUIStyle，则会应用 Unity 的默认 GUIStyle。此样式是 Unity 的内部样式，可在已发布的游戏中将此样式用于快速原型设计，或者如果选择不对控件进行样式设置，则会采用此样式。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'gui-Customization';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/gui-Customization.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/gui-Customization.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/gui-Customization.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/gui-Customization.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/gui-Customization.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/gui-Customization.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/gui-Customization.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/gui-Customization.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/gui-Customization.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/gui-Customization.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/gui-Customization.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/gui-Customization.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/gui-Customization.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/gui-Customization.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/gui-Customization.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/gui-Customization.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/gui-Customization.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/gui-Customization.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/gui-Customization.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/gui-Customization.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/gui-Customization.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/gui-Customization.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/gui-Customization.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/gui-Customization.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UIToolkits.html">UI</a></li>
+<li><a href="GUIScriptingGuide.html">即时模式 GUI (IMGUI)</a></li>
+<li>自定义</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="gui-Controls.html"></a></span><div class="tip">控件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="gui-Layout.html"></a></span><div class="tip">IMGUI 布局模式</div>
+</div>
+</div></div>
+<h1>自定义</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>自定义 IMGUI 控件</h2>
+
+<p>虽然 Unity 的 IMGUI 系统主要用于创建开发者工具和调试界面，但仍可以通过多种方式进行自定义并设置样式。在 Unity 的 IMGUI 系统中，可微调控件的外观，为控件添加大量细节。控件外观由 <strong>GUIStyle</strong> 决定。默认情况下，如果创建控件时未定义 GUIStyle，则会应用 Unity 的默认 GUIStyle。此样式是 Unity 的内部样式，可在已发布的游戏中将此样式用于快速原型设计，或者如果选择不对控件进行样式设置，则会采用此样式。</p>
+
+<p>当有大量不同的 GUIStyle 可供使用时，可在单个 <strong>GUISkin</strong> 中定义这些样式。GUISkin 只不过是 GUIStyle 的集合。</p>
+
+<h3>样式如何改变 GUI 控件的外观</h3>
+
+<p>GUIStyle 旨在模仿 Web 浏览器的层叠样式表 (CSS)。不过，许多不同的 CSS 方法经过了改编，包括对用于样式设置的各个状态属性进行划分，在内容和外观之间进行分离，等等。</p>
+
+<p>控件定义内容，而样式定义外观。通过这种机制可以创建外观像普通__按钮 (Button)__ 但功能为__开关 (Toggle)__ 的组合控件。</p>
+
+<figure>
+<img src="../uploads/Main/gsg-ToggleStyles.png" alt="两种不同样式的开关控件">
+<figcaption>两种不同样式的开关控件</figcaption>
+</figure>
+
+<h3>皮肤和样式之间的区别</h3>
+
+<p>如前文所述，GUISkin 是 GUIStyle 的集合。样式定义了 GUI 控件的外观。如果要使用样式，则不必使用皮肤。</p>
+
+<figure>
+<img src="../uploads/Main/GuiStyleInspector.png" alt="Inspector 中显示的单个 GUIStyle">
+<figcaption>Inspector 中显示的单个 GUIStyle</figcaption>
+</figure>
+
+<p><img src="../uploads/Main/Inspector-GUISkin.png" alt="">
+<em>Inspector 中显示的单个 GUISkin - 注意其包含多个 GUIStyle</em></p>
+
+<h2>使用样式</h2>
+
+<p>所有 GUI 控件函数都有可选的最后一个参数：用于显示控件的 GUIStyle。如果忽略此参数，则会使用 Unity 的默认 GUIStyle。函数内部会将控件类型的名称作为字符串应用，因此 <strong>GUI.Button()</strong> 使用“button”样式，__GUI.Toggle()__ 使用“toggle”样式，等等。若要覆盖控件的默认 GUIStyle，可将其指定为最后一个参数。</p>
+
+<pre><code>/* 将默认控件样式覆盖为 UnityGUI 默认样式中的其他样式 */
+
+
+// JavaScript
+function OnGUI () {
+    // 创建使用 "box" GUIStyle 的标签。
+    GUI.Label (Rect (0,0,200,100), "Hi - I'm a label looking like a box", "box");
+
+    // 创建使用 "toggle" GUIStyle 的按钮
+    GUI.Button (Rect (10,140,180,20), "This is a button", "toggle");
+}
+
+
+// C#
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour {
+                    
+    void OnGUI () {
+        // 创建使用 "box" GUIStyle 的标签。
+        GUI.Label (new Rect (0,0,200,100), "Hi - I'm a label looking like a box", "box");
+    
+        // 创建使用 "toggle" GUIStyle 的按钮
+        GUI.Button (new Rect (10,140,180,20), "This is a button", "toggle");
+    }
+
+}
+
+
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/gsg-DifferentDefaultStyles.png" alt="上述代码示例创建的控件">
+<figcaption>上述代码示例创建的控件</figcaption>
+</figure>
+
+<h3>创建公共变量 GUIStyle</h3>
+
+<p>声明 GUIStyle 公共变量时，样式的所有元素都将显示在 <strong>Inspector</strong> 中。在该面板中可以编辑所有不同的值。</p>
+
+<pre><code>/* 将默认控件样式覆盖为自定义的控件样式 */
+
+
+// JavaScript
+var customButton : GUIStyle;
+
+function OnGUI () {
+    // 创建按钮。将上面定义的 GUIStyle 作为要使用的样式传入
+    GUI.Button (Rect (10,10,150,20), "I am a Custom Button", customButton);
+}
+
+
+// C#
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour {
+                    
+    public GUIStyle customButton;
+    
+    void OnGUI () {
+        // 创建按钮。将上面定义的 GUIStyle 作为要使用的样式传入
+        GUI.Button (new Rect (10,10,150,20), "I am a Custom Button", customButton);
+    }
+    
+}
+
+
+</code></pre>
+
+<h3>更改不同的样式元素</h3>
+
+<p>声明 GUIStyle 后，可在 Inspector 中修改该样式。可以定义大量状态，并应用于任何类型的控件。</p>
+
+<figure>
+<img src="../uploads/Main/ModifyingStyleInInspector.png" alt="样式的修改是针对每个脚本和每个游戏对象进行的">
+<figcaption>样式的修改是针对每个脚本和每个游戏对象进行的</figcaption>
+</figure>
+
+<p>必须先为控件状态分配 <strong>Background</strong> 颜色，然后再应用指定的 <strong>Text Color</strong>。</p>
+
+<p>有关各个 GUIStyle 的更多信息，请阅读 <a href="class-GUIStyle.html">GUIStyle 组件参考页面</a>。</p>
+
+<h2>使用皮肤</h2>
+
+<p>对于较复杂的 GUI 系统，将一系列样式集中保存在一个位置是很有意义的。这就是 GUISkin 的作用。GUISkin 包含多种不同的样式，基本上能为所有 GUI 控件提供完整的外观修改。</p>
+
+<h3>创建新的 GUISkin</h3>
+
+<p>要创建 GUISkin，请从菜单栏中选择 <strong>Assets &gt; Create &gt; GUI Skin</strong>。随后将在 Project 文件夹中创建一个 GUI Skin。选择该 GUI Skin 即可在 Inspector 中查看其定义的所有 GUIStyle。</p>
+
+<h3>将皮肤应用于 GUI</h3>
+
+<p>要使用已创建的皮肤，请将其分配给 <strong>OnGUI()</strong> 函数中的 <strong>GUI.skin</strong>。</p>
+
+<pre><code>/* 创建一个属性来引用要使用的皮肤 */
+
+
+// JavaScript
+var mySkin : GUISkin;
+
+function OnGUI () {
+    // 将该皮肤指定为当前使用的皮肤。
+    GUI.skin = mySkin;
+
+    // 创建按钮。此时将从分配给 mySkin 的皮肤获得默认的 "button" 样式。
+    GUI.Button (Rect (10,10,150,20), "Skinned Button");
+}
+
+
+// C#
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour {
+                    
+    public GUISkin mySkin;
+    
+    void OnGUI () {
+        // 将该皮肤指定为当前使用的皮肤。
+        GUI.skin = mySkin;
+    
+        // 创建按钮。此时将从分配给 mySkin 的皮肤获得默认的 "button" 样式。
+        GUI.Button (new Rect (10,10,150,20), "Skinned Button");
+    }
+        
+}
+
+
+</code></pre>
+
+<p>通过单个 <strong>OnGUI()</strong> 调用即可按需多次切换皮肤。</p>
+
+<pre><code>/* 在同一个 OnGUI() 调用切换皮肤的示例 */
+
+
+// JavaScript
+var mySkin : GUISkin;
+
+var toggle = true;
+
+function OnGUI () {
+    // 将该皮肤指定为当前使用的皮肤。
+    GUI.skin = mySkin;
+
+    // 创建开关。此时将从分配给 mySkin 的皮肤获得 "button" 样式。
+    toggle = GUI.Toggle (Rect (10,10,150,20), toggle, "Skinned Button", "button");
+
+    // 将当前皮肤指定为 Unity 的默认值。
+    GUI.skin = null;
+
+    // 创建按钮。此时将从内置皮肤获得默认的 "button" 样式。
+    GUI.Button (Rect (10,35,150,20), "Built-in Button");
+}
+
+
+// C#
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour {
+                    
+    public GUISkin mySkin;
+    private bool toggle = true;
+    
+    void OnGUI () {
+        // 将该皮肤指定为当前使用的皮肤。
+        GUI.skin = mySkin;
+    
+        // 创建开关。此时将从分配给 mySkin 的皮肤获得 "button" 样式。
+        toggle = GUI.Toggle (new Rect (10,10,150,20), toggle, "Skinned Button", "button");
+    
+        // 将当前皮肤指定为 Unity 的默认值。
+        GUI.skin = null;
+    
+        // 创建按钮。此时将从内置皮肤获得默认的 "button" 样式。
+        GUI.Button (new Rect (10,35,150,20), "Built-in Button");
+    }
+        
+}
+
+
+</code></pre>
+
+<h3>更改 GUI 字体大小</h3>
+
+<p>此示例将展示如何通过代码来动态更改字体大小。</p>
+
+<p>首先在 Unity 中创建一个新项目。然后创建一个名为 Fontsize.cs 的 C# 脚本，并将以下代码粘贴到其中：</p>
+
+<pre><code>// C# 示例
+using UnityEngine;
+    
+using System.Collections;
+    
+public class Fontsize : MonoBehaviour
+{
+    void OnGUI ()
+    {
+        //将 GUIStyle 样式设置为标签
+        GUIStyle style = GUI.skin.GetStyle ("label");
+        
+        //将样式字体大小设置为随时间增大和减小
+        style.fontSize = (int)(20.0f + 10.0f * Mathf.Sin (Time.time));
+        
+        //创建一个标签并使用当前设置来显示
+        GUI.Label (new Rect (10, 10, 200, 80), "Hello World!");
+    }
+        
+}
+</code></pre>
+
+<p>保存脚本并将其附加到空游戏对象，然后单击播放以查看字体的大小随时间循环增大和减小的行为。此时可能会注意到字体不能平滑地改变大小，这是因为字体大小不是无限数量的。</p>
+
+<p>此特定示例要求加载默认字体 (Arial) 并将其标记为动态。无法更改未标记为动态的任何字体的大小。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="gui-Controls.html"></a></span><div class="tip">控件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="gui-Layout.html"></a></span><div class="tip">IMGUI 布局模式</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

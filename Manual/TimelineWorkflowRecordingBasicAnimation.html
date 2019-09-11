@@ -1,0 +1,241 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="使用无限剪辑录制基本动画 - Unity Manual">
+<title>使用无限剪辑录制基本动画 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/timeline_workflow_record_button.png">
+<meta name="description" content="可将动画直接录制到动画轨道。直接录制到空动画轨道时，便会创建__无限剪辑__。">
+<meta property="og:description" content="可将动画直接录制到动画轨道。直接录制到空动画轨道时，便会创建__无限剪辑__。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'TimelineWorkflowRecordingBasicAnimation';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/TimelineWorkflowRecordingBasicAnimation.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/TimelineWorkflowRecordingBasicAnimation.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/TimelineWorkflowRecordingBasicAnimation.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/TimelineWorkflowRecordingBasicAnimation.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/TimelineWorkflowRecordingBasicAnimation.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/TimelineWorkflowRecordingBasicAnimation.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/TimelineWorkflowRecordingBasicAnimation.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/TimelineWorkflowRecordingBasicAnimation.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/TimelineWorkflowRecordingBasicAnimation.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/TimelineWorkflowRecordingBasicAnimation.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/TimelineWorkflowRecordingBasicAnimation.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/TimelineWorkflowRecordingBasicAnimation.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/TimelineWorkflowRecordingBasicAnimation.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/TimelineWorkflowRecordingBasicAnimation.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/TimelineWorkflowRecordingBasicAnimation.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/TimelineWorkflowRecordingBasicAnimation.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/TimelineWorkflowRecordingBasicAnimation.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/TimelineWorkflowRecordingBasicAnimation.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/TimelineWorkflowRecordingBasicAnimation.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/TimelineWorkflowRecordingBasicAnimation.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/TimelineWorkflowRecordingBasicAnimation.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/TimelineWorkflowRecordingBasicAnimation.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/TimelineWorkflowRecordingBasicAnimation.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/TimelineWorkflowRecordingBasicAnimation.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="TimelineSection.html">时间轴</a></li>
+<li><a href="TimelineWorkflows.html">时间轴工作流程</a></li>
+<li>使用无限剪辑录制基本动画</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="TimelineWorkflowCreatingAssetInstance.html"></a></span><div class="tip">创建时间轴资源和时间轴实例</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="TimelineWorkflowConvertingInfiniteClip.html"></a></span><div class="tip">将无限剪辑转换为动画剪辑</div>
+</div>
+</div></div>
+<h2>使用无限剪辑录制基本动画</h2>
+
+<p>可将动画直接录制到动画轨道。直接录制到空动画轨道时，便会创建__无限剪辑__。</p>
+
+<p>无限剪辑的定义是包含通过 Timeline Editor 窗口录制的基本关键动画的剪辑。无法定位、修剪或拆分无限剪辑，因为这种剪辑没有定义的大小：其跨越整个动画轨道。</p>
+
+<p>在创建无限剪辑之前，必须为要动画化的游戏对象<a href="TimelineAddingTracks.html">添加空动画轨道</a>。</p>
+
+<p>在轨道列表中，单击空动画轨道的 Record 按钮以启用录制模式。对于绑定到简单游戏对象（例如立方体、球体、光源等）的动画轨道，均可使用 Record 按钮。对于绑定到人形游戏对象的动画轨道，则会禁用 Record 按钮。</p>
+
+<figure>
+<img src="../uploads/Main/timeline_workflow_record_button.png" alt="在空轨道上单击 Record 按钮以启用录制模式">
+<figcaption>在空轨道上单击 Record 按钮以启用录制模式</figcaption>
+</figure>
+
+<p>当轨道处于录制模式时，轨道的剪辑区域将以红色绘制并显示“Recording…”消息。Record 按钮会闪烁。</p>
+
+<figure>
+<img src="../uploads/Main/timeline_workflow_recording.png" alt="录制模式下的 Timeline Editor 窗口">
+<figcaption>录制模式下的 Timeline Editor 窗口</figcaption>
+</figure>
+
+<p>在录制模式下，对游戏对象的可动画属性的任何修改都会在时间轴播放头的位置设置一个关键点。可动画属性包括添加到游戏对象的所有组件的变换和可动画属性。</p>
+
+<p>要开始创建动画，请将时间轴播放头移动到第一个关键点的位置，然后执行以下操作之一：</p>
+
+<ul>
+<li><p>在 Inspector 窗口中，右键单击属性名称，然后选择 <strong>Add Key</strong>。此操作将为属性添加一个动画关键点，但不会更改其值。无限剪辑中将出现一个白色菱形以显示关键点的位置。</p></li>
+<li><p>在 Inspector 窗口中，更改游戏对象的可动画属性的值。此操作将为属性添加一个动画关键点，并更改其值。无限剪辑中将出现一个白色菱形。</p></li>
+<li><p>在 Scene 视图中，移动、旋转或缩放游戏对象以添加关键点。这将会自动为更改的属性添加一个关键点。无限剪辑中将出现一个白色菱形。</p></li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/timeline_property_red.png" alt="红色背景表示该属性的动画曲线已添加到剪辑中">
+<figcaption>红色背景表示该属性的动画曲线已添加到剪辑中</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/timeline_workflow_recording_diamonds.png" alt="设置关键点会向无限剪辑中添加一个白色菱形">
+<figcaption>设置关键点会向无限剪辑中添加一个白色菱形</figcaption>
+</figure>
+
+<p>将播放头移动到时间轴上的其他位置，并更改游戏对象的可动画属性。在每个位置，Timeline Editor 窗口都会针对任何更改的属性向无限剪辑添加白色菱形，并为关联的动画曲线添加关键点。</p>
+
+<p>在录制模式下，可右键单击一个可动画属性的名称以执行关键点操作，例如设置关键点而不更改其值，跳转到下一个或上一个关键点，删除关键点，等等。例如，要为游戏对象的位置设置一个关键点而不更改其值，请右键单击 <strong>Position__，然后从上下文菜单中选择 </strong>Add Key__。</p>
+
+<figure>
+<img src="../uploads/Main/timeline_workflow_keyframing_menu.png" alt="右键单击可动画属性的名称以执行关键点操作">
+<figcaption>右键单击可动画属性的名称以执行关键点操作</figcaption>
+</figure>
+
+<p>完成动画后，单击闪烁的 Record 按钮可禁用录制模式。</p>
+
+<p>无限剪辑在 Timeline Editor 窗口中显示为关键帧清单，但无法在此视图中编辑关键点。请使用<a href="TimelineEditingKeys.html">曲线视图编辑来关键点</a>。还可以双击无限剪辑并通过 Animation 窗口来编辑关键点。</p>
+
+<figure>
+<img src="../uploads/Main/timeline_workflow_dopesheet.png" alt="无限剪辑显示为关键帧清单">
+<figcaption>无限剪辑显示为关键帧清单</figcaption>
+</figure>
+
+<p>保存场景或项目以保存时间轴资源和无限剪辑。Timeline Editor 窗口将无限剪辑中的关键动画保存为源资源。源资源命名为“Recorded”并在项目中保存为时间轴资源的子项。</p>
+
+<figure>
+<img src="../uploads/Main/timeline_workflow_clip_in_project.png" alt="录制的剪辑在项目中保存在时间轴资源的下面">
+<figcaption>录制的剪辑在项目中保存在时间轴资源的下面</figcaption>
+</figure>
+
+<p>对于每个额外录制的无限剪辑，每个剪辑从“(1)”开始连续编号。例如，在包含三个录制无限剪辑的时间轴资源中，这些剪辑将命名为“Recorded”、“Recorded (1)”和“Recorded (2)”。如果删除某个时间轴资源，则也会删除其子剪辑。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2017–08–10 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="TimelineWorkflowCreatingAssetInstance.html"></a></span><div class="tip">创建时间轴资源和时间轴实例</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="TimelineWorkflowConvertingInfiniteClip.html"></a></span><div class="tip">将无限剪辑转换为动画剪辑</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

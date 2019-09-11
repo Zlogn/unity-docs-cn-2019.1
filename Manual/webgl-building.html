@@ -1,0 +1,342 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="构建和运行 WebGL 项目 - Unity Manual">
+<title>构建和运行 WebGL 项目 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/WebGLBuilding-BuildPlayerOptions.png">
+<meta name="description" content="构建 WebGL 项目时，Unity 会创建一个包含以下文件的文件夹：">
+<meta property="og:description" content="构建 WebGL 项目时，Unity 会创建一个包含以下文件的文件夹：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'webgl-building';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/webgl-building.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/webgl-building.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/webgl-building.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/webgl-building.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/webgl-building.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/webgl-building.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/webgl-building.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/webgl-building.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/webgl-building.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/webgl-building.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/webgl-building.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/webgl-building.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/webgl-building.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/webgl-building.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/webgl-building.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/webgl-building.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/webgl-building.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/webgl-building.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/webgl-building.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/webgl-building.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/webgl-building.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/webgl-building.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/webgl-building.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/webgl-building.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
+<li><a href="webgl.html">WebGL</a></li>
+<li><a href="webgl-gettingstarted.html">WebGL 开发入门</a></li>
+<li>构建和运行 WebGL 项目</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="webgl-browsercompatibility.html"></a></span><div class="tip">WebGL 浏览器兼容性</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="webgl-deploying.html"></a></span><div class="tip">WebGL：部署压缩构建</div>
+</div>
+</div></div>
+<h1>构建和运行 WebGL 项目</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><a href="PublishingBuilds.html">构建</a> WebGL 项目时，Unity 会创建一个包含以下文件的文件夹：</p>
+
+<ul>
+<li><p><em>index.html</em> 文件，浏览器可通过导航该文件来加载内容。</p></li>
+<li><p>包含构建徽标、加载进度条和其他模板资源的 <em>TemplateData</em> 文件夹（使用默认模板进行构建时）。构建模板文件夹通常用于在加载时自定义构建的外观。有关更多信息，请参阅用户手册的 <a href="webgl-templates.html">WebGL 模板</a>页面。</p></li>
+<li><p>包含生成的构建输出文件的 <em>Build</em> 文件夹。</p></li>
+</ul>
+
+<p><em>Build</em> 文件夹包含以下文件（_MyProject_ 文件名表示项目的名称）。</p>
+
+<ul>
+<li><p><em>UnityLoader.js</em> JavaScript 文件，包含在网页中加载 Unity 内容所需的代码。</p></li>
+<li><p><em>MyProject.json</em> JSON 文件，包含有关构建的所有必要信息。在实例化构建时，此 JSON文件 的 URL 作为 Unity Loader 的参数提供。JSON 文件包含所有其他构建文件的 URL，这些 URL 可以是绝对 URL 或相对于 JSON 文件位置的 URL。JSON 可能包含其他模块参数，例如启动画面样式或内存堆的初始大小。</p></li>
+<li><p>A <em>MyProject.wasm.framework.unityweb</em> file containing the JavaScript runtime and plugins.</p></li>
+<li><p>A <em>MyProject.wasm.code.unityweb</em> file containing the WebAssembly binary.</p></li>
+<li><p>A <em>MyProject.wasm.memory.unityweb</em> file containing a binary image to initialize the heap memory for your player. Note that this file is only generated for multi-threaded builds.</p></li>
+<li><p><em>MyProject.data.unityweb</em> 文件，包含资源数据和场景。</p></li>
+</ul>
+
+<p>The contents of the <em>*.unityweb</em> files in the <em>Build</em> folder may be compressed with gzip, brotli or may be uncompressed, depending on the <strong>Publishing Settings</strong>. See documentation on <a href="webgl-deploying.html">deploying compressed builds</a> for more information</p>
+
+<p>可通过打开 <em>index.html</em> 文件直接在大多数浏览器中查看 WebGL 播放器。但是，出于安全考虑，Chrome 会对从本地文件 URL 打开的脚本设置限制，因此该方法在 Chrome 中无效。要绕开 Chrome 的限制问题，请使用 Unity 的 <strong>Build &amp; Run</strong> 命令 (<strong>File</strong> &gt; <strong>Build &amp; Run</strong>)；然后，该文件将临时托管在本地 Web 服务器中，并从本地主机 URL 打开。或者，可使用 <code>--allow-file-access-from-files</code> 命令行选项运行 Chrome；该选项允许从本地文件 URL 加载内容。在 PC 上必须符合此条件才能执行构建。</p>
+
+<p>在某些服务器上，需要以显式方式将 <em>.unityweb</em> 文件设置为可访问状态，因为服务器需要将这些文件提供给客户端。</p>
+
+<h2>构建播放器选项</h2>
+
+<p>可通过 <strong>Build Settings</strong> 对话框访问 WebGL 选项。（菜单：__File__ &gt; <strong>Build Settings…</strong>）。在该对话框中，从 <strong>Platform</strong> 列表中选择 <strong>WebGL__，然后选择 </strong>Player Settings…__。</p>
+
+<figure>
+<img src="../uploads/Main/WebGLBuilding-BuildPlayerOptions.png" alt="">
+</figure>
+
+<h3>Development Build</h3>
+
+<p>选中 <strong>Development Build</strong> 复选框时，Unity 会生成一个支持性能分析器的开发版本和一个用于查看错误的开发控制台。此外，开发版本不会压缩内容（即内容不会<a href="https://en.wikipedia.org/wiki/Minification_%28programming%29">缩小</a>）；它们以可读的格式维护 JavaScript，保留了函数名称，因此可获取有用的错误堆栈跟踪。但请注意，这意味着开发版本非常庞大，而且大到无法分发。</p>
+
+<h3>Autoconnect Profiler</h3>
+
+<p>仅当选中 <strong>Development Build</strong> 复选框时，才能启用此选项。选中 <strong>Autoconnect Profiler</strong> 选项可分析 Unity WebGL 内容的性能。对于 WebGL，无法像在其他平台上那样将<a href="ProfilerWindow.html">性能分析器</a>连接到正在运行的构建，因此必须使用此选项将内容连接到 Editor。这是因为性能分析器连接是使用 WebGL 上的 WebSockets 处理的，但 Web 浏览器仅允许来自内容的传出连接。</p>
+
+<h2>播放器设置 (Player settings)</h2>
+
+<p>WebGL has some additional options in the <strong>Player</strong> settings (menu: <strong>Edit</strong> ^gt; <strong>Project Settings</strong>, then select the <strong>Player</strong> category).</p>
+
+<h3>Other Settings</h3>
+
+<figure>
+<img src="../uploads/Main/WebGLBuilding-OtherSettings.png" alt="">
+</figure>
+
+<h4>Strip Engine Code</h4>
+
+<p>打开 <strong>Other Settings</strong> 访问 <strong>Strip Engine Code</strong> 选项。默认情况下会选中此选项以启用 WebGL 的代码剥离。选中此选项后，Unity 不会包含未使用的任何类的代码。例如，如果不使用任何物理组件或函数，则会从构建中删除整个物理引擎。有关更多详细信息，请参阅下面的“剥离”部分。</p>
+
+<h3>Publishing Settings</h3>
+
+<figure>
+<img src="../uploads/Main/WebGLBuilding-PublishingSettings.png" alt="">
+</figure>
+
+<h4>Memory Size</h4>
+
+<p>Open <strong>Publishing Settings</strong> to access the <strong>Memory Size</strong> field. Here, you can specify how much memory (in MB) the content should allocate for its heap. If this value is too low, an “out of memory” error message appears. This means your loaded content and Scenes cannot fit into the available memory. However if this value is too high, your content might fail to load in some browsers or on some machines, because the browser might not have enough available memory to allocate the requested heap size. For more details, see documentation on <a href="webgl-memory.html">WebGL memory usage</a>.</p>
+
+<h4>Enable Exceptions</h4>
+
+<p>打开 <strong>Publishing Settings</strong> 访问 <strong>Enable Exceptions</strong>。<strong>Enable Exceptions</strong> 允许指定在运行时如何处理意外的代码行为（通常视为错误）。该设置具有以下选项：</p>
+
+<ul>
+<li>__None__：如果不需要任何异常支持，请选择此选项。此选项可提供最佳性能和最小构建。使用此选项，抛出的任何异常都会导致内容因该设置中的错误而停止。</li>
+<li>__Explicitly Thrown Exceptions Only__（默认设置）：选择此选项可捕获从脚本中的 <code>throw</code> 语句显式指定的异常，并可确保调用 <code>finally</code> 代码块。请注意，选择此选项会使脚本中生成的 JavaScript 代码变得更长且更慢；仅当脚本是项目的主要瓶颈时，这才会成为问题。</li>
+<li>__Full Without Stacktrace__：选择此选项可捕获：
+
+<ul>
+<li>从脚本中的 <code>throw</code> 语句显式指定的异常（与 <em>Explicitly Thrown Exceptions Only</em> 选项一样）</li>
+<li>Null 引用</li>
+<li>越界数组访问</li>
+</ul>
+</li>
+<li>__Full With Stacktrace__：此选项与上面的选项类似，但也捕获堆栈跟踪。Unity 通过在代码中嵌入对异常检查来生成这些异常，因此该选项会降低性能并增加浏览器内存使用量。仅用于调试，并始终在 64 位浏览器中进行测试。</li>
+</ul>
+
+<p>选择 <strong>Publishing Settings</strong> 访问 <strong>Data Caching</strong>。
+选择此选项可启用对播放器数据的自动本地缓存。此选项将资源存储位置设置为浏览器的 IndexedDB 数据库中的本地缓存，这样在后续的内容运行中不必再次下载资源。请注意，不同的浏览器在允许 IndexedDB 存储方面有不同的规则；浏览器可能会要求用户提供存储数据的权限，并且构建大小可能超出浏览器定义的大小限制。</p>
+
+<h2>分发大小</h2>
+
+<p>以 WebGL 为目标进行发布时，必须保持较低的构建大小，让用户在内容启动之前等待合理的下载时间，这一点很重要。有关减小资源大小的一般提示，请参阅<a href="ReducingFilesize.html">减小构建文件大小</a>相关文档。</p>
+
+<h3>WebGL 特有的提示和技巧</h3>
+
+<ul>
+<li><p>在<a href="class-TextureImporter.html">纹理导入器 (Texture Importer)</a> 中为所有压缩纹理指定 <strong>Crunch</strong> 纹理压缩格式。</p></li>
+<li><p>不要部署开发版本；它们不会经过压缩或<a href="https://en.wikipedia.org/wiki/Minification_%28programming%29">缩小</a>，因此文件大小要大得多。</p></li>
+<li><p>Open the <strong>Player</strong> settings (menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Player</strong> category), open the <strong>Publishing Settings</strong> panel and set <strong>Enable Exceptions</strong> to <strong>None</strong> if you don’t need exceptions in your build.</p></li>
+<li><p>Open the <strong>Player</strong> settings (menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Player</strong> category), open the <strong>Other Settings</strong> panel, and enable <strong>Strip Engine Code</strong> to ensure an efficient build.</p></li>
+<li><p>使用第三方托管的 dll 时要小心，因为它们可能包含大量依赖项，所以会显著增加生成的代码大小。</p></li>
+</ul>
+
+<p>If you make a release build, Unity compresses the build output files according to the <strong>Compression Format</strong> selected in the <strong>Publishing Settings</strong> panel of the WebGL <strong>Player</strong> settings. </p>
+
+<figure>
+<img src="../uploads/Main/WebGLBuilding-CompressionFormat.png" alt="">
+</figure>
+
+<p>有关这些选项的更多信息以及如何使用它们发布构建，请参阅有关<a href="webgl-deploying.html">部署压缩构建</a>的文档。</p>
+
+<h2>AssetBundle</h2>
+
+<p>由于所有资源数据都需要在内容启动之前预先下载，因此应考虑将资源从主数据文件中移出到 <a href="AssetBundlesIntro.html">AssetBundle</a>中。这样，就能为内容创建一个小型加载场景，确保快速加载。然后，当用户继续浏览内容时，将按需动态加载资源。AssetBundle 还有助于进行<a href="webgl-memory.html">资源数据内存</a>管理：可通过调用 <a href="../ScriptReference/AssetBundle.Unload.html">AssetBundle.Unload</a> 从内存中卸载掉不再需要的资源的资源数据。</p>
+
+<p>在 WebGL 平台上使用 AssetBundle 时的注意事项：</p>
+
+<ul>
+<li><p>在 AssetBundle 中使用未在主构建中使用的类类型时，Unity 可能会从构建中剥离这些类的代码。尝试从 AssetBundle 加载资源时，这可能会导致失败。请使用 <a href="../ScriptReference/BuildPlayerOptions-assetBundleManifestPath.html">BuildPlayerOptions.assetBundleManifestPath</a> 修复该问题，或参阅下面有关<em><a href="#Stripping">剥离</a></em>的部分以了解其他选项。</p></li>
+<li><p>WebGL 不支持线程，但 http 下载内容仅在下载完成后才可用。因此，在下载完成时，Unity WebGL 构建需要在主线程上解压缩 AssetBundle 数据，而这会阻止主线程。为避免这种中断，<a href="AssetBundles-Building.html">LZMA AssetBundle 压缩</a>不可用于 WebGL 上的 AssetBundle。此情况下使用 LZ4 对 AssetBundle 进行压缩，这种压缩格式可非常高效地按需进行解压缩。如果所需的压缩大小比 LZ4 能够提供的压缩大小更小，可将 Web 服务器配置为对 AssetBundle 使用 gzip 或 Brotli 压缩（基于 LZ4 压缩）。请参阅有关<a href="webgl-deploying.html">部署压缩构建</a>的文档以详细了解如何执行此操作。</p></li>
+<li><p>WebGL 支持通过 <a href="../ScriptReference/WWW.LoadFromCacheOrDownload.html">WWW.LoadFromCacheOrDownload</a> 对 AssetBundle 进行缓存，可使用来自浏览器的 IndexedDB API 在用户的计算机上实现缓存。请注意，IndexedDB 可能对某些浏览器提供的支持有限，并且浏览器可能会请求用户授权将数据存储在磁盘上。请参阅有关 <a href="webgl-browsercompatibility.html">WebGL 浏览器兼容性</a>的文档以了解更多信息。</p></li>
+</ul>
+
+<p><a name="Stripping"></a> </p>
+
+<h2><strong>剥离</strong></h2>
+
+<p>Unity removes all unused code from your build by default. You can change this via the <strong>Player</strong> settings (menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Player</strong> category): Select the <strong>Other Settings</strong> panel to access the <strong>Strip Engine Code</strong> option. It is better to build with stripping enabled.</p>
+
+<p>启用代码剥离后，Unity 扫描会项目以查找是否使用了 <code>UnityObject</code> 派生的任何类（通过在脚本代码中或在场景中的序列化数据中引用）。然后从构建中删除所有未使用这些类的 Unity 子系统。这样可减少构建代码，从而减小下载和要解析的代码（因此代码运行速度更快，且占用的内存更少）。</p>
+
+<h2>代码剥离的问题</h2>
+
+<p>如果代码剥离时剥离了实际需要的代码，可能会导致项目出现问题。例如，如果在运行时加载的 AssetBundle 所包含的类未包括在主构建中，因此从项目中删除了这些 AssetBundle，这种情况下就可能出问题。发生这种情况时，浏览器的 JavaScript 控制台中会显示错误消息（随后可能会显示更多错误）。例如：</p>
+
+<p><code>Could not produce class with ID XXX</code></p>
+
+<p>要针对这些错误进行故障排除，请在<a href="ClassIDReference.html">类 ID 参考</a>中查找该 ID（例如上例中的 <code>XXX</code>），查看哪个类正尝试创建实例。在这种情况下，可强制 Unity 在构建中包含该类的代码，方法是向脚本或向场景添加对该类的引用，或者在项目中添加 <em>link.xml</em> 文件。</p>
+
+<p>下面的示例确保了 Collider 类（因此也包括 Physics 模块）在项目中得到保留。可将此 XML 代码添加到名为 <em>link.xml</em> 的文件，然后将该文件放入 <em>Assets</em> 文件夹。</p>
+
+<pre><code>&lt;linker&gt;
+    &lt;assembly fullname="UnityEngine"&gt;
+        &lt;type fullname="UnityEngine.Collider" preserve="all"/&gt;
+    &lt;/assembly&gt;
+&lt;/linker&gt;
+
+</code></pre>
+
+<p>如果怀疑剥离导致构建出现问题，还可尝试在测试期间禁用 <strong>Strip Engine Code</strong> 选项。</p>
+
+<p>通过查看构建中包含哪些模块和类可以优化项目的剥离功能，但 Unity 未提供方便的方法来进行此操作。不过，若要了解包含的类和模块的概况，可在进行构建之后查看生成的文件 <em>Temp/StagingArea/Data/il2cppOutput/UnityClassRegistration.cpp</em>。</p>
+
+<p>请注意，__Strip Engine Code__ 选项仅影响 Unity 引擎代码。IL2CPP 始终会从托管的 dll 和脚本中剥离字节代码。需要通过反射（而不是通过代码中的静态引用）来动态引用托管的类型时，这可能会导致问题。如果需要通过反射来访问类型，可能还需要设置 <em>link.xml</em> 文件才能保留这些类型。请参阅有关 <a href="iphone-playerSizeOptimization.html">iOS 构建大小优化</a>的文档页面以了解关于 <em>link.xml</em> 文件的更多信息。</p>
+
+<h2>移动构建输出文件</h2>
+
+<p>要更改 <em>Build</em> 文件夹的位置，请在 index.html 文件中更改 JSON 文件的 URL（_UnityLoader.instantiate_ 的第二个参数）。</p>
+
+<p>To change the location of the files inside the Build folder, change their URLs (that is, <em>dataUrl</em>, <em>wasmCodeUrl</em>, <em>wasmMemoryUrl</em>, and <em>wasmFrameworkUrl</em>) in the JSON file. All non-absolute URLs in the JSON file are treated as URLs relative to the location of the JSON file. You can specify URLs on external servers for these if you want to host your files on a content distribution network (CDN), but you need to make sure that the hosting server has enabled Cross Origin Resource Sharing (CORS) for this to work. See the manual page on <a href="webgl-networking.html">WebGL networking</a> for more information about CORS.</p>
+
+<h2>增量构建</h2>
+
+<p>IL2CPP 为项目生成的 C++ 代码采用增量编译方式；也就是说，只有自上次构建以来生成的已更改的 C++ 代码才会再次编译。未更改的源代码将重复使用先前构建所生成的相同目标文件。用于增量式 C++ 构建的目标文件存储在 Unity 项目的 <em>Library/il2cpp_cache</em> 目录中。</p>
+
+<p>要对生成的 C++ 代码执行从头开始的全新构建而不使用增量编译，请删除 Unity 项目中的 <em>Library/il2cpp_cache</em> 目录。请注意，如果 Unity Editor 版本与以前的 WebGL 构建版本不同，Unity 会自动从头开始执行全新的构建。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–10–18 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 Unity 2017.3 中添加了 Full Without Stacktrace</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="webgl-browsercompatibility.html"></a></span><div class="tip">WebGL 浏览器兼容性</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="webgl-deploying.html"></a></span><div class="tip">WebGL：部署压缩构建</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

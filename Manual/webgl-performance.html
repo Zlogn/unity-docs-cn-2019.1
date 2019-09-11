@@ -1,0 +1,199 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="WebGL 性能注意事项 - Unity Manual">
+<title>WebGL 性能注意事项 - Unity Manual</title>
+<meta name="description" content="这个问题有点难以回答，因为取决于许多因素。">
+<meta property="og:description" content="这个问题有点难以回答，因为取决于许多因素。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'webgl-performance';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/webgl-performance.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/webgl-performance.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/webgl-performance.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/webgl-performance.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/webgl-performance.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/webgl-performance.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/webgl-performance.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/webgl-performance.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/webgl-performance.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/webgl-performance.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/webgl-performance.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/webgl-performance.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/webgl-performance.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/webgl-performance.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/webgl-performance.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/webgl-performance.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/webgl-performance.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/webgl-performance.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/webgl-performance.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/webgl-performance.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/webgl-performance.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/webgl-performance.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/webgl-performance.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/webgl-performance.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
+<li><a href="webgl.html">WebGL</a></li>
+<li><a href="webgl-gettingstarted.html">WebGL 开发入门</a></li>
+<li>WebGL 性能注意事项</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="webgl-audio.html"></a></span><div class="tip">使用 WebGL 中的音频</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="webgl-memory.html"></a></span><div class="tip">Memory in WebGL</div>
+</div>
+</div></div>
+<h1>WebGL 性能注意事项</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>可在 WebGL 上期待什么样的性能？</h2>
+
+<p>这个问题有点难以回答，因为取决于许多因素。</p>
+
+<p>通常情况下，在 GPU 方面，可期待获得接近本机应用程序的性能，因为 WebGL 图形 API 使用 GPU 进行硬件加速渲染：将 WebGL API 调用和着色器转换为操作系统图形 API（通常为 Windows 上的 DirectX 或者 Mac 或 Linux 上的 OpenGL）只需要少量开销。</p>
+
+<p>在 CPU 方面，所有代码都将转换为 asm.js JavaScript。因此，可期待的性能情况很大程度上取决于所使用的 Web 浏览器的 JavaScript 引擎，目前在这方面存在着一些非常显著的差异。在撰写本文时（2015 年 11 月），Microsoft Edge 和 Mozilla Firefox 在 Unity 代码方面可提供最佳性能，因为目前只有这些浏览器利用 asm.js 规范针对这种情况使用优化的 JavaScript 代码 AOT 编译路径；在许多编程基准方面与本机代码相比，性能下降幅度在二分之一以内，这一系数也与我们部署到 WebGL 并在 Firefox 和 Edge 中运行的不同 Unity 内容中看到的结果相符。</p>
+
+<p>但是，还有其他一些考虑因素。目前，JavaScript 语言既不支持多线程也不支持 SIMD。因此，受益于这些功能的代码将比其他代码出现更大的减速。无法在脚本中为 WebGL 编写线程代码和 SIMD 代码，但有些引擎部分通常为多线程或经过 SIMD 优化，所以在 WebGL 上会因此降低运行性能。一个示例是蒙皮代码，这种代码既为多线程，又经过 SIMD 优化。借助 Unity 中新增的时间轴<a href="Profiler.html">性能分析器</a>，可查看 Unity 如何将工作分配到非 WebGL 平台上的不同线程。从长远来看，我们希望这些功能也可以在 WebGL 上使用。</p>
+
+<h2>影响性能的 WebGL 特有设置</h2>
+
+<p>For best performance, set the optimization level to <strong>Fastest</strong> in the Build Player dialog, and set <strong>Exception support</strong> to <strong>None</strong> in the <strong>Player</strong> settings for WebGL.</p>
+
+<h2>WebGL 性能分析</h2>
+
+<p>WebGL 支持 Unity Profiler，请参阅<a href="Profiler.html">此处</a>了解如何对其进行设置。</p>
+
+<h2>后台标签中的 WebGL 内容</h2>
+
+<p>If <strong>Run in background</strong> is enabled in the <a href="class-PlayerSettingsWebGL.html">Player settings for the WebGL platform</a>, or if you enable <a href="../ScriptReference/Application-runInBackground.html">Application.runInBackground</a>, your content continues to run when the canvas or the browser window loses focus.</p>
+
+<p>However, it should be noted that browsers may throttle content running in background tabs. If the tab with your content is not visible, your content will only be updated once a second in most browsers. Note that this will cause <a href="../ScriptReference/Time-time.html">Time.time</a> to progress slower than usual with the default settings, as the default value of <a href="../ScriptReference/Time-maximumDeltaTime.html">Time.maximumDeltaTime</a> is lower than one second.</p>
+
+<h2>限制 WebGL 性能</h2>
+
+<p>在某些情况下，可能希望以较低的帧率运行 WebGL 内容，以降低 CPU 使用率。与其他平台一样，可使用 <a href="../ScriptReference/Application-targetFrameRate.html">Application.targetFrameRate</a> API 来实现此目的。</p>
+
+<p>如果不想限制性能，请将此 API 设置为默认值 –1，而不是较高的值。如此，浏览器便可调整帧率以便在浏览器的渲染循环中实现最平滑的动画，获得的效果可能好于 Unity 尝试执行自身的主循环时序来匹配目标帧率。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="webgl-audio.html"></a></span><div class="tip">使用 WebGL 中的音频</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="webgl-memory.html"></a></span><div class="tip">Memory in WebGL</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

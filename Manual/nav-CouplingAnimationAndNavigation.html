@@ -1,0 +1,419 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="耦合动画和导航 - Unity Manual">
+<title>耦合动画和导航 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/NavAnimBlend2d.jpg">
+<meta name="description" content="本文档的目标是指导您设置人形角色的导航以使用导航系统进行移动。">
+<meta property="og:description" content="本文档的目标是指导您设置人形角色的导航以使用导航系统进行移动。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'nav-CouplingAnimationAndNavigation';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/nav-CouplingAnimationAndNavigation.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/nav-CouplingAnimationAndNavigation.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/nav-CouplingAnimationAndNavigation.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/nav-CouplingAnimationAndNavigation.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/nav-CouplingAnimationAndNavigation.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/nav-CouplingAnimationAndNavigation.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/nav-CouplingAnimationAndNavigation.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/nav-CouplingAnimationAndNavigation.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/nav-CouplingAnimationAndNavigation.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/nav-CouplingAnimationAndNavigation.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/nav-CouplingAnimationAndNavigation.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/nav-CouplingAnimationAndNavigation.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/nav-CouplingAnimationAndNavigation.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/nav-CouplingAnimationAndNavigation.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/nav-CouplingAnimationAndNavigation.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/nav-CouplingAnimationAndNavigation.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/nav-CouplingAnimationAndNavigation.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/nav-CouplingAnimationAndNavigation.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/nav-CouplingAnimationAndNavigation.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/nav-CouplingAnimationAndNavigation.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/nav-CouplingAnimationAndNavigation.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/nav-CouplingAnimationAndNavigation.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/nav-CouplingAnimationAndNavigation.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/nav-CouplingAnimationAndNavigation.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Navigation.html">导航和寻路</a></li>
+<li><a href="nav-HowTos.html">导航操作方法</a></li>
+<li>耦合动画和导航</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="nav-AgentPatrol.html"></a></span><div class="tip">在一组点之间进行代理巡逻</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityServices.html"></a></span><div class="tip">Unity 服务</div>
+</div>
+</div></div>
+<h1>耦合动画和导航</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>本文档的目标是指导您设置人形角色的导航以使用导航系统进行移动。</p>
+
+<p>我们将使用 Unity 的内置动画和导航系统以及自定义脚本来实现这一目标。</p>
+
+<p>本文假设您已熟悉 Unity 和 Mecanim 动画系统的基础知识。</p>
+
+<p>此处提供了一个示例项目，因此无需从头开始添加脚本或设置动画和动画控制器：</p>
+
+<ul>
+<li>
+<a href="../uploads/Examples/NavigationAnimation_53.zip">NavigationAnimation_53.zip</a> <em>适用于 Unity 5.3+</em>
+</li>
+</ul>
+
+<h2>创建动画控制器</h2>
+
+<p>为了获得响应迅速且多功能的动画控制器（涵盖各种动作），我们需要一组向不同方向移动的动画。有时将其称为扫射集 (strafe-set)。</p>
+
+<p>除了移动动画，我们还需要一段站立角色的动画。</p>
+
+<p>我们继续将扫射集组织在 2D 混合树中；选择混合类型：<strong>2D Simple Directional</strong>，并使用 <strong>Compute Positions &gt; Velocity XZ</strong> 放置动画</p>
+
+<p>为进行混合控制，我们添加两个浮点参数 <strong>velx</strong> 和 <strong>vely</strong>，并将它们分配给混合树。</p>
+
+<p>在这里，我们将放置 7 段奔跑动画，每段都有不同的速度。除了前进（+左/右）和后退（+左/右），我们还使用了原地奔跑的动画剪辑。后者在下面的 2D 混合图的中心位置进行了突出显示。采用原地奔跑动画有两个原因，首先，该动画可在与其他动画混合时保持奔跑风格；其次，该动画可以防止混合时出现脚滑。</p>
+
+<figure>
+<img src="../uploads/Main/NavAnimBlend2d.jpg" alt="">
+</figure>
+
+<p>然后，我们在空闲节点 (<strong>Idle</strong>) 本身中添加空闲动画剪辑。
+我们现在有两个独立动画状态，我们将它们与 2 个过渡耦合。</p>
+
+<figure>
+<img src="../uploads/Main/NavAnimStates.png" alt="">
+</figure>
+
+<p>为了控制移动状态和空闲状态之间的切换，我们添加一个布尔值控制参数 <strong>move</strong>。然后，对过渡禁用 <strong>Has Exit Time</strong> 属性。如此便可在动画期间的任何时间触发过渡。为获得快速响应的过渡，过渡时间应设置为约 0.10 秒。</p>
+
+<figure>
+<img src="../uploads/Main/NavAnimTransition.png" alt="">
+</figure>
+
+<p>现在将新创建的动画控制器放在要移动的角色上。</p>
+
+<p>按 Play 并在 <strong>Hierarchy 窗口</strong>中选择该角色。现在可在 <strong>Animator 窗口</strong>中手动控制动画值，并更改移动状态和速度。</p>
+
+<p>下一步是创建其他控制动画参数的方法。</p>
+
+<h2>导航控制</h2>
+
+<p>在角色上放置一个 <strong>NavMeshAgent</strong> 组件，调整半径和高度，并匹配角色（另外更改速度属性以匹配动画混合树中的最大速度）。</p>
+
+<p>为放入角色的场景创建导航网格。</p>
+
+<p>接下来，我们需要告诉角色要导航的目标。此设置通常与具体应用有非常大的关联性。在这里，我们选择“单击进行移动”(click to move) 行为：根据用户点击屏幕的位置，角色移动到世界中的相应点。</p>
+
+<pre><code>// ClickToMove.cs
+using UnityEngine;
+using UnityEngine.AI;
+
+[RequireComponent (typeof (NavMeshAgent))]
+public class ClickToMove : MonoBehaviour {
+    RaycastHit hitInfo = new RaycastHit();
+    NavMeshAgent agent;
+
+    void Start () {
+        agent = GetComponent&lt;NavMeshAgent&gt; ();
+    }
+    void Update () {
+        if(Input.GetMouseButtonDown(0)) {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray.origin, ray.direction, out hitInfo))
+                agent.destination = hitInfo.point;
+        }
+    }
+}
+</code></pre>
+
+<p>现在按下 Play，然后在场景中单击，便会看到角色在场景中移动。但是，动画与动作完全不符。我们需要将代理的状态和速度传达给动画控制器。</p>
+
+<p>为了将代理的速度和状态信息传输到动画控制器，我们将添加另一个脚本。</p>
+
+<pre><code>// LocomotionSimpleAgent.cs
+using UnityEngine;
+using UnityEngine.AI;
+
+[RequireComponent (typeof (NavMeshAgent))]
+[RequireComponent (typeof (Animator))]
+public class LocomotionSimpleAgent : MonoBehaviour {
+    Animator anim;
+    NavMeshAgent agent;
+    Vector2 smoothDeltaPosition = Vector2.zero;
+    Vector2 velocity = Vector2.zero;
+
+    void Start ()
+    {
+        anim = GetComponent&lt;Animator&gt; ();
+        agent = GetComponent&lt;NavMeshAgent&gt; ();
+        // 不要自动更新位置
+        agent.updatePosition = false;
+    }
+    
+    void Update ()
+    {
+        Vector3 worldDeltaPosition = agent.nextPosition - transform.position;
+
+        // 将"worldDeltaPosition"映射到局部空间
+        float dx = Vector3.Dot (transform.right, worldDeltaPosition);
+        float dy = Vector3.Dot (transform.forward, worldDeltaPosition);
+        Vector2 deltaPosition = new Vector2 (dx, dy);
+
+        // 对 deltaMove 进行低通滤波
+        float smooth = Mathf.Min(1.0f, Time.deltaTime/0.15f);
+        smoothDeltaPosition = Vector2.Lerp (smoothDeltaPosition, deltaPosition, smooth);
+
+        // 如果时间推进，则更新速度
+        if (Time.deltaTime &gt; 1e-5f)
+            velocity = smoothDeltaPosition / Time.deltaTime;
+
+        bool shouldMove = velocity.magnitude &gt; 0.5f &amp;&amp; agent.remainingDistance &gt; agent.radius;
+
+        // 更新动画参数
+        anim.SetBool("move", shouldMove);
+        anim.SetFloat ("velx", velocity.x);
+        anim.SetFloat ("vely", velocity.y);
+
+        GetComponent&lt;LookAt&gt;().lookAtTargetPosition = agent.steeringTarget + transform.forward;
+    }
+
+    void OnAnimatorMove ()
+    {
+        // 将位置更新到代理位置
+        transform.position = agent.nextPosition;
+    }
+}
+</code></pre>
+
+<p>对于此脚本，需要进行一点说明。此脚本放置在角色上，而角色已附加 <strong>Animator</strong> 和 <strong>NavMeshAgent</strong> 组件以及上面的 click to move 脚本。</p>
+
+<p>首先，脚本告诉代理不要自动更新角色位置。我们处理脚本中最后的位置更新。方向由代理进行更新。</p>
+
+<p>通过读取代理速度来控制动画混合。该速度转换为相对速度（基于角色方向），然后经过平滑。然后，转换后的水平速度分量将传递到 <strong>Animator</strong>，另外，空闲状态和移动状态之间的状态切换由速度（即速度幅度）进行控制。</p>
+
+<p>在 <code>OnAnimatorMove()</code> 回调中，我们更新角色的位置以便与 <strong>NavMeshAgent</strong> 匹配。</p>
+
+<p>再次播放场景显示动画在最大限度上与动作匹配。</p>
+
+<h2>提高导航角色的质量</h2>
+
+<p>为了提高动画和导航角色的质量，我们将探索几个可能性。</p>
+
+<h3>注视</h3>
+
+<p>让角色注视和转向兴趣点对于表现注意力和期待效果十分重要。我们将使用动画系统 lookat API。因此需要另一个脚本。</p>
+
+<pre><code>// LookAt.cs
+using UnityEngine;
+using System.Collections;
+
+[RequireComponent (typeof (Animator))]
+public class LookAt : MonoBehaviour {
+    public Transform head = null;
+    public Vector3 lookAtTargetPosition;
+    public float lookAtCoolTime = 0.2f;
+    public float lookAtHeatTime = 0.2f;
+    public bool looking = true;
+
+    private Vector3 lookAtPosition;
+    private Animator animator;
+    private float lookAtWeight = 0.0f;
+
+    void Start ()
+    {
+        if (!head)
+        {
+            Debug.LogError("No head transform - LookAt disabled");
+            enabled = false;
+            return;
+        }
+        animator = GetComponent&lt;Animator&gt; ();
+        lookAtTargetPosition = head.position + transform.forward;
+        lookAtPosition = lookAtTargetPosition;
+    }
+
+    void OnAnimatorIK ()
+    {
+        lookAtTargetPosition.y = head.position.y;
+        float lookAtTargetWeight = looking ? 1.0f : 0.0f;
+
+        Vector3 curDir = lookAtPosition - head.position;
+        Vector3 futDir = lookAtTargetPosition - head.position;
+
+        curDir = Vector3.RotateTowards(curDir, futDir, 6.28f*Time.deltaTime, float.PositiveInfinity);
+        lookAtPosition = head.position + curDir;
+
+        float blendTime = lookAtTargetWeight &gt; lookAtWeight ? lookAtHeatTime : lookAtCoolTime;
+        lookAtWeight = Mathf.MoveTowards (lookAtWeight, lookAtTargetWeight, Time.deltaTime/blendTime);
+        animator.SetLookAtWeight (lookAtWeight, 0.2f, 0.5f, 0.7f, 0.5f);
+        animator.SetLookAtPosition (lookAtPosition);
+    }
+}
+</code></pre>
+
+<p>将该脚本添加到角色，并将 head 属性分配给角色变换层级视图中的 head 变换。LookAt 脚本没有导航控制的概念；所以为了控制注视位置，我们回到 <strong>LocomotionSimpleAgent.cs</strong> 脚本，并添加几行代码来控制注视。在 <code>Update()</code> 末尾添加：</p>
+
+<pre><code>        LookAt lookAt = GetComponent&lt;LookAt&gt; ();
+                if (lookAt)
+                    lookAt.lookAtTargetPosition = agent.steeringTarget + transform.forward;
+</code></pre>
+
+<p>这样就会告诉 <strong>LookAt</strong> 脚本将兴趣点设置为沿路径的大致下一个角点，或者如果没有角落，设置为路径的末端。</p>
+
+<p>自己尝试一下。</p>
+
+<h3>使用导航的动画驱动角色</h3>
+
+<p>到目前为止，角色完全由代理指定的位置控制。这确保了对其他角色和障碍物的躲避直接转换为角色位置。但是，如果动画未跟上建议的速度，则可能导致脚滑现象。在这里，我们将稍微放松一下对角色的约束。大体上，我们将用躲避质量换取动画质量。</p>
+
+<p>将 <strong>LocomotionSimpleAgent.cs</strong> 脚本上的 <code>OnAnimatorMove()</code> 回调行替换为以下代码</p>
+
+<pre><code>    void OnAnimatorMove ()
+        {
+            // 根据动画移动情况使用导航表面高度来更新位置
+            Vector3 position = anim.rootPosition;
+            position.y = agent.nextPosition.y;
+            transform.position = position;
+        }
+</code></pre>
+
+<p>尝试运行此代码时，您可能会注意到，角色现在可以游离于代理位置（绿色线框圆柱体）。您可能需要限制该角色动画游离问题。为此，可将代理拉向角色，或者将角色拉向代理位置。在 <strong>LocomotionSimpleAgent.cs</strong> 脚本上的 <code>Update()</code> 方法末尾添加以下代码。</p>
+
+<pre><code>        // 将角色拉向代理
+                if (worldDeltaPosition.magnitude &gt; agent.radius)
+                    transform.position = agent.nextPosition - 0.9f*worldDeltaPosition;
+</code></pre>
+
+<p>或者，如果希望代理跟随角色，请添加以下代码。</p>
+
+<pre><code>        // 将代理拉向角色
+                if (worldDeltaPosition.magnitude &gt; agent.radius)
+                    agent.nextPosition = transform.position + 0.9f*worldDeltaPosition;
+</code></pre>
+
+<p>具体哪种方法最合适取决于具体的用例。</p>
+
+<h2>结论</h2>
+
+<p>我们已经设置一个使用导航系统移动的角色并相应地设置了动画。调整混合时间数字、注视权重等可以改善视觉效果，也是进一步探索此设置的好方法。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="nav-AgentPatrol.html"></a></span><div class="tip">在一组点之间进行代理巡逻</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityServices.html"></a></span><div class="tip">Unity 服务</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

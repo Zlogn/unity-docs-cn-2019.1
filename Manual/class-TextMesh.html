@@ -1,0 +1,267 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="文本网格 - Unity Manual">
+<title>文本网格 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/Inspector-TextMesh.png">
+<meta name="description" content="文本网格 (Text Mesh) 可生成显示文本字符串的 3D 几何体。">
+<meta property="og:description" content="文本网格 (Text Mesh) 可生成显示文本字符串的 3D 几何体。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-TextMesh';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-TextMesh.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-TextMesh.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-TextMesh.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-TextMesh.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-TextMesh.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-TextMesh.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-TextMesh.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-TextMesh.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-TextMesh.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-TextMesh.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-TextMesh.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-TextMesh.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-TextMesh.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-TextMesh.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-TextMesh.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-TextMesh.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-TextMesh.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-TextMesh.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-TextMesh.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-TextMesh.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-TextMesh.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-TextMesh.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-TextMesh.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-TextMesh.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="comp-MeshGroup.html">网格组件</a></li>
+<li>文本网格</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-SkinnedMeshRenderer.html"></a></span><div class="tip">带蒙皮的网格渲染器 (Skinned Mesh Renderer)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-TextAsset.html"></a></span><div class="tip">文本资源</div>
+</div>
+</div></div>
+<h1>文本网格</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><strong>文本网格 (Text Mesh)</strong> 可生成显示文本字符串的 3D 几何体。</p>
+
+<figure>
+<img src="../uploads/Main/Inspector-TextMesh.png" alt="">
+</figure>
+
+<p>可通过 <strong>Component &gt; Mesh &gt; Text Mesh</strong> 创建新的文本网格。</p>
+
+<h2>属性</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Text</strong></td>
+	<td style="text-align:left;">要渲染的文本</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Offset Z</strong></td>
+	<td style="text-align:left;">文本在绘制时应从 transform.position.z 偏移多远</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Character Size</strong></td>
+	<td style="text-align:left;">每个字符的大小（此设置会缩放整个文本。）</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Line Spacing</strong></td>
+	<td style="text-align:left;">文本的行间距。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Anchor</strong></td>
+	<td style="text-align:left;">文本的哪个点共享变换位置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Alignment</strong></td>
+	<td style="text-align:left;">如何对齐文本行（选项包括 Left、Right、Center）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Tab Size</strong></td>
+	<td style="text-align:left;">为制表符“&amp;#92;t”字符插入的空格数。这是“空格键”字符偏移的倍数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Font Size</strong></td>
+	<td style="text-align:left;">字体的大小。此设置可覆盖动态字体的大小。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Font Style</strong></td>
+	<td style="text-align:left;">字体的渲染样式。字体需要标记为动态。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Rich Text</strong></td>
+	<td style="text-align:left;">选择此项后将在渲染文本时启用标签处理。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Font</strong></td>
+	<td style="text-align:left;">渲染文本时使用的 <a href="class-Font.html">TrueType 字体</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Color</strong></td>
+	<td style="text-align:left;">渲染文本时使用的全局颜色。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>详细信息</h2>
+
+<p>文本网格可用于渲染道路标志、涂鸦等。文本网格将文本放置在 3D 场景中。要为 GUI 制作通用的 2D 文本，请改用 <a href="class-GUIText.html">GUI 文本 (GUI Text)</a> 组件。</p>
+
+<p>请按照以下步骤使用自定义字体创建文本网格：</p>
+
+<p>1.将 TrueType 字体（<strong>.ttf</strong> 文件）从资源管理器 (Windows) 或 Finder (OS X) 拖入 <strong>Project 视图__中，从而导入该字体。
+1.在 Project 视图中选择导入的字体。
+1.选择 </strong>GameObject &gt; Create Other &gt; 3D Text<strong>。
+您现在已经使用自定义的 TrueType 字体创建了文本网格。接下来可使用 </strong>Scene 视图__的__变换__控件来缩放和移动该文本。</p>
+
+<p><strong>注意：</strong>如果要更改文本网格的字体，需要设置该组件的字体属性，并将字体材质的纹理设置为正确的字体纹理。为此，可使用字体资源的折叠三角形来定位此纹理。如果忘记设置纹理，网格中的文本将显示为块状且未对齐。</p>
+
+<h2>提示</h2>
+
+<ul>
+<li>可从 <a href="http://www.1001freefonts.com/fonts/afonts.htm">1001freefonts.com</a> 下载免费的 TrueType 字体（可下载 Windows 字体，因为其中包含 TrueType 字体）。</li>
+<li>如果要编写 <strong>Text</strong> 属性的脚本，可通过在字符串中插入转义字符“&amp;#92;n”添加换行。</li>
+<li>文本网格可使用简单的标记进行样式设置。请参阅<a href="StyledText.html">带样式的文本</a>页面以了解更多详细信息。</li>
+<li>Unity 中的字体在渲染时首先将字体字形渲染到纹理贴图中。如果字体大小设置得太小，这些字体纹理将显示为块状。由于文本网格资源是使用四边形渲染的，因此如果文本网格和字体纹理的大小不同，则文本网格可能看起来是错误的。</li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-SkinnedMeshRenderer.html"></a></span><div class="tip">带蒙皮的网格渲染器 (Skinned Mesh Renderer)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-TextAsset.html"></a></span><div class="tip">文本资源</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

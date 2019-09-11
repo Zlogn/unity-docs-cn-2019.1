@@ -1,0 +1,287 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="升级到 Unity 4.0 - Unity Manual">
+<title>升级到 Unity 4.0 - Unity Manual</title>
+<meta name="description" content="Unity 4.0 更改了游戏对象活动状态的处理方式。游戏对象的活动状态现在会由子游戏对象继承，因此任何非活动游戏对象也会导致其子项处于非活动状态。我们相信新行为比旧行为更合理，而且应该始终如此。此外，即将推出的新 GUI 系统在很大程度上取决于新的 4.0 行为，没有它就不可能实现。不幸的是，这可能需要执行一些工作来修复现有项目以便使用新的 Unity 4.0 行为，更改如下：">
+<meta property="og:description" content="Unity 4.0 更改了游戏对象活动状态的处理方式。游戏对象的活动状态现在会由子游戏对象继承，因此任何非活动游戏对象也会导致其子项处于非活动状态。我们相信新行为比旧行为更合理，而且应该始终如此。此外，即将推出的新 GUI 系统在很大程度上取决于新的 4.0 行为，没有它就不可能实现。不幸的是，这可能需要执行一些工作来修复现有项目以便使用新的 Unity 4.0 行为，更改如下：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UpgradeGuide3540';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UpgradeGuide3540.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UpgradeGuide3540.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UpgradeGuide3540.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UpgradeGuide3540.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UpgradeGuide3540.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UpgradeGuide3540.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UpgradeGuide3540.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UpgradeGuide3540.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UpgradeGuide3540.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UpgradeGuide3540.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UpgradeGuide3540.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UpgradeGuide3540.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UpgradeGuide3540.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UpgradeGuide3540.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UpgradeGuide3540.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UpgradeGuide3540.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UpgradeGuide3540.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UpgradeGuide3540.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UpgradeGuide3540.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UpgradeGuide3540.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UpgradeGuide3540.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UpgradeGuide3540.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UpgradeGuide3540.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UpgradeGuide3540.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="UpgradeGuides.html">升级指南</a></li>
+<li>升级到 Unity 4.0</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide5-Misc.html"></a></span><div class="tip">Unity 5.0 的其他升级注意事项</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide3435.html"></a></span><div class="tip">升级到 Unity 3.5</div>
+</div>
+</div></div>
+<h1>升级到 Unity 4.0</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>游戏对象活动状态</h2>
+
+<p>Unity 4.0 更改了游戏对象活动状态的处理方式。游戏对象的活动状态现在会由子游戏对象继承，因此任何非活动游戏对象也会导致其子项处于非活动状态。我们相信新行为比旧行为更合理，而且应该始终如此。此外，即将推出的新 GUI 系统在很大程度上取决于新的 4.0 行为，没有它就不可能实现。不幸的是，这可能需要执行一些工作来修复现有项目以便使用新的 Unity 4.0 行为，更改如下：</p>
+
+<h3>旧行为：</h3>
+
+<ul>
+<li>游戏对象是否处于活动状态由其 <strong>.active</strong> 属性定义。</li>
+<li>可通过检查 <strong>.active</strong> 属性来查询和设置此状态。</li>
+<li>游戏对象的活动状态对子游戏对象的活动状态没有影响。如果要激活或停用游戏对象及其所有子项，需要调用 <strong>GameObject.SetActiveRecursively</strong>。</li>
+<li>对游戏对象使用 <strong>SetActiveRecursively</strong> 时，任何子游戏对象的先前活动状态都将丢失。使用 <strong>SetActiveRecursively</strong> 停用再激活游戏对象及其所有子项时，任何在调用 <strong>SetActiveRecursively</strong> 之前处于非活动状态的子项都将变为活动状态，而如果要将子项恢复到原来状态，必须手动跟踪子项的活动状态。</li>
+<li>预制件不能包含任何活动状态，并在预制件实例化后始终处于活动状态。</li>
+</ul>
+
+<h3>新行为：</h3>
+
+<ul>
+<li>游戏对象是否处于活动状态由其自己的 <strong>.activeSelf</strong> 属性及其所有父项的该属性定义。如果游戏对象自己的 <strong>.activeSelf</strong> 属性及其所有父项的该属性为 <strong>true__，则该游戏对象处于活动状态。如果任何这些对象的属性为 </strong>false__，则该游戏对象为非活动状态。</li>
+<li>可使用 <strong>.activeInHierarchy</strong> 属性来查询此状态。</li>
+<li>可通过调用 <strong>GameObject.SetActive</strong> 来更改游戏对象的 <strong>.activeSelf</strong> 状态。对以前处于活动状态的游戏对象调用 <strong>SetActive (false)</strong> 时，将停用游戏对象及其所有子项。对以前处于非活动状态的游戏对象调用 <strong>SetActive (true)</strong> 时，如果该游戏对象的所有父项均为活动状态，则将激活该游戏对象。当子项的所有父项都是活动状态时（即它们所有的父项都将 <strong>.activeSelf</strong> 设置为 <strong>true</strong> 时），子项将被激活。</li>
+<li>这意味着不再需要 <strong>SetActiveRecursively__，因为活动状态将从父项继承。这也意味着，通过调用 </strong>SetActive__ 来停用和激活层级视图中的一部分时，将保留所有子游戏对象的先前活动状态。</li>
+<li>预制件可以包含活动状态，该状态在预制件实例化时保留。</li>
+</ul>
+
+<h3>示例：</h3>
+
+<p>假如有三个游戏对象：A、B 和 C，其中 B 和 C 是 A 的子项。</p>
+
+<ul>
+<li>通过调用 <strong>C.SetActive(false)</strong> 来停用 C。</li>
+<li>现在，__A.activeInHierarchy == true__，__B.activeInHierarchy == true__，而 <strong>C.activeInHierarchy == false</strong>。</li>
+<li>同样，__A.activeSelf == true__，__B.activeSelf == true__，而 <strong>C.activeSelf == false</strong>。</li>
+<li>现在通过调用 <strong>A.SetActive(false)</strong> 来停用父项 A。</li>
+<li>现在，__A.activeInHierarchy == false__，__B.activeInHierarchy == false__，而 <strong>C.activeInHierarchy == false</strong>。</li>
+<li>同样，__A.activeSelf == false__，__B.activeSelf == true__，而 <strong>C.activeSelf == false</strong>。</li>
+<li>现在通过调用 <strong>A.SetActive(true)</strong> 再次激活父项 A。</li>
+<li>现在，恢复为 <strong>A.activeInHierarchy == true__，__B.activeInHierarchy == true__，而 </strong>C.activeInHierarchy == false__。</li>
+<li>同样，__A.activeSelf == true__，__B.activeSelf == true__，而 <strong>C.activeSelf == false</strong>。</li>
+</ul>
+
+<h3>Editor 中的新活动状态</h3>
+
+<p>为了使这些更改可视化，在 Unity 4.0 Editor 中，任何非活动游戏对象（由于其自己的 <strong>.activeSelf</strong> 属性或者其中一个父项的该属性设置为 <strong>false__）将在层级视图中显示为灰色，并在 Inspector 中具有灰色图标。游戏对象自己的 </strong>.activeSelf__ 属性由其活动状态复选框反映，无论父项状态如何都可以切换该属性（但只有在所有父项都处于活动状态时才会激活该游戏对象）。</p>
+
+<h3>对现有项目的影响：</h3>
+
+<ul>
+<li>为了让您了解此更改在代码方面可能带来的影响，__GameObject.active__ 属性和 <strong>GameObject.SetActiveRecursively()</strong> 函数已弃用。</li>
+<li>然而，它们仍然有效。读取 <strong>GameObject.active</strong> 的值等同于读取 <strong>GameObject.activeInHierarchy__，设置 </strong>GameObject.active__ 等同于调用 <strong>GameObject.SetActive()</strong>。调用 <strong>GameObject.SetActiveRecursively()</strong> 等同于对游戏对象及其所有子项调用 <strong>GameObject.SetActive()</strong>。</li>
+<li>通过将场景中任何游戏对象的 <strong>selfActive</strong> 属性设置为先前的 <strong>active</strong> 属性，可以导入 3.5 版的现有场景。</li>
+<li>因此，对于从早期版本的 Unity 导入的任何项目，只要不依赖于非活动游戏对象的活动子项（Unity 4.0 中不再支持），应该仍能按预期工作（但会有编译器警告）。</li>
+<li>如果项目依赖于非活动游戏对象的活动子项，需要将逻辑更改为 Unity 4.0 中适用的模型。</li>
+</ul>
+
+<h2>对资源处理管线的更改</h2>
+
+<p>在 4.0 版的开发过程中，我们的资源导入管线在内部做了一些重要改变，旨在提高性能、内存使用率和确定性。在大多数情况下，这些更改对用户没有影响，但有一个例外：资源中的对象直到导入管线的最后阶段才会持久化，并且所有以前导入的资源版本都将被完全替换。</p>
+
+<p>第一点意味着在后期处理期间无法获得对资源中的对象的正确引用，第二点意味着如果在后期处理期间使用对先前导入资源版本的引用来存储修改，这些修改将丢失。</p>
+
+<h3>因为尚未持久化而导致引用丢失的示例</h3>
+
+<p>请参考下面这个小例子：</p>
+
+<pre><code>public class ModelPostprocessor : AssetPostprocessor
+{
+    public void OnPostprocessModel(GameObject go)
+    {
+        PrefabUtility.CreatePrefab("Prefabs/" + go.name, go);
+    }
+}
+
+
+</code></pre>
+
+<p>在 Unity 3.5 中，此代码创建的预制件将包含对网格的所有正确引用等等，这是因为所有网格都已持久化，但由于 Unity 4.0 中的情况并非如此，相同的后期处理程序创建的预制件中所有对网格的引用都会消失，这是因为 Unity 4.0 还不知道如何解析对原始模型预制件中对象的引用。要将模型预制件正确复制到预制件，应使用 <strong>OnPostProcessAllAssets</strong> 来处理所有导入的资源，查找模型预制件，并按如上所述创建新预制件。</p>
+
+<h3>对丢弃的先前导入资源的引用示例</h3>
+
+<p>第二个示例稍微复杂一点，但实际上是 3.5 版中正常但在 4.0 版中有问题的用例。这是一个引用了网格的简单 <strong>ScriptableObject</strong>。</p>
+
+<pre><code>public class Referencer : ScriptableObject
+{
+    public Mesh myMesh; 
+} 
+
+
+</code></pre>
+
+<p>我们使用这个 <strong>ScriptableObject</strong> 来创建一个资源并使该资源引用模型中的网格，然后在后期处理程序中使用该引用并为其指定一个不同的名称，最终结果是当我们重新导入模型时，网格的名称将是后期处理程序确定的名称。</p>
+
+<pre><code>public class Postprocess : AssetPostprocessor
+{
+    public void OnPostprocessModel(GameObject go)
+    {
+        Referencer myRef = (Referencer)AssetDatabase.LoadAssetAtPath("Assets/MyRef.asset", typeof(Referencer));
+        myRef.myMesh.name = "AwesomeMesh";
+    }
+}
+
+
+</code></pre>
+
+<p>此代码在 Unity 3.5 中可按预期工作，但在 Unity 4.0 中，已经导入的模型将被完全替换，因此更改先前导入的网格的名称将不起作用。这里的解决方案是通过其他方式找到网格，然后更改其名称。最重要的是要注意，在 Unity 4.0 中，应当只修改提供给后期处理程序的指定输入，而不是依赖于该资源的先前导入版本。</p>
+
+<h2>网格读取/写入选项</h2>
+
+<p>Unity 4.0 在<a href="class-FBXImporter.html">模型导入设置</a>中添加了“Read/Write Enabled”选项。关闭此选项可以节省内存，因为 Unity 可以在游戏中卸载网格数据副本。</p>
+
+<p>但是，如果在运行时使用非一致比例缩放或实例化网格，可能必须在这些网格的导入设置中启用“Read/Write Enabled”。原因是非一致缩放需要将网格数据保存在内存中。通常我们在构建时会检测到这一点，但在运行时缩放或实例化网格时，需要手动设置进行此设置。否则，这些网格可能无法在游戏构建中正确渲染。</p>
+
+<h2>网格优化</h2>
+
+<p>Unity 4.0 中的 Model Importer 在网格优化方面进一步改善。Unity 4.0 的 Model Importer 中的“Mesh Optimization”复选框现在默认为启用状态，并会对网格中的顶点重新排序以获得最佳性能。项目中可能会有一些后期处理代码或效果，这些代码或效果取决于网格的顶点顺序，并可能会因此更改而出现问题。在这种情况下，请关闭 Mesh Importer 中的“Mesh Optimization”。尤其是在使用 SkinnedCloth 组件的情况下，网格优化将导致顶点权重映射发生变化。因此，如果在从 3.5 导入的项目中使用 SkinnedCloth，需要为受影响的网格关闭“Mesh Optimization”，或者重新配置顶点权重来匹配新的顶点顺序。</p>
+
+<h2>移动端输入</h2>
+
+<p>在 Unity 4.0 中，移动端传感器输入在平台之间具有更好的一致性，这意味着可以在处理移动平台上的典型输入时编写更少的代码。现在加速度和陀螺仪输入将在 iOS 和 Android 平台上以相同的方式追踪屏幕方向。为了利用此更改带来的优势，应在处理加速度和陀螺仪输入时重构输入代码并删除关于平台和屏幕方向的代码。通过将 <strong>Input.compensateSensors</strong> 设置为 false，仍然能在 iOS 上获得以前的行为。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide5-Misc.html"></a></span><div class="tip">Unity 5.0 的其他升级注意事项</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide3435.html"></a></span><div class="tip">升级到 Unity 3.5</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

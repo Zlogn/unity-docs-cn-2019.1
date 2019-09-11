@@ -1,0 +1,298 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="为 Vuforia 设置项目 - Unity Manual">
+<title>为 Vuforia 设置项目 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/installing_vuforia.jpg">
+<meta name="description" content="为开发 Vuforia AR 或 MR 移动应用程序而设置项目的过程，与使用 Unity 进行移动平台的构建时设置的过程非常相似。Unity 安装程序包含 Vuforia SDK。请按照在 InstallingUnity 手册页上下载和安装 Unity 的说明进行操作。Vuforia 提供了一系列旨在放入场景中的预制件，从而为应用程序提供各种功能。所有这些预制件均可在 Unity Editor 中找到。">
+<meta property="og:description" content="为开发 Vuforia AR 或 MR 移动应用程序而设置项目的过程，与使用 Unity 进行移动平台的构建时设置的过程非常相似。Unity 安装程序包含 Vuforia SDK。请按照在 InstallingUnity 手册页上下载和安装 Unity 的说明进行操作。Vuforia 提供了一系列旨在放入场景中的预制件，从而为应用程序提供各种功能。所有这些预制件均可在 Unity Editor 中找到。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'vuforia_get_started_project_setup';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/vuforia_get_started_project_setup.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/vuforia_get_started_project_setup.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/vuforia_get_started_project_setup.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/vuforia_get_started_project_setup.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/vuforia_get_started_project_setup.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/vuforia_get_started_project_setup.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/vuforia_get_started_project_setup.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/vuforia_get_started_project_setup.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/vuforia_get_started_project_setup.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/vuforia_get_started_project_setup.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/vuforia_get_started_project_setup.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/vuforia_get_started_project_setup.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/vuforia_get_started_project_setup.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/vuforia_get_started_project_setup.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/vuforia_get_started_project_setup.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/vuforia_get_started_project_setup.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/vuforia_get_started_project_setup.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/vuforia_get_started_project_setup.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/vuforia_get_started_project_setup.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/vuforia_get_started_project_setup.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/vuforia_get_started_project_setup.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/vuforia_get_started_project_setup.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/vuforia_get_started_project_setup.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/vuforia_get_started_project_setup.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="XR.html">XR</a></li>
+<li><a href="XR-SDK_overviews.html">XR SDK</a></li>
+<li><a href="vuforia-sdk-overview.html">Vuforia</a></li>
+<li><a href="vuforia_get_started.html">Vuforia 快速入门指南</a></li>
+<li>为 Vuforia 设置项目</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="vuforia_get_started.html"></a></span><div class="tip">Vuforia 快速入门指南</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="vuforia_get_started_image_targets_setup.html"></a></span><div class="tip">设置图像目标</div>
+</div>
+</div></div>
+<h1>为 Vuforia 设置项目</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>为开发 Vuforia AR 或 MR 移动应用程序而设置项目的过程，与使用 Unity 进行移动平台的构建时设置的过程非常相似。Unity 安装程序包含 Vuforia SDK。请按照在 <a href="InstallingUnity.html">InstallingUnity</a> 手册页上下载和安装 Unity 的说明进行操作。Vuforia 提供了一系列旨在放入场景中的预制件，从而为应用程序提供各种功能。所有这些预制件均可在 Unity Editor 中找到。</p>
+
+<p>应遵循开发常规移动端游戏时所需的相同性能注意事项。有关移动设备优化的信息，请参阅有关<a href="MobileOptimisation.html">移动端优化</a>的 Unity 文档。</p>
+
+<p>要使用 Unity 设置 Vuforia，请执行以下操作：</p>
+
+<ul>
+<li>安装<a href="https://unity3d.com/get-unity/download">最新版本的 Unity</a>，然后在安装程序的 Unity 组件选择部分中选择 <strong>Vuforia Augmented Reality Support</strong> 以及 <strong>iOS Build Support</strong> 或 <strong>Android Build Support</strong> 包。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/installing_vuforia.jpg" alt="通过 Unity 安装程序安装 Vuforia Augmented Reality Support">
+<figcaption>通过 Unity 安装程序安装 Vuforia Augmented Reality Support</figcaption>
+</figure>
+
+<p><strong>注意：</strong>大多数 AR 和 MR 应用程序都以移动设备为目标，因此本指南重点关注 Android 和 iOS 的开发。请参阅 <a href="android-GettingStarted.html">Android</a> 和 <a href="iphone-GettingStarted.html">iOS</a> 入门文档了解如何为 Android 和 iOS 设备启用构建支持。</p>
+
+<ul>
+<li><p>从 <a href="https://developer.vuforia.com/user/register">Vuforia 注册页面</a>中创建 Vuforia 开发者帐户。通过此帐户可以访问一些必要的工具，从而在 Unity 中使用 Vuforia 开发 AR 和 MR 应用程序。</p></li>
+<li><p>如果尚未创建 Unity ID，请从 <a href="https://id.unity.com/en/conversations/8c075ba1-a442-41b1-b64d-ad4fb3c56073008f?view=register">Unity 注册页面</a>中进行此操作。需要 Unity ID 才能从 Unity Asset Store 下载资源包。</p></li>
+<li><p>打开 Unity 并创建新的 3D 项目（确保选中 <strong>Add Asset Package</strong> 按钮旁边的 <strong>3D</strong> 选项）。为项目命名，然后单击 <strong>Create project</strong> 按钮。</p></li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/new_project.png" alt="创建新的 3D 项目">
+<figcaption>创建新的 3D 项目</figcaption>
+</figure>
+
+<p><strong>提示：</strong>从 Unity Asset Store 下载 <a href="https://www.assetstore.unity3d.com/en/#!/content/101547">Vuforia AR+VR Sample 资源包</a>。此资源包提供了一些用于展示重要功能的有用示例场景。本指南不需要这些场景，但它们对于以后进一步学习很有用。</p>
+
+<h2>在 Unity 中激活 Vuforia</h2>
+
+<p>To activate Vuforia in your Unity project, access the <strong>Player</strong> settings from <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Player</strong> category, and select the tab for the mobile device you are building to. Under the <strong>XR Settings</strong> panel, enable the <strong>Vuforia Augmented Reality Support</strong> property.</p>
+
+<figure>
+<img src="../uploads/Main/vuforia_ar_support.png" alt="Enabling Vuforia Augmented Reality Support in Unity Player settings">
+<figcaption>Enabling Vuforia Augmented Reality Support in Unity Player settings</figcaption>
+</figure>
+
+<p>场景中现在包含两个游戏对象：主摄像机和方向光。需要向场景添加新的 AR 摄像机才能启用 AR 功能，并需要从场景中删除当前的__主摄像机__游戏对象。</p>
+
+<p>要删除摄像机游戏对象，请在 <strong>Hierarchy 窗口__中选择该游戏对象，然后按键盘上的 Delete 键，或者右键单击该游戏对象并选择 </strong>Delete__。</p>
+
+<p>For more information on the individual settings under the <strong>XR Settings</strong> panel, see the <a href="vuforia_configuration.html">Vuforia Platform Configuration</a> page of this manual.</p>
+
+<h2>添加 Vuforia AR 摄像机和其他游戏对象</h2>
+
+<p>要将 AR 摄像机添加到场景，请选择 <strong>GameObject</strong> &gt; <strong>Vuforia</strong> &gt; <strong>AR Camera</strong>。</p>
+
+<p>如果这是第一个添加到场景中的 Vuforia 游戏对象，则 Unity 还会提示导入 Vuforia 资源。选择 __Import__，Unity 便会将所有必要的 Vuforia 文件导入到项目中。</p>
+
+<p><strong>Project 窗口__会显示 4 个新文件夹，其中一个名为 </strong>Vuforia__。此文件夹中的代码和资源提供了主要的 AR 和 MR 功能。其他文件夹提供示例场景、资源、工具和插件，便于为各种设备开发 AR 和 MR 应用程序。</p>
+
+<figure>
+<img src="../uploads/Main/Importing_assets.png" alt="空项目中包含所有导入的 Vuforia 资源">
+<figcaption>空项目中包含所有导入的 Vuforia 资源</figcaption>
+</figure>
+
+<p>在项目中创建一个新文件夹。为此，请导航到 Project 窗口，单击 <strong>Create</strong> 按钮，然后选择 <strong>Folder</strong>。将此新文件夹命名为 _Scenes_，并在此文件夹中保存<a href="CreatingScenes.html">新场景</a>。</p>
+
+<figure>
+<img src="../uploads/Main/New_folder.png" alt="创建一个空文件夹并将其命名为 Scenes">
+<figcaption>创建一个空文件夹并将其命名为 Scenes</figcaption>
+</figure>
+
+<p>此过程还会在 Scene 层级视图中添加新的 ARCamera 游戏对象。</p>
+
+<h2>创建 Vuforia 许可证密钥</h2>
+
+<p>设置过程的最后一步是从 Vuforia 开发者门户的 <a href="https://developer.vuforia.com/Targetmanager/licenseManager/licenseListing">License Manager 部分</a>中创建许可证密钥。需要将此信息输入到 Unity 的 Vuforia 配置设置中，以便使用 Unity 构建并测试应用程序。</p>
+
+<p>访问 <a href="https://developer.vuforia.com/user/login">Vuforia 开发者门户</a>并登录（或创建新帐户）。导航到 <strong>Develop</strong> 部分的 <strong>License Manager__，然后单击 </strong>Get Development Key__ 按钮以打开 <strong>Add License Key</strong> 页面。</p>
+
+<figure>
+<img src="../uploads/Main/creating_dev_key.png" alt="创建 Vuforia 开发密钥">
+<figcaption>创建 Vuforia 开发密钥</figcaption>
+</figure>
+
+<p>在 <strong>Add License Key</strong> 页面上，输入应用程序的名称。接受条款和条件，然后单击 <strong>Confirm</strong> 按钮以生成新的许可证密钥。</p>
+
+<figure>
+<img src="../uploads/Main/vuforia_dev_key_details.png" alt="确认 Vuforia 开发密钥详细信息">
+<figcaption>确认 Vuforia 开发密钥详细信息</figcaption>
+</figure>
+
+<p>在下一页上，同意 Vuforia 开发者条件（勾选复选框），然后单击 <strong>Confirm</strong> 按钮。随即将返回 <strong>License Manager</strong> 页面，并可在列表中看到新创建的许可证及其状态为 <strong>Active</strong>。单击应用程序的名称即可查看许可证详细信息。这样就能检索开发许可证密钥。</p>
+
+<figure>
+<img src="../uploads/Main/license_manager.png" alt="License Manager">
+<figcaption>License Manager</figcaption>
+</figure>
+
+<p>将许可证密钥复制到剪贴板并导航回 Unity 项目。</p>
+
+<figure>
+<img src="../uploads/Main/copying_license_key.png" alt="复制 Vuforia 许可证密钥">
+<figcaption>复制 Vuforia 许可证密钥</figcaption>
+</figure>
+
+<p>从 <strong>Hierarchy 窗口__中选择 </strong>ARCamera__ 游戏对象，然后在 Inspector 窗口中导航到 <strong>Vuforia Behaviour(Script)</strong> 组件并单击 <strong>Open Vuforia configuration</strong> 按钮。</p>
+
+<figure>
+<img src="../uploads/Main/config_settings.jpg" alt="访问 Vuforia 配置设置">
+<figcaption>访问 Vuforia 配置设置</figcaption>
+</figure>
+
+<p><strong>Inspector 窗口__将显示一组 </strong>Vuforia Configuration__ 选项。将 Vuforia 开发密钥粘贴到 Vuforia 部分下的 <strong>App License Key</strong> 文本框中，然后单击 <strong>Add License</strong> 按钮。</p>
+
+<figure>
+<img src="../uploads/Main/entering_key.png" alt="在 Vuforia Configuration 设置中输入 Vuforia 开发密钥">
+<figcaption>在 Vuforia Configuration 设置中输入 Vuforia 开发密钥</figcaption>
+</figure>
+
+<h2>测试您的设置</h2>
+
+<p>要在 Unity Editor 中测试 Vuforia 应用程序，必须将网络摄像头连接到 PC 或笔记本电脑。为了确保在 Unity 项目中已正确安装 Vuforia，最后一步是按 <strong>Play</strong> 按钮来测试场景。如果 Vuforia 设置正确，则 Editor Game 视图中会显示来自网络摄像头的视频。</p>
+
+<p>现在已准备好可以设置图像目标并为项目添加 AR 功能。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–03–28 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 2017.3 版中更新了有关 Unity XR API 的 Vuforia 文档</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="vuforia_get_started.html"></a></span><div class="tip">Vuforia 快速入门指南</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="vuforia_get_started_image_targets_setup.html"></a></span><div class="tip">设置图像目标</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

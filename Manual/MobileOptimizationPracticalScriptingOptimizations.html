@@ -1,0 +1,666 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="优化脚本 - Unity Manual">
+<title>优化脚本 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/MobileOptimization-coinsLighting.jpg">
+<meta name="description" content="本部分将演示如何优化游戏中使用的实际脚本和方法，并详细介绍为什么能够进行这些优化，以及为什么在某些情况下应用这些优化能带来好处。">
+<meta property="og:description" content="本部分将演示如何优化游戏中使用的实际脚本和方法，并详细介绍为什么能够进行这些优化，以及为什么在某些情况下应用这些优化能带来好处。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'MobileOptimizationPracticalScriptingOptimizations';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/MobileOptimizationPracticalScriptingOptimizations.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/MobileOptimizationPracticalScriptingOptimizations.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/MobileOptimizationPracticalScriptingOptimizations.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/MobileOptimizationPracticalScriptingOptimizations.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/MobileOptimizationPracticalScriptingOptimizations.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/MobileOptimizationPracticalScriptingOptimizations.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/MobileOptimizationPracticalScriptingOptimizations.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/MobileOptimizationPracticalScriptingOptimizations.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/MobileOptimizationPracticalScriptingOptimizations.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/MobileOptimizationPracticalScriptingOptimizations.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/MobileOptimizationPracticalScriptingOptimizations.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/MobileOptimizationPracticalScriptingOptimizations.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/MobileOptimizationPracticalScriptingOptimizations.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/MobileOptimizationPracticalScriptingOptimizations.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/MobileOptimizationPracticalScriptingOptimizations.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/MobileOptimizationPracticalScriptingOptimizations.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/MobileOptimizationPracticalScriptingOptimizations.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/MobileOptimizationPracticalScriptingOptimizations.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/MobileOptimizationPracticalScriptingOptimizations.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/MobileOptimizationPracticalScriptingOptimizations.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/MobileOptimizationPracticalScriptingOptimizations.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/MobileOptimizationPracticalScriptingOptimizations.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/MobileOptimizationPracticalScriptingOptimizations.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/MobileOptimizationPracticalScriptingOptimizations.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
+<li><a href="MobileDeveloperChecklist.html">移动平台开发者检查清单</a></li>
+<li><a href="MobileOptimizationPracticalGuide.html">移动平台优化实用指南</a></li>
+<li>优化脚本</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MobileOptimizationPracticalRenderingOptimizations.html"></a></span><div class="tip">渲染优化</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Experimental.html"></a></span><div class="tip">实验性</div>
+</div>
+</div></div>
+<h1>优化脚本</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>本部分将演示如何优化游戏中使用的实际脚本和方法，并详细介绍为什么能够进行这些优化，以及为什么在某些情况下应用这些优化能带来好处。</p>
+
+<h2>
+<a href="Profiler.html">性能分析器</a>是王道</h2>
+
+<p>无法通过核对表之类的工具确保项目稳定运行，因为不存在这样的工具。要优化速度缓慢的项目，必须进行性能分析以找出占用时间不成比例的特定违规者。试图在不进行性能分析的情况下进行优化，或者在没有完全理解性能分析器提供的结果的情况下进行优化，就像试图戴着眼罩盲目进行优化一样。</p>
+
+<h3>内部移动端性能分析器</h3>
+
+<p>您可以使用<a href="iphone-InternalProfiler.html">内部性能分析器</a>来确定哪种过程（是物理组件、脚本还是渲染）在拖慢游戏速度，但无法深入查看具体脚本和方法来找出实际违规者。但是，通过在游戏中构建启用和禁用某些功能的开关，可显著缩小最严重违规者的范围。例如，如果删除敌人角色的 AI 脚本后帧率加倍，表明必须优化脚本或脚本向游戏添加的功能。唯一的问题是，在发现问题之前，可能需要进行大量不同的尝试。</p>
+
+<p>有关在移动设备上进行性能分析的更多信息，请参阅<a href="MobileOptimizationPracticalGuide.html">性能分析部分</a>。</p>
+
+<h2>通过设计进行优化</h2>
+
+<p>从一开始就尝试开发快速运行的功能是有风险的，因为必须权衡到底是要将时间用于开发不优化也能同样快速运行的功能，还是开发以后因为运行速度过慢而需要削减或替换的功能。在这方面需要直觉和硬件知识来做出正确的决定，特别是因为每个游戏都不相同，对于一个游戏而言可能是一个关键的优化，可能在另一个游戏中完全失效。</p>
+
+<h3>对象池</h3>
+
+<p>在<a href="MobileOptimizationScriptingMethods.html">优化脚本方法的介绍</a>中，我们将对象池作为良好游戏表现与良好代码设计之间实现交集的一个例子。对短暂对象使用对象池比创建再销毁这些对象更快，因为这种情况下的内存分配更简单，并可避免动态内存分配开销和垃圾收集 (GC)。</p>
+
+<h3>内存分配</h3>
+
+<h4>自动内存管理简单说明</h4>
+
+<p>在 Unity 中编写的脚本使用自动内存管理功能。几乎所有的脚本语言都如此。相反，诸如 C 和 C++ 之类的低级语言使用手动内存分配，允许程序员直接从内存地址读取和写入，因此由他们负责删除自己创建的每个对象。例如，如果使用 C++ 创建对象，必须在用完对象后手动取消分配对象占用的内存。在脚本语言中，只需执行 <code>objectReference = null;</code></p>
+
+<p><strong>注意：</strong>如果有一个游戏对象变量，如 <code>GameObject myGameObject;</code> 或 <code>var myGameObject : GameObject;</code>，为什么执行 <code>myGameObject = null;</code> 时不能将其销毁呢？</p>
+
+<ul>
+<li>Unity 仍然引用该游戏对象，因为 Unity 必须保持对该对象的引用才能对其进行绘制、更新等。调用 <code>Destroy(myGameObject);</code> 可删除该引用和该对象。</li>
+</ul>
+
+<p>但是，如果您创建一个 Unity 不了解的对象，例如，一个没有继承源的类实例（相反，大多数类或“脚本组件”继承自 MonoBehaviour），然后将该对象的引用变量设置为 null，那么实际发生的情况是，从脚本和 Unity 的角度看，对象会丢失；它们无法访问该对象，也永远不会再看到对象，但对象会留在内存中。然后，一段时间过后，垃圾回收器运行，并删除内存中所有未被引用的对象。之所以能够做到这一点，是因为每个内存块的引用数量都会在幕后被跟踪。这就是脚本语言比 C++ 慢的原因之一。</p>
+
+<ul>
+<li>阅读有关<a href="UnderstandingAutomaticMemoryManagement.html">自动内存管理和垃圾回收器</a>的更多信息。</li>
+</ul>
+
+<h3>如何避免分配内存</h3>
+
+<p>每次创建对象时，都会分配内存。通常在代码中创建对象时甚至不知道内存分配过程的存在。</p>
+
+<ul>
+<li>
+<p><code>Debug.Log("boo" + "hoo");</code> 将创建对象。</p>
+
+<ul>
+<li>处理大量字符串时，使用 <code>System.String.Empty</code> 代替 <code>""</code>。</li>
+</ul>
+</li>
+<li><p>即时模式 GUI (UnityGUI) 很慢，在任何时候出现性能问题时都不应使用。</p></li>
+<li><p>类和结构之间的区别：</p></li>
+</ul>
+
+<p>类是对象且表现为引用。如果 <strong>Foo</strong> 是一个类，且</p>
+
+<pre><code>  Foo foo = new Foo();
+    MyFunction(foo);
+</code></pre>
+
+<p>则 <strong>MyFunction</strong> 将接收对堆上分配的原始 Foo 对象的引用。<strong>MyFunction</strong> 内 <strong>foo</strong> 的任何更改都将在引用 foo 的任何位置可见。</p>
+
+<p>类是数据且表现如此。如果 <strong>Foo</strong> 是一个结构，且</p>
+
+<pre><code>  Foo foo = new Foo();
+    MyFunction(foo);
+</code></pre>
+
+<p>则 <strong>MyFunction</strong> 将收到 <strong>foo</strong> 的副本。系统绝不会在堆上分配 <strong>foo</strong>，也不会对其进行垃圾回收。如果 <strong>MyFunction</strong> 修改了 <strong>foo</strong> 的副本，则另一个 <strong>foo</strong> 不受影响。</p>
+
+<ul>
+<li>长时间存在的对象应该作为类，而短暂存在的对象应该作为结构。Vector3 可能是最知名的结构。如果它作为类，一切都会慢很多。</li>
+</ul>
+
+<h3>为何对象池更快</h3>
+
+<p>这种机制的最终结果是 <strong>Instantiate 和 Destroy 的大量使用让垃圾回收器有很多工作要做</strong>，而这可能会导致游戏运行期间出现“顿挫”。正如<a href="UnderstandingAutomaticMemoryManagement.html">自动内存管理</a>页面所述，还有其他方法可以解决关于 Instantiate 和 Destroy 的常见性能顿挫问题，例如在没有任何操作时手动触发垃圾回收器，或者经常触发垃圾回收器以确保绝不会大量积压未使用的内存。</p>
+
+<p>另一个原因是，第一次实例化特定的预制件时，有时需要将额外的内容加载到 RAM 中，或者需要将纹理和网格上传到 GPU。这种情况下也可能导致顿挫，如果使用对象池，该问题会在关卡加载时而不是在游戏过程中发生。</p>
+
+<p>想象一下，假如一个木偶操作者有一个无限容量的木偶盒，每当剧本要求某个角色出现时，他们就会从盒子里取出木偶的新复制品，每当角色退出舞台时，他们就抛掉当前的复制品。对象池相当于在节目开始之前将所有木偶从盒子里取出，只要希望木偶不出现在舞台上，就将它们留在舞台后面的桌子上。</p>
+
+<h3>为何对象池可能更慢</h3>
+
+<p>一个问题是对象池的创建会减少可用于其他目的的堆内存量；因此，如果继续在刚创建的池之上分配内存，可能会更频繁地触发垃圾收集。不仅如此，每次收集都会变慢，因为收集过程所花费的时间会随着活动对象的数量而增加。考虑到这些问题后，显而易见的结论是，如果分配的对象池太大，或者在对象池包含的对象在一段时间内都不需要的情况下让对象池保持活动状态，则性能将受到影响。此外，许多类型的对象不适合用于对象池。例如，游戏可能包括持续相当长时间的魔法效果，或者大量出现但仅在游戏进行时才逐渐被杀死的敌人。在此类情况下，对象池的性能开销大大超过了优势，因此不应使用这种机制。</p>
+
+<h3>实现</h3>
+
+<p>下面简单地并排比较了一个简单飞弹的脚本；一种方案使用初始化，另一种方案使用对象池。</p>
+
+<pre><code> // GunWithInstantiate.js                                                  // GunWithObjectPooling.js
+
+  #pragma strict                                                            #pragma strict
+
+  var prefab : ProjectileWithInstantiate;                                   var prefab : ProjectileWithObjectPooling;
+                                                                            var maximumInstanceCount = 10;
+  var power = 10.0;                                                         var power = 10.0;
+
+                                                                            private var instances : ProjectileWithObjectPooling[];
+
+                                                                            static var stackPosition = Vector3(-9999, -9999, -9999);
+
+                                                                            function Start () {
+                                                                                instances = new ProjectileWithObjectPooling[maximumInstanceCount];
+                                                                                for(var i = 0; i &lt; maximumInstanceCount; i++) {
+                                                                                    // 将一堆未使用的对象放在离贴图很远的位置
+                                                                                    instances[i] = Instantiate(prefab, stackPosition, Quaternion.identity);
+                                                                                    // 默认情况下禁用，这些对象尚未激活。
+                                                                                    instances[i].enabled = false;
+                                                                                }
+                                                                            }
+
+  function Update () {                                                      function Update () {
+      if(Input.GetButtonDown("Fire1")) {                                        if(Input.GetButtonDown("Fire1")) {
+          var instance : ProjectileWithInstantiate =                                var instance : ProjectileWithObjectPooling = GetNextAvailiableInstance();
+              Instantiate(prefab, transform.position, transform.rotation);          if(instance != null) {
+          instance.velocity = transform.forward * power;                                instance.Initialize(transform, power);
+      }                                                                             }
+  }                                                                             }
+                                                                            }
+
+                                                                            function GetNextAvailiableInstance () : ProjectileWithObjectPooling {
+                                                                                for(var i = 0; i &lt; maximumInstanceCount; i++) {
+                                                                                    if(!instances[i].enabled) return instances[i];
+                                                                                }
+                                                                                return null;
+                                                                            }
+
+
+
+
+  // ProjectileWithInstantiate.js                                           // ProjectileWithObjectPooling.js
+
+  #pragma strict                                                            #pragma strict
+
+  var gravity = 10.0;                                                       var gravity = 10.0;
+  var drag = 0.01;                                                          var drag = 0.01;
+  var lifetime = 10.0;                                                      var lifetime = 10.0;
+
+  var velocity : Vector3;                                                   var velocity : Vector3;
+
+  private var timer = 0.0;                                                  private var timer = 0.0;
+
+                                                                            function Initialize(parent : Transform, speed : float) {
+                                                                                transform.position = parent.position;
+                                                                                transform.rotation = parent.rotation;
+                                                                                velocity = parent.forward * speed;
+                                                                                timer = 0;
+                                                                                enabled = true;
+                                                                            }
+
+  function Update () {                                                      function Update () {
+      velocity -= velocity * drag * Time.deltaTime;                             velocity -= velocity * drag * Time.deltaTime;
+      velocity -= Vector3.up * gravity * Time.deltaTime;                        velocity -= Vector3.up * gravity * Time.deltaTime;
+      transform.position += velocity * Time.deltaTime;                          transform.position += velocity * Time.deltaTime;
+
+      timer += Time.deltaTime;                                                  timer += Time.deltaTime;
+      if(timer &gt; lifetime) {                                                    if(timer &gt; lifetime) {
+                                                                                    transform.position = GunWithObjectPooling.stackPosition;
+          Destroy(gameObject);                                                      enabled = false;
+      }                                                                         }
+  }                                                                         }
+
+
+</code></pre>
+
+<p>当然，对于大型的复杂游戏，您需要找到适用于所有预制件的通用解决方案。</p>
+
+<h2>另一个示例：Coin Party！</h2>
+
+<p>在<a href="MobileOptimizationScriptingMethods.html">脚本方法</a>部分中给出的“数百个正在旋转、动态光照的可收集硬币一次性出现在屏幕上”示例将用于演示如何使用脚本代码、诸如粒子系统之类的 Unity 组件以及自定义着色器来创建令人惊叹的效果，而不会对薄弱的移动端硬件产生负担。</p>
+
+<p>假如这种效果存在于 2D 横向卷轴游戏的背景下；游戏中有大量硬币掉落、反弹和旋转。这些硬币由点光源提供动态光照。我们希望捕捉硬币闪光效果，让游戏更令人印象深刻。</p>
+
+<p>如果我们有强大的硬件，可使用标准方法来解决这一问题。将每个硬币设置为一个对象，用顶点光照、前向光照或延迟光照对该对象进行着色，然后在此基础上添加发光作为图像效果，从而使明亮反光的硬币将光线照射到周围区域。</p>
+
+<p>但是，移动端硬件无法应对如此之多的对象，并且发光效果完全不可能。那么我们该怎么办？</p>
+
+<figure>
+<img src="../uploads/Main/MobileOptimization-coinsLighting.jpg" alt="">
+</figure>
+
+<h3>动画精灵粒子系统</h3>
+
+<p>如果想显示许多以相似方式移动并且玩家永远无法仔细查看的对象，也许可以使用粒子系统立即渲染大量对象。以下是这种技术的一些常规应用：</p>
+
+<ul>
+<li>可收集物或硬币</li>
+<li>飞行碎片</li>
+<li>成群或聚集的简单敌人</li>
+<li>欢呼的人群</li>
+<li>数以百计的飞弹或爆炸物</li>
+</ul>
+
+<p>有一个名为 <a href="http://u3d.as/content/forest-johnson/sprite-packer-with-legacy-particle-emitter-to-shuriken-converter-/34E">Sprite Packer</a> 的免费编辑器扩展程序可帮助您轻松创建动画精灵粒子系统。该扩展程序可将对象的帧渲染为纹理，然后可以将纹理用作粒子系统上的动画精灵图集。对于我们的用例，我们会在旋转硬币上使用该纹理。</p>
+
+<figure>
+<img src="../uploads/Main/MobileOptimization-coinsParts.jpg" alt="">
+</figure>
+
+<h3>参考实现</h3>
+
+<p><a href="http://u3d.as/content/forest-johnson/sprite-packer-with-legacy-particle-emitter-to-shuriken-converter-/34E">Sprite Packer</a> 项目中包含的一个示例演示了这一具体问题的解决方案。</p>
+
+<p>该方案使用一组各种不同类型的资源以较低的计算预算成本实现炫目的效果：</p>
+
+<ul>
+<li>一个控制脚本</li>
+<li>从 SpritePacker 的输出结果创建的专用纹理</li>
+<li>一个与控制脚本及纹理密切相关的专用着色器。</li>
+</ul>
+
+<p>该示例附带的一个自述文件试图阐述系统的有效性和工作方式，概述了如何确定的所需功能以及功能的实现方式。此文件如下：</p>
+
+<p>问题的定义为“数百个正在旋转、动态光照的可收集硬币一次性出现在屏幕上”。</p>
+
+<p>一种简单的方法是实例化硬币预制件的大量副本，但我们将改用粒子来渲染硬币。然而，这种做法会引入许多必须克服的挑战。</p>
+
+<ul>
+<li>视角是一个问题，因为粒子没有视角。
+
+<ul>
+<li>我们假设摄像机保持正面朝上，硬币围绕 Y 轴旋转。</li>
+<li>我们使用 SpritePacker 打包的动画纹理创建硬币旋转效果。
+
+<ul>
+<li>这引入了一个新问题：旋转的硬币全部都以相同的速度和相同的方向旋转，因此很单调</li>
+<li>我们自行在脚本中跟踪旋转和生命周期并将旋转“渲染”到粒子生命周期来解决此问题。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>法线是一个问题，因为粒子没有法线，我们需要实时光照。
+
+<ul>
+<li>在 Sprite Packer 生成的每个动画帧中为硬币的面生成单个法向矢量。</li>
+<li>基于从上面列表中抓取的法向矢量在脚本中对每个粒子执行 Blinn-Phong 光照。</li>
+<li>将结果作为颜色应用于粒子。</li>
+<li>在着色器中分别处理硬币的面和硬币的边缘。
+引入了一个新问题：着色器如何知道边缘在哪里以及应该位于边缘的哪个部分？
+
+<ul>
+<li>不能使用 UV，它们已经用于动画。</li>
+<li>使用纹理贴图。
+
+<ul>
+<li>需要相对于硬币的 Y 位置。</li>
+<li>需要二进制的“在面上”与“在边缘上”。</li>
+</ul>
+</li>
+<li>我们不想引入另一个纹理，更多纹理读取意味着更多纹理内存。</li>
+<li>将所需信息组合到一个通道中，并将其用于替换纹理的一个颜色通道。
+
+<ul>
+<li>现在我们的硬币颜色错了！该怎么办？</li>
+<li>使用着色器将缺失的通道重建为两个剩余通道的组合。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>假设我们希望硬币闪闪发光。后期处理对于移动设备而言成本过高。
+
+<ul>
+<li>创建另一个粒子系统，并为其提供柔和、闪亮的硬币动画版本。</li>
+<li>仅当相应硬币的颜色超亮时才为发光着色。</li>
+<li>不能在每一帧的每枚硬币上都渲染发光（严重影响填充率）。
+
+<ul>
+<li>重置每一帧的发光，仅对亮度大于 0 的发光进行调整。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>物理组件是一个问题，收集硬币是一个问题 - 粒子不能产生很好的碰撞效果。
+
+<ul>
+<li>能否使用内置粒子碰撞？</li>
+<li>取而代之的做法是直接在脚本中写入碰撞。</li>
+</ul>
+</li>
+<li>最后，我们还有一个问题 - 此脚本承载的功能太多，变慢了！
+
+<ul>
+<li>性能与活动硬币的数量成线性关系。
+
+<ul>
+<li>限制硬币最大数量。100 个硬币和 2 个光源足以实现我们的目标；在移动设备上运行速度非常快。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>需要进一步尝试的优化：
+
+<ul>
+<li>不要单独计算每个硬币的光照，而是将世界切割成块并计算每个块中每个旋转帧的光照条件。
+
+<ul>
+<li>用作查找表并以硬币位置和硬币旋转作为索引。</li>
+<li>使用双线性位置插值来提高保真度。</li>
+<li>对查找表进行稀疏更新，或使用完全静态的查找表。</li>
+<li>为此使用光照探针？
+*不在脚本中计算光照，而是使用法线贴图粒子？</li>
+<li>使用“Display Normals”着色器来烘焙法线的帧动画。</li>
+<li>限制光源数量。</li>
+<li>修复脚本缓慢问题。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>此示例的最终目标或“寓意”在于，如果游戏确实需要某种功能，但试图通过传统手段实现该功能时会导致滞后，这种情况下并不意味着该功能是不可能实现的，而只是意味着您必须在自己的系统上做出某种努力来大幅提高运行速度。</p>
+
+<h3>管理数千个对象的技巧</h3>
+
+<p>下面介绍了一些特定的脚本优化方式，适用于涉及数百甚至数千个动态对象的情况。将这些技巧应用到游戏中的每个脚本是一种糟糕的想法；而应该在编写运行时处理大量对象或数据的大型脚本时，将这些技巧保留作为工具和设计准则。</p>
+
+<h4>避免或尽可能减少对大型数据集执行 O(n2) 运算</h4>
+
+<p>在计算机科学中，O(n) 表示运算顺序，指的是必须对该运算进行评估的次数随着应用于对象的数量 (n) 增加而增加的规律。</p>
+
+<p>例如，考虑一种基本的排序算法。我有 <strong>n</strong> 个数字，并希望从最小到最大排序。</p>
+
+<pre><code> void sort(int[] arr) {
+    int i, j, newValue;
+    for (i = 1; i &lt; arr.Length; i++) {
+        // 记录
+        newValue = arr[i];
+        //将所有更大的值移到右侧
+        j = i;
+        while (j &gt; 0 &amp;&amp; arr[j - 1] &gt; newValue) {
+            arr[j] = arr[j - 1];
+            j--;
+        }
+        // 将记录的值放在大值的左侧
+        arr[j] = newValue;
+    }
+  }
+</code></pre>
+
+<p>重要之处在于这里有两个循环，一个循环位于另一个循环之内。</p>
+
+<pre><code> for (i = 1; i &lt; arr.Length; i++) {
+    ...
+    j = i;
+    while (j &gt; 0 &amp;&amp; arr[j - 1] &gt; newValue) {
+        ...
+        j--;
+    }
+  }
+</code></pre>
+
+<p>假设我们给出这种算法最糟糕的情况：输入数字是按相反顺序排序的。在这种情况下，最里面的循环将运行 <strong>j</strong> 次。平均而言，当 <strong>i</strong> 从 <strong>1</strong> 变为 <strong>arr.Length–1</strong>，<strong>j</strong> 将是 <strong>arr.Length/2</strong>。从 <strong>O(n)</strong> 的角度看，<strong>arr.Length</strong> 是我们的 <strong>n</strong>，因此，总的来说，最里面的循环运行 <strong>n<em>n/2</em>* 次，即 </strong>n<sup>2</sup>/2** 次。但以 <strong>O(n)</strong> 来表示时，我们去掉 <strong>1/2</strong> 之类的所有常量，因为我们想讨论运算次数的增加规律，而不是实际的运算次数。所以，该算法为 <strong>O(n<sup>2</sup>)</strong>。如果数据集很大，运算的顺序很重要，因为运算次数可能呈指数级暴增。</p>
+
+<p><strong>O(n<sup>2</sup>)</strong> 运算在游戏中的一个示例为：假设有 100 个敌人，每个敌人的 AI 都需要考虑每个其他敌人的移动情况。如果将地图划分为单元格，将每个敌人的移动记录到最近的单元格中，然后让每个敌人对最近的几个单元格进行采样，可能速度会更快。这将是 <strong>O(n)</strong> 运算。</p>
+
+<h4>缓存引用而不是执行不必要的搜索</h4>
+
+<p>假设游戏中有 100 个敌人，他们都朝着玩家移动。</p>
+
+<pre><code> // EnemyAI.js
+  var speed = 5.0;
+ 
+  function Update () {
+    transform.LookAt(GameObject.FindWithTag("Player").transform);
+    // 这将更加糟糕：
+    //transform.LookAt(FindObjectOfType(Player).transform);
+ 
+    transform.position += transform.forward * speed * Time.deltaTime;
+  }
+</code></pre>
+
+<p>如果同时运行的数量足够多，可能会很慢。鲜为人知的一个事实：MonoBehaviour 中的所有组件访问者（比如<strong>变换</strong>、<strong>渲染器</strong>和<strong>音频</strong>）都等同于它们的 <strong>GetComponent(Transform)</strong> 对应项，它们实际上有点慢。<strong>GameObject.FindWithTag</strong> 已经过优化，但在某些情况下（例如，在内部循环中或在许多实例上运行的脚本上），此脚本可能有点慢。</p>
+
+<p>以下是一个更好的脚本版本。</p>
+
+<pre><code> // EnemyAI.js
+  var speed = 5.0;
+ 
+  private var myTransform : Transform;
+  private var playerTransform : Transform;
+ 
+  function Start () {
+    myTransform = transform;
+    playerTransform = GameObject.FindWithTag("Player").transform;
+  }
+ 
+  function Update () {
+    myTransform.LookAt(playerTransform);
+ 
+    myTransform.position += myTransform.forward * speed * Time.deltaTime;
+  }
+
+</code></pre>
+
+<h4>尽量减少成本太高的数学函数</h4>
+
+<p>超越函数（<strong>Mathf.Sin</strong>、<strong>Mathf.Pow</strong> 等）、除法和平方根都需要大约 100 倍于乘法的时间。（从宏观上来说，时间不足挂齿，但如果每帧调用这些函数几千次，结果便会累加起来）。</p>
+
+<p>这种情况最常见的例子是矢量归一化。如果要反复对相同的矢量进行归一化，请考虑对其进行一次性归一化，然后将结果缓存起来供稍后使用。</p>
+
+<p>如果既要使用矢量的长度，也要对其进行归一化，则将矢量乘以长度的倒数而不是使用 <strong>.normalized</strong> 属性来获得归一化矢量的做法会更快。</p>
+
+<p>如果要比较距离，无需比较实际距离。取而代之的做法是使用 <strong>.sqrMagnitude</strong> 属性比较距离的平方，然后保存一个或两个平方根。</p>
+
+<p>另一种情况，如果要用一个常数 c 反复做除法，可改用乘以倒数的方式。首先通过 <strong>1.0/c</strong> 计算倒数。</p>
+
+<h4>仅偶尔执行高成本的运算，如 Physics.Raycast()</h4>
+
+<p>如果必须执行一些高成本的运算，为了对此进行优化，也许可以适当降低执行频率并将结果缓存起来。例如，假设有一个使用 Raycast 的飞弹脚本：</p>
+
+<pre><code> // Bullet.js
+  var speed = 5.0;
+ 
+  function FixedUpdate () {
+    var distanceThisFrame = speed * Time.fixedDeltaTime;
+    var hit : RaycastHit;
+ 
+    // 对于每一帧，我们都会将射线从我们所处的位置向前投射到下一帧的位置
+    if(Physics.Raycast(transform.position, transform.forward, hit, distanceThisFrame)) {
+        // 击中目标
+    } else {
+        transform.position += transform.forward * distanceThisFrame;
+    }
+  }
+</code></pre>
+
+<p>我们可以将 FixedUpdate 替换为 Update，并将 fixedDeltaTime 替换为 deltaTime，立刻实现脚本的改进。FixedUpdate 表示物理更新，其发生频率高于帧更新。但是，让我们更进一步，每隔 n 秒进行一次射线投射。较小的 n 将提供更大的时间分辨率，而较大的 n 提供更好的性能。在发生时间锯齿之前，目标越大越慢，n 就越大。（时间锯齿表示出现延迟：玩家击中目标，但爆炸出现时目标已过了 n 秒，或者玩家击中目标，但飞弹直接穿过）。</p>
+
+<pre><code> // BulletOptimized.js
+  var speed = 5.0;
+  var interval = 0.4; // 这是"n"，以秒为单位。
+ 
+  private var begin : Vector3;
+  private var timer = 0.0;
+  private var hasHit = false;
+  private var timeTillImpact = 0.0;
+  private var hit : RaycastHit;
+ 
+  // 设置初始时间间隔
+  function Start () {
+    begin = transform.position;
+    timer = interval+1;
+  }
+ 
+  function Update () {
+    // 不允许小于帧的时间间隔。
+    var usedInterval = interval;
+    if(Time.deltaTime &gt; usedInterval) usedInterval = Time.deltaTime;
+ 
+    // 在每个间隔，我们都会将射线从我们在这一个时间间隔开始时的位置向前投射到
+    // 下一个时间间隔将要开始时的位置
+    if(!hasHit &amp;&amp; timer &gt;= usedInterval) {
+        timer = 0;
+        var distanceThisInterval = speed * usedInterval;
+ 
+        if(Physics.Raycast(begin, transform.forward, hit, distanceThisInterval)) {
+            hasHit = true;
+            if(speed != 0) timeTillImpact = hit.distance / speed;
+        }
+ 
+        begin += transform.forward * distanceThisInterval;
+    }
+ 
+    timer += Time.deltaTime;
+ 
+    // 在 Raycast 照射到某个目标之后，等待子弹行程
+    // 大致达到射线行程以进行实际击中
+    if(hasHit &amp;&amp; timer &gt; timeTillImpact) {
+        // 击中目标
+    } else {
+        transform.position += transform.forward * speed * Time.deltaTime;
+    }
+  }
+</code></pre>
+
+<h4>尽量降低内部循环中的调用栈开销</h4>
+
+<p>调用一个函数的过程本身就有一点开销。如果每帧进行数千次 <strong>x = Mathf.Abs(x)</strong> 之类的调用，直接执行 <strong>x = (x &gt; 0 ? x : -x);</strong> 可能会更好。</p>
+
+<h3>优化物理性能</h3>
+
+<p>Unity 使用的 NVIDIA PhysX 物理引擎可在移动端使用，但在移动平台上比在桌面平台上更容易达到硬件性能限制。</p>
+
+<p>可参考以下一些提示信息来调整物理组件以便在移动端获得更好性能：</p>
+
+<ul>
+<li>You can adjust the <strong>Fixed Timestep</strong> setting (in the <a href="class-TimeManager.html">Time</a> window) to reduce the time spent on physics updates. Increasing the timestep will reduce the CPU overhead at the expense of the accuracy of the physics. Often, lower accuracy is an acceptable tradeoff for increased speed.</li>
+<li>Set the <strong>Maximum Allowed Timestep</strong> in the <a href="class-TimeManager.html">Time</a> window in the 8–10fps range to cap the time spent on physics in the worst case scenario.</li>
+<li>网格碰撞体的性能开销远高于原始碰撞体，因此请谨慎使用。通常可以使用具有原始碰撞体的子对象来近似模拟网格的形状。子碰撞体将共同作为单个复合碰撞体由父级上的刚体进行控制。</li>
+<li>虽然车轮碰撞体在固体对象的意义上而言并非严格的碰撞体，但仍具有较高的 CPU 开销。</li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MobileOptimizationPracticalRenderingOptimizations.html"></a></span><div class="tip">渲染优化</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Experimental.html"></a></span><div class="tip">实验性</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

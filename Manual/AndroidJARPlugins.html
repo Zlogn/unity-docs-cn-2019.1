@@ -1,0 +1,361 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="JAR 插件 - Unity Manual">
+<title>JAR 插件 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/AndroidJARPlugins.png">
+<meta name="description" content="JAR(Java Archive) 插件主要用于实现与 Android 操作系统的交互，或用于从 C# 脚本中调用使用 Java 编写的方法。">
+<meta property="og:description" content="JAR(Java Archive) 插件主要用于实现与 Android 操作系统的交互，或用于从 C# 脚本中调用使用 Java 编写的方法。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'AndroidJARPlugins';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AndroidJARPlugins.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AndroidJARPlugins.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AndroidJARPlugins.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AndroidJARPlugins.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AndroidJARPlugins.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AndroidJARPlugins.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AndroidJARPlugins.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AndroidJARPlugins.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AndroidJARPlugins.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AndroidJARPlugins.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/AndroidJARPlugins.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/AndroidJARPlugins.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/AndroidJARPlugins.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/AndroidJARPlugins.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AndroidJARPlugins.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AndroidJARPlugins.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AndroidJARPlugins.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AndroidJARPlugins.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AndroidJARPlugins.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AndroidJARPlugins.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AndroidJARPlugins.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AndroidJARPlugins.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AndroidJARPlugins.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AndroidJARPlugins.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
+<li><a href="android.html">Android</a></li>
+<li><a href="android-GettingStarted.html">Android 开发入门</a></li>
+<li><a href="PluginsForAndroid.html">构建和使用适用于 Android 的插件</a></li>
+<li>JAR 插件</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AndroidAARPlugins.html"></a></span><div class="tip">AAR 插件和 Android 库</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AndroidUnityPlayerActivity.html"></a></span><div class="tip">扩展 UnityPlayerActivity Java 代码</div>
+</div>
+</div></div>
+<h1>JAR 插件</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>JAR(Java Archive) 插件主要用于实现与 Android 操作系统的交互，或用于从 C# 脚本中调用使用 Java 编写的方法。</p>
+
+<p>这些插件只能包含 Java 代码（例如，不能包含 Android 资源），因此它们的使用范围非常有限。
+要将 JAR 插件添加到项目中，请将 .jar 文件复制到项目的任意文件夹中，然后在 Unity 中选择该文件，从而在 Inspector 窗口中打开 Import Settings。应勾选 Android 复选框以将此 .jar 文件标记为与 Android 兼容：</p>
+
+<figure>
+<img src="../uploads/Main/AndroidJARPlugins.png" alt="Inspector 窗口中显示的 JAR 插件导入设置">
+<figcaption>Inspector 窗口中显示的 JAR 插件导入设置</figcaption>
+</figure>
+
+<h2>Using Java plug-ins</h2>
+
+<p>Unity uses the <a href="http://en.wikipedia.org/wiki/Java_Native_Interface">Java Native Interface (JNI)</a> both when calling code from Java and when interacting with Java or the Java VM(Virtual Machine) from native code or C# scripts. </p>
+
+<h3>Java source files as plug-ins</h3>
+
+<p>When using the Gradle build system, you can avoid creating JAR files. To do this:</p>
+
+<ol>
+<li>Drop the .java file into your Unity project as a plug-in.</li>
+<li>In the <a href="PluginInspector.html">Plugin Inspector</a>, mark the plug-in for the Android platform.</li>
+<li>When building for Android, make sure <strong>Gradle</strong> is set as your <strong>Build System</strong> in the <a href="BuildSettings.html">Build Settings</a>.</li>
+</ol>
+
+<p>Unity copies the java file to the Gradle project and builds with it.</p>
+
+<h2>通过本机 (C/C++) 代码使用 Java 插件</h2>
+
+<p>注意：必须具备 Android Java 原生接口 (JNI) 的高级知识才能理解本部分的这些信息。</p>
+
+<p>要从 C 或 C++ 插件访问 Java 代码，您需要访问 Java VM。为了访问 Java VM，请将以下方法添加到 C/C++ 代码中。</p>
+
+<pre><code>jint JNI_OnLoad(JavaVM* vm, void* reserved) {
+  JNIEnv* jni_env = 0;
+  vm-&gt;AttachCurrentThread(&amp;amp;jni_env, 0);
+  return JNI_VERSION_1_6;
+}
+</code></pre>
+
+<p>篇幅所限，本文档不能完全解释 JNI，但需要说明的是，此方法通常涉及查找类定义、解析构造函数 (&lt;init&gt;) 方法和创建新对象实例，如以下示例所示：</p>
+
+<pre><code>jobject createJavaObject(JNIEnv* jni_env) {
+  jclass cls_JavaClass = jni_env-&gt;FindClass("com/your/java/Class");         // 查找类定义
+  jmethodID mid_JavaClass = jni_env-&gt;GetMethodID (cls_JavaClass, "&lt;init&gt;", "()V");      // 查找构造函数方法
+  jobject obj_JavaClass = jni_env-&gt;NewObject(cls_JavaClass, mid_JavaClass);     // 创建对象实例
+  return jni_env-&gt;NewGlobalRef(obj_JavaClass);                      // 返回具有全局引用的对象
+}
+</code></pre>
+
+<p>有关 JNI 的更多信息，请参阅 Android 开发者文档的 <a href="https://developer.android.com/training/articles/perf-jni.html">JNI</a> 部分。</p>
+
+<p><a name="javawithhelper"></a></p>
+
+<h2>通过包含 helper 类的 C# 脚本使用 Java 插件</h2>
+
+<p>注意：必须具备 Android Java 原生接口 (JNI) 的高级知识才能理解本部分的这些信息。</p>
+
+<p><a href="../ScriptReference/AndroidJNIHelper.html"><code>AndroidJNIHelper</code></a> 和 <a href="../ScriptReference/AndroidJNI.html"><code>AndroidJNI</code></a> Unity API 类用作“原始”JNI 接口的包装器。</p>
+
+<p>AndroidJavaObject 和 AndroidJavaClass Unity API 类在使用 JNI 调用时自动执行许多任务，并且还使用缓存来加快 Java 调用速度。<code>AndroidJavaObject</code> 和 <code>AndroidJavaClass</code> 的组合构建在 <code>AndroidJNI</code> 和 <code>AndroidJNIHelper</code> 之上，但也有一些额外的功能。这些类还具有静态方法可用于访问 Java 类的静态成员。</p>
+
+<p>可通过三种方式从 C# 脚本进行 Java JNI 调用：</p>
+
+<ul>
+<li>原始 JNI，通过 <code>AndroidJNI</code> 方法；</li>
+<li>
+<code>AndroidJNIHelper</code> 类与 <code>AndroidJNI</code> 相结合；</li>
+<li>
+<code>AndroidJavaObject</code> 和 <code>AndroidJavaClass</code> 类，作为最方便的高级 API。</li>
+</ul>
+
+<p><a href="../ScriptReference/AndroidJNI.html">UnityEngine.AndroidJNI</a> 是以 C 语言编写的 JNI 调用的包装器（如上所述）。此类中的所有方法都是静态的，并具有与 Java 原生接口的 1:1 映射。</p>
+
+<p><a href="../ScriptReference/AndroidJNIHelper.html">UnityEngine.AndroidJNIHelper</a> 提供由下一级使用的 helper 功能，该功能作为公共方法公开，在特殊情况下可能有用。</p>
+
+<p><a href="../ScriptReference/AndroidJavaObject.html">UnityEngine.AndroidJavaObject</a> 和 <a href="../ScriptReference/AndroidJavaClass.html">UnityEngine.AndroidJavaClass</a> 的实例分别与 Java 端的 java.lang.Object 和 java.lang.Class（或它们的子类）实例进行一对一映射。它们基本上提供与 Java 端的 3 种交互：</p>
+
+<ul>
+<li><p>调用一个方法</p></li>
+<li><p>获取字段的值</p></li>
+<li><p>设置字段的值</p></li>
+</ul>
+
+<p>该调用分为两类：调用“void”方法以及调用具有非 void 返回类型的方法。返回非 void 类型的方法的返回类型用泛型类型表示。Get 和 Set 始终采用表示字段类型的泛型类型。</p>
+
+<h2>示例</h2>
+
+<h3>示例 1</h3>
+
+<pre><code> AndroidJavaObject jo = new AndroidJavaObject("java.lang.String", "some_string"); 
+  // jni.FindClass("java.lang.String");
+  // jni.GetMethodID(classID, "&lt;init&gt;", "(Ljava/lang/String;)V");
+  // jni.NewStringUTF("some_string");
+  // jni.NewObject(classID, methodID, javaString);
+  int hash = jo.Call&lt;int&gt;("hashCode"); 
+  // jni.GetMethodID(classID, "hashCode", "()I");
+  // jni.CallIntMethod(objectID, methodID);
+</code></pre>
+
+<p>此示例将创建一个用<a href="http://developer.android.com/reference/java/lang/String.html#String(java.lang.StringBuilder)">字符串</a>进行实例化的 <a href="http://developer.android.com/reference/java/lang/String.html">java.lang.String</a> 实例，并检索该字符串的<a href="http://developer.android.com/reference/java/lang/String.html#hashCode()">哈希值</a>。</p>
+
+<p><code>AndroidJavaObject</code> 构造函数至少使用一个参数：要构造实例的类的名称。类名后的所有参数都用于对象的构造函数调用，在本例中为字符串“some_string”。随后对 hashCode() 的调用返回一个“int”（在本示例中用作调用方法的泛型类型参数）。</p>
+
+<p>__注意__：无法使用点分表示法来实例化嵌套的 Java 类。内部类必须使用 $ 分隔符。请使用 <code>android.view.ViewGroup$LayoutParams</code> 或 <code>android/view/ViewGroup$LayoutParams</code>，其中的 LayoutParams 类嵌套在 ViewGroup 类中。</p>
+
+<h3>示例 2</h3>
+
+<p>此示例显示了如何在不使用插件的情况下用 C# 获取当前应用程序的缓存目录：</p>
+
+<pre><code>AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer"); 
+ // jni.FindClass("com.unity3d.player.UnityPlayer");
+ AndroidJavaObject jo = jc.GetStatic AndroidJavaObject&gt;("currentActivity"); 
+ // jni.GetStaticFieldID(classID, "Ljava/lang/Object;");
+ // jni.GetStaticObjectField(classID, fieldID);
+ // jni.FindClass("java.lang.Object");
+
+ Debug.Log(jo.Call AndroidJavaObject&gt;("getCacheDir").Call&lt;string&gt;("getCanonicalPath")); 
+ // jni.GetMethodID(classID, "getCacheDir", "()Ljava/io/File;"); // 或其任何基类！
+ // jni.CallObjectMethod(objectID, methodID);
+ // jni.FindClass("java.io.File");
+ // jni.GetMethodID(classID, "getCanonicalPath", "()Ljava/lang/String;");
+ // jni.CallObjectMethod(objectID, methodID);
+ // jni.GetStringUTFChars(javaString);
+</code></pre>
+
+<p>此示例以 <code>AndroidJavaClass</code> 而不是 <code>AndroidJavaObject</code> 开头，目的是访问 <code>com.unity3d.player.UnityPlayer</code> 的静态成员，而不是创建新对象。然后访问静态字段“currentActivity”，但这次使用 <code>AndroidJavaObject</code> 作为泛型参数。这是因为实际字段类型 <a href="http://developer.android.com/reference/android/app/Activity.html">android.app.Activity</a> 是 <a href="http://developer.android.com/reference/java/lang/Object.html"><code>java.lang.Object</code></a> 的子类，并且任何<a href="http://developer.android.com/reference/java/lang/Class.html">非原始类型</a>都必须作为 <code>AndroidJavaObject</code> 进行访问。此规则的例外是字符串，即使字符串不代表 Java 中的原始类型，也可以直接访问它们。</p>
+
+<p>然后可在 Activity 对象上调用 <a href="http://developer.android.com/reference/android/content/Context.html#getCacheDir()"><code>getCacheDir()</code></a> 来获取表示缓存目录的 File 对象，接着可调用 <a href="http://developer.android.com/reference/java/io/File.html#getCanonicalPath()"><code>getCanonicalPath()</code></a> 来获取字符串表示。</p>
+
+<p>Unity 使用 <a href="https://docs.unity3d.com/ScriptReference/Application-temporaryCachePath.html"><code>Application.temporaryCachePath</code></a> 和 <a href="https://docs.unity3d.com/ScriptReference/Application-persistentDataPath.html"><code>Application.persistentDataPath</code></a> API 提供对应用程序的缓存和文件目录的访问。</p>
+
+<h3>示例 3</h3>
+
+<p>此示例显示了如何使用 <code>UnitySendMessage</code> 将数据从 Java 传递到 Unity。</p>
+
+<pre><code>using UnityEngine;
+
+public class NewBehaviourScript : MonoBehaviour { 
+
+    void Start () { 
+        AndroidJNIHelper.debug = true; 
+        using (AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer")) { 
+        jc.CallStatic("UnitySendMessage", "Main Camera", "JavaMessage", "NewMessage");
+        } 
+    } 
+
+    void JavaMessage(string message) { 
+        Debug.Log("message from java: " + message); 
+    }
+}
+</code></pre>
+
+<p>Java 类 <code>com.unity3d.player.UnityPlayer</code> 有一个静态方法 <a href="https://docs.unity3d.com/Manual/PluginsForIOS.html"><code>UnitySendMessage</code></a>，相当于 iOS 方法：<code>UnitySendMessage</code>。该方法在 Java 中用于将数据传递给 Unity。</p>
+
+<p>尽管是在 Unity 内部调用 <code>UnitySendMessage</code> 方法，但该方法使用 Java 来中继消息，然后 Java 回调本机/Unity 代码以将消息传递给名为“Main Camera”的对象。此对象附带一个脚本，脚本中包含一个名为 <code>JavaMessage</code> 的方法。</p>
+
+<h2>将 Java 插件用于 Unity 时的最佳实践</h2>
+
+<p><code>AndroidJavaObject</code> 和 <code>AndroidJavaClass</code> 方法的计算成本非常高（与使用原始 JNI 的方法一样）。为获得更好的性能以及代码清晰度，请将托管代码与本机/Java 代码之间的转换次数保持在最低限度。</p>
+
+<pre><code>//第一次调用 Java 方法，如
+AndroidJavaObject jo = new AndroidJavaObject("java.lang.String", "some_string"); // 成本有点高
+int hash = jo.Call&lt;int&gt;("hashCode"); // 第一次 - 成本高
+int hash = jo.Call&lt;int&gt;("hashCode"); // 第二次 - 成本不像我们已经知道的 java 方法那么高，可以直接调用它
+</code></pre>
+
+<p>Mono 垃圾回收器应该在使用创建的 <code>AndroidJavaObject</code> 和 <code>AndroidJavaClass</code> 实例后将所有这些实例释放，但建议将它们保留在 <code>using(){}</code> 语句中，以确保尽快删除它们。如果不这么做，无法确定什么时候销毁它们。如果将 <code>AndroidJNIHelper.debug</code> 设置为 true，您将在调试输出中看到垃圾回收器的活动记录。</p>
+
+<pre><code>//安全地获取系统语言
+void Start () { 
+    using (AndroidJavaClass cls = new AndroidJavaClass("java.util.Locale")) { 
+        using(AndroidJavaObject locale = cls.CallStatic&lt;AndroidJavaObject&gt;("getDefault")) { 
+            Debug.Log("current lang = " + locale.Call&lt;string&gt;("getDisplayLanguage")); 
+
+        } 
+    } 
+}
+</code></pre>
+
+<p><br> </p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–03–20 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">5.5 版中的更新功能</span></p></li>
+<li><p><span class="page-history">Support for Java source file plug-ins added for Android player in <a href="https://docs.unity3d.com/2018.2/Documentation/Manual/30_search.html?q=newin20182">2018.2</a> <span class="search-words">NewIn20182</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AndroidAARPlugins.html"></a></span><div class="tip">AAR 插件和 Android 库</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AndroidUnityPlayerActivity.html"></a></span><div class="tip">扩展 UnityPlayerActivity Java 代码</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

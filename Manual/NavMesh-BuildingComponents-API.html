@@ -1,0 +1,323 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="导航网格构建组件 API - Unity Manual">
+<title>导航网格构建组件 API - Unity Manual</title>
+<meta name="description" content="导航网格构建组件为您提供在运行时以及在 Unity Editor 中构建（也称为烘焙）和使用导航网格的额外控制力。">
+<meta property="og:description" content="导航网格构建组件为您提供在运行时以及在 Unity Editor 中构建（也称为烘焙）和使用导航网格的额外控制力。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'NavMesh-BuildingComponents-API';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/NavMesh-BuildingComponents-API.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/NavMesh-BuildingComponents-API.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/NavMesh-BuildingComponents-API.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/NavMesh-BuildingComponents-API.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/NavMesh-BuildingComponents-API.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/NavMesh-BuildingComponents-API.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/NavMesh-BuildingComponents-API.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/NavMesh-BuildingComponents-API.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/NavMesh-BuildingComponents-API.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/NavMesh-BuildingComponents-API.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/NavMesh-BuildingComponents-API.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/NavMesh-BuildingComponents-API.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/NavMesh-BuildingComponents-API.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/NavMesh-BuildingComponents-API.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/NavMesh-BuildingComponents-API.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/NavMesh-BuildingComponents-API.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/NavMesh-BuildingComponents-API.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/NavMesh-BuildingComponents-API.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/NavMesh-BuildingComponents-API.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/NavMesh-BuildingComponents-API.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/NavMesh-BuildingComponents-API.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/NavMesh-BuildingComponents-API.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/NavMesh-BuildingComponents-API.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/NavMesh-BuildingComponents-API.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Navigation.html">导航和寻路</a></li>
+<li><a href="nav-Overview.html">导航概述</a></li>
+<li><a href="NavMesh-BuildingComponents.html">导航网格构建组件</a></li>
+<li>导航网格构建组件 API</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-NavMeshLink.html"></a></span><div class="tip">导航网格链接 (NavMesh Link)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="nav-AdvancedSettings.html"></a></span><div class="tip">高级导航网格烘焙设置</div>
+</div>
+</div></div>
+<h1>导航网格构建组件 API</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><a href="nav-NavigationSystem.html">导航网格</a>构建<a href="UsingComponents.html">组件</a>为您提供在运行时以及在 Unity Editor 中构建（也称为<a href="nav-BuildingNavMesh.html">烘焙</a>）和使用导航网格的额外控制力。</p>
+
+<p>导航网格修改器不在 Unity 标准安装中；有关如何访问这些组件的信息，请参阅<a href="NavMesh-BuildingComponents.html">高级导航网格构建组件</a>的文档。</p>
+
+<h3>导航网格表面 (NavMeshSurface)</h3>
+
+<h4>属性</h4>
+
+<ul>
+<li>
+<code>agentTypeID</code> – 需要构建导航网格的代理类型的 ID。</li>
+<li>
+<code>collectObjects</code> – 定义如何从场景收集输入几何体，为 <code>UnityEngine.AI.CollectObjects</code> 之一：
+
+<ul>
+<li>
+<code>All</code> – 使用场景中的所有对象。</li>
+<li>
+<code>Volume</code> – 使用场景中与包围体接触的所有游戏对象（请参阅 <code>size</code> 和 <code>center</code>）</li>
+<li>
+<code>Children</code> – 使用导航网格表面 (NavMesh Surface) 附加到的游戏对象的所有子对象。</li>
+</ul>
+</li>
+<li>
+<code>size</code> – 构建体积的尺寸。该大小不受缩放影响。</li>
+<li>
+<code>center</code> – 构建体积的中心（相对于变换中心）。</li>
+<li>
+<code>layerMask</code> – 位掩码，用于定义必须将哪些层上的游戏对象包含在烘焙中。</li>
+<li>
+<code>useGeometry</code> – 定义用于烘焙的几何体，为 <code>UnityEngine.NavMeshCollectGeometry</code> 之一：
+
+<ul>
+<li>
+<code>RenderMeshes</code> – 使用渲染网格和地形中的几何体</li>
+<li>
+<code>PhysicsColliders</code> – 使用碰撞体和地形中的几何体。</li>
+</ul>
+</li>
+<li>
+<code>defaultArea</code> – 所有输入几何体的默认区域类型（除非另有说明）。</li>
+<li>
+<code>ignoreNavMeshAgent</code> – 如果具有导航网格代理 (Nav Mesh Agent) 组件的游戏对象应作为输入被忽略，则为 True。</li>
+<li>
+<code>ignoreNavMeshObstacle</code> – 如果具有导航网格障碍物 (Nav Mesh Obstacle) 组件的游戏对象应作为输入被忽略，则为 True。</li>
+<li>
+<code>overrideTileSize</code> – 如果设置了区块大小，则为 True。</li>
+<li>
+<code>tileSize</code> – 以体素为单位的区块大小（组件描述包含有关如何选择区块大小的信息）。</li>
+<li>
+<code>overrideVoxelSize</code> – 如果设置了体素大小，则为 True。</li>
+<li>
+<code>voxelSize</code> – 以世界单位表示的体素大小（组件描述包含有关如何选择区块大小的信息）。</li>
+<li>
+<code>buildHeightMesh</code> – 未实现。</li>
+<li>
+<code>bakedNavMeshData</code> – 对表面使用的 NavMeshData 的引用，如果未设置，则为 null。</li>
+<li>
+<code>activeSurfaces</code> – 所有激活状态的导航网格表面的列表。</li>
+</ul>
+
+<p>__注意：__上述值会影响烘焙的结果，因此必须调用 <code>Bake()</code> 来包含它们。</p>
+
+<h4>公共函数</h4>
+
+<ul>
+<li><code>void Bake ()</code></li>
+</ul>
+
+<p>根据导航网格表面上设置的参数烘焙新的 NavMeshData。可通过 <code>bakedNavMeshData</code> 访问该数据。</p>
+
+<h3>导航网格修改器 (NavMesh Modifier)</h3>
+
+<h4>属性</h4>
+
+<ul>
+<li>
+<code>overrideArea</code> – 如果修改器覆盖区域类型，则为 True。</li>
+<li>
+<code>area</code> – 要应用的新区域类型。</li>
+<li>
+<code>ignoreFromBuild</code> – 如果包含修改器的游戏对象及其子项不应当用于导航网格烘焙，则为 True。</li>
+<li>
+<code>activeModifiers</code> – 所有激活状态的导航网格修改器的列表。</li>
+</ul>
+
+<h4>公共函数</h4>
+
+<ul>
+<li><code>bool AffectsAgentType(int agentTypeID)</code></li>
+</ul>
+
+<p>如果修改器应用于指定的代理类型，则返回 true，否则返回 false。</p>
+
+<h3>导航网格修改器体积 (NavMesh Modifier Volume)</h3>
+
+<h4>属性</h4>
+
+<ul>
+<li>
+<code>size</code> – 包围体的大小（采用局部空间单位）。变换会影响该大小。</li>
+<li>
+<code>center</code> – 包围体的中心（采用局部空间单位）。变换会影响该中心。</li>
+<li>
+<code>area</code> – 要应用于包围体内的导航网格区域的区域类型。</li>
+</ul>
+
+<h4>公共函数</h4>
+
+<ul>
+<li><code>bool AffectsAgentType(int agentTypeID)</code></li>
+</ul>
+
+<p>如果修改器应用于指定的代理类型，则返回 true。</p>
+
+<h3>导航网格链接 (NavMesh Link)</h3>
+
+<h4>属性</h4>
+
+<ul>
+<li>
+<code>agentTypeID</code> – 可使用该链接的代理类型。</li>
+<li>
+<code>startPoint</code> – 链接的起点（采用局部空间单位）。变换会影响该位置。</li>
+<li>
+<code>endPoint</code> – 链接的终点（采用局部空间单位）。变换会影响该位置。</li>
+<li>
+<code>width</code> – 链接的宽度（采用世界长度单位）。</li>
+<li>
+<code>bidirectional</code> – 如果为 true，则可以双向遍历链接。如果为 false，只能按照从起点到终点的方向遍历链接。</li>
+<li>
+<code>autoUpdate</code> – 如果为 true，则链接将更新端点以跟随每帧的游戏对象变换。</li>
+<li>
+<code>area</code> – 链接的区域类型（用于计算寻路成本）。</li>
+</ul>
+
+<h4>公共函数</h4>
+
+<ul>
+<li><code>void UpdateLink()</code></li>
+</ul>
+
+<p>更新链接以便与关联的变换匹配。这对于更新链接很有用（例如在更改变换位置之后），但如果启用了 <code>autoUpdate</code> 属性，则不需要。但是，如果您很少更改链接变换，则调用 <code>UpdateLink</code> 可能对性能产生的影响要小得多。</p>
+
+<h2>
+<br><br>
+</h2>
+
+<ul>
+<li><p><span class="page-edit"> 2017–05–26 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">5.6 中的新功能</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-NavMeshLink.html"></a></span><div class="tip">导航网格链接 (NavMesh Link)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="nav-AdvancedSettings.html"></a></span><div class="tip">高级导航网格烘焙设置</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

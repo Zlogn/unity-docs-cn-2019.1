@@ -1,0 +1,584 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Animation 选项卡 - Unity Manual">
+<title>Animation 选项卡 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/classAnimationClip-Inspector.png">
+<meta name="description" content="__动画剪辑__是 Unity 动画的最小构成元素。它们代表了一个单独的运动，例如 RunLeft、Jump 或 Crawl，并且可通过各种方式进行操作和组合，从而产生生动的效果（请参阅动画状态机（Animation State Machines）、Animator Controller 或混合树（Blend Trees））。
+您可以从导入的 FBX 数据中选择动画剪辑。">
+<meta property="og:description" content="__动画剪辑__是 Unity 动画的最小构成元素。它们代表了一个单独的运动，例如 RunLeft、Jump 或 Crawl，并且可通过各种方式进行操作和组合，从而产生生动的效果（请参阅动画状态机（Animation State Machines）、Animator Controller 或混合树（Blend Trees））。
+您可以从导入的 FBX 数据中选择动画剪辑。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-AnimationClip';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-AnimationClip.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-AnimationClip.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-AnimationClip.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-AnimationClip.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-AnimationClip.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-AnimationClip.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-AnimationClip.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-AnimationClip.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-AnimationClip.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-AnimationClip.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-AnimationClip.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-AnimationClip.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-AnimationClip.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-AnimationClip.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-AnimationClip.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-AnimationClip.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-AnimationClip.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-AnimationClip.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-AnimationClip.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-AnimationClip.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-AnimationClip.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-AnimationClip.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-AnimationClip.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-AnimationClip.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="ImportingAssets.html">导入</a></li>
+<li><a href="class-FBXImporter.html">Model Import Settings 窗口</a></li>
+<li>Animation 选项卡</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-HumanTemplate.html"></a></span><div class="tip">Human Template 窗口</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AnimationEulerCurveImport.html"></a></span><div class="tip">欧拉曲线重新采样</div>
+</div>
+</div></div>
+<h1>Animation 选项卡</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>__动画剪辑__是 Unity 动画的最小构成元素。它们代表了一个单独的运动，例如 RunLeft、Jump 或 Crawl，并且可通过各种方式进行操作和组合，从而产生生动的效果（请参阅<a href="AnimationStateMachines.html">动画状态机（Animation State Machines）</a>、<a href="class-AnimatorController.html">Animator Controller</a> 或<a href="class-BlendTree.html">混合树（Blend Trees）</a>）。
+您可以从导入的 FBX 数据中选择动画剪辑。</p>
+
+<p>单击包含动画剪辑的模型时，将显示以下属性：</p>
+
+<figure>
+<img src="../uploads/Main/classAnimationClip-Inspector.png" alt="动画剪辑检视面板 (Animation Clip Inspector)">
+<figcaption>动画剪辑检视面板 (Animation Clip Inspector)</figcaption>
+</figure>
+
+<p>Inspector 窗口的 <strong>Rig</strong> 选项卡包含四个区域：</p>
+
+<ul>
+<li>(A) <a href="#AssetProperties">特定资源属性</a>。这些设置定义了整个资源的导入选项。</li>
+<li>(B) <a href="#ClipSelectionList">剪辑选择列表</a>。您可以从此列表中选择任何项目以显示其属性并预览其动画。您也可以<a href="Splittinganimations.html">定义新的剪辑</a>。</li>
+<li>(C) <a href="#ClipProperties">特定剪辑属性</a>。这些设置定义了所选__动画剪辑__的导入选项。</li>
+<li>(D) <a href="#AnimationPreview">动画预览</a>。您可以在此处播放动画并选择特定帧。</li>
+</ul>
+
+<p><a name="AssetProperties"></a> </p>
+
+<h2>特定于资源的属性</h2>
+
+<figure>
+<img src="../uploads/Main/classAnimationClip-Inspector_Asset.png" alt="整个资源的导入选项">
+<figcaption>整个资源的导入选项</figcaption>
+</figure>
+
+<p>这些属性适用于此资源中定义的所有动画剪辑和约束：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Import Constraints</strong></td>
+	<td style="text-align:left;">从此资源导入<a href="Constraints.html">约束</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Import Animation</strong></td>
+	<td style="text-align:left;">从此资源导入动画。<br><br><strong><em>注意：</em></strong>如果禁用此选项，则会隐藏此页面上的所有其他选项，并且不会导入任何动画。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Bake Animations</strong></td>
+	<td style="text-align:left;">Bake animations created using IK or Simulation to forward kinematic keyframes. <br><br>Only available for Autodesk® Maya®, Autodesk® 3ds Max® and Cinema 4D files.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Resample Curves</strong></td>
+	<td style="text-align:left;">将动画曲线重新采样为四元数值，并为动画中的每个帧生成一个新的四元数关键帧。<br><br>默认情况下会启用此选项。<br>仅当原始动画中的关键点之间存在插值问题时，才应禁用此选项来<a href="AnimationEulerCurveImport.html">保留最初创作的动画曲线</a>。<br><br>仅当导入文件包含欧拉曲线时才会显示此选项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Anim. Compression</strong></td>
+	<td style="text-align:left;">导入动画时要使用的压缩类型。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Off</strong></td>
+	<td style="text-align:left;">禁用动画压缩。这意味着 Unity 不会在导入时减少关键帧数量，因此可产生最高精度的动画，但性能会降低、文件会更大、运行时内存大小将增加。通常建议不要使用此选项；如果需要更高精度的动画，应启用关键帧减少 (Keyframe Reduction) 功能并减小允许的 <strong>Animation Compression Error</strong> 值。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Keyframe Reduction</strong></td>
+	<td style="text-align:left;">导入时减少冗余关键帧。如果选择此选项，则会显示 <strong>Animation Compression Errors</strong> 选项。这会影响文件大小（运行时内存）以及如何计算曲线。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Keyframe Reduction and Compression</strong></td>
+	<td style="text-align:left;">导入时减少关键帧并在文件中存储动画时压缩关键帧。这仅影响文件大小；运行时内存大小与 <strong>Keyframe Reduction</strong> 相同。如果选择此选项，则会显示 <strong>Animation Compression Errors</strong> 选项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Optimal</strong></td>
+	<td style="text-align:left;">让 Unity 决定如何进行压缩：通过减少关键帧还是通过使用密集格式。<br><br>仅适用于 <strong>Generic</strong> 和 <strong>Humanoid</strong> <a href="FBXImporter-Rig.html">动画类型</a>骨架。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Animation Compression Errors</strong></td>
+	<td style="text-align:left;">仅当启用 <strong>Keyframe Reduction</strong> 或 <strong>Optimal</strong> 压缩时可用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Rotation Error</strong></td>
+	<td style="text-align:left;">旋转曲线的减少量。该值越小，精度越高。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Position Error</strong></td>
+	<td style="text-align:left;">位置曲线的减少量。该值越小，精度越高。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Scale Error</strong></td>
+	<td style="text-align:left;">缩放曲线的减少量。该值越小，精度越高。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Animated Custom Properties</strong></td>
+	<td style="text-align:left;">导入您指定为自定义用户属性的任何 FBX 属性。<br><br>Unity 在导入 FBX 文件时仅支持一小部分属性（例如转换、旋转、缩放和可见性）。但是，您可以借助 <a href="../ScriptReference/ModelImporter-extraUserProperties.html">extraUserProperties</a> 成员，在导入器脚本中指定标准 FBX 属性（如用户属性）来处理这些属性。在导入期间，Unity 会将所有这些指定属性传递给<a href="../ScriptReference/AssetPostprocessor.OnPostprocessGameObjectWithUserProperties.html">资源后处理器 (Asset postprocessor)</a>，就像“真实”用户属性一样。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="ClipSelectionList"> </a> </p>
+
+<h2>剪辑选择列表</h2>
+
+<figure>
+<img src="../uploads/Main/classAnimationClip-Inspector_Selection.png" alt="此文件中定义的剪辑列表">
+<figcaption>此文件中定义的剪辑列表</figcaption>
+</figure>
+
+<p>在 <strong>Rig</strong> 选项卡的此区域中可执行以下任务：</p>
+
+<ul>
+<li>从列表中选择一个剪辑以<a href="#ClipProperties">显示特定于剪辑的属性</a>。</li>
+<li>在<a href="#AnimationPreview">剪辑预览面板</a>中播放所选剪辑。</li>
+<li>使用添加 (<code>+</code>) 按钮为此文件<a href="Splittinganimations.html">创建新剪辑</a>。</li>
+<li>使用删除 (<code>-</code>) 按钮删除所选的剪辑定义。</li>
+</ul>
+
+<p><a name="ClipProperties"> </a> </p>
+
+<h2>特定于剪辑的属性</h2>
+
+<figure>
+<img src="../uploads/Main/classAnimationClip-Inspector_Clip.png" alt="所选动画剪辑的导入选项">
+<figcaption>所选动画剪辑的导入选项</figcaption>
+</figure>
+
+<p><strong>Rig</strong> 选项卡的此区域显示以下特性：</p>
+
+<ul>
+<li>(A) 所选剪辑的名称（可编辑）</li>
+<li>(B) 动画剪辑时间轴</li>
+<li>(C) 用于控制循环和姿势的剪辑属性</li>
+<li>(D) 这些可展开的部分用于：定义曲线、事件、遮罩和运动根以及查看导入过程产生的消息</li>
+</ul>
+
+<p>您可以为此资源中定义的每个动画剪辑单独设置以下属性：</p>
+<!-- not sure about images in tables -->
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong><em>A 区域（可编辑名称）</em></strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><img src="../uploads/Main/classAnimationClip-Name.png" alt="源剪辑的名称"></td>
+	<td style="text-align:left;">The take in the source file to use as a source for this animation clip. <br><br>This is what defines a set of animation as separated in Motionbuilder, Autodesk® Maya® and other 3D packages. Unity can import these takes as individual clips. You can <a href="Splittinganimations.html">create them from the whole file or from a subset of frames</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong><em>B 区域（时间轴特性）</em></strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><img src="../uploads/Main/classAnimationClip-Timeline.png" alt="时间轴编辑器"></td>
+	<td style="text-align:left;">您可以通过在时间轴上拖动起始和结束标记来定义每个剪辑的帧范围。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Start</strong></td>
+	<td style="text-align:left;">剪辑的起始帧。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>End</strong></td>
+	<td style="text-align:left;">剪辑的结束帧。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong><em>C 区域（循环和姿势控制）</em></strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Loop Time</strong></td>
+	<td style="text-align:left;">播放动画剪辑并在到达结尾时重新开始。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Loop Pose</strong></td>
+	<td style="text-align:left;">无缝循环运动。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Cycle Offset</strong></td>
+	<td style="text-align:left;">循环动画在其他时间开始时的周期偏移。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Root Transform Rotation</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Bake into Pose</strong></td>
+	<td style="text-align:left;">将根旋转烘焙到骨骼移动。禁用此选项将会存储为根运动。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Based Upon</strong></td>
+	<td style="text-align:left;">根旋转的基础。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Original</strong></td>
+	<td style="text-align:left;">保持源文件中的原始旋转。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Root Node Rotation</strong></td>
+	<td style="text-align:left;">保持上半身朝前。<br><br>仅适用于 <strong>Generic</strong> <a href="FBXImporter-Rig.html">动画类型</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Body Orientation</strong></td>
+	<td style="text-align:left;">保持上半身朝前。<br><br>仅适用于 <strong>Humanoid</strong> <a href="FBXImporter-Rig.html">动画类型</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Offset</strong></td>
+	<td style="text-align:left;">根旋转偏移（以度为单位）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Root Transform Position (Y)</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Bake into Pose</strong></td>
+	<td style="text-align:left;">将垂直根运动烘焙到骨骼移动。禁用此选项将会存储为根运动。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Based Upon (at Start)</strong></td>
+	<td style="text-align:left;">垂直根位置的基础。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Original</strong></td>
+	<td style="text-align:left;">保持源文件中的垂直位置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Root Node Position</strong></td>
+	<td style="text-align:left;">使用垂直根位置。<br><br>仅适用于 <strong>Generic</strong> <a href="FBXImporter-Rig.html">动画类型</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Center of Mass</strong></td>
+	<td style="text-align:left;">保持质心与根变换位置对齐。<br><br>仅适用于 <strong>Humanoid</strong> <a href="FBXImporter-Rig.html">动画类型</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Feet</strong></td>
+	<td style="text-align:left;">保持双脚与根变换位置对齐。<br><br>仅适用于 <strong>Humanoid</strong> <a href="FBXImporter-Rig.html">动画类型</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Offset</strong></td>
+	<td style="text-align:left;">垂直根位置偏移。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Root Transform Position (XZ)</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Bake into Pose</strong></td>
+	<td style="text-align:left;">将水平根运动烘焙到骨骼移动。禁用此选项将会存储为根运动。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Based Upon</strong></td>
+	<td style="text-align:left;">水平根位置的基础。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Original</strong></td>
+	<td style="text-align:left;">保持源文件中的水平位置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Root Node Position</strong></td>
+	<td style="text-align:left;">使用水平根变换位置。<br><br>仅适用于 <strong>Generic</strong> <a href="FBXImporter-Rig.html">动画类型</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Center of Mass</strong></td>
+	<td style="text-align:left;">保持与根变换位置对齐。<br><br>仅适用于 <strong>Humanoid</strong> <a href="FBXImporter-Rig.html">动画类型</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Offset</strong></td>
+	<td style="text-align:left;">水平根位置偏移。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Mirror</strong></td>
+	<td style="text-align:left;">在此剪辑中进行左右镜像。<br><br>仅当<a href="FBXImporter-Rig.html">动画类型 (Animation Type)</a> 设置为 <strong>Humanoid</strong> 时才显示。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Additive Reference Pose</strong></td>
+	<td style="text-align:left;">启用此选项可以设置<a href="AnimationLayers.html">附加动画层</a>基础参考姿势的帧。在时间轴编辑器中可以看到蓝色标记：<br><img src="../uploads/Main/AnimationAdditiveReferencePoseTimelineMarker.png" alt="">
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Pose Frame</strong></td>
+	<td style="text-align:left;">输入一个帧编号以用作参考姿势。还可以在时间轴中拖动蓝色标记来更新此值。<br><br>仅当启用 <strong>Additive Reference Pose</strong> 的情况下才可用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong><em>D 区域（可展开部分）</em></strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Curves</strong></td>
+	<td style="text-align:left;">展开此部分可管理<a href="AnimationCurvesOnImportedClips.html">导入的剪辑上的动画曲线</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Events</strong></td>
+	<td style="text-align:left;">展开此部分可管理<a href="animeditor-AnimationEvents.html">导入的剪辑上的动画事件</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Mask</strong></td>
+	<td style="text-align:left;">展开此部分可管理<a href="class-AvatarMask.html">对导入剪辑的遮罩</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Motion</strong></td>
+	<td style="text-align:left;">展开此部分可管理<a href="AnimationRootMotionNodeOnImportedClips.html">根运动节点的选择</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Import Messages</strong></td>
+	<td style="text-align:left;">展开此部分可查看<a href="#ImportMessages">有关如何导入动画的详细信息</a>，包括可选的<em>重定向质量报告 (Retargeting Quality Report)</em>。</td>
+</tr>
+</tbody>
+</table>
+
+<p>创建剪辑实质上是定义动画段的起点和终点。为了使这些剪辑循环，应修整这些剪辑，使它们尽可能匹配<a href="LoopingAnimationClips.html">所需循环</a>的第一帧和最后一帧。</p>
+
+<p><a name="ImportMessages"></a> </p>
+
+<h2>动画导入警告</h2>
+
+<p>如果在动画导入过程中出现任何问题，动画导入检视面板 (Animations Import Inspector) 顶部会显示警告：</p>
+
+<figure>
+<img src="../uploads/Main/AnimationWarningBox.png" alt="动画导入警告消息">
+<figcaption>动画导入警告消息</figcaption>
+</figure>
+
+<p>这些警告并不一定意味着您的动画未导入或不正常。可能仅表示导入的动画与源动画看起来略有不同。</p>
+
+<p>要查看更多信息，请展开 <strong>Import Messages</strong> 部分：</p>
+
+<figure>
+<img src="../uploads/Main/AnimationWarningSection.png" alt="动画导入警告消息">
+<figcaption>动画导入警告消息</figcaption>
+</figure>
+
+<p>在这种情况下，Unity 提供了 <strong>Generate Retargeting Quality Report</strong> 选项，通过启用该选项可以查看有关重定向问题的更多具体信息。</p>
+
+<p>您可能会看到的其他警告详细信息包括：</p>
+
+<ul>
+<li>此文件中的默认骨骼长度与源 Avatar 中的值不同。</li>
+<li>此文件中的中间骨骼默认旋转与源 Avatar 中的值不同。</li>
+<li>源 Avatar 层级视图与此模型中的层级视图不匹配。</li>
+<li>此动画具有将被丢弃的转换动画。</li>
+<li>人形动画具有将被丢弃的中间变换和旋转。</li>
+<li>具有将被丢弃的缩放动画。</li>
+</ul>
+
+<p>这些消息表明 Unity 导入动画并将其转换为自己的内部格式时忽略了原始文件中的某些数据。这些警告实质上告诉您重定向的动画可能与源动画不完全匹配。</p>
+
+<p><strong>注意：</strong>Unity 不支持除<strong>常量 (constant)</strong> 以外的前外推 (pre-extrapolate) 和后外推 (post-extrapolate) 模式（也称为前无限 (pre-infinity) 和后无限 (post-infinity) 模式），因此会在导入时将这些模式转换为<strong>常量</strong>。</p>
+
+<p><a name="AnimationPreview"></a> </p>
+
+<h2>动画预览</h2>
+
+<figure>
+<img src="../uploads/Main/classAnimationClip-Inspector_Preview.png" alt="动画剪辑预览">
+<figcaption>动画剪辑预览</figcaption>
+</figure>
+
+<p><strong>Rig</strong> 选项卡的预览区域提供以下特性：</p>
+
+<ul>
+<li>(A) 所选剪辑的名称</li>
+<li>(B) 播放/暂停按钮</li>
+<li>(C) 位于预览时间轴上的播放头（可来回拖动）</li>
+<li>(D) <a href="Overview2D.html">2D 预览模式</a>按钮（在正交摄像机和透视摄像机之间切换）</li>
+<li>(E) 轴心和质心显示按钮（在显示和隐藏辅助图标之间切换）</li>
+<li>(F) 动画预览速度滑动条（向左移动减速；向右移动加速）</li>
+<li>(G) 播放状态标记（以秒、百分比和帧编号显示播放位置）</li>
+<li>(H) Avatar 选择器（更改要预览该操作的游戏对象）</li>
+<li>(I) <strong>Tag</strong> 栏，在此处可以定义<a href="Tags.html">标签 (Tags)</a> 并将其应用于剪辑</li>
+<li>(J) <a href="AssetBundlesIntro.html">AssetBundle</a> 栏，在此处可以<a href="AssetBundles-Workflow.html">定义 AssetBundle 和变体</a>
+</li>
+</ul>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2018–04–25 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-edit"> 2017–12–05 Page amended with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history"><a href="https://docs.unity3d.com/2017.2/Documentation/Manual/30_search.html?q=newin20172">2017.2</a> 中添加了 Materials 选项卡 <span class="search-words">NewIn20172</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-HumanTemplate.html"></a></span><div class="tip">Human Template 窗口</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AnimationEulerCurveImport.html"></a></span><div class="tip">欧拉曲线重新采样</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

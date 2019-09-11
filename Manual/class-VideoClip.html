@@ -1,0 +1,403 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="视频剪辑 - Unity Manual">
+<title>视频剪辑 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/Video-3.jpg">
+<meta name="description" content="视频剪辑是导入的视频文件，可由视频播放器 (Video Player) 组件用于播放视频内容（如果视频有声音，同时播放附带的音频内容）。视频文件的典型文件扩展名包括 .mp4、.mov、.webm 和 .wmv。">
+<meta property="og:description" content="视频剪辑是导入的视频文件，可由视频播放器 (Video Player) 组件用于播放视频内容（如果视频有声音，同时播放附带的音频内容）。视频文件的典型文件扩展名包括 .mp4、.mov、.webm 和 .wmv。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-VideoClip';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-VideoClip.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-VideoClip.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-VideoClip.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-VideoClip.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-VideoClip.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-VideoClip.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-VideoClip.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-VideoClip.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-VideoClip.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-VideoClip.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-VideoClip.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-VideoClip.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-VideoClip.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-VideoClip.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-VideoClip.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-VideoClip.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-VideoClip.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-VideoClip.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-VideoClip.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-VideoClip.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-VideoClip.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-VideoClip.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-VideoClip.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-VideoClip.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="VideoPlayer.html">视频概述</a></li>
+<li>视频剪辑</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="VideoPlayer-MigratingFromMovieTexture.html"></a></span><div class="tip">Migrating from MovieTexture to VideoPlayer</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Video.html"></a></span><div class="tip">视频源</div>
+</div>
+</div></div>
+<h1>视频剪辑</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>视频剪辑是导入的视频文件，可由<a href="class-VideoPlayer.html">视频播放器 (Video Player) 组件</a>用于播放视频内容（如果视频有声音，同时播放附带的音频内容）。视频文件的典型文件扩展名包括 .mp4、.mov、.webm 和 .wmv。</p>
+
+<p>选择视频剪辑时，检视面板 (Inspector) 会显示视频剪辑导入器 (Video Clip Importer)，其中包括选项、预览和源详细信息。单击预览窗口右上角的 <strong>Play</strong> 按钮即可播放视频剪辑及其第一个音频轨道。</p>
+
+<figure>
+<img src="../uploads/Main/Video-3.jpg" alt="在 Inspector 窗口中查看的名为 Havana 的一个视频剪辑资源，显示了视频剪辑导入器选项">
+<figcaption>在 Inspector 窗口中查看的名为 <strong><em>Havana</em></strong> 的一个视频剪辑资源，显示了视频剪辑导入器选项</figcaption>
+</figure>
+
+<p>要查看视频剪辑的源信息，请导航到 Inspector 窗口底部的预览面板，单击左上角的视频剪辑名称，然后选择 <strong>Source Info</strong>。</p>
+
+<figure>
+<img src="../uploads/Main/Video-4.jpg" alt="">
+</figure>
+
+<figure>
+<img src="../uploads/Main/Video-5.png" alt="源信息 (Source Info) 显示所选视频剪辑的相关信息">
+<figcaption>源信息 (Source Info) 显示所选视频剪辑的相关信息</figcaption>
+</figure>
+
+<p>特定于平台的选项使转码过程适应每个目标平台，允许每个平台选择作为默认选项。</p>
+
+<figure>
+<img src="../uploads/Main/Video-6.png" alt="视频剪辑导入器的转码 (Transcode) 部分">
+<figcaption>视频剪辑导入器的转码 (Transcode) 部分</figcaption>
+</figure>
+
+<p>如果禁用转码，将按原样使用视频文件，这意味着必须手动验证与目标平台的兼容性（请参阅有关视频文件兼容性的文档以了解更多信息）。但是，选择不转码可以节省时间并且避免了转换过程中的质量损失。</p>
+
+<p><a name="VideoClipImporterProperties"></a></p>
+
+<h2>视频剪辑导入器属性</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性</em></strong></th>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"><strong><em>功能</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Importer Version</strong></td>
+	<td style="text-align:left;">选择要使用的导入器版本。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>VideoClip</strong></td>
+	<td style="text-align:left;">生成适合用于[视频播放器组件](class-VideoPlayer]的视频剪辑。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;" colspan="3">
+<strong>MovieTexture__（旧版） | 生成旧版<a href="class-MovieTexture.html">电影纹理</a>。 |
+| </strong>Keep Alpha__</td>
+	<td style="text-align:left;">保留 <a href="VideoTransparency.html">Alpha 通道</a>并在转码期间将其编码，因此即使目标平台本身不支持带有 Alpha 的视频，也可以使用它。<br><br>仅对具有 Alpha 通道的源显示此属性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Deinterlace</strong></td>
+	<td style="text-align:left;">控制隔行扫描源在转码期间如何解除隔行扫描。例如，可以选择更改隔行扫描设置决定视频的编码方式或为了美观。隔行扫描视频在每帧中有两个时间样本：一个在奇数行中，另一个在偶数行中。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Off</strong></td>
+	<td style="text-align:left;">源文件没有隔行扫描，并且没有要执行的处理（这是默认设置）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Even</strong></td>
+	<td style="text-align:left;">采用每个帧的偶数行，将其插入以创建缺失内容。丢弃奇数行。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Odd</strong></td>
+	<td style="text-align:left;">采用每个帧的奇数行，将其插入以创建缺失内容。丢弃偶数行。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Flip Horizontally</strong></td>
+	<td style="text-align:left;">如果选中此复选框，则在转码期间将源文件内容沿水平轴翻转实现倒播。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Flip Vertically</strong></td>
+	<td style="text-align:left;">如果选中此复选框，则在转码期间将源内容沿垂直轴翻转以使其左右互换。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Import Audio</strong></td>
+	<td style="text-align:left;">如果选中此复选框，则会在转码期间导入音频轨道。<br><br>仅对具有音频轨道的源显示此属性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Transcode</strong></td>
+	<td style="text-align:left;">通过勾选复选框启用该属性时，源将转码为与目标平台兼容的格式。<br><br>如果禁用，则使用原始内容，绕过可能漫长的转码过程。<br><br><strong>注意：</strong>请验证源格式是否与每个目标平台兼容（请参阅有关视频文件兼容性的文档以了解更多信息）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>Dimensions</strong></td>
+	<td style="text-align:left;">控制源文件内容的大小调整方式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Original</strong></td>
+	<td style="text-align:left;">保持原始大小。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Three Quarter Res</strong></td>
+	<td style="text-align:left;">将源的大小调整为其原始宽度和高度的四分之三。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Half Res</strong></td>
+	<td style="text-align:left;">将源的大小调整为其原始宽度和高度的一半。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Quarter Res</strong></td>
+	<td style="text-align:left;">将源的大小调整为其原始宽度和高度的四分之一。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Square (1024 X 1024)</strong></td>
+	<td style="text-align:left;">将源大小调整为 1024 x 1024 正方形图像。宽高比可控。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Square (512 X 512)</strong></td>
+	<td style="text-align:left;">将源大小调整为 512 x 512 正方形图像。宽高比可控。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Square (256 X 256)</strong></td>
+	<td style="text-align:left;">将源大小调整为 256 x 256 正方形图像。宽高比可控。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Custom</strong></td>
+	<td style="text-align:left;">将源大小调整为自定义分辨率。宽高比可控。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>Width</strong></td>
+	<td style="text-align:left;">所生成图像的宽度。<br><br>仅当 Dimensions 字段设置为 Custom 时，此属性才可见。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>Height</strong></td>
+	<td style="text-align:left;">所生成图像的高度。<br><br>仅当 Dimensions 字段设置为 Custom 时，此属性才可见。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>Aspect Ratio</strong></td>
+	<td style="text-align:left;">调整图像大小时使用的宽高比控件。<br><br>仅当 Dimensions 字段设置为 Original 以外的选项时，此属性才可见。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>No Scaling</strong></td>
+	<td style="text-align:left;">根据需要添加黑色区域以保留原始内容的宽高比。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Stretch</strong></td>
+	<td style="text-align:left;">拉伸原始内容以填充目标分辨率，而不留下黑色区域。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>Codec</strong></td>
+	<td style="text-align:left;">Codec used for encoding the video track. <br><br>For information about codec support, see the documentation on <a href="VideoSources-FileCompatibility.html">Video file compatibility</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Auto</strong></td>
+	<td style="text-align:left;">为目标平台选择最合适的视频编码解码器。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>H264</strong></td>
+	<td style="text-align:left;">The MPEG–4 Advanced Video Coding (AVC) video codec, supported by hardware on most platforms.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>H265</strong></td>
+	<td style="text-align:left;">The MPEG-H Part 2, or High Efficiency Video Coding (HEVC) video codec, supported by hardware on some platforms.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>VP8</strong></td>
+	<td style="text-align:left;">VP8 视频编解码器，受到大多数平台上的软件支持，并受到 Android 和 WebGL 等几个平台上的硬件支持。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>Bitrate Mode</strong></td>
+	<td style="text-align:left;">相对于所选编码解码器的基线配置文件的低、中或高比特率。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="2"><strong>Spatial Quality</strong></td>
+	<td style="text-align:left;">此设置决定视频图像在转码过程中是否压缩大小，缩小意味着它们占用的存储空间更少。但是，调整图像大小也会导致在播放期间出现模糊。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Low Spatial Quality</strong></td>
+	<td style="text-align:left;">在转码期间图像大小显著减小（通常为原始尺寸的四分之一），然后在播放时扩展回原始大小。这是调整大小的最大量，意味着它可以节省最多的存储空间，但在播放时会产生最大的模糊度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>Medium Spatial Quality</strong></td>
+	<td style="text-align:left;">在转码期间图像大小适度减小（通常为原始尺寸的一半），然后在播放时扩展回原始大小。虽然有一定的大小调整，但是图像将比使用 Low Spatial Quality 选项的图像更清晰，所需存储空间有所减少。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;"><strong>High Spatial Quality</strong></td>
+	<td style="text-align:left;">如果选择此选项，则不会调整大小。这意味着在转码期间图像大小不会减小，因此将保持视频的原始视觉清晰度。</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2019–05–07 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Unity 5.6 中的新功能</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="VideoPlayer-MigratingFromMovieTexture.html"></a></span><div class="tip">Migrating from MovieTexture to VideoPlayer</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Video.html"></a></span><div class="tip">视频源</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

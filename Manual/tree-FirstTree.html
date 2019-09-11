@@ -1,0 +1,245 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="构建第一棵树 - Unity Manual">
+<title>构建第一棵树 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/TreeCreator-BasicBranch.png">
+<meta name="description" content="现在，我们将引导您使用树创建工具来创建第一棵树。">
+<meta property="og:description" content="现在，我们将引导您使用树创建工具来创建第一棵树。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'tree-FirstTree';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/tree-FirstTree.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/tree-FirstTree.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/tree-FirstTree.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/tree-FirstTree.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/tree-FirstTree.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/tree-FirstTree.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/tree-FirstTree.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/tree-FirstTree.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/tree-FirstTree.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/tree-FirstTree.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/tree-FirstTree.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/tree-FirstTree.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/tree-FirstTree.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/tree-FirstTree.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/tree-FirstTree.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/tree-FirstTree.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/tree-FirstTree.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/tree-FirstTree.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/tree-FirstTree.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/tree-FirstTree.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/tree-FirstTree.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/tree-FirstTree.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/tree-FirstTree.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/tree-FirstTree.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="class-Tree.html">Tree Editor（树编辑器）</a></li>
+<li>构建第一棵树</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-Tree.html"></a></span><div class="tip">Tree Editor（树编辑器）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="tree-Structure.html"></a></span><div class="tip">树基础知识</div>
+</div>
+</div></div>
+<h1>构建第一棵树</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>现在，我们将引导您使用树创建工具来创建第一棵树。</p>
+
+<h2>添加新树</h2>
+
+<p>要创建新的__树 (Tree)__ 资源，请选择 <strong>GameObject &gt; 3D Object &gt; Tree</strong>。您将看到在 Project 视图中创建了一个新的树资源，并在当前打开的场景中进行了实例化。这棵新树非常简单，只有一个树枝，所以让我们为其添加一些特征。</p>
+
+<h2>添加树枝</h2>
+
+<figure>
+<img src="../uploads/Main/TreeCreator-BasicBranch.png" alt="场景中一棵全新的树">
+<figcaption>场景中一棵全新的树</figcaption>
+</figure>
+
+<p>选择该树即可在 <strong>Inspector</strong> 中查看 <strong>Tree</strong> 窗口。此界面提供了塑造和雕刻树的所有工具。您将看到__树层级视图 (Tree Hierarchy)__ 窗口，其中包含两个节点：__Tree Root__ 节点和单个 <strong>Branch Group</strong> 节点，我们将其称为树干。</p>
+
+<p>在__树层级视图__中，选择 <strong>Branch Group__（充当树干）。单击 </strong>Add Branch Group__ 按钮，随后将看到一个新的 <strong>Branch Group</strong> 连接到主枝 (Main Branch)。现在，您可以尝试调整__树枝组属性 (Branch Group Properties)__ 中的设置来查看连接到树干的树枝的变化。</p>
+
+<figure>
+<img src="../uploads/Main/TreeCreator-AddingBranches1.jpg" alt="Adding branches to the tree trunk.">
+<figcaption>Adding branches to the tree trunk.</figcaption>
+</figure>
+
+<p>创建连接到树干的树枝后，我们现在可以通过连接另一个 <strong>Branch Group</strong> 节点向新创建的树枝添加较小的细枝。选择二级 <strong>Branch Group</strong> 并再次单击 <strong>Add Branch Group</strong> 按钮。调整此组的值以创建连接到二级树枝的更多树枝。</p>
+
+<figure>
+<img src="../uploads/Main/TreeCreator-AddingBranches2.jpg" alt="Adding branches to the secondary branches.">
+<figcaption>Adding branches to the secondary branches.</figcaption>
+</figure>
+
+<p>现在树的树枝结构已经完成。我们的游戏不是发生在冬天，所以还应该在不同的树枝上添加一些__树叶__，对吧？</p>
+
+<h2>添加树叶</h2>
+
+<p>我们通过添加__树叶组 (Leaf Group)__ 来用树叶装饰我们的树，这和刚才添加树枝组的操作基本上是一样的。选择二级 Branch Group 节点，然后单击 <strong>Add Leaf Group</strong> 按钮。如果您确实很有实力，还可在最小的树枝上添加另一个树叶组。</p>
+
+<figure>
+<img src="../uploads/Main/TreeCreator-AddingLeaves.jpg" alt="Leaves added to the secondary and smallest branches">
+<figcaption>Leaves added to the secondary and smallest branches</figcaption>
+</figure>
+
+<p>现在，树叶被渲染成不透明的平面。这是因为我们希望在为树叶添加材质之前调整树叶的值（大小、位置、旋转等）。调整树叶 (Leaf) 值，直到找到想要的一些设置。</p>
+
+<h2>添加材质</h2>
+
+<p>为了使树看起来更逼真，我们需要为树枝和树叶应用__材质<strong>。请使用 </strong>Assets &gt; Create &gt; Material__ 在项目中创建新的材质。将此材质重命名为“My Tree Bark”，然后从 Shader 下拉选单中选择 <strong>Nature &gt; Tree Creator Bark</strong>。在此处，可将树创建器包 (Tree Creator Package) 中提供的__纹理__分配给树皮材质 (Bark Material) 的 Base、Normalmap 和 Gloss 属性。我们建议对 Base 和 Gloss 属性使用“BigTree_bark_diffuse”纹理，并对 Normalmap 属性使用“BigTree_bark_normal”纹理。</p>
+
+<p>现在我们将按照相同的步骤创建树叶材质。创建新材质并将着色器指定为 <strong>Nature &gt; Tree Creator Leaves</strong>。为纹理字段分配树创建器包中的树叶纹理。</p>
+
+<figure>
+<img src="../uploads/Main/TreeCreator-LeavesMaterial.png" alt="树叶的材质">
+<figcaption>树叶的材质</figcaption>
+</figure>
+
+<p>两个材质都创建完成后，将它们分配给树的不同组节点。选择树并单击任何树枝或树叶节点，然后展开__树枝组属性 (Branch Group Properties)__ 的 <strong>Geometry</strong> 部分。您将看到所选节点类型的材质分配字段。分配您创建的相关材质并查看结果。</p>
+
+<figure>
+<img src="../uploads/Main/TreeCreator-AddingMaterialToLeaves.jpg" alt="Setting the leaves material">
+<figcaption>Setting the leaves material</figcaption>
+</figure>
+
+<p>为完成这棵树，请将材质分配给树中的所有__树枝组 (Branch Group)__ 和__树叶组 (Leaf Group)__ 节点。现在，您可以把您的第一棵树放进游戏中了！</p>
+
+<figure>
+<img src="../uploads/Main/TreeCreator-FinalTree.jpg" alt="Tree with materials on leaves and branches.">
+<figcaption>Tree with materials on leaves and branches.</figcaption>
+</figure>
+
+<h2>提示。</h2>
+
+<ul>
+<li>创建树是一个反复试验的过程。</li>
+<li>不要创建太多的树叶/树枝，因为这会影响游戏的性能。</li>
+<li>查看 <a href="HOWTO-alphamaps.html">Alpha 贴图</a>指南了解如何创建自定义树叶。</li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-Tree.html"></a></span><div class="tip">Tree Editor（树编辑器）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="tree-Structure.html"></a></span><div class="tip">树基础知识</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

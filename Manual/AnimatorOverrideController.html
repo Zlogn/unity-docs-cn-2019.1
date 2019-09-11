@@ -1,0 +1,226 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Animator Override Controller - Unity Manual">
+<title>Animator Override Controller - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/AnimatorOverrideControllerAnimatorAssetIcon.png">
+<meta name="description" content="Animator Override Controller 是一种资源，它可让您扩展现有 Animator Controller，从而替换使用的特定动画但保留其原始结构、参数和逻辑。">
+<meta property="og:description" content="Animator Override Controller 是一种资源，它可让您扩展现有 Animator Controller，从而替换使用的特定动画但保留其原始结构、参数和逻辑。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'AnimatorOverrideController';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AnimatorOverrideController.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AnimatorOverrideController.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AnimatorOverrideController.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AnimatorOverrideController.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AnimatorOverrideController.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AnimatorOverrideController.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AnimatorOverrideController.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AnimatorOverrideController.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AnimatorOverrideController.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AnimatorOverrideController.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/AnimatorOverrideController.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/AnimatorOverrideController.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/AnimatorOverrideController.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/AnimatorOverrideController.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AnimatorOverrideController.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AnimatorOverrideController.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AnimatorOverrideController.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AnimatorOverrideController.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AnimatorOverrideController.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AnimatorOverrideController.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AnimatorOverrideController.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AnimatorOverrideController.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AnimatorOverrideController.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AnimatorOverrideController.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="AnimationSection.html">动画</a></li>
+<li><a href="AnimatorControllers.html">Animator Controllers</a></li>
+<li>Animator Override Controller</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BlendShapes.html"></a></span><div class="tip">动画混合形状</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Retargeting.html"></a></span><div class="tip">重定向人形动画</div>
+</div>
+</div></div>
+<h1>Animator Override Controller</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Animator Override Controller 是一种资源，它可让您扩展现有 Animator Controller，从而替换使用的特定动画但保留其原始结构、参数和逻辑。</p>
+
+<p>因此，您可以创建同一个基本状态机的多个变体，但是每个变体使用不同的动画集。例如，您的游戏可能有各种各样的 NPC 类角色生活在世界上，但每种类型（小妖精、恶魔、小精灵等）都有自己独特的行走、空闲、坐定等动画。</p>
+
+<p>通过创建一个包含所有 NPC 类型角色逻辑的“基础”Animator Controller，即可为每种角色类型创建一个重写，并放入各自的动画文件。</p>
+
+<p>以下是一个用于演示的典型Animator Controller资源：</p>
+
+<figure>
+<img src="../uploads/Main/AnimatorOverrideControllerAnimatorAssetIcon.png" alt="">
+</figure>
+
+<p>这代表一个Animator Controller，其中包含一个简单状态机，由混合树控制四个方向的动画，还有一个空闲动画，如下所示：</p>
+
+<figure>
+<img src="../uploads/Main/AnimatorOverrideControllerOriginalAnimator.png" alt="">
+</figure>
+
+<p>为了扩展此通用 NPC 状态机来使用仅适用于（比如）恶魔型角色的独特动画，您可以创建一个Animator Override Controller，并放入恶魔的动画剪辑以替换原始动画剪辑。恶魔可能有不同的空闲和四处游走方式，可能采取更缓慢、更狂暴和更有力的动作。但是，通过使用Animator Override Controller，如何在运动状态之间进行过渡和混合的基本逻辑可被具有不同动画集的不同角色所共享，从而减少构建和修改状态机本身所需的工作量。</p>
+
+<p>要创建新的Animator Override Controller，请使用 <strong>Assets &gt; Create</strong> 菜单，或 Project 视图中的 <strong>Create</strong> 按钮，然后选择 Animator Override Controller。</p>
+
+<p>Animator Override Controller具有与Animator Controller非常相似的图标，不同之处在于它在图标角上带有“加号”而不是“播放”符号：</p>
+
+<figure>
+<img src="../uploads/Main/AnimatorOverrideControllerBothIcons.png" alt="比较图标：并排展示 Animator Controller 和 Animator Override Controller 资源">
+<figcaption>比较图标：并排展示 Animator Controller 和 Animator Override Controller 资源</figcaption>
+</figure>
+
+<p>在检视面板中选择新的 Animator Override Controller 时，最初会处于未分配状态，如下所示：</p>
+
+<figure>
+<img src="../uploads/Main/AnimatorOverrideControllerUnassigned.png" alt="Animator Override Controller 中未分配 Animator Controller">
+<figcaption>Animator Override Controller 中未分配 Animator Controller</figcaption>
+</figure>
+
+<p>要开始使用Override Controller，必须将原始控制器资源分配给检视面板中的新Override Controller。完成此操作后，原始控制器中使用的所有动画将在 Override Controller 的检视面板中显示为列表：</p>
+
+<figure>
+<img src="../uploads/Main/AnimatorOverrideControllerInspector.png" alt="将现有控制器拖入 Animator Override Controller 的检视面板">
+<figcaption>将现有控制器拖入 Animator Override Controller 的检视面板</figcaption>
+</figure>
+
+<p>然后，您可以分配新动画剪辑以重写原始剪辑。在此示例中，已使用动画的“恶魔”(Ogre) 版本重写所有剪辑。</p>
+
+<figure>
+<img src="../uploads/Main/AnimatorOverrideControllerNewClips.png" alt="已分配新剪辑的 Override Controller">
+<figcaption>已分配新剪辑的 Override Controller</figcaption>
+</figure>
+
+<p>现在，此 Override Controller 可在Ogre角色的游戏对象的 Animator 组件中使用，就像它是 Animator Controller 一样。它将使用与原始 Animator Controller 相同的逻辑，但播放的是分配的新动画而不是原始动画。</p>
+
+<figure>
+<img src="../uploads/Main/AnimatorOverrideControllerInUseOnGameObject.png" alt="在Animator组件中将Override Controller用于游戏对象">
+<figcaption>在Animator组件中将Override Controller用于游戏对象</figcaption>
+</figure>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BlendShapes.html"></a></span><div class="tip">动画混合形状</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Retargeting.html"></a></span><div class="tip">重定向人形动画</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

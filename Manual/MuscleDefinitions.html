@@ -1,0 +1,214 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Avatar Muscle &amp; Settings 选项卡 - Unity Manual">
+<title>Avatar Muscle &amp; Settings 选项卡 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/MecanimAvatarMuscles.png">
+<meta name="description" content="Unity 的动画系统允许使用__肌肉 (Muscles)__ 控制不同骨骼的运动范围。">
+<meta property="og:description" content="Unity 的动画系统允许使用__肌肉 (Muscles)__ 控制不同骨骼的运动范围。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'MuscleDefinitions';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/MuscleDefinitions.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/MuscleDefinitions.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/MuscleDefinitions.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/MuscleDefinitions.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/MuscleDefinitions.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/MuscleDefinitions.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/MuscleDefinitions.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/MuscleDefinitions.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/MuscleDefinitions.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/MuscleDefinitions.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/MuscleDefinitions.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/MuscleDefinitions.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/MuscleDefinitions.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/MuscleDefinitions.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/MuscleDefinitions.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/MuscleDefinitions.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/MuscleDefinitions.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/MuscleDefinitions.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/MuscleDefinitions.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/MuscleDefinitions.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/MuscleDefinitions.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/MuscleDefinitions.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/MuscleDefinitions.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/MuscleDefinitions.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="ImportingAssets.html">导入</a></li>
+<li><a href="class-FBXImporter.html">Model Import Settings 窗口</a></li>
+<li><a href="FBXImporter-Rig.html">Rig 选项卡</a></li>
+<li>Avatar Muscle &amp; Settings 选项卡</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-Avatar.html"></a></span><div class="tip">Avatar Mapping 选项卡</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-AvatarMask.html"></a></span><div class="tip">Avatar Mask 窗口</div>
+</div>
+</div></div>
+<h1>Avatar Muscle &amp; Settings 选项卡</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 的动画系统允许使用__肌肉 (Muscles)__ 控制不同骨骼的运动范围。</p>
+
+<p><a href="class-Avatar.html">正确配置</a> Avatar 后，动画系统可“理解”骨骼结构，并允许使用 <strong>Avatar</strong> Inspector 的 <strong>Muscles &amp; Settings</strong> 选项卡。使用 <strong>Muscles &amp; Settings</strong> 选项卡可调整角色的运动范围，并确保角色以逼真的方式变形，而不出现视觉瑕疵或自我重叠。</p>
+
+<figure>
+<img src="../uploads/Main/MecanimAvatarMuscles.png" alt="Avatar 窗口中的 Muscles &amp;amp; Settings 选项卡">
+<figcaption><strong>Avatar</strong> 窗口中的 <strong>Muscles &amp; Settings</strong> 选项卡</figcaption>
+</figure>
+
+<p><strong>Muscle &amp; Settings</strong> 选项卡具有以下区域：</p>
+
+<ul>
+<li>(A) 通过这些按钮在 <strong>Mapping</strong> 和 <strong>Muscles &amp; Settings</strong> 选项卡之间进行切换。在选项卡之间切换之前，必须对所做的更改执行 <strong>Apply</strong> 或 <strong>Revert</strong> 操作。</li>
+<li>(B) 通过 <strong>Muscle Group Preview</strong> 区域可使用预定义的变形来操作角色。这些设置一次影响多个骨骼。</li>
+<li>(C) 使用 <strong>Per-Muscle Settings</strong> 区域可调整身体的各个骨骼。可以展开这些肌肉设置以便更改每项设置的范围限制。例如，默认情况下，Unity 会将 Head-Nod 和 Head-Tilt 设置的范围设置为 –40 到 40 度，可以进一步减小这些范围以增加这些动作的刚度。</li>
+<li>(D) 使用 <strong>Additional Settings</strong> 可调整身体的特定特效。</li>
+<li>(E) <strong>Muscles</strong> 菜单提供了 <strong>Reset</strong> 工具，可将所有肌肉设置恢复到默认值。</li>
+<li>(F) 通过这些按钮接受所做的更改 (<strong>Accept</strong>)、放弃更改 (<strong>Revert</strong>) 以及离开 Avatar 窗口 (<strong>Done</strong>)。在离开 <strong>Avatar</strong> 窗口之前，必须对所做的更改执行 <strong>Apply</strong> 或 <strong>Revert</strong> 操作。</li>
+</ul>
+
+<h2>预览更改</h2>
+
+<p>对于 <strong>Muscle Group Preview</strong> 和 <strong>Per-Muscle Settings</strong> 区域中的设置，可直接在 <strong>Scene</strong> 视图中预览所做的更改。可以拖动滑动条来查看应用于角色的每项设置的移动范围：</p>
+
+<figure>
+<img src="../uploads/Main/MuscleDefinitions-SceneView.png" alt="在 Scene 视图中预览肌肉设置的更改">
+<figcaption>在 Scene 视图中预览肌肉设置的更改</figcaption>
+</figure>
+
+<p>可以通过网格查看骨架的骨骼。</p>
+
+<h2>移动自由度 (Degree of Freedom, DoF)</h2>
+
+<p>可以在 <strong>Additional Settings</strong> 中启用 <strong>Translate DoF</strong> 选项，从而启用人形角色的移动动画。如果禁用此选项，则 Unity 仅使用旋转对骨骼进行动画化。<strong>Translation DoF</strong> 可用于 Chest、UpperChest、Neck、LeftUpperLeg、RightUpperLeg、LeftShoulder 和 RightShoulder 的肌肉。</p>
+
+<p><strong>注意：</strong>启用 <strong>Translate DoF</strong> 可能会提高性能要求，因为动画系统需要执行额外的步骤来重新定位人形动画。因此，在已知动画包含角色某些骨骼的动画式移动时，才应启用此选项。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit"> 2018–04–25 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-Avatar.html"></a></span><div class="tip">Avatar Mapping 选项卡</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-AvatarMask.html"></a></span><div class="tip">Avatar Mask 窗口</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

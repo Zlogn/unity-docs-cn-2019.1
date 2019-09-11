@@ -1,0 +1,301 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="使用组件来控制游戏对象 - Unity Manual">
+<title>使用组件来控制游戏对象 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/GameObjectPublicVar.png">
+<meta name="description" content="在 Unity Editor 中，使用 Inspector 来更改组件属性。因此，比如说，更改变换组件的位置值将导致游戏对象的位置发生变化。同样，可以更改渲染器材质的颜色或刚体的质量，并对游戏对象的外观或行为产生相应影响。在大多数情况下，脚本还涉及修改组件属性以操纵游戏对象。但是差异在于，脚本可以随着时间推移而逐渐改变属性的值，或者响应用户的输入。通过在适当时间更改、创建和销毁对象，可以实现任何类型的游戏运行过程。">
+<meta property="og:description" content="在 Unity Editor 中，使用 Inspector 来更改组件属性。因此，比如说，更改变换组件的位置值将导致游戏对象的位置发生变化。同样，可以更改渲染器材质的颜色或刚体的质量，并对游戏对象的外观或行为产生相应影响。在大多数情况下，脚本还涉及修改组件属性以操纵游戏对象。但是差异在于，脚本可以随着时间推移而逐渐改变属性的值，或者响应用户的输入。通过在适当时间更改、创建和销毁对象，可以实现任何类型的游戏运行过程。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'ControllingGameObjectsComponents';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/ControllingGameObjectsComponents.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/ControllingGameObjectsComponents.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/ControllingGameObjectsComponents.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/ControllingGameObjectsComponents.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/ControllingGameObjectsComponents.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/ControllingGameObjectsComponents.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/ControllingGameObjectsComponents.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/ControllingGameObjectsComponents.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/ControllingGameObjectsComponents.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/ControllingGameObjectsComponents.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/ControllingGameObjectsComponents.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/ControllingGameObjectsComponents.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/ControllingGameObjectsComponents.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/ControllingGameObjectsComponents.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/ControllingGameObjectsComponents.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/ControllingGameObjectsComponents.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/ControllingGameObjectsComponents.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/ControllingGameObjectsComponents.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/ControllingGameObjectsComponents.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/ControllingGameObjectsComponents.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/ControllingGameObjectsComponents.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/ControllingGameObjectsComponents.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/ControllingGameObjectsComponents.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/ControllingGameObjectsComponents.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="ScriptingSection.html">脚本</a></li>
+<li><a href="ScriptingConcepts.html">脚本概述</a></li>
+<li>使用组件来控制游戏对象</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="VariablesAndTheInspector.html"></a></span><div class="tip">Variables and the Inspector</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="EventFunctions.html"></a></span><div class="tip">事件函数</div>
+</div>
+</div></div>
+<h1>使用组件来控制游戏对象</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>在 Unity Editor 中，使用 Inspector 来更改组件属性。因此，比如说，更改变换组件的位置值将导致游戏对象的位置发生变化。同样，可以更改渲染器材质的颜色或刚体的质量，并对游戏对象的外观或行为产生相应影响。在大多数情况下，脚本还涉及修改组件属性以操纵游戏对象。但是差异在于，脚本可以随着时间推移而逐渐改变属性的值，或者响应用户的输入。通过在适当时间更改、创建和销毁对象，可以实现任何类型的游戏运行过程。</p>
+
+<h2>访问组件</h2>
+
+<p>最简单和最常见的情况是脚本需要访问附加到同一游戏对象的其他组件。正如“简介”部分所述，组件实际上是类的实例，因此第一步是获取对需要使用的组件实例的引用。这是通过 <a href="../ScriptReference/Component.GetComponent.html">GetComponent</a> 函数来完成的。通常，希望将组件对象分配给变量，而此操作是使用以下语法以 C# 实现的：</p>
+
+<pre><code>void Start () 
+{
+    Rigidbody rb = GetComponent&lt;Rigidbody&gt;();
+}
+</code></pre>
+
+<p>获得对组件实例的引用后，可以像在 Inspector 中一样设置其属性的值：</p>
+
+<pre><code>void Start () 
+{
+    Rigidbody rb = GetComponent&lt;Rigidbody&gt;();
+    
+    // Change the mass of the object's Rigidbody.
+    rb.mass = 10f;
+}
+</code></pre>
+
+<p>Inspector 中所没有的一项额外功能是可以在组件实例上调用函数：</p>
+
+<pre><code>void Start ()
+{
+    Rigidbody rb = GetComponent&lt;Rigidbody&gt;();
+    
+    // Add a force to the Rigidbody.
+    rb.AddForce(Vector3.up * 10f);
+}
+</code></pre>
+
+<p>另外请注意，完全可以将多个自定义脚本附加到同一对象。如果需要从一个脚本访问另一个脚本，可以像往常一样使用 GetComponent，只需使用脚本类的名称（或文件名）来指定所需的组件类型。</p>
+
+<p>如果尝试检索尚未实际添加到游戏对象的组件，则 GetComponent 将返回 null；如果尝试更改 null 对象上的任何值，将在运行时出现 null 引用错误。</p>
+
+<h2>访问其他对象</h2>
+
+<p>虽然其他对象有时会孤立运行，但是脚本通常会跟踪这些对象。例如，追捕敌人可能需要知道玩家的位置。Unity 提供了许多不同方法来检索其他对象，每种方法都适合特定情况。</p>
+
+<h3>将游戏对象与变量链接</h3>
+
+<p>查找相关游戏对象的最直接方法是向脚本添加公共的游戏对象变量：</p>
+
+<pre><code>public class Enemy : MonoBehaviour
+{
+    public GameObject player;
+    
+    // Other variables and functions...
+}
+</code></pre>
+
+<p>此变量在 Inspector 中可以像任何其他变量一样显示：</p>
+
+<figure>
+<img src="../uploads/Main/GameObjectPublicVar.png" alt="">
+</figure>
+
+<p>现在可以将对象从场景或 Hierarchy 面板拖到此变量上，对其进行分配。GetComponent 函数和组件访问变量与其他任何变量一样可用于此对象，因此可以使用如下代码：</p>
+
+<pre><code>public class Enemy : MonoBehaviour {
+    public GameObject player;
+    
+    void Start() {
+        // 在玩家角色背后十个单位的位置生成敌人。
+        transform.position = player.transform.position - Vector3.forward * 10f;
+    }
+}
+</code></pre>
+
+<p>此外，如果在脚本中声明组件类型的公共变量，则可以拖动已附加该组件的任何游戏对象。这将直接访问组件而不是游戏对象本身。</p>
+
+<pre><code>public Transform playerTransform; 
+</code></pre>
+
+<p>在处理具有永久连接的单个对象时，将对象与变量链接在一起是最有用的方法。可以使用数组变量来链接同一类型的多个对象，但仍然必须在 Unity Editor 中（而不是在运行时）进行连接。在运行时定位对象通常很方便，因此 Unity 提供了两种基本方法来执行此操作，如下所述。</p>
+
+<h3>寻找子游戏对象</h3>
+
+<p>有时，游戏场景会使用许多相同类型的游戏对象，例如敌人、路标和障碍物。这些游戏对象可能需要由监督或响应它们的特定脚本来跟踪（例如，寻路脚本可能需要使用所有路标）。可以使用变量来链接这些游戏对象，但是如果必须将每个新路标拖动到脚本中的变量，会使设计过程变得繁琐。同样，如果删除一个路标，则必须删除对丢失游戏对象的变量引用，这很麻烦。此类情况下，可使一组游戏对象成为一个父游戏对象的所有子对象，这种管理多个游戏对象的方式通常会更好。可以使用父游戏对象的变换组件来检索子游戏对象（因为所有游戏对象都具有隐式变换）：</p>
+
+<pre><code>using UnityEngine;
+
+public class WaypointManager : MonoBehaviour {
+    public Transform[] waypoints;
+    
+    void Start() 
+    {
+        waypoints = new Transform[transform.childCount];
+        int i = 0;
+        
+        foreach (Transform t in transform)
+        {
+            waypoints[i++] = t;
+        }
+    }
+}
+</code></pre>
+
+<p>还可以使用 <a href="../ScriptReference/Transform.Find.html">Transform.Find</a> 函数按名称查找特定子对象：
+<code>
+transform.Find("Gun");
+</code></p>
+
+<p>当对象具有可以在游戏运行过程中添加和删除的子对象时，这种功能可能很有用。可以拾取和放下的武器就是这方面的一个很好的例子。</p>
+
+<h3>按名称或标签来查找游戏对象</h3>
+
+<p>只要有某种信息可以识别游戏对象，就可以在场景层级视图中的任何位置找到该游戏对象。可使用 <a href="../ScriptReference/GameObject.Find.html">GameObject.Find</a> 函数按名称检索各个对象：</p>
+
+<pre><code>GameObject player;
+
+void Start() 
+{
+    player = GameObject.Find("MainHeroCharacter");
+}
+</code></pre>
+
+<p>还可以使用 <a href="../ScriptReference/GameObject.FindWithTag.html">GameObject.FindWithTag</a> 和 <a href="../ScriptReference/GameObject.FindGameObjectsWithTag.html">GameObject.FindGameObjectsWithTag</a> 函数按标签来查找对象或者对象集合：</p>
+
+<pre><code>GameObject player;
+GameObject[] enemies;
+
+void Start() 
+{
+    player = GameObject.FindWithTag("Player");
+    enemies = GameObject.FindGameObjectsWithTag("Enemy");
+}
+</code></pre>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="VariablesAndTheInspector.html"></a></span><div class="tip">Variables and the Inspector</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="EventFunctions.html"></a></span><div class="tip">事件函数</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

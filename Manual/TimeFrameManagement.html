@@ -1,0 +1,326 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="时间和帧率管理 - Unity Manual">
+<title>时间和帧率管理 - Unity Manual</title>
+<meta name="description" content="借助 Update 函数，可定期通过脚本监控输入和其他事件，并采取适当的操作。例如，可在按下&amp;#8220;forward&amp;#8221;键时移动一个角色。在处理这种基于时间的动作时要记住的一项重要规则是，游戏的帧率不是恒定的，并且 Update 函数调用之间的时间长度也不是恒定的。">
+<meta property="og:description" content="借助 Update 函数，可定期通过脚本监控输入和其他事件，并采取适当的操作。例如，可在按下&amp;#8220;forward&amp;#8221;键时移动一个角色。在处理这种基于时间的动作时要记住的一项重要规则是，游戏的帧率不是恒定的，并且 Update 函数调用之间的时间长度也不是恒定的。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'TimeFrameManagement';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/TimeFrameManagement.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/TimeFrameManagement.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/TimeFrameManagement.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/TimeFrameManagement.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/TimeFrameManagement.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/TimeFrameManagement.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/TimeFrameManagement.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/TimeFrameManagement.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/TimeFrameManagement.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/TimeFrameManagement.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/TimeFrameManagement.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/TimeFrameManagement.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/TimeFrameManagement.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/TimeFrameManagement.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/TimeFrameManagement.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/TimeFrameManagement.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/TimeFrameManagement.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/TimeFrameManagement.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/TimeFrameManagement.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/TimeFrameManagement.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/TimeFrameManagement.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/TimeFrameManagement.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/TimeFrameManagement.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/TimeFrameManagement.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="ScriptingSection.html">脚本</a></li>
+<li><a href="ScriptingConcepts.html">脚本概述</a></li>
+<li>时间和帧率管理</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="EventFunctions.html"></a></span><div class="tip">事件函数</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="CreateDestroyObjects.html"></a></span><div class="tip">创建和销毁游戏对象</div>
+</div>
+</div></div>
+<h1>时间和帧率管理</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>借助 <a href="../ScriptReference/MonoBehaviour.Update.html">Update</a> 函数，可定期通过脚本监控输入和其他事件，并采取适当的操作。例如，可在按下“forward”键时移动一个角色。在处理这种基于时间的动作时要记住的一项重要规则是，游戏的帧率不是恒定的，并且 Update 函数调用之间的时间长度也不是恒定的。</p>
+
+<p>举例来说，假设在一项任务中需要逐步向前移动某个对象，一次一帧。起初看起来好像可以在每帧将对象移动一个固定距离：</p>
+
+<pre><code>//C# 脚本示例
+using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    public float distancePerFrame;
+    
+    void Update() {
+        transform.Translate(0, 0, distancePerFrame);
+    }
+}
+
+
+//JS 脚本示例
+var distancePerFrame: float;
+
+function Update() {
+    transform.Translate(0, 0, distancePerFrame);
+}
+</code></pre>
+
+<p>但是，如果帧时间不是恒定的，那么对象看起来会以不规则的速度移动。如果帧时间为 10 毫秒，那么对象将以 <em>distancePerFrame</em> 的距离每秒前进一百次。但如果帧时间增加到 25 毫秒（比如由于 CPU 负载的原因），那么对象每秒只会前进四十次，因此移动的总距离更短。解决方案是通过可从 <a href="../ScriptReference/Time-deltaTime.html">Time.deltaTime</a> 属性读取的帧时间来缩放移动距离大小：</p>
+
+<pre><code>//C# 脚本示例
+using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    public float distancePerSecond;
+    
+    void Update() {
+        transform.Translate(0, 0, distancePerSecond * Time.deltaTime);
+    }
+}
+
+
+//JS 脚本示例
+var distancePerSecond: float;
+
+function Update() {
+    transform.Translate(0, 0, distancePerSecond * Time.deltaTime);
+}
+</code></pre>
+
+<p>请注意，此移动距离现在为 <em>distancePerSecond</em> 而不是 <em>distancePerFrame</em>。随着帧率的变化，移动步长大小也会相应改变，因此对象的速度将保持不变。</p>
+
+<h2>固定时间步长</h2>
+
+<p>与主帧更新不同，Unity 的物理系统_会_工作到固定的时间步长，这对于模拟的准确性和一致性很重要。在物理更新开始时，Unity 通过将固定的时间步长值添加到上次物理更新结束的时间来设置“警报”时间。然后，物理系统将执行计算，直到警报响起。</p>
+
+<p>You can change the size of the fixed timestep from the <a href="class-TimeManager.html">Time</a> window and you can read it from a script using the <a href="../ScriptReference/Time-fixedDeltaTime.html">Time.fixedDeltaTime</a> property. Note that a lower value for the timestep will result in more frequent physics updates and more precise simulation but at the cost of greater CPU load. You probably won’t need to change the default fixed timestep unless you are placing high demands on the physics engine.</p>
+
+<h2>Maximum Allowed Timestep</h2>
+
+<p>固定的时间步长使物理模拟能够实时保持准确，但是在游戏大量使用物理系统并且游戏帧率也变低的情况下（例如，由于游戏中存在大量对象），可能会导致问题。必须在常规物理更新之间“挤压”主帧更新处理；如果要进行大量处理，则可在单个帧期间进行多个物理更新。由于帧时间、对象位置和其他属性在帧开始时被冻结，因此图形可能与更频繁更新的物理系统不同步。</p>
+
+<p>Naturally, there is only so much CPU power available but Unity has an option to let you effectively slow down physics time to let the frame processing catch up. The <strong>Maximum Allowed Timestep</strong> setting (in the <a href="class-TimeManager.html">Time</a> window) puts a limit on the amount of time Unity will spend processing physics and FixedUpdate calls during a given frame update. If a frame update takes longer than <strong>Maximum Allowed Timestep</strong> to process, the physics engine will “stop time” and let the frame processing catch up. Once the frame update has finished, the physics will resume as though no time has passed since it was stopped. The result of this is that rigidbodies will not move perfectly in real time as they usually do but will be slowed slightly. However, the physics “clock” will still track them as though they were moving normally. The slowing of physics time is usually not noticeable and is an acceptable trade-off against gameplay performance.</p>
+
+<h2>时间标度</h2>
+
+<p>对于特殊效果，例如“子弹时间”，有时减慢游戏时间的流逝会很有用，能够使动画和脚本响应以较低的速率发生。此外，有时可能希望完全冻结游戏时间，就像游戏暂停时一样。Unity 有一个 <em>Time Scale</em> 属性可以控制游戏时间相对于实时时间的进展速度。如果该标度设置为 1.0，则游戏时间与实时时间匹配。值为 2.0 会使 Unity 中的时间流逝速度加倍（即，动作将加速），而值为 0.5 则会将游戏速度减半。值为零将使时间完全“停止”。请注意，时间标度实际上并不会降低执行速度，而只是更改了通过 <a href="../ScriptReference/Time-deltaTime.html">Time.deltaTime</a> 和 <a href="../ScriptReference/Time-fixedDeltaTime.html">Time.fixedDeltaTime</a> 报告给 Update 和 FixedUpdate 函数的时间步长。当游戏时间减慢时，调用 Update 函数的频率可能高于平常，但每帧报告的 <em>deltaTime</em> 步长将会缩短。其他脚本函数不受时间标度的影响，因此您可以在游戏暂停时显示具有正常交互的 GUI。</p>
+
+<p>The <a href="class-TimeManager.html">Time</a> window has a property to let you set the time scale globally but it is generally more useful to set the value from a script using the <a href="../ScriptReference/Time-timeScale.html">Time.timeScale</a> property:</p>
+
+<pre><code>//C# 脚本示例
+using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    void Pause() {
+        Time.timeScale = 0;
+    }
+    
+    void Resume() {
+        Time.timeScale = 1;
+    }
+}
+
+//JS 脚本示例
+function Pause() {
+    Time.timeScale = 0;
+}
+
+function Resume() {
+    Time.timeScale = 1;
+}
+</code></pre>
+
+<h2>Capture Framerate</h2>
+
+<p>一个非常特殊的时间管理案例是您希望将游戏过程录制为视频。由于保存屏幕图像的任务需要相当长的时间，因此如果在正常游戏过程中尝试执行此操作，则游戏的常规帧率将大幅降低。这将导致视频无法反映游戏的真实性能。</p>
+
+<p>幸运的是，Unity 提供了一个 <a href="../ScriptReference/Time-captureFramerate.html">Capture Framerate</a> 属性可用于解决该问题。该属性的值设置为零以外的任何值时，游戏时间将减慢，而帧更新将以精确的定期时间间隔发出。帧之间的时间间隔等于 1 / Time.captureFramerate，因此如果该值设置为 5.0，则每五分之一秒更新一次。随着对帧率的要求有效降低，在 Update 函数中便有了时间保存截屏或采取其他操作：</p>
+
+<pre><code>//C# 脚本示例
+using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    // 捕获帧作为截屏序列。图像
+    // 作为 PNG 文件存储在文件夹中 - 这些文件可通过
+    //图像实用程序软件（例如，QuickTime Pro）组合成电影。
+    //该文件夹将包含我们的截屏。
+    //如果该文件夹存在，我们将附加数字来创建一个空文件夹。
+    string folder ="ScreenshotFolder";
+    int frameRate = 25;
+        
+    void Start () {
+        // 设置回放帧率（实时时间将与此后的游戏时间不相关）。
+        Time.captureFramerate = frameRate;
+        
+        //创建文件夹
+        System.IO.Directory.CreateDirectory(folder);
+    }
+    
+    void Update () {
+        // 将文件名附加到文件夹名（格式为"0005 shot.png""）
+        string name = string.Format("{0}/{1:D04} shot.png", folder, Time.frameCount );
+        
+        // 将截屏捕获到指定的文件。
+        Application.CaptureScreenshot(name);
+    }
+}
+
+//JS 脚本示例
+
+// 捕获帧作为截屏序列。图像
+// 作为 PNG 文件存储在文件夹中 - 这些文件可通过
+//图像实用程序软件（例如，QuickTime Pro）组合成电影。
+//该文件夹将包含我们的截屏。
+// 如果该文件夹存在，我们将附加数字来创建一个空文件夹。
+var folder ="ScreenshotFolder";
+var frameRate = 25;
+
+
+function Start () {
+    // 设置回放帧率（实时时间将与此后的游戏时间不相关）。
+    Time.captureFramerate = frameRate;
+
+    //创建文件夹
+    System.IO.Directory.CreateDirectory(folder);
+}
+
+function Update () {
+    // 将文件名附加到文件夹名（格式为"0005 shot.png""）
+    var name = String.Format("{0}/{1:D04} shot.png", folder, Time.frameCount );
+
+    // 将截屏捕获到指定的文件。
+    Application.CaptureScreenshot(name);
+}
+</code></pre>
+
+<p>尽管使用这种技术录制的视频通常看起来非常好，但是当速度减慢时，游戏很难运行。您可能需要尝试使用 Time.captureFramerate 的值来确保充足的录制时间，但不会过度复杂化测试播放器的任务。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="EventFunctions.html"></a></span><div class="tip">事件函数</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="CreateDestroyObjects.html"></a></span><div class="tip">创建和销毁游戏对象</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

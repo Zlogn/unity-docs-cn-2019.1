@@ -1,0 +1,367 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="使用传输层 API - Unity Manual">
+<title>使用传输层 API - Unity Manual</title>
+<meta name="description" content="除了高级网络 API (HLAPI) 之外，Unity 还允许访问称为传输层的低级网络 API。传输层允许您构建自己的网络系统，满足在游戏网络方面更具体或更高级的要求。">
+<meta property="og:description" content="除了高级网络 API (HLAPI) 之外，Unity 还允许访问称为传输层的低级网络 API。传输层允许您构建自己的网络系统，满足在游戏网络方面更具体或更高级的要求。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UNetUsingTransport';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UNetUsingTransport.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UNetUsingTransport.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UNetUsingTransport.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UNetUsingTransport.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UNetUsingTransport.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UNetUsingTransport.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UNetUsingTransport.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UNetUsingTransport.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UNetUsingTransport.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UNetUsingTransport.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UNetUsingTransport.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UNetUsingTransport.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UNetUsingTransport.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UNetUsingTransport.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UNetUsingTransport.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UNetUsingTransport.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UNetUsingTransport.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UNetUsingTransport.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UNetUsingTransport.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UNetUsingTransport.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UNetUsingTransport.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UNetUsingTransport.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UNetUsingTransport.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UNetUsingTransport.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UNet.html">多玩家和联网</a></li>
+<li><a href="UNetUsingHLAPI.html">多玩家高级 API</a></li>
+<li>使用传输层 API</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetLobby.html"></a></span><div class="tip">多人游戏大厅</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UNetReaderWriter.html"></a></span><div class="tip">NetworkReader 和 NetworkWriter 序列化程序</div>
+</div>
+</div></div>
+<h1>使用传输层 API</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>除了<a href="UNetUsingHLAPI.html">高级网络 API (HLAPI)</a> 之外，Unity 还允许访问称为<strong>传输层</strong>的低级网络 API。传输层允许您构建自己的网络系统，满足在游戏网络方面更具体或更高级的要求。</p>
+
+<p>传输层是在操作系统基于套接字的网络之上运行的一个薄<a href="https://en.wikipedia.org/wiki/Multitier_architecture">层</a>。传输层可以发送和接收以字节数组表示的消息，并提供许多不同的“<a href="../ScriptReference/Networking.QosType.html">服务质量</a>”选项来满足不同的需求。该层专注于灵活性和性能，并在 <a href="../ScriptReference/Networking.NetworkTransport.html">NetworkTransport</a> 类中公开一个 API。</p>
+
+<p>传输层支持网络通信的基本服务。这些基本服务包括：</p>
+
+<ul>
+<li><p>建立连接</p></li>
+<li><p>使用各种“服务质量”进行通信</p></li>
+<li><p>流量控制</p></li>
+<li><p>基本统计信息</p></li>
+<li><p>其他服务，例如通过中继服务器 (Relay Server) 或本地发现进行通信</p></li>
+</ul>
+
+<p>传输层可以使用两种协议：用于一般通信的 UDP 和用于 WebGL 的 WebSocket。要直接使用传输层，一般工作流程如下：</p>
+
+<p>1.初始化网络传输层</p>
+
+<p>2.配置网络拓扑</p>
+
+<p>3.创建主机</p>
+
+<p>4.开始通信（处理连接和发送/接收消息）</p>
+
+<p>5.使用之后关闭库</p>
+
+<p>请参阅下面的相应部分以了解每个部分的技术细节。每个部分都提供了一个可添加到网络脚本中的代码片段。</p>
+
+<h3>步骤 1：初始化网络传输层</h3>
+
+<p>初始化网络传输层时，可在下面代码示例中演示的默认初始化（没有参数）之间进行选择，或者也可提供其他参数（例如最大数据包大小和线程超时限制）来控制网络层的整体行为。</p>
+
+<p>要使用默认设置来初始化传输层，请调用 <a href="../ScriptReference/Networking.NetworkTransport.Init.html">Init()</a>：</p>
+
+<pre><code>
+    // 在不使用任何参数的情况下初始化传输层（默认设置）
+        NetworkTransport.Init();
+
+    要使用您自己的配置来初始化传输层，只需将配置作为参数添加到 Init，如下所示。
+
+        // 使用自定义设置来初始化传输层的示例
+        GlobalConfig gConfig = new GlobalConfig();
+        gConfig.MaxPacketSize = 500;
+        NetworkTransport.Init(gConfig);
+</code></pre>
+
+<p>仅当具有特殊的网络环境并且熟悉所需的特定设置时，才应使用自定义 <code>Init</code> 值。根据经验，如果要开发基于互联网的典型多人游戏，默认的 <code>Init</code> 设置就足够了。</p>
+
+<h3>步骤 2：配置网络拓扑</h3>
+
+<p>下一步是配置对等方之间的连接。网络拓扑定义了允许的连接数和要使用的连接配置。如果游戏需要发送不同重要程度的网络消息（例如，偶然声音效果的重要性较低，玩家是否得分的声音效果的重要性较高），您可能需要定义几个通信通道，根据要发送的具体消息类型以及消息在游戏中的相对重要性，为每个通道指定不同的服务质量级别。</p>
+
+<pre><code>
+    ConnectionConfig config = new ConnectionConfig();
+        int myReliableChannelId  = config.AddChannel(QosType.Reliable);
+        int myUnreliableChannelId = config.AddChannel(QosType.Unreliable);
+</code></pre>
+
+<p>上面的示例定义了具有不同服务质量值的两个通信通道。<a href="../ScriptReference/Networking.QosType.Reliable.html">QosType.Reliable</a> 传递消息并确保消息传递成功，而 <a href="../ScriptReference/Networking.QosType.Unreliable.html">QosType.Unreliable</a> 以更快速度发送消息，但不会进行任何检查来确保消息传递成功。</p>
+
+<p>还可以调整 <a href="../ScriptReference/Networking.ConnectionConfig.html">ConnectionConfig</a> 上的属性来指定每个连接的配置设置。但是，在从一个客户端连接到另一个客户端时，两个连接对等方的设置应该相同，否则连接会因 <a href="../ScriptReference/Networking.NetworkError.CRCMismatch.html">CRCMismatch</a> 错误而失败。</p>
+
+<p>网络配置的最后一步是拓扑定义。</p>
+
+<pre><code>
+HostTopology topology = new HostTopology(config, 10);
+</code></pre>
+
+<p>此示例将主机拓扑定义为最多允许 10 个连接。这些连接是在步骤 1 中配置的连接。</p>
+
+<h3>步骤 3：创建主机</h3>
+
+<p>执行前两个初步设置步骤之后，现在需要创建一个主机（打开套接字）：</p>
+
+<pre><code>
+int hostId = NetworkTransport.AddHost(topology, 8888);
+</code></pre>
+
+<p>此代码示例在端口 8888 和任何 IP 地址上添加新主机。主机最多支持 10 个连接（在步骤 2 中配置）。这些连接是在步骤 1 中配置的连接。</p>
+
+<h3>步骤 4：开始通信</h3>
+
+<p>要开始通信，必须建立与其他主机的连接。为此，请调用 <code>Connect()</code>。这样将在您和远程主机之间建立连接。此过程会收到一个事件以指示连接是否成功。</p>
+
+<p>首先，使用端口 8888 连接到地址为 192.168.1.42 的远程主机。此情况下会返回分配的 <code>connectionId</code>。</p>
+
+<pre><code>
+connectionId = NetworkTransport.Connect(hostId, "192.168.1.42", 8888, 0, out error);
+
+</code></pre>
+
+<p>连接完成后，将收到 ConnectEvent。现在可以开始发送数据了。</p>
+
+<pre><code>
+NetworkTransport.Send(hostId, connectionId, myReliableChannelId, buffer, bufferLength,  out error);
+</code></pre>
+
+<p>完成连接后，请调用 <code>Disconnect()</code> 以断开主机连接。</p>
+
+<pre><code>NetworkTransport.Disconnect(hostId, connectionId, out error);
+</code></pre>
+
+<p>要检查函数调用是否成功，可将 <code>out error</code> 转换为 <a href="../ScriptReference/Networking.NetworkError.html">NetworkError</a>。<a href="../ScriptReference/Networking.NetworkError.Ok.html">NetworkEror.Ok</a> 表示未遇到任何错误。</p>
+
+<p>要检查主机状态，可使用两个函数：</p>
+
+<p>要轮询内部事件队列中的事件，可调用</p>
+
+<p>NetworkTransport.Receive(out recHostId, out connectionId, out channelId, recBuffer, bufferSize, out dataSize, out error);</p>
+
+<p>或
+NetworkTransport.ReceiveFromHost(recHostId, out connectionId, out channelId, recBuffer, bufferSize, out dataSize, out error);</p>
+
+<p>这两个函数都从队列中返回事件；第一个函数将从任何主机返回事件，为 recHostId 变量分配作为消息来源的主机的 ID，而第二个函数仅从提供的 recHostId 所指定的主机返回事件。</p>
+
+<p>一种从 <code>Receive</code> 轮询数据的方式是在 <code>Update</code> 函数中调用它：</p>
+
+<pre><code>
+void Update()
+{
+
+    int recHostId; 
+    int connectionId; 
+    int channelId; 
+    byte[] recBuffer = new byte[1024]; 
+    int bufferSize = 1024;
+    int dataSize;
+    byte error;
+    NetworkEventType recData = NetworkTransport.Receive(out recHostId, out connectionId, out channelId, recBuffer, bufferSize, out dataSize, out error);
+    switch (recData)
+    {
+        case NetworkEventType.Nothing:                     break;
+        case NetworkEventType.ConnectEvent:                break;
+        case NetworkEventType.DataEvent:                   break;
+        case NetworkEventType.DisconnectEvent:            break;
+
+  case NetworkEventType.BroadcastEvent:
+
+       break;
+    }
+}
+
+</code></pre>
+
+<p>可收到 5 种类型的事件。</p>
+
+<ul>
+<li><p><a href="../ScriptReference/Networking.NetworkEventType.Nothing.html">NetworkEventType.Nothing</a>：事件队列没有要报告的内容。</p></li>
+<li><p><a href="../ScriptReference/Networking.NetworkEventType.ConnectEvent.html">NetworkEventType.ConnectEvent</a>：您收到了一个连接事件。这可能是成功的连接请求，也可能是连接响应。</p></li>
+</ul>
+
+<pre><code>
+case NetworkEventType.ConnectEvent: 
+    if(myConnectionId == connectionId)
+        //我的连接请求已被批准
+    else
+        //其他人向我发送了连接请求
+    break;
+
+</code></pre>
+
+<ul>
+<li><p><a href="../ScriptReference/Networking.NetworkEventType.DataEvent.html">NetworkEventType.DataEvent</a>：您收到了一个数据事件。当有一些数据准备好接收时，您会收到数据事件。如果 <code>recBuffer</code> 大到足以容纳数据，则数据将复制到缓冲区中。如果不够大，该事件包含 <a href="../ScriptReference/Networking.NetworkError.MessageToLong.html">MessageToLong</a> 网络错误。如果发生这种情况，需要为缓冲区重新分配更大的大小并再次调用 <code>DataEvent</code> 函数。</p></li>
+<li><p><a href="../ScriptReference/Networking.NetworkEventType.DisconnectEvent.html">NetworkEventType.DisconnectEvent</a>：建立的连接已断开连接，或者您的连接请求已失败。请检查错误代码以找出发生这种情况的原因。</p></li>
+</ul>
+
+<pre><code>
+case NetworkEventType.DisconnectEvent: 
+    if(myConnectionId == connectionId)
+        //由于某种原因无法连接，请参阅错误
+    else
+        //其中一个建立的连接已断开连接
+    break;
+</code></pre>
+
+<ul>
+<li>
+<a href="../ScriptReference/Networking.NetworkEventType.BroadcastEvent.html">NetworkEventType.BroadcastEvent</a>：表示您已收到广播事件，现在可以调用 <a href="../ScriptReference/Networking.NetworkTransport.GetBroadcastConnectionInfo.html">GetBroadcastConnectionInfo</a> 和 <a href="../ScriptReference/30_search.html?q=GetBroadcastConnectionMessage.html">GetBroadcastConnectionMessage</a> 来检索更多信息。</li>
+</ul>
+
+<h3>WebGL 支持</h3>
+
+<p>可在 WebGL 上使用 WebSocket，但 Web 客户端只能连接到主机，本身不能是主机。这意味着主机必须是单机玩家（仅限 Win、Mac 或 Linux）。对于客户端配置，上述所有步骤（包括拓扑和配置）都是相同的。在服务器上，调用以下函数：</p>
+
+<pre><code>
+NetworkTransport.AddWebsocketHost(topology, port, ip);
+
+</code></pre>
+
+<p>上面的 IP 地址应该是需要监听的具体地址，或者如果希望主机监听所有网络接口，则可以传递 null 作为 IP 地址。</p>
+
+<p>服务器一次只能支持一个 WebSocket 主机，但可以同时处理其他通用主机：</p>
+
+<pre><code>
+NetworkTransport.AddWebsocketHost(topology, 8887, null);
+NetworkTransport.AddHost(topology, 8888);
+
+</code></pre>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UNetLobby.html"></a></span><div class="tip">多人游戏大厅</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UNetReaderWriter.html"></a></span><div class="tip">NetworkReader 和 NetworkWriter 序列化程序</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

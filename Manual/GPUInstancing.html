@@ -1,0 +1,546 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="GPU 实例化 - Unity Manual">
+<title>GPU 实例化 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/GPUInstancing-0.png">
+<meta name="description" content="使用 GPU 实例化可使用少量绘制调用一次绘制（或渲染）同一网格的多个副本。它对于绘制诸如建筑物、树木和草地之类的在场景中重复出现的对象非常有用。">
+<meta property="og:description" content="使用 GPU 实例化可使用少量绘制调用一次绘制（或渲染）同一网格的多个副本。它对于绘制诸如建筑物、树木和草地之类的在场景中重复出现的对象非常有用。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'GPUInstancing';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/GPUInstancing.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/GPUInstancing.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/GPUInstancing.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/GPUInstancing.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/GPUInstancing.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/GPUInstancing.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/GPUInstancing.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/GPUInstancing.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/GPUInstancing.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/GPUInstancing.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/GPUInstancing.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/GPUInstancing.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/GPUInstancing.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/GPUInstancing.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/GPUInstancing.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/GPUInstancing.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/GPUInstancing.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/GPUInstancing.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/GPUInstancing.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/GPUInstancing.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/GPUInstancing.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/GPUInstancing.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/GPUInstancing.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/GPUInstancing.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li>高级渲染功能</li>
+<li>GPU 实例化</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="GraphicsCommandBuffers.html"></a></span><div class="tip">图形命令缓冲区</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SparseTextures.html"></a></span><div class="tip">稀疏纹理</div>
+</div>
+</div></div>
+<!--  see https://unity3d.atlassian.net/browse/UNI-3131 -->
+
+<h1>GPU 实例化</h1>
+
+<h2>简介</h2>
+
+<p>使用 GPU 实例化可使用少量<a href="DrawCallBatching.html">绘制调用</a>一次绘制（或渲染）同一网格的多个副本。它对于绘制诸如建筑物、树木和草地之类的在场景中重复出现的对象非常有用。</p>
+
+<p>GPU 实例化在每次绘制调用时仅渲染相同的网格，但每个实例可以具有不同的参数（例如，颜色或比例）以增加变化并减少外观上的重复。</p>
+
+<p>GPU 实例化可以降低每个场景使用的绘制调用数量。可以显著提高项目的渲染性能。</p>
+
+<h2>为材质添加实例化</h2>
+
+<p>要对材质启用 GPU 实例化 (GPU Instancing)，请在 Project 窗口中选择材质，然后在 Inspector 中勾选 <strong>Enable Instancing</strong> 复选框。</p>
+
+<figure>
+<img src="../uploads/Main/GPUInstancing-0.png" alt="材质检视面板 (Inspector) 窗口中显示的 Enable Instancing 复选框">
+<figcaption>材质检视面板 (Inspector) 窗口中显示的 <strong>Enable Instancing</strong> 复选框</figcaption>
+</figure>
+
+<p>仅当材质着色器支持 GPU 实例化时，Unity 才会显示此复选框。这包括标准 (Standard)、标准镜面反射 (StandardSpecular) 和所有表面<a href="Shaders.html">着色器</a>。请参阅有关<a href="shader-StandardShader.html">标准着色器</a>的文档以了解更多信息。</p>
+
+<p>下面的截屏显示了具有多个游戏对象的相同场景；在顶部图像中，启用了 GPU 实例化，在底部图像中没有启用。请注意 <strong>FPS</strong>、<strong>Batches </strong>和 <strong>Saved by batching</strong> 中的差异。</p>
+
+<figure>
+<img src="../uploads/Main/GPUInstancing-1.jpg" alt="已启用 GPU 实例化：一个简单的场景包含了多个启用了 GPU 实例化的相同的游戏对象">
+<figcaption>已启用 GPU 实例化：一个简单的场景包含了多个启用了 GPU 实例化的相同的游戏对象</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/GPUInstancing-2.jpg" alt="已启用 GPU 实例化：一个简单的场景包含了多个启用了 GPU 实例化的相同的游戏对象。">
+<figcaption>已启用 GPU 实例化：一个简单的场景包含了多个启用了 GPU 实例化的相同的游戏对象。</figcaption>
+</figure>
+
+<p>使用 GPU 实例化时，存在以下限制：</p>
+
+<ul>
+<li><p>Unity 自动选取要实例化的网格渲染器组件和 <code>Graphics.DrawMesh</code> 调用。请注意，不支持 <a href="https://docs.unity3d.com/ScriptReference/SkinnedMeshRenderer.html">SkinnedMeshRenderer</a>。</p></li>
+<li><p>Unity 仅在单个 GPU 实例化绘制调用中批量处理那些共享相同网格和相同材质的游戏对象。使用少量网格和材质可以提高实例化效率。要创建变体，请修改着色器脚本为每个实例添加数据（请参阅下一部分了解有关此内容的更多信息）。</p></li>
+</ul>
+
+<p>您还可以使用 <a href="../ScriptReference/Graphics.DrawMeshInstanced.html">Graphics.DrawMeshInstanced</a> 和 <a href="../ScriptReference/Graphics.DrawMeshInstancedIndirect.html">Graphics.DrawMeshInstancedIndirect</a> 调用来通过脚本执行 GPU 实例化。</p>
+
+<p>GPU 实例化可在以下平台和 API 上使用：</p>
+
+<ul>
+<li><p>Windows 上的 <strong>DirectX 11</strong> 和 <strong>DirectX 12</strong></p></li>
+<li><p>Windows、macOS、Linux、iOS 和 Android 上的 <strong>OpenGL Core 4.1+/ES3.0+</strong></p></li>
+<li><p>macOS 和 iOS 上的 <strong>Metal</strong></p></li>
+<li><p><strong>Vulkan</strong> on Windows, Linux and Android</p></li>
+<li><p><strong>PlayStation 4</strong> 和 <strong>Xbox One</strong></p></li>
+<li><p>__WebGL__（需要 WebGL 2.0 API）</p></li>
+</ul>
+
+<h2>添加每个实例的数据</h2>
+
+<p>默认情况下，仅当游戏对象在每个实例化绘制调用中具有不同的<a href="Transforms.html">变换</a>时，Unity 才会对这些游戏对象的实例进行批处理。要为实例化的游戏对象添加更多变体，请修改着色器以添加每实例属性，例如材质颜色。</p>
+
+<p>下面的示例演示了如何为每个实例创建具有不同颜色值的实例化着色器。</p>
+
+<pre><code>
+Shader "Custom/InstancedColorSurfaceShader" {
+    Properties {
+        _Color ("Color", Color) = (1,1,1,1)
+        _MainTex ("Albedo (RGB)", 2D) = "white" {}
+        _Glossiness ("Smoothness", Range(0,1)) = 0.5
+        _Metallic ("Metallic", Range(0,1)) = 0.0
+    }
+
+    SubShader {
+        Tags { "RenderType"="Opaque" }
+        LOD 200
+        CGPROGRAM
+        // 基于物理的标准光照模型，并对所有光照类型启用阴影
+        #pragma surface surf Standard fullforwardshadows
+        // 使用 Shader Model 3.0 目标
+        #pragma target 3.0
+        sampler2D _MainTex;
+        struct Input {
+            float2 uv_MainTex;
+        };
+        half _Glossiness;
+        half _Metallic;
+        UNITY_INSTANCING_BUFFER_START(Props)
+           UNITY_DEFINE_INSTANCED_PROP(fixed4, _Color)
+        UNITY_INSTANCING_BUFFER_END(Props)
+        void surf (Input IN, inout SurfaceOutputStandard o) {
+            fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * UNITY_ACCESS_INSTANCED_PROP(Props, _Color);
+            o.Albedo = c.rgb;
+            o.Metallic = _Metallic;
+            o.Smoothness = _Glossiness;
+            o.Alpha = c.a;
+        }
+        ENDCG
+    }
+    FallBack "Diffuse"
+}
+
+</code></pre>
+
+<p>将 <code>_Color</code> 声明为实例化属性时，Unity 将从游戏对象上设置的 MaterialPropertyBlock 对象中收集 <code>_Color</code> 值，并将它们放在单个绘制调用中。</p>
+
+<pre><code>
+MaterialPropertyBlock props = new MaterialPropertyBlock();
+MeshRenderer renderer;
+
+foreach (GameObject obj in objects)
+{
+   float r = Random.Range(0.0f, 1.0f);
+   float g = Random.Range(0.0f, 1.0f);
+   float b = Random.Range(0.0f, 1.0f);
+   props.SetColor("_Color", new Color(r, g, b));
+   
+   renderer = obj.GetComponent&lt;MeshRenderer&gt;();
+   renderer.SetPropertyBlock(props);
+}
+</code></pre>
+
+<p>请注意，在通常情况下（不使用实例化着色器，或者 <code>_Color</code> 不是每个实例的属性），由于 MaterialPropertyBlock 中的值不同，绘制调用批次会被破坏。</p>
+
+<p>要使这些更改生效，必须启用 GPU 实例化。为此，请在 Project 窗口中选择您的着色器，然后在 Inspector 中勾选 <strong>Enable Instancing</strong> 复选框。</p>
+
+<figure>
+<img src="../uploads/Main/GPUInstancing-3.png" alt="着色器检视面板 (Shader Inspector) 窗口中显示的 Enable Instancing 复选框">
+<figcaption>着色器检视面板 (Shader Inspector) 窗口中显示的 Enable Instancing 复选框</figcaption>
+</figure>
+
+<h2>向顶点和片元着色器中添加实例化</h2>
+
+<p>下面的示例采用简单的无光照着色器，并使其能够使用不同的颜色进行实例化：</p>
+
+<pre><code>
+Shader "SimplestInstancedShader"
+{
+    Properties
+    {
+        _Color ("Color", Color) = (1, 1, 1, 1)
+    }
+
+    SubShader
+    {
+        Tags { "RenderType"="Opaque" }
+        LOD 100
+
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #pragma multi_compile_instancing
+            #include "UnityCG.cginc"
+
+            struct appdata
+            {
+                float4 vertex : POSITION;
+                UNITY_VERTEX_INPUT_INSTANCE_ID
+            };
+
+            struct v2f
+            {
+                float4 vertex : SV_POSITION;
+                UNITY_VERTEX_INPUT_INSTANCE_ID // 仅当您要访问片元着色器中的实例化属性时才需要。
+            };
+
+            UNITY_INSTANCING_BUFFER_START(Props)
+                UNITY_DEFINE_INSTANCED_PROP(float4, _Color)
+            UNITY_INSTANCING_BUFFER_END(Props)
+           
+            v2f vert(appdata v)
+            {
+                v2f o;
+
+                UNITY_SETUP_INSTANCE_ID(v);
+                UNITY_TRANSFER_INSTANCE_ID(v, o); // 仅当您要访问片元着色器中的实例化属性时才需要。
+
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                return o;
+            }
+           
+            fixed4 frag(v2f i) : SV_Target
+            {
+                UNITY_SETUP_INSTANCE_ID(i); // 仅当要在片元着色器中访问任何实例化属性时才需要。
+                return UNITY_ACCESS_INSTANCED_PROP(Props, _Color);
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre>
+
+<h2>着色器修改</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">添加</th>
+	<th style="text-align:left;">功能</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>#pragma multi_compile_instancing</code></td>
+	<td style="text-align:left;">用于命令 Unity 生成实例化变体。对于表面着色器来说是不需要的。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>UNITY_VERTEX_INPUT_INSTANCE_ID</code></td>
+	<td style="text-align:left;">用于在顶点着色器输入/输出结构中定义实例 ID。请参阅 <code>SV_InstanceID</code> 以了解更多信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<code>UNITY_INSTANCING_BUFFER_START(name)</code> / <code>UNITY_INSTANCING_BUFFER_END(name)</code>
+</td>
+	<td style="text-align:left;">必须在特殊命名的常量缓冲区中定义每个实例的属性。使用这对宏来包装对每个实例唯一的属性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>UNITY_DEFINE_INSTANCED_PROP(float4, _Color)</code></td>
+	<td style="text-align:left;">用于根据类型和名称定义每个实例着色器的属性。在此示例中，<code>_Color</code> 属性是唯一的。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>UNITY_SETUP_INSTANCE_ID(v);</code></td>
+	<td style="text-align:left;">用于使着色器函数可以访问实例 ID。它必须在顶点着色器的最开头使用，并且对于片元着色器是可选的。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>UNITY_TRANSFER_INSTANCE_ID(v, o);</code></td>
+	<td style="text-align:left;">用于将实例 ID 从顶点着色器的输入结构体复制到输出结构体中。仅当需要访问片元着色器中的每个实例的数据时才有必要这样做。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>UNITY_ACCESS_INSTANCED_PROP(arrayName, color)</code></td>
+	<td style="text-align:left;">用于访问在实例化常量缓冲区中声明的每个实例着色器的属性。它使用实例 ID 来索引到实例数据数组。该宏中的 <code>arrayName</code> 必须与 <code>UNITY_INSTANCING_BUFFER_END(name)</code> 宏中的匹配。</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>注意</strong>：</p>
+
+<ul>
+<li><p>使用多个每个实例的属性时，不需要在 <code>MaterialPropertyBlocks</code> 中填入所有这些属性。</p></li>
+<li><p>如果一个实例缺少该属性，Unity 将从引用的材质中获取默认值。如果材质没有该指定属性的默认值，Unity 会将值设置为 0。请勿将非实例化属性放在 <code>MaterialPropertyBlock</code> 中，因为这会禁用实例化。请为非实例化属性创建不同材质。</p></li>
+</ul>
+
+<h2>高级 GPU 实例化技巧</h2>
+
+<h3>批处理优先级</h3>
+
+<p>When batching, Unity prioritizes <a href="DrawCallBatching.html">Static batching</a> over instancing. If you mark one of your GameObjects for static batching, and Unity successfully batches it, Unity disables instancing on that GameObject, even if its Renderer uses an instancing Shader. When this happens, the Inspector window displays a warning message suggesting that you disable Static Batching. To do this, open the <strong>Player</strong> settings (<strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Player</strong> category), open <strong>Other Settings</strong> for your platform, and under the <strong>Rendering</strong> section, disable the <strong>Static Batching</strong> setting.</p>
+
+<p>Unity 将优先处理实例化，然后再处理动态批处理。如果 Unity 可以实例化网格，则会对该网格禁用动态批处理。</p>
+
+<h3>Graphics.DrawMeshInstanced</h3>
+
+<p>某些因素可能会阻止游戏对象同时自动实例化。这些因素包括材质变化和深度排序。使用 <a href="../ScriptReference/Graphics.DrawMeshInstanced.html">Graphics.DrawMeshInstanced</a> 可强制 Unity 使用 GPU 实例化来绘制这些对象。类似于 <a href="../ScriptReference/Graphics.DrawMesh.html">Graphics.DrawMesh</a>，此函数为一帧绘制网格，不会创建不必要的游戏对象。</p>
+
+<h3>Graphics.DrawMeshInstancedIndirect</h3>
+
+<p>在脚本中使用 <code>DrawMeshInstancedIndirect</code> 可从计算缓冲区中读取实例化绘制调用的参数，包括实例数量。如果要从 GPU 填充所有实例数据，并且 CPU 不知道要绘制的实例数（例如，执行 GPU 剔除时），这非常有用。请参阅 <a href="../ScriptReference/Graphics.DrawMeshInstancedIndirect.html">Graphics.DrawMeshInstancedIndirect</a> 的 API 文档以了解详细说明和代码示例。</p>
+
+<h3>全局光照支持</h3>
+
+<p>从 Unity 2018.1 开始，GPU 实例化以光照探针、遮挡探针（在 <a href="LightMode-Mixed-ShadowmaskMode.html">Shadowmask</a> 模式下）和光照贴图 ST 的形式支持全局光照 (GI) 渲染。标准着色器和表面着色器会自动启用 GI 支持。</p>
+
+<p>受场景中烘焙的光照探针和遮挡探针影响的动态渲染器，以及烘焙到相同光照贴图纹理的静态渲染器，可以由前向和延迟渲染循环使用 GPU 实例化一起自动进行批处理。</p>
+
+<p>对于 Graphics.DrawMeshInstanced，通过将 LightProbeUsage 参数设置为 CustomProvided 并提供复制了探针数据的 MaterialPropertyBlock，即可启用光照探针和遮挡探针渲染。请参阅 <a href="../ScriptReference/LightProbes.CalculateInterpolatedLightAndOcclusionProbes.html">LightProbes.CalculateInterpolatedLightAndOcclusionProbes</a> 的 API 文档以了解详细说明和代码示例。</p>
+
+<h3>全局光照和 GPU 实例化</h3>
+
+<p>GPU 实例化支持 Unity 中的全局光照 (GI) 渲染。每个 GPU 实例可支持来自不同<a href="LightProbes.html">光照探针</a>、一个<a href="Lightmapping.html">光照贴图</a>（但该光照贴图中有多个图集区域）或一个<a href="class-LightProbeProxyVolume.html">光照探针代理体</a>组件（为包含所有实例的空间体积进行烘焙）的 GI。标准着色器和表面着色器默认启用该支持。</p>
+
+<p>您可以通过<a href="RenderTech-ForwardRendering.html">前向</a>和<a href="RenderTech-DeferredShading.html">延迟</a>渲染循环，使用 GPU 实例化来自动批处理受烘焙光照探针（包括其遮挡数据）影响的动态<a href="class-MeshRenderer.html">网格渲染器</a>，或烘焙到相同光照贴图纹理的静态网格渲染器。请参阅有关<a href="Rendering-Tech.html">渲染管线</a>的文档以了解更多信息。</p>
+
+<p>对于 <a href="../ScriptReference/Graphics.DrawMeshInstanced.html">Graphics.DrawMeshInstanced</a>，通过将 <a href="../ScriptReference/Rendering.LightProbeUsage.html">LightProbeUsage</a> 参数设置为 <a href="../ScriptReference/Rendering.LightProbeUsage.CustomProvided.html">CustomProvided</a> 并提供复制了探针数据的 <a href="../ScriptReference/MaterialPropertyBlock.html">MaterialPropertyBlock</a>的方式，来启用光照探针（包括其遮挡数据）的渲染。请参阅 <a href="../ScriptReference/LightProbes.CalculateInterpolatedLightAndOcclusionProbes.html">LightProbes.CalculateInterpolatedLightAndOcclusionProbes</a> 的 API 文档以了解详细说明和代码示例。</p>
+
+<p>或者，您可以将 LPPV 组件引用和 <a href="../ScriptReference/Rendering.LightProbeUsage.UseProxyVolume.html">LightProbeUsage.UseProxyVolume</a> 传递到 <code>Graphics.DrawMeshInstanced</code>。执行此操作时，所有实例都会对光照探针数据的 L0 和 L1 带宽进行采样。如果您希望补充 L2 数据和遮挡数据，请使用 <code>MaterialPropertyBlock</code>。有关更多信息，请参阅<a href="LightProbes-TechnicalInformation.html">光照探针：技术信息</a>。</p>
+
+<h3>着色器预热</h3>
+
+<p>从 Unity 2017.3 开始，如果您希望在着色器第一次渲染时获得绝对平滑的渲染，则需要预热着色器以便在 OpenGL 上使用实例化。如果您在不需要着色器预热的平台上为着色器进行实例化预热，则不会发生任何操作。</p>
+
+<p>请参阅 <a href="../ScriptReference/ShaderVariantCollection.WarmUp.html">ShaderVariantCollection.WarmUp</a> 和 <a href="../ScriptReference/Shader.WarmupAllShaders.html">Shader.WarmupAllShaders</a> 以了解更多信息。</p>
+
+<h3>#pragma instancing_options</h3>
+
+<p><code>#pragma instancing_options</code> 指令可以使用以下开关：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>开关</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">
+<code>forcemaxcount:batchSize</code> 和 <code>maxcount:batchSize</code>
+</td>
+	<td style="text-align:left;">在大多数平台上，Unity 通过以下方式自动计算实例化数据数组大小：将目标设备上的最大常量缓冲区大小除以包含所有每个实例的属性的结构的大小。通常您不必担心批次大小。但是，在某些平台（Vulkan、Xbox One 和 Switch）上，仍然需要固定的数组大小。您可以使用 <code>maxcount</code> 选项来为这些平台指定批次大小。在其他平台上，将完全忽略此选项。如果确实希望强制设定所有平台的批次大小，请使用 <code>forcemaxcount</code>（例如，当您知道自己只会通过 DrawMeshInstanced 发出包含 256 个实例化精灵的绘制时）。这两个选项的默认值为 500。</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>assumeuniformscaling</code></td>
+	<td style="text-align:left;">用于命令 Unity 假设所有实例都具有统一的缩放（所有 X、Y 和 Z 轴的比例相同）。</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>nolodfade</code></td>
+	<td style="text-align:left;">用于防止 Unity 对 <a href="LevelOfDetail.html">LOD</a> 淡化值应用 GPU 实例化。</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>nolightprobe</code></td>
+	<td style="text-align:left;">用于防止 Unity 对<a href="LightProbes.html">光照探针</a>值（包括其遮挡数据）应用 GPU 实例化。如果您完全确定没有任何游戏对象正在使用 GPU 实例化和光照探针，那么这个参数对提升性能非常有用。</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>nolightmap</code></td>
+	<td style="text-align:left;">用于防止 Unity 对光照贴图 ST（图集信息）值应用 GPU 实例化。如果您完全确定没有任何游戏对象正在使用 GPU 实例化和光照贴图，那么这个参数对提升性能非常有用。</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>procedural:FunctionName</code></td>
+	<td style="text-align:left;">用于命令 Unity 生成额外变体以用于 <a href="../ScriptReference/Graphics.DrawMeshInstancedIndirect.html">Graphics.DrawMeshInstancedIndirect</a>。<br>在顶点着色器阶段开始时，Unity 调用在冒号后面指定的函数。要手动设置实例数据，请按照通常将每个实例数据添加到着色器的方式将每个实例数据添加到此函数。如果片元着色器中包含任何获取的实例属性，Unity 还会在片元着色器的开头调用此函数。</td>
+</tr>
+</tbody>
+</table>
+
+<h3>UnityObjectToClipPos</h3>
+
+<p>编写着色器脚本时，请务必使用 <code>UnityObjectToClipPos(v.vertex)</code> 而非 <code>mul(UNITY_MATRIX_MVP,v.vertex)</code>。</p>
+
+<p>虽然您可以继续在实例化的着色器中正常使用 <code>UNITY_MATRIX_MVP</code>，但 <code>UnityObjectToClipPos</code> 是将顶点位置从对象空间转换为裁剪空间的最有效方法。Unity 还实现了一个着色器升级程序，此程序可扫描项目中的所有着色器，并自动用 <code>UnityObjectToClipPos(v)</code> 替换任何出现的 <code>mul(UNITY_MATRIX_MVP, v)</code>。</p>
+
+<p>The console window (menu: <strong>Window</strong> &gt; <strong>General</strong> &gt; <strong>Console</strong>) displays performance warnings if there are still places where <code>UNITY_MATRIX_MVP</code> (along with <code>UNITY_MATRIX_MV</code>) is used.</p>
+
+<h2>其他注意事项</h2>
+
+<ul>
+<li><p>表面着色器具有默认情况下生成的实例化变体，除非您在 <code>#pragma</code> 表面指令中指定 <code>noinstancing</code>。标准着色器和标准镜面反射着色器已经过修改以支持实例化，但除了变换之外并没有定义每个实例的属性。Unity 将在表面着色器中忽略 <code>#pragma multi_compile_instancing</code> 的使用。</p></li>
+<li><p>Unity strips instancing variants if GPU Instancing is not enabled on any GameObject in the Scene. To override the stripping behaviour, open the <a href="class-GraphicsSettings.html">Graphics</a> settings (menu: <strong>Edit </strong>&gt; <strong>Project Settings</strong>, then select the <strong>Graphics</strong> category), navigate to the <strong>Shader stripping</strong> section and change the <strong>Instancing Variants</strong>. </p></li>
+<li><p>对于 <code>Graphics.DrawMeshInstanced</code>，您需要在脚本传递到此方法的材质上启用 GPU 实例化。但是，<code>Graphics.DrawMeshInstancedIndirect</code> 不会要求您启用 GPU 实例化。间接实例化关键字 <code>PROCEDURAL_INSTANCING_ON</code> 不受剥离的影响。</p></li>
+<li><p>实例化的绘制调用在<a href="FrameDebugger.html">帧调试器 (Frame Debugger)</a> 中显示为 <strong>Draw Mesh (instanced)</strong>。</p></li>
+<li><p>并非总是需要定义每个实例的属性。但是，必须设置实例 ID，因为世界矩阵需要它才能正常运行。表面着色器会自动设置实例 ID。您必须手动设置自定义顶点和片元着色器的实例 ID。为此，请在着色器开头使用 <code>UNITY_SETUP_INSTANCE_ID</code>。</p></li>
+<li><p>使用前向渲染时，Unity 无法有效地实例化受多个光源影响的对象。只有基础 pass 能有效使用实例化，但添加的 pass 不行。有关光照 pass 的更多信息，请参阅有关<a href="RenderTech-ForwardRendering.html">前向渲染</a>和 <a href="SL-PassTags.html">Pass 标签</a>的文档</p></li>
+<li><p>如果多 pass 着色器有两个以上的 pass，则只有第一个 pass 可以实例化。这是因为 Unity 强制将后续 pass 针对每个对象一起渲染，从而强制更改材质。</p></li>
+<li><p>以上示例中使用的所有着色器宏都在 <em>UnityInstancing.cginc</em> 中定义。请在以下目录中查找此文件：<em>[Unity 安装文件夹]\Editor\Data\CGIncludes</em>。</p></li>
+</ul>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–10–24 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 5.6 版中增加了 Enable Instancing 复选框指南、DrawMeshInstancedIndirect 和 #pragma multi-compile</span></p></li>
+<li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2017.3/Documentation/Manual/30_search.html?q=newin20173">2017.3</a> 版中增加了针对 GPU 实例化的着色器预热 <span class="search-words">NewIn20173</span></span></p></li>
+<li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2018.1/Documentation/Manual/30_search.html?q=newin20181">2018.1</a> 版中增加了 GPU 实例化的全局光照 (GI) 支持 <span class="search-words">NewIn20181</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="GraphicsCommandBuffers.html"></a></span><div class="tip">图形命令缓冲区</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SparseTextures.html"></a></span><div class="tip">稀疏纹理</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

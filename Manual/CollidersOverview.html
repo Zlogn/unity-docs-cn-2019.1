@@ -1,0 +1,397 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="碰撞体 - Unity Manual">
+<title>碰撞体 - Unity Manual</title>
+<meta name="description" content="碰撞体 (Collider) 组件定义对象的形状以便用于物理碰撞。碰撞体是不可见的，其形状不需要与对象的网格完全相同，事实上，粗略近似方法通常更有效，在游戏运行过程中难以察觉。">
+<meta property="og:description" content="碰撞体 (Collider) 组件定义对象的形状以便用于物理碰撞。碰撞体是不可见的，其形状不需要与对象的网格完全相同，事实上，粗略近似方法通常更有效，在游戏运行过程中难以察觉。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'CollidersOverview';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/CollidersOverview.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/CollidersOverview.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/CollidersOverview.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/CollidersOverview.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/CollidersOverview.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/CollidersOverview.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/CollidersOverview.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/CollidersOverview.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/CollidersOverview.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/CollidersOverview.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/CollidersOverview.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/CollidersOverview.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/CollidersOverview.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/CollidersOverview.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/CollidersOverview.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/CollidersOverview.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/CollidersOverview.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/CollidersOverview.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/CollidersOverview.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/CollidersOverview.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/CollidersOverview.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/CollidersOverview.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/CollidersOverview.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/CollidersOverview.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="PhysicsSection.html">物理系统</a></li>
+<li><a href="PhysicsOverview.html">物理系统概述</a></li>
+<li>碰撞体</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="RigidbodiesOverview.html"></a></span><div class="tip">刚体概述</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Joints.html"></a></span><div class="tip">关节</div>
+</div>
+</div></div>
+<h1>碰撞体</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><strong>碰撞体 (Collider)</strong> 组件定义对象的形状以便用于物理碰撞。碰撞体是不可见的，其形状不需要与对象的网格完全相同，事实上，粗略近似方法通常更有效，在游戏运行过程中难以察觉。</p>
+
+<p>最简单（并且也是处理器开销最低）的碰撞体是所谓的_原始_碰撞体类型。在 3D 中，这些碰撞体为<a href="class-BoxCollider.html">盒型碰撞体</a>、<a href="class-SphereCollider.html">球形碰撞体</a>和<a href="class-CapsuleCollider.html">胶囊碰撞体</a>。在 2D 中，可以使用 <a href="class-BoxCollider2D.html">2D 盒型碰撞体</a> 和 <a href="class-CircleCollider2D.html">2D 圆形碰撞体</a>。可以将任意数量的上述碰撞体添加到单个对象以创建_复合碰撞体_。</p>
+
+<p>通过仔细进行定位和调整大小，复合碰撞体通常可以充分模拟对象的形状，同时保持较低的处理器开销。通过在子对象上设置额外的碰撞体可以获得额外的灵活性（例如，盒体可以相对于父对象的局部轴进行旋转）。在创建像这样的复合碰撞体时，层级视图中的根对象上应该只放置一个刚体组件。</p>
+
+<p>请注意，原始碰撞体无法正常处理剪切变换，也就是说，如果在变换层级视图中组合使用旋转和不统一的比例，从而使产生的形状不再与原始形状匹配，则原始碰撞体无法正确表现。</p>
+
+<p>然而，在某些情况下，即使复合碰撞体也不够准确。在 3D 中，可以使用<a href="class-MeshCollider.html">网格碰撞体</a>精确匹配对象网格的形状。在 2D 中，<a href="class-PolygonCollider2D.html">2D 多边形碰撞体</a>通常不能完美匹配精灵图形的形状，但您可以将形状细化到所需的任何细节级别。但是，这些碰撞体比原始类型具有更高的处理器开销，因此请谨慎使用以保持良好的性能。此外，网格碰撞体通常无法与另一个网格碰撞体碰撞（即，当它们进行接触时不会发生任何事情）。在某些情况下，可以通过在 Inspector 中将网格碰撞体标记为 <strong>Convex</strong> 来解决此问题。此设置将产生“凸面外壳”形式的碰撞体形状，类似于原始网格，但填充了底切。这样做的好处是，凸面网格碰撞体_可_与其他网格碰撞体碰撞，因此，当有一个包含合适形状的移动角色时，便可以使用此功能。但是，一条通用规则是将网格碰撞体用于场景几何体，并使用复合原始碰撞体近似得出移动对象的形状。</p>
+
+<p>可将碰撞体添加到没有刚体组件的对象，从而创建场景的地板、墙壁和其他静止元素。这些被称为__静态__碰撞体。通常情况下，不应通过更改变换位置来重新定位静态碰撞体，因为这会极大地影响物理引擎的性能。_具有_刚体的对象上的碰撞体称为_动态_碰撞体。静态碰撞体可与动态碰撞体相互作用，但由于没有刚体，因此不会通过移动来响应碰撞。</p>
+
+<p>上面链接中的各种碰撞体类型的参考页面提供了关于各自属性和用法的更多信息。</p>
+
+<h2>物理材质</h2>
+
+<p>当碰撞体相互作用时，它们的表面需要模拟所应代表的材质的属性。例如，一块冰将是光滑的，而橡胶球将提供大量摩擦力并且弹性很好。虽然碰撞时碰撞体的形状不会变形，但可以使用 <strong>Physics Materials（物理材质）__配置碰撞体的摩擦力和弹力。可能需要进行多次试验和纠错后才能获得正确参数，比如冰材质将具有零（或非常低的）摩擦力，而橡胶材质则具有高摩擦力和近乎完美的弹性。有关可用参数的更多详细信息，请参阅<a href="class-PhysicMaterial.html">物理材质</a>和 <a href="class-PhysicsMaterial2D.html">2D 物理材质</a>的参考页面。请注意，由于历史原因，3D 资源实际上称为 </strong>Physic Material（物理材质）__（_不带_ s），而等效的 2D 资源则称为 _<em>Physics Material 2D（2D 物理材质）__（_带</em> s）。</p>
+
+<h2>触发器</h2>
+
+<p>脚本系统可以使用 <code>OnCollisionEnter</code> 函数检测何时发生碰撞并启动操作。但是，也可以直接使用物理引擎检测碰撞体何时进入另一个对象的空间而不会产生碰撞。配置为__触发器__（使用 <strong>Is Trigger</strong> 属性）的碰撞体不会表现为实体对象，只会允许其他碰撞体穿过。当碰撞体进入其空间时，触发器将在触发器对象的脚本上调用 <code>OnTriggerEnter</code> 函数。</p>
+
+<p><a name="CollisionCallbacks"></a></p>
+
+<h2>Collision callbacks for scripts</h2>
+
+<p>发生碰撞时，物理引擎会在附加到相关对象的所有脚本上调用特定名称的函数。可以在这些函数中放置所需的任何代码来响应碰撞事件。例如，当汽车撞到障碍物时，可以播放碰撞音效。</p>
+
+<p>在第一个检测到碰撞的物理更新中，将调用 <code>OnCollisionEnter</code> 函数。在保持接触的更新期间，将调用 <code>OnCollisionStay</code>，最后由 <code>OnCollisionExit</code> 指示接触已经中断。触发碰撞体会调用模拟的 <code>OnTriggerEnter</code>、<code>OnTriggerStay</code> 和 <code>OnTriggerExit</code> 函数。请注意，对于 2D 物理，可使用在名称中附加了 <strong>2D</strong> 字样的等效函数，例如 <code>OnCollisionEnter2D</code>。有关这些函数和代码示例的完整详细信息，请参阅关于 <a href="../ScriptReference/MonoBehaviour.html">MonoBehaviour</a> 类的脚本参考页面。</p>
+
+<p>对于正常的非触发碰撞，还有一个额外的细节，即所涉及的对象中至少有一个对象必须具有非运动刚体（即，必须关闭 _Is Kinematic_）。如果两个对象都是运动刚体，则不会调用 <code>OnCollisionEnter</code> 等函数。对于触发碰撞，此限制不适用，因此运动和非运动刚体都会在进入触发碰撞体时提示调用 <code>OnTriggerEnter</code>。</p>
+
+<h2>碰撞体相互作用</h2>
+
+<p>碰撞体彼此之间的相互作用根据<a href="RigidbodiesOverview.html">刚体组件</a>的配置不同而不同。三个重要的配置是_静态碰撞体 (Static Collider)<em>（即完全没有附加任何刚体）、</em>刚体碰撞体 (Rigidbody Collider)_ 和_运动刚体碰撞体 (Kinematic Rigidbody Collider)_。</p>
+
+<h3>静态碰撞体</h3>
+
+<p>这是一种具有碰撞体但没有刚体的游戏对象。静态碰撞体用于表示关卡几何体，始终停留在同一个地方，永远不会四处移动。靠近的刚体对象将与静态碰撞体发生碰撞，但不会移动静态碰撞体。</p>
+
+<p>物理引擎假定静态碰撞体永远不会移动或改变，并且可以基于此假设进行有用的优化。因此，在游戏运行过程中不应禁用/启用、移动或缩放静态碰撞体。如果更改静态碰撞体，则会导致物理引擎进行额外的内部重新计算，从而导致性能大幅下降。更糟糕的是，这些更改有时会使碰撞体处于不明的状态，从而产生错误的物理计算。例如，针对已更改的静态碰撞体的射线投射可能无法检测到静态碰撞体，或在空间中的随机位置检测到静态碰撞体。此外，移动的静态碰撞体碰到的刚体不一定会“被唤醒”，静态碰撞体也不会施加任何摩擦力。由于这些原因，只应更改刚体碰撞体。如果希望碰撞体对象不受靠近的刚体影响，但仍然可以通过脚本来移动该对象，则应为其附加一个_运动_刚体组件附加，而非不附加任何刚体。</p>
+
+<h3>刚体碰撞体</h3>
+
+<p>这是一种附加了碰撞体和普通非运动刚体的游戏对象。刚体碰撞体完全由物理引擎模拟，并可响应通过脚本施加的碰撞和力。刚体碰撞体可与其他对象（包括静态碰撞体）碰撞，是使用物理组件的游戏中最常用的碰撞体配置。</p>
+
+<h3>运动刚体碰撞体</h3>
+
+<p>这是一种附加了碰撞体和_运动_刚体（即启用了刚体的 <em>IsKinematic</em> 属性）的游戏对象。可使用脚本来移动运动刚体对象（通过修改对象的变换组件），但该对象不会像非运动刚体一样响应碰撞和力。运动刚体应该用于符合以下特征的碰撞体：偶尔可能被移动或禁用/启用，除此之外的行为应该像静态碰撞体一样。这方面的一个例子是滑动门，这种门通常用作不可移动的物理障碍物，但必要时可以打开。与静态碰撞体不同，移动的运动刚体会对其他对象施加摩擦力，并在双方接触时“唤醒”其他刚体。</p>
+
+<p>即使处于不动状态，运动刚体碰撞体也会对静态碰撞体产生不同的行为。例如，如果将碰撞体设置为触发器，则还需要向其添加刚体以便在脚本中接收触发器事件。如果不希望触发器在重力作用下跌落或在其他方面受物理影响，则可以在其刚体上设置 <em>IsKinematic</em> 属性。</p>
+
+<p>可使用 <em>IsKinematic</em> 属性随时让刚体组件在正常和运动行为之间切换。</p>
+
+<p>这方面的一个常见例子是“布娃娃”效果；在这种效果中，角色通常在动画下移动，但在爆炸或猛烈碰撞时被真实抛出。角色的四肢可被赋予自己的刚体组件，并在默认情况下启用 <em>IsKinematic</em>。肢体将通过动画正常移动，直到所有这些肢体关闭 <em>IsKinematic</em> 为止，然后它们立即表现为物理对象。此时，碰撞或爆炸力将使角色飞出，使肢体以令人信服的方式被抛出。</p>
+
+<h2>碰撞操作矩阵</h2>
+
+<p>当两个对象碰撞时，可能会发生许多不同的脚本事件，具体取决于碰撞对象的刚体配置。以下图表详细列出了根据附加到对象的组件来调用的事件函数。某些组合仅会使两个对象之中的一个对象受到碰撞的影响，但一般规则是物理特性不会应用于没有附加刚体组件的对象。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="7"><strong><em>发生碰撞检测并在碰撞后发送消息</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">静态碰撞体</td>
+	<td style="text-align:left;">刚体碰撞体</td>
+	<td style="text-align:left;">运动刚体碰撞体</td>
+	<td style="text-align:left;">静态触发碰撞体</td>
+	<td style="text-align:left;">刚体触发碰撞体</td>
+	<td style="text-align:left;">运动刚体触发碰撞体</td>
+</tr>
+<tr>
+	<td style="text-align:left;">静态碰撞体</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+</tr>
+<tr>
+	<td style="text-align:left;">刚体碰撞体</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+</tr>
+<tr>
+	<td style="text-align:left;">运动刚体碰撞体</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+</tr>
+<tr>
+	<td style="text-align:left;">静态触发碰撞体</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+</tr>
+<tr>
+	<td style="text-align:left;">刚体触发碰撞体</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+</tr>
+<tr>
+	<td style="text-align:left;">运动刚体触发碰撞体</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="7"><strong><em>碰撞后发送触发器消息</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">静态碰撞体</td>
+	<td style="text-align:left;">刚体碰撞体</td>
+	<td style="text-align:left;">运动刚体碰撞体</td>
+	<td style="text-align:left;">静态触发碰撞体</td>
+	<td style="text-align:left;">刚体触发碰撞体</td>
+	<td style="text-align:left;">运动刚体触发碰撞体</td>
+</tr>
+<tr>
+	<td style="text-align:left;">静态碰撞体</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">刚体碰撞体</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">运动刚体碰撞体</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">静态触发碰撞体</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;"> </td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">刚体触发碰撞体</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">运动刚体触发碰撞体</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+</tbody>
+</table>
+
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="RigidbodiesOverview.html"></a></span><div class="tip">刚体概述</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Joints.html"></a></span><div class="tip">关节</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

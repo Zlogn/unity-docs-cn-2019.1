@@ -1,0 +1,517 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="创建和更改 Remote Settings - Unity Manual">
+<title>创建和更改 Remote Settings - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/AnalyticsRemoteSettingsTab.png">
+<meta name="description" content="Before using Remote Settings, you must first enable Unity Services and the Unity Analytics Service for your Unity project. Once you have enabled Analytics, open the Analytics dashboard and go to the Remote Settings page to create and change the Remote Settings values. See Using Remote Settings in a Unity project to learn how to access these Remote Settings values in your game or application.">
+<meta property="og:description" content="Before using Remote Settings, you must first enable Unity Services and the Unity Analytics Service for your Unity project. Once you have enabled Analytics, open the Analytics dashboard and go to the Remote Settings page to create and change the Remote Settings values. See Using Remote Settings in a Unity project to learn how to access these Remote Settings values in your game or application.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UnityAnalyticsRemoteSettingsCreating';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityAnalyticsRemoteSettingsCreating.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityAnalyticsRemoteSettingsCreating.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityAnalyticsRemoteSettingsCreating.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityAnalyticsRemoteSettingsCreating.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityAnalyticsRemoteSettingsCreating.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityAnalyticsRemoteSettingsCreating.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityAnalyticsRemoteSettingsCreating.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityAnalyticsRemoteSettingsCreating.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityAnalyticsRemoteSettingsCreating.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityAnalyticsRemoteSettingsCreating.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UnityAnalyticsRemoteSettingsCreating.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UnityAnalyticsRemoteSettingsCreating.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UnityAnalyticsRemoteSettingsCreating.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UnityAnalyticsRemoteSettingsCreating.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityAnalyticsRemoteSettingsCreating.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityAnalyticsRemoteSettingsCreating.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityAnalyticsRemoteSettingsCreating.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityAnalyticsRemoteSettingsCreating.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityAnalyticsRemoteSettingsCreating.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityAnalyticsRemoteSettingsCreating.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityAnalyticsRemoteSettingsCreating.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityAnalyticsRemoteSettingsCreating.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityAnalyticsRemoteSettingsCreating.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityAnalyticsRemoteSettingsCreating.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="UnityAnalytics.html">Unity Analytics</a></li>
+<li><a href="UnityAnalyticsRemoteSettings.html">Remote Settings</a></li>
+<li>创建和更改 Remote Settings</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsRemoteSettings.html"></a></span><div class="tip">Remote Settings</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsRemoteSettingsUsing.html"></a></span><div class="tip">在 Unity 项目中使用 Remote Settings</div>
+</div>
+</div></div>
+<h1>创建和更改 Remote Settings</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Before using Remote Settings, you must first enable <a href="SettingUpProjectServices.html">Unity Services</a> and the <a href="UnityAnalyticsOverview.html">Unity Analytics Service</a> for your Unity project. Once you have enabled Analytics, open the Analytics dashboard and go to the <strong>Remote Settings</strong> page to create and change the Remote Settings values. See <a href="UnityAnalyticsRemoteSettingsUsing.html">Using Remote Settings in a Unity project</a> to learn how to access these Remote Settings values in your game or application.</p>
+
+<p>Analytics 服务提供两种 Remote Settings 配置：</p>
+
+<p>1.Analytics 服务将 Release 配置设置发送到运行常规非开发版应用程序的计算机和设备。</p>
+
+<p>2.Analytics 服务将 Development 配置设置发送到运行开发版（即在 <a href="BuildSettings.html">Build Settings 窗口</a>内选中 Development Build 标志而创建的版本）的计算机和设备。Unity Editor 中的 Play 模式被视为开发版。</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsRemoteSettingsTab.png" alt="The Remote Settings page on the Analytics dashboard for a game called Raging Bots">
+<figcaption>The Remote Settings page on the Analytics dashboard for a game called Raging Bots</figcaption>
+</figure>
+
+<p>每个 Remote Setting 由一个键、一个默认值和可选的细分值组成。设置包含细分值时，当前玩家所在的细分段将确定哪些值包含在配置中。如果多个细分适用，则该配置包含来自最高优先级细分段的值。</p>
+
+<p>每个配置可以创建 200 个值。有一个细分段的设置使用一个值；有两个细分段的设置使用两个值；以此类推。</p>
+
+<h2>设置名称和值规则</h2>
+
+<p>单独的远程设置是键/值对。键名称的规则是：</p>
+
+<ul>
+<li><p>键名称在同一配置内必须唯一。</p></li>
+<li><p>键名称必须以字母开头。</p></li>
+<li><p>键名称只能包含字母、数字和字符：“.”、“_” 和 “-”。</p></li>
+</ul>
+
+<p>一个设置值可以是以下任何原始类型：__Int<strong>、</strong>Float<strong>、</strong>String__ 或 <strong>Bool</strong>。设置值的规则是：</p>
+
+<ul>
+<li><p>Int 值是 32 位整数（–2147483648 到 2147483647）。</p></li>
+<li><p>Float 值是单精度的 32 位浮点数（大约 –3.4x10<sup>38</sup> 到 3.4x10<sup>38）</sup>。</p></li>
+<li><p>String 值限制为 1024 个字符。</p></li>
+<li><p>You must specify boolean values with the strings “true” or “false”.</p></li>
+</ul>
+
+<h2>添加 Remote Settings</h2>
+
+<p>要添加 Remote Setting：</p>
+
+<ol>
+<li>In your <a href="https://analytics.cloud.unity3d.com/">Analytics dashboard</a>, open the <strong>Remote Settings</strong> page.</li>
+</ol>
+
+<p>2.将设置的 <strong>Configuration</strong> 设为 <strong>Release</strong> 或 <strong>Development</strong>。</p>
+
+<p>3.单击 __ADD NEW KEY-VALUE__（位于设置列表的顶部）。</p>
+
+<p>4.输入键的名称。</p>
+
+<p>5.设置值的类型。</p>
+
+<p>6.输入默认值。</p>
+
+<p>7.单击 <strong>Save</strong> 按钮。</p>
+
+<p>8.单击 <strong>Sync</strong> 按钮以发布所做的更改。（无需在创建每个单独设置后单击 <strong>Sync</strong> 按钮，可以等到完成对当前配置的所有更改后再同步设置。）</p>
+
+<p>__注意：__要添加针对不同细分段的值，请保存默认的键/值设置，然后对其进行编辑。细分段选项仅在编辑某项设置时显示，而不会在第一次创建设置时显示。</p>
+
+<h2>编辑 Remote Settings</h2>
+
+<p>要编辑 Remote Setting：</p>
+
+<ol>
+<li>Open the <strong>Remote Settings</strong> page in your Analytics dashboard.</li>
+</ol>
+
+<p>2.在 <strong>Configuration</strong> 中选择 <strong>Release</strong> 或 <strong>Development</strong>。</p>
+
+<p>3.单击要更改的设置旁的编辑图标。</p>
+
+<pre><code>![](../uploads/Main/RemoteSettingsEditSetting.png) 
+</code></pre>
+
+<p>4.执行所需的更改。请注意，更改键名称等同于删除旧键并创建新键。</p>
+
+<p>5.单击 <strong>Save</strong> 按钮。</p>
+
+<p>6.单击 <strong>Sync</strong> 按钮以发布所做的更改。下次玩家启动会话时，Unity 会读取更新后的设置。</p>
+
+<h2>解决同时编辑冲突</h2>
+
+<p>如果团队中的两个人同时编辑项目的 Remote Settings，您在尝试将修改的设置与服务同步时可能会遭遇冲突。</p>
+
+<figure>
+<img src="../uploads/Main/RemoteSettingsEditConflict.png" alt="提示在编辑同一项目时有其他人已更改设置的警告">
+<figcaption>提示在编辑同一项目时有其他人已更改设置的警告</figcaption>
+</figure>
+
+<p>发生冲突时，可选择以下选项：</p>
+
+<p><strong>OVERWRITE</strong></p>
+
+<p>放弃上次同步以来服务上的所有更改并将您的设置推送到服务。选择覆盖 (overwrite) 时，服务上的设置将与您当前的设置完全匹配。</p>
+
+<p><strong>MERGE</strong></p>
+
+<p>将您的当前设置与服务上已修改的设置合并，使您有机会在完成同步操作之前进行更改。</p>
+
+<p>如果您编辑了同一个设置值，您的更改会覆盖服务上的版本。另外，还会恢复服务上已删除的值和设置（因为它们仍然存在于您的版本中）。自您上次同步以来服务上的其他更改将保留下来。</p>
+
+<p>合并后，Remote Settings 页面将更新以反映此合并，但合并的设置不会推送到服务器。您可以查看更新后的更改，并在准备就绪后再次单击 <strong>Sync</strong> 按钮。</p>
+
+<p><strong>CANCEL</strong></p>
+
+<p>取消同步操作并关闭冲突对话框而不进行任何更改。您的设置不会保存到服务。</p>
+
+<h2>为不同细分段添加不同值</h2>
+
+<p>您可以将多个细分值分配给单个 Remote Settings 键。玩家属于特定值所在的某个细分段时，Unity 会将该值发送给玩家，而不是默认的 <strong>All Users</strong> 值。（如果玩家符合若干细分值的条件，则 Unity 会发送最高优先级细分段的值。）</p>
+
+<p>要设置特定于给定细分段的值：</p>
+
+<ol>
+<li>Open the <strong>Remote Settings</strong> page in your Analytics dashboard.</li>
+</ol>
+
+<p>2.在 Configuration 中选择 <strong>Release</strong> 或 <strong>Development</strong>。</p>
+
+<p>3.添加 Remote Setting（如果尚未存在）。</p>
+
+<p>4.单击该设置最右侧的编辑图标。</p>
+
+<p>5.单击 <strong>ADD EXISTING SEGMENT</strong>。</p>
+
+<p>6.在新行中，从下拉列表选择相应细分段，然后输入值。</p>
+
+<p>7.单击 <strong>Save</strong> 按钮。</p>
+
+<h2>删除 Remote Settings</h2>
+
+<p>要删除 Remote Setting，首先打开该设置的编辑视图：</p>
+
+<ol>
+<li>Open the <strong>Remote Settings</strong> page in your Analytics dashboard.</li>
+</ol>
+
+<p>2.将设置的 <strong>Configuration</strong> 设为 <strong>Release</strong> 或 <strong>Development</strong>。</p>
+
+<p>3.单击要删除的设置旁的编辑图标以打开编辑视图：</p>
+
+<pre><code>![](../uploads/Main/RemoteSettingsDelete.png) 
+</code></pre>
+
+<p>4.要删除特定细分段的值，请单击编辑视图右侧的__减号__按钮，然后单击 <strong>Save</strong>。（无法删除默认的 <strong>All Users</strong> 值。）</p>
+
+<p>5.要删除整个设置，请单击编辑视图底部的删除图标，然后确认是否要删除该设置。</p>
+
+<p>6.单击 <strong>Sync</strong> 按钮以发布所做的更改。</p>
+
+<h2>设置细分段优先级</h2>
+
+<p>When a player is a member of more than one segment, Unity sends the value assigned for highest priority segment. (If a setting doesn’t have any segmented values, or the player isn’t a member of the segments that do have different values for a key, then Unity sends the All Users value.) You can set the order of your segments to specify which segmented values should take precedence when there is an overlap. </p>
+
+<p>要设置细分段优先级：</p>
+
+<ol>
+<li>Open the <strong>Remote Settings</strong> page in your Analytics dashboard.</li>
+</ol>
+
+<p>2.在 Configuration 中选择 <strong>Release</strong> 或 <strong>Development</strong>。</p>
+
+<p>3.单击设置列表右上角的菜单图标：</p>
+
+<pre><code>![](../uploads/Main/RemoteSettingsMenuIcon.png) 
+</code></pre>
+
+<p>4.单击细分段优先级图标。</p>
+
+<pre><code>![](../uploads/Main/RemoteSettingsPriorityIcon.png) 
+</code></pre>
+
+<p>5.<strong>Segment Priority</strong> 窗口将打开并显示当前顺序。窗口中只显示已为任意 Remote Settings 分配了值的细分段。</p>
+
+<p>6.单击并拖放各项对细分段重新排序。</p>
+
+<pre><code>![](../uploads/Main/RemoteSettingsSegmentOrder.png) 
+</code></pre>
+
+<p>7.顺序正确时，单击 <strong>Save</strong>。</p>
+
+<p>8.单击 <strong>Sync</strong> 按钮以发布所做的更改。</p>
+
+<p>细分段优先级将应用于配置中的所有设置，但是 Development 和 Release 配置可以有不同的优先级。</p>
+
+<h2>导入和导出设置</h2>
+
+<p>您可以使用逗号分隔值 (CSV) 格式文件来导入和导出设置。</p>
+
+<p><strong>要导出当前设置：</strong></p>
+
+<ol>
+<li>
+<p>Navigate to the Remote Settings page on your Unity Analytics dashboard.
+2.选择要导出的配置（__Release__ 或 __Development__）。
+3.单击列表标题右侧的菜单图标：</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsRSMenuIcon.png" alt="">
+</figure>
+</li>
+</ol>
+
+<p>4.选择 <strong>Download CSV</strong> 以将当前设置导出到计算机。</p>
+
+<p>Analytics 服务会将当前的设置下载为 CSV 文件。</p>
+
+<p>请注意，如果在创建任何设置之前下载 CSV 文件，该文件完全是空的。上传的有效文件必须包含标题行。请参阅 <a href="#csvformat">Remote Settings CSV 格式</a>。</p>
+
+<p><strong>要将设置导入项目中：</strong></p>
+
+<ol>
+<li>
+<p>Navigate to the Remote Settings page on your Unity Analytics dashboard.
+2.选择要用导入的设置来覆盖的配置（__Release__ 或 <strong>Development__）。
+3.单击列表标题右侧的菜单图标。
+4.选择 </strong>Upload CSV__ 以将新设置文件导入项目中。
+5.选择包含新设置的 CSV 文件。
+6.单击 <strong>Open</strong>。</p>
+
+<p>Analytics 服务会上传该设置文件并替换所选配置中的所有当前设置，但是还不会提交值。</p>
+
+<p>如果文件中存在格式或值错误，该服务允许您下载包含错误详情的 CSV 文件。发生错误时不会更改任何设置。</p>
+</li>
+</ol>
+
+<p>7.单击 <strong>Sync</strong> 以提交设置更改并使更改生效。（刷新页面或在未同步的情况下离开页面将会放弃任何上传的设置。）</p>
+
+<p>导入设置时，<strong>所有</strong>键和值都会被更改以匹配上传的文件。如果文件中没有显示某个现有设置或细分段值，则表示已删除该设置。</p>
+
+<h3>在导入过程中创建和删除设置</h3>
+
+<p>除了编辑设置值外，还可以在将 CSV 文件上传到某个配置时创建和删除设置。</p>
+
+<p>首先，下载该配置的当前设置 CSV 文件。然后，可编辑此文件以进行所需的更改。（如果使用电子表格应用程序来编辑文件，请参阅<a href="#spreadsheets">使用电子表格</a>。）</p>
+
+<p><strong>要新建设置：</strong></p>
+
+<p>1.在文件中添加新行。
+2.指定唯一的键名称。
+3.定义数据类型（int、float、string 或 bool）。
+4.输入 “All Current Users” 作为细分段。
+5.将最后一个字段留空（用于默认细分段）。</p>
+
+<p>新设置将如下所示：</p>
+
+<pre><code>a_bool_value,bool,TRUE,All Current Users,
+</code></pre>
+
+<p><strong>要为设置添加新的细分值：</strong></p>
+
+<p>1.在文件中添加一行。
+2.重复该设置的键名称和数据类型。
+3.输入细分段的值。
+4.输入细分段名称。在导入设置之前，必须事先为项目定义细分段名称。请使用 <a href="UnityAnalyticsSegmentBuilder.html">Segment Builder</a> 页面查看现有细分段以及定义新细分段。
+5.设置细分段优先级。</p>
+
+<pre><code>文件中所有细分段的优先级必须是从 1 开始的连续整数。例如，如果在 CSV 文件中使用五个细分段，则允许的优先级只有数字 1-5。在文件中使用细分段的任何地方都必须分配相同的优先级。例如，如果将 Japan 细分段用于 CSV 文件中的若干值，在每一行中必须使用相同的优先级值。
+</code></pre>
+
+<p>具有细分值的设置将如下所示：</p>
+
+<pre><code>a_bool_value,bool,false,All Current Users,
+a_bool_value,bool,true,1-3 Days,1
+a_bool_value,bool,false,4-7 Days,2
+</code></pre>
+
+<p><strong>要删除设置：</strong></p>
+
+<p>直接从文件中删除定义该设置的行。如果删除包含默认的 “All Current Users” 细分段的行，还必须删除定义细分值的任何行。请注意，如果删除细分值，可能还需要对细分段优先级重新编号以维持连续的整数序列。</p>
+
+<p>最后，上传修改后的 CSV 文件并按 Remote Settings 页面上的 <strong>Sync</strong> 按钮以保存更改并发布更改。</p>
+
+<p><a name="csvformat"></a> </p>
+
+<h3>Remote Settings CSV 文件格式</h3>
+
+<p>Remote Settings CSV 格式遵守 <a href="https://tools.ietf.org/html/rfc4180">ISO rfc4180</a>。导出的文件采用 UTF–8 编码。</p>
+
+<p>设置文件有五个字段。必须将标题行作为文件中的第一行：</p>
+
+<pre><code>key,type,value,segment,priority
+</code></pre>
+
+<p>该文件中的字段为：</p>
+
+<ul>
+<li>
+<strong>key</strong> – Remote Settings 键的名称。</li>
+<li>
+<strong>type</strong> – 设置数据类型：int、float、string 或 bool。</li>
+<li>
+<strong>value</strong> – 设置值。</li>
+<li>
+<strong>segment</strong> – 设置值的细分段名称。</li>
+<li>
+<strong>priority</strong> – 设置值的细分段优先级。</li>
+</ul>
+
+<p><strong>CSV 文件中的条目规则：</strong></p>
+
+<ul>
+<li><p>每行必须包含唯一的键和细分段组合。</p></li>
+<li><p>All segments in the CSV file must already exist. New segments must be created using the <a href="UnityAnalyticsSegmentBuilder.html">Segment Builder</a> page of the Analytics dashboard.</p></li>
+<li><p>对默认细分段使用字符串 “All Current Users”。</p></li>
+<li><p>默认的 “All Current Users” 细分段必须与文件中的每个键准确关联一次。</p></li>
+<li><p>请勿向 “All Current Users” 细分段分配优先级（将字段留空）。</p></li>
+<li><p>必须为其他所有细分段分配优先级。</p></li>
+<li><p>对于使用该细分段的所有键，细分段优先级必须相同。</p></li>
+<li><p>所有细分段之间分配的细分段优先级必须是连续整数（从 1 开始）。</p></li>
+<li><p>对布尔值使用 TRUE 和 FALSE。</p></li>
+<li><p>包含逗号、双引号和换行符的字符串必须用双引号引起来。</p></li>
+<li>
+<p>字符串中的双引号字符必须通过重复双引号来转义。例如：</p>
+
+<pre><code>"Hello World!"            -&gt; """Hello World!"""
+He said, "How do you do?" -&gt; "He said, ""How do you do?"""
+</code></pre>
+</li>
+<li><p>文件最多可以包含 201 行（包括标题行）。</p></li>
+</ul>
+
+<p><strong>提示：</strong>在控制面板上创建 Remote Settings 示例值并将其下载以生成示例文件。</p>
+
+<p><a name="spreadsheets"></a> </p>
+
+<h3>使用电子表格</h3>
+
+<p>CSV 文件格式没有严格标准化，因此在不同的电子表格应用程序中打开或保存 CSV 文件时可能会发现有变化。Remote Settings 文件在 Remote Settings 页面与您的编辑应用程序之间往返后，务必确认文件中的字段正确无误。尤其要确认 Unicode 字符（不在基本 ASCII 范围内的 Emoji、符号和字符等）未经修改且浮点数未被截断。</p>
+
+<p>通常在导入 CSV 文件时，电子表格应用程序会将 <code>&amp;apos;</code>、<code>+</code>、<code>-</code> 或 <code>=</code> 字符开头的字符串解读为表达式而非普通字符串。可尝试用双引号将此类字符串引起来，并调整所用的电子表格的导入选项。例如，在 Google Sheets 中，可关闭 “Convert strings to numbers and dates” 选项；而在 LibreOffice 中，可启用 “Quoted Strings As Text”。</p>
+
+<p>对于浮点类型的设置，确保设置值的所有有效数字都显示在电子表格单元格中。否则，电子表格应用程序将截断该值，并会在您将电子表格导出到 CSV 文件时损失精度。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–12–12 Page amended with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-edit">截至 2017–08–28，服务与 Unity 5.5 之后的版本兼容，但是版本兼容性可能会发生变化。</span></p></li>
+<li><p><span class="page-edit">2017–06–30 - 添加：在键名称中允许使用字符 “.”、“_” 和 “-”。</span></p></li>
+<li><p><span class="page-edit">2017–06–30 - 添加：CSV 导入和导出。</span></p></li>
+<li><p><span class="page-history">2017.1 中的新功能</span></p></li>
+<li><p><span class="page-history">2017–08–28 - 2017.1 中添加了细分的 Remote Settings：为不同细分段设置不同值</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsRemoteSettings.html"></a></span><div class="tip">Remote Settings</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsRemoteSettingsUsing.html"></a></span><div class="tip">在 Unity 项目中使用 Remote Settings</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

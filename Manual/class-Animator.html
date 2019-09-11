@@ -1,0 +1,327 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Animator 组件 (Animator Component) - Unity Manual">
+<title>Animator 组件 (Animator Component) - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/MecanimAnimatorComponent.png">
+<meta name="description" content="Animator 组件用于将动画分配给场景中的游戏对象。Animator 组件需要引用 Animator Controller，后者定义要使用哪些动画剪辑，并控制何时以及如何在动画剪辑之间进行混合和过渡。">
+<meta property="og:description" content="Animator 组件用于将动画分配给场景中的游戏对象。Animator 组件需要引用 Animator Controller，后者定义要使用哪些动画剪辑，并控制何时以及如何在动画剪辑之间进行混合和过渡。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-Animator';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-Animator.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-Animator.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-Animator.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-Animator.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-Animator.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-Animator.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-Animator.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-Animator.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-Animator.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-Animator.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-Animator.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-Animator.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-Animator.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-Animator.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-Animator.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-Animator.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-Animator.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-Animator.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-Animator.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-Animator.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-Animator.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-Animator.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-Animator.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-Animator.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="AnimationSection.html">动画</a></li>
+<li><a href="comp-AnimationGroup.html">动画参考</a></li>
+<li>Animator 组件 (Animator Component)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="comp-AnimationGroup.html"></a></span><div class="tip">动画参考</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-AnimatorController.html"></a></span><div class="tip">Animator Controller</div>
+</div>
+</div></div>
+<h1>Animator 组件 (Animator Component)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Animator 组件用于将动画分配给场景中的游戏对象。Animator 组件需要引用 <a href="class-AnimatorController.html">Animator Controller</a>，后者定义要使用哪些动画剪辑，并控制何时以及如何在动画剪辑之间进行混合和过渡。</p>
+
+<p>如果游戏对象是具有<a href="class-Avatar.html">Avatar</a>定义的人形角色，还应在此组件中分配Avatar，如下所示：</p>
+
+<figure>
+<img src="../uploads/Main/MecanimAnimatorComponent.png" alt="已分配控制器和 Avatar 的 Animator 组件。">
+<figcaption>已分配控制器和 Avatar 的 Animator 组件。</figcaption>
+</figure>
+
+<p>下图显示了如何将各种资源（动画剪辑、Animator Controller 和 Avatar）一起汇集在游戏对象的 Animator 组件中：</p>
+
+<figure>
+<img src="../uploads/Main/MecanimHowItFitsTogether.jpg" alt="Diagram showing how the various parts of the animation system connect together">
+<figcaption>Diagram showing how the various parts of the animation system connect together</figcaption>
+</figure>
+
+<p>另请参阅<a href="AnimationStateMachines.html">状态机</a>、<a href="class-BlendTree.html">混合树</a>、<a href="class-Avatar.html">Avatar</a>、<a href="class-AnimatorController.html">Animator Controller</a></p>
+
+<h2>属性</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Controller</strong></td>
+	<td style="text-align:left;">附加到此角色的 Animator Controller。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Avatar</strong></td>
+	<td style="text-align:left;">此角色的<a href="class-Avatar.html">Avatar</a>。（如果 Animator 用于对人形角色进行动画化）</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Apply Root Motion</strong></td>
+	<td style="text-align:left;">我们应该从动画本身还是从脚本控制角色的位置和旋转。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Update Mode</strong></td>
+	<td style="text-align:left;">此选项允许您选择 Animator 何时更新以及应使用哪个时间标度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Normal</strong></td>
+	<td style="text-align:left;">Animator 与 Update 调用同步更新，Animator 的速度与当前时间标度匹配。如果时间标度变慢，动画将通过减速来匹配。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Animate Physics</strong></td>
+	<td style="text-align:left;">Animator 与 FixedUpdate 调用同步更新（即，与物理系统步调一致）。如果要对具有物理交互的对象（例如可四处推动刚体对象的角色）的运动进行动画化，应使用此模式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Unscaled Time</strong></td>
+	<td style="text-align:left;">Animator 与 Update 调用同步更新，但是 Animator 的速度忽略当前时间标度而不顾一切以 100% 速度进行动画化。此选项可用于以正常速度对 GUI 系统进行动画化，同时将修改的时间标度用于特效或暂停游戏。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Culling Mode</strong></td>
+	<td style="text-align:left;">您可以为动画选择的剔除模式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Always Animate</strong></td>
+	<td style="text-align:left;">始终进行动画化，即使在屏幕外也不要剔除。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Cull Update Transforms</strong></td>
+	<td style="text-align:left;">未显示渲染器时，禁用变换组件的重定向、IK（反向动力学）和写入。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Cull Completely</strong></td>
+	<td style="text-align:left;">未显示渲染器时，完全禁用动画。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>动画曲线信息</h2>
+
+<p>Animator 组件底部的信息框为您提供 Animator Controller 使用的所有剪辑中所用数据的明细。</p>
+
+<p>动画剪辑包含“曲线”形式的数据；曲线表示值如何随时间变化。这些曲线可描述对象的位置或旋转、人形动画系统中肌肉的弯曲或者剪辑内的其他动画值（例如改变的材质颜色）。</p>
+
+<p>下表说明了每个数据项代表的内容：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>标签</em></strong></th>
+	<th style="text-align:left;"><strong><em>描述</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Clip Count</strong></td>
+	<td style="text-align:left;">分配给此 Animator 的 Animator Controller 使用的动画剪辑总数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Curves (Pos, Rot &amp; Scale)</strong></td>
+	<td style="text-align:left;">用于动画化对象位置、旋转或缩放的曲线总数。这些曲线用于不属于标准人形骨架的动画对象。在对人形 Avatar 进行动画化时，这些曲线会显示额外非肌肉骨骼（例如尾巴、飘逸的布料或悬垂的吊坠）的计数。如果您有人形动画并发现意外的非肌肉动画曲线，表示动画文件中可能有不必要的动画曲线。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Muscles</strong></td>
+	<td style="text-align:left;">此 Animator 用于人形动画的肌肉动画曲线数量。这些是用于对标准人形 Avatar 肌肉进行动画化的曲线。除了 Unity 的标准 Avatar 中所有人形骨骼的标准肌肉运动外，此处还包括用于存储根运动位置和旋转动画的两条“肌肉曲线”。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Generic</strong></td>
+	<td style="text-align:left;">由 Animator 用于动画化其他属性（如材质颜色）的数字（浮点）曲线数量。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>PPtr</strong></td>
+	<td style="text-align:left;">精灵动画曲线（由 Unity 的 2D 系统使用）的总数</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Curves Count</strong></td>
+	<td style="text-align:left;">动画曲线的合计总数</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Constant</strong></td>
+	<td style="text-align:left;">优化为常量（不变）值的动画曲线数量。如果动画文件包含了具有不变值的曲线，Unity 会自动选择此项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Dense</strong></td>
+	<td style="text-align:left;">使用“密集”数据（通过线性内插的离散值）存储方法进行优化的动画曲线数量。与“流”方法相比，此方法使用的内存少得多。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Stream</strong></td>
+	<td style="text-align:left;">使用“流”数据（这些值具有用于曲线插值的时间和切线数据）存储方法的动画曲线数量。与“密集”方法相比，此数据占用的内存多得多。</td>
+</tr>
+</tbody>
+</table>
+
+<p>如果导入动画剪辑时在<a href="class-AnimationClip.html">动画导入引用</a>中将“Anim Compression”设置为“Optimal”，Unity 将使用启发式算法来确定最好使用密集还是流方法来存储每条曲线的数据。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit"> 2018–04–25 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="comp-AnimationGroup.html"></a></span><div class="tip">动画参考</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-AnimatorController.html"></a></span><div class="tip">Animator Controller</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

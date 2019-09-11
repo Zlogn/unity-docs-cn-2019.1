@@ -1,0 +1,217 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Gradle 故障排除 - Unity Manual">
+<title>Gradle 故障排除 - Unity Manual</title>
+<meta name="description" content="如果刚从旧系统切换到 Gradle 并从新系统导出 Android 项目，可能会遇到构建错误，尤其是在使用其他 Android 库或者添加了自定义 AndroidManifest.xml 的情况下。">
+<meta property="og:description" content="如果刚从旧系统切换到 Gradle 并从新系统导出 Android 项目，可能会遇到构建错误，尤其是在使用其他 Android 库或者添加了自定义 AndroidManifest.xml 的情况下。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'android-gradle-troubleshooting';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/android-gradle-troubleshooting.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/android-gradle-troubleshooting.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/android-gradle-troubleshooting.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/android-gradle-troubleshooting.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/android-gradle-troubleshooting.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/android-gradle-troubleshooting.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/android-gradle-troubleshooting.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/android-gradle-troubleshooting.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/android-gradle-troubleshooting.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/android-gradle-troubleshooting.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/android-gradle-troubleshooting.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/android-gradle-troubleshooting.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/android-gradle-troubleshooting.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/android-gradle-troubleshooting.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/android-gradle-troubleshooting.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/android-gradle-troubleshooting.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/android-gradle-troubleshooting.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/android-gradle-troubleshooting.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/android-gradle-troubleshooting.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/android-gradle-troubleshooting.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/android-gradle-troubleshooting.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/android-gradle-troubleshooting.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/android-gradle-troubleshooting.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/android-gradle-troubleshooting.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
+<li><a href="android.html">Android</a></li>
+<li><a href="android-gradle-overview.html">Gradle for Android</a></li>
+<li>Gradle 故障排除</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="android-gradle-overview.html"></a></span><div class="tip">Gradle for Android</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="android-manifest.html"></a></span><div class="tip">Android 清单</div>
+</div>
+</div></div>
+<!-- Anchor tags on this page are linked to from within the Unity Editor -->
+
+<h1>Gradle 故障排除</h1>
+
+<p>如果刚从旧系统切换到 Gradle 并从新系统导出 Android 项目，可能会遇到构建错误，尤其是在使用其他 Android 库或者添加了自定义 <strong>AndroidManifest.xml</strong> 的情况下。</p>
+
+<p>Android Gradle 插件远比旧的 ADT/Ant 系统更挑剔。它不接受
+任何它认为有错的内容，无论是重复的符号、对不存在资源的引用
+还是与主应用程序设置相同属性的库项目。</p>
+
+<p>在大多数情况下，修复此类问题涉及编辑 <strong>AndroidManifest.xml</strong> 文件；要么是主文件，
+要么是项目使用的库中的文件。</p>
+
+<p>在不寻常的项目中，或者如果项目有下方故障排除部分未描述的问题，
+请将项目导出为 Gradle 项目（通过 __Build Settings__）并从命令行进行构建。从命令行进行构建可提供更详细的错误消息，并在应用更改时提供更短的周转时间。</p>
+
+<h2>特定问题</h2>
+
+<h3 id="resource-not-found">找不到资源</h3>
+
+<p>一个 <strong>AndroidManifest.xml</strong> 文件（主文件或库中的文件）引用不存在的
+资源。通常，该资源是由库设置的应用程序图标或标签字符串。如果
+已将主清单复制到库项目但未删除这些引用，则会发生这种情况。</p>
+
+<p>从其中一个 Android 清单（通常是库中的清单）中删除该属性。</p>
+
+<h3 id="duplicate-files-in-apk">APK 中出现重复文件</h3>
+
+<p>主应用程序和库项目之间或两个库项目之间存在
+文件名冲突。请注意，所有文件都会复制到同一 APK 包中。</p>
+
+<p>需要删除其中一个文件。</p>
+
+<h3 id="colliding-package-names">包名称冲突</h3>
+
+<p>库不能使用与主应用程序或任何其他库相同的 Java 包。</p>
+
+<p>Usually, you should change the package name of the library to something different. If the library
+contains a lot of code, it may be easier to change the main package name (from the <strong>Player</strong> settings).</p>
+
+<h3 id="colliding-attributes">属性冲突</h3>
+
+<p>A library can not freely override attributes from the main <code>AndroidManifest.xml</code> file. Often this error is caused by a library setting the application icon or label string, similar to the <strong>Resource not found</strong> problem above.</p>
+
+<p>从库中删除属性，或者将 <strong>tools:replace</strong> 属性添加到
+<strong>application</strong> 标签以指示应如何解决合并冲突。</p>
+<!-- Add empty lines so that web page can be positioned with linked header on top -->
+
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="android-gradle-overview.html"></a></span><div class="tip">Gradle for Android</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="android-manifest.html"></a></span><div class="tip">Android 清单</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

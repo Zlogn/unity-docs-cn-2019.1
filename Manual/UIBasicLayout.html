@@ -1,0 +1,271 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="基本布局 - Unity Manual">
+<title>基本布局 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/GUI_Rect_Tool_Button.png">
+<meta name="description" content="在本部分，我们将介绍如何相对于画布以及彼此定位 UI 元素。如果希望在阅读时进行自测，可使用菜单 GameObject &gt; UI &gt; Image 创建一个图像。">
+<meta property="og:description" content="在本部分，我们将介绍如何相对于画布以及彼此定位 UI 元素。如果希望在阅读时进行自测，可使用菜单 GameObject &gt; UI &gt; Image 创建一个图像。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UIBasicLayout';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UIBasicLayout.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UIBasicLayout.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UIBasicLayout.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UIBasicLayout.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UIBasicLayout.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UIBasicLayout.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UIBasicLayout.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UIBasicLayout.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UIBasicLayout.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UIBasicLayout.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UIBasicLayout.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UIBasicLayout.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UIBasicLayout.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UIBasicLayout.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UIBasicLayout.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UIBasicLayout.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UIBasicLayout.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UIBasicLayout.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UIBasicLayout.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UIBasicLayout.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UIBasicLayout.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UIBasicLayout.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UIBasicLayout.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UIBasicLayout.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UIToolkits.html">UI</a></li>
+<li><a href="UISystem.html">Unity UI: Unity User Interface</a></li>
+<li>基本布局</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UICanvas.html"></a></span><div class="tip">画布</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UIVisualComponents.html"></a></span><div class="tip">可视组件</div>
+</div>
+</div></div>
+<h1>基本布局</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>在本部分，我们将介绍如何相对于画布以及彼此定位 UI 元素。如果希望在阅读时进行自测，可使用菜单 <strong>GameObject &gt; UI &gt; Image</strong> 创建一个图像。</p>
+
+<h2>矩形工具</h2>
+
+<p>为了便于布局，每个 UI 元素都表示为矩形。可使用工具栏中的__矩形工具 (Rect Tool)__ 在 Scene 视图中操纵此矩形。矩形工具既可用于 Unity 的 2D 功能，也可用于 UI，实际上甚至还可用于 3D 对象。</p>
+
+<figure>
+<img src="../uploads/Main/GUI_Rect_Tool_Button.png" alt="在工具栏按钮中已选中矩形工具">
+<figcaption>在工具栏按钮中已选中矩形工具</figcaption>
+</figure>
+
+<p>使用矩形工具可对 UI 元素进行移动、大小调整和旋转。选择 UI 元素后，可通过单击矩形内的任意位置并拖动来对元素进行移动。通过单击边或角并拖动，可调整元素大小。若要旋转元素，可在稍微远离角点的位置悬停光标，直到鼠标光标看起来像旋转符号。然后，可单击并向任一方向拖动来进行旋转。</p>
+
+<p>与其他工具一样，矩形工具使用工具栏中设置的当前轴心模式和空间。使用 UI 时，通常最好将这些设置保持为 <strong>Pivot</strong> 和 <strong>Local</strong>。</p>
+
+<figure>
+<img src="../uploads/Main/GUI_Pivot_Local_Buttons.png" alt="工具栏按钮设置为 Pivot 和 Local">
+<figcaption>工具栏按钮设置为 Pivot 和 Local</figcaption>
+</figure>
+
+<h2>矩形变换</h2>
+
+<p>__矩形变换__是一种用于所有 UI 元素的新型变换组件，而不是常规的__变换__组件。</p>
+
+<figure>
+<img src="../uploads/Main/UI_RectTransform.png" alt="">
+</figure>
+
+<p>与常规变换一样，矩形变换具有位置、旋转和缩放，但还具有宽度和高度，用于指定矩形的尺寸。</p>
+
+<h3>调整大小与缩放</h3>
+
+<p>使用矩形工具更改对象的大小时，通常对于 2D 系统中的精灵以及对于 3D 对象，该工具将改变对象的局部_缩放_。但是，在带有矩形变换的对象上使用时，该工具改变的是宽度和高度，局部缩放将保持不变。此大小调整不会影响字体大小、切片图像上的边框等。</p>
+
+<h3>轴心</h3>
+
+<p>旋转、大小和缩放修改都是围绕轴心进行的，因此轴心的位置会影响旋转、大小调整或缩放的结果。工具栏 Pivot 按钮设置为轴心模式时，可在 Scene 视图中移动矩形变换的轴心。</p>
+
+<figure>
+<img src="../uploads/Main/UI_PivotRotate.png" alt="">
+</figure>
+
+<h3>锚点</h3>
+
+<p>矩形变换包含一种称为__锚点__的布局概念。锚点在 Scene 视图中显示为四个小三角形控制柄，锚点信息也显示在 Inspector 中。</p>
+
+<p>如果矩形变换的父项也是矩形变换，则子矩形变换还可通过各种方式锚定到父矩形变换。例如，子项可以锚定到父项的中心，或锚定到一个角。</p>
+
+<figure>
+<img src="../uploads/Main/UI_Anchored1.gif" alt="UI 元素锚定到父项的中心。元素与中心保持固定偏移。">
+<figcaption>UI 元素锚定到父项的中心。元素与中心保持固定偏移。</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/UI_Anchored2.gif" alt="UI 元素锚定到父项的右下角。元素与右下角保持固定偏移。">
+<figcaption>UI 元素锚定到父项的右下角。元素与右下角保持固定偏移。</figcaption>
+</figure>
+
+<p>通过锚定还可以让子项随父项的宽度或高度一起拉伸。矩形的每个角与其对应的锚点都有一个固定的偏移，即矩形的左上角与左上角锚点有一个固定的偏移，以此类推。因此，矩形的不同角可以锚定到父矩形中的不同点。</p>
+
+<figure>
+<img src="../uploads/Main/UI_Anchored3.gif" alt="UI 元素的左角锚定到父项的左下角并且右角锚定到右下角。元素的角与其各自的锚点保持固定的偏移。">
+<figcaption>UI 元素的左角锚定到父项的左下角并且右角锚定到右下角。元素的角与其各自的锚点保持固定的偏移。</figcaption>
+</figure>
+
+<p>锚点的位置以父矩形宽度和高度的一个比例（或百分比）定义。0.0 (0%) 对应于左边或下边，0.5 (50%) 对应于中间，1.0 (100%) 对应于右边或上边。但是，锚点不仅限于侧和中间；它们可以锚定到父矩形内的任何点。</p>
+
+<figure>
+<img src="../uploads/Main/UI_Anchored4.gif" alt="UI 元素的左角锚定到距离父矩形左边一定百分比的点，而右角锚点到距离父矩形右边一定百分比的点。">
+<figcaption>UI 元素的左角锚定到距离父矩形左边一定百分比的点，而右角锚点到距离父矩形右边一定百分比的点。</figcaption>
+</figure>
+
+<p>可以单独拖动每个锚点，如果这些锚点在一起，可以通过单击这些锚点的中间位置并进行拖动来一起拖动锚点。如果在拖动锚点时按住 <strong>Shift</strong> 键，矩形的相应角将与锚点一起移动。</p>
+
+<p>锚点控制柄的一种有用功能是可以自动贴靠到同级矩形的锚点，从而进行精确定位。</p>
+
+<h3>锚点预设</h3>
+
+<p>在 Inspector 中，可在矩形变换组件的左上角找到 <strong>Anchor Preset</strong> 按钮。单击该按钮将显示 Anchor Presets 下拉选单。从此选单中可以快速选择一些最常用的锚定选项。可将 UI 元素锚定到父项的边或中间，或者与父项大小一起拉伸。水平锚定和垂直锚定是独立的。</p>
+
+<figure>
+<img src="../uploads/Main/UI_AnchorPreset.png" alt="">
+</figure>
+
+<p>Anchor Presets 按钮将显示当前所选的预设选项（如果有）。如果水平轴或垂直轴上的锚点设置为与任何预设不同的位置，则会显示自定义选项。</p>
+
+<h3>Inspector 中的锚点和位置字段</h3>
+
+<p>通过单击 Anchors 扩展箭头可显示锚点数值字段（如果这些字段尚不可见）。<strong>Anchor Min</strong> 对应于 Scene 视图中的左下角锚点控制柄，而 <strong>Anchor Max</strong> 对应于右上角控制柄。</p>
+
+<p>根据锚点是在一起（产生固定的宽度和高度）还是分开（使得矩形与父矩形一起拉伸），矩形的位置字段显示不同。</p>
+
+<figure>
+<img src="../uploads/Main/UI_RectTransform.png" alt="">
+</figure>
+
+<p>当所有锚点控制柄在一起时，显示的字段为 Pos X、Pos Y、Width 和 Height。Pos X 和 Pos Y 值表示轴心相对于锚点的位置。</p>
+
+<p>当锚点分开时，字段可能部分或完全变为 Left、Right、Top 和 Bottom。这些字段定义了由锚点定义的矩形内的填充。如果锚点在水平方向分开，则使用 Left 和 Right 字段，如果在垂直方向分开，则使用 Top 和 Bottom 字段。</p>
+
+<p>请注意，更改锚点或轴心字段中的值通常会反向调整定位值，以使矩形保持原位。如果不需要此行为，请通过单击 Inspector 中的 <strong>R</strong> 按钮启用 <strong>Raw edit mode</strong>。这样，在更改锚点和轴心值时可以不改变任何其他值。因此可能会导致矩形在视觉上出现移动或大小调整，因为矩形的位置和大小取决于锚点和轴心值。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UICanvas.html"></a></span><div class="tip">画布</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UIVisualComponents.html"></a></span><div class="tip">可视组件</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

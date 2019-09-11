@@ -1,0 +1,357 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Physics - Unity Manual">
+<title>Physics - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/PhysicsSet.png">
+<meta name="description" content="Use the Physics settings (main menu: Edit &gt; Project Settings, then select the Physics category) to apply global settings for 3D physics.">
+<meta property="og:description" content="Use the Physics settings (main menu: Edit &gt; Project Settings, then select the Physics category) to apply global settings for 3D physics.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-PhysicsManager';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-PhysicsManager.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-PhysicsManager.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-PhysicsManager.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-PhysicsManager.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-PhysicsManager.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-PhysicsManager.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-PhysicsManager.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-PhysicsManager.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-PhysicsManager.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-PhysicsManager.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-PhysicsManager.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-PhysicsManager.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-PhysicsManager.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-PhysicsManager.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-PhysicsManager.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-PhysicsManager.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-PhysicsManager.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-PhysicsManager.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-PhysicsManager.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-PhysicsManager.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-PhysicsManager.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-PhysicsManager.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-PhysicsManager.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-PhysicsManager.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="EditorFeatures.html">编辑器功能</a></li>
+<li><a href="comp-ManagerGroup.html">Project Settings</a></li>
+<li>Physics</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-InputManager.html"></a></span><div class="tip">输入</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-Physics2DManager.html"></a></span><div class="tip">Physics 2D</div>
+</div>
+</div></div>
+<h1>Physics</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Use the <strong>Physics</strong> settings (main menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Physics</strong> category) to apply global settings for 3D physics. </p>
+
+<p><strong>Note:</strong> To manage global settings for 2D physics, use the <a href="class-Physics2DManager.html">Physics 2D</a> settings instead.</p>
+
+<figure>
+<img src="../uploads/Main/PhysicsSet.png" alt="3D Physics settings">
+<figcaption>3D Physics settings</figcaption>
+</figure>
+
+<p>These settings define limits on the accuracy of the physical simulation. Generally speaking, a more accurate simulation requires more processing overhead, so these settings offer a way to trade off accuracy against performance. For more information, see the <a href="PhysicsSection.html">Physics</a> section of the manual.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Gravity</strong></td>
+	<td style="text-align:left;">Use the x, y and z axes to set the amount of gravity applied to all Rigidbody components. For realistic gravity settings, apply a negative number to the y axis. Gravity is defined in world units per seconds squared. <br><strong>Note</strong>: If you increase the gravity, you might need to also increase the <strong>Default Solver Iterations</strong> value to maintain stable contacts.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Default Material</strong></td>
+	<td style="text-align:left;">Set a reference to the default Physics Material to use if none has been assigned to an individual Collider.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Bounce Threshold</strong></td>
+	<td style="text-align:left;">Set a velocity value. If two colliding objects have a relative velocity below this value, they do not bounce off each other. This value also reduces jitter, so it is not recommended to set it to a very low value.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Sleep Threshold</strong></td>
+	<td style="text-align:left;">Set a global energy threshold, below which a non-kinematic Rigidbody (that is, one that is not controlled by the physics system) may go to sleep. When a Rigidbody is sleeping, it is not updated every frame, making it less resource-intensive. If a Rigidbody’s kinetic energy divided by its mass is below this threshold, it is a candidate for sleeping.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Default Contact Offset</strong></td>
+	<td style="text-align:left;">Set the distance the collision detection system uses to generate collision contacts. The value must be positive, and if set too close to zero, it can cause jitter. This is set to 0.01 by default. Colliders only generate collision contacts if their distance is less than the sum of their contact offset values.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Default Solver Iterations</strong></td>
+	<td style="text-align:left;">Define how many solver processes Unity runs on every physics frame. Solvers are small physics engine tasks which determine a number of physics interactions, such as the movements of joints or managing contact between overlapping Rigidbody components. <br>This affects the quality of the solver output and it’s advisable to change the property in case non-default <code>Time.fixedDeltaTime</code> is used, or the configuration is extra demanding. Typically, it’s used to reduce the jitter resulting from joints or contacts.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Default Solver Velocity Iterations</strong></td>
+	<td style="text-align:left;">Set how many velocity processes a solver performs in each physics frame. The more processes the solver performs, the higher the accuracy of the resulting exit velocity after a Rigidbody bounce. If you experience problems with jointed Rigidbody components or Ragdolls moving too much after collisions, try increasing this value.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Queries Hit Backfaces</strong></td>
+	<td style="text-align:left;">Enable this option if you want physics queries (such as <code>Physics.Raycast</code>) to detect hits with the backface triangles of MeshColliders. By default, this setting is disabled.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Queries Hit Triggers</strong></td>
+	<td style="text-align:left;">Enable this option if you want physics hit tests (such as Raycasts, SphereCasts and SphereTests) to return a hit when they intersect with a Collider marked as a Trigger. Individual raycasts can override this behavior. By default, this setting is enabled.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Enable Adaptive Force</strong></td>
+	<td style="text-align:left;">Enable this option to enable the adaptive force. The adaptive force affects the way forces are transmitted through a pile or stack of objects, to give more realistic behaviour. By default, this setting is disabled.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Contacts Generation</strong></td>
+	<td style="text-align:left;">Choose a contact generation method.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Legacy Contacts Generation</em></td>
+	<td style="text-align:left;">Before Unity 5.5, Unity used a contacts generation method based on the separating axis theorem (<a href="http://www.dyn4j.org/2010/01/sat/">SAT</a>.<br><br>PCM is more efficient, but for older projects, you might find it easier to continue using SAT, to avoid needing to retweak physics slightly. PCM can result in a slightly different bounce, and fewer useless contacts end up in the contacts buffers (that is, the arrays you get in the <a href="../ScriptReference/Collision.html">Collision</a> instance passed to <code>OnCollisionEnter</code>, <code>OnCollisionStay</code>, and <code>OnCollisionExit</code>).<br><br><strong>Upgrade advice</strong>: To migrate a Project made with Unity 2018.2 or lower, you might need to update your scripts to work with the code that merges patches in the manifold, and selects contacts.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Persistent Contacts Manifold (PCM)</em></td>
+	<td style="text-align:left;">Generates fewer contacts every physics frame, and more contact data is shared across frames. The PCM contacts generation path is also more accurate, and usually produces better collision feedback in most of the cases. For more information, see <a href="https://docs.nvidia.com/gameworks/content/gameworkslibrary/physx/guide/Manual/AdvancedCollisionDetection.html#persistent-contact-manifold-pcm">Nvidia documentation on Persistent Contact Manifold</a>.<br>This is the default value.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Auto Simulation</strong></td>
+	<td style="text-align:left;">Enable this option to run the physics simulation automatically or allow explicit control over it.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Auto Sync Transforms</strong></td>
+	<td style="text-align:left;">Enable this option to automatically sync transform changes with the physics system whenever a Transform component changes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Contact Pairs Mode</strong></td>
+	<td style="text-align:left;">Choose the type of contact pair generation to use.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Default Contact Pairs</em></td>
+	<td style="text-align:left;">Receive collision and trigger events from all contact pairs except kinematic-kinematic and kinematic-static pairs.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Enable Kinematic Kinematic Pairs</em></td>
+	<td style="text-align:left;">Receive collision and trigger events from kinematic-kinematic contact pairs.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Enable Kinematic Static Pairs</em></td>
+	<td style="text-align:left;">Receive collision and trigger events from kinematic-static contact pairs.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Enable All Contact Pairs</em></td>
+	<td style="text-align:left;">Receive collision and trigger events from all contact pairs.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Broadphase Type</strong></td>
+	<td style="text-align:left;">Choose which <a href="https://docs.nvidia.com/gameworks/content/gameworkslibrary/physx/guide/3.3.4/Manual/RigidBodyCollision.html#broad-phase-algorithms">broad-phase algorithm</a> to use in the physics simulation. See NVIDIA’s documentation on <a href="https://docs.nvidia.com/gameworks/content/gameworkslibrary/physx/apireference/files/structPxBroadPhaseType.html">PhysX SDK</a> and <a href="https://docs.nvidia.com/gameworks/content/gameworkslibrary/physx/guide/Manual/RigidBodyCollision.html">Rigid Body Collision</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Sweep and Prune Broadphase<strong>|Use the sweep-and-prune broad phase collision method (that is, sorting objects along a single axis to rule out having to check pairs that are far apart).|
+||</strong>Multibox Pruning Broadphase</em></td>
+	<td style="text-align:left;">Multi-box pruning uses a grid, and each grid cell performs sweep-and-prune. This usually helps improve performance if, for example, there are many GameObjects in a flat world.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>World Bounds</strong></td>
+	<td style="text-align:left;">Define the 2D grid that encloses the world to prevent far away objects from affecting each other when using the <strong>Multibox Pruning Broadphase</strong> algorithm. <br>This option is only used when you set <strong>Broadphase Type</strong> to <strong>Multibox Pruning Broadphase</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>World Subdivisions</strong></td>
+	<td style="text-align:left;">The number of cells along the x and z axis in the 2D grid algorithm. <br>This option is only used when you set <strong>Broadphase Type</strong> to <strong>Multibox Pruning Broadphase</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Friction Type</strong></td>
+	<td style="text-align:left;">Choose the friction algorithm used for simulation.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Patch Friction Type</em></td>
+	<td style="text-align:left;">A basic strong friction algorithm which typically leads to the most stable results at low solver iteration counts. This method uses only up to four scalar solver constraints per pair of touching objects.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>One Directional Friction Type</em></td>
+	<td style="text-align:left;">A simplification of the Coulomb friction model, in which the friction for a given point of contact is applied in the alternating tangent directions of the contact’s normal. Reduces the number of iterations required for convergence but is not as accurate as the two-directional model.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Two Directional Friction Type</em></td>
+	<td style="text-align:left;">Like the one-directional model, but applies friction in both tangent directions simultaneously. This requires more solver iterations but is more accurate. More expensive than patch friction for scenarios with many contact points because it is applied at every contact point.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Enable Enhanced Determinism</strong></td>
+	<td style="text-align:left;">Simulation in the scene is consistent regardless the actors present, provided that the game inserts the actors in a deterministic order. This mode sacrifices some performance to ensure this additional determinism.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Enable Unified Heightmaps</strong></td>
+	<td style="text-align:left;">Enable this option to process Terrain collisions in the same way as Mesh collisions.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Layer Collision Matrix</strong></td>
+	<td style="text-align:left;">Define how the <a href="LayerBasedCollision.html">layer-based collision</a> detection system behaves. Select which layers on the Collision Matrix interact with the other layers by checking them.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"><strong>Cloth Inter-Collision</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Distance</strong></td>
+	<td style="text-align:left;">Define the diameter of a sphere around each <a href="class-Cloth.html#intercollision">intercolliding Cloth</a> particle. Unity ensures that these spheres do not overlap during simulations. Distance should be smaller than the smallest distance between two particles in the configuration. If the distance is larger, cloth collision may violate some distance constraints and result in jittering.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Stiffness</strong></td>
+	<td style="text-align:left;">How strong the separating impulse between <a href="class-Cloth.html#intercollision">intercolliding Cloth</a> particles should be. The cloth solver calculates this and it should be enough to keep the particles separated.</td>
+</tr>
+</tbody>
+</table>
+
+<p><br> </p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2018–10–12 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Settings added in 5.5: Default Solver Iterations, Default Solver Velocity Iterations, Queries Hit Backfaces, Enable PCM</span></p></li>
+<li><p><span class="page-history">Physics Manager settings documentation updated in 2017.4</span></p></li>
+<li><p><span class="page-history">Friction Type, Enhanced Determinism and Unified Heightmaps physics settings added in <a href="https://docs.unity3d.com/2018.3/Documentation/Manual/30_search.html?q=newin20183">2018.3</a> <span class="search-words">NewIn20183</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-InputManager.html"></a></span><div class="tip">输入</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-Physics2DManager.html"></a></span><div class="tip">Physics 2D</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

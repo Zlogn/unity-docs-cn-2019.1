@@ -1,0 +1,284 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="WMR 输入和交互概念 - Unity Manual">
+<title>WMR 输入和交互概念 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/Gaze.jpg">
+<meta name="description" content="所有 Windows Mixed Reality 设备都使用特定形式的交互来从用户那里获取输入。其中一些形式的输入特定于具体 Windows Mixed Reality 设备，例如 HoloLens 或沉浸式头盔。">
+<meta property="og:description" content="所有 Windows Mixed Reality 设备都使用特定形式的交互来从用户那里获取输入。其中一些形式的输入特定于具体 Windows Mixed Reality 设备，例如 HoloLens 或沉浸式头盔。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'wmr_input_types';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/wmr_input_types.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/wmr_input_types.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/wmr_input_types.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/wmr_input_types.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/wmr_input_types.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/wmr_input_types.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/wmr_input_types.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/wmr_input_types.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/wmr_input_types.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/wmr_input_types.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/wmr_input_types.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/wmr_input_types.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/wmr_input_types.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/wmr_input_types.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/wmr_input_types.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/wmr_input_types.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/wmr_input_types.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/wmr_input_types.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/wmr_input_types.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/wmr_input_types.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/wmr_input_types.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/wmr_input_types.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/wmr_input_types.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/wmr_input_types.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="XR.html">XR</a></li>
+<li><a href="XR-SDK_overviews.html">XR SDK</a></li>
+<li><a href="wmr_sdk_overview.html">Windows Mixed Reality</a></li>
+<li>WMR 输入和交互概念</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="wmr_quick_start.html"></a></span><div class="tip">*WMR* quick start guide</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="wmr_testing.html"></a></span><div class="tip">开发期间的 WMR 测试</div>
+</div>
+</div></div>
+<h1>WMR 输入和交互概念</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>所有 Windows Mixed Reality 设备都使用特定形式的交互来从用户那里获取输入。其中一些形式的输入特定于具体 Windows Mixed Reality 设备，例如 HoloLens 或沉浸式头盔。</p>
+
+<p>沉浸式头盔使用各种输入，包括空间控制器。HoloLens 仅限于使用 3 种输入形式，除非应用程序除了头盔之外还需要额外的硬件。</p>
+
+<p>所有的输入形式均可与 Windows Mixed Reality 沉浸式头盔结合使用。在 VR 中可使用注视，在使用控制器上的选择按钮时将触发手势，而最终用户将麦克风连接到 PC 时可使用语音。</p>
+
+<p>HoloLens 上的输入与其他平台不同，因为其主要交互方式为：</p>
+
+<p>1.<strong>注视__：通过跟踪用户在世界中的注视位置来控制应用程序。
+2.</strong>语音__：简短的口头命令和更长的自由形式听写，可用于发出命令或触发操作。
+3.__手势__：手势信号或系统中的控制器输入触发命令。</p>
+
+<h2>注视（所有设备）</h2>
+
+<p>注视是一种跟踪用户注视位置的输入机制：</p>
+
+<figure>
+<img src="../uploads/Main/Gaze.jpg" alt="">
+</figure>
+
+<p>在 HoloLens 上，这种机制具有足够的准确性，可让用户选择世界中的游戏对象。此外，还可用于对场景中的特定游戏对象而非每个游戏对象发出命令。</p>
+
+<figure>
+<img src="../uploads/Main/Gaze_indicator.jpg" alt="使用注视来定位游戏对象的示例（白色圆圈表示注视标记）">
+<figcaption>使用注视来定位游戏对象的示例（白色圆圈表示注视标记）</figcaption>
+</figure>
+
+<p>有关更多信息，请参阅 Microsoft 的<a href="https://dev.windows.com/en-us/holographic/gaze_indicator">注视标记 (Gaze indicator)</a> 和<a href="https://developer.microsoft.com/en-us/windows/mixed-reality/gaze_targeting">注视定位 (Gaze targeting)</a> 文档。</p>
+
+<h2>语音（所有设备）</h2>
+
+<figure>
+<img src="../uploads/Main/Voice_input.png" alt="">
+</figure>
+
+<p>Windows 10 API 在 HoloLens 和沉浸式设备上提供语音输入。Unity 支持三种输入形式：</p>
+
+<ul>
+<li><p>__关键字__：用于生成事件的简单命令或短语（在代码中设置）。这种情况下可快速将语音命令添加到应用程序（前提是您不需要对命令进行本地化）。<a href="../ScriptReference/Windows.Speech.KeywordRecognizer.html">KeywordRecognizer</a> API 提供了这一功能。</p></li>
+<li><p>__语法__：具有语义含义的命令表。可通过 XML 语法文件 (.grxml) 来配置语法，并在需要时对该表进行本地化。有关此文件格式的更多信息，请参阅 Microsoft 关于<a href="https://msdn.microsoft.com/en-us/library/ms873278.aspx">创建语法文件 (Creating Grammar Files)</a> 的文档。<a href="../ScriptReference/Windows.Speech.GrammarRecognizer.html">GrammarRecognizer</a> API 提供了这一功能。</p></li>
+<li><p>__听写__：一种更自由的文本到语音转换系统，可将较长的语音输入转换为文本。为了延长电池续航时间，HoloLens 上的听写识别仅在短时间内有效。该功能要求具备有效的互联网连接。<a href="../ScriptReference/Windows.Speech.DictationRecognizer.html">DictationRecognizer</a> API 提供了这一功能。</p></li>
+</ul>
+
+<p>HoloLens 头盔具有内置麦克风，无需额外硬件即可进行语音输入。对于使用沉浸式头盔进行语音输入的应用，用户需要将外部麦克风连接到其 PC。</p>
+
+<p>有关语音输入的更多信息，请参阅 Microsoft 的<a href="https://dev.windows.com/en-us/holographic/Voice_design">语音设计 (Voice design)</a> 文档。</p>
+
+<h2>手势（所有设备）</h2>
+
+<figure>
+<img src="../uploads/Main/Gestures.png" alt="">
+</figure>
+
+<p>手势是由系统解释的手势信号或来自空间控制器的控制器信号。HoloLens 和沉浸式设备都支持手势。沉浸式设备需要空间控制器来启动手势，而 HoloLens 手势需要手部移动。可以使用手势触发应用程序中的特定命令。</p>
+
+<p>Windows Mixed Reality 提供了几种可在应用程序中使用的内置手势，以及用于识别自定义手势的通用 API。内置手势和自定义手势（通过 API 添加）在 Unity 中都可以使用。</p>
+
+<p>有关更多信息，请参阅 Microsoft 的<a href="https://developer.microsoft.com/en-us/windows/mixed-reality/gestures">手势 (gestures)</a> 文档。</p>
+
+<h2>焦点（所有设备）</h2>
+
+<p>Windows Mixed Reality 使用一个称为晚期重投影 (Late Stage Reprojection, LSR) 的过程来补偿用户头部在帧渲染时与显示器上出现时两个时间点之间的移动。为了补偿这种延迟，LSR 根据最新的头部跟踪数据来修改渲染的图像，然后在显示器上显示图像。</p>
+
+<p>HoloLens 使用稳定平面进行重投影（请参阅有关<a href="https://developer.microsoft.com/en-us/windows/mixed-reality/hologram_stability#stabilization_plane">基于平面的重投影</a>的 Microsoft 文档）。此平面是空间中的平面，表示用户可能聚焦的区域。此稳定平面具有默认值，但应用程序也可以使用 <a href="../ScriptReference/XR.WSA.HolographicSettings.SetFocusPointForFrame.html">SetFocusPoint</a> API 来显式设置此平面的位置、法线和速度。对象在与此平面的交点处看起来最稳定。沉浸式头盔也支持这种方法，但对于这些设备，有一种更有效的重投影形式，称为<a href="https://developer.microsoft.com/en-us/windows/mixed-reality/hologram_stability#stabilization_plane">每像素深度重投影</a>。</p>
+
+<figure>
+<img src="../uploads/Main/stabilisation_plane.jpg" alt="3D 对象的稳定平面">
+<figcaption>3D 对象的稳定平面</figcaption>
+</figure>
+
+<p>使用沉浸式头盔的桌面端应用程序可以启用每像素深度重投影，从而提供更高的质量，而无需应用程序执行显式工作。要启用每像素深度重投影，请打开 Windows Mixed Reality 的 Player Settings，选择 <strong>XR Settings &gt; Virtual Reality SDKs__，然后选中 </strong>Enable Depth Buffer Sharing__。</p>
+
+<figure>
+<img src="../uploads/Main/perpixel_reprojection.png" alt="在使用沉浸式头盔的桌面端硬件上启用每像素重投影">
+<figcaption>在使用沉浸式头盔的桌面端硬件上启用每像素重投影</figcaption>
+</figure>
+
+<p>启用 <strong>Enable Depth Buffer Sharing</strong> 后，请确保应用程序不显式调用 <code>SetFocusPoint</code> 方法，否则会将<a href="https://developer.microsoft.com/en-us/windows/mixed-reality/hologram_stability#stabilization_plane">每像素深度重投影</a>覆盖为<a href="https://developer.microsoft.com/en-us/windows/mixed-reality/hologram_stability#stabilization_plane">基于平面的重投影</a>。</p>
+
+<p>除非已将设备的操作系统更新为 Windows 10 Redstone 4 (RS4)，否则 HoloLens 上的 <strong>Enable Depth Buffer Sharing</strong> 没有任何好处。如果设备运行的是 RS4 系统，则会根据深度缓冲区中找到的值范围来自动确定稳定平面。这种情况下仍然会使用稳定平面进行重投影，但应用程序不需要显式调用 <code>SetFocusPoint</code>。</p>
+
+<p>有关 HoloLens 如何实现稳定全息图的更多信息，请参阅 Microsoft 关于<a href="https://dev.windows.com/en-us/holographic/Hologram_stability.html#Stabilization_Plane">全息图稳定性 (hologram stability)</a> 的文档。</p>
+
+<h2>锚点（仅限 HoloLens）</h2>
+
+<p>锚点组件是虚拟世界与现实世界交互的一种方式。锚点作为一种特殊组件，会覆盖其所附加到的游戏对象的变换组件的位置和方向。</p>
+
+<h3>世界锚点 (WorldAnchor)</h3>
+
+<p>WorldAnchor 表示设备对物理世界中具体点的理解与包含 WorldAnchor 组件的游戏对象之间的联系。添加 WorldAnchor 组件后的游戏对象将保持锁定在现实世界中的某个位置，但随着设备对锚点位置的理解变得更加精确，可能会在不同帧之间移动 Unity 坐标。</p>
+
+<p>WorldAnchor 的一些常见用途包括：</p>
+
+<ul>
+<li><p>将全息游戏板锁定在桌子上。</p></li>
+<li><p>将视频窗口锁定到墙上。</p></li>
+</ul>
+
+<p>只要有想要固定到物理位置的游戏对象或游戏对象组，就可以使用 WorldAnchor。</p>
+
+<p>WorldAnchor 会覆盖其父游戏对象的变换组件，因此对变换组件的任何直接操作都将丢失。同样，带 WorldAnchor 组件的游戏对象不应包含带动态物理系统的刚体组件。这些刚体组件可能更耗费资源，而且游戏性能将随着 WorldAnchor 的距离变远而降低。</p>
+
+<p>__注意__：仅使用少量 WorldAnchor 以便最大限度减少性能问题。例如，放置在桌子上的游戏板表面仅需要用于游戏板的单个锚点。在这种情况下，桌子的子游戏对象不需要自己的 WorldAnchor。</p>
+
+<p>有关更多信息和最佳实践，请参阅 Microsoft 的<a href="https://developer.microsoft.com/en-us/windows/mixed-reality/spatial_anchors">空间锚点 (spatial anchors)</a> 文档。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–03–27 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 2017.3 版中添加了关于 XR API 变更的新内容</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="wmr_quick_start.html"></a></span><div class="tip">*WMR* quick start guide</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="wmr_testing.html"></a></span><div class="tip">开发期间的 WMR 测试</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

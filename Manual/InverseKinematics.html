@@ -1,0 +1,276 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="反向动力学 - Unity Manual">
+<title>反向动力学 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/MecanimIKGrabbing.jpg">
+<meta name="description" content="大多数动画是通过将骨架中的关节角度旋转到预定值来生成的。子关节的位置根据父关节的旋转而改变，因此可从父关节包含的各个关节的角度和相对位置来确定关节链的终点。这种构建骨架的方法被称为正向动力学。">
+<meta property="og:description" content="大多数动画是通过将骨架中的关节角度旋转到预定值来生成的。子关节的位置根据父关节的旋转而改变，因此可从父关节包含的各个关节的角度和相对位置来确定关节链的终点。这种构建骨架的方法被称为正向动力学。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'InverseKinematics';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/InverseKinematics.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/InverseKinematics.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/InverseKinematics.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/InverseKinematics.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/InverseKinematics.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/InverseKinematics.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/InverseKinematics.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/InverseKinematics.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/InverseKinematics.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/InverseKinematics.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/InverseKinematics.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/InverseKinematics.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/InverseKinematics.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/InverseKinematics.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/InverseKinematics.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/InverseKinematics.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/InverseKinematics.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/InverseKinematics.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/InverseKinematics.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/InverseKinematics.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/InverseKinematics.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/InverseKinematics.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/InverseKinematics.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/InverseKinematics.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="AnimationSection.html">动画</a></li>
+<li><a href="AnimatorControllers.html">Animator Controllers</a></li>
+<li><a href="AnimationStateMachines.html">动画状态机</a></li>
+<li>反向动力学</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="TargetMatching.html"></a></span><div class="tip">目标匹配</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="RootMotion.html"></a></span><div class="tip">根运动 - 工作原理</div>
+</div>
+</div></div>
+<h1>反向动力学</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>大多数动画是通过将骨架中的关节角度旋转到预定值来生成的。子关节的位置根据父关节的旋转而改变，因此可从父关节包含的各个关节的角度和相对位置来确定关节链的终点。这种构建骨架的方法被称为<strong>正向动力学</strong>。</p>
+
+<p>然而，从相反视角看待构建关节的任务通常很有用：在空间中选择一个位置后，向后找到一种有效的关节定位方法，使终点落在该位置。如果您希望角色触摸位于用户选定位置的对象或让角色的双脚牢牢扎入不平坦的表面，这种方法可能很有用。此方法称为__反向动力学__ (IK)，可在 Mecanim 中用于_已正确配置的任何人形Avatar骨骼。</p>
+
+<figure>
+<img src="../uploads/Main/MecanimIKGrabbing.jpg" alt="">
+</figure>
+
+<p>要为角色设置 IK，通常要在场景周围放置与角色互动的对象，然后通过脚本（尤其是，诸如
+<a href="../ScriptReference/Animator.SetIKPositionWeight.html">SetIKPositionWeight</a>、
+<a href="../ScriptReference/Animator.SetIKRotationWeight.html">SetIKRotationWeight</a>、
+<a href="../ScriptReference/Animator.SetIKPosition.html">SetIKPosition</a>、
+<a href="../ScriptReference/Animator.SetIKRotation.html">SetIKRotation</a>、
+<a href="../ScriptReference/Animator.SetLookAtPosition.html">SetLookAtPosition</a>、
+<a href="../ScriptReference/Animator-bodyPosition.html">bodyPosition</a>、
+<a href="../ScriptReference/Animator-bodyRotation.html">bodyRotation</a>之类的 Animator 函数）来设置 IK</p>
+
+<p>在上图中，我们展示了一个抓住圆柱形物体的角色。我们如何将其实现？</p>
+
+<p>我们从拥有有效的 Avatar角色开始。</p>
+
+<p>下一步创建 Animator Controller，使其包含该角色的至少一个动画。然后，在 Animator 窗口的 Layers 面板中，单击层的齿轮设置图标，并选中弹出框中的 IK Pass 复选框。</p>
+
+<figure>
+<img src="../uploads/Main/AnimatorControllerToolSettingsIKPass.png" alt="设置默认层的 IK Pass 复选框">
+<figcaption>设置默认层的 IK Pass 复选框</figcaption>
+</figure>
+
+<p>确保已将 Animator Controller 分配给角色的 Animator 组件 (Animator Component)：
+<img src="../uploads/Main/AnimatorInspectorForIK.png" alt=""></p>
+
+<p>接下来，为其附加一个实际处理 IK 的脚本，将此脚本命名为 <strong>IKControl</strong>。此脚本为角色的右手设置 IK 目标，并设置角色的观察位置以使其观看所持物体：</p>
+
+<pre><code>using UnityEngine;
+using System;
+using System.Collections;
+
+[RequireComponent(typeof(Animator))] 
+
+public class IKControl : MonoBehaviour {
+    
+    protected Animator animator;
+    
+    public bool ikActive = false;
+    public Transform rightHandObj = null;
+    public Transform lookObj = null;
+
+    void Start () 
+    {
+        animator = GetComponent&lt;Animator&gt;();
+    }
+    
+    // 用于计算 IK 的回调
+    void OnAnimatorIK()
+    {
+        if(animator) {
+            
+            // 如果 IK 处于活动状态，请将位置和旋转直接设置为目标。
+            if(ikActive) {
+
+                // 设置观察目标位置（如果已分配）
+                if(lookObj != null) {
+                    animator.SetLookAtWeight(1);
+                    animator.SetLookAtPosition(lookObj.position);
+                }    
+
+                // 设置右手目标位置和旋转（如果已分配）
+                if(rightHandObj != null) {
+                    animator.SetIKPositionWeight(AvatarIKGoal.RightHand,1);
+                    animator.SetIKRotationWeight(AvatarIKGoal.RightHand,1);  
+                    animator.SetIKPosition(AvatarIKGoal.RightHand,rightHandObj.position);
+                    animator.SetIKRotation(AvatarIKGoal.RightHand,rightHandObj.rotation);
+                }        
+                
+            }
+            
+            // 如果 IK 未处于活动状态，请将手和头部的位置和旋转设置回原始位置
+            else {          
+                animator.SetIKPositionWeight(AvatarIKGoal.RightHand,0);
+                animator.SetIKRotationWeight(AvatarIKGoal.RightHand,0); 
+                animator.SetLookAtWeight(0);
+            }
+        }
+    }    
+}
+
+
+</code></pre>
+
+<p>因为我们不打算让角色的手伸到物体内部中心（圆柱的轴心点），所以放置一个空的子对象（在此情况下，命名为“Cylinder Grab Handle”（圆柱抓握把手）），确保手应该放在圆柱上，并将其相应旋转。然后，这只手瞄准此子对象。</p>
+
+<figure>
+<img src="../uploads/Main/MecanimIKGrabHandle.jpg" alt="An empty Game Object acts as the IK target, so the hand will sit correctly on the visible Cylinder object">
+<figcaption>An empty Game Object acts as the IK target, so the hand will sit correctly on the visible Cylinder object</figcaption>
+</figure>
+
+<p>然后，应将此“抓握把手”游戏对象分配为 IKControl 脚本的“Right Hand Obj”属性</p>
+
+<p>在此示例中，我们把观察目标设置为圆柱本身，因此即使把手靠近底部，角色也会直接看向物体的中心。</p>
+
+<figure>
+<img src="../uploads/Main/MecanimIKSetupInspector.png" alt="">
+</figure>
+
+<p>进入播放模式，然后应该会看到 IK 变为现实。单击 <strong>IKActive</strong> 复选框时，观察角色抓取和放开物体，并尝试在播放模式中四处移动圆柱以观察手臂和手跟随物体移动的情况。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="TargetMatching.html"></a></span><div class="tip">目标匹配</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="RootMotion.html"></a></span><div class="tip">根运动 - 工作原理</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

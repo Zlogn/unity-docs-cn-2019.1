@@ -1,0 +1,434 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Scriptable Render Pipeline (SRP) Batcher - Unity Manual">
+<title>Scriptable Render Pipeline (SRP) Batcher - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/SRPBatcher.png">
+<meta name="description" content="Note: This is a preview feature and is subject to change. Any Scenes
+ that use this feature may need updating in a future release. Do not rely on this feature for full-scale production until it is officially released.">
+<meta property="og:description" content="Note: This is a preview feature and is subject to change. Any Scenes
+ that use this feature may need updating in a future release. Do not rely on this feature for full-scale production until it is officially released.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'SRPBatcher';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SRPBatcher.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SRPBatcher.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SRPBatcher.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SRPBatcher.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SRPBatcher.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SRPBatcher.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SRPBatcher.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SRPBatcher.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SRPBatcher.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SRPBatcher.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/SRPBatcher.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/SRPBatcher.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/SRPBatcher.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/SRPBatcher.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SRPBatcher.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SRPBatcher.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SRPBatcher.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SRPBatcher.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SRPBatcher.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SRPBatcher.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SRPBatcher.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SRPBatcher.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SRPBatcher.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SRPBatcher.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="ScriptableRenderPipeline.html">Scriptable Render Pipeline</a></li>
+<li>Scriptable Render Pipeline (SRP) Batcher</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ScriptableRenderPipeline.html"></a></span><div class="tip">Scriptable Render Pipeline</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PhysicsSection.html"></a></span><div class="tip">物理系统</div>
+</div>
+</div></div>
+<h1>Scriptable Render Pipeline (SRP) Batcher</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><strong>Note:</strong> This is a preview feature and is subject to change. Any Scenes
+ that use this feature may need updating in a future release. Do not rely on this feature for full-scale production until it is officially released.</p>
+
+<p>The SRP Batcher is a rendering loop that speeds up your CPU rendering in Scenes with many Materials that use the same Shader Variant. </p>
+
+<figure>
+<img src="../uploads/Main/SRPBatcher.png" alt="The Scriptable Render Pipeline (SRP) Batcher speeds up CPU rendering in Scenes with many Materials that use the same Shader Variant.">
+<figcaption>The Scriptable Render Pipeline (SRP) Batcher speeds up CPU rendering in Scenes with many Materials that use the same Shader Variant.</figcaption>
+</figure>
+
+<h2>Enable SRP Batcher</h2>
+
+<p>To use the SRP Batcher, your Project must use a <a href="ScriptableRenderPipeline.html">Scriptable Render Pipeline</a> project. This can either be:</p>
+
+<ul>
+<li><a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.lightweight@latest/index.html?preview=1">Lightweight Render Pipeline (LWRP)</a></li>
+<li>
+<a href="https://github.com/Unity-Technologies/ScriptableRenderPipeline/wiki/High-Definition-Render-Pipeline-overview">High Definition Render Pipeline (HDRP)</a>.</li>
+<li>A <a href="ScriptableRenderPipeline.html">custom SRP</a>.</li>
+</ul>
+
+<p>To activate the SRP Batcher in either LWRP or HDRP: </p>
+
+<ol>
+<li>In the Hierarchy window, select the <a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.lightweight@latest/index.html?subfolder=/manual/lwrp-asset.html">LWRP Asset</a> or <a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@latest/index.html?subfolder=/manual/HDRP-Asset.html">HDRP Asset</a>.</li>
+<li>In the Inspector for the Asset, go to the <strong>Advanced</strong> section, and enable the <strong>SRP Batcher</strong> checkbox.</li>
+</ol>
+
+<figure>
+<img src="../uploads/Main/SRPBatcher_Asset.png" alt="You can de-activate the SRP Batcher in the Asset for LWRP or HDRP, respectively. The SRP Batcher is enabled by default.">
+<figcaption>You can de-activate the SRP Batcher in the Asset for LWRP or HDRP, respectively. The SRP Batcher is enabled by default.</figcaption>
+</figure>
+
+<p>To enable or disable the SRP Batcher at run time, toggle this global variable in your C# code:</p>
+
+<pre><code>GraphicsSettings.useScriptableRenderPipelineBatching = true;`
+</code></pre>
+
+<h2>支持的平台</h2>
+
+<p>The SRP Batcher works on almost all platforms. This table shows supported platforms and the minimal Unity version required. </p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:center;">
+</colgroup>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Platform</strong></td>
+	<td style="text-align:center;"><strong>Minimum Unity version required</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Windows DirectX 11</td>
+	<td style="text-align:center;">2018.2</td>
+</tr>
+<tr>
+	<td style="text-align:left;">PlayStation 4</td>
+	<td style="text-align:center;">2018.2</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Vulkan</td>
+	<td style="text-align:center;">2018.3</td>
+</tr>
+<tr>
+	<td style="text-align:left;">OSX Metal</td>
+	<td style="text-align:center;">2018.3</td>
+</tr>
+<tr>
+	<td style="text-align:left;">iOS Metal</td>
+	<td style="text-align:center;">2018.3</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Nintendo Switch</td>
+	<td style="text-align:center;">2018.3</td>
+</tr>
+<tr>
+	<td style="text-align:left;">OpenGL 4.2 and higher</td>
+	<td style="text-align:center;">2019.1</td>
+</tr>
+<tr>
+	<td style="text-align:left;">OpenGL ES 3.1 and higher</td>
+	<td style="text-align:center;">2019.1</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Xbox One DirectX 12</td>
+	<td style="text-align:center;">2019.1</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Windows DirectX 12</td>
+	<td style="text-align:center;">2019.1</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Note:</strong> For XR, you can only use the SRP Batcher with the <a href="../ScriptReference/XR.XRSettings.StereoRenderingMode.SinglePassInstanced.html"><code>SinglePassInstanced</code></a> mode. </p>
+
+<h2>How the SRP Batcher works</h2>
+
+<p>In Unity, you can modify the properties of any Material at any time during a frame. However, this has some drawbacks. For example, there is a lot of work to do when a DrawCall is using a new Material. So the more Materials you have in a Scene, the more CPU Unity has to use to set up GPU data. The traditional way to deal with this is to reduce the number of DrawCalls to optimize the CPU rendering cost, because Unity has to set up a lot of things before issuing the DrawCall. And the real CPU cost comes from that setup, not from the GPU DrawCall itself, which is just some bytes that Unity needs to push to the GPU command buffer. </p>
+
+<p>The SRP Batcher reduces the GPU setup between DrawCalls by batching a sequence of <code>Bind</code> and <code>Draw</code> GPU commands. </p>
+
+<figure>
+<img src="../uploads/Main/SROShaderPass.png" alt="The batching of Bind and Draw commands reduces the GPU setup between draw calls.">
+<figcaption>The batching of Bind and Draw commands reduces the GPU setup between draw calls.</figcaption>
+</figure>
+
+<p>To get the maximum performance for your rendering, these batches must be as large as possible. To achieve this, you can use as many different Materials with the same Shader as you want, but you must use as few Shader Variants as possible. </p>
+
+<p>During the inner render loop, when Unity detects a new Material, the CPU collects all properties and sets up different constant buffers in GPU memory. The number of GPU buffers depends on how the Shader declares its CBUFFERs. </p>
+
+<p>To speed up the general case where a Scene uses a lot of different Materials, but very few Shader variants, the SRP natively integrates paradigms such as GPU data persistency. </p>
+
+<p>The SRP Batcher is a low-level render loop that makes Material data persist in GPU memory. If the Material content does not change, the SRP Batcher does not need to set up and upload the buffer to the GPU. Instead, the SRP Batcher uses a dedicated code path to quickly update the Unity Engine properties in a large GPU buffer, like this:</p>
+
+<figure>
+<img src="../uploads/Main/SRP_Batcher_loop.png" alt="This is the SRP Batcher rendering workflow. The SRP Batcher uses a dedicated code path to quickly update the Unity Engine properties in a large GPU buffer.">
+<figcaption>This is the SRP Batcher rendering workflow. The SRP Batcher uses a dedicated code path to quickly update the Unity Engine properties in a large GPU buffer.</figcaption>
+</figure>
+
+<p>Here, the CPU only handles the Unity Engine properties, labelled <em>Per Object large buffer</em> in the above diagram. All Materials have persistent CBUFFERs located in GPU memory, which are ready to use. This speeds up rendering because:
+All Material content now persists in GPU memory.
+Dedicated code manages a large per-object GPU CBUFFER for all per-object properties.</p>
+
+<h3>SRP Batcher compatibility</h3>
+
+<p>For the SRP Batcher code path to render an object:</p>
+
+<ul>
+<li>The object must be in a mesh, not a particle or a skinned mesh.</li>
+<li>The Shader must be compatible with the SRP Batcher. All Lit and Unlit Shaders in HDRP and LWRP fit this requirement (except for the Particles versions of these Shaders).</li>
+</ul>
+
+<p>For a Shader to be compatible with the SRP Batcher:</p>
+
+<ul>
+<li>You must declare all built-in engine properties in a single CBUFFER named “UnityPerDraw”. For example, <code>unity_ObjectToWorld</code>, or <code>unity_SHAr</code>.</li>
+<li>You must declare all Material properties in a single CBUFFER named <code>UnityPerMaterial</code>.</li>
+</ul>
+
+<p>You can see the compatibility status of a Shader in the Inspector panel. </p>
+
+<figure>
+<img src="../uploads/Main/SRP_batcher_shader_compatibility.png" alt="You can check the compatibility of your Shaders in the INspector panel for the specific Shader.">
+<figcaption>You can check the compatibility of your Shaders in the INspector panel for the specific Shader.</figcaption>
+</figure>
+
+<p>In any given Scene, some objects compatible with the SRP Batcher, and some are not. Even when using non-compatible objects, Unity renders the Scene properly. This is because compatible objects use the SRP Batcher code path, and others use the standard SRP code path. </p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Using the SRP Batcher code path</th>
+	<th style="text-align:left;">Not using the SRP Batcher code path</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">* Mesh using an SRP Batcher compatible Shader</td>
+	<td style="text-align:left;">* Anything that is not a mesh (including skinned meshes<br>* Any mesh that uses a non-compatible Shader<br>* Renderer using the Material Property Block</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Profiling with the SRP Batcher</h3>
+
+<p>To measure the speed increase in your Scene when using the SRP Batcher, add the <a href="https://github.com/Unity-Technologies/SRPBatcherBenchmark.git"><code>SRPBatcherProfiler.cs</code></a> C# script from the SRP Batcher template to your Scene. When this script is running:
+Toggle the overlay display using the F8 key.
+You can also turn SRP Batcher on and off during play using the F9 key. </p>
+
+<p>The overlay looks like this: </p>
+
+<figure>
+<img src="../uploads/Main/SRP_Batcher_overlay.png" alt="In the SRP Batcher overlay, you can find detailed information about whats happening in the SRP Batcher.">
+<figcaption>In the SRP Batcher overlay, you can find detailed information about what’s happening in the SRP Batcher.</figcaption>
+</figure>
+
+<p>The time measurements are in milliseconds (ms), and show how much time the CPU spent in Unity SRP rendering loops. </p>
+
+<p><strong>Note:</strong> Time here equals cumulated time of all <code>RenderLoop.Draw</code> and <code>Shadows.Draw</code> markers that are called during a frame, regardless of the thread owner. For example, if you see 1.31ms SRP Batcher code path, maybe the draw calls have spent 0.31ms on the main thread, and 1ms is spread over all graphic jobs.</p>
+
+<h4>Overlay information</h4>
+
+<p>This table describes each setting in the SRP Batcher overlay that is visible in Play mode:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2">Name in overlay</th>
+	<th style="text-align:left;">描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2">
+<strong>(SRP batcher ON)</strong> / <strong>(SRP batcher OFF)</strong>
+</td>
+	<td style="text-align:left;">Indicates whether the current SRP Batcher is enabled or not. To toggle the SRP Batcher on or off, press F9.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>CPU Rendering time</strong></td>
+	<td style="text-align:left;">Indicates the total, cumulative amount of time that SRP loops have spent in the CPU, regardless of which multi-thread mode is being used, for example single, client/worker or graphics jobs. This is where you can see the effects of the SRP Batcher the most. To see the optimization of the batcher, try toggling it on and off to see the difference in CPU usage. In this example, the total is 2.11 milliseconds.<br><strong>(incl RT idle):</strong> Indicates the idle time that the SRP has spent in the render thread. This could mean that the app was in a client/worker mode with no graphics jobs, which happens when the render thread has to wait for the graphics commands on the main thread. In this example, the render thread was idle for 0.36 milliseconds.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>SRP Batcher code path (flushes)</strong></td>
+	<td style="text-align:left;">Indicates the time your game or app spent in the SRP Batcher code path. This is broken down into the amount of time that your game spent rendering <strong>All objects</strong> (except for shadow passes) (1.18ms), and <strong>Shadows</strong> (1.13ms). If the <strong>Shadows</strong> number is high, try reducing the number of shadow casting lights in your Scene, or choose a lower number of Cascades in your Render Pipeline Asset. In this example, it was 1.31ms.<br>The <strong>(flush(s))</strong> number indicates how many times Unity flushed the Scene because it encountered a new Shader Variant (in this example: 89). A lower number of flushes is always better, because that means there was a low number of Shader Variants in the frame.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Standard code path (flushes)</strong></td>
+	<td style="text-align:left;">Indicates the time Unity spent rendering objects that are not compatible with the SRP Batcher, for example skinned meshes or particles.<br>In this example, the SRP Batcher flushed 81 objects in 0.80ms: 0.09ms for shadow passes and 0.71ms for all other passes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Global Main Loop: (FPS)</strong></td>
+	<td style="text-align:left;">Indicates the global main loop time in milliseconds, and the equivalent in frames per second (FPS). <strong>Note.</strong> FPS is not linear, so if you see FPS increase by 20, this doesn’t necessarily mean you’ve optimized the Scene. To see whether the SRP Batcher optimizes your Scene rendering, toggle it ON and OFF, and compare the numbers under <strong>CPU Rendering time</strong>.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>SRP Batcher data in the Unity Frame Debugger</h2>
+
+<p>You can check the status on SRP Batcher “batches” in the <a href="FrameDebugger.html">Frame Debugger</a> window.</p>
+
+<p>To check the status of SRP Batcher batches:</p>
+
+<ol>
+<li>In the Editor, go to <strong>Window</strong> &gt; <strong>Analysis</strong> &gt; <strong>Frame Debugger</strong> &gt; <strong>Render Camera</strong> &gt; <strong>Render Opaques</strong>, and expand the <strong>RenderLoopNewBatcher.Draw</strong> list.</li>
+<li>Click on the <strong>SRP Batch</strong> you want to inspect.</li>
+</ol>
+
+<p>The <strong>SRP Batch</strong> details show you how many draw calls were used, which keywords were attached to the Shader, and the reason why that specific draw call wasn’t batched with the previous one. In the example below, the stated reason is: <em>Node use different shader keywords</em>. This means that the Shader keywords for that batch are different than the keywords in the previous batch. Because the SRP Batcher used a different Shader Variant, the batch was broken. If an SRP batch has a low number of draw calls, you’re most likely using too many Shader Variants. </p>
+
+<figure>
+<img src="../uploads/Main/SRP_Batcher_batch_information.png" alt="In the Frame Debugger window, you can find details about individual batches, including why the SRP Batcher created a new batch instead of continuing the existing one.">
+<figcaption>In the Frame Debugger window, you can find details about individual batches, including why the SRP Batcher created a new batch instead of continuing the existing one.</figcaption>
+</figure>
+
+<p>If you’re writing your own SRP instead of using LWRP or HDRP, try to write a generic “uber” Shader with a minimal amount of keywords (but you can use as many Material parameters and Material Properties inside each Material as you want).</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2019–06–09 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Scriptable Render Pipeline (SRP) Batcher added in <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/30_search.html?q=newin20191">2019.1</a> <span class="search-words">NewIn20191</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ScriptableRenderPipeline.html"></a></span><div class="tip">Scriptable Render Pipeline</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PhysicsSection.html"></a></span><div class="tip">物理系统</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

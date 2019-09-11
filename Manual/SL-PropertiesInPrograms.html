@@ -1,0 +1,281 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="使用 Cg/HLSL 访问着色器属性 - Unity Manual">
+<title>使用 Cg/HLSL 访问着色器属性 - Unity Manual</title>
+<meta name="description" content="着色器在 Properties 代码块中声明材质属性。如果要在着色器程序中访问其中一些属性，则需要声明具有相同名称和匹配类型的 Cg/HLSL 变量。着色器教程：顶点和片元程序中提供了一个示例。">
+<meta property="og:description" content="着色器在 Properties 代码块中声明材质属性。如果要在着色器程序中访问其中一些属性，则需要声明具有相同名称和匹配类型的 Cg/HLSL 变量。着色器教程：顶点和片元程序中提供了一个示例。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'SL-PropertiesInPrograms';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-PropertiesInPrograms.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-PropertiesInPrograms.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-PropertiesInPrograms.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-PropertiesInPrograms.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-PropertiesInPrograms.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-PropertiesInPrograms.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-PropertiesInPrograms.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-PropertiesInPrograms.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-PropertiesInPrograms.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-PropertiesInPrograms.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/SL-PropertiesInPrograms.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/SL-PropertiesInPrograms.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/SL-PropertiesInPrograms.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/SL-PropertiesInPrograms.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-PropertiesInPrograms.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-PropertiesInPrograms.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-PropertiesInPrograms.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-PropertiesInPrograms.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-PropertiesInPrograms.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-PropertiesInPrograms.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-PropertiesInPrograms.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-PropertiesInPrograms.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-PropertiesInPrograms.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-PropertiesInPrograms.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="SL-Reference.html">着色器参考</a></li>
+<li><a href="SL-ShaderPrograms.html">编写顶点和片元着色器</a></li>
+<li>使用 Cg/HLSL 访问着色器属性</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-ShaderSemantics.html"></a></span><div class="tip">着色器语义</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-VertexProgramInputs.html"></a></span><div class="tip">向顶点程序提供顶点数据</div>
+</div>
+</div></div>
+<h1>使用 Cg/HLSL 访问着色器属性</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>着色器在 <a href="SL-Properties.html">Properties</a> 代码块中声明材质属性。如果要在<a href="SL-ShaderPrograms.html">着色器程序</a>中访问其中一些属性，则需要声明具有相同名称和匹配类型的 Cg/HLSL 变量。<a href="ShaderTut2.html">着色器教程：顶点和片元程序</a>中提供了一个示例。</p>
+
+<p>例如，以下着色器属性：</p>
+
+<pre><code>_MyColor ("Some Color", Color) = (1,1,1,1) 
+_MyVector ("Some Vector", Vector) = (0,0,0,0) 
+_MyFloat ("My float", Float) = 0.5 
+_MyTexture ("Texture", 2D) = "white" {} 
+_MyCubemap ("Cubemap", CUBE) = "" {}
+</code></pre>
+
+<p>可通过如下 Cg/HLSL 代码进行声明以供访问：</p>
+
+<pre><code>fixed4 _MyColor; // 低精度类型对于颜色而言通常已经足够
+float4 _MyVector;
+float _MyFloat; 
+sampler2D _MyTexture;
+samplerCUBE _MyCubemap;
+</code></pre>
+
+<p>Cg/HLSL 还可以接受 <strong>uniform</strong> 关键字，但该关键字并不是必需的：</p>
+
+<pre><code>uniform float4 _MyColor;
+</code></pre>
+
+<p>ShaderLab 中的属性类型以如下方式映射到 Cg/HLSL 变量类型：</p>
+
+<ul>
+<li>Color 和 Vector 属性映射到 <strong>float4</strong>、<strong>half4</strong> 或 <strong>fixed4</strong> 变量。</li>
+<li>Range 和 Float 属性映射到 <strong>float</strong>、<strong>half</strong> 或 <strong>fixed</strong> 变量。</li>
+<li>对于普通 (2D) 纹理，Texture 属性映射到 <strong>sampler2D</strong> 变量；立方体贴图 (Cubemap) 映射到 <strong>samplerCUBE__；3D 纹理映射到 </strong>sampler3D__。</li>
+</ul>
+
+<h2>如何向着色器提供属性值</h2>
+
+<p>在下列位置中查找着色器属性值并提供给着色器：</p>
+
+<ul>
+<li>
+<a href="../ScriptReference/MaterialPropertyBlock.html">MaterialPropertyBlock</a> 中设置的每渲染器值。这通常是“每实例”数据（例如，全部共享相同材质的许多对象的自定义着色颜色）。</li>
+<li>在渲染的对象上使用的<a href="class-Material.html">材质</a>中设置的值。</li>
+<li>全局着色器属性，通过 Unity 渲染代码自身设置（请参阅<a href="SL-UnityShaderVariables.html">内置着色器变量</a>），或通过您自己的脚本来设置（例如 <a href="../ScriptReference/Shader.SetGlobalTexture.html">Shader.SetGlobalTexture</a>）。</li>
+</ul>
+
+<p>优先顺序如上所述：每实例数据覆盖所有内容；然后使用材质数据；最后，如果这两个地方不存在着色器属性，则使用全局属性值。最终，如果在任何地方都没有定义着色器属性值，则将提供“默认值”（浮点数的默认值为零，颜色的默认值为黑色，纹理的默认值为空的白色纹理）。</p>
+
+<h2>序列化和运行时材质属性</h2>
+
+<p><a href="class-Material.html">材质</a>可以同时包含序列化的属性值和运行时设置的属性值。</p>
+
+<p>序列化的数据是在着色器的 <a href="SL-Properties.html">Properties</a> 代码块中定义的所有属性。通常，这些是需要存储在材质中的值，并且可由用户在材质检视面板中进行调整。</p>
+
+<p>材质也可以具有着色器使用的一些属性，但不在着色器的 <a href="SL-Properties.html">Properties</a> 代码块中声明。通常，这适用于在运行时从脚本代码（例如，通过 <a href="../ScriptReference/Material.SetColor.html">Material.SetColor</a>）设置的属性。请注意，矩阵和数组只能作为非序列化的运行时属性存在（因为无法在 Properties 代码块中定义它们）。</p>
+
+<h2>特殊纹理属性</h2>
+
+<p>对于设置为着色器/材质属性的每个纹理，Unity 还会在其他矢量属性中设置一些额外信息。</p>
+
+<h4>纹理平铺和偏移</h4>
+
+<p><a href="class-Material.html">材质</a>通常具有其纹理属性的 Tiling 和 Offset 字段。此信息将传递到着色器中的 float4 <em>{TextureName}</em><code>_ST</code> 属性：</p>
+
+<ul>
+<li>
+<code>x</code> 包含 X 平铺值</li>
+<li>
+<code>y</code> 包含 Y 平铺值</li>
+<li>
+<code>z</code> 包含 X 偏移值</li>
+<li>
+<code>w</code> 包含 Y 偏移值</li>
+</ul>
+
+<p>例如，如果着色器包含名为 <code>_MainTex</code> 的纹理，则平铺信息将位于 <code>_MainTex_ST</code> 矢量中。</p>
+
+<h4>纹理大小</h4>
+
+<p><em>{TextureName}</em><code>_TexelSize</code> - float4 属性包含纹理大小信息：</p>
+
+<ul>
+<li>
+<code>x</code> 包含 1.0/宽度</li>
+<li>
+<code>y</code> 包含 1.0/高度</li>
+<li>
+<code>z</code> 包含宽度</li>
+<li>
+<code>w</code> 包含高度</li>
+</ul>
+
+<h4>纹理 HDR 参数</h4>
+
+<p><em>{TextureName}</em><code>_HDR</code> - 一个 float4 属性，其中包含有关如何根据所使用的<a href="LinearLighting.html">颜色空间</a>解码潜在 HDR（例如 RGBM 编码）纹理的信息。请参阅 <a href="SL-BuiltinIncludes.html">UnityCG.cginc</a> 着色器 include 文件中的 <code>DecodeHDR</code> 函数。</p>
+
+<h2>颜色空间和颜色/矢量着色器数据</h2>
+
+<p>使用<a href="LinearLighting.html">线性颜色空间</a>时，所有材质颜色属性均以 sRGB 颜色提供，但在传递到着色器时会转换为线性值。</p>
+
+<p>例如，如果 <a href="SL-Properties.html">Properties</a> 着色器代码块包含名为“<em>MyColor“的 <code>Color</code> 属性，则相应的”</em>MyColor”HLSL 变量将获得线性颜色值。</p>
+
+<p>对于标记为 <code>Float</code> 或 <code>Vector</code> 类型的属性，默认情况下不进行颜色空间转换；而是假设它们包含非颜色数据。可为浮点/矢量属性添加 <code>[Gamma]</code> 特性，以表示它们是以 sRGB 空间指定，就像颜色一样（请参阅<a href="SL-Properties.html">属性</a>）。</p>
+
+<h2>另请参阅</h2>
+
+<ul>
+<li>
+<a href="SL-Properties.html">ShaderLab Properties 代码块</a>。</li>
+<li>
+<a href="SL-ShaderPrograms.html">编写着色器程序</a>。</li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-ShaderSemantics.html"></a></span><div class="tip">着色器语义</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-VertexProgramInputs.html"></a></span><div class="tip">向顶点程序提供顶点数据</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="数据透视图 (Data Explorer) - Unity Manual">
+<title>数据透视图 (Data Explorer) - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/UnityAnalyticsDataExplorer1.png">
+<meta name="description" content="使用 Data Explorer 可以构建 Unity Analytics 指标和事件的相关报告。Data Explorer 报告可显示所选的指标和自定义事件如何随时间变化。">
+<meta property="og:description" content="使用 Data Explorer 可以构建 Unity Analytics 指标和事件的相关报告。Data Explorer 报告可显示所选的指标和自定义事件如何随时间变化。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UnityAnalyticsDataExplorer';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityAnalyticsDataExplorer.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityAnalyticsDataExplorer.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityAnalyticsDataExplorer.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityAnalyticsDataExplorer.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityAnalyticsDataExplorer.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityAnalyticsDataExplorer.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityAnalyticsDataExplorer.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityAnalyticsDataExplorer.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityAnalyticsDataExplorer.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityAnalyticsDataExplorer.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UnityAnalyticsDataExplorer.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UnityAnalyticsDataExplorer.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UnityAnalyticsDataExplorer.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UnityAnalyticsDataExplorer.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityAnalyticsDataExplorer.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityAnalyticsDataExplorer.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityAnalyticsDataExplorer.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityAnalyticsDataExplorer.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityAnalyticsDataExplorer.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityAnalyticsDataExplorer.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityAnalyticsDataExplorer.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityAnalyticsDataExplorer.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityAnalyticsDataExplorer.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityAnalyticsDataExplorer.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="UnityAnalytics.html">Unity Analytics</a></li>
+<li><a href="UnityAnalyticsDashboard.html">Analytics Dashboard</a></li>
+<li>数据透视图 (Data Explorer)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsDashbaordOverview.html"></a></span><div class="tip">Overview page </div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsFunnelAnalyzer.html"></a></span><div class="tip">Funnel Analyzer page </div>
+</div>
+</div></div>
+<h1>数据透视图 (Data Explorer)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>使用 Data Explorer 可以构建 Unity Analytics 指标和事件的相关报告。Data Explorer 报告可显示所选的指标和自定义事件如何随时间变化。</p>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsDataExplorer1.png" alt="A report in the Data Explorer page showing MAU over time">
+<figcaption>A report in the Data Explorer page showing MAU over time</figcaption>
+</figure>
+
+<h2>新建报告</h2>
+
+<p>要创建 Data Explorer 报告：</p>
+
+<ol>
+<li>Navigate to the Analytics dashboard for your project.</li>
+<li>Click <strong>Data Explorer</strong>.
+3.单击所需数据类型旁边的 + 按钮，将 <strong>Metrics</strong>、<strong>Custom Events</strong> 和 <strong>Ad Metrics</strong> 添加到报告。（对于未使用 Unity Ads 的项目，Ad Metrics 选项是禁用状态。）
+<img src="../uploads/Main/UnityAnalyticsDataExplorer2.png" alt="">
+4.根据需要设置日期范围和图表类型。请参阅<a href="#ReportOptions">报告选项</a>以了解更多信息。</li>
+</ol>
+
+<p><strong>注意</strong>：默认报告包含单个指标。您可以更改此项的指标类型和细分段。（要删除此项，必须先添加第二项：不能删除报告中的最后一个数据项。）</p>
+
+<p>要保存报告供将来查看：</p>
+
+<p>1.单击 <strong>New Report</strong> 按钮。</p>
+
+<p>2.在打开的对话框中，输入报告的名称，然后单击 <strong>OK</strong>。</p>
+
+<p>稍后若要查看保存的报告，请单击 <strong>Saved Reports</strong> 下拉列表并在列表中选择报告名称。您可以调整日期范围以查看包含最新数据的同一报告。</p>
+
+<h2>复制报告</h2>
+
+<p>要复制现有的 Data Explorer 报告：</p>
+
+<ol>
+<li>Navigate to your Analytics dashboard for your project.</li>
+<li>Click <strong>Data Explorer</strong>.
+3.单击 <strong>Saved Reports</strong> 下拉列表并在列表中选择报告名称。
+<img src="../uploads/Main/UnityAnalyticsDataExplorer3.png" alt="">
+</li>
+</ol>
+
+<p>4.根据需要调整日期范围、图表类型或其他选项。请参阅<a href="#ReportOptions">报告选项</a>以了解更多信息。
+5.单击 <strong>New Report</strong> 按钮。
+6.在打开的对话框中，输入报告副本的名称，然后单击 <strong>Ok</strong>。</p>
+
+<h2>下载报告数据</h2>
+
+<p>要下载包含报告数据的逗号分隔值文件 (CSV)：</p>
+
+<ol>
+<li>Navigate to your Analytics dashboard for your project.</li>
+<li>Click <strong>Data Explorer</strong>.
+3.加载保存的报告或新建报告。
+4.根据需要调整日期范围或其他选项。请参阅<a href="#ReportOptions">报告选项</a>以了解更多信息。
+单击 <strong>CSV</strong> 按钮可下载当前所示报告的数据。</li>
+</ol>
+
+<p><strong>Note:</strong> CSV download exports precisely what you see in the chart/table. If you have a Unity Pro subscription, you can also download all of your Analytics data in raw form from the <a href="UnityAnalyticsRawDataExport.html">Raw Data Export</a> page or through the Raw Data Export REST API.</p>
+
+<p><a name="ReportOptions"></a> </p>
+
+<h2>报告选项</h2>
+
+<p>可将以下类型的数据添加到报告中：</p>
+
+<ul>
+<li>
+<strong>Metric</strong>（指标）– 只要有人玩您的游戏，就会自动发送核心 Analytics 事件，从而通过这些事件来计算 Analytics 指标。这些指标包括诸如玩过该游戏的玩家数量、玩游戏的时长以及他们在应用内购 (IAP) 方面花费的金额等。</li>
+<li>
+<strong>Custom Event</strong>（自定义事件）– 自定义事件是您从游戏中分发的事件，用于衡量游戏特有的行为或其他因素。请参阅<a href="UnityAnalyticsCustomEvents.html">自定义事件</a>以了解有关定义和使用自定义事件的更多信息。</li>
+<li>
+<strong>Ad Metric</strong>（广告指标）– 来自 Unity Ads 服务的广告指标报告数据（仅在使用 Unity Ads 时可用）。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsDataExplorer4.png" alt="">
+</figure>
+
+<p>最多可以将 20 个数据项添加到单个报告中。只要使用不同计量单位的数据项不超过两个，图表就会以垂直刻度显示适当单位。</p>
+
+<p>您可以设置报告的日期范围并选择不同的图表类型。</p>
+
+<h3>Metric 和 Ad Metric 选项</h3>
+
+<p>将 <strong>Metric</strong> 或 <strong>Ad Metric</strong> 添加到图表时，必须设置名称并可以选择数据__细分段__ (Segment)：</p>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsDataExplorer5.png" alt="报告上的指标数据项">
+<figcaption>报告上的指标数据项</figcaption>
+</figure>
+
+<ul>
+<li>A – 指标名称</li>
+<li>B – 要显示的数据细分段</li>
+<li>C – 从报告中删除该指标</li>
+</ul>
+
+<p>对于每个数据项，可指定要显示的数据的__细分段<strong>。</strong>细分段__是该项的数据子集（根据一组规则选出）。例如，__Android Users__（Android 用户）细分段仅包含 Android 平台玩家的数据，而 __iOS Users__（iOS 用户）细分段仅包含 iOS 平台玩家的数据。</p>
+
+<p>Analytics 服务包括一组标准细分段。您也可以创建自己的自定义__细分段<strong>。使用 <a href="UnityAnalyticsSegmentBuilder.html">Segment Builder</a> 可以查看标准细分段的定义并构建您自己的自定义__细分段</strong>。请注意，创建自定义__细分段__时，它仅适用于新收集的指标和事件。旧数据不会被重新处理来包含在新的__细分段__中。</p>
+
+<h3>自定义事件选项</h3>
+
+<p>将 __Custom Event__（自定义事件）添加到报告时，可以根据事件参数设置其他选项。</p>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsDataExplorer6.png" alt="报告上的自定义事件条目具有两个额外字段（和一个饼图按钮）">
+<figcaption>报告上的自定义事件条目具有两个额外字段（和一个饼图按钮）</figcaption>
+</figure>
+
+<ul>
+<li>A – 显示饼图（仅适用于可分类的数据项）</li>
+<li>B – __自定义事件__的名称</li>
+<li>C – 要显示的数据的__细分段__</li>
+<li>D – 自定义事件__参数__名称和显示选项</li>
+<li>E – 如何聚合参数值</li>
+<li>F – 从报告中删除该自定义事件</li>
+</ul>
+
+<p>__自定义事件__有参数时，可选择该事件的数据在图表上显示的方式。您可以显示接收的每个不同值的计数，对于数字属性，还可以显示接收的所有事件值的总和或平均值：</p>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsDataExplorer7.png" alt="参数显示选项">
+<figcaption>参数显示选项</figcaption>
+</figure>
+
+<p><strong>参数__名称后面显示的符号表示如何显示__参数</strong>。字符串 (A) 和布尔值（文氏图）符号表示__参数__值会分类到不同组中。数字符号 (#) 表示__参数__值是除了可计数以外还可以平均或求和的数字。请注意，数字__参数__在列表中出现两次，一次带有字符串符号，另一次带有数字符号，可让您选择将数字__参数__视为可分类值还是可聚合值。</p>
+
+<p>显示可分类的__参数__值时，仅会将十个最常见的值分到单个组中。剩下的值集中在 __Other__（其他）组中。因此，要将数字__参数__视为可分类字符串，通常要求__参数__的不同值的数量有限。</p>
+
+<p>您可以在图表底部查看这一组不同的值。此外也可以通过单击数据项前面的饼图按钮来查看这些值的饼图。一次只能显示一张饼图。</p>
+
+<p><strong>注意：</strong>要下载可分类数据饼图中的数据，请单击自定义事件旁边的饼图按钮，然后单击 <strong>CSV</strong> 按钮。</p>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsDataExplorer8.png" alt="level_complete（关卡完成）事件的饼图">
+<figcaption>level_complete（关卡完成）事件的饼图</figcaption>
+</figure>
+
+<h3>图表类型</h3>
+
+<p>您可以为报告选择以下图表类型：</p>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsDataExplorer9.png" alt="">
+</figure>
+
+<ul>
+<li>
+<strong>Spline</strong>（样条图）– 平滑的折线图</li>
+<li>
+<strong>Column</strong>（柱状图）– 条形图</li>
+<li>
+<strong>Stacked</strong>（堆积图）– 堆积面积图</li>
+<li>
+<strong>Table</strong>（表）– 值表格</li>
+<li>
+<strong>Pie</strong>（饼图）– 饼图（仅可用于单独且可分类的自定义事件参数）</li>
+</ul>
+
+<h4>图表缩放</h4>
+
+<p>您可以放大<strong>样条图</strong>、<strong>柱状图</strong>和<strong>堆积图</strong>，方法是单击图表并拖动想要更详细查看的部分。</p>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsDataExplorer10.png" alt="通过单击并拖动来放大图表的某个部分">
+<figcaption>通过单击并拖动来放大图表的某个部分</figcaption>
+</figure>
+
+<p>放大后，图表会显示 <strong>Reset Zoom</strong> 按钮，该按钮可恢复图表以显示整个日期范围。</p>
+
+<h2>注释</h2>
+
+<p>You can use annotations to mark the dates of important external factors that might affect your game’s analytics data, such as game updates, marketing campaigns, and promotions. Add date-based annotations to the Data Explorer reports using the Annotations section below the report chart. </p>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsDataExplorer11.png" alt="报告图表上显示的注释标记">
+<figcaption>报告图表上显示的注释标记</figcaption>
+</figure>
+
+<p>注释适用于整个项目范围，而非个别报告。每当打开 Annotations 部分时，注释都会显示在所有报告图表上。</p>
+
+<p><strong>要添加注释：</strong></p>
+
+<p>1.在任何 Data Explorer 报告上，单击 <strong>+ Annotations</strong> 按钮以打开 <strong>Annotations</strong> 部分（如果尚未打开）。
+2.单击日期框并设置注释的日期。在一个给定日期只能添加一条注释记录。
+3.输入注释的名称或描述性文字。
+4.单击 <strong>Save</strong>。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2017–08–29 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li><span class="page-history">Unity 2017.1 中的新功能</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsDashbaordOverview.html"></a></span><div class="tip">Overview page </div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsFunnelAnalyzer.html"></a></span><div class="tip">Funnel Analyzer page </div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

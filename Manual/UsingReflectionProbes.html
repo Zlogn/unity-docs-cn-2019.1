@@ -1,0 +1,255 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="使用反射探针 - Unity Manual">
+<title>使用反射探针 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/ProbeZoneOverlap.svg">
+<meta name="description" content="可将反射探针 (Reflection Probe) 组件添加到场景中的任何对象，但标准做法是将每个探针添加到单独的空游戏对象。常规的工作流程如下：">
+<meta property="og:description" content="可将反射探针 (Reflection Probe) 组件添加到场景中的任何对象，但标准做法是将每个探针添加到单独的空游戏对象。常规的工作流程如下：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UsingReflectionProbes';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UsingReflectionProbes.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UsingReflectionProbes.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UsingReflectionProbes.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UsingReflectionProbes.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UsingReflectionProbes.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UsingReflectionProbes.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UsingReflectionProbes.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UsingReflectionProbes.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UsingReflectionProbes.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UsingReflectionProbes.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UsingReflectionProbes.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UsingReflectionProbes.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UsingReflectionProbes.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UsingReflectionProbes.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UsingReflectionProbes.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UsingReflectionProbes.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UsingReflectionProbes.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UsingReflectionProbes.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UsingReflectionProbes.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UsingReflectionProbes.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UsingReflectionProbes.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UsingReflectionProbes.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UsingReflectionProbes.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UsingReflectionProbes.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="LightingOverview.html">光照</a></li>
+<li><a href="GIIntro.html">全局光照</a></li>
+<li><a href="ReflectionProbes.html">反射探针</a></li>
+<li>使用反射探针</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="RefProbeTypes.html"></a></span><div class="tip">反射探针的类型</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AdvancedRefProbe.html"></a></span><div class="tip">高级反射探针功能</div>
+</div>
+</div></div>
+<h1>使用反射探针</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>可将<a href="class-ReflectionProbe.html">反射探针 (Reflection Probe)</a> 组件添加到场景中的任何对象，但标准做法是将每个探针添加到单独的空游戏对象。常规的工作流程如下：</p>
+
+<ul>
+<li>创建新的空游戏对象（菜单：__GameObject__ &gt; <strong>Create Empty__），然后将反射探针组件添加到该对象（菜单：__Component</strong> &gt; <strong>Rendering</strong> &gt; <strong>Reflection Probe__）。或者，如果在场景中已有现成的探针，可能直接复制该探针的做法更为方便（菜单：__Edit</strong> &gt; __Duplicate__）。</li>
+<li>将新探针放在所需位置并设置其 <strong>Offset</strong> 点及其效果区域的大小。
+*（可选）在探针上设置其他属性以自定义其行为。</li>
+<li>继续添加探针，直到分配完所有必需的位置。</li>
+</ul>
+
+<p>要查看反射，还需要场景中至少有一个反射对象。可按如下方式创建一个简单的测试对象：</p>
+
+<ul>
+<li>将一个简单对象（如球体）添加到场景中（菜单：__GameObject__ &gt; <strong>3D Object</strong> &gt; __Sphere__）。</li>
+<li>创建新材质（菜单：__Assets__ &gt; <strong>Create</strong> &gt; <strong>Material__）并保留默认的 </strong>Standard__ 着色器。</li>
+<li>通过将 <strong>Metallic</strong> 和 <strong>Smoothness</strong> 属性均设置为 <strong>1.0</strong> 使材质具有反射性。</li>
+<li>将新创建的材质拖动到球体对象上以进行分配。</li>
+</ul>
+
+<p>球体现在可以显示从探针获得的反射。通过简单布置单个探针足以看到反射的基本效果。</p>
+
+<p>最后，必须烘焙探针之后才能让反射变得可见。如果在 <a href="GlobalIllumination.html">Lighting 窗口</a>中启用了 <strong>Auto Generate</strong> 选项（这是默认设置），当您在场景中定位或更改对象时，反射将更新，尽管响应不是即时的。如果禁用自动烘焙，则必须单击反射探针检视面板中的 <strong>Bake</strong> 按钮以更新探针。禁用自动烘焙的主要原因是，对于具有许多探针的复杂场景，烘焙过程可能需要相当长的时间才能完成。</p>
+
+<h2>定位探针</h2>
+
+<p>探针的位置主要由其游戏对象的位置决定，因此只需将对象拖动到所需位置即可。完成此操作后，应设置探针的效果区域；这是一个轴对齐的盒体形状，其大小由 <strong>Box Size</strong> 属性设置。您可以直接设置大小值，也可在检视面板中启用大小编辑模式，然后在 Scene 视图中拖动盒体的两侧（有关详细信息，请参阅<a href="class-ReflectionProbe.html">反射探针</a>组件页面）。全套探针的区域应共同覆盖场景中反射对象可能通过的所有区域。</p>
+
+<p>应将探针放置在场景中可明显反射的任何大型对象附近。中心和角点周围的区域是放置探针的良好候选位置。如果较小的对象具有强烈的视觉效果，可能需要靠近探针。例如，您可能希望反射篝火的火焰，即使对象本身很小甚至无关紧要的情况下，也是如此。</p>
+
+<p>如果在所有适当的位置都有了探针，则需要为每个探针定义效果区域，为此可使用上面提到的 <strong>Box Size</strong> 属性来实现该目的。一面墙壁的大部分长度可能只需要一个探针区域（前提是它具有相当均匀的外观），但该区域在垂直于墙壁的方向上可能相对较窄；这意味着，墙壁只能被很接近的对象所反射。一个开放空间的外观在不同位置的变化很小，通常可以用一个探针覆盖。请注意，探针的区域与主世界轴（X、Y 和 Z）对齐，无法进行旋转。这意味着，如果一面均匀的墙壁不是轴对齐的话，有时可能需要沿该墙壁布设的一组探针。</p>
+
+<p>默认情况下，探针的效果区域以其视点为中心，但这可能不是捕获反射立方体贴图的理想位置。例如，非常高的墙壁的探针区域可能会从墙壁延伸一段距离，但您可能希望从靠近的点而不是区域的中心捕获反射。您可以选择使用 <strong>Box Offset</strong> 属性为视点添加偏移量（即，偏移量是游戏对象的局部空间中生成探针立方体贴图视图的位置）。使用此设置，您可以轻松地将视点放置在效果区域内或完全位于区域外的任何位置。</p>
+
+<h2>重叠探针区域</h2>
+
+<p>对相邻反射探针的区域进行定位时不让它们重叠是非常困难的，幸运的是，没有必要这样做。然而，这带来了在重叠区域中选择使用哪个探针的问题。默认情况下，Unity 计算反射对象的包围盒与每个重叠探针区域之间的交集；与包围盒具有最大交叉量的区域即为要选择的区域。</p>
+
+<figure>
+<img src="../uploads/Main/ProbeZoneOverlap.svg" alt="选择探针 A 的原因它与对象的交叉量更大">
+<figcaption>选择探针 A 的原因它与对象的交叉量更大</figcaption>
+</figure>
+
+<p>您可以使用探针的 <strong>Importance</strong> 属性来修改计算。重要性值较高的探针优先于重叠区域内重要性较低的探针。假如您有一个完全包含在较大区域内的小探针区域（即，角色的包围盒与较大包围区域的交集可能总是更大，因此永远不会使用小区域），那么该设置就会很有用。</p>
+
+<h3>混合</h3>
+
+<p>要启用反射探针混合，请导航至 <strong>Graphic Settings</strong> &gt; <strong>Tier settings</strong>。启用混合后，当反射对象从一个区域移动到另一个区域时，Unity 将逐渐淡出一个探针的立方体贴图，同时淡入另一个探针的立方体贴图。这种逐渐过渡避免了当对象穿过区域边界时突然有一个显眼的对象“弹出”到反射中的情况。</p>
+
+<p>必须使用<a href="class-MeshRenderer.html">网格渲染器 (Mesh Renderer)</a> 组件的 <strong>Reflection Probes</strong> 属性控制混合。提供了四个可用的混合选项：</p>
+
+<ul>
+<li>
+<strong>Off</strong> - 禁用反射探针混合。仅将天空盒用于反射</li>
+<li>
+<strong>Blend Probes</strong> - 仅混合相邻探针并忽略天空盒。应将此选项用于“室内”对象或场景隐蔽区域（例如洞穴和隧道）的对象，因为从这些地方看不到天空，所以天空不应出现在反射中。</li>
+<li>
+<strong>Blend Probes and Skybox</strong> - 作用与 <em>Blend Probes</em> 类似，但也允许在混合中使用天空盒。应将此选项用于天空始终可见的露天对象。</li>
+<li>
+<strong>Simple</strong> - 当存在两个重叠的反射探针体积时，禁用探针之间的混合。</li>
+</ul>
+
+<p>当探针具有相等的 <strong>Importance</strong> 值时，给定探针区域的混合权重的计算方法，是将该区域与对象包围盒的交叉量（体积）除以所有探针与该包围盒的交叉量之和。例如，如果包围盒与探针 A 区域的交叉量为 1.0 立方单位，而与探针 B 区域的交叉量为 2.0 立方单位，则混合值将为：</p>
+
+<ul>
+<li>探针 A：1.0 / (1.0 + 2.0) = 0.33</li>
+<li>探针 B：2.0 / (1.0 + 2.0) = 0.67</li>
+</ul>
+
+<p>换句话说，该混合将包含探针 A 的 33% 反射和探针 B 的 67% 反射。</p>
+
+<p>在一个探针完全包含在另一个探针内的情况下，必须以稍微不同的方式处理该计算，因为内部区域完全与外部区域重叠。如果对象的包围盒完全处于内部区域内，则该区域的混合权重为 1.0（即，根本不使用外部区域）。当对象部分位于内部区域之外时，对象包围盒与内部区域的交叉体积除以包围盒的总体积。例如，如果交叉体积为 1.0 立方单位，而包围盒的体积为 4.0 立方单位，则内部探针的混合权重将为 1.0 / 4.0 = 0.25。然后，从 1.0 中减去该值即得到外部探针的权重，此处即得到 0.75。</p>
+
+<p>当参与混合的一个探针具有比另一个探针更高的 <strong>Importance</strong> 值时，更重要的探针通常将覆盖另一个探针。
+<br>
+<br></p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-history">5.6 版更新</span></p></li>
+<li><p><span class="page-edit">2017–06–06 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="RefProbeTypes.html"></a></span><div class="tip">反射探针的类型</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AdvancedRefProbe.html"></a></span><div class="tip">高级反射探针功能</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

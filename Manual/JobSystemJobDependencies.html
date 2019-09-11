@@ -1,0 +1,261 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="JobHandle and dependencies - Unity Manual">
+<title>JobHandle and dependencies - Unity Manual</title>
+<meta name="description" content="When you call the Schedule method of a job it returns a JobHandle. You can use a JobHandle in your code as a dependency for other jobs. If a job depends on the results of another job, you can pass the first job&amp;#8217;s JobHandle as a parameter to the second job&amp;#8217;s Schedule method, like so:">
+<meta property="og:description" content="When you call the Schedule method of a job it returns a JobHandle. You can use a JobHandle in your code as a dependency for other jobs. If a job depends on the results of another job, you can pass the first job&amp;#8217;s JobHandle as a parameter to the second job&amp;#8217;s Schedule method, like so:">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'JobSystemJobDependencies';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/JobSystemJobDependencies.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/JobSystemJobDependencies.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/JobSystemJobDependencies.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/JobSystemJobDependencies.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/JobSystemJobDependencies.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/JobSystemJobDependencies.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/JobSystemJobDependencies.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/JobSystemJobDependencies.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/JobSystemJobDependencies.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/JobSystemJobDependencies.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/JobSystemJobDependencies.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/JobSystemJobDependencies.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/JobSystemJobDependencies.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/JobSystemJobDependencies.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/JobSystemJobDependencies.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/JobSystemJobDependencies.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/JobSystemJobDependencies.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/JobSystemJobDependencies.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/JobSystemJobDependencies.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/JobSystemJobDependencies.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/JobSystemJobDependencies.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/JobSystemJobDependencies.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/JobSystemJobDependencies.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/JobSystemJobDependencies.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="ScriptingSection.html">脚本</a></li>
+<li><a href="JobSystem.html">C# Job System</a></li>
+<li>JobHandle and dependencies</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="JobSystemSchedulingJobs.html"></a></span><div class="tip">Scheduling jobs</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="JobSystemParallelForJobs.html"></a></span><div class="tip">ParallelFor jobs</div>
+</div>
+</div></div>
+<h1>JobHandle and dependencies</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>When you call the <a href="../ScriptReference/Unity.Jobs.IJobExtensions.Schedule.html">Schedule</a> method of a job it returns a <a href="../ScriptReference/Unity.Jobs.JobHandle.html">JobHandle</a>. You can use a <code>JobHandle</code> in your code as a dependency for other jobs. If a job depends on the results of another job, you can pass the first job’s <code>JobHandle</code> as a parameter to the second job’s <code>Schedule</code> method, like so: </p>
+
+<pre><code>JobHandle firstJobHandle = firstJob.Schedule();
+secondJob.Schedule(firstJobHandle);
+</code></pre>
+
+<h2>Combining dependencies</h2>
+
+<p>If a job has many dependencies, you can use the method <a href="../ScriptReference/Unity.Jobs.JobHandle.CombineDependencies.html">JobHandle.CombineDependencies</a> to merge them. <code>CombineDependencies</code> allows you to pass them onto the <code>Schedule</code> method.</p>
+
+<pre><code>NativeArray&lt;JobHandle&gt; handles = new NativeArray&lt;JobHandle&gt;(numJobs, Allocator.TempJob);
+
+// Populate `handles` with `JobHandles` from multiple scheduled jobs...
+
+JobHandle jh = JobHandle.CombineDependencies(handles);
+</code></pre>
+
+<h2>Waiting for jobs in the main thread</h2>
+
+<p>Use <code>JobHandle</code> to force your code to wait in the main thread for your job to finish executing. To do this, call the method <a href="../ScriptReference/Unity.Jobs.JobHandle.Complete.html">Complete</a> on the <code>JobHandle</code>. At this point, you know the main thread can safely access the <a href="../ScriptReference/Unity.Collections.LowLevel.Unsafe.NativeContainerAttribute.html">NativeContainer</a> that the job was using.</p>
+
+<p><strong>Note</strong>: Jobs do not start executing when you schedule them. If you are waiting for the job in the main thread, and you need access to the NativeContainer data that the job is using, you can call the method <code>JobHandle.Complete</code>. This method flushes the jobs from the memory cache and starts the process of execution. Calling <code>Complete</code> on a <code>JobHandle</code> returns ownership of that job’s <code>NativeContainer</code> types to the main thread. You need to call <code>Complete</code> on a <code>JobHandle</code> to safely access those <code>NativeContainer</code> types from the main thread again. It is also possible to return ownership to the main thread by calling <code>Complete</code> on a <code>JobHandle</code> that is from a job dependency. For example, you can call <code>Complete</code> on <code>jobA</code>, or you can call <code>Complete</code> on <code>jobB</code> which depends on <code>jobA</code>. Both result in the <code>NativeContainer</code> types that are used by <code>jobA</code> being safe to access on the main thread after the call to <code>Complete</code>.</p>
+
+<p>Otherwise, if you don’t need access to the data, you need to explicity flush the batch. To do this, call the static method <a href="../ScriptReference/Unity.Jobs.JobHandle.ScheduleBatchedJobs.html">JobHandle.ScheduleBatchedJobs</a>. Note that calling this method can negatively impact performance. </p>
+
+<h2>An example of multiple jobs and dependencies</h2>
+
+<p><strong>Job code</strong>:</p>
+
+<pre><code>// Job adding two floating point values together
+public struct MyJob : IJob
+{
+    public float a;
+    public float b;
+    public NativeArray&lt;float&gt; result;
+
+    public void Execute()
+    {
+        result[0] = a + b;
+    }
+}
+
+// Job adding one to a value
+public struct AddOneJob : IJob
+{
+    public NativeArray&lt;float&gt; result;
+    
+    public void Execute()
+    {
+        result[0] = result[0] + 1;
+    }
+}
+</code></pre>
+
+<p><strong>Main thread code</strong>:</p>
+
+<pre><code>// Create a native array of a single float to store the result in. This example waits for the job to complete
+NativeArray&lt;float&gt; result = new NativeArray&lt;float&gt;(1, Allocator.TempJob);
+
+// Setup the data for job #1
+MyJob jobData = new MyJob();
+jobData.a = 10;
+jobData.b = 10;
+jobData.result = result;
+
+// Schedule job #1
+JobHandle firstHandle = jobData.Schedule();
+
+// Setup the data for job #2
+AddOneJob incJobData = new AddOneJob();
+incJobData.result = result;
+
+// Schedule job #2
+JobHandle secondHandle = incJobData.Schedule(firstHandle);
+
+// Wait for job #2 to complete
+secondHandle.Complete();
+
+// All copies of the NativeArray point to the same memory, you can access the result in "your" copy of the NativeArray
+float aPlusB = result[0];
+
+// Free the memory allocated by the result array
+result.Dispose();
+</code></pre>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–06–15 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2018.1/Documentation/Manual/30_search.html?q=newin20181">2018.1</a> 版中公开了 C# 作业系统 <span class="search-words">NewIn20181</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="JobSystemSchedulingJobs.html"></a></span><div class="tip">Scheduling jobs</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="JobSystemParallelForJobs.html"></a></span><div class="tip">ParallelFor jobs</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

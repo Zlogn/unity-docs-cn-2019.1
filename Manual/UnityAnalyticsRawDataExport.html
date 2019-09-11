@@ -1,0 +1,951 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Unity Analytics 原始数据导出 (Raw Data Export) - Unity Manual">
+<title>Unity Analytics 原始数据导出 (Raw Data Export) - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/UnityAnalyticsRawDataExport_ExportAndActivity.png">
+<meta name="description" content="Unity Analytics Raw Data Export 为您提供原始事件数据的完全访问权限。因此，您可以按照自己选择的任何方式来使用数据以便实现所需目的，例如构建自定义查询或进行数据可视化。">
+<meta property="og:description" content="Unity Analytics Raw Data Export 为您提供原始事件数据的完全访问权限。因此，您可以按照自己选择的任何方式来使用数据以便实现所需目的，例如构建自定义查询或进行数据可视化。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UnityAnalyticsRawDataExport';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityAnalyticsRawDataExport.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityAnalyticsRawDataExport.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityAnalyticsRawDataExport.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityAnalyticsRawDataExport.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityAnalyticsRawDataExport.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityAnalyticsRawDataExport.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityAnalyticsRawDataExport.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityAnalyticsRawDataExport.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityAnalyticsRawDataExport.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityAnalyticsRawDataExport.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UnityAnalyticsRawDataExport.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UnityAnalyticsRawDataExport.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UnityAnalyticsRawDataExport.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UnityAnalyticsRawDataExport.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityAnalyticsRawDataExport.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityAnalyticsRawDataExport.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityAnalyticsRawDataExport.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityAnalyticsRawDataExport.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityAnalyticsRawDataExport.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityAnalyticsRawDataExport.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityAnalyticsRawDataExport.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityAnalyticsRawDataExport.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityAnalyticsRawDataExport.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityAnalyticsRawDataExport.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="UnityAnalytics.html">Unity Analytics</a></li>
+<li>Unity Analytics 原始数据导出 (Raw Data Export)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsUserAttributes.html"></a></span><div class="tip">用户属性</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsDataReset.html"></a></span><div class="tip">数据重置</div>
+</div>
+</div></div>
+<h1>Unity Analytics 原始数据导出 (Raw Data Export)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>概述</h2>
+
+<p>Unity Analytics Raw Data Export 为您提供原始事件数据的完全访问权限。因此，您可以按照自己选择的任何方式来使用数据以便实现所需目的，例如构建自定义查询或进行数据可视化。</p>
+
+<p>可通过两种方法访问 Raw Data Export 功能：</p>
+
+<ul>
+<li>Unity Analytics Dashboard 用户界面</li>
+<li>通过调用 REST API</li>
+</ul>
+
+<p>Raw Data Export 提供 2016 年 6 月以来的数据。</p>
+
+<h2>Analytics Dashboard 用户界面</h2>
+
+<p>Unity Analytics Dashboard 提供了一种在不编写任何代码的情况下导出和访问原始事件数据的方法。在 Unity Analytics Dashboard (<a href="https://analytics.cloud.unity3d.com/">analytics.cloud.unity3d.com</a>) 中，选择项目，然后导航至 <strong>Analytics</strong> &gt; <strong>Raw Data Export</strong>。</p>
+
+<p>Then follow these steps in the <strong>Export</strong> section of that screen:</p>
+
+<ol>
+<li>Specify the <strong>Data Set</strong> you want to export (such as appRunning, appStart, custom, deviceInfo, or transaction).
+2.指定 <strong>Start Date（开始日期）__，或者通过从下拉框中选择 </strong>Previous Job Id__ 来继续导出前一作业的数据。
+3.指定 <strong>End Date（结束日期）</strong>。
+4.文件格式默认为 JSON。单击 <strong>Export as JSON</strong> 下的下拉菜单并从中选择一项，即可指定偏好的文件格式。</li>
+</ol>
+
+<figure>
+<img src="../uploads/Main/UnityAnalyticsRawDataExport_ExportAndActivity.png" alt="Raw Data Export 界面上的 Export 部分和 Activity 表">
+<figcaption><strong>Raw Data Export</strong> 界面上的 <strong>Export</strong> 部分和 <strong>Activity</strong> 表</figcaption>
+</figure>
+
+<p>Raw Data Export 将自动创建该作业并将其显示在界面上的 <strong>Activity</strong> 表中。</p>
+
+<p>作业完成后，即可从 <strong>Download</strong> 列中选择文件来下载数据。</p>
+
+<h2>REST（表述性状态转移）API</h2>
+
+<p>发送给 Unity Analytics 的每个数据点都存储在 Unity 的数据存储中。Raw Data Export API 允许您在接收和存储数据时将原始事件数据下载到文件中。</p>
+
+<h3>要求</h3>
+
+<p>每个请求都要求使用您的 Unity Project ID (UPID) 和 API 密钥来进行 HTTP 基本身份验证。</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsAuthentication.png" alt="">
+</figure>
+
+<h3>限制</h3>
+
+<ul>
+<li>请求期（<code>startDate</code> 到 <code>endDate</code>）不超过 31 天。</li>
+<li>使用限制可能会有变化。</li>
+<li>根据请求生成的原始数据文件在 Unity Analytics 中将保留 14 天。（要在 14 天后访问该数据，请提出新请求。）</li>
+</ul>
+
+<h3>用户工作流程</h3>
+
+<p>要导出原始数据，请调用 Create Raw Data Export API。该请求会触发异步作业来处理数据。此操作需要的时间取决于要导出的数据量。</p>
+
+<p>要获取当前状态或结果，请使用 Get Raw Data Export API 进行轮询。导出完成后，可在此 API 的响应中获得结果。结果包含文件列表和相应的下载 URL。您可以遍历 URL 并下载导出的数据。</p>
+
+<p><strong>注意：</strong></p>
+
+<ul>
+<li>请求或响应中的所有日期和时间都采用 UTC 时区。</li>
+<li>API 请求或响应使用 JSON 格式（为了增强可读性，本文档中已做格式调整）。数据文件格式是可以配置的。</li>
+<li>采用 .gzip 压缩文件格式来导出数据。</li>
+<li>该 API 的 URL 基地址为 <a href="https://analytics.cloud.unity3d.com">https://analytics.cloud.unity3d.com</a>。</li>
+</ul>
+
+<h3>创建 Raw Data Export</h3>
+
+<p>Raw Data Export 特定于项目并且特定于单个数据集（事件类型）。请求期限制为不超过 31 天。</p>
+
+<p>请使用以下 HTTP 方法来创建 Raw Data Export：</p>
+
+<pre><code>POST api/v2/projects/{UNITY_PROJECT_ID}/rawdataexports
+</code></pre>
+
+<p>在请求的有效负载中提供参数，并采用 Content-Type 为 application/json 的 JSON 格式。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>请求参数</strong></th>
+	<th style="text-align:left;"><strong>必需还是可选</strong></th>
+	<th style="text-align:left;"><strong>类型</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>startDate</strong></td>
+	<td style="text-align:left;">必需（除非已指定 continueFrom）</td>
+	<td style="text-align:left;">string</td>
+	<td style="text-align:left;">导出的开始日期（含）。以 YYYY-MM-DD 格式 (ISO–8601) 表示日期。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>endDate</strong></td>
+	<td style="text-align:left;">必需</td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">The end data (exclusive) of the export. The date is expressed in YYYY-MM-DD format (ISO 8601). This is the date at which to close the query. When searching for the current day, use the following day’s date.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>format</strong></td>
+	<td style="text-align:left;">必需</td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">输出数据格式：json（换行符分隔的 json）或 tsv。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>dataset</strong></td>
+	<td style="text-align:left;">必需</td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">One of the following event types: appStart, appRunning, deviceInfo, custom, or transaction.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>continueFrom</strong></td>
+	<td style="text-align:left;">可选</td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">用于继续导出数据的 Raw Data Export ID。从先前的完成点继续执行导出时可使用此参数。请参阅“继续”以了解更多信息。此情况下可以在 continueFrom 中指定先前的 Raw Data Export ID，而不指定 startDate。同时指定 continueFrom 和 startDate 是错误的。</td>
+</tr>
+</tbody>
+</table>
+
+<p>在命令行中使用 cURL 的请求模板：</p>
+
+<pre><code>curl --user {UNITY_PROJECT_ID}:{API_KEY} --request POST --header "Content-Type: application/json" --data {REQUEST_JSON}
+https://analytics.cloud.unity3d.com/api/v2/projects/{UNITY_PROJECT_ID}/rawdataexports
+</code></pre>
+
+<p>示例值：</p>
+
+<pre><code>UNITY_PROJECT_ID = aa43ae0a-a7a7-4016-ae96-e253bb126aa8
+API_KEY = 166291ff148b2878375a8e54aebb1549
+REQUEST_JSON = { "startDate": "2016-05-15" , "endDate": "2016-05-16", "format": "tsv", "dataset": "appStart" }
+</code></pre>
+
+<p>一个使用示例值的实际请求：</p>
+
+<pre><code>curl --user aa43ae0a-a7a7-4016-ae96-e253bb126aa8:166291ff148b2878375a8e54aebb1549 --request POST --header "Content-Type: application/json" --data '{ "startDate": "2016-05-15" , "endDate": "2016-05-16", "format": "tsv", "dataset": "appStart" }' https://analytics.cloud.unity3d.com/api/v2/projects/aa43ae0a-a7a7-4016-ae96-e253bb126aa8/rawdataexports
+</code></pre>
+
+<p>响应使用 JSON 格式的通用 Raw Data Export 响应属性。</p>
+
+<h4>Raw Data Export 响应属性</h4>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>响应属性</strong></th>
+	<th style="text-align:left;"><strong>类型</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>id</strong></td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">Raw Data Export ID。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>upid</strong></td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">Unity Project ID。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>createdAt</strong></td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">创建时间（ISO 8601 格式）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>status</strong></td>
+	<td style="text-align:left;">string</td>
+	<td style="text-align:left;">导出的当前状态。可能的值：running、completed 或 failed。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>duration</strong></td>
+	<td style="text-align:left;">Long</td>
+	<td style="text-align:left;">导出数据所用的时间（单位：毫秒）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>request</strong></td>
+	<td style="text-align:left;">Json</td>
+	<td style="text-align:left;">请求参数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>result</strong></td>
+	<td style="text-align:left;">Json</td>
+	<td style="text-align:left;">结果包含的属性可详细说明导出的数据。仅在导出成功完成后，结果才可用。请参阅下文了解结果属性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>result.size</strong></td>
+	<td style="text-align:left;">Long</td>
+	<td style="text-align:left;">导出数据的总大小（单位：字节）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>result.eventCount</strong></td>
+	<td style="text-align:left;">Long</td>
+	<td style="text-align:left;">导出的事件总数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>result.intraDay</strong></td>
+	<td style="text-align:left;">Boolean</td>
+	<td style="text-align:left;">请求包含当前日期时，它可能不会包含当天的所有数据。如果最后一天的数据不完整，该属性为 TRUE。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>result.fileList</strong></td>
+	<td style="text-align:left;">Json</td>
+	<td style="text-align:left;">包含导出数据的文件的列表。没有数据时，文件列表为空。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>result.fileList.name</strong></td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">文件名。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>result.fileList.url</strong></td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">文件的下载 URL。文件采用 gzip 压缩格式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>result.fileList.size</strong></td>
+	<td style="text-align:left;">Long</td>
+	<td style="text-align:left;">文件大小（单位：字节）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>result.fileList.date</strong></td>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;">文件包含此特定日期的事件。此日期基于事件的提交时间。同一日期可能有多个文件。日期采用 ISO 8601 格式。</td>
+</tr>
+</tbody>
+</table>
+
+<p>响应示例：</p>
+
+<pre><code>{  
+   "id":"8228d1e9-31b3-4a5e-aabe-55d9c8afa052",
+   "upid":"beff3f49-b9ed-41a4-91ea-677e9b85e71e",
+   "createdAt":"2016-05-10T10:10:10.100+0000",
+   "status":"running",
+   "duration" : 0,
+   "request":{  
+      "startDate":"2016-05-01",
+      "endDate":"2016-05-02",
+      "format":"json",
+      "dataset":"appRunning"
+   }
+} 
+</code></pre>
+
+<h4>在先前的 Raw Data Export 基础上继续创建</h4>
+
+<p>在运行定期的 Raw Data Export 时，必须提供 continueFrom 参数（而不是 startDate）以确保在先前的 Raw Data Export 基础上继续导出操作。通过 GET API 或 Dashboard 可以获取先前的 Raw Data Export ID。</p>
+
+<figure>
+<img src="../uploads/Main/AnalyticsPriorRawData.png" alt="Unity Analytics Project Dashboard 中先前的 Raw Data Export">
+<figcaption>Unity Analytics Project Dashboard 中先前的 Raw Data Export</figcaption>
+</figure>
+
+<h3>获取 Raw Data Export</h3>
+
+<p>请使用以下 HTTP 方法获取特定的 Raw Data Export 或正在进行的导出的状态：</p>
+
+<pre><code>GET api/v2/projects/{UNITY_PROJECT_ID}/rawdataexports/{raw_data_export_id}
+</code></pre>
+
+<p>所有必需参数都是 URL 路径的一部分。</p>
+
+<p>请求示例：</p>
+
+<pre><code>curl --user {UNITY_PROJECT_ID}:${API_KEY} https://analytics.cloud.unity3d.com/api/v2/projects/{UNITY_PROJECT_ID}/rawdataexports/${ID}
+</code></pre>
+
+<p>响应是采用 JSON 格式的 Raw Data Export。该响应与“创建 Raw Data Export”中的响应相同。</p>
+
+<p>响应示例：</p>
+
+<pre><code>{  
+   "id":"6601f70e-6a0b-48ed-909f-26711af82b49",
+   "status":"completed",
+   "createdAt":"2016-05-21T04:41:54.000+0000",
+   "duration":8631714000,
+   "request":{  
+      "startDate":"2016-02-11T00:00:00.000+0000",
+      "endDate":"2016-03-11T00:00:00.000+0000",
+      "format":"tsv",
+      "dataset":"custom"
+   },
+   "result":{  
+      "size":78355,
+      "eventCount":17473,
+      "fileList":[  
+         {  
+            "name":"headers.gz",
+            "url":"https://uca-export.s3.amazonaws.com/staging/devTest/custom/appid%3DUNITY_PROJECT_ID/jid%3D6601f70e-6a0b-48ed-909f-26711af82b49/headers.gz?AWSAccessKeyId=AKIAJUXGNF66F4XPWSWA&amp;Expires=1463872651&amp;Signature=PnzIeeI%2FNxSOlKkLVpLcfK%2FxVpU%3D",
+            "size":105
+         },
+         {  
+            "name":"part-4b0cf376-3478-4bc8-845e-f73aff5c0be4.gz",
+            "url":"https://uca-export.s3.amazonaws.com/staging/devTest/custom/appid%3DUNITY_PROJECT_ID/jid%3D6601f70e-6a0b-48ed-909f-26711af82b49/part-4b0cf376-3478-4bc8-845e-f73aff5c0be4.gz?AWSAccessKeyId=AKIAJUXGNF66F4XPWSWA&amp;Expires=1463872651&amp;Signature=xZk3%2BzQNTQ6yjK2Mh%2FaH338ABn8%3D",
+            "size":78250,
+            "date":"2016-02-13T00:00:00.000+0000"
+         }
+      ],
+      "intraDay":false
+   }
+} 
+</code></pre>
+
+<h3>列出所有 Raw Data Export</h3>
+
+<p>请使用此 HTTP 方法获取特定项目的所有 Raw Data Export 的列表：</p>
+
+<pre><code>GET api/v2/projects/{UNITY_PROJECT_ID}/rawdataexports
+</code></pre>
+
+<p>所有必需参数都是 URL 路径的一部分。</p>
+
+<p>请求示例：</p>
+
+<pre><code>curl --user {UNITY_PROJECT_ID}:${API_KEY} https://analytics.cloud.unity3d.com/api/v2/projects/${UNITY_PROJECT_ID}/rawdataexports/
+</code></pre>
+
+<p>响应是采用 JSON 格式的 Raw Data Export 的列表。请参阅“Raw Data Export 响应属性”以了解每个导出列表元素的定义。</p>
+
+<p>响应示例：</p>
+
+<pre><code>[
+{  
+   "id":"6601f70e-6a0b-48ed-909f-26711af82b49",
+   "status":"completed",
+   "createdAt":"2016-05-21T04:41:54.000+0000",
+   "duration":8631714000,
+   "request":{  
+      "startDate":"2016-02-11T00:00:00.000+0000",
+      "endDate":"2016-03-11T00:00:00.000+0000",
+      "format":"tsv",
+      "dataset":"custom"
+   },
+   "result":{  
+      "size":78355,
+      "eventCount":17473,
+      "fileList":[  
+         {  
+            "name":"headers.gz",
+            "url":"https://uca-export.s3.amazonaws.com/staging/devTest/custom/appid%3DUNITY_PROJECT_ID/jid%3D6601f70e-6a0b-48ed-909f-26711af82b49/headers.gz?AWSAccessKeyId=AKIAJUXGNF66F4XPWSWA&amp;Expires=1463872651&amp;Signature=PnzIeeI%2FNxSOlKkLVpLcfK%2FxVpU%3D",
+            "size":105
+         },
+         {  
+            "name":"part-4b0cf376-3478-4bc8-845e-f73aff5c0be4.gz",
+            "url":"https://uca-export.s3.amazonaws.com/staging/devTest/custom/appid%3DUNITY_PROJECT_ID/jid%3D6601f70e-6a0b-48ed-909f-26711af82b49/part-4b0cf376-3478-4bc8-845e-f73aff5c0be4.gz?AWSAccessKeyId=AKIAJUXGNF66F4XPWSWA&amp;Expires=1463872651&amp;Signature=xZk3%2BzQNTQ6yjK2Mh%2FaH338ABn8%3D",
+            "size":78250,
+            "date":"2016-02-13T00:00:00.000+0000"
+         }
+      ],
+      "intraDay":false
+   }
+},
+{  
+   "id":"6601f70e-6a0b-48ed-909f-26711af82b48",
+   "status":"completed",
+   "createdAt":"2016-05-21T04:41:54.000+0000",
+   "duration":8631714000,
+   "request":{  
+      "startDate":"2016-02-11T00:00:00.000+0000",
+      "endDate":"2016-03-11T00:00:00.000+0000",
+      "format":"tsv",
+      "dataset":"custom"
+   },
+   "result":{  
+      "size":78355,
+      "eventCount":17473,
+      "fileList":[  
+         {  
+            "name":"headers.gz",
+            "url":"https://uca-export.s3.amazonaws.com/staging/devTest/custom/appid%3DUNITY_PROJECT_ID/jid%3D6601f70e-6a0b-48ed-909f-26711af82b48/headers.gz?AWSAccessKeyId=AKIAJUXGNF66F4XPWSWA&amp;Expires=1463872651&amp;Signature=PnzIeeI%2FNxSOlKkLVpLcfK%2FxVpU%3D",
+            "size":105
+         },
+         {  
+            "name":"part-4b0cf376-3478-4bc8-845e-f73aff5c0be4.gz",
+            "url":"https://uca-export.s3.amazonaws.com/staging/devTest/custom/appid%3DUNITY_PROJECT_ID/jid%3D6601f70e-6a0b-48ed-909f-26711af82b48/part-4b0cf376-3478-4bc8-845e-f73aff5c0be4.gz?AWSAccessKeyId=AKIAJUXGNF66F4XPWSWA&amp;Expires=1463872651&amp;Signature=xZk3%2BzQNTQ6yjK2Mh%2FaH338ABn8%3D",
+            "size":78250,
+            "date":"2016-02-13T00:00:00.000+0000"
+         }
+      ],
+      "intraDay":false
+   }
+}
+]
+</code></pre>
+
+<h3>TSV 格式</h3>
+
+<p>如果选择以 TSV 格式导出，则会在 <strong>headers.gz</strong> 的单独文件中提供头部。数据文件不包含头部。</p>
+
+<p>示例头部文件：</p>
+
+<pre><code>ts  appid   type    userid  sessionid   platform    sdk_ver debug_device    user_agent  submit_time name    custom_params
+</code></pre>
+
+<h3>数据集</h3>
+
+<p>六种数据类型（事件类型）各不相同。请参阅下文了解模式定义。</p>
+
+<p><strong>注意：</strong></p>
+
+<ul>
+<li>
+<code>ts</code> 是设备上生成事件的时间戳。请注意，由于设备时钟和接收事件的延迟，设备生成的时间戳可能会有偏差。</li>
+<li>
+<code>submit_time</code> 是 Unity Analytics 接收事件的时间戳。</li>
+<li>如果记录中的某个字段没有数据，该字段的值将设置为该字段的数据类型的默认值（数字为 <code>0</code>，字符串为 <code>""</code>，布尔值为 <code>false</code>）。JSON 格式导出中的嵌套字段（例如 IAP <code>TransactionEvent.receipt</code> 字段）是此策略的一种例外情况。在采用嵌套字段的 JSON 格式导出中，任何未包含数据的字段都不会包含在该记录的 JSON 对象中。</li>
+</ul>
+
+<h4>AppStart 事件</h4>
+
+<pre><code>{
+   "namespace":"com.unity.analytics.commons.schema",
+   "name":"AppStartEvent",
+   "type":"record",
+   "fields":[
+       {"name": "ts",   "type": "long", "default": 0}, 
+       {"name": "appid", "type": "string", "default": ""},
+       {"name": "type", "type": "string", "default": ""}, 
+       {"name": "userid", "type": "string", "default": ""},
+       {"name": "sessionid", "type": "string", "default": ""},
+       {"name": "platform", "type": "string", "default": ""},
+       {"name": "sdk_ver", "type": "string", "default": ""},
+       {"name": "debug_device", "type": "boolean", "default": false},
+       {"name": "user_agent", "type": "string", "default": ""},
+       {"name": "submit_time", "type": "long", "default": 0} 
+   ]
+}  
+</code></pre>
+
+<h4>AppRunning 事件</h4>
+
+<pre><code>{
+   "namespace":"com.unity.analytics.commons.schema",
+   "name":"AppRunningEvent",
+   "type":"record",
+   "fields":[
+       {"name": "ts",   "type": "long", "default": 0}, 
+       {"name": "appid", "type": "string", "default": ""},
+       {"name": "type", "type": "string", "default": ""},
+       {"name": "userid", "type": "string", "default": ""},
+       {"name": "sessionid", "type": "string", "default": ""},
+       {"name": "platform", "type": "string", "default": ""},
+       {"name": "sdk_ver", "type": "string", "default": ""},
+       {"name": "debug_device", "type": "boolean", "default": false},
+       {"name": "user_agent", "type": "string", "default": ""},
+       {"name": "submit_time", "type": "long", "default": 0}, 
+       {"name": "duration", "type": "int", "default": 0}
+   ]
+}
+</code></pre>
+
+<h4>自定义事件</h4>
+
+<pre><code>{
+   "namespace":"com.unity.analytics.commons.schema",
+   "name":"CustomEvent",
+   "type":"record",
+   "fields":[
+       {"name": "ts",   "type": "long", "default": 0}, 
+       {"name": "appid", "type": "string", "default": ""},
+       {"name": "type", "type": "string", "default": ""},
+       {"name": "userid", "type": "string", "default": ""},
+       {"name": "sessionid", "type": "string", "default": ""},
+       {"name": "platform", "type": "string", "default": ""},
+       {"name": "sdk_ver", "type": "string", "default": ""},
+       {"name": "debug_device", "type": "boolean", "default": false},
+       {"name": "user_agent", "type": "string", "default": ""},
+       {"name": "submit_time", "type": "long", "default": 0}, 
+       {"name": "name", "type": "string", "default": ""},
+       {
+           "name":"custom_params",
+           "type":["null",{
+               "type":"map",
+               "values": ["string","null"],
+               "default": ""
+           }],
+           "default": null
+       }
+   ]
+}
+</code></pre>
+
+<h4>DeviceInfo 事件</h4>
+
+<pre><code>{
+   "namespace":"com.unity.analytics.commons.schema",
+   "name":"DeviceInfoEvent",
+   "type":"record",
+   "fields":[
+       {"name": "ts",   "type": "long", "default": 0}, 
+       {"name": "appid", "type": "string", "default": ""},
+       {"name": "type", "type": "string", "default": ""}, 
+       {"name": "userid", "type": "string", "default": ""},
+       {"name": "sessionid", "type": "string", "default": ""},
+       {"name": "platform", "type": "string", "default": ""},
+       {"name": "sdk_ver", "type": "string", "default": ""},
+       {"name": "debug_device", "type": "boolean", "default": false},
+       {"name": "user_agent", "type": "string", "default": ""},
+       {"name": "submit_time", "type": "long", "default": 0}, 
+       {"name": "debug_build", "type": "boolean", "default": false},
+       {"name": "rooted_jailbroken", "type": "boolean", "default": false},
+       {"name": "processor_type", "type": "string", "default": ""},
+       {"name": "system_memory_size", "type": "string", "default": ""},
+       {"name": "make", "type": "string", "default": ""},
+       {"name": "app_ver", "type": "string", "default": ""},
+       {"name": "license_type", "type": "string", "default": ""},
+       {"name": "app_install_mode", "type": "string", "default": ""},
+       {"name": "model", "type": "string", "default": ""},
+       {"name": "engine_ver", "type": "string", "default": ""},
+       {"name": "os_ver", "type": "string", "default": ""},
+       {"name": "app_name", "type": "string", "default": ""},
+       {"name": "timezone", "type": "string", "default": ""},
+       {"name": "ads_tracking", "type": "boolean", "default": false}
+   ]
+}  
+</code></pre>
+
+<h4>交易事件</h4>
+
+<pre><code>{
+   "namespace":"com.unity.analytics.commons.schema",
+   "name":"TransactionEvent",
+   "type":"record",
+   "fields":[
+       {"name": "ts",   "type": "long", "default": 0},
+       {"name": "appid", "type": "string", "default": ""},
+       {"name": "type", "type": "string", "default": ""},
+       {"name": "userid", "type": "string", "default": ""},
+       {"name": "sessionid", "type": "string", "default": ""},
+       {"name": "platform", "type": "string", "default": ""},
+       {"name": "sdk_ver", "type": "string", "default": ""},
+       {"name": "debug_device", "type": "boolean", "default": false},
+       {"name": "user_agent", "type": "string", "default": ""},
+       {"name": "submit_time", "type": "long", "default": 0},        {
+           "name":"receipt",
+           "type":["null",{
+               "type":"record",
+               "name": "receiptRecord",
+               "fields":[
+                   {"name": "data", "type": "string", "default": ""},
+                   {"name": "signature", "type": "string", "default": ""}
+               ]
+           }],
+           "default": null
+       },
+       {"name": "currency", "type": "string", "default": "USD"},
+       {"name": "amount", "type": "float", "default": 0},
+       {"name": "transactionid", "type": "long", "default": 0},
+       {"name": "productid", "type": "string", "default": ""}
+   ]
+}
+</code></pre>
+
+<h1>字典</h1>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">数据字段</th>
+	<th style="text-align:left;">定义</th>
+	<th style="text-align:left;">数据集</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">ts</td>
+	<td style="text-align:left;">设备上生成事件的时间戳（单位：毫秒）。请注意，由于设备时钟和接收事件的延迟，设备生成的时间戳可能会有偏差</td>
+	<td style="text-align:left;">所有数据集</td>
+</tr>
+<tr>
+	<td style="text-align:left;">appid</td>
+	<td style="text-align:left;">分配给 Unity Analytics Dashboard 上的每个应用程序的 ID</td>
+	<td style="text-align:left;">所有数据集</td>
+</tr>
+<tr>
+	<td style="text-align:left;">type</td>
+	<td style="text-align:left;">查询的事件类型（即 Custom、DeviceInfo、Transaction 等）</td>
+	<td style="text-align:left;">所有数据集</td>
+</tr>
+<tr>
+	<td style="text-align:left;">userid</td>
+	<td style="text-align:left;">Unity Analytics 为 userid 生成的标识符</td>
+	<td style="text-align:left;">所有数据集</td>
+</tr>
+<tr>
+	<td style="text-align:left;">sessionid</td>
+	<td style="text-align:left;">Unity Analytics 为会话生成的标识符。如果游戏在处于未活动状态超过 30 分钟后重新打开，则会生成新的会话 ID</td>
+	<td style="text-align:left;">所有数据集</td>
+</tr>
+<tr>
+	<td style="text-align:left;">remote_ip</td>
+	<td style="text-align:left;">The IP address that the session was played from. Note that this field has been removed and is no longer available</td>
+	<td style="text-align:left;">Not used</td>
+</tr>
+<tr>
+	<td style="text-align:left;">platform</td>
+	<td style="text-align:left;">启动会话的平台</td>
+	<td style="text-align:left;">所有数据集</td>
+</tr>
+<tr>
+	<td style="text-align:left;">sdk_ver</td>
+	<td style="text-align:left;">用于此事件的 Unity Analytics SDK 版本。如果 sdk_ver 以 “u” 开头，则表示其来自 Analytics 工具构建的引擎。否则，它来自 Unity 5.2 以下版本的 Analytics 插件</td>
+	<td style="text-align:left;">所有数据集</td>
+</tr>
+<tr>
+	<td style="text-align:left;">debug_device</td>
+	<td style="text-align:left;">这是一个布尔值，显示事件是否是从开发版本发送的。对于来自 Unity Editor 的事件，设置为 TRUE</td>
+	<td style="text-align:left;">所有数据集</td>
+</tr>
+<tr>
+	<td style="text-align:left;">user_agent</td>
+	<td style="text-align:left;">User-Agent request-header 字段</td>
+	<td style="text-align:left;">所有数据集</td>
+</tr>
+<tr>
+	<td style="text-align:left;">submit_time</td>
+	<td style="text-align:left;">Unity Analytics 收到事件的时间戳（单位：毫秒）</td>
+	<td style="text-align:left;">所有数据集</td>
+</tr>
+<tr>
+	<td style="text-align:left;">duration</td>
+	<td style="text-align:left;">此会话已运行的持续时间（秒数），由 SDK 计算得出</td>
+	<td style="text-align:left;">AppRunning</td>
+</tr>
+<tr>
+	<td style="text-align:left;">name</td>
+	<td style="text-align:left;">The name of the Custom Event (e.g. “LevelComplete”)</td>
+	<td style="text-align:left;">Custom</td>
+</tr>
+<tr>
+	<td style="text-align:left;">custom_params</td>
+	<td style="text-align:left;">自定义事件参数及其相应值的列表。</td>
+	<td style="text-align:left;">Custom</td>
+</tr>
+<tr>
+	<td style="text-align:left;">receipt</td>
+	<td style="text-align:left;">包括平台应用商店（例如 App Store 和 Google Play）返回的数据</td>
+	<td style="text-align:left;">Transaction</td>
+</tr>
+<tr>
+	<td style="text-align:left;">currency</td>
+	<td style="text-align:left;">采用 ISO 4217 代码格式的付款货币代码（例如：USD、EUR、CAD 等）</td>
+	<td style="text-align:left;">Transaction</td>
+</tr>
+<tr>
+	<td style="text-align:left;">amount</td>
+	<td style="text-align:left;">所用货币的总金额（十进制）</td>
+	<td style="text-align:left;">Transaction</td>
+</tr>
+<tr>
+	<td style="text-align:left;">transactionid</td>
+	<td style="text-align:left;">Unique identifier for this transaction, set by SDK. Each transaction is given a unique ID, not to be confused with the store’s transaction ID</td>
+	<td style="text-align:left;">Transaction</td>
+</tr>
+<tr>
+	<td style="text-align:left;">productid</td>
+	<td style="text-align:left;">特定于商店的应用内购 (IAP) 商品标识符（例如 com.mygame.100coins）</td>
+	<td style="text-align:left;">Transaction</td>
+</tr>
+<tr>
+	<td style="text-align:left;">debug_build</td>
+	<td style="text-align:left;">这是一个布尔值，显示事件是否是从开发版本发送的。对于来自 Unity Editor 的事件，设置为 TRUE</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">rooted_jailbroken</td>
+	<td style="text-align:left;">这是一个布尔值，对于经过 root/越狱操作的手机，设置为 TRUE，正常手机则不设置</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">processor_type</td>
+	<td style="text-align:left;">设备处理器类型</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">system_memory_size</td>
+	<td style="text-align:left;">设备系统内存</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">make</td>
+	<td style="text-align:left;">设备的制造商（例如：“OSXEditor”）</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">app_ver</td>
+	<td style="text-align:left;">应用程序的版本（例如：“1.0”）</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">deviceid</td>
+	<td style="text-align:left;">A unique device identifier. Note that this field has been removed and is no longer available.</td>
+	<td style="text-align:left;">Not used</td>
+</tr>
+<tr>
+	<td style="text-align:left;">license_type</td>
+	<td style="text-align:left;">Type of license (eg. “advanced_pro”)</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">app_install_mode</td>
+	<td style="text-align:left;">显示是通过应用商店 (“store”)、adhoc (“adhoc”)、开发者安装 (“dev_release”)、模拟器 (“simulator”) 还是企业 (“enterprise”) 安装的应用程序</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">model</td>
+	<td style="text-align:left;">设备型号（例如：“MacBookPro11,3”）</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">engine_ver</td>
+	<td style="text-align:left;">Unity 引擎版本（例如：“5.5.0a3”）</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">os_ver</td>
+	<td style="text-align:left;">操作系统版本（例如：“Mac OS X 10.11.5”）</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">app_name</td>
+	<td style="text-align:left;">Bundle ID 或包名（例如：“com.Company.ProductName”）</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">timezone</td>
+	<td style="text-align:left;">ISO code (eg. “GMT–7”)</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">ads_tracking</td>
+	<td style="text-align:left;">这是一个布尔值，表示用户是否限制了广告跟踪</td>
+	<td style="text-align:left;">DeviceInfo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">adsid</td>
+	<td style="text-align:left;">Advertising Id. On iOS, collected when Unity Ads is enabled. On Android, all the time. Note that this field has been removed and is no longer available.</td>
+	<td style="text-align:left;">Not used</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–06–28 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">2018–08–01 - Removed remote_ip field. It is no longer available.</span></p></li>
+<li>
+<li><p><span class="page-history">2018–06–28 - Removed UserInfo event.</span></p></li>
+<li><p><span class="page-history">2018–06–04 - Removed deviceid and adsid from DeviceInfo event. Deprecated UserInfo event.</span></p></li>
+<li><p><span class="page-history">2017–06–21 - 在 Unity <a href="https://docs.unity3d.com/2017.1/Documentation/Manual/30_search.html?q=newin20171">2017.1</a> 中已更改将空嵌套字段包含在 JSON 导出中的做法 <span class="search-words">NewIn20171</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsUserAttributes.html"></a></span><div class="tip">用户属性</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsDataReset.html"></a></span><div class="tip">数据重置</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

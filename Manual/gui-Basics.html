@@ -1,0 +1,399 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="IMGUI 基础知识 - Unity Manual">
+<title>IMGUI 基础知识 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/guiScripting-BasicsLoaderMenuExample.png">
+<meta name="description" content="本部分将介绍使用 Unity 的即时模式 GUI 系统 (IMGUI) 来编写__控件__脚本的必要条件。">
+<meta property="og:description" content="本部分将介绍使用 Unity 的即时模式 GUI 系统 (IMGUI) 来编写__控件__脚本的必要条件。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'gui-Basics';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/gui-Basics.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/gui-Basics.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/gui-Basics.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/gui-Basics.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/gui-Basics.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/gui-Basics.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/gui-Basics.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/gui-Basics.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/gui-Basics.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/gui-Basics.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/gui-Basics.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/gui-Basics.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/gui-Basics.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/gui-Basics.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/gui-Basics.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/gui-Basics.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/gui-Basics.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/gui-Basics.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/gui-Basics.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/gui-Basics.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/gui-Basics.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/gui-Basics.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/gui-Basics.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/gui-Basics.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UIToolkits.html">UI</a></li>
+<li><a href="GUIScriptingGuide.html">即时模式 GUI (IMGUI)</a></li>
+<li>IMGUI 基础知识</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="GUIScriptingGuide.html"></a></span><div class="tip">即时模式 GUI (IMGUI)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="gui-Controls.html"></a></span><div class="tip">控件</div>
+</div>
+</div></div>
+<h1>IMGUI 基础知识</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>本部分将介绍使用 Unity 的即时模式 GUI 系统 (IMGUI) 来编写__控件__脚本的必要条件。</p>
+
+<h2>使用 IMGUI 创建控件</h2>
+
+<p>Unity 的 IMGUI 控件使用一个名为 <strong>OnGUI()</strong> 的特殊函数。只要启用包含脚本，就会在每帧调用 <strong>OnGUI()</strong> 函数，就像 <strong>Update()</strong> 函数一样。</p>
+
+<p>IMGUI 控件本身结构非常简单。此结构如以下示例中所示。</p>
+
+<pre><code>/* Example level loader */
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour {
+            
+    void OnGUI ()
+    {
+        // Make a background box
+        GUI.Box(new Rect(10,10,100,90), "Loader Menu");
+    
+        // Make the first button. If it is pressed, Application.Loadlevel (1) will be executed
+        if(GUI.Button(new Rect(20,40,80,20), "Level 1"))
+        {
+            Application.LoadLevel(1);
+        }
+    
+        // Make the second button.
+        if(GUI.Button(new Rect(20,70,80,20), "Level 2")) 
+        {
+            Application.LoadLevel(2);
+        }
+    }
+}
+</code></pre>
+
+<p>此示例是一个可运行的完整关卡加载程序。如果复制/粘贴此脚本并将其附加到__游戏对象__，则在进入__播放模式__时，将显示以下菜单：</p>
+
+<figure>
+<img src="../uploads/Main/guiScripting-BasicsLoaderMenuExample.png" alt="示例代码创建的 Loader Menu">
+<figcaption>示例代码创建的 Loader Menu</figcaption>
+</figure>
+
+<p>让我们仔细研究一下示例代码：</p>
+
+<p>第一个 GUI 行 <strong>GUI.Box (Rect (10,10,100,90), “Loader Menu”);</strong> 将显示一个标题文本为 “Loader Menu” 的 <strong>Box</strong> 控件。该语句遵循典型的 GUI 控件声明模式（我们接下来马上探讨此主题）。</p>
+
+<p>下一个 GUI 行是 <strong>Button</strong> 控件声明。请注意，该声明与 Box 控件声明略有不同。具体而言，整个 Button 声明都位于 <strong>if</strong> 语句内。当游戏运行并单击 Button 时，此 <strong>if</strong> 语句返回 true，并执行 <strong>if</strong> 代码块中的所有代码。</p>
+
+<p>由于每帧都会调用 <strong>OnGUI()</strong> 代码，因此无需显式创建和销毁 GUI 控件。声明控件的行与创建控件的行是同一行。如果需要在特定时间显示控件，可以使用任何类型的脚本逻辑来执行此操作。</p>
+
+<pre><code>/* Flashing button example */
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour
+{
+            
+    void OnGUI () 
+    {
+        if (Time.time % 2 &lt; 1) 
+        {
+            if (GUI.Button (new Rect (10,10,200,20), "Meet the flashing button"))
+            {
+                print ("You clicked me!");
+            }
+        }
+    }
+}
+</code></pre>
+
+<p>此处，每隔一秒才调用一次 <strong>GUI.Button()</strong>，因此按钮会出现再消失。当然，用户只能在按钮可见时单击按钮。</p>
+
+<p>如您所见，可使用任何所需的逻辑来控制 GUI 控件的显示和运行时间。现在我们将探讨每个控件的声明的细节。</p>
+
+<h2>控件剖析</h2>
+
+<p>声明 GUI 控件时，需要三段关键信息：</p>
+
+<p><strong>Type</strong> (<strong>Position</strong>, <strong>Content</strong>)</p>
+
+<p>可以看到，此结构是一个带有两个参数的函数。我们现在将探讨此结构的细节。</p>
+
+<h3>Type</h3>
+
+<p><strong>Type</strong> 是指 <strong>Control Type（控件类型）__；通过调用 Unity 的 <a href="../ScriptReference/GUI.html">GUI 类</a>或 <a href="../ScriptReference/GUILayout.html">GUILayout 类</a>中的函数来声明该类型（在本指南的<a href="gui-Layout.html">布局模式</a>部分对此进行了详细讨论）。例如，__GUI.Label()</strong> 将创建非交互式标签。本指南稍后的<a href="gui-Controls.html">控件</a>部分将介绍所有不同的控件类型。</p>
+
+<h3>Position</h3>
+
+<p><strong>Position</strong> 是所有 <strong>GUI</strong> 控件函数中的第一个参数。此参数本身随附一个 <strong>Rect()</strong> 函数。<strong>Rect()</strong> 定义四个属性：__最左侧位置<strong>、</strong>最顶部位置<strong>、</strong>总宽度<strong>、</strong>总高度<strong>。所有这些值都以__整数__提供，对应于像素值。所有 UnityGUI 控件均在__屏幕空间 (Screen Space)</strong> 中工作，此空间表示已发布的播放器的分辨率（以像素为单位）。</p>
+
+<p>坐标系基于左上角。<strong>Rect(10, 20, 300, 100)</strong> 定义一个从坐标 10,20 开始到坐标 310,120 结束的矩形。值得再次强调的是，__Rect()__ 中的第二对值是总宽度和高度，而不是控件结束的坐标。这就是为什么上面提到的例子结束于 310,120 而不是 300,100。</p>
+
+<p>可使用 <strong>Screen.width</strong> 和 <strong>Screen.height</strong> 属性来获取播放器中可用的屏幕空间的总尺寸。以下示例可能有助于解释如何完成此操作：</p>
+
+<pre><code>/* Screen.width &amp; Screen.height example */
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour 
+{
+            
+    void OnGUI()
+    {
+        GUI.Box (new Rect (0,0,100,50), "Top-left");
+        GUI.Box (new Rect (Screen.width - 100,0,100,50), "Top-right");
+        GUI.Box (new Rect (0,Screen.height - 50,100,50), "Bottom-left");
+        GUI.Box (new Rect (Screen.width - 100,Screen.height - 50,100,50), "Bottom-right");
+    }
+
+}
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/gsg-ScreenWidthHeight.png" alt="由以上示例定位的框形">
+<figcaption>由以上示例定位的框形</figcaption>
+</figure>
+
+<h3>Content</h3>
+
+<p>GUI 控件的第二个参数是要与控件一起显示的实际内容。通常会希望在控件上显示一些文本或图像。要显示文本，请将字符串作为 Content 参数传递，如下所示：</p>
+
+<pre><code>using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour 
+{
+    void OnGUI ()
+    {
+        GUI.Label (new Rect (0,0,100,50), "This is the text string for a Label Control");
+    }
+}
+</code></pre>
+
+<p>要显示图像，请声明 <strong>Texture2D</strong> 公共变量，并将变量名称作为 Content 参数传递，如下所示：</p>
+
+<pre><code>/* Texture2D Content example */
+public Texture2D controlTexture;
+  ...
+
+void OnGUI () 
+{
+    GUI.Label (new Rect (0,0,100,50), controlTexture);
+}
+</code></pre>
+
+<p>以下是更接近真实情况的示例：</p>
+
+<pre><code>/* Button Content examples */
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour
+{
+    public Texture2D icon;
+    
+    void OnGUI () 
+    {
+        if (GUI.Button (new Rect (10,10, 100, 50), icon)) 
+        {
+            print ("you clicked the icon");
+        }
+    
+        if (GUI.Button (new Rect (10,70, 100, 20), "This is text")) 
+        {
+            print ("you clicked the text button");
+        }
+    }
+}
+</code></pre>
+
+<figure>
+<img src="../uploads/Main/gsg-IconStringContent.png" alt="由以上示例创建的按钮">
+<figcaption>由以上示例创建的按钮</figcaption>
+</figure>
+
+<p>此外还可通过第三个选项在 GUI 控件中一起显示图像和文本。为此，可提供 <strong>GUIContent</strong> 对象作为 Content 参数，并定义要在 GUIContent 中显示的字符串和图像。</p>
+
+<pre><code>/* Using GUIContent to display an image and a string */
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour
+{
+    public Texture2D icon;
+
+    void OnGUI () 
+    {
+        GUI.Box (new Rect (10,10,100,50), new GUIContent("This is text", icon));
+    }
+}
+</code></pre>
+
+<p>此外，还可在 GUIContent 中定义__工具提示 (Tooltip)__，当鼠标悬停在 GUI 上时将工具提示显示在 GUI 中的其他位置。</p>
+
+<pre><code>/* Using GUIContent to display a tooltip */
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour 
+{
+    void OnGUI () 
+    {
+        // This line feeds "This is the tooltip" into GUI.tooltip
+        GUI.Button (new Rect (10,10,100,20), new GUIContent ("Click me", "This is the tooltip"));
+        
+        // This line reads and displays the contents of GUI.tooltip
+        GUI.Label (new Rect (10,40,100,20), GUI.tooltip);
+    }
+}
+</code></pre>
+
+<p>You can also use GUIContent to display a string, an icon, and a tooltip.</p>
+
+<pre><code>/* Using GUIContent to display an image, a string, and a tooltip */
+using UnityEngine;
+using System.Collections;
+
+public class GUITest : MonoBehaviour 
+{
+    public Texture2D icon;
+    
+    void OnGUI () 
+    {
+        GUI.Button (new Rect (10,10,100,20), new GUIContent ("Click me", icon, "This is the tooltip"));
+        GUI.Label (new Rect (10,40,100,20), GUI.tooltip);
+    }
+}
+</code></pre>
+
+<p><a href="../ScriptReference/GUIContent-ctor.html">GUIContent 构造函数</a>的脚本参考页面提供了一些用法示例。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="GUIScriptingGuide.html"></a></span><div class="tip">即时模式 GUI (IMGUI)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="gui-Controls.html"></a></span><div class="tip">控件</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

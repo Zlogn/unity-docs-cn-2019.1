@@ -1,0 +1,323 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="将应用程序提交到 Mac App Store - Unity Manual">
+<title>将应用程序提交到 Mac App Store - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/AppleMacStore.jpg">
+<meta name="description" content="本页面介绍将应用程序提交到 Mac App Store 的过程。">
+<meta property="og:description" content="本页面介绍将应用程序提交到 Mac App Store 的过程。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'HOWTO-PortToAppleMacStore';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/HOWTO-PortToAppleMacStore.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/HOWTO-PortToAppleMacStore.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/HOWTO-PortToAppleMacStore.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/HOWTO-PortToAppleMacStore.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/HOWTO-PortToAppleMacStore.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/HOWTO-PortToAppleMacStore.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/HOWTO-PortToAppleMacStore.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/HOWTO-PortToAppleMacStore.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/HOWTO-PortToAppleMacStore.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/HOWTO-PortToAppleMacStore.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/HOWTO-PortToAppleMacStore.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/HOWTO-PortToAppleMacStore.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/HOWTO-PortToAppleMacStore.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/HOWTO-PortToAppleMacStore.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/HOWTO-PortToAppleMacStore.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/HOWTO-PortToAppleMacStore.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/HOWTO-PortToAppleMacStore.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/HOWTO-PortToAppleMacStore.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/HOWTO-PortToAppleMacStore.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/HOWTO-PortToAppleMacStore.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/HOWTO-PortToAppleMacStore.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/HOWTO-PortToAppleMacStore.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/HOWTO-PortToAppleMacStore.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/HOWTO-PortToAppleMacStore.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
+<li><a href="AppleMac.html">macOS</a></li>
+<li>将应用程序提交到 Mac App Store</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="macOSPlayerCPlusPlusSourceCodePluginsForIL2CPP.html"></a></span><div class="tip">macOS 播放器：适用于 IL2CPP 的 C++ 源代码插件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AppleTV.html"></a></span><div class="tip">Apple TV</div>
+</div>
+</div></div>
+<h1>将应用程序提交到 Mac App Store</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>本页面介绍将应用程序提交到 Mac App Store 的过程。</p>
+
+<figure>
+<img src="../uploads/Main/AppleMacStore.jpg" alt="">
+</figure>
+
+<p>首先，需要确保在密钥链中安装了正确的配置文件：“3rd Party Mac Developer Application”和“3rd Party Mac Developer Installer”配置文件。请参阅 Apple 开发者文档中的<a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html">维护签名身份和证书 (Maintaining Your Signing Identities and Certificates)</a> 部分以了解如何执行此操作。</p>
+
+<p>Go to <strong>Edit</strong> &gt; <strong>Project Settings</strong> and select the <a href="class-PlayerSettings.html">Player</a> category. Select the <a href="class-PlayerSettingsStandalone.html">Standalone</a> target, expand the <strong>Other Settings</strong> section and navigate to <strong>Mac App Store Options</strong>. </p>
+
+<p>Unity automatically applies these settings to your app’s <em>info.plist</em> file as CF keys (see <a href="https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#/apple_ref/doc/uid/20001431-111349">Apple’s developer documentation on Core Foundation Keys</a> to learn more).</p>
+
+<figure>
+<img src="../uploads/Main/DeliverAppMacStore1.png" alt="Mac App Store Options">
+<figcaption>Mac App Store Options</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Bundle Identifier</strong></td>
+	<td style="text-align:left;">Enter the Bundle Identifier of your iTunesConnect App. This appears as <code>CFBundleIdentifier</code> in the associated <em>info.plist</em> file.<br><br> See the Apple developer documentation on <a href="https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#/apple_ref/doc/uid/20001431-102070">CFBundleIdentifier</a> to learn more.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Build</strong></td>
+	<td style="text-align:left;">Enter the build number for this version of your app. This appears as <code>CFBundleVersion</code> in the associated <em>info.plist</em> file.<br><br> See the Apple developer documentation on <a href="https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364">CFBundleVersion</a> to learn more.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Category</strong></td>
+	<td style="text-align:left;">Enter the string corresponding to the app’s type. The App Store uses this string to determine the appropriate categorization for the app. By default, this is set to the game category, <code>public.app-category.games</code>. <br><br> See the Apple developer documentation on <a href="https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html#//apple_ref/doc/uid/TP40009250-SW8">LSApplicationCategoryType</a> to see the list of category types available.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Mac App Store Validation</strong></td>
+	<td style="text-align:left;">通过启用此属性，可确保只有当应用程序包含来自 Mac App Store 的有效收据时才会运行。这样可以防止用户不在购买游戏的设备上而在另一台设备上运行游戏。仅当您已实施自己的收据验证时，才应禁用此设置。</td>
+</tr>
+</tbody>
+</table>
+
+<p>Enable the <strong>Mac App Store Validation</strong> setting, then build your app (<strong>File</strong> &gt; <strong>Build Settings…</strong> &gt; <strong>Build</strong>).</p>
+
+<p>接下来，需要创建一个 <code>GAMENAME.entitlements</code> 文件，并将其保存在任意位置。为此，最简单的方法是创建一个空的 Mac 应用程序。要执行此操作，请打开 Xcode，使用 macOS 模板创建一个新项目，转到 Capabilities 栏，并启用 App Sandbox。这样就会自动生成基本的 .entitlements 文件。</p>
+
+<pre><code>
+ &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+  &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+
+  &lt;plist version="1.0"&gt;
+
+  &lt;dict&gt;
+
+  &lt;key&gt;com.apple.security.app-sandbox&lt;/key&gt; &lt;true/&gt;
+
+  &lt;/dict&gt;
+
+  &lt;/plist&gt;
+
+</code></pre>
+
+<p>在 Xcode（或任意文本编辑器）中打开 <em>info.plist</em> 文件，并添加以下键：</p>
+
+<pre><code>&lt;key&gt;LSApplicationCategoryType&lt;/key&gt;
+
+&lt;string&gt;{VALID APP CATEGORY, e.g.: public.app-category.kids-games }&lt;/string&gt;
+
+&lt;key&gt;CFBundleSignature&lt;/key&gt;
+
+&lt;string&gt;{4 LETTER CREATOR CODE, e. g.:  GMAD }&lt;/string&gt;
+</code></pre>
+
+<p>如果使用的是 Xcode 8.0+，还需要将以下字段添加到 <em>info.plist</em> 文件中：</p>
+
+<pre><code>&lt;key&gt;CFBundleSupportedPlatforms&lt;/key&gt;
+
+    &lt;array&gt;
+    
+        &lt;string&gt;MacOSX&lt;/string&gt;
+        
+    &lt;/array&gt; 
+</code></pre>
+
+<p>接下来，修复 .app 中所有内容的读取权限。要执行此操作，请将以下内容添加到 macOS 终端：</p>
+
+<pre><code> chmod -R a+xr "/path/to/GAMENAME.app"
+</code></pre>
+
+<p>使用先前创建的 .entitlements 对 .App 进行签名。要执行此操作，请将以下内容添加到 macOS 终端：</p>
+
+<pre><code> codesign -f --deep -s '3rd Party Mac Developer Application: DEVELOPER NAME' --entitlements "GAMENAME.entitlements" "/AppPath/GAMENAME.app"
+</code></pre>
+
+<p>构建安装程序/pkg。要执行此操作，请将以下内容添加到 macOS 终端：</p>
+
+<pre><code> productbuild --component GAMENAME.app /Applications --sign "3rd Party Mac Developer Installer: DEVELOPER NAME" GAMENAME.pkg
+</code></pre>
+
+<p>最后，使用 Xcode ApplicationLoader 提交应用程序。</p>
+
+<h2>Custom Icons</h2>
+
+<p>By default, Unity downsizes the icon image that you specified on the <strong>Icon</strong> panel of the <strong>Player</strong> settings (open <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Player</strong> category) to generate an .icns file. This defines how your app’s icon appears in the macOS Finder and in the OS dock. However, you can replace it with a custom icon set if you want to.</p>
+
+<ul>
+<li>创建一个文件夹并将其命名为 <em>UnityPlayer.iconset</em>（或者是在 <em>info.plist</em> 的 <code>CFBundleIconFile/Icon File</code> 字段中设置的任何名称），然后在其中放入以下名称的图像。请注意，此文件夹必须具有 .iconset 扩展名。</li>
+</ul>
+
+<pre><code>    icon_16x16.png
+
+        icon_16x16@2x.png
+
+        icon_32x32.png
+
+        icon_32x32@2x.png
+
+        icon_128x128.png
+
+        icon_128x128@2x.png
+
+        icon_256x256.png
+
+        icon_256x256@2x.png
+
+        icon_512x512.png
+
+        icon_512x512@2x.png
+</code></pre>
+
+<p>确保 <code>@2x.png</code> 图像的大小是文件名中规定大小的两倍。例如，图像 <code>512x512@2x.png</code> 为 1024x1024 的图像。从 macOS 终端，导航到 .iconset 目录所在的目录，然后输入以下命令：</p>
+
+<pre><code>    iconutil -c icns UnityPlayer.iconset
+</code></pre>
+
+<p>最后，右键单击 .app 文件，然后选择 __Show Contents__，并将 <em>iconset.icns</em> 替换为先前创建的文件。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–05–18 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">5.6 版中的更新功能</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="macOSPlayerCPlusPlusSourceCodePluginsForIL2CPP.html"></a></span><div class="tip">macOS 播放器：适用于 IL2CPP 的 C++ 源代码插件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AppleTV.html"></a></span><div class="tip">Apple TV</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

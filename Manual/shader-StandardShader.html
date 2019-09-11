@@ -1,0 +1,209 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="标准着色器 - Unity Manual">
+<title>标准着色器 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/StandardShaderIntroVikingScene.jpg">
+<meta name="description" content="Unity 标准着色器是一个包含一整套功能的内置着色器。此着色器可用于渲染&amp;#8220;真实世界&amp;#8221;的对象，如石头、木头、玻璃、塑料和金属，并支持各种着色器类型和组合。只需在材质编辑器中使用或不使用各种纹理字段和参数即可启用或禁用此着色器的功能。">
+<meta property="og:description" content="Unity 标准着色器是一个包含一整套功能的内置着色器。此着色器可用于渲染&amp;#8220;真实世界&amp;#8221;的对象，如石头、木头、玻璃、塑料和金属，并支持各种着色器类型和组合。只需在材质编辑器中使用或不使用各种纹理字段和参数即可启用或禁用此着色器的功能。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'shader-StandardShader';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/shader-StandardShader.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/shader-StandardShader.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/shader-StandardShader.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/shader-StandardShader.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/shader-StandardShader.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/shader-StandardShader.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/shader-StandardShader.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/shader-StandardShader.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/shader-StandardShader.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/shader-StandardShader.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/shader-StandardShader.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/shader-StandardShader.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/shader-StandardShader.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/shader-StandardShader.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/shader-StandardShader.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/shader-StandardShader.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/shader-StandardShader.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/shader-StandardShader.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/shader-StandardShader.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/shader-StandardShader.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/shader-StandardShader.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/shader-StandardShader.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/shader-StandardShader.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/shader-StandardShader.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="Shaders.html">材质、着色器和纹理</a></li>
+<li>标准着色器</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Materials.html"></a></span><div class="tip">创建和使用材质</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="StandardShaderContextAndContent.html"></a></span><div class="tip">内容和上下文</div>
+</div>
+</div></div>
+<h1>标准着色器</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 标准着色器是一个包含一整套功能的内置着色器。此着色器可用于渲染“真实世界”的对象，如石头、木头、玻璃、塑料和金属，并支持各种着色器类型和组合。只需在材质编辑器中使用或不使用各种纹理字段和参数即可启用或禁用此着色器的功能。</p>
+
+<p>标准着色器还包含一种称为__基于物理着色 (Physically Based Shading)__ 的高级光照模型。基于物理着色 (PBS) 以一种模仿现实的方式模拟材质和光照之间的相互作用。PBS 最近才在实时图形中成为可能。在光照和材质需要以直观而逼真的状态共存的情况下，这种光照模型的效果最佳。</p>
+
+<p>我们基于物理着色背后的理念是创建一种用户友好的方法，在不同的光照条件下实现一致、合理的外观。它模拟了光在现实中的表现，而不使用可能有效或无效的多个临时模型。为此，它遵循物理学原理，包括能量守恒（意味着对象反射的光绝不会多于接受的光）、菲涅耳反射（所有表面在掠射角处具有更高的反射率）以及表面如何遮挡自身（所谓的几何术语）等等。</p>
+
+<p>标准着色器在设计时就考虑了硬表面（也称为“建筑材质”），能够处理大多数现实世界的材质，如石头、玻璃、陶瓷、黄铜、银或橡胶。甚至对于皮肤、头发和布料等非硬质材质也表现得很不错。</p>
+
+<figure>
+<img src="../uploads/Main/StandardShaderIntroVikingScene.jpg" alt="在所有模型上使用标准着色器渲染的场景">
+<figcaption>在所有模型上使用标准着色器渲染的场景</figcaption>
+</figure>
+
+<p>通过标准着色器，可将大量着色器类型（例如漫射、镜面反射、凹凸镜面反射、反射）组合到同一个可处理所有材质类型的着色器中。这样做的好处是，在场景的所有区域都使用相同的光照计算，从而在使用该着色器的所有模型中提供逼真、一致且可信的光照和着色分布。</p>
+
+<h2>术语</h2>
+
+<p>在谈论 Unity 中的基于物理着色时，有许多概念非常有用。这些概念包括：</p>
+
+<ul>
+<li>
+<strong>能量守恒 (Energy conservation)</strong> - 这是一种物理学概念，可确保对象反射的光绝不会多于接受的光。材质的镜面反射越强，其漫射就应该越弱；表面越平滑，高光越强且高光面积越小。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/StandardShaderEnergyConservation.jpg" alt="计算表面上每个点处渲染的光量时，此光量应与从环境接受的光量相同。粗糙表面的微平面受到更宽区域的光照影响。更光滑的表面将呈现更强且面积更小的高光。A 点将光从光源反射到摄像机。B 点呈现天空环境光产生的蓝色色调。C 点从周围地面颜色接受环境光照和反射光照。">
+<figcaption>计算表面上每个点处渲染的光量时，此光量应与从环境接受的光量相同。粗糙表面的微平面受到更宽区域的光照影响。更光滑的表面将呈现更强且面积更小的高光。A 点将光从光源反射到摄像机。B 点呈现天空环境光产生的蓝色色调。C 点从周围地面颜色接受环境光照和反射光照。</figcaption>
+</figure>
+
+<ul>
+<li>
+<strong>高动态范围 (High Dynamic Range, HDR)</strong> - 这是指超出常规 0–1 范围的颜色。例如，太阳很容易比蓝天亮十倍。有关深入讨论，请参阅 Unity 手册 <a href="HDR.html">HDR</a> 页面。</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/GlowWithHdrAdjusted.jpg" alt="使用高动态范围的场景。车窗中反射的阳光看起来比场景中的其他对象亮得多，因为已使用 HDR 对其进行处理">
+<figcaption>使用高动态范围的场景。车窗中反射的阳光看起来比场景中的其他对象亮得多，因为已使用 HDR 对其进行处理</figcaption>
+</figure>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Materials.html"></a></span><div class="tip">创建和使用材质</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="StandardShaderContextAndContent.html"></a></span><div class="tip">内容和上下文</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

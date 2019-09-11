@@ -1,0 +1,275 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="编译器选项 - Unity Manual">
+<title>编译器选项 - Unity Manual</title>
+<meta name="description" content="使用 IL2CPP 脚本后端时，可以控制 il2cpp.exe 如何生成 C++ 代码。具体来说，可使用 C# 属性启用或禁用下面列出的运行时检查。">
+<meta property="og:description" content="使用 IL2CPP 脚本后端时，可以控制 il2cpp.exe 如何生成 C++ 代码。具体来说，可使用 C# 属性启用或禁用下面列出的运行时检查。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'IL2CPP-CompilerOptions';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/IL2CPP-CompilerOptions.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/IL2CPP-CompilerOptions.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/IL2CPP-CompilerOptions.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/IL2CPP-CompilerOptions.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/IL2CPP-CompilerOptions.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/IL2CPP-CompilerOptions.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/IL2CPP-CompilerOptions.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/IL2CPP-CompilerOptions.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/IL2CPP-CompilerOptions.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/IL2CPP-CompilerOptions.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/IL2CPP-CompilerOptions.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/IL2CPP-CompilerOptions.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/IL2CPP-CompilerOptions.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/IL2CPP-CompilerOptions.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/IL2CPP-CompilerOptions.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/IL2CPP-CompilerOptions.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/IL2CPP-CompilerOptions.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/IL2CPP-CompilerOptions.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/IL2CPP-CompilerOptions.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/IL2CPP-CompilerOptions.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/IL2CPP-CompilerOptions.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/IL2CPP-CompilerOptions.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/IL2CPP-CompilerOptions.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/IL2CPP-CompilerOptions.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="ScriptingSection.html">脚本</a></li>
+<li><a href="ScriptingTools.html">脚本工具</a></li>
+<li><a href="IL2CPP.html">IL2CPP</a></li>
+<li>编译器选项</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="IL2CPP-BuildingProject.html"></a></span><div class="tip">使用 IL2CPP 来构建项目</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="IL2CPP-WindowsRuntimeSupport.html"></a></span><div class="tip">Windows 运行时支持</div>
+</div>
+</div></div>
+<h1>编译器选项</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>使用 <a href="IL2CPP.html">IL2CPP</a> 脚本后端时，可以控制 <strong>il2cpp.exe</strong> 如何生成 C++ 代码。具体来说，可使用 C# 属性启用或禁用下面列出的运行时检查。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>选项</em></strong></th>
+	<th style="text-align:left;"><strong><em>描述</em></strong></th>
+	<th style="text-align:left;"><strong><em>默认值</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Null checks</strong></td>
+	<td style="text-align:left;">如果启用此选项，则 IL2CPP 生成的 C++ 代码将包含 null 检查，并根据需要抛出托管的 NullReferenceException 异常。如果禁用此选项，则不会将 null 检查放入生成的 C++ 代码中。对于某些项目，禁用此选项可能会提高运行时性能。<br>但是，在生成的代码中对 null 值的任何访问都不会受到保护，并可能会导致不正确的行为。_通常情况下_，游戏将在取消引用 null 值后很快崩溃，但我们无法保证这一点。请谨慎禁用此选项。</td>
+	<td style="text-align:left;">Enabled</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Array bounds checks</strong></td>
+	<td style="text-align:left;">如果启用此选项，则 IL2CPP 生成的 C++ 代码将包含数组边界检查，并根据需要抛出托管的 IndexOutOfRangeException 异常。如果禁用此选项，则不会将数组边界检查放入生成的 C++ 代码中。<br>对于某些项目，禁用此选项可能会提高运行时性能。但是，在生成的代码中对具有无效索引的数组的任何访问都不会受到保护，并可能导致不正确的行为，包括读取或写入任意内存位置。在大多数情况下，这些内存访问在发生时不会表现出任何直接副作用，可能会悄无声息破坏游戏状态。禁用此选项要极度谨慎。</td>
+	<td style="text-align:left;">Enabled</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Divide by zero checks</strong></td>
+	<td style="text-align:left;">如果启用此选项，则 IL2CPP 生成的 C++ 代码将包含整数除法的除以零检查，并根据需要抛出托管的 DivideByZeroException 异常。如果禁用此选项，则不会将整数除法的除以零检查放入生成的 C++ 代码中。对于大多数项目，应禁用此选项。仅在需要进行除以零检查时才启用，因为这些检查具有运行时成本。</td>
+	<td style="text-align:left;">Disable</td>
+</tr>
+</tbody>
+</table>
+
+<p>可使用 <code>Il2CppSetOptions</code> 属性在 C# 代码中启用或禁用运行时检查。要使用此属性，请在计算机上的 Unity Editor 安装中的 <em>IL2CPP</em> 目录中找到 <em>Il2CppSetOptionsAttribute.cs</em> 源文件。（在 Windows 上位于 <em>Data\il2cpp</em>，在 OS X 上位于 <em>Contents/Frameworks/il2cpp</em>）。将此源文件复制到项目中的 <em>Assets</em> 文件夹中。</p>
+
+<p>现在按照以下示例中所示使用该属性。</p>
+
+<pre><code>[Il2CppSetOption(Option.NullChecks, false)]
+public static string MethodWithNullChecksDisabled()
+{
+    var tmp = new object();
+    return tmp.ToString();
+}
+</code></pre>
+
+<p>可将 <code>Il2CppSetOptions</code> 属性应用于类型、方法和属性。Unity 在最局部的作用域内使用该属性。</p>
+
+<pre><code>[Il2CppSetOption(Option.NullChecks, false)]
+public class TypeWithNullChecksDisabled
+{
+    public static string AnyMethod()
+    {
+        // 在此方法中将禁用 null 检查。
+        var tmp = new object();
+        return tmp.ToString();
+    }
+
+    [Il2CppSetOption(Option.NullChecks, true)]
+    public static string MethodWithNullChecksEnabled()
+    {
+        // 此方法中将启用 null 检查。
+        var tmp = new object();
+        return tmp.ToString();
+    }
+}
+</code></pre>
+
+<pre><code>public class SomeType
+{
+    [Il2CppSetOption(Option.NullChecks, false)]
+    public string PropertyWithNullChecksDisabled
+    {
+        get
+        {
+            // 此处将禁用 null 检查。
+            var tmp = new object();
+            return tmp.ToString();
+        }
+        set
+        {
+            // 此处将禁用 null 检查。
+            value.ToString();
+        }
+    }
+
+    public string PropertyWithNullChecksDisabledOnGetterOnly
+    {
+        [Il2CppSetOption(Option.NullChecks, false)]
+        get
+        {
+            //此处将禁用 null 检查。
+            var tmp = new object();
+            return tmp.ToString();
+        }
+        set
+        {
+            //此处将启用 null 检查。
+            value.ToString();
+        }
+    }
+}
+</code></pre>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="IL2CPP-BuildingProject.html"></a></span><div class="tip">使用 IL2CPP 来构建项目</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="IL2CPP-WindowsRuntimeSupport.html"></a></span><div class="tip">Windows 运行时支持</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

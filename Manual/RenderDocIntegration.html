@@ -1,0 +1,212 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="RenderDoc 集成 - Unity Manual">
+<title>RenderDoc 集成 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/RenderDocRuntimeLoad.jpg">
+<meta name="description" content="Editor 支持启动集成的 RenderDoc 图形调试器并进行捕获，从而进行详细的帧自检和调试。">
+<meta property="og:description" content="Editor 支持启动集成的 RenderDoc 图形调试器并进行捕获，从而进行详细的帧自检和调试。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'RenderDocIntegration';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/RenderDocIntegration.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/RenderDocIntegration.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/RenderDocIntegration.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/RenderDocIntegration.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/RenderDocIntegration.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/RenderDocIntegration.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/RenderDocIntegration.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/RenderDocIntegration.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/RenderDocIntegration.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/RenderDocIntegration.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/RenderDocIntegration.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/RenderDocIntegration.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/RenderDocIntegration.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/RenderDocIntegration.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/RenderDocIntegration.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/RenderDocIntegration.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/RenderDocIntegration.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/RenderDocIntegration.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/RenderDocIntegration.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/RenderDocIntegration.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/RenderDocIntegration.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/RenderDocIntegration.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/RenderDocIntegration.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/RenderDocIntegration.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="EditorFeatures.html">编辑器功能</a></li>
+<li>RenderDoc 集成</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="VisualStudioIntegration.html"></a></span><div class="tip">Visual Studio C# 集成</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="EditorAnalytics.html"></a></span><div class="tip">编辑器分析 (Editor Analytics)</div>
+</div>
+</div></div>
+<h1>RenderDoc 集成</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Editor 支持启动集成的 <a href="https://github.com/baldurk/renderdoc">RenderDoc</a> 图形调试器并进行捕获，从而进行详细的帧自检和调试。</p>
+
+<p>只支持集成 RenderDoc 版本 0.26 或更高版本，因此如果当前安装的是早期版本，至少需要更新至版本 0.26。</p>
+
+<p><strong>注意：</strong>虽然集成仅在 Editor 中可用，但很有可能无需在独立平台播放器构建中进行额外设置，即可正常使用 RenderDoc。</p>
+
+<p><strong>注意：</strong>仅当 Unity 在 RenderDoc 支持的平台和 API 上运行时才能捕获帧；在撰写此文时仅支持 Windows 以及 DirectX 11 或 OpenGL Core 配置文件。如果正在使用其他 API，则会暂时禁用 RenderDoc 集成，直到启用支持的 API 为止。</p>
+
+<h2>加载 RenderDoc</h2>
+
+<p>如果检测到 RenderDoc 安装，则在加载 Editor 之后的任何时间，均可右键单击 <a href="GameView.html">Game 视图</a>或 <a href="UsingTheSceneView.html">Scene 视图</a>的选项卡，然后单击“Load RenderDoc”选项。这样就会重新加载图形设备，因此必须保存所有更改，但随后 RenderDoc 将可以直接捕获而无需重新启动 Editor 或构建独立平台播放器。</p>
+
+<figure>
+<img src="../uploads/Main/RenderDocRuntimeLoad.jpg" alt="Loading RenderDoc at runtime">
+<figcaption>Loading RenderDoc at runtime</figcaption>
+</figure>
+
+<p><strong>注意：</strong>也可以照常通过 RenderDoc 启动 Editor，或者传递 -load-renderdoc 命令行选项以从启动中加载 RenderDoc。</p>
+
+<h2>使用 RenderDoc 捕获帧</h2>
+
+<p>当检测到兼容版本的 RenderDoc 加载到 Editor 中时，Game 和 Scene 视图上的工具栏右侧会出现一个新按钮。</p>
+
+<figure>
+<img src="../uploads/Main/RenderDocCaptureButton.png" alt="使用 RenderDoc 捕获帧">
+<figcaption>使用 RenderDoc 捕获帧</figcaption>
+</figure>
+
+<p>按此按钮将触发捕获视图的下一帧渲染。如果尚未打开 RenderDoc 工具 UI，则会启动一个新实例来显示捕获，如果已在运行，则最新的捕获将自动显示在其中。从此处可以使用该工具打开捕获结果并进行调试。</p>
+
+<figure>
+<img src="../uploads/Main/RenderDocCaptureList.jpg" alt="List of frame captures in RenderDoc">
+<figcaption>List of frame captures in RenderDoc</figcaption>
+</figure>
+
+<h2>包含着色器调试信息</h2>
+
+<p>默认情况下，为了优化 DirectX11 着色器的大小，会删除调试信息。这意味着，常量和资源将没有名称，并且着色器源代码将不可用。要在着色器中包含此调试信息，请在着色器的 CGPROGRAM 代码块中包含 <strong>#pragma enable_d3d11_debug_symbols</strong>。</p>
+
+<h2>备用图形调试技术</h2>
+
+<p>如果使用 D3D11 来构建独立平台播放器，则可使用 <a href="SL-DebuggingD3D11ShadersWithVS.html">Visual Studio 图形调试器</a> 捕获帧并进行调试。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="VisualStudioIntegration.html"></a></span><div class="tip">Visual Studio C# 集成</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="EditorAnalytics.html"></a></span><div class="tip">编辑器分析 (Editor Analytics)</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

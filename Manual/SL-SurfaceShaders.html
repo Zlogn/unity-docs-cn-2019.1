@@ -1,0 +1,390 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="编写表面着色器 - Unity Manual">
+<title>编写表面着色器 - Unity Manual</title>
+<meta name="description" content="编写与光照交互的着色器非常复杂。有不同的光源类型，不同的阴影选项，不同的渲染路径（前向和延迟渲染）；着色器应该以某种方式应对所有这些复杂性。">
+<meta property="og:description" content="编写与光照交互的着色器非常复杂。有不同的光源类型，不同的阴影选项，不同的渲染路径（前向和延迟渲染）；着色器应该以某种方式应对所有这些复杂性。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'SL-SurfaceShaders';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-SurfaceShaders.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-SurfaceShaders.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-SurfaceShaders.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-SurfaceShaders.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-SurfaceShaders.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-SurfaceShaders.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-SurfaceShaders.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-SurfaceShaders.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-SurfaceShaders.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-SurfaceShaders.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/SL-SurfaceShaders.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/SL-SurfaceShaders.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/SL-SurfaceShaders.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/SL-SurfaceShaders.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-SurfaceShaders.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-SurfaceShaders.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-SurfaceShaders.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-SurfaceShaders.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-SurfaceShaders.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-SurfaceShaders.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-SurfaceShaders.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-SurfaceShaders.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-SurfaceShaders.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-SurfaceShaders.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="SL-Reference.html">着色器参考</a></li>
+<li>编写表面着色器</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-Reference.html"></a></span><div class="tip">着色器参考</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-SurfaceShaderExamples.html"></a></span><div class="tip">表面着色器示例</div>
+</div>
+</div></div>
+<h1>编写表面着色器</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>编写与光照交互的着色器非常复杂。有不同的光源类型，不同的阴影选项，不同的渲染路径（前向和延迟渲染）；着色器应该以某种方式应对所有这些复杂性。</p>
+
+<p>Unity 中的__表面着色器__是一种代码生成方法，与使用低级<a href="SL-ShaderPrograms.html">顶点/像素着色器程序</a>相比，可以更轻松地编写光照着色器。请注意，表面着色器中没有自定义的语言、魔法或忍者；它只能生成所有那些本来必须要手工编写的重复代码。您仍然需要使用 HLSL 编写着色器代码。</p>
+
+<p>如需了解示例，请查看<a href="SL-SurfaceShaderExamples.html">表面着色器示例</a>和<a href="SL-SurfaceShaderLightingExamples.html">表面着色器自定义光照示例</a>。</p>
+
+<h2>工作原理</h2>
+
+<p>您可以定义一个“表面函数”，它将您需要的所有 UV 或数据作为输入，并填充输出结构 <code>SurfaceOutput</code>。SurfaceOutput 基本上描述了_表面的属性_（反照率颜色、法线、发光、镜面反射等）。您需要使用 HLSL 编写此代码。</p>
+
+<p>表面着色器编译器随后计算出需要的输入、填充的输出等等，并生成实际的<a href="SL-ShaderPrograms.html">顶点和像素着色器</a>以及渲染通道来处理前向和延迟渲染。</p>
+
+<p>以下是表面着色器的标准输出结构：</p>
+
+<pre><code>struct SurfaceOutput
+{
+    fixed3 Albedo;  // 漫射颜色
+    fixed3 Normal;  // 切线空间法线（如果已写入）
+    fixed3 Emission;
+    half Specular;  // 0..1 范围内的镜面反射能力
+    fixed Gloss;    // 镜面反射强度
+    fixed Alpha;    // 透明度 Alpha
+};
+</code></pre>
+
+<p>在 Unity 5 中，表面着色器还可以使用基于物理的光照模型。内置标准光照模型和标准镜面反射光照模型（见下文）分别使用以下输出结构：</p>
+
+<pre><code>struct SurfaceOutputStandard
+{
+    fixed3 Albedo;      // 基础（漫射或镜面反射）颜色
+    fixed3 Normal;      // 切线空间法线（如果已写入）
+    half3 Emission;
+    half Metallic;      // 0=非金属，1=金属
+    half Smoothness;    // 0=粗糙，1=平滑
+    half Occlusion;     // 遮挡（默认为 1）
+    fixed Alpha;        // 透明度 Alpha
+};
+struct SurfaceOutputStandardSpecular
+{
+    fixed3 Albedo;      // 漫射颜色
+    fixed3 Specular;    // 镜面反射颜色
+    fixed3 Normal;      // 切线空间法线（如果已写入）
+    half3 Emission;
+    half Smoothness;    // 0=粗糙，1=平滑
+    half Occlusion;     // 遮挡（默认为 1）
+    fixed Alpha;        // 透明度 Alpha
+};
+</code></pre>
+
+<h2>示例</h2>
+
+<p>请参阅<a href="SL-SurfaceShaderExamples.html">表面着色器示例</a>、<a href="SL-SurfaceShaderLightingExamples.html">表面着色器自定义光照示例</a>和<a href="SL-SurfaceShaderTessellation.html">表面着色器曲面细分</a>页面。</p>
+
+<h2>表面着色器编译指令</h2>
+
+<p>就像任何其他着色器一样，表面着色器放置在 <code>CGPROGRAM..ENDCG</code> 代码块内。不同之处在于：</p>
+
+<ul>
+<li>它必须放在 <a href="SL-SubShader.html">SubShader</a> 代码块内，不能在 <a href="SL-Pass.html">Pass</a> 内。表面着色器本身将编译为多个通道。</li>
+<li>它使用 <code>#pragma surface ...</code> 指令来指示自己是表面着色器。</li>
+</ul>
+
+<p><code>#pragma surface</code> 指令为：</p>
+
+<pre><code># pragma surface surfaceFunction lightModel [optionalparams]
+</code></pre>
+
+<h3>必需参数</h3>
+
+<ul>
+<li>
+<code>surfaceFunction</code> - 具有表面着色器代码的 Cg 函数。该函数的格式应为 <code>void surf (Input IN, inout SurfaceOutput o)</code>，其中 Input 是您定义的结构。Input 应包含表面函数所需的任何纹理坐标和额外自动变量。</li>
+<li>
+<code>lightModel</code> - 要使用的光照模型。内置光照模型是基于物理的 <code>Standard</code> 和 <code>StandardSpecular</code>，以及简单的非基于物理的 <code>Lambert</code>（漫射）和 <code>BlinnPhong</code>（镜面反射）。请参阅<a href="SL-SurfaceShaderLighting.html">自定义光照模型</a>页面以了解如何编写自己的光照模型。
+
+<ul>
+<li>
+<code>Standard</code> 光照模型使用 <code>SurfaceOutputStandard</code> 输出结构，并与 Unity 中的标准（金属性工作流）着色器匹配。</li>
+<li>
+<code>StandardSpecular</code> 光照模型使用 <code>SurfaceOutputStandardSpecular</code> 输出结构，并与 Unity 中的标准（镜面反射设置）着色器匹配。</li>
+<li>
+<code>Lambert</code> 和 <code>BlinnPhong</code> 光照模型不是基于物理的（来自 Unity 4.x），但使用这两个光照模型的着色器在低端硬件上可以提高渲染速度。</li>
+</ul>
+</li>
+</ul>
+
+<h3>可选参数</h3>
+
+<p><strong>透明度和 Alpha 测试</strong>由 <code>alpha</code> 和 <code>alphatest</code> 指令控制。透明度通常可以有两种：传统的 Alpha 混合（用于淡出对象）或更符合物理规律的“预乘混合”（允许半透明表面保留适当的镜面反射）。启用半透明度会使生成的表面着色器代码包含<a href="SL-Blend.html">混合</a>命令；而启用 Alpha 镂空将根据给定的变量在生成的像素着色器中执行片元废弃。</p>
+
+<ul>
+<li>
+<code>alpha</code> 或 <code>alpha:auto</code> - 对于简单的光照函数，将选择淡化透明度（与 <code>alpha:fade</code> 相同）；对于基于物理的光照函数，将选择预乘透明度（与 <code>alpha:premul</code> 相同）。</li>
+<li>
+<code>alpha:blend</code> - 启用 Alpha 混合。</li>
+<li>
+<code>alpha:fade</code> - 启用传统淡化透明度。</li>
+<li>
+<code>alpha:premul</code> - 启用预乘 Alpha 透明度。</li>
+<li>
+<code>alphatest:VariableName</code> - 启用 Alpha 镂空透明度。剪切值位于具有 VariableName 的浮点变量中。您可能还想使用 <code>addshadow</code> 指令生成正确的阴影投射物通道。</li>
+<li>
+<code>keepalpha</code> - 默认情况下，无论输出结构的 Alpha 输出是什么，或者光照函数返回什么，不透明表面着色器都将 1.0（白色）写入 Alpha 通道。使用此选项可以保持光照函数的 Alpha 值，即使对于不透明的表面着色器也是如此。</li>
+<li>
+<code>decal:add</code> - 附加贴花着色器（例如 terrain AddPass）。这适用于位于其他表面之上并使用附加混合的对象。请参阅<a href="SL-SurfaceShaderExamples.html">表面着色器示例</a>
+</li>
+<li>
+<code>decal:blend</code> - 半透明贴花着色器。这适用于位于其他表面之上并使用 Alpha 混合的对象。请参阅<a href="SL-SurfaceShaderExamples.html">表面着色器示例</a>
+</li>
+</ul>
+
+<p><strong>自定义修改器函数</strong>可用于更改或计算传入的顶点数据，或更改最终计算的片元颜色。</p>
+
+<ul>
+<li>
+<code>vertex:VertexFunction</code> - 自定义顶点修改函数。在生成的顶点着色器的开始处调用此函数，并且此函数可以修改或计算每顶点数据。请参阅<a href="SL-SurfaceShaderExamples.html">表面着色器示例</a>。</li>
+<li>
+<code>finalcolor:ColorFunction</code> - 自定义最终颜色修改函数。请参阅<a href="SL-SurfaceShaderExamples.html">表面着色器示例</a>。</li>
+<li>
+<code>finalgbuffer:ColorFunction</code> - 用于更改 G 缓冲区内容的自定义延迟路径。</li>
+<li>
+<code>finalprepass:ColorFunction</code> - 自定义预通道基本路径。</li>
+</ul>
+
+<p><strong>阴影和曲面细分</strong> - 可以提供其他指令来控制阴影和曲面细分的处理方式。</p>
+
+<ul>
+<li>
+<code>addshadow</code> - 生成阴影投射物通道。常用于自定义的顶点修改，以便阴影投射也可以获得程序化顶点动画。通常情况下，着色器不需要任何特殊的阴影处理，因为它们可以通过回退机制来使用阴影投射物通道。</li>
+<li>
+<code>fullforwardshadows</code> - 支持<a href="RenderTech-ForwardRendering.html">前向</a>渲染路径中的所有光源阴影类型。默认情况下，着色器仅支持前向渲染中来自一个方向光的阴影（以节省内部着色器变体数量）。如果在前向渲染中需要点光源阴影或聚光灯阴影，请使用此指令。</li>
+<li>
+<code>tessellate:TessFunction</code> - 使用 DX11 GPU 曲面细分；该函数计算曲面细分因子。有关详细信息，请参阅<a href="SL-SurfaceShaderTessellation.html">表面着色器曲面细分</a>。</li>
+</ul>
+
+<p><strong>代码生成选项</strong> - 默认情况下，生成的表面着色器代码会尝试处理所有可能的光照/阴影/光照贴图情况。但是在某些情况下，您知道您不需要其中的一部分，可以调整生成的代码以跳过它们。这样可以减小着色器，从而提高加载速度。</p>
+
+<ul>
+<li>
+<code>exclude_path:deferred</code>、<code>exclude_path:forward</code> 和 <code>exclude_path:prepass</code> - 不为给定的渲染路径（分别对应<a href="RenderTech-DeferredShading.html">延迟着色</a>路径、<a href="RenderTech-ForwardRendering.html">前向</a>路径和<a href="RenderTech-DeferredLighting.html">旧版延迟</a>路径）生成通道。</li>
+<li>
+<code>noshadow</code> - 禁用此着色器中的所有阴影接受支持。</li>
+<li>
+<code>noambient</code> - 不应用任何环境光照或光照探针。</li>
+<li>
+<code>novertexlights</code> - 在前向渲染中不应用任何光照探针或每顶点光源。</li>
+<li>
+<code>nolightmap</code> - 禁用此着色器中的所有光照贴图支持。</li>
+<li>
+<code>nodynlightmap</code> - 禁用此着色器中的运行时动态全局光照支持。</li>
+<li>
+<code>nodirlightmap</code> - 禁用此着色器中的方向光照贴图支持。</li>
+<li>
+<code>nofog</code> - 禁用所有内置雾效支持。</li>
+<li>
+<code>nometa</code> - 不生成“Meta”通道（由光照贴图和动态全局光照用于提取表面信息）。</li>
+<li>
+<code>noforwardadd</code> - 禁用<a href="RenderTech-ForwardRendering.html">前向</a>渲染附加通道。这会使着色器支持一个完整方向光，所有其他光源均进行每顶点/SH 计算。也能减小着色器。</li>
+<li>
+<code>nolppv</code> - 禁用此着色器中的光照探针代理体支持。</li>
+<li>
+<code>noshadowmask</code> - 为此着色器禁用阴影遮罩支持（包括 <a href="LightMode-Mixed-Shadowmask.html">Shadowmask</a> 和 <a href="LightMode-Mixed-DistanceShadowmask.html">Distance Shadowmask</a>）。</li>
+</ul>
+
+<p><strong>其他选项</strong></p>
+
+<ul>
+<li>
+<code>softvegetation</code> - 仅在开启 Soft Vegetation 时才渲染表面着色器。</li>
+<li>
+<code>interpolateview</code> - 在顶点着色器中计算视图方向并进行插值；而不是在像素着色器中计算。这可以使像素着色器更快，但会额外消耗一个纹理插值器。</li>
+<li>
+<code>halfasview</code> - 将半方向矢量传入光照函数而不是视图方向。计算半方向并按每个顶点对其进行标准化。这更快，但并不完全正确。</li>
+<li>
+<code>approxview</code> - 在 Unity 5.0 中已删除。请改用 <code>interpolateview</code>。</li>
+<li>
+<code>dualforward</code> - 在<a href="RenderTech-ForwardRendering.html">前向</a>渲染路径中使用<a href="GIIntro.html">双光照贴图</a>。</li>
+<li>
+<code>dithercrossfade</code> - 使表面着色器支持抖动效果。然后，可将此着色器应用于使用<a href="class-LODGroup.html">细节级别组 (LOD Group)</a> 组件（配置为交叉淡入淡出过渡模式）的游戏对象。</li>
+</ul>
+
+<p>要了解与上述不同选项的具体区别，使用<a href="class-Shader.html">着色器检视面板 (Shader Inspector)</a> 中的“Show Generated Code”按钮会很有帮助。</p>
+
+<h2>表面着色器输入结构</h2>
+
+<p>输入结构 <code>Input</code> 通常具有着色器所需的所有纹理坐标。纹理坐标必须命名为“<code>uv</code>”后跟纹理名称的形式（如果要使用第二个纹理坐标集，则以“<code>uv2</code>”开头）。</p>
+
+<p>可以放入输入结构的其他值：</p>
+
+<ul>
+<li>
+<code>float3 viewDir</code> - 包含视图方向，用于计算视差效果、边缘光照等等。</li>
+<li>具有 <code>COLOR</code> 语义的 <code>float4</code> - 包含插值的每顶点颜色。</li>
+<li>
+<code>float4 screenPos</code> - 包含反射或屏幕空间效果的屏幕空间位置。请注意，这不适合 <a href="SL-GrabPass.html">GrabPass</a>；您需要使用 <code>ComputeGrabScreenPos</code> 函数自己计算自定义 UV。</li>
+<li>
+<code>float3 worldPos</code> - 包含世界空间位置。</li>
+<li>
+<code>float3 worldRefl</code> - 在_表面着色器不写入 o.Normal_ 的情况下，包含世界反射矢量。有关示例，请参阅反光漫射 (Reflect-Diffuse) 着色器。</li>
+<li>
+<code>float3 worldNormal</code> - 在_表面着色器不写入 o.Normal_ 的情况下，包含世界法线矢量。</li>
+<li>
+<code>float3 worldRefl; INTERNAL_DATA</code> - 在_表面着色器写入 o.Normal_ 的情况下，包含世界反射矢量。要获得基于每像素法线贴图的反射矢量，请使用 <code>WorldReflectionVector (IN, o.Normal)</code>。有关示例，请参阅反光凹凸 (Reflect-Bumped) 着色器。</li>
+<li>
+<code>float3 worldNormal; INTERNAL_DATA</code> - 在_表面着色器写入 o.Normal_ 的情况下，包含世界法线矢量。要获得基于每像素法线贴图的法线矢量，请使用 <code>WorldNormalVector (IN, o.Normal)</code>。</li>
+</ul>
+
+<h2>表面着色器和 DirectX 11 HLSL 语法</h2>
+
+<p>目前，表面着色器编译管线的某些部分不能理解 <a href="UsingDX11GL3Features.html">DirectX 11</a> 特有的 HLSL 语法，因此如果您正在使用 HLSL 功能，如 StructuredBuffers、RWTextures 和其他非 DX9 语法，需要将其包装到仅限 DX11 的预处理器宏中。</p>
+
+<p>有关详细信息，请参阅<a href="SL-PlatformDifferences.html">平台特定差异</a>和<a href="SL-ShadingLanguage.html">着色语言</a>页面。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2017–06–08 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 5.6 版中添加了 <code>noshadowmask</code></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-Reference.html"></a></span><div class="tip">着色器参考</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-SurfaceShaderExamples.html"></a></span><div class="tip">表面着色器示例</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

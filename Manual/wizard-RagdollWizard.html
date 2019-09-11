@@ -1,0 +1,200 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="布娃娃向导 - Unity Manual">
+<title>布娃娃向导 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/RagdollWizard.png">
+<meta name="description" content="Unity 有一个简单的向导可用于快速创建布娃娃。只需在向导中的各种属性上拖动不同的肢体即可。然后，选择 Create，Unity 便会自动生成构成布娃娃的所有__碰撞体、刚体__和__关节__。">
+<meta property="og:description" content="Unity 有一个简单的向导可用于快速创建布娃娃。只需在向导中的各种属性上拖动不同的肢体即可。然后，选择 Create，Unity 便会自动生成构成布娃娃的所有__碰撞体、刚体__和__关节__。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'wizard-RagdollWizard';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/wizard-RagdollWizard.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/wizard-RagdollWizard.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/wizard-RagdollWizard.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/wizard-RagdollWizard.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/wizard-RagdollWizard.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/wizard-RagdollWizard.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/wizard-RagdollWizard.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/wizard-RagdollWizard.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/wizard-RagdollWizard.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/wizard-RagdollWizard.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/wizard-RagdollWizard.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/wizard-RagdollWizard.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/wizard-RagdollWizard.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/wizard-RagdollWizard.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/wizard-RagdollWizard.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/wizard-RagdollWizard.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/wizard-RagdollWizard.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/wizard-RagdollWizard.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/wizard-RagdollWizard.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/wizard-RagdollWizard.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/wizard-RagdollWizard.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/wizard-RagdollWizard.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/wizard-RagdollWizard.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/wizard-RagdollWizard.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="PhysicsSection.html">物理系统</a></li>
+<li><a href="PhysicsHowTos.html">物理系统操作方法</a></li>
+<li>布娃娃向导</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PhysicsHowTos.html"></a></span><div class="tip">物理系统操作方法</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="RagdollStability.html"></a></span><div class="tip">关节和布娃娃稳定性</div>
+</div>
+</div></div>
+<h1>布娃娃向导</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 有一个简单的向导可用于快速创建布娃娃。只需在向导中的各种属性上拖动不同的肢体即可。然后，选择 Create，Unity 便会自动生成构成布娃娃的所有__碰撞体<strong>、</strong>刚体__和__关节__。</p>
+
+<h2>创建角色</h2>
+
+<p>Ragdolls make use of <strong>Skinned Meshes</strong>, that is a character mesh rigged up with bones in the 3D modeling application. For this reason, you must build ragdoll characters in a 3D package like Autodesk® Maya® or Cinema4D.</p>
+
+<p>创建角色并进行装配后，将资源正常保存在 <strong>Project 文件夹__中。切换到 Unity 时，您将看到该角色资源文件。选择该文件，然后 Inspector 中将显示 </strong>Import Settings__ 对话框。确保未启用 <strong>Mesh Colliders</strong>。</p>
+
+<h2>使用向导</h2>
+
+<p>不太可能将实际的源资源变成一个布娃娃。这将需要修改源资源文件，因此是不可能的。正确的做法是将角色资源的实例变成一个布娃娃，然后保存为__预制件__以供重复使用。</p>
+
+<p>创建角色实例的方法是将角色从 <strong>Project 视图__拖动到 </strong>Hierarchy 视图<strong>。单击层级视图中实例名称左侧的小箭头，展开其__变换层级视图</strong>。现在已准备好开始分配布娃娃部件。</p>
+
+<p>从菜单栏中选择 <strong>GameObject &gt; 3D Object &gt; Ragdoll…</strong> 以打开布娃娃向导。现在将看到向导本身。</p>
+
+<figure>
+<img src="../uploads/Main/RagdollWizard.png" alt="布娃娃向导">
+<figcaption>布娃娃向导</figcaption>
+</figure>
+
+<p>为布娃娃分配部件的过程不言自明。将角色实例的不同变换拖动到向导上的相应属性。如果已自行创建角色资源，此过程应该特别容易。</p>
+
+<p>完成后，单击 <strong>Create</strong> 按钮。现在进入__播放模式__时，应该会看到角色像布娃娃一样跛行。</p>
+
+<p>最后一步是将设置的布娃娃保存为预制件。从菜单栏中选择__Assets &gt; Create &gt; Prefab__。随后将看到在 Project 视图中显示了一个新预制件 (New Prefab)。将该预制件重命名为“Ragdoll Prefab”。将布娃娃角色实例从层级视图拖动到“Ragdoll Prefab”上。现在有了一个完整设置并可重复使用的布娃娃角色，可在游戏中任意多次使用。</p>
+
+<h2>注意</h2>
+
+<p>对于通过布娃娃向导制作的角色关节，请注意设置：关节的扭转轴与肢体的最大摆动轴对应，关节的 Swing 1 轴与肢体的较小摆动轴对应，而关节的 Swing 2 表示扭转肢体。采用这种命名方案是为了沿用旧版。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PhysicsHowTos.html"></a></span><div class="tip">物理系统操作方法</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="RagdollStability.html"></a></span><div class="tip">关节和布娃娃稳定性</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

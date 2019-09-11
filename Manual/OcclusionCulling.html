@@ -1,0 +1,369 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="遮挡剔除 - Unity Manual">
+<title>遮挡剔除 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/OcclusionNoCulling.jpg">
+<meta name="description" content="当对象被其他对象阻挡（遮挡）而不能被摄像机所看到时，遮挡剔除 (Occlusion Culling) 功能会禁用对象的渲染。这种情况不会自动发生在 3D 计算机图形中，因为在大多数时间，距离摄像机最远的对象都是先绘制的，而较近的对象则在先前对象的基础上绘制（这称为&amp;#8220;过度绘制 (Overdraw)&amp;#8221;）。遮挡剔除与视锥体剔除 (Frustum Culling) 不同。视锥体剔除仅禁用摄像机视野之外的对象的渲染器，而不会禁用由过度绘制隐藏起来的任何对象的渲染器。请注意，使用遮挡剔除时，仍然会受益于视锥体剔除。">
+<meta property="og:description" content="当对象被其他对象阻挡（遮挡）而不能被摄像机所看到时，遮挡剔除 (Occlusion Culling) 功能会禁用对象的渲染。这种情况不会自动发生在 3D 计算机图形中，因为在大多数时间，距离摄像机最远的对象都是先绘制的，而较近的对象则在先前对象的基础上绘制（这称为&amp;#8220;过度绘制 (Overdraw)&amp;#8221;）。遮挡剔除与视锥体剔除 (Frustum Culling) 不同。视锥体剔除仅禁用摄像机视野之外的对象的渲染器，而不会禁用由过度绘制隐藏起来的任何对象的渲染器。请注意，使用遮挡剔除时，仍然会受益于视锥体剔除。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'OcclusionCulling';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/OcclusionCulling.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/OcclusionCulling.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/OcclusionCulling.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/OcclusionCulling.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/OcclusionCulling.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/OcclusionCulling.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/OcclusionCulling.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/OcclusionCulling.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/OcclusionCulling.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/OcclusionCulling.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/OcclusionCulling.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/OcclusionCulling.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/OcclusionCulling.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/OcclusionCulling.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/OcclusionCulling.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/OcclusionCulling.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/OcclusionCulling.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/OcclusionCulling.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/OcclusionCulling.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/OcclusionCulling.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/OcclusionCulling.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/OcclusionCulling.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/OcclusionCulling.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/OcclusionCulling.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="CamerasOverview.html">摄像机</a></li>
+<li>遮挡剔除</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ImpressionOfSize.html"></a></span><div class="tip">创建尺寸大小的效果</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="DynamicResolution.html"></a></span><div class="tip">Dynamic resolution</div>
+</div>
+</div></div>
+<h1>遮挡剔除</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>当对象被其他对象阻挡（遮挡）而不能被摄像机所看到时，遮挡剔除 (Occlusion Culling) 功能会禁用对象的渲染。这种情况不会自动发生在 3D 计算机图形中，因为在大多数时间，距离摄像机最远的对象都是先绘制的，而较近的对象则在先前对象的基础上绘制（这称为“过度绘制 (Overdraw)”）。遮挡剔除与视锥体剔除 (Frustum Culling) 不同。视锥体剔除仅禁用摄像机视野之外的对象的渲染器，而不会禁用由过度绘制隐藏起来的任何对象的渲染器。请注意，使用遮挡剔除时，仍然会受益于视锥体剔除。</p>
+
+<figure>
+<img src="../uploads/Main/OcclusionNoCulling.jpg" alt="A maze-like indoor level. This normal scene view shows all visible Game Objects.">
+<figcaption>A maze-like indoor level. This normal scene view shows all visible Game Objects.</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/OcclusionFrustumCulling.jpg" alt="Regular frustum culling only renders objects within the cameras view. This is automatic and always happens.">
+<figcaption>Regular frustum culling only renders objects within the camera’s view. This is automatic and always happens.</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/OcclusionFullCulling.jpg" alt="Occlusion culling removes additional objects from within the camera rendering work if they are entirely obscured by nearer objects.">
+<figcaption>Occlusion culling removes additional objects from within the camera rendering work if they are entirely obscured by nearer objects.</figcaption>
+</figure>
+
+<p>遮挡剔除过程将使用虚拟摄像机在场景中移动，进而构建潜在可见对象集的层级视图。每个摄像机在运行时都会使用此数据来识别可见和不可见的对象。凭借此信息，Unity 将确保只发送可见对象进行渲染。这样可减少绘制调用次数并提高游戏性能。</p>
+
+<p>遮挡剔除的数据由单元格组成。每个单元格是从整个场景包围体上细分而来。具体地来说，这些单元格形成一个二叉树。遮挡剔除使用两个树，一个用于视图单元格（静态对象），另一个用于目标单元格（移动对象）。视图单元格映射到一个定义可见静态对象的索引列表，从而为静态对象提供更准确的剔除结果。</p>
+
+<p>在创建对象时记住这一点很重要，因为您需要在对象大小和单元格大小之间取得良好的平衡。理想情况下，单元格与对象相比不应该太小，但同样，对象不应该覆盖大量单元格。有时，可通过将大型对象分成更小的碎片来改善剔除。但是，您仍然可以将小对象合并在一起以减少绘制调用，只要它们都属于同一个单元格，就不会影响遮挡剔除。</p>
+
+<p>您可以使用“过度绘制”场景渲染模式来查看正在发生的过度绘制量，并可使用 Game 视图中的统计信息面板查看正在渲染的三角形、顶点和批次的数量。下面是应用遮挡剔除之前和之后的比较。</p>
+
+<figure>
+<img src="../uploads/Main/OcclusionCullingOverdrawNoCulling.jpg" alt="Notice in the Overdraw scene view, a high density of overdraw as many rooms beyond the visible walls are rendered. These arent visible in the game view, but nonetheless time is being taken to render them.">
+<figcaption>Notice in the Overdraw scene view, a high density of overdraw as many rooms beyond the visible walls are rendered. These aren’t visible in the game view, but nonetheless time is being taken to render them.</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/OcclusionCullingOverdrawReduced.jpg" alt="With occlusion culling applied, the distant rooms are not rendered, the overdraw is much less dense, and the number of triangles and batches being rendered has dropped dramatically, without any change to how the game view looks.">
+<figcaption>With occlusion culling applied, the distant rooms are not rendered, the overdraw is much less dense, and the number of triangles and batches being rendered has dropped dramatically, without any change to how the game view looks.</figcaption>
+</figure>
+
+<h2>设置遮挡剔除</h2>
+
+<p>为了使用遮挡剔除，需要进行一些手动设置。首先，关卡几何体必须分成尺寸合理的碎片。将关卡布置到大型对象旁（例如墙壁、建筑物等）彼此遮挡且界限分明的小型区域中，也很有帮助。此处的思路是基于遮挡数据开启或关闭每个单独的网格。因此，如果您有一个包含房间所有家具的对象，则整套家具将全部剔除或全部不剔除。这种方法并不像使每件家具拥有自己的网格（因此每个家具都可以根据摄像机的视点单独剔除）那样合理。</p>
+
+<p>您需要在 <strong>Inspector</strong> 中把纳入遮挡计算的所有场景对象标记为 <strong>Occluder Static</strong>。执行此操作最快的方法是多选要包含在遮挡计算中的对象，然后将它们标记为 <strong>Occluder Static</strong> 和 <strong>Occludee Static</strong>。</p>
+
+<figure>
+<img src="../uploads/Main/OcclusionStaticDropdown.png" alt="标记要进行遮挡的对象">
+<figcaption>标记要进行遮挡的对象</figcaption>
+</figure>
+
+<p>何时应使用 <strong>Occludee Static__？不会产生遮挡的完全透明或半透明对象，以及不太可能遮挡其他对象的小型对象应标记为__被遮挡物 (Occludee)</strong> 而不是__遮挡物 (Occluder)__。这意味着，它们将被其他对象遮挡，但本身不会被视为遮挡物，这样将有助于减少计算。</p>
+
+<p>使用 LOD 组时，只有基本级别对象 (LOD0) 可用作遮挡物。</p>
+
+<h2>遮挡剔除窗口</h2>
+
+<p>For most operations dealing with Occlusion Culling, you should use the Occlusion Culling Window (<strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Occlusion Culling</strong>)</p>
+
+<p>在遮挡剔除窗口中，可使用遮挡物网格和<a href="class-OcclusionArea.html">遮挡区域 (Occlusion Areas)</a>。</p>
+
+<p>如果您处于__遮挡剔除窗口__的 <strong>Object</strong> 选项卡中，并在场景中选择了<a href="class-MeshRenderer.html">网格渲染器</a>，您就可以修改相关的静止标记：</p>
+
+<figure>
+<img src="../uploads/Main/OcclusionCullingInspectorObject.png" alt="网格渲染器的遮挡剔除窗口">
+<figcaption>网格渲染器的遮挡剔除窗口</figcaption>
+</figure>
+
+<p>如果您处于__遮挡剔除窗口__的 <strong>Object</strong> 选项卡中，并选择了<a href="class-OcclusionArea.html">遮挡区域 (Occlusion Area)</a>，您就可以使用相关的 OcclusionArea 属性（有关更多详细信息，请转到<a href="class-OcclusionArea.html">遮挡区域</a>部分）</p>
+
+<figure>
+<img src="../uploads/Main/OcclusionCullingInspectorOcclusionArea.png" alt="遮挡区域的遮挡剔除窗口">
+<figcaption>遮挡区域的遮挡剔除窗口</figcaption>
+</figure>
+
+<p><strong>注意：</strong>默认情况下，如果不创建任何遮挡区域，遮挡剔除将应用于整个场景。</p>
+
+<p><strong>注意：</strong>只要摄像机位于遮挡区域之外，就不会应用遮挡剔除。设置遮挡区域来覆盖摄像机可能出现的位置非常重要的，但如果将这些区域设置得过大，烘焙过程中就会产生额外成本。</p>
+
+<h2>遮挡剔除 - Bake</h2>
+
+<figure>
+<img src="../uploads/Main/OcclusionCullingInspectorBake.png" alt="遮挡剔除检视面板 Bake 选项卡。">
+<figcaption>遮挡剔除检视面板 Bake 选项卡。</figcaption>
+</figure>
+
+<p>遮挡剔除烘焙窗口有一个“Set Default Parameters”按钮，允许您将烘焙值重置为 Unity 的默认值。这些值对于许多典型场景很有用，但您可以调整这些值来适应场景的特定内容，这通常可以产生更好的效果。</p>
+
+<h2>属性</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">属性</th>
+	<th style="text-align:left;">功能</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Smallest Occluder</strong></td>
+	<td style="text-align:left;">进行遮挡剔除时用于隐藏其他对象的最小尺寸。任何小于这个尺寸的对象都不会剔除它们所遮挡的对象。例如，当值为 5 时，高于或宽于 5 米的所有对象都将导致它们挡住的对象被剔除（不渲染，从而节省渲染时间）。为此属性选择一个合适的值，在遮挡数据的精度和存储大小之间取得平衡。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Smallest Hole</strong></td>
+	<td style="text-align:left;">此值表示摄像机应该看到的几何体之间的最小间隙。此值表示可以穿过孔的对象的直径。如果场景中存在摄像机应该能够看到的小裂缝，则 Smallest Hole 值必须小于间隙的最窄尺寸。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Backface Threshold</strong></td>
+	<td style="text-align:left;">Unity 的遮挡使用数据大小优化功能，通过测试背面来减少不必要的细节。默认值 100 比较稳妥，绝不会从数据集删除背面。值 5 将基于具有可见背面的位置大幅减少数据。思路是，一般情况下，有效的摄像机位置通常不会看到太多背面；例如，地形底面的视图，或者您应该无法到达的实体对象内的视图。如果阈值低于 100，Unity 将完全从数据集删除这些区域，从而减少遮挡的数据大小。 </td>
+</tr>
+</tbody>
+</table>
+
+<p>Bake 选项卡的底部是 Clear 和 Bake 按钮。单击 <strong>Bake</strong> 按钮可开始生成遮挡剔除数据。生成数据后，可使用 Visualization 选项卡预览和测试遮挡剔除。如果对结果不满意，请单击 <strong>Clear</strong> 按钮删除以前计算的数据，调整设置，并再次烘焙。</p>
+
+<h2>遮挡剔除 - Visualization</h2>
+
+<figure>
+<img src="../uploads/Main/OcclusionCullingInspectorVisualization.png" alt="遮挡剔除检视面板 Visualization 选项卡。">
+<figcaption>遮挡剔除检视面板 Visualization 选项卡。</figcaption>
+</figure>
+
+<p>场景中的所有对象都会影响包围体的大小，因此请尽量将它们全部保留在场景的可见边界内。</p>
+
+<p>准备好生成遮挡数据后，单击 <strong>Bake</strong> 按钮。请记住在 <strong>Bake</strong> 选项卡中选择 <strong>Memory Limit</strong>。较低的值可以加快生成速度，但会降低精确度，较高的值将生成更适合发行版的质量。</p>
+
+<p>请记住，构建遮挡数据所需的时间取决于单元格级别、数据大小和您所选择的质量。</p>
+
+<p>处理完成后，您应该可以在查看区域中看到一些彩色立方体。彩色区域是共享相同遮挡数据的区域。</p>
+
+<p>如果要删除遮挡剔除的所有预计算数据，请单击 <strong>Clear</strong>。</p>
+
+<h1>遮挡区域</h1>
+
+<p>要将遮挡剔除应用于移动对象，必须创建__遮挡区域 (Occlusion Area)<strong>，然后修改其大小以适合移动对象所在的空间（当然，移动对象不能标记为静态）。可通过将__遮挡区域 (Occlusion Area)</strong> 组件添加到空游戏对象来创建遮挡区域（菜单：__Component &gt; Rendering &gt; Occlusion Area__）。</p>
+
+<p>创建__遮挡区域__后，请选中 <em>Is View Volume</em> 复选框以遮挡移动对象。</p>
+
+<figure>
+<img src="../uploads/Main/Inspector-OcclusionArea.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Size</strong></td>
+	<td style="text-align:left;">定义遮挡区域的大小。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Center</strong></td>
+	<td style="text-align:left;">设置遮挡区域的中心。默认情况下，此设置为 0,0,0，位于盒体的中心。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Is View Volume</strong></td>
+	<td style="text-align:left;">定义摄像机的位置。选中此项可遮挡该_遮挡区域_内的静态对象。</td>
+</tr>
+</tbody>
+</table>
+
+<figure>
+<img src="../uploads/Main/OcclusionCullingOcclusionArea.jpg" alt="Occlusion Area properties for moving objects.">
+<figcaption>Occlusion Area properties for moving objects.</figcaption>
+</figure>
+
+<p>添加遮挡区域后，需要查看它如何将盒体分成单元格。要了解如何计算遮挡区域，请在 <strong>Occlusion Culling 预览面板__中
+选择 </strong>Edit__ 并切换 <strong>View</strong> 按钮。</p>
+
+<figure>
+<img src="../uploads/Main/OcclusionCullingViewVolumes.jpg" alt="">
+</figure>
+
+<h2>测试生成的遮挡</h2>
+
+<p>设置遮挡后，可通过启用 <em>Occlusion Culling_（在 Visualize 模式下的 </em>_Occlusion Culling 预览面板__中）并在 Scene 视图中移动__主摄像机__来测试遮挡。</p>
+
+<figure>
+<img src="../uploads/Main/OcclusionCullingVisualize.png" alt="Scene 视图中的 Occlusion View 模式">
+<figcaption>Scene 视图中的 Occlusion View 模式</figcaption>
+</figure>
+
+<p>当您移动主摄像机时（无论是否处于播放模式下），您将看到各种对象自行禁用。此处要寻找的是遮挡数据是否有任何错误。如果在移动摄像机时看到有对象突然弹入视图，则表示有错误。如果发生这种情况，修复错误的方法为更改分辨率（如果正在使用目标体积），或者移动对象以掩盖错误。要调试遮挡问题，可将主摄像机移动到有问题的位置进行抽样检查。</p>
+
+<p>处理完成后，您应该在查看区域中看到一些彩色立方体。蓝色立方体表示__目标体积__的单元格划分。白色立方体表示__视图体积__的单元格划分。如果参数设置正确，您应该看到一些对象未被渲染。这是因为它们位于摄像机的视锥体之外，或被其他对象遮挡。</p>
+
+<p>遮挡完成后，如果在场景中没有看到任何对象被遮挡，请尝试将对象分成更小的部分，以便能将它们完全包含在单元格内。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ImpressionOfSize.html"></a></span><div class="tip">创建尺寸大小的效果</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="DynamicResolution.html"></a></span><div class="tip">Dynamic resolution</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

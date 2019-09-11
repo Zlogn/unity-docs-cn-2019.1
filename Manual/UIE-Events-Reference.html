@@ -1,0 +1,527 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Event Type Reference - Unity Manual">
+<title>Event Type Reference - Unity Manual</title>
+<meta name="description" content="This topic provides a summary of each event type. Consult the API documentation for a complete description of each event member and its purpose.">
+<meta property="og:description" content="This topic provides a summary of each event type. Consult the API documentation for a complete description of each event member and its purpose.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UIE-Events-Reference';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UIE-Events-Reference.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UIE-Events-Reference.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UIE-Events-Reference.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UIE-Events-Reference.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UIE-Events-Reference.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UIE-Events-Reference.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UIE-Events-Reference.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UIE-Events-Reference.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UIE-Events-Reference.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UIE-Events-Reference.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UIE-Events-Reference.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UIE-Events-Reference.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UIE-Events-Reference.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UIE-Events-Reference.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UIE-Events-Reference.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UIE-Events-Reference.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UIE-Events-Reference.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UIE-Events-Reference.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UIE-Events-Reference.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UIE-Events-Reference.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UIE-Events-Reference.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UIE-Events-Reference.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UIE-Events-Reference.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UIE-Events-Reference.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UIToolkits.html">UI</a></li>
+<li><a href="UIElements.html">UIElements Developer Guide</a></li>
+<li><a href="UIE-Events.html">The Event System</a></li>
+<li>Event Type Reference</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIE-Events-Synthesizing.html"></a></span><div class="tip">Synthesizing Events</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UIE-Controls.html"></a></span><div class="tip">Built-in Controls</div>
+</div>
+</div></div>
+<h1>Event Type Reference</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This topic provides a summary of each event type. Consult the API documentation for a complete description of each event member and its purpose.</p>
+
+<h2>Capture events</h2>
+
+<p>Events implementing <code>IMouseCaptureEvent</code>.</p>
+
+<h3>MouseCaptureEvent</h3>
+
+<p><code>MouseCaptureEvent</code> is sent when an element takes the mouse capture.</p>
+
+<p><code>target</code>: The element that takes the capture.</p>
+
+<h3>MouseCaptureOutEvent</h3>
+
+<p><code>MouseCaptureOutEvent</code> is sent when an element releases or otherwise loses the mouse capture.</p>
+
+<p><code>target</code>: The element that loses the capture.</p>
+
+<h2>Change events</h2>
+
+<p>Events implementing <code>IChangeEvent</code>.</p>
+
+<h3>ChangeEvent</h3>
+
+<p><code>ChangeEvent&lt;T&gt;</code> is a generic event sent when the value of an element changes. This is typically sent when a control changes. For the <code>InputEvent</code> control, this event is not sent for every input event in the control, but only when the value changes. This is usually when either the control loses focus, or the <code>Enter</code> key is pressed.</p>
+
+<dl>
+<dt><code>&lt;T&gt;</code></dt>
+<dd>The type of the value.</dd>
+
+<dt><code>target</code></dt>
+<dd>The element for which the change of value occured.</dd>
+
+<dt><code>previousValue</code></dt>
+<dd>The old control value.</dd>
+
+<dt><code>newValue</code></dt>
+<dd>The new control value.</dd>
+</dl>
+
+<h2>Command events</h2>
+
+<p>Events implementing <code>ICommandEvent</code>.</p>
+
+<dl>
+<dt><code>target</code></dt>
+<dd>The element with keyboard focus. This is null if no element has focus.</dd>
+
+<dt><code>commandName</code></dt>
+<dd>The command to validate or execute.</dd>
+</dl>
+
+<h3>ValidateCommandEvent</h3>
+
+<p>This event is sent by IMGUI while it determines whether the command will be handled by an element in the panel.</p>
+
+<h3>ExecuteCommandEvent</h3>
+
+<p>This event is sent by IMGUI when an element in the panel should execute a command.</p>
+
+<h2>Drag and drop events</h2>
+
+<p>Events sent during a drag and drop operation.</p>
+
+<h3>DragExitedEvent</h3>
+
+<p>The drag and drop operation was cancelled. The drop target did not accept the dragged element.</p>
+
+<h3>DragUpdatedEvent</h3>
+
+<p>The dragged element moved over a drop target.</p>
+
+<h3>DragPerformEvent</h3>
+
+<p>The dragged element was dropped on a target that accepted them. The drag and drop operation is now finished.</p>
+
+<h3>DragEnterEvent</h3>
+
+<p>The dragged element entered a new drop target.</p>
+
+<h3>DragLeaveEvent</h3>
+
+<p>The dragged element exited the drop target area.</p>
+
+<h2>Layout events</h2>
+
+<h3>GeometryChangedEvent</h3>
+
+<p>Event sent when either the position or the dimensions of an element changes. Events of this type are only sent to the event target. They are not propagated.</p>
+
+<dl>
+<dt><code>target</code></dt>
+<dd>The element with a new geometry.</dd>
+
+<dt><code>oldRect</code></dt>
+<dd>The former position and dimensions of the element.</dd>
+
+<dt><code>newRect</code></dt>
+<dd>The new position and dimensions of the element.</dd>
+</dl>
+
+<h2>Focus events</h2>
+
+<p>Events implementing <code>IFocusEvent</code>.</p>
+
+<p>These events are sent when an element is given or loses keyboard focus. There are two sets of focus events:</p>
+
+<ul>
+<li>
+<code>FocusOutEvent</code> and <code>FocusInEvent</code> are sent along the propagation path just before the focus change occurs.</li>
+<li>
+<code>FocusEvent</code> and <code>BlurEvent</code> are sent to the event target only, immediately after the focus change.</li>
+</ul>
+
+<h3>FocusOutEvent</h3>
+
+<p>Event sent when an element is about to lose the focus.</p>
+
+<dl>
+<dt><code>target</code></dt>
+<dd>The element that will lose the focus.</dd>
+
+<dt><code>relatedTarget</code></dt>
+<dd>The element that will gain the focus.</dd>
+</dl>
+
+<h3>FocusInEvent</h3>
+
+<p>Event sent when an element is about to gain the focus.</p>
+
+<dl>
+<dt><code>target</code></dt>
+<dd>The element that will gain the focus.</dd>
+
+<dt><code>relatedTarget</code></dt>
+<dd>The element that will lose the focus.</dd>
+</dl>
+
+<h3>BlurEvent</h3>
+
+<p>Event sent after an element lost the focus.</p>
+
+<dl>
+<dt><code>target</code></dt>
+<dd>The element that lost the focus.</dd>
+
+<dt><code>relatedTarget</code></dt>
+<dd>The element that gained the focus.</dd>
+</dl>
+
+<h3>FocusEvent</h3>
+
+<p>Event sent after an element gained the focus.</p>
+
+<dl>
+<dt><code>target</code></dt>
+<dd>The element that gained the focus.</dd>
+
+<dt><code>relatedTarget</code></dt>
+<dd>The element that lost the focus.</dd>
+</dl>
+
+<h2>Input events</h2>
+
+<h3>InputEvent</h3>
+
+<p>Event sent when data is input to a visual element, typically a control. This event differs from <code>ChangeEvent</code> in that it is sent for every input event in the control, even if the value of the control did not changed.</p>
+
+<dl>
+<dt><code>target</code></dt>
+<dd>The element where the input occured.</dd>
+
+<dt><code>previousData</code></dt>
+<dd>The former data.</dd>
+
+<dt><code>newData</code></dt>
+<dd>The new data.</dd>
+</dl>
+
+<h2>Keyboard events</h2>
+
+<p>Events implementing <code>IKeyboardEvent</code>.</p>
+
+<h3>KeyDownEvent</h3>
+
+<p>Event sent when the user presses a key on the keyboard.</p>
+
+<dl>
+<dt><code>target</code></dt>
+<dd>The element that has the keyboard focus. If no element has keyboard focus, this is the root element of the panel.</dd>
+</dl>
+
+<h3>KeyUpEvent</h3>
+
+<p>Event sent when the user releases a key on the keyboard.</p>
+
+<dl>
+<dt><code>target</code></dt>
+<dd>The element that has the keyboard focus. If no element has keyboard focus, this is the root element of the panel.</dd>
+</dl>
+
+<h2>Mouse events</h2>
+
+<p>Events implementing <code>IKeyboardEvent</code>.</p>
+
+<p>While an element is capturing the mouse, mouse events are only be sent to the capturing elements. There is no propagation.</p>
+
+<h3>MouseDownEvent</h3>
+
+<p>Event sent when the user presses one of the mouse buttons.</p>
+
+<dl>
+<dt><code>target</code></dt>
+<dd>If an element took the mouse capture, this is the element capturing the mouse. Otherwise, this is the topmost pickable element under the cursor.</dd>
+</dl>
+
+<h3>MouseUpEvent</h3>
+
+<p>Event sent when the user releases one of the mouse buttons.</p>
+
+<dl>
+<dt><code>target</code></dt>
+<dd>If an element took the mouse capture, this is the element capturing the mouse. Otherwise, this is the topmost pickable element under the cursor.</dd>
+</dl>
+
+<h3>MouseMoveEvent</h3>
+
+<p>Event went when the user moves the mouse.</p>
+
+<dl>
+<dt><code>target</code></dt>
+<dd>If an element took the mouse capture, this is the element capturing the mouse. Otherwise, this is the topmost pickable element under the cursor.</dd>
+</dl>
+
+<h3>ContextClickEvent (obsolete)</h3>
+
+<p>Event sent when the user presses and releases the third mouse button. This event only exists for backward compatibility with IMGUI.</p>
+
+<h3>WheelEvent</h3>
+
+<p>Event sent when the user activates the mouse wheel.</p>
+
+<dl>
+<dt><code>target</code></dt>
+<dd>If an element took the mouse capture, this is the element capturing the mouse. Otherwise, this is the topmost pickable element under the cursor.</dd>
+</dl>
+
+<h3>MouseEnterWindowEvent</h3>
+
+<p>Event sent when the mouse enters an window.</p>
+
+<dl>
+<dt><code>target</code></dt>
+<dd>If an element took the mouse capture, this is the element capturing the mouse. Otherwise, this is the topmost pickable element under the cursor.</dd>
+</dl>
+
+<h3>MouseLeaveWindowEvent</h3>
+
+<p>Event sent when the mouse leaves an window.</p>
+
+<dl>
+<dt><code>target</code></dt>
+<dd>If an element took the mouse capture, this is the element capturing the mouse. Otherwise, this is null because the cursor is not over an element.</dd>
+</dl>
+
+<h3>MouseEnterEvent</h3>
+
+<p>Event sent when the mouse enters an element or one of its descendant. This event differs from <code>MouseOverEvent</code> in that this event is sent to each element being entered by the mouse. This event does not propagate.</p>
+
+<dl>
+<dt><code>target</code></dt>
+<dd>The element, or one of its decendants, under the mouse cursor.</dd>
+</dl>
+
+<h3>MouseLeaveEvent</h3>
+
+<p>Event sent when the mouse leaves an element or one of its descendant. This event differs from <code>MouseOutEvent</code> in that this event is sent to each element being exited by the mouse. This event does not propagate.</p>
+
+<dl>
+<dt><code>target</code></dt>
+<dd>The element has just been exited by the mouse cursor, or that has one of its descendant exited by the mouse cursor.</dd>
+</dl>
+
+<h3>MouseOverEvent</h3>
+
+<p>Event sent when the mouse enters an element. This event differs from <code>MouseEnterEvent</code> in that this event is only sent to the entered element. . This event does not propagate.</p>
+
+<dl>
+<dt><code>target</code></dt>
+<dd>The element that is now under the mouse cursor.</dd>
+</dl>
+
+<h3>MouseOutEvent</h3>
+
+<p>Event sent when the mouse leaves an element. This event differs from <code>MouseLeaveEvent</code> in that this event is only sent to the exited element and that it propagates.</p>
+
+<dl>
+<dt><code>target</code></dt>
+<dd>The element that has just been exited by the mouse cursor.</dd>
+</dl>
+
+<h3>ContextualMenuPopulateEvent</h3>
+
+<p>Event sent by the <code>ContextualMenuManager</code> when the contextual menu needs to be populated with menu items.</p>
+
+<dl>
+<dt><code>target</code></dt>
+<dd>The element for which the contextual menu is being built.</dd>
+</dl>
+
+<h2>Panel events</h2>
+
+<h3>AttachToPanelEvent</h3>
+
+<p>Event sent immediately after an element is attached to a <code>IPanel</code>. Since
+setting the panel is recursive, all descendants of the element also
+receive the event.</p>
+
+<dl>
+<dt><code>target</code></dt>
+<dd>The element being attached to a panel.</dd>
+</dl>
+
+<h3>DetachFromPanelEvent</h3>
+
+<p>Event sent just before an element is detached to a <code>IPanel</code>. Since
+setting the panel is recursive, all descendants of the element also
+receive the event.</p>
+
+<dl>
+<dt><code>target</code></dt>
+<dd>The element being detached from a panel.</dd>
+</dl>
+
+<h2>Tooltip event</h2>
+
+<h3>TooltipEvent</h3>
+
+<p>Event sent just before a tooltip is displayed. The handler should set the <code>TooltipEvent.tooltip</code> string and the <code>TooltipEvent.rect</code>.</p>
+
+<dl>
+<dt><code>target</code></dt>
+<dd>The element for which a tooltip needs to be displayed.</dd>
+</dl>
+
+<h2>IMGUI events</h2>
+
+<h3>IMGUIEvent</h3>
+
+<p>Event used to encapsulate IMGUI-specifc events.</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–11–02 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIE-Events-Synthesizing.html"></a></span><div class="tip">Synthesizing Events</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UIE-Controls.html"></a></span><div class="tip">Built-in Controls</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

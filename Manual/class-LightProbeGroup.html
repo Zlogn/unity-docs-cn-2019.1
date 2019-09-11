@@ -1,0 +1,350 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Light Probe Groups - Unity Manual">
+<title>Light Probe Groups - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/class-LightProbeGroup-20183.png">
+<meta name="description" content="To place Light Probes in your Scene, you must use a GameObject with a Light Probe Group component attached. You can add a Light Probe Group component from the menu: Component &gt; Rendering &gt; Light Probe Group.">
+<meta property="og:description" content="To place Light Probes in your Scene, you must use a GameObject with a Light Probe Group component attached. You can add a Light Probe Group component from the menu: Component &gt; Rendering &gt; Light Probe Group.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-LightProbeGroup';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-LightProbeGroup.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-LightProbeGroup.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-LightProbeGroup.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-LightProbeGroup.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-LightProbeGroup.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-LightProbeGroup.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-LightProbeGroup.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-LightProbeGroup.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-LightProbeGroup.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-LightProbeGroup.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-LightProbeGroup.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-LightProbeGroup.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-LightProbeGroup.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-LightProbeGroup.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-LightProbeGroup.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-LightProbeGroup.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-LightProbeGroup.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-LightProbeGroup.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-LightProbeGroup.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-LightProbeGroup.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-LightProbeGroup.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-LightProbeGroup.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-LightProbeGroup.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-LightProbeGroup.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="LightingOverview.html">光照</a></li>
+<li><a href="GIIntro.html">全局光照</a></li>
+<li><a href="LightProbes.html">光照探针</a></li>
+<li>Light Probe Groups</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LightProbes-TechnicalInformation.html"></a></span><div class="tip">光照探针：技术信息</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightProbes-Placing-Scripting.html"></a></span><div class="tip">使用脚本放置探针</div>
+</div>
+</div></div>
+<h1>Light Probe Groups</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>To place Light Probes in your Scene, you must use a GameObject with a <strong>Light Probe Group</strong> component attached. You can add a Light Probe Group component from the menu: <strong>Component &gt; Rendering &gt; Light Probe Group</strong>.</p>
+
+<p>You can add the Light Probe Group component to any GameObject in the Scene. However, it’s good practice to create a new empty GameObject (menu: <strong>GameObject &gt; Create Empty</strong>) and add it to that, to decrease the possibility of accidentally removing it from the Project.</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-20183.png" alt="The Light Probe Group component">
+<figcaption>The Light Probe Group component</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Edit Light Probes</strong></td>
+	<td style="text-align:left;">To make changes to a Light Probe Group, click the <strong>Edit Light Probes</strong> button to enable editing. This changes Unity so that you can only move and edit Light Probes, so you must remember to disable it when you are finished. You cannot move or edit GameObjects or other element in Unity while <strong>Edit Light Probes</strong> is enabled.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Show Wireframe</strong></td>
+	<td style="text-align:left;">When this property is enabled, Unity displays the wireframe of the Light Probe Group in the Scene view. When it is disabled, Unity only displays the Light Probe points, and not the wireframe connecting them.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Remove Ringing</strong></td>
+	<td style="text-align:left;">When this property is enabled, Unity automatically removes Light Probe ringing from the Scene. For more information, see <a href="#Ringing">Ringing</a>, later in this section.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Selected Probe Position</strong></td>
+	<td style="text-align:left;">This gives the x, y and z coordinates of the selected Light Probes in the Scene. This property is read-only.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Add Probe</strong></td>
+	<td style="text-align:left;">Click this to add a Light Probe to the Light Probe Group.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Select All</strong></td>
+	<td style="text-align:left;">Click this to select all Light Probes in the Light Probe Group.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Delete Selected</strong></td>
+	<td style="text-align:left;">Click this to delete the selected Light Probes from the Light Probe Group.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Duplicate Selected</strong></td>
+	<td style="text-align:left;">Click this to duplicate the selected Light Probes.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Ringing"></a></p>
+
+<h3>Ringing</h3>
+
+<p>Under certain circumstances, Light Probes exhibit an unwanted behaviour called “ringing”. This often happens when there are significant differences in the light surrounding a Light Probe. For example, if you have bright light on one side of a Light Probe, and no light on the other side, the light intensity can “overshoot” on the back side. This overshoot causes a light spot on the back side.</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-Ringing.png" alt="Example of Light Probe ringing">
+<figcaption>Example of Light Probe ringing</figcaption>
+</figure>
+
+<p>There are several ways to deal with this:</p>
+
+<p>In the Light Probe Group component, enable <strong>Remove Ringing</strong>. Unity automatically removes the unintended light spots. However, this generally makes the Light Probes less accurate, and reduces light contrast, so you must check the visual results.
+Place in-game obstacles in such a way that players can’t get to a position where they can see the light spot.
+Avoid baking direct light into Light Probes. Direct light tends to have sharp discontinuities (such as shadow edges), which makes it unsuitable for Light Probes. To only bake indirect light, use <a href="https://docs.unity3d.com/Manual/LightMode-Mixed.html">Mixed lighting</a>.
+Use <a href="https://docs.unity3d.com/Manual/GI-Enlighten.html">Realtime GI</a> instead of Light Probes to light dynamic GameObjects.</p>
+
+<h2>Placing Light Probes</h2>
+
+<p>When editing a Light Probe Group, you can manipulate individual Light Probes in a similar way to GameObjects. However, Light Probes are not GameObjects; they are a set of points in the Light Probe Group component.</p>
+
+<p>When you begin editing a new Light Probe Group, you start with a default formation of eight probes arranged in a cube, as shown below:</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-9.png" alt="The default arrangement of Light Probes.">
+<figcaption>The default arrangement of Light Probes.</figcaption>
+</figure>
+
+<p>You can now use the controls in the Light Probe Group inspector to add new probe positions to the group. The probes appear in the Scene as yellow spheres which you can position in the same way as GameObjects. You can also select and duplicate individual probes or in groups, by using the usual “duplicate” keyboard shortcut (ctrl+d/cmd+d).</p>
+
+<p>Remember to disable the Light Probe Group edit mode when you’ve finished editing the Light Probes, so that you can continue to edit and move GameObjects in your Scene as normal.</p>
+
+<h3>Choosing Light Probe positions</h3>
+
+<p>Unlike lightmaps, which usually have a continuous resolution across the surface of an object, the resolution of the Light Probe information depends on how closely packed you choose to position the Light Probes.</p>
+
+<p>To optimise the amount of data that Light Probes store, and the amount of computation done while the game is playing, you should generally attempt to place as few Light Probes as possible. However, you should also place enough Light Probes so that changes in light from one space to another are recorded at a level that is acceptable to you. This means you might place Light Probes in a more condensed pattern around areas that have complex or highly contrasting light, and you might place them in a much more spread out pattern over areas where the light does not significantly change.</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-10.png" alt="Light Probes placed with varying density around a simple Scene">
+<figcaption>Light Probes placed with varying density around a simple Scene</figcaption>
+</figure>
+
+<p>In the example above, the Light Probes are placed more densely near and between the buildings where there is more contrast and color variation, and less densely along the road, where the lighting does not significantly change.</p>
+
+<p>The simplest approach to positioning Light Probes is to arrange them in a regular 3D grid pattern. While this setup is simple and effective, it is likely to consume more memory than necessary, and you may have lots of redundant Light Probes. For example, in the Scene above, if there were lots of Light Probes placed along the road it would be a waste of resources. The light does not change much along the length of the road, so many Light Probes would be storing almost identical lighting data to their neighbouring Light Probes. In situations like this, it is much more efficient to interpolate this lighting data between fewer, more spread-out, Light Probes.</p>
+
+<p>Light Probes individually do not store a large amount of information. From a technical perspective, each probe is a spherical, panoramic HDR image of the view from the sample point, encoded using Spherical Harmonics L2 which is stored as 27 floating point values. However, in large Scenes with hundreds of Light Probes they can add up, and having unnecessarily densely packed Light Probes can result in large amounts of wasted memory in your game.</p>
+
+<h3>Creating a volume</h3>
+
+<p>Even if your gameplay takes place on a 2D plane (for example, cars driving around on a road surface), your Light Probes must form a 3D volume.</p>
+
+<p>This means you should have at least two vertical “layers” of points in your group of Light Probes.</p>
+
+<p>In the example below, you can see on the left the Light Probes are arranged only across the surface of the ground. This does not result in good lighting because the Light Probe system cannot calculate sensible tetrahedral volumes from the Light Probes.</p>
+
+<p>On the right, the Light Probes are arranged in two layers, some low to the ground and others higher up, so that together they form a 3D volume made up of lots of individual tetrahedra. This is a good layout.</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-11.jpg" alt="The left image shows a bad choice of Light Probe positions, because there is no height to the volume defined by the Light Probes. The right image shows a good choice of Light Probe positions.">
+<figcaption>The left image shows a bad choice of Light Probe positions, because there is no height to the volume defined by the Light Probes. The right image shows a good choice of Light Probe positions.</figcaption>
+</figure>
+
+<h3>Light Probe placement for dynamic GI</h3>
+
+<p>Unity’s real-time GI allows moving lights to cast dynamic bounced light against your static scenery. However, you can also receive dynamic bounced light from moving lights on moving GameObjects when you are using Light Probes.</p>
+
+<p>Light Probes therefore perform two very similar but distinct functions - they store static baked light, and at run time they represent sampling points for dynamic real-time global illumination (GI, or bounced light) to affect the lighting on moving objects.</p>
+
+<p>Therefore, if you are using dynamic moving lights, and want real-time bounced light on your moving GameObjects, this may have implications on your choice of where you place your Light Probes, and how densely you group them.</p>
+
+<p>The main point to consider in this situation is that in large areas of relatively unchanging <em>static light</em> you might have placed only a few Light Probes - because the light does not change across a wide area. However, if you plan to have <em>moving lights</em> within this area, and you want moving objects to receive bounced light from them, you need a more dense network of Light Probes within the area so that there is a high enough level of accuracy to match your light’s range and style.</p>
+
+<p>How densely placed your Light Probes need to be varies depending on the size and range of your lights, how fast they move, and how large the moving objects are that you want to receive bounced light.</p>
+
+<h3>Troubleshooting Light Probe placement</h3>
+
+<p>Your choice of Light Probe positions must take into account that the lighting is interpolated between sets of Light Probes. Problems can arise if your Light Probes don’t adequately cover the changes in lighting across your Scene.</p>
+
+<p>The example below shows a night-time Scene with two bright street lamps on either side, and a dark area in the middle. If Light Probes are only placed near the street lamps, and none in the dark area, the lighting from the lamps “bleeds” across the dark gap, on moving objects. This is because the lighting is being interpolated from one bright point to another, with no information about the dark area in-between.</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-12.jpg" alt="This image shows poor Light Probe placement. There are no Light Probes in the dark area between the two lamps, so the dark area is not included in the interpolation at all.">
+<figcaption>This image shows poor Light Probe placement. There are no Light Probes in the dark area between the two lamps, so the dark area is not included in the interpolation at all.</figcaption>
+</figure>
+
+<p>If you are using Realtime or Mixed lights, this problem may be less noticeable, because only the <em>indirect</em> light bleeds across the gap. The problem is more noticable if you are using fully baked lights, because in this situation the direct light on moving objects is also interpolated from the Light Probes. In this example Scene, the two lamps are baked, so moving objects get their direct light from Light Probes. Here you can see the result - a moving object (the ambulance) remains brightly lit while passing through the dark area, which is not the desired effect. The yellow wireframe tetrahedron shows that the interpolation is occurring between one brightly lit end of the street to the other.</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-13.jpg" alt="">
+</figure>
+
+<p>This is an undesired effect - the ambulance remains brightly lit while passing through a dark area, because no Light Probes were placed in the dark area.</p>
+
+<p>To solve this, you should place more Light Probes in the dark area, as shown below:</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-14.jpg" alt="">
+</figure>
+
+<p>Now the Scene has Light Probes in the dark area too. As a result, the moving ambulance takes on the darker lighting as it travels from one side of the Scene to the other.</p>
+
+<figure>
+<img src="../uploads/Main/class-LightProbeGroup-15.jpg" alt="The ambulance now takes on the darker lighting in the centre of the Scene, as desired.">
+<figcaption>The ambulance now takes on the darker lighting in the centre of the Scene, as desired.</figcaption>
+</figure>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2018–10–17 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-edit"> 2017–06–08 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history"><strong>Remove Ringing</strong> added in <a href="https://docs.unity3d.com/2018.3/Documentation/Manual/30_search.html?q=newin20183">2018.3</a> <span class="search-words">NewIn20183</span></span></p></li>
+<li><p><span class="page-history">在 5.6 版更新了光照探针</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LightProbes-TechnicalInformation.html"></a></span><div class="tip">光照探针：技术信息</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LightProbes-Placing-Scripting.html"></a></span><div class="tip">使用脚本放置探针</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

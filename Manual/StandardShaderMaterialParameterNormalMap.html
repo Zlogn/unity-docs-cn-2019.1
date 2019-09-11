@@ -1,0 +1,374 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="法线贴图（凹凸贴图） - Unity Manual">
+<title>法线贴图（凹凸贴图） - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/StandardShaderParameterNormalMap.png">
+<meta name="description" content="法线贴图 (Normal Map) 是一种凹凸贴图 (Bump Map)。它们是一种特殊的纹理，可让您将表面细节（如凹凸、凹槽和划痕）添加到模型，从而捕捉光线，就像由真实几何体表示一样。">
+<meta property="og:description" content="法线贴图 (Normal Map) 是一种凹凸贴图 (Bump Map)。它们是一种特殊的纹理，可让您将表面细节（如凹凸、凹槽和划痕）添加到模型，从而捕捉光线，就像由真实几何体表示一样。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'StandardShaderMaterialParameterNormalMap';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/StandardShaderMaterialParameterNormalMap.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/StandardShaderMaterialParameterNormalMap.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/StandardShaderMaterialParameterNormalMap.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/StandardShaderMaterialParameterNormalMap.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/StandardShaderMaterialParameterNormalMap.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/StandardShaderMaterialParameterNormalMap.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/StandardShaderMaterialParameterNormalMap.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/StandardShaderMaterialParameterNormalMap.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/StandardShaderMaterialParameterNormalMap.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/StandardShaderMaterialParameterNormalMap.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/StandardShaderMaterialParameterNormalMap.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/StandardShaderMaterialParameterNormalMap.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/StandardShaderMaterialParameterNormalMap.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/StandardShaderMaterialParameterNormalMap.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/StandardShaderMaterialParameterNormalMap.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/StandardShaderMaterialParameterNormalMap.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/StandardShaderMaterialParameterNormalMap.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/StandardShaderMaterialParameterNormalMap.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/StandardShaderMaterialParameterNormalMap.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/StandardShaderMaterialParameterNormalMap.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/StandardShaderMaterialParameterNormalMap.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/StandardShaderMaterialParameterNormalMap.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/StandardShaderMaterialParameterNormalMap.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/StandardShaderMaterialParameterNormalMap.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="Shaders.html">材质、着色器和纹理</a></li>
+<li><a href="shader-StandardShader.html">标准着色器</a></li>
+<li><a href="StandardShaderMaterialParameters.html">材质参数</a></li>
+<li>法线贴图（凹凸贴图）</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="StandardShaderMaterialParameterSmoothness.html"></a></span><div class="tip">平滑度</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="StandardShaderMaterialParameterHeightMap.html"></a></span><div class="tip">高度贴图</div>
+</div>
+</div></div>
+<h1>法线贴图（凹凸贴图）</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<figure>
+<img src="../uploads/Main/StandardShaderParameterNormalMap.png" alt="">
+</figure>
+
+<p>法线贴图 (Normal Map) 是一种<strong>凹凸贴图 (Bump Map)</strong>。它们是一种特殊的纹理，可让您将表面细节（如凹凸、凹槽和划痕）添加到模型，从而捕捉光线，就像由真实几何体表示一样。</p>
+
+<p>例如，您可能希望显示一个表面，在表面上有凹槽和螺钉或铆钉，比如飞机机身。为实现此目的，一种方法是将这些细节建模为几何体，如下所示。</p>
+
+<figure>
+<img src="../uploads/Main/StandardShaderNormalMapBadGeometry.jpg" alt="细节建模飞机金属板为真实几何体。">
+<figcaption>细节建模飞机金属板为真实几何体。</figcaption>
+</figure>
+
+<p>根据具体情况，将这些微小的细节建模为“真实”几何体通常并非一种好的思路。在右侧，您可以看到构成单个螺丝头的细节所需的多边形。在具有大量精细表面细节的大型模型上，这种方案需要绘制极大数量的多边形。为了避免这种情况，我们应使用法线贴图来表示精细的表面细节，而使用分辨率较低的多边形表面来表示模型的较大形状。</p>
+
+<p>如果我们改用凹凸贴图来表示此细节，则表面几何体可以变得简单得多，并且细节将通过纹理呈现，用纹理来调节表面如何反射光。现代图形硬件可以非常快速地完成此过程。现在，金属表面可变为一个简单多边形平面，而螺钉、铆钉、凹槽和划痕将捕捉光线，并会因为纹理而显得有深度。</p>
+
+<figure>
+<img src="../uploads/Main/StandardShaderNormalMapAircraftSurface.jpg" alt="在法线贴图中定义了螺钉、凹槽和划痕，此贴图将修改从这个简单多边形平面的表面反射光线的方式，给人以 3D 细节的印象。除了铆钉和螺钉外，纹理还可以让我们包含大量其他细节，如细微的凹凸和划痕。">
+<figcaption>在法线贴图中定义了螺钉、凹槽和划痕，此贴图将修改从这个简单多边形平面的表面反射光线的方式，给人以 3D 细节的印象。除了铆钉和螺钉外，纹理还可以让我们包含大量其他细节，如细微的凹凸和划痕。</figcaption>
+</figure>
+
+<p>在现代游戏开发的美术制作流程中，美术师将使用他们的 3D 建模应用程序基于超高分辨率的源模型生成法线贴图。然后将法线贴图映射到可直接用于游戏的较低分辨率的模型版本，从而使用法线贴图渲染原始的高分辨率细节。</p>
+
+<h1>如何创建和使用凹凸贴图</h1>
+
+<p>凹凸贴图是一种相对较旧的图形技术，但仍然是创建高细节度的逼真实时图形所需的核心方法之一。凹凸贴图通常也称为<strong>法线贴图</strong>或<strong>高度贴图 (Height Map)</strong>，但这些术语的含义略有不同，下文稍后将进行说明。</p>
+
+<h2>什么是表面法线？</h2>
+
+<p>为了真正解释法线贴图的工作原理，我们将首先介绍什么是“<strong>法线</strong>”以及如何在实时光照中使用法线。可能最基本的例子就是一个模型的每个表面多边形仅根据相对于光线的表面角度获得光照。表面角度可表示为表面垂直方向突出的一条线，而相对于表面的该方向（矢量）即称为“<strong>表面法线</strong>”，或简称为<strong>法线</strong>。</p>
+
+<figure>
+<img src="../uploads/Main/BumpMap2Cylinders.png" alt="两个 12 面圆柱体，左侧带有平面着色，右侧带有平滑着色">
+<figcaption>两个 12 面圆柱体，左侧带有平面着色，右侧带有平滑着色</figcaption>
+</figure>
+
+<p>在上图中，左圆柱体具有基本的平面着色，并且每个多边形根据其与光源的相对角度进行着色。每个多边形上的光照在多边形区域内保持恒定，因为该表面是平坦的。以下是显示了线框网格的同样两个圆柱体：</p>
+
+<figure>
+<img src="../uploads/Main/BumpMap2CylindersWire.png" alt="两个 12 面圆柱体，左侧带有平面着色，右侧带有平滑着色">
+<figcaption>两个 12 面圆柱体，左侧带有平面着色，右侧带有平滑着色</figcaption>
+</figure>
+
+<p>右侧的模型与左侧的模型具有相同数量的多边形，但是显示为平滑着色；多边形上的光照产生了曲面外观。为什么会这样？原因是用于反射光线的每个点处的<strong>表面法线</strong>沿着多边形的宽度逐渐变化，所以对于表面上的任何给定点，光反射表现为<em>好像该表面是弯曲的</em>而不是实际的平坦恒定多边形。</p>
+
+<p>以 2D 图的形式查看时，平面着色圆柱体外侧的三个表面多边形将如下所示：</p>
+
+<figure>
+<img src="../uploads/Main/BumpMapFlatShadingDiagram.svg" alt="以 2D 图的形式查看时，三个多边形上的平面着色">
+<figcaption>以 2D 图的形式查看时，三个多边形上的平面着色</figcaption>
+</figure>
+
+<p>表面法线用橙色箭头表示。这些值用于计算光线如何从表面反射，所以您可以看到光线沿着每个多边形的长度具有相同响应，因为表面法线指向相同的方向。因此就会产生“平面着色”，这也是左圆柱体的多边形看起来有硬边的原因。</p>
+
+<p>然而，对于平滑着色的圆柱体，表面法线在平面多边形上发生变化，如下所示：</p>
+
+<figure>
+<img src="../uploads/Main/BumpMapSmoothShadingDiagram.svg" alt="以 2D 图的形式查看时，三个多边形上的平滑着色">
+<figcaption>以 2D 图的形式查看时，三个多边形上的平滑着色</figcaption>
+</figure>
+
+<p>法线方向在平面多边形表面上逐渐变化，因此表面上的着色产生了平滑曲线的印象（如绿线所示）。这不会影响网格的实际多边形性质，只会影响在平面表面上计算光照的方式。这种明显的曲面并不存在，以掠射角观察这些面时将揭示出平面多边形的真实性质，但从大多数视角看，圆柱体看起来具有平滑的曲面。</p>
+
+<p>使用这种基本平滑着色时，实际上只根据<strong>每个顶点</strong>来存储确定法线方向的数据，因此该表面上的变化值是从一个顶点到下一个顶点之间进行插值的。在上图中，红色箭头表示每个顶点存储的法线方向，橙色箭头表示多边形区域上的内插法线方向的示例。</p>
+
+<h2>什么是法线贴图？</h2>
+
+<p>法线贴图使表面法线的这种修改更进一步，使用纹理来存储有关如何修改模型上的表面法线的信息。法线贴图是映射到模型表面的图像纹理，类似于常规颜色纹理，但法线贴图纹理中的每个像素（称为<strong>纹理像素</strong>）表示平面法线方向与平面（或平滑插值）多边形“真实”表面法线之间的偏差。</p>
+
+<figure>
+<img src="../uploads/Main/BumpMapBumpShadingDiagram.svg" alt="以 2D 图的形式查看时，三个多边形的法线贴图">
+<figcaption>以 2D 图的形式查看时，三个多边形的法线贴图</figcaption>
+</figure>
+
+<p>该图再次以 2D 形式表示 3D 模型的表面上的三个多边形，每个橙色箭头对应于法线贴图纹理中的像素。下面的是法线贴图纹理的单像素切片。在中心位置，您可以看到法线已被修改，在多边形的表面上呈现出几个凹凸的<em>外观</em>。因为这些修改过的法线将用于光照计算，所以这些凹凸只会由于表面上的光照显示情况而变得明显。</p>
+
+<p>原始法线贴图文件中可见的颜色通常具有蓝色色调，并且不包含任何实际的浅色或深色着色，这是因为这些颜色本身不打算按原样显示。实际上，每个纹理像素的 RGB 值表示方向矢量的 X、Y 和 Z 值，并作为对多边形表面的基本内插平滑法线的修改而应用。</p>
+
+<figure>
+<img src="../uploads/Main/BumpMapTexturePreview.png" alt="法线贴图纹理示例">
+<figcaption>法线贴图纹理示例</figcaption>
+</figure>
+
+<p>这是一个简单的法线贴图，包含一些凸起的矩形和文本的凹凸信息。此法线贴图可导入到 Unity 中，并放入标准着色器的 Normal Map 字段中。在材质中与颜色贴图（Albedo 贴图）相结合并应用于上述圆柱体网格的表面时，结果如下所示：</p>
+
+<figure>
+<img src="../uploads/Main/BumpMapLitExample.jpg" alt="The example normal map applied to the surface of the cylinder mesh used above">
+<figcaption>The example normal map applied to the surface of the cylinder mesh used above</figcaption>
+</figure>
+
+<p>同样，这不会影响网格的实际多边形性质，只会影响在表面上计算光照的方式。表面上明显凸起的字幕和形状并不存在，以掠射角观察这些面时将揭示出平面表面的真实性质，但从大多数视角看，圆柱体现在看起来具有从表面凸起的浮雕细节。</p>
+
+<h2>如何获取或制作法线贴图？</h2>
+
+<p>法线贴图通常与模型或纹理一起由 3D 或纹理美术师制作而成，并且通常镜像出反照率贴图的布局和内容。有时，法线贴图是手工制作的，有时是从 3D 应用程序中渲染出来的。</p>
+
+<p>如何从 3D 应用程序渲染法线贴图超出了本文档的范畴，但基本概念是 3D 美术师将制作模型的两个版本：一个以多边形包含所有细节的高分辨率模型，还有一个可立即用于游戏的低分辨率模型。高分辨率模型的细节化程度太高，无法在游戏中以最佳状态运行（网格中有太多三角形），但需要在 3D 建模应用程序中用于生成法线贴图。然后，低分辨率版本的模型可以忽略非常精细的几何细节，这些细节现在已存储在法线贴图中，因此可以使用法线贴图来渲染该模型。一个典型的用例就是显示角色服装上的折痕、按钮、搭扣和接缝的凹凸细节。</p>
+
+<p>有一些软件包可以分析常规摄影纹理中的光照，并从中提取法线贴图。为此，需要假设原始纹理从恒定方向接受光照，还要分析明暗区域并假设其与倾斜表面对应。但是，当实际使用凹凸贴图时，您需要确保反照率纹理<em>没有</em>来自图像中任何特定方向的光线（理想情况下应表示完全没有光线的表面的颜色），因为 Unity 将根据光线方向、曲面角度和凹凸贴图信息计算出光照信息。</p>
+
+<p>下面提供了两个例子，一个是简单的重复石墙纹理及其对应的法线贴图，另一个是角色的纹理图集及其对应的法线贴图：</p>
+
+<figure>
+<img src="../uploads/Main/BumpMapColourMapStoneWallExample.jpg" alt="石墙纹理及其对应的法线贴图纹理">
+<figcaption>石墙纹理及其对应的法线贴图纹理</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/BumpMapColourMapAstrellaExample.jpg" alt="角色纹理图集及其对应的法线贴图纹理图集">
+<figcaption>角色纹理图集及其对应的法线贴图纹理图集</figcaption>
+</figure>
+
+<h2>凹凸贴图、法线贴图和高度贴图有什么区别？</h2>
+
+<p><strong>法线贴图</strong>和<strong>高度贴图</strong>都是凹凸贴图的<em>类型</em>。二者都包含一些数据用于表示较简单多边形网格的表面上的明显细节，但各自却以不同的方式存储这些数据。</p>
+
+<figure>
+<img src="../uploads/Main/BumpMapHeightMapNormalMapComparison.jpg" alt="左侧是用于石墙凹凸贴图的高度贴图。右侧是用于石墙凹凸贴图的法线贴图。">
+<figcaption>左侧是用于石墙凹凸贴图的高度贴图。右侧是用于石墙凹凸贴图的法线贴图。</figcaption>
+</figure>
+
+<p>在上方左侧，您可以看到用于石墙凹凸贴图的高度贴图。高度贴图是一种简单的黑白纹理，其中每个像素表示该点在表面上看起来应该凸起的程度。像素颜色越白，该区域看起来越高。</p>
+
+<p>法线贴图是 RGB 纹理，其中每个像素表示表面看起来应该面向的<em>方向的差异</em>（相对于其未经修改的表面法线）。由于矢量存储在 RGB 值中的方式，这些纹理往往为蓝紫色调。</p>
+
+<p>现代实时 3D 图形硬件依赖于法线贴图，因为此类型的贴图包含了必要的矢量来修改在表面上反射光线的方式。Unity 还可接受高度贴图类型的凹凸贴图，但必须在导入时将其转换为法线贴图才能使用。</p>
+
+<h3>为什么呈现紫蓝色？</h3>
+
+<p>了解这一点对于使用法线贴图并不重要！跳过这一段是可以的。但是，如果真的想知道，请参考以下信息：RGB 颜色值用于存储矢量的 X、Y、Z 方向，其中的 Z 为“向上”（与 Unity 通常使用 Y 作为“向上”的惯例相反）。此外，纹理中的值视为经过减半处理，即添加了 0.5 的系数。这样就能存储所有方向的矢量。因此，为了将 RGB 颜色转换为矢量方向，必须乘以 2，然后减去 1。例如，RGB 值 (0.5, 0.5, 1) 或十六进制的 #8080FF 将得到矢量 (0,0,1)，这便是用于法线贴图的“向上”，并表示模型表面没有变化。这就是您在此页面前面的法线贴图“示例”的平面区域中看到的颜色。</p>
+
+<figure>
+<img src="../uploads/Main/BumpMapFlatColour.png" alt="一个法线贴图仅使用 #8080FF，此值转换为法向矢量 0,0,1，即笔直向上。这不会对多边形的表面法线进行任何修改，因此不会对光照产生任何变化。任何与此颜色不同的像素都会产生指向不同方向的矢量，因此会修改用于计算该点处光发射的角度。">
+<figcaption>一个法线贴图仅使用 #8080FF，此值转换为法向矢量 0,0,1，即“笔直向上”。这不会对多边形的表面法线进行任何修改，因此不会对光照产生任何变化。任何与此颜色不同的像素都会产生指向不同方向的矢量，因此会修改用于计算该点处光发射的角度。</figcaption>
+</figure>
+
+<p>一个 (0.43, 0.91, 0.80) 值将得出 (–0.14, 0.82, 0.6) 矢量，这是对表面的大幅修改。在石墙法线贴图的明亮青色区域中一些石头边缘可以看到这样的颜色。最终结果是，这些边缘按照非常不同的与石头较平坦面的角度捕捉光线。</p>
+
+<figure>
+<img src="../uploads/Main/BumpMapColourMapStoneWallExample.jpg" alt="这些石头的法线贴图中的明亮青色区域显示了针对每块石头顶部边缘多边形表面法线的大幅修改，使它们能够以正确的角度捕捉光线。">
+<figcaption>这些石头的法线贴图中的明亮青色区域显示了针对每块石头顶部边缘多边形表面法线的大幅修改，使它们能够以正确的角度捕捉光线。</figcaption>
+</figure>
+
+<p>法线贴图</p>
+
+<figure>
+<img src="../uploads/Main/BumpMapStoneExampleNoBumps.jpg" alt="无凹凸贴图效果的石墙。岩石的边缘和小平面不能捕捉场景中的定向太阳光。">
+<figcaption>无凹凸贴图效果的石墙。岩石的边缘和小平面不能捕捉场景中的定向太阳光。</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/BumpMapStoneExampleDay.jpg" alt="采用凹凸贴图的相同石墙。朝向太阳的石头边缘反射的定向太阳光与石头的正面非常不同，边缘反射光照朝向其他方向。">
+<figcaption>采用凹凸贴图的相同石墙。朝向太阳的石头边缘反射的定向太阳光与石头的正面非常不同，边缘反射光照朝向其他方向。</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/BumpMapStoneExampleNightTorch.jpg" alt="位于另一个不同光照场景中的相同凹凸贴图石墙。点光源火炬照亮了石头。根据基本模型（多边形）光线照射角度并通过法线贴图中的矢量进行调整后产生石墙每个像素的光照。因此，面向光源的像素较明亮，而背离光源的像素更暗或处于阴影中。">
+<figcaption>位于另一个不同光照场景中的相同凹凸贴图石墙。点光源火炬照亮了石头。根据基本模型（多边形）光线照射角度并通过法线贴图中的矢量进行调整后产生石墙每个像素的光照。因此，面向光源的像素较明亮，而背离光源的像素更暗或处于阴影中。</figcaption>
+</figure>
+
+<h2>如何导入和使用法线贴图和高度贴图</h2>
+
+<p>像往常一样，可通过将纹理文件放入 Assets 文件夹的方式导入法线贴图。但是，需要告诉 Unity，此纹理为法线贴图。为此，可在导入检视面板 (Inspector) 设置中将“Texture Type”设置更改为“Normal Map”。</p>
+
+<figure>
+<img src="../uploads/Main/BumpMapImportInspectorWindow.png" alt="">
+</figure>
+
+<p>要将黑白高度贴图作为法线贴图导入，除了需要选中“Create from Greyscale”选项外，过程几乎完全相同。</p>
+
+<figure>
+<img src="../uploads/Main/BumpMapImportInspectorGreyscale.png" alt="">
+</figure>
+
+<p>选中“Create From Greyscale”后，检视面板中将显示 Bumpiness 滑动条。从高度贴图中的高度进行转换时，可使用此滑动条来控制法线贴图中的角度剧烈程度。较低的凹凸值意味着，即使高度贴图中的鲜明对比度也会转换为平缓的角度和凹凸。较高的值会产生夸张的凹凸和对凹凸的高对比度光照响应。</p>
+
+<figure>
+<img src="../uploads/Main/BumpMapLowAndHighBumpiness.jpg" alt="将高度贴图作为法线贴图导入时的低和高凹凸设置以及对模型产生的最终效果。">
+<figcaption>将高度贴图作为法线贴图导入时的低和高凹凸设置以及对模型产生的最终效果。</figcaption>
+</figure>
+
+<p>在资源中放入法线贴图后，可将其放入检视面板中的材质 Normal Map 字段。标准着色器有一个 Normal Map 字段，许多较旧的旧版着色器也支持法线贴图。</p>
+
+<figure>
+<img src="../uploads/Main/BumpMapPutIntoShader.png" alt="将法线贴图纹理放入使用标准着色器的材质中的正确插槽">
+<figcaption>将法线贴图纹理放入使用标准着色器的材质中的正确插槽</figcaption>
+</figure>
+
+<p>如果导入了法线贴图或高度贴图，但未将其标记为法线贴图（通过选择 <strong>Texture Type: Normal Map</strong>，如上所述），材质检视面板将发出有关此问题的警告并提供修复此问题的解决方案，如下所示：</p>
+
+<figure>
+<img src="../uploads/Main/BumpMapPutIntoShaderFixNow.png" alt="尝试使用未在检视面板中标记为法线贴图的法线贴图时，系统会显示Fix Now警告。">
+<figcaption>尝试使用未在检视面板中标记为法线贴图的法线贴图时，系统会显示“Fix Now”警告。</figcaption>
+</figure>
+
+<p>单击“Fix Now”与在纹理检视面板设置中选择 <strong>Texture Type: Normal Map</strong> 具有相同的效果。如果您的纹理确实是发现地图，此操作将起作用。但是，如果是灰度高度贴图，系统不会自动检测到这一情况，因此对于高度图，必须始终在纹理的 Inspector 窗口中选中“Create from Greyscale”选项。</p>
+
+<h2>辅助法线贴图</h2>
+
+<p>您可能还注意到，标准着色器的材质检视面板下方较远位置还有第二个 Normal Map 字段。此选项允许您使用额外的法线贴图来创建额外的细节。您可以使用与常规 Normal Map 字段相同的方式将法线贴图添加到此字段中，但此处的意图是您应当使用不同的平铺比例或频率，从而使两个法线贴图以不同的比例一起生成高细节级别。例如，常规法线贴图可能定义墙壁或车辆上的镶板细节，并使用面板边缘的凹槽。辅助法线贴图可为表面上的划痕和磨损提供非常精细的凹凸细节，因此能够使用基础法线贴图的比例的 5 至 10 倍进行平铺。这些细节可能非常精细，只有仔细检查时才能看到。要在基础法线贴图上有这么多细节，基础法线贴图必须非常大，但是通过将二者放在不同比例下，可使用两个相对较小的法线贴图纹理来实现较高的整体细节级别。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="StandardShaderMaterialParameterSmoothness.html"></a></span><div class="tip">平滑度</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="StandardShaderMaterialParameterHeightMap.html"></a></span><div class="tip">高度贴图</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

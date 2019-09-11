@@ -1,0 +1,338 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="椭圆粒子发射器 (Ellipsoid Particle Emitter)（旧版） - Unity Manual">
+<title>椭圆粒子发射器 (Ellipsoid Particle Emitter)（旧版） - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/Inspector-EllipsoidEmitter.png">
+<meta name="description" content="椭圆粒子发射器 (Ellipsoid Particle Emitter) 在球体内生成粒子。使用下面的 Ellipsoid 属性可缩放和拉伸球体。">
+<meta property="og:description" content="椭圆粒子发射器 (Ellipsoid Particle Emitter) 在球体内生成粒子。使用下面的 Ellipsoid 属性可缩放和拉伸球体。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-EllipsoidParticleEmitter';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-EllipsoidParticleEmitter.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-EllipsoidParticleEmitter.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-EllipsoidParticleEmitter.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-EllipsoidParticleEmitter.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-EllipsoidParticleEmitter.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-EllipsoidParticleEmitter.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-EllipsoidParticleEmitter.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-EllipsoidParticleEmitter.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-EllipsoidParticleEmitter.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-EllipsoidParticleEmitter.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-EllipsoidParticleEmitter.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-EllipsoidParticleEmitter.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-EllipsoidParticleEmitter.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-EllipsoidParticleEmitter.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-EllipsoidParticleEmitter.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-EllipsoidParticleEmitter.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-EllipsoidParticleEmitter.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-EllipsoidParticleEmitter.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-EllipsoidParticleEmitter.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-EllipsoidParticleEmitter.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-EllipsoidParticleEmitter.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-EllipsoidParticleEmitter.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-EllipsoidParticleEmitter.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-EllipsoidParticleEmitter.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="PartSysReference.html">粒子系统参考</a></li>
+<li><a href="comp-ParticlesLegacy.html">粒子系统（旧版，3.5 版之前）</a></li>
+<li>椭圆粒子发射器 (Ellipsoid Particle Emitter)（旧版）</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="comp-ParticlesLegacy.html"></a></span><div class="tip">粒子系统（旧版，3.5 版之前）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-MeshParticleEmitter.html"></a></span><div class="tip">网格粒子发射器 (Mesh Particle Emitter)（旧版）</div>
+</div>
+</div></div>
+<h1>椭圆粒子发射器 (Ellipsoid Particle Emitter)（旧版）</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><strong>椭圆粒子发射器 (Ellipsoid Particle Emitter)</strong> 在球体内生成粒子。使用下面的 <strong>Ellipsoid</strong> 属性可缩放和拉伸球体。</p>
+
+<figure>
+<img src="../uploads/Main/Inspector-EllipsoidEmitter.png" alt="">
+</figure>
+
+<h2>属性</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Emit</strong></td>
+	<td style="text-align:left;">如果启用此属性，发射器将发射粒子。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Min Size</strong></td>
+	<td style="text-align:left;">每个粒子在生成时的最小大小。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max Size</strong></td>
+	<td style="text-align:left;">每个粒子在生成时的最大大小。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Min Energy</strong></td>
+	<td style="text-align:left;">每个粒子的最短生命周期，以秒为单位。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max Energy</strong></td>
+	<td style="text-align:left;">每个粒子的最长生命周期，以秒为单位。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Min Emission</strong></td>
+	<td style="text-align:left;">每秒产生的最少粒子数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max Emission</strong></td>
+	<td style="text-align:left;">每秒产生的最多粒子数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>World Velocity</strong></td>
+	<td style="text-align:left;">粒子在世界空间中沿 X、Y 和 Z 方向的起始速度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Local Velocity</strong></td>
+	<td style="text-align:left;">以对象的方向测量，粒子沿 X、Y 和 Z 方向的起始速度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Rnd Velocity</strong></td>
+	<td style="text-align:left;">为速度增加的沿 X、Y 和 Z 方向的随机速度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Emitter Velocity Scale</strong></td>
+	<td style="text-align:left;">粒子继承的发射器速度大小。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Tangent Velocity</strong></td>
+	<td style="text-align:left;">在发射器的表面上，粒子沿 X、Y 和 Z 方向的起始速度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Angular Velocity</strong></td>
+	<td style="text-align:left;">新粒子的角速度，以度/秒为单位。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Rnd Angular Velocity</strong></td>
+	<td style="text-align:left;">新粒子的随机角速度修改器。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Rnd Rotation</strong></td>
+	<td style="text-align:left;">如果启用此属性，则会随机旋转生成粒子。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Simulate In World Space</strong></td>
+	<td style="text-align:left;">如果启用此属性，则在发射器移动时粒子不会移动。如果设置为 false（不选中），当移动发射器时，粒子会跟随它移动。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>One Shot</strong></td>
+	<td style="text-align:left;">如果启用此属性，则会一次性全部生成由最小和最大发射参数指定的粒子数。如果禁用此属性，则以一长串的形式生成粒子。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Ellipsoid</strong></td>
+	<td style="text-align:left;">球体（粒子在此球体内生成）沿 X、Y 和 Z 方向的比例。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>MinEmitterRange</strong></td>
+	<td style="text-align:left;">确定球体中心的一个空白区域；使用此区域使粒子出现在球体的边缘。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>详细信息</h2>
+
+<p>椭圆粒子发射器 (EPE) 是基本的发射器，当您选择通过 <strong>Components &gt; Particles &gt; Particle System</strong> 向场景中添加__粒子系统 (Particle System)__ 时，便会包含这些发射器。您可以定义要生成的粒子的边界，并为粒子提供初始速度。从此处，可使用<a href="class-ParticleAnimator.html">粒子动画器 (Particle Animator)</a> 来操控粒子随时间变化的方式，从而获得有趣的效果。</p>
+
+<p>粒子发射器与<a href="class-ParticleAnimator.html">粒子动画器</a>和<a href="class-ParticleRenderer.html">粒子渲染器</a>配合使用，从而创建、操控和显示粒子系统。要确保粒子行为正确，所有这三个组件都必须存在于对象上。发射粒子时，所有不同的速度将累加在一起以产生最终速度。</p>
+
+<h3>生成属性</h3>
+
+<p>在尝试实现不同效果时，诸如 <strong>Size</strong>、<strong>Energy</strong>、<strong>Emission</strong> 和 <strong>Velocity</strong> 之类的生成属性将为粒子系统赋予鲜明的个性。使用较小的 <strong>Size</strong> 可以模拟天空中的萤火虫或星星。较大的 <strong>Size</strong> 可以模拟布满灰尘的老建筑中的尘埃云团。</p>
+
+<p><strong>Energy</strong> 和 <strong>Emission</strong> 将控制粒子在屏幕上停留的时间以及可在任何时刻出现的粒子数量。例如，火箭可能需要较高的 <strong>Emission</strong> 值来模拟烟雾密度，并通过较高的 <strong>Energy</strong> 值模拟烟雾缓慢消散到空气中的状态。</p>
+
+<p><strong>Velocity</strong> 将控制粒子的移动方式。您可能希望在脚本中更改 <strong>Velocity</strong> 以获得有趣的效果，或者如果要模诸如风之类的恒定效果，请设置 X 和 Z <strong>Velocity</strong> 来实现粒子被吹走的效果。</p>
+
+<h3>Simulate in World Space</h3>
+
+<p>如果禁用此选项，则每个粒子的位置将始终相对于发射器的__位置 (Position)__ 移动。当发射器移动时，粒子将随之移动。如果启用 <strong>Simulate in World Space__，粒子不会受到发射器移动的影响。例如，如果一个火球喷出上升的火焰，当火球越来越远时，产生的火焰将漂浮在太空中。如果禁用 </strong>Simulate in World Space__，则同样的火焰将随着火球一起在屏幕上移动。</p>
+
+<h3>Emitter Velocity Scale</h3>
+
+<p>仅当启用了 <strong>Simulate in World Space</strong> 时，此属性才适用。</p>
+
+<p>如果此属性设置为 1，则粒子将在生成时严格继承发射器的移动速度。如果设置为 2，则粒子将在生成时继承发射器的双倍移动速度。设置为 3 则为三倍移动速度，依此类推。</p>
+
+<h3>One Shot</h3>
+
+<p><strong>One Shot</strong> 发射器将一次性创建完 <strong>Emission</strong> 属性指定的所有粒子，随后便停止发射粒子。以下提供了 <strong>One Shot</strong> 为__启用__或__禁用__状态时不同粒子系统用途的一些示例：</p>
+
+<p>__启用__：</p>
+
+<ul>
+<li>爆炸</li>
+<li>水溅</li>
+<li>魔法</li>
+</ul>
+
+<p>__禁用__：</p>
+
+<ul>
+<li>枪管烟雾</li>
+<li>风效</li>
+<li>瀑布</li>
+</ul>
+
+<h3>Min Emitter Range</h3>
+
+<p><strong>Min Emitter Range</strong> 决定了椭球内可生成粒子的深度。将此属性设置为 0 将允许从椭球的中间核心到最外面范围的任何位置生成粒子。将此属性设置为 1 将把生成位置限制为椭球的最外面范围。</p>
+
+<figure>
+<img src="../uploads/Main/EmitterRange0.png" alt="Min Emitter Range 为 0">
+<figcaption>Min Emitter Range 为 0</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/EmitterRange1.png" alt="Min Emitter Range 为 1">
+<figcaption>Min Emitter Range 为 1</figcaption>
+</figure>
+
+<h2>提示</h2>
+
+<ul>
+<li>使用许多大型粒子时应小心。这会严重影响低端机器的性能。始终应尝试使用最少数量的粒子来达到所需效果。</li>
+<li>
+<strong>Emit</strong> 属性与粒子动画器的 <strong>AutoDestruct</strong> 属性结合使用。通过脚本可停止发射器的发射，然后 <strong>AutoDestruct</strong> 将自动销毁粒子系统及其附加到的游戏对象。</li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="comp-ParticlesLegacy.html"></a></span><div class="tip">粒子系统（旧版，3.5 版之前）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-MeshParticleEmitter.html"></a></span><div class="tip">网格粒子发射器 (Mesh Particle Emitter)（旧版）</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

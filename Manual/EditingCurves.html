@@ -1,0 +1,348 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Editing Curves - Unity Manual">
+<title>Editing Curves - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/AnimationEditorCurve.png">
+<meta name="description" content="There are several different features and windows in the Unity Editor which use Curves to display and edit data. The methods you can use to view and manipulate curves is largely the same across all these areas, although there are some exceptions.">
+<meta property="og:description" content="There are several different features and windows in the Unity Editor which use Curves to display and edit data. The methods you can use to view and manipulate curves is largely the same across all these areas, although there are some exceptions.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'EditingCurves';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/EditingCurves.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/EditingCurves.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/EditingCurves.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/EditingCurves.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/EditingCurves.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/EditingCurves.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/EditingCurves.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/EditingCurves.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/EditingCurves.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/EditingCurves.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/EditingCurves.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/EditingCurves.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/EditingCurves.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/EditingCurves.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/EditingCurves.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/EditingCurves.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/EditingCurves.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/EditingCurves.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/EditingCurves.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/EditingCurves.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/EditingCurves.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/EditingCurves.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/EditingCurves.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/EditingCurves.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="AnimationSection.html">动画</a></li>
+<li><a href="AnimationClips.html">动画剪辑</a></li>
+<li><a href="AnimationEditorGuide.html">Animation 窗口指南</a></li>
+<li>Editing Curves</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="animeditor-AnimationCurves.html"></a></span><div class="tip">使用动画曲线</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="animeditor-AdvancedKeySelectionAndManipulation.html"></a></span><div class="tip">关键帧清单 (Dopesheet) 模式中的关键点操作</div>
+</div>
+</div></div>
+<h1>Editing Curves</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>There are several different features and windows in the Unity Editor which use <strong>Curves</strong> to display and edit data. The methods you can use to view and manipulate curves is largely the same across all these areas, although there are some exceptions.</p>
+
+<ul>
+<li>The <a href="AnimationEditorGuide.html">Animation Window</a> uses curves to display and edit the values of animated properties over time in an <strong>Animation Clip</strong>.</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/AnimationEditorCurve.png" alt="The Animation Window.">
+<figcaption>The Animation Window.</figcaption>
+</figure>
+
+<ul>
+<li>Script components can have member variables of type <a href="EditingValueProperties.html">Animation Curve</a> that can be used for all kinds of things. Clicking on those in the Inspector will open up the <strong>Curve Editor</strong>.</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/CurveEditorPopup.png" alt="The Curve Editor.">
+<figcaption>The Curve Editor.</figcaption>
+</figure>
+
+<ul>
+<li>The <a href="class-AudioSource.html">Audio Source</a> component uses curves to control roll-off and other properties as a function of distance to the Audio Source.</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/AudioSourceCurve.png" alt="Distance function curves in the AudioSource component in the Inspector.">
+<figcaption>Distance function curves in the AudioSource component in the Inspector.</figcaption>
+</figure>
+
+<ul>
+<li>The <a href="PartSysUsage.html">Particle System</a> uses curves to vary particle properties over time.</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/ParticleSystemCurve.png" alt="Particle System curves editor.">
+<figcaption>Particle System curves editor.</figcaption>
+</figure>
+
+<p>While these controls have subtle differences, the <strong>curves</strong> can be edited in exactly the same way in all of them. This page explains how to navigate and edit curves in those controls. </p>
+
+<h2>Adding and Moving Keys on a Curve</h2>
+
+<p>A key can be added to a curve by double-clicking on the curve at the point where the <strong>key</strong> should be placed. It is also possible to add a <strong>key</strong> by right-clicking on a curve and select <strong>Add Key</strong> from the context menu.</p>
+
+<p>Once placed, <strong>keys</strong> can be dragged around with the mouse:</p>
+
+<ul>
+<li>Click on a <strong>key</strong> to select it. Drag the selected <strong>key</strong> with the mouse.</li>
+<li>To snap the <strong>key</strong> to the grid while dragging it around, hold down <strong>Command</strong> on Mac / <strong>Control</strong> on Windows while dragging.</li>
+</ul>
+
+<p>It is also possible to select multiple <strong>keys</strong> at once:</p>
+
+<ul>
+<li>To select multiple <strong>keys</strong> at once, hold down <strong>Shift</strong> while clicking the keys.</li>
+<li>To deselect a selected <strong>key</strong>, click on it again while holding down <strong>Shift</strong>.</li>
+<li>To select all <strong>keys</strong> within a rectangular area, click on an empty spot and drag to form the rectangle selection.</li>
+<li>The rectangle selection can also be added to existing selected keys by holding down <strong>Shift</strong>.</li>
+</ul>
+
+<p><strong>Keys</strong> can be deleted by selecting them and pressing <strong>Delete</strong>, or by right-clicking on them and selecting <strong>Delete Key</strong> from the context menu.</p>
+
+<h2>Editing Keys</h2>
+
+<p>Direct editing of key values in curve editors is a new feature in Unity 5.1. Use <strong>Enter/Return</strong> or context menu to start editing selected keys, <strong>Tab</strong> to switch between fields, <strong>Enter/Return</strong> to commit, and <strong>Escape</strong> to cancel editing.</p>
+
+<h2>Navigating the Curve View</h2>
+
+<p>When working with the <strong>Animation View</strong> you can easily zoom in on details of the curves you want to work with or zoom out to get the full picture.</p>
+
+<p>You can always press <strong>F</strong> to frame-select the shown curves or selected keys in their entirely.</p>
+
+<h3>Zooming</h3>
+
+<p>You can <strong>zoom</strong> the Curve View using the scroll-wheel of your mouse, the zoom functionality of your trackpad, or by holding <strong>Alt</strong> while right-dragging with your mouse. </p>
+
+<p>You can zoom on only the horizontal or vertical axis:</p>
+
+<ul>
+<li>
+<strong>zoom</strong> while holding down <strong>Command</strong> on Mac / <strong>Control</strong> on Windows to zoom horizontally.</li>
+<li>
+<strong>zoom</strong> while holding down <strong>Shift</strong> to zoom vertically.</li>
+</ul>
+
+<p>Furthermore, you can drag the end caps of the scrollbars to shrink or expand the area shown in the Curve View.</p>
+
+<h3>Panning</h3>
+
+<p>You can <strong>pan</strong> the Curve View by middle-dragging with your mouse or by holding <strong>Alt</strong> while left-dragging with your mouse.</p>
+
+<h2>Editing Tangents</h2>
+
+<p>A key has two <strong>tangents</strong> - one on the left for the incoming slope and one on the right for the outgoing slope. The tangents control the shape of the curve between the keys. You can select from a number of different tangent types to control how your curve leaves one key and arrives at the next key. Right-click a key to select the tangent type for that key.</p>
+
+<figure>
+<img src="../uploads/Main/AnimationCurveTangentMenu.png" alt="">
+</figure>
+
+<p>For animated values to change smoothly when passing a key, the left and right tangent must be co-linear. The following tangent types ensure smoothness:</p>
+
+<ul>
+<li>
+<strong>Clamped Auto</strong>: This is the default tangent mode. The tangents are automatically set to make the curve pass smoothly through the key. When editing the key’s position or time, the tangent adjusts to prevent the curve from “overshooting” the target value. If you manually adjust the tangents of a key in Clamped Auto mode, it is switched to <strong>Free Smooth</strong> mode. In the example below, the tangent automatically goes into a slope and levels out while the key is being moved:</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/AnimationClampedAutoTangents.gif" alt="">
+</figure>
+
+<ul>
+<li>
+<strong>Auto</strong>: This is a <a href="UpgradeGuide55.html">Legacy tangent mode</a>, and remains an option to be backward compatible with older projects. Unless you have a specific reason to use this mode, use the default <strong>Clamped Auto</strong>. When a key is set to this mode, the tangents are automatically set to make the curve pass smoothly through the key. However, there are two differences compared with <strong>Clamped Auto</strong> mode:
+
+<ol>
+<li>The tangents do not adjust automatically when the key’s position or time is edited; they only adjust when initially setting the key to this mode.</li>
+<li>When Unity calculates the tangent, it does not take into account avoiding “overshoot” of the target value of the key.</li>
+</ol>
+</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/AnimationAuto.png" alt="">
+</figure>
+
+<ul>
+<li>
+<strong>Free Smooth</strong>: Drag the tangent handles to freely set the tangents. They are locked to be co-linear to ensure smoothness.</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/AnimationFreeSmooth.png" alt="">
+</figure>
+
+<ul>
+<li>
+<strong>Flat</strong>: The tangents are set to be horizontal (this is a special case of <strong>Free Smooth</strong>).</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/AnimationFlat.png" alt="">
+</figure>
+
+<p>Sometimes you might not want the curve to be smooth when passing through a key. To create sharp changes in the curve, choose one of the <strong>Broken</strong> tangent modes.</p>
+
+<figure>
+<img src="../uploads/Main/AnimationCurveTangentTypes.png" alt="">
+</figure>
+
+<p>When using broken tangents, the left and right tangent can be set individually. Each of the left and right tangents can be set to one of the following types:</p>
+
+<ul>
+<li>
+<strong>Broken - Free</strong>: Drag the tangent handle to freely set the tangents.</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/AnimationBrokenFree.png" alt="">
+</figure>
+
+<ul>
+<li>
+<strong>Broken - Linear</strong>: The tangent points towards the neighboring key. To make a linear curve segment, set the tangents at both ends to be <strong>Linear</strong>. In the example below, all three keys have been set to <strong>Broken - Linear</strong>, to achieve straight lines from key to key.</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/AnimationBrokenLinear.png" alt="">
+</figure>
+
+<ul>
+<li>
+<strong>Broken - Constant</strong>: The curve retains a constant value between two keys. The value of the left key determines the value of the curve segment.</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/AnimationBrokenConstant.png" alt="">
+</figure>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="animeditor-AnimationCurves.html"></a></span><div class="tip">使用动画曲线</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="animeditor-AdvancedKeySelectionAndManipulation.html"></a></span><div class="tip">关键帧清单 (Dopesheet) 模式中的关键点操作</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

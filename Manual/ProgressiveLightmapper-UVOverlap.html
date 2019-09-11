@@ -1,0 +1,235 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="UV 重叠结果 - Unity Manual">
+<title>UV 重叠结果 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/ProgressiveLightmapper-UVOverlap-183-0.png">
+<meta name="description" content="每个光照贴图都包含许多__图表__。在运行时，Unity 将这些图表映射到网格面上，并使用图表的光照数据来计算最终外观。由于 GPU 采样的工作原理，如果两个图表彼此距离太近，一个图表中的数据就可能渗漏到另一个图表。这种情况下通常会导致意外的锯齿、像素化和其他图形化结果（这些问题称为瑕疵）。">
+<meta property="og:description" content="每个光照贴图都包含许多__图表__。在运行时，Unity 将这些图表映射到网格面上，并使用图表的光照数据来计算最终外观。由于 GPU 采样的工作原理，如果两个图表彼此距离太近，一个图表中的数据就可能渗漏到另一个图表。这种情况下通常会导致意外的锯齿、像素化和其他图形化结果（这些问题称为瑕疵）。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'ProgressiveLightmapper-UVOverlap';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/ProgressiveLightmapper-UVOverlap.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/ProgressiveLightmapper-UVOverlap.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/ProgressiveLightmapper-UVOverlap.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/ProgressiveLightmapper-UVOverlap.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/ProgressiveLightmapper-UVOverlap.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/ProgressiveLightmapper-UVOverlap.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/ProgressiveLightmapper-UVOverlap.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/ProgressiveLightmapper-UVOverlap.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/ProgressiveLightmapper-UVOverlap.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/ProgressiveLightmapper-UVOverlap.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/ProgressiveLightmapper-UVOverlap.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/ProgressiveLightmapper-UVOverlap.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/ProgressiveLightmapper-UVOverlap.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/ProgressiveLightmapper-UVOverlap.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/ProgressiveLightmapper-UVOverlap.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/ProgressiveLightmapper-UVOverlap.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/ProgressiveLightmapper-UVOverlap.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/ProgressiveLightmapper-UVOverlap.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/ProgressiveLightmapper-UVOverlap.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/ProgressiveLightmapper-UVOverlap.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/ProgressiveLightmapper-UVOverlap.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/ProgressiveLightmapper-UVOverlap.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/ProgressiveLightmapper-UVOverlap.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/ProgressiveLightmapper-UVOverlap.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="LightingOverview.html">光照</a></li>
+<li><a href="GIIntro.html">全局光照</a></li>
+<li><a href="Lightmappers.html">Lightmapping</a></li>
+<li><a href="ProgressiveLightmapper.html">Progressive CPU Lightmapper</a></li>
+<li>UV 重叠结果</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Lightmapping-SeamStitching.html"></a></span><div class="tip">光照贴图接缝缝合</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ProgressiveLightmapper-CustomFallOff.html"></a></span><div class="tip">自定义衰减</div>
+</div>
+</div></div>
+<h1>UV 重叠结果</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>每个光照贴图都包含许多__图表__。在运行时，Unity 将这些图表映射到网格面上，并使用图表的光照数据来计算最终外观。由于 GPU 采样的工作原理，如果两个图表彼此距离太近，一个图表中的数据就可能渗漏到另一个图表。这种情况下通常会导致意外的锯齿、像素化和其他图形化结果（这些问题称为瑕疵）。</p>
+
+<figure>
+<img src="../uploads/Main/ProgressiveLightmapper-UVOverlap-183-0.png" alt="Example of graphical artifacts due to chart bleeding">
+<figcaption>Example of graphical artifacts due to chart bleeding</figcaption>
+</figure>
+
+<p>为避免光渗，图表之间必须有足够的空间。当 GPU 对光照贴图进行采样时，光照系统会从最接近采样点的四个纹理像素计算最终采样值（假设使用双线性过滤）。这四个纹理像素称为采样点的双线性“邻域”。如果图表重叠（也就是说，如果图表中任何点的邻域与另一个图表中任何点的邻域重叠），表示图表太靠近。在下图中，白色像素表示图表邻域，红色像素表示重叠的邻域。</p>
+
+<figure>
+<img src="../uploads/Main/ProgressiveLightmapper-UVOverlap-183-1.png" alt="Red pixels indicate overlapping chart neighbourhoods">
+<figcaption>Red pixels indicate overlapping chart neighbourhoods</figcaption>
+</figure>
+
+<p>确定最佳图表放置位置和间距可能会很困难，因为它取决于多个参数（例如光照贴图分辨率、网格 UV 和导入器设置）。基于此原因，Unity 提供了轻松识别这些问题的能力，如以下部分所述。</p>
+
+<h2>识别</h2>
+
+<p>有三种方法可识别重叠：</p>
+
+<ul>
+<li><p>密切关注 Unity 的控制台。如果 Unity 检测到重叠的 UV，它会打印一条警告消息，其中包含受影响游戏对象的列表。</p></li>
+<li><p>使用 Scene 视图中的 <strong>UV Overlap</strong> 绘制模式（有关更多信息，请参阅 <a href="GIVis.html">Scene 视图中的 GI 可视化</a>）。启用此模式后，Unity 会以红色突出显示图表中的哪些像素纹理过于靠近其他图表中的纹理像素。如果您在 Scene 视图中发现瑕疵，并希望快速检查是否由 UV 重叠导致了此问题，则此方法尤其有用。</p></li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/ProgressiveLightmapper-UVOverlap-183-2.jpg" alt="Scene View using UV Overlap draw mode (see dropdown in top left)">
+<figcaption>Scene View using UV Overlap draw mode (see dropdown in top left)</figcaption>
+</figure>
+
+<ul>
+<li>Use <strong>Baked Lightmaps Preview</strong>. Select a GameObject and go to the Lighting window and then choose the <strong>Baked Lightmaps</strong> tab. Double-click the highlighted lightmap, navigate to the Preview window, and select <strong>Baked UV Overlap</strong> (see dropdown in upper right corner). The Prview window colours problematic texels red in this view.</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/ProgressiveLightmapper-UVOverlap-183-3.jpg" alt="The Baked Lightmaps Preview in the Lighting window’s Baked Lightmaps tab">
+<figcaption>The Baked Lightmaps Preview in the Lighting window’s Baked Lightmaps tab</figcaption>
+</figure>
+
+<h2>解决方案</h2>
+
+<p>UV 重叠没有唯一的解决方案，因为有很多问题可能导致这种情况。以下是最常见的解决方案：</p>
+
+<ul>
+<li><p>如果由 Unity 自动创建光照贴图 UV，则可以增加 <strong>Pack Margin</strong>。为此，请导航到网格 (Mesh) 导入设置的 <a href="FBXImporter-Model.html">Model 选项卡</a>。确保已启用 <strong>Generate Lightmap UVs__，然后展开 </strong>Advanced__ 并使用 <strong>Pack Margin</strong> 滑动条来增大值。这样会在图表之间产生更大间距，从而降低重叠的可能性。但是，这也会增加光照贴图的总空间要求，因此请尝试应用足够的间距来避免瑕疵，但不要过量。有关 Unity 自动创建的光照贴图 UV 的更多信息，请参阅有关<a href="LightingGiUvs-GeneratingLightmappingUVs.html">生成光照贴图 UV</a> 的文档。</p></li>
+<li><p>如果由您自己提供光照贴图 UV，可尝试使用建模包添加边距。</p></li>
+<li><p>提高整个光照贴图的分辨率。这样将增加图表之间的像素数量，从而降低发生渗漏的可能性。缺点是光照贴图可能会变得太大。您可以在 <strong>Lightmapper Settings</strong> 下的 <strong>Lighting</strong> 选项卡中执行此操作。</p></li>
+<li><p>提高单个游戏对象的分辨率。这种情况下可以仅为具有重叠 UV 的游戏对象提高光照贴图分辨率。这也可能增加光照贴图的大小，但可能性较小。您可以在 <strong>Lightmap Settings</strong> 下的 Mesh Renderer 中更改游戏对象的光照贴图分辨率。</p></li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/ProgressiveLightmapper-UVOverlap-183-4.jpg" alt="Same mesh as before, but without bleeding artifacts">
+<figcaption>Same mesh as before, but without bleeding artifacts</figcaption>
+</figure>
+
+<hr>
+
+<p><span class="page-history">在 <a href="https://docs.unity3d.com/2018.1/Documentation/Manual/30_search.html?q=newin20181">2018.1</a> 版中添加了渐进光照贴图 <span class="search-words">NewIn20181</span></span></p>
+
+<p><span class="page-edit"> 2018–03–28 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Lightmapping-SeamStitching.html"></a></span><div class="tip">光照贴图接缝缝合</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ProgressiveLightmapper-CustomFallOff.html"></a></span><div class="tip">自定义衰减</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

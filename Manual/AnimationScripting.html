@@ -1,0 +1,364 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="动画脚本（旧版） - Unity Manual">
+<title>动画脚本（旧版） - Unity Manual</title>
+<meta name="description" content="Unity 的动画系统可让您创建精美的动画蒙皮角色。动画系统支持动画混合 (blending)、混组 (mixing)、附加动画 (additive animations)、行走周期时间同步、动画层、动画播放所有方面（时间、速度、混合权重）的控制、每个顶点有 1 个、2 个或 4 个骨骼的网格蒙皮以及支持物理性布娃娃和程序化动画。为了获得最佳结果，建议您阅读创建优化的角色模型页面，了解在 Unity 中创建具有最佳性能的骨架角色的最佳做法和技巧。">
+<meta property="og:description" content="Unity 的动画系统可让您创建精美的动画蒙皮角色。动画系统支持动画混合 (blending)、混组 (mixing)、附加动画 (additive animations)、行走周期时间同步、动画层、动画播放所有方面（时间、速度、混合权重）的控制、每个顶点有 1 个、2 个或 4 个骨骼的网格蒙皮以及支持物理性布娃娃和程序化动画。为了获得最佳结果，建议您阅读创建优化的角色模型页面，了解在 Unity 中创建具有最佳性能的骨架角色的最佳做法和技巧。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'AnimationScripting';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AnimationScripting.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AnimationScripting.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AnimationScripting.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AnimationScripting.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AnimationScripting.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AnimationScripting.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AnimationScripting.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AnimationScripting.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AnimationScripting.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AnimationScripting.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/AnimationScripting.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/AnimationScripting.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/AnimationScripting.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/AnimationScripting.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AnimationScripting.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AnimationScripting.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AnimationScripting.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AnimationScripting.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AnimationScripting.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AnimationScripting.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AnimationScripting.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AnimationScripting.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AnimationScripting.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AnimationScripting.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="LegacyTopics.html">旧版主题</a></li>
+<li><a href="Animations.html">旧版动画系统</a></li>
+<li>动画脚本（旧版）</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-Animation.html"></a></span><div class="tip">动画</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="GUIReference.html"></a></span><div class="tip">旧版 GUI</div>
+</div>
+</div></div>
+<h1>动画脚本（旧版）</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 的动画系统可让您创建精美的动画蒙皮角色。动画系统支持动画混合 (blending)、混组 (mixing)、附加动画 (additive animations)、行走周期时间同步、动画层、动画播放所有方面（时间、速度、混合权重）的控制、每个顶点有 1 个、2 个或 4 个骨骼的网格蒙皮以及支持物理性布娃娃和程序化动画。为了获得最佳结果，建议您阅读<a href="ModelingOptimizedCharacters.html">创建优化的角色模型</a>页面，了解在 Unity 中创建具有最佳性能的骨架角色的最佳做法和技巧。</p>
+
+<p>制作动画角色的过程涉及两个操作：在世界内_移动_角色并让它做相应的_动画_。如果您想了解有关移动角色的更多信息，请查看 <a href="class-CharacterController.html">Character Controller 页面</a>。此页面重点介绍动画。角色的实际动画是通过 Unity 脚本接口完成的。</p>
+
+<p>您可以下载<a href="http://unity3d.com/support/resources/example-projects/">示例演示</a>，其中介绍了预设动画角色。在此页面上学习了基础知识后，您还可以查看<a href="../ScriptReference/Animation.html">动画脚本接口</a>。</p>
+
+<h2>动画混合</h2>
+
+<p>在当今的游戏中，动画混合 (blending) 是确保角色具有流畅动画的基本功能。动画师们创建单独的动画，例如，行走循环、奔跑循环、空闲动画或射击动画。在游戏过程中的任何时间点，您都需要能够从空闲动画转换到行走循环或反之。当然，您希望过渡平滑并避免突然的运动颠簸。</p>
+
+<p>这便是动画混合的用武之地。在 Unity 中，您可以基于同一个角色播放任意数量的动画。所有动画将混合或添加到一起以生成最终动画。</p>
+
+<p>我们的第一步是要让角色在空闲动画和行走动画之间平滑地混合。为了使脚本编写人员的工作更轻松，我们首先将动画的 <strong>Wrap Mode</strong> 设置为 <strong>Loop</strong>。然后，我们将关闭 <strong>Play Automatically</strong> 以确保我们的脚本是播放动画的唯一地方。</p>
+
+<p>我们的第一个角色动画脚本非常简单；我们只需要一些方法来检测角色的移动速度，然后在行走动画和空闲动画之间淡入淡出。对于此简单测试，我们将使用标准输入轴：</p>
+
+<pre><code>function Update () {
+   if (Input.GetAxis("Vertical") &gt; 0.2)
+       animation.CrossFade ("walk");
+   else
+      animation.CrossFade ("idle");
+}
+
+</code></pre>
+
+<p>要在项目中使用此脚本，请执行以下操作：</p>
+
+<p>1.使用 <strong>Assets &gt; Create &gt; Javascript</strong> 创建 Javascript 文件。
+1.将代码复制并粘贴到该文件
+1.将脚本拖到角色上（需要将其附加到具有动画的__游戏对象__）</p>
+
+<p>按下 Play 按钮后，角色将在您按住向上箭头键时开始原地行走，而在松开按键时恢复到空闲姿势。</p>
+
+<h2>动画层</h2>
+
+<p>“层”是一个非常有用的概念，用于对动画进行分组并确定加权优先级。</p>
+
+<p>Unity 的动画系统可在任意数量的动画剪辑之间进行混合。您可以手动分配混合权重，也可直接使用 <strong>animation.CrossFade()</strong> 自动分配权重。</p>
+
+<h3>混合权重总是经过归一化后再应用</h3>
+
+<p>假设有一个行走循环和一个奔跑循环，两者的权重都是 1 (100%)。当 Unity 生成最终动画时，它将对权重进行归一化，这意味着行走循环将为动画贡献 50%，而奔跑周期也将贡献 50%。</p>
+
+<p>但是，在播放两段动画时，通常希望优先让其中一段动画获得最大权重。当然，可通过手动方式确保权重总和达到 100%，但这种情况下使用层会更容易。</p>
+
+<h3>层示例</h3>
+
+<p>例如，您可能有一段射击动画、一个空闲循环和一个行走循环。行走动画和空闲动画将根据玩家的速度进行混合，但是当玩家射击时，您只想显示射击动画。因此，射击动画基本上具有更高的优先级。</p>
+
+<p>最简单的做法是在射击时继续播放行走动画和空闲动画。要做到这一点，我们需要确保射击动画比空闲动画和行走动画位于更高的层，这意味着射击动画将首先接收混合权重。仅当射击动画未使用全部 100% 的混合权重时，行走动画和空闲动画才能接收权重。因此，当淡入淡出 (CrossFading) 射击动画时，权重将从零开始，并在短时间内变为 100%。在开始时，行走动画层和空闲动画层仍会接收混合权重，但当射击动画完全淡入时，这两个动画层将不再接收任何权重。这正是我们所需要的效果！</p>
+
+<pre><code>function Start () {
+   // 将所有动画设置为循环模式
+   animation.wrapMode = WrapMode.Loop;
+   // 射击除外
+   animation["shoot"].wrapMode = WrapMode.Once;
+
+   // 将空闲动画和行走动画置于较低的层（默认层始终为 0）
+   // 因此将产生两个效果
+   // - 由于射击动画和空闲/行走动画位于不同的层，因此在调用
+   // CrossFade 时，它们不会影响彼此的播放。
+   // - 由于射击动画位于较高的层，因此射击动画将在淡入后
+   // 替换空闲/行走动画。
+   animation["shoot"].layer = 1;
+
+   // 停止正在播放的动画
+   //（预防用户忘记自动禁用播放）
+   animation.Stop();
+}
+
+function Update () {
+   // 根据按下的键，
+   // 播放行走动画或空闲动画
+   if (Mathf.Abs(Input.GetAxis("Vertical")) &gt; 0.1)
+      animation.CrossFade("walk");
+   else
+      animation.CrossFade("idle");
+
+   // 射击
+   if (Input.GetButtonDown ("Fire1"))
+      animation.CrossFade("shoot");
+}
+
+</code></pre>
+
+<p>默认情况下，__animation.Play()__ 和 <strong>animation.CrossFade()</strong> 将停止或淡出位于同一层的动画。在大多数情况下，这正是我们需要的效果。在我们的射击、空闲、奔跑示例中，播放空闲动画和奔跑动画不会影响射击动画，反之亦然（如果需要，可使用 animation.CrossFade 的可选参数更改此行为）。</p>
+
+<h2>动画混组</h2>
+
+<p>通过动画混组 (mixing)，可将一些动画仅应用于身体的某个部位，从而减少需要为游戏创建的动画数量。这意味着此类动画可通过各种组合形式与其他动画一起使用。</p>
+
+<p>通过在给定的 AnimationState 上调用 <strong>AddMixingTransform()</strong>，可将动画混组变换添加到动画。</p>
+
+<h3>混组示例</h3>
+
+<p>一个混组的示例可能是挥手之类的动画。您可能希望角色在空闲或行走时挥手。如果不使用动画混组，必须为空闲状态和行走状态创建单独的挥手动画。但是，如果将肩部变换以混组变换的形式添加到挥手动画，则挥手动画将具有从肩关节到手的完全控制权限。由于身体的其余部位不会受到挥手的影响，因此将继续播放空闲动画或行走动画。所以，只需用一段动画表现挥手，同时让身体的其余部位继续使用空闲动画或行走动画。</p>
+
+<pre><code>/// 使用 Transform 变量添加混组变换
+var shoulder : Transform;
+animation["wave_hand"].AddMixingTransform(shoulder);
+
+</code></pre>
+
+<p>另一个使用路径的示例。</p>
+
+<pre><code>function Start () {
+   // 改用路径添加混组变换
+   var mixTransform : Transform = transform.Find("root/upper_body/left_shoulder");
+   animation["wave_hand"].AddMixingTransform(mixTransform);
+}
+
+</code></pre>
+
+<h2>附加动画</h2>
+
+<p>通过附加动画和动画混组，可将一些动画仅应用于身体的某个部位，从而减少需要为游戏创建的动画数量。</p>
+
+<p>假设您希望创建一个在行走和奔跑时向侧面倾斜的角色。这导致了四种组合：walk-lean-left（向左倾斜行走）、walk-lean-right（向右倾斜行走）、run-lean-left（向左倾斜奔跑）和 run-lean-right（向右倾斜奔跑），每个组合都需要一段动画。即使在这种简单的情况下，为每个组合创建单独的动画也会导致很多额外的工作，但是每增加一个动作，组合的数量就会大大增加。幸好，附加动画和动画混组避免了为简单动作组合生成单独动画的必要。</p>
+
+<h3>附加动画示例</h3>
+
+<p>使用附加动画可将一个动画的效果叠加在可能正在播放的任何其他动画之上。生成附加动画时，Unity 将计算动画剪辑中第一帧与当前帧之间的差异。然后，它将在所有其他播放的动画上应用此差异。</p>
+
+<p>参考前面的示例，您可以制作使角色左右倾斜的动画，然后 Unity 可将它们叠加在行走、空闲或奔跑周期上。通过以下代码可实现这一点：</p>
+
+<pre><code>private var leanLeft : AnimationState;
+private var leanRight : AnimationState;
+
+function Start () {
+   leanLeft = animation["leanLeft"];
+   leanRight = animation["leanRight"];
+
+   // 将倾斜动画放在单独一层中，
+   // 因此，对 CrossFade 的其他调用不会影响它。
+   leanLeft.layer = 10;
+   leanRight.layer = 10;
+
+   // 将倾斜动画设置为附加动画
+   leanLeft.blendMode = AnimationBlendMode.Additive;
+   leanRight.blendMode = AnimationBlendMode.Additive;
+
+   // 设置倾斜动画 ClampForever
+   // 通过设置 ClampForever，动画
+   // 在到达剪辑结尾时不会自动停止
+   leanLeft.wrapMode = WrapMode.ClampForever;
+   leanRight.wrapMode = WrapMode.ClampForever;
+
+   // 启用动画并使其完全淡入
+   // 我们在此处不使用 animation.Play，因为我们将在 Update 函数中
+   // 手动调整时间。
+   // 相反，我们仅启用动画并将其设置为全部权重
+   leanRight.enabled = true;
+   leanLeft.enabled = true;
+   leanRight.weight = 1.0;
+   leanLeft.weight = 1.0;
+
+   // 为进行测试，仅播放 "walk" 动画并对其进行循环
+   animation["walk"].wrapMode = WrapMode.Loop;
+   animation.Play("walk");
+}
+
+// 每一帧都根据我们需要应用的
+// 倾斜程度来设置标准化时间
+function Update () {
+   var lean = Input.GetAxis("Horizontal");
+   // 在剪辑的第一帧，normalizedTime 为 0，而最后一帧为 1
+   leanLeft.normalizedTime = -lean;
+   leanRight.normalizedTime = lean;
+}
+
+</code></pre>
+
+<p><strong>提示：</strong>使用附加动画时，还必须在附加动画中使用的每个变换上播放其他非附加动画，否则动画将添加到最后一帧的结果上。这肯定不是您想要的效果。</p>
+
+<h2>以程序化方法实现角色动画化</h2>
+
+<p>有时，您希望以程序化方法对角色的骨骼进行动画化。例如，可能希望角色的头部注视 3D 空间中的特定点，最好由跟踪目标点的脚本进行处理。幸运的是，Unity 很容易实现这一点，因为骨骼就是驱动蒙皮网格的变换组件。所以，可以像游戏对象的变换组件一样，通过脚本来控制角色的骨骼。</p>
+
+<p>必须注意，动画系统在 <strong>Update()</strong> 函数之后和 <strong>LateUpdate()</strong> 函数之前更新变换组件。因此，如果您需要执行 <strong>LookAt()</strong> 函数，应在 <strong>LateUpdate()</strong> 中执行该函数，从而确保真正覆盖动画。</p>
+
+<p>布娃娃将以同样的方式创建。只需将刚体 (Rigidbodies)、角色关节 (Character Joints) 和胶囊碰撞体 (Capsule Colliders) 连接到不同的骨骼。这样就会实际动画化您的蒙皮角色。</p>
+
+<h2>动画播放和采样</h2>
+
+<p>本部分介绍在引擎播放 Unity 中的动画时如何对这些动画采样。</p>
+
+<p>AnimationClips are typically authored at a fixed frame rate. For example, you may create your animation in Autodesk® 3ds Max® or Autodesk® Maya® at a frame rate of 60 frames per second (fps). When importing the animation in Unity, this frame rate will be read by the importer, so the data of the imported animation is also sampled at 60 fps.</p>
+
+<p>但是，游戏通常以可变帧率运行。一些计算机上的帧率可能高于其他计算机上的帧率，而根据摄像机在任何给定时刻观看的视图复杂性，每一秒的帧率也可能不同。基本上，这意味着我们不能对游戏运行的确切帧率做出任何假设。这也就是说，即使动画是以 60 fps 创作的，也可能以不同的帧率播放动画，例如 56.72 fps 或 83.14 fps 的帧率，甚至几乎任何其他帧率值。</p>
+
+<p>因此，Unity 必须以可变帧率对动画进行采样，并且不能保证最初设计的帧率。幸好，3D 计算机图形动画不是由离散帧组成的，而是由连续曲线组成。在任何时间点都可以对这些曲线进行采样，而不是局限于与原始动画中的帧相对应的时间点。事实上，如果游戏的运行帧率高于创作动画时的设计帧率，那么动画在实际游戏中看起来比在动画软件中看起来更流畅、更稳定。</p>
+
+<p>在大多数实际情况下，您可以忽略 Unity 以可变帧率采样动画这件事。但是，如果游戏玩法逻辑依赖于动画的变换组件或属性到非常具体的配置，那么您需要知道重新采样过程在后台进行。例如，如果有一段动画在 30 帧内将对象从 0 度旋转到 180 度，您希望从代码中知道何时到达中间位置，此情况下不应在代码中使用条件语句（通过条件语句检查当前旋转是否为 90 度）来实现此目的。因为 Unity 根据游戏的可变帧率对动画进行采样，所以可以在旋转刚好低于 90 度时对其进行采样，而在下次到达 90 度后再进行采样。如果您需要在到达动画中的特定点时收到通知，应改用 <a href="animeditor-AnimationEvents.html">AnimationEvent</a>。</p>
+
+<p>另外请注意，由于可变帧率采样的原因，使用 <strong>WrapMode.Once</strong> 模式播放的动画可能无法在最后一帧的确切时间进行采样。在游戏的一帧中，正好可在动画结束之前进行动画采样，而在下一帧中，时间可能会超过动画的长度，因此会禁用这一帧动画，不对其进一步采样。如果您必须要对动画的最后一帧采样，应使用 <strong>WrapMode.ClampForever</strong> 模式，这种模式将无限期对最后一帧进行采样，直到您主动停止动画为止。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-Animation.html"></a></span><div class="tip">动画</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="GUIReference.html"></a></span><div class="tip">旧版 GUI</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

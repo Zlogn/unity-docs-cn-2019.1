@@ -1,0 +1,445 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="空间映射低级 API - Unity Manual">
+<title>空间映射低级 API - Unity Manual</title>
+<meta name="description" content="通过空间映射渲染器和碰撞体组件可以轻松使用空间映射的功能，而无需担心系统的小细节。如果希望更好地控制应用程序中的空间映射，请使用 Unity 为空间映射提供的低级 API。">
+<meta property="og:description" content="通过空间映射渲染器和碰撞体组件可以轻松使用空间映射的功能，而无需担心系统的小细节。如果希望更好地控制应用程序中的空间映射，请使用 Unity 为空间映射提供的低级 API。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'SpatialMappingLowLevelApi';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SpatialMappingLowLevelApi.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SpatialMappingLowLevelApi.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SpatialMappingLowLevelApi.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SpatialMappingLowLevelApi.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SpatialMappingLowLevelApi.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SpatialMappingLowLevelApi.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SpatialMappingLowLevelApi.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SpatialMappingLowLevelApi.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SpatialMappingLowLevelApi.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SpatialMappingLowLevelApi.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/SpatialMappingLowLevelApi.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/SpatialMappingLowLevelApi.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/SpatialMappingLowLevelApi.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/SpatialMappingLowLevelApi.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SpatialMappingLowLevelApi.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SpatialMappingLowLevelApi.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SpatialMappingLowLevelApi.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SpatialMappingLowLevelApi.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SpatialMappingLowLevelApi.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SpatialMappingLowLevelApi.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SpatialMappingLowLevelApi.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SpatialMappingLowLevelApi.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SpatialMappingLowLevelApi.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SpatialMappingLowLevelApi.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="XR.html">XR</a></li>
+<li><a href="XR-SDK_overviews.html">XR SDK</a></li>
+<li><a href="wmr_sdk_overview.html">Windows Mixed Reality</a></li>
+<li><a href="SpatialMapping.html">HoloLens 空间映射</a></li>
+<li>空间映射低级 API</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SpatialMappingRenderer.html"></a></span><div class="tip">空间映射渲染器 (Spatial Mapping Renderer)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SpatialMappingTroubleshooting.html"></a></span><div class="tip">空间映射常见问题故障排除</div>
+</div>
+</div></div>
+<h1>空间映射低级 API</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>通过空间映射渲染器和碰撞体组件可以轻松使用空间映射的功能，而无需担心系统的小细节。如果希望更好地控制应用程序中的空间映射，请使用 Unity 为空间映射提供的低级 API。</p>
+
+<p>此 API 提供了许多数据结构和对象类型，可用于访问 HoloLens 收集的空间映射信息。</p>
+
+<h2>SurfaceObserver</h2>
+
+<p>可使用 <a href="../ScriptReference/XR.WSA.SurfaceObserver.html">SurfaceObserver</a> 访问空间映射数据。<code>SurfaceObserver</code> 是一个 API 类，负责监视一个真实世界空间体积以提供应用程序所需的空间映射数据。<code>SurfaceObserver</code> 描述真实世界中的一个物理区域，并报告已由空间映射系统添加、更改或移除的与该区域相交的空间表面集合。</p>
+
+<p>仅当希望通过 Unity scripting API 直接与空间映射进行交互时，才需要使用 <code>SurfaceObservers</code>。</p>
+
+<p>Unity provides its own Spatial Mapping Renderer and Collider components, built on the <code>SurfaceObserver</code> API to allow easy access to Spatial Mapping functionality. See documentation on <a href="SpatialMappingComponents.html">Spatial Mapping components</a> for more details on these. </p>
+
+<p>通过使用 <code>SurfaceObserver</code>，应用程序可以在有或没有物理碰撞数据的情况下异步请求网格数据。请求完成后，另一个回调会通知应用程序这些数据已可供使用。</p>
+
+<p><code>SurfaceObserver</code> 为应用程序提供以下功能：</p>
+
+<p>1.根据表面更改（例如添加、删除和更新）请求，发出<a href="https://en.wikipedia.org/wiki/Callback_(computer_programming)">回调</a>。</p>
+
+<p>2.提供一个接口来请求与已知表面相对应的网格数据。</p>
+
+<p>3.当请求的网格数据已可供使用时，发出<a href="https://en.wikipedia.org/wiki/Callback_(computer_programming)">回调</a>。</p>
+
+<p>4.提供定义 <code>SurfaceObserver</code> 的位置和体积的方式。</p>
+
+<h2>SurfaceData</h2>
+
+<p><a href="../ScriptReference/XR.WSA.SurfaceData.html">SurfaceData</a> 是一个类，其中包含空间映射系统构建和报告__表面__网格数据所需的所有信息。</p>
+
+<p>必须使用 <a href="../ScriptReference/XR.WSA.SurfaceObserver.RequestMeshAsync.html">RequestMeshAsync</a> 方法将填充的 <code>SurfaceData</code> 对象传递给空间映射系统。最初调用 <a href="../ScriptReference/XR.WSA.SurfaceObserver.RequestMeshAsync.html">RequestMeshAsync</a> 方法时，需要将其传递给 <code>SurfaceDataReadyDelegate</code>。当网格数据准备就绪后，<code>SurfaceDataReadyDelegate</code> 会报告一个匹配的 <code>SurfaceData</code> 对象。</p>
+
+<p>因此，应用程序可以精确确定数据对应的表面。</p>
+
+<p>应该使用应用程序所需的信息填充 <code>SurfaceData</code> 游戏对象。此信息包括以下组件和数据：</p>
+
+<ul>
+<li><p><a href="../ScriptReference/XR.WSA.WorldAnchor.html">WorldAnchor</a> 组件</p></li>
+<li><p><a href="class-MeshFilter.html">MeshFilter</a> 组件</p></li>
+<li><p><a href="class-MeshCollider.html">MeshCollider</a> 组件（如果应用程序中需要物理数据）</p></li>
+<li><p>所需生成的网格中每立方米的三角形</p></li>
+<li><p>表面 ID</p></li>
+</ul>
+
+<p>当使用配置有误的 <a href="../ScriptReference/XR.WSA.SurfaceData.html">SurfaceData</a> 对象来调用 <a href="../ScriptReference/XR.WSA.SurfaceObserver.RequestMeshAsync.html">RequestMeshAsync</a> 方法时，系统会抛出参数异常。即使 <code>RequestMeshAsync</code> 方法调用没有抛出参数异常，也没有其他办法可以检查空间映射是否正在创建并成功返回网格数据。建议通过脚本手动跟踪创建的网格数据。</p>
+
+<h2>API 用法示例</h2>
+
+<p>下面的示例脚本显示了使用 API 重要部分的基本示例。</p>
+
+<pre><code>
+using UnityEngine;
+using UnityEngine.XR;
+using UnityEngine.XR.WSA;
+using UnityEngine.Rendering;
+using UnityEngine.Assertions;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+public enum BakedState 
+{
+    NeverBaked = 0,
+    Baked = 1,
+    UpdatePostBake = 2
+}
+
+// 此类可保存由系统保留用于确定表面烘焙优先级的数据。
+class SurfaceEntry 
+{
+    public GameObject  m_Surface; // 与此表面对应的游戏对象
+    public int         m_Id; // 此表面的 ID
+    public DateTime    m_UpdateTime; // 更新系统报告的时间
+    public BakedState  m_BakedState;
+    public const float c_Extents = 5.0f;
+}
+
+public class SMSample : MonoBehaviour 
+{
+    // 此观察者是了解空间映射世界的窗口。
+    SurfaceObserver m_Observer;
+
+    // 此字典包含一组已知的空间映射表面。
+    //系统会定期更新、添加和删除表面。
+    Dictionary&lt;int, SurfaceEntry&gt; m_Surfaces;
+
+    //这是系统绘制烘焙表面时使用的材质。
+    public Material m_drawMat;
+
+    // 空间映射系统使用此标志在烘焙正在进行时推迟请求。
+    // 烘焙网格数据可能需要经过多个帧。此示例基于表面数据表面
+    // 确定烘焙请求顺序的优先级，并仅在
+    // 系统当前未处理请求时才发出新请求。
+    bool m_WaitingForBake;
+
+    //这是系统最后一次更新 SurfaceObserver。更新间隔
+    // 不超过两秒
+    float m_lastUpdateTime;
+
+    void Start () 
+    {
+        m_Observer = new SurfaceObserver ();
+        m_Observer.SetVolumeAsAxisAlignedBox (new Vector3(0.0f, 0.0f, 0.0f), 
+            new Vector3 (SurfaceEntry.c_Extents, SurfaceEntry.c_Extents, SurfaceEntry.c_Extents));
+        m_Surfaces = new Dictionary&lt;int, SurfaceEntry&gt; ();
+        m_WaitingForBake = false;
+        m_lastUpdateTime = 0.0f;
+    }
+    
+    void Update () 
+    {
+        // 避免在 SurfaceObserver 上过于频繁调用 Update。
+        if (m_lastUpdateTime + 2.0f &lt; Time.realtimeSinceStartup) 
+        {
+            // 此代码块使观察体跟随摄像机。
+            Vector3 extents;
+            extents.x = SurfaceEntry.c_Extents;
+            extents.y = SurfaceEntry.c_Extents;
+            extents.z = SurfaceEntry.c_Extents;
+            m_Observer.SetVolumeAsAxisAlignedBox (Camera.main.transform.position, extents);
+
+            try 
+            {
+                m_Observer.Update (SurfaceChangedHandler);
+            } 
+            catch 
+            {
+                // 如果指定的回调错误，Update 可抛出异常。
+                Debug.Log ("Observer update failed unexpectedly!");
+            }
+
+            m_lastUpdateTime = Time.realtimeSinceStartup;
+        }
+        if (!m_WaitingForBake) 
+        {
+            // 设定从高到低的优先级为旧添加、其他添加和更新。
+            SurfaceEntry bestSurface = null;
+            foreach (KeyValuePair&lt;int, SurfaceEntry&gt; surface in m_Surfaces) 
+            {
+                if (surface.Value.m_BakedState != BakedState.Baked) 
+                {
+                    if (bestSurface == null) 
+                    {
+                        bestSurface = surface.Value;
+                    } 
+                    else 
+                    {
+                        if (surface.Value.m_BakedState &lt; bestSurface.m_BakedState) 
+                        {
+                            bestSurface = surface.Value;
+                        } 
+                        else if (surface.Value.m_UpdateTime &lt; bestSurface.m_UpdateTime) 
+                        {
+                            bestSurface = surface.Value;
+                        }
+                    }
+                }
+            }
+            if (bestSurface != null) 
+            {
+                // 填写并分发请求。
+                SurfaceData sd;
+                sd.id.handle = bestSurface.m_Id;
+                sd.outputMesh = bestSurface.m_Surface.GetComponent&lt;MeshFilter&gt; ();
+                sd.outputAnchor = bestSurface.m_Surface.GetComponent&lt;WorldAnchor&gt; ();
+                sd.outputCollider = bestSurface.m_Surface.GetComponent&lt;MeshCollider&gt; ();
+                sd.trianglesPerCubicMeter = 300.0f;
+                sd.bakeCollider = true;
+                try 
+                {
+                    if (m_Observer.RequestMeshAsync(sd, SurfaceDataReadyHandler)) 
+                    {
+                        m_WaitingForBake = true;
+                    } 
+                    else 
+                    {
+                        // 请求网格时返回值 false
+                        // 通常表示指定的
+                        // 表面 ID 无效。
+                        Debug.Log(System.String.Format ("Bake request for {0} failed.Is {0} a valid Surface ID?", bestSurface.m_Id));
+                    }
+                }
+                catch 
+                {
+                    // 如果没有正确填写数据结构，请求可能会失败
+                    Debug.Log (System.String.Format("Bake for id {0} failed unexpectedly!", bestSurface.m_Id));
+                }
+            }
+        }
+    }
+
+    // 此处理程序在表面更改时接收事件，并使用 SurfaceObserver
+    // 的 Update 方法传播这些事件
+    void SurfaceChangedHandler (SurfaceId id, SurfaceChange changeType, Bounds bounds, DateTime updateTime) 
+    {
+        SurfaceEntry entry;
+        switch (changeType) 
+        {
+            case SurfaceChange.Added:
+            case SurfaceChange.Updated:
+            if (m_Surfaces.TryGetValue(id.handle, out entry)) 
+            {
+                // 如果系统已烘焙此表面，应将其标记为
+                // 在更新时间外也需要烘焙，因此"下一个要烘焙的表面"
+                // 逻辑会对其进行正确排序。
+                if (entry.m_BakedState == BakedState.Baked) 
+                {
+                    entry.m_BakedState = BakedState.UpdatePostBake;
+                    entry.m_UpdateTime = updateTime;
+                }
+            } 
+            else 
+            {
+                // 这是一个全新的表面，所以为其创建一个条目。
+                entry = new SurfaceEntry ();
+                entry.m_BakedState = BakedState.NeverBaked;
+                entry.m_UpdateTime = updateTime;
+                entry.m_Id = id.handle;
+                entry.m_Surface = new GameObject (System.String.Format("Surface-{0}", id.handle));
+                entry.m_Surface.AddComponent&lt;MeshFilter&gt; ();
+                entry.m_Surface.AddComponent&lt;MeshCollider&gt; ();
+                MeshRenderer mr = entry.m_Surface.AddComponent&lt;MeshRenderer&gt; ();
+                mr.shadowCastingMode = ShadowCastingMode.Off;
+                mr.receiveShadows = false;
+                entry.m_Surface.AddComponent&lt;WorldAnchor&gt; ();
+                entry.m_Surface.GetComponent&lt;MeshRenderer&gt; ().sharedMaterial = m_drawMat;
+                m_Surfaces[id.handle] = entry;
+            }
+            break;
+
+            case SurfaceChange.Removed:
+            if (m_Surfaces.TryGetValue(id.handle, out entry)) 
+            {
+                m_Surfaces.Remove (id.handle);
+                Mesh mesh = entry.m_Surface.GetComponent&lt;MeshFilter&gt; ().mesh;
+                if (mesh) 
+                {
+                    Destroy (mesh);
+                }
+                Destroy (entry.m_Surface);
+            }
+            break;
+        }
+    }
+
+    void SurfaceDataReadyHandler(SurfaceData sd, bool outputWritten, float elapsedBakeTimeSeconds) 
+    {
+        m_WaitingForBake = false;
+        SurfaceEntry entry;
+        if (m_Surfaces.TryGetValue(sd.id.handle, out entry)) 
+        {
+            // 这两个断言检查返回的过滤器和 WorldAnchor
+            // 是否与系统用于请求数据的对应项相同。除非更改了代码
+            // 来替换或销毁它们，否则这应该始终为 true。
+            Assert.IsTrue (sd.outputMesh == entry.m_Surface.GetComponent&lt;MeshFilter&gt;());
+            Assert.IsTrue (sd.outputAnchor == entry.m_Surface.GetComponent&lt;WorldAnchor&gt;());
+            entry.m_BakedState = BakedState.Baked;
+        } 
+        else 
+        {
+            Debug.Log (System.String.Format("Paranoia:  Couldn't find surface {0} after a bake!", sd.id.handle));
+            Assert.IsTrue (false);
+        }
+    }
+}
+</code></pre>
+
+<p>__注意：__调用 <a href="../ScriptReference/XR.WSA.SurfaceObserver.Update.html">SurfaceObserver 的 Update</a> 方法可能是资源密集型操作，因此调用次数应尽量不要超出应用程序的要求。对于大多数应用程序来说，每三秒调用一次此方法应该就足够了。</p>
+
+<p>–</p>
+
+<ul>
+<li><p><span class="page-edit">2018–05–01 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 2017.3 版中更新了 Hololens 空间映射文档</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SpatialMappingRenderer.html"></a></span><div class="tip">空间映射渲染器 (Spatial Mapping Renderer)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SpatialMappingTroubleshooting.html"></a></span><div class="tip">空间映射常见问题故障排除</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

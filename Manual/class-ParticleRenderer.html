@@ -1,0 +1,315 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="粒子渲染器 (Particle Renderer)（旧版） - Unity Manual">
+<title>粒子渲染器 (Particle Renderer)（旧版） - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/Inspector-ParticleRenderer.png">
+<meta name="description" content="粒子渲染器__负责在屏幕上渲染__粒子系统。">
+<meta property="og:description" content="粒子渲染器__负责在屏幕上渲染__粒子系统。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-ParticleRenderer';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-ParticleRenderer.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-ParticleRenderer.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-ParticleRenderer.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-ParticleRenderer.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-ParticleRenderer.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-ParticleRenderer.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-ParticleRenderer.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-ParticleRenderer.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-ParticleRenderer.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-ParticleRenderer.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-ParticleRenderer.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-ParticleRenderer.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-ParticleRenderer.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-ParticleRenderer.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-ParticleRenderer.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-ParticleRenderer.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-ParticleRenderer.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-ParticleRenderer.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-ParticleRenderer.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-ParticleRenderer.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-ParticleRenderer.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-ParticleRenderer.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-ParticleRenderer.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-ParticleRenderer.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="PartSysReference.html">粒子系统参考</a></li>
+<li><a href="comp-ParticlesLegacy.html">粒子系统（旧版，3.5 版之前）</a></li>
+<li>粒子渲染器 (Particle Renderer)（旧版）</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-ParticleAnimator.html"></a></span><div class="tip">粒子动画器 (Particle Animator)（旧版）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-WorldParticleCollider.html"></a></span><div class="tip">世界粒子碰撞体 (World Particle Collider)（旧版）</div>
+</div>
+</div></div>
+<h1>粒子渲染器 (Particle Renderer)（旧版）</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><strong>粒子渲染器__负责在屏幕上渲染__粒子系统</strong>。</p>
+
+<figure>
+<img src="../uploads/Main/Inspector-ParticleRenderer.png" alt="">
+</figure>
+
+<h2>属性</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Cast Shadows</strong></td>
+	<td style="text-align:left;">如果启用此属性，则允许网格投射阴影。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Receive Shadows</strong></td>
+	<td style="text-align:left;">如果启用此属性，则允许网格接受阴影。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Motion Vectors</strong></td>
+	<td style="text-align:left;">如果启用此属性，则线会将运动矢量渲染到摄像机运动矢量纹理中。请参阅脚本 API 参考文档中的 <a href="../ScriptReference/Renderer-motionVectors.html">Renderer.motionVectors</a> 以了解更多信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Materials</strong></td>
+	<td style="text-align:left;">引用显示在每个单独粒子位置的__材质__列表。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Light Probes</strong></td>
+	<td style="text-align:left;">基于探针的光照插值模式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Reflection Probes</strong></td>
+	<td style="text-align:left;">如果启用此属性，并且场景中存在反射探针，则会为此粒子渲染器拾取反射纹理，并将此纹理设置为内置的着色器 uniform 变量。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Probe Anchor</strong></td>
+	<td style="text-align:left;">如果定义了此属性（使用游戏对象），渲染器将使用此游戏对象的位置来查找插值光照探针。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Camera Velocity Scale</strong></td>
+	<td style="text-align:left;">根据<a href="class-Camera.html">摄像机</a>移动而应用于粒子的拉伸量。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Stretch Particles</strong></td>
+	<td style="text-align:left;">确定粒子的渲染方式：</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>Billboard</strong>
+</td>
+	<td style="text-align:left;">粒子渲染为面向摄像机。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>Stretched</strong>
+</td>
+	<td style="text-align:left;">粒子面向它们移动的方向。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>SortedBillboard</strong>
+</td>
+	<td style="text-align:left;">粒子按深度排序。使用混合材质时选用此选项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>VerticalBillboard</strong>
+</td>
+	<td style="text-align:left;">所有粒子沿 X/Z 轴平齐排列。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>HorizontalBillboard</strong>
+</td>
+	<td style="text-align:left;">所有粒子沿 X/Y 轴平齐排列。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Length Scale</strong></td>
+	<td style="text-align:left;">如果 <strong>Stretch Particles</strong> 设置为 <strong>Stretched__，则此值确定粒子在其运动方向上的移动距离。 |
+|</strong>Velocity Scale__</td>
+	<td style="text-align:left;">如果 <strong>Stretch Particles</strong> 设置为 <strong>Stretched__，则此值根据粒子的移动速度确定粒子拉伸的速率。 |
+|</strong>UV Animation__</td>
+	<td style="text-align:left;">如果定义了 X 和/或 Y，则会生成粒子的 UV 坐标以用于区块动画纹理。请参阅下面的<a href="#animatedtextures">动画纹理</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>X Tile</strong>
+</td>
+	<td style="text-align:left;">横跨 X 轴的帧数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>Y Tile</strong>
+</td>
+	<td style="text-align:left;">横跨 Y 轴的帧数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>Cycles</strong>
+</td>
+	<td style="text-align:left;">动画序列的循环次数。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>详细信息</h2>
+
+<p>任何粒子系统都需要粒子渲染器才能在屏幕上显示。</p>
+
+<figure>
+<img src="../uploads/Main/ParticleRendererExhaust.jpg" alt="A Particle Renderer makes the Gunships engine exhaust appear on the screen">
+<figcaption>A Particle Renderer makes the Gunship’s engine exhaust appear on the screen</figcaption>
+</figure>
+
+<h3>选择材质</h3>
+
+<p>设置粒子渲染器时，使用适当的<a href="class-Material.html">材质</a>和用于渲染材质两面的着色器非常重要。Unity 建议将粒子着色器与粒子渲染器结合使用；大多数情况下，只需将材质与其中一个内置粒子着色器一起使用即可。<strong>Standard Assets</strong> &gt; <strong>Particles</strong> &gt; <strong>Sources</strong> 文件夹中提供了一些预先制作的材质供您使用。</p>
+
+<p>创建新材质的过程很简单：</p>
+
+<p>1.在 Unity 菜单栏中，选择 <strong>Assets</strong> &gt; <strong>Create</strong> &gt; <strong>Material</strong>。
+1.在 Inspector 窗口中，导航到 <strong>New Material__，然后单击 </strong>Shader__ 下拉选单。选择 <strong>Particles</strong> 组中的着色器之一（例如：__Particles__ &gt; <strong>Multiply__）。
+1.要分配纹理，请导航到 Inspector 窗口中包含文本 </strong>None (Texture)__ 的灰色框，然后单击 <strong>Select</strong> 按钮以启动包含可用纹理的弹出菜单。</p>
+
+<p>请注意，不同的着色器使用纹理 Alpha 通道的方式略有不同，但大多数情况下，Alpha 通道中的黑色值使其不可见，而白色值则使其显示在屏幕上。</p>
+
+<h3>扭曲粒子</h3>
+
+<p>默认情况下，粒子渲染为公告牌（即，简单的方形精灵）。这对于烟雾、爆炸和大多数其他粒子效果非常有用。请参阅<a href="class-BillboardRenderer.html">公告牌渲染器 (Billboard Renderer)</a> 以了解更多信息。</p>
+
+<p>可使粒子随速度拉伸。<strong>Length Scale</strong> 和 <strong>Velocity Scale</strong> 会影响拉伸粒子的长度。这对于火花、闪电或激光束等效果非常有用。</p>
+
+<p><strong>Sorted Billboard</strong> 可用于使所有粒子按深度排序。有时这是必要的，主要是在使用 <strong>Alpha 混合 (Alpha Blended)</strong> 粒子着色器时。此功能可能需要大量资源并影响性能；只有在渲染时能带来显著质量提升时才应使用。</p>
+
+<p><a name="animatedtextures"></a> </p>
+
+<h3>动画纹理</h3>
+
+<p>可使用动画区块纹理来渲染粒子系统。要使用此功能，请将纹理从一组图像中分离出来。当粒子经历自身的生命周期时，它们将循环显示图像。此功能适用于为粒子增添更多动态性，或制作小的旋转碎片。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-ParticleAnimator.html"></a></span><div class="tip">粒子动画器 (Particle Animator)（旧版）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-WorldParticleCollider.html"></a></span><div class="tip">世界粒子碰撞体 (World Particle Collider)（旧版）</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

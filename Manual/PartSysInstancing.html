@@ -1,0 +1,518 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="粒子系统 GPU 实例化 - Unity Manual">
+<title>粒子系统 GPU 实例化 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/PartSysInstancingEnable.png">
+<meta name="description" content="与 CPU 渲染相比，GPU 实例化可带来巨大的性能提升。如果希望粒子系统渲染__网格__粒子（而不是使用渲染__公告牌__粒子的默认渲染模式），则可使用实例化功能。">
+<meta property="og:description" content="与 CPU 渲染相比，GPU 实例化可带来巨大的性能提升。如果希望粒子系统渲染__网格__粒子（而不是使用渲染__公告牌__粒子的默认渲染模式），则可使用实例化功能。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'PartSysInstancing';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PartSysInstancing.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PartSysInstancing.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PartSysInstancing.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PartSysInstancing.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PartSysInstancing.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PartSysInstancing.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PartSysInstancing.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PartSysInstancing.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PartSysInstancing.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PartSysInstancing.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/PartSysInstancing.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/PartSysInstancing.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/PartSysInstancing.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/PartSysInstancing.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PartSysInstancing.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PartSysInstancing.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PartSysInstancing.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PartSysInstancing.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PartSysInstancing.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PartSysInstancing.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PartSysInstancing.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PartSysInstancing.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PartSysInstancing.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PartSysInstancing.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="ParticleSystems.html">粒子系统</a></li>
+<li><a href="ParticleSystemHowTo.html">粒子系统操作方法</a></li>
+<li>粒子系统 GPU 实例化</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PartSysVertexStreams.html"></a></span><div class="tip">粒子系统顶点流和标准着色器支持</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PostProcessingOverview.html"></a></span><div class="tip">后期处理概述</div>
+</div>
+</div></div>
+<h1>粒子系统 GPU 实例化</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>与 CPU 渲染相比，GPU 实例化可带来巨大的性能提升。如果希望粒子系统渲染__网格__粒子（而不是使用渲染__公告牌__粒子的默认<a href="PartSysRendererModule.html">渲染模式</a>），则可使用实例化功能。</p>
+
+<p>为了能够对粒子系统使用 GPU 实例化，请执行以下操作：</p>
+
+<ul>
+<li><p>将粒子系统的<a href="PartSysRendererModule.html">渲染器</a>模式设置为 <strong>Mesh</strong></p></li>
+<li><p>对支持 GPU 实例化的<a href="PartSysRendererModule.html">渲染器</a>材质使用一个着色器</p></li>
+<li><p>在支持 GPU 实例化的平台上运行项目</p></li>
+</ul>
+
+<p>要为粒子系统启用 GPU 实例化，必须在粒子系统的 <strong>Renderer</strong> 模块中启用 <strong>Enable GPU Instancing</strong> 复选框。</p>
+
+<figure>
+<img src="../uploads/Main/PartSysInstancingEnable.png" alt="在 Renderer 模块中启用粒子系统 GPU 实例化的选项">
+<figcaption>在 Renderer 模块中启用粒子系统 GPU 实例化的选项</figcaption>
+</figure>
+
+<p>Unity 带有一个支持 GPU 实例化的内置粒子着色器，但默认的粒子材质不使用该着色器，因此必须更改此设置以使用 GPU 实例化。支持 GPU 实例化的粒子着色器名为 <strong>Particles/Standard Surface</strong>。要使用它，必须创建自己的新__材质__，并将材质的着色器设置为 <strong>Particles/Standard Surface</strong>。然后，必须将此新材质分配给粒子系统<a href="PartSysRendererModule.html">渲染器</a>模块中的材质字段。</p>
+
+<figure>
+<img src="../uploads/Main/PartSysInstancingShader.png" alt="与粒子系统 GPU 实例化兼容的内置着色器">
+<figcaption>与粒子系统 GPU 实例化兼容的内置着色器</figcaption>
+</figure>
+
+<p>如果要为粒子使用其他不同的着色器，必须使用“#pragma 目标 4.5”或更高版本。有关更多详细信息，请参阅<a href="SL-ShaderCompileTargets.html">着色器编译目标</a>。此要求高于 Unity 中的常规 GPU 实例化，因为粒子系统将其所有实例数据写入单个大缓冲区，而不是将实例化分解为多个绘制调用。</p>
+
+<h2>自定义着色器示例</h2>
+
+<p>也可以编写使用 GPU 实例化的自定义着色器。有关更多信息，请参阅以下部分：</p>
+
+<ul>
+<li><a href="#SurfaceShader">表面着色器中的粒子系统 GPU 实例化</a></li>
+<li><a href="#CustomShader">自定义着色器中的粒子系统 GPU 实例化</a></li>
+<li>
+<a href="#CustomVertexStreams">自定义粒子系统使用的实例数据</a>（与自定义顶点流一起使用）</li>
+</ul>
+
+<p><a name="SurfaceShader"></a> </p>
+
+<h3>表面着色器中的粒子系统 GPU 实例化</h3>
+
+<p>以下是使用粒子系统 GPU 实例化的表面着色器的完整运行示例：</p>
+
+<pre><code>
+Shader "Instanced/ParticleMeshesSurface" {
+    Properties {
+        _Color ("Color", Color) = (1,1,1,1)
+        _MainTex ("Albedo (RGB)", 2D) = "white" {}
+        _Glossiness ("Smoothness", Range(0,1)) = 0.5
+        _Metallic ("Metallic", Range(0,1)) = 0.0
+    }
+    SubShader {
+        Tags { "RenderType"="Opaque" }
+        LOD 200
+
+        CGPROGRAM
+        // Physically based Standard lighting model, and enable shadows on all light types
+        // And generate the shadow pass with instancing support
+        #pragma surface surf Standard nolightmap nometa noforwardadd keepalpha fullforwardshadows addshadow vertex:vert
+        // Enable instancing for this shader
+        #pragma multi_compile_instancing
+        #pragma instancing_options procedural:vertInstancingSetup
+        #pragma exclude_renderers gles
+        #include "UnityStandardParticleInstancing.cginc"
+        sampler2D _MainTex;
+        struct Input {
+            float2 uv_MainTex;
+            fixed4 vertexColor;
+        };
+        fixed4 _Color;
+        half _Glossiness;
+        half _Metallic;
+        void vert (inout appdata_full v, out Input o)
+        {
+            UNITY_INITIALIZE_OUTPUT(Input, o);
+            vertInstancingColor(o.vertexColor);
+            vertInstancingUVs(v.texcoord, o.uv_MainTex);
+        }
+
+        void surf (Input IN, inout SurfaceOutputStandard o) {
+            // Albedo comes from a texture tinted by color
+            fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * IN.vertexColor * _Color;
+            o.Albedo = c.rgb;
+            // Metallic and smoothness come from slider variables
+            o.Metallic = _Metallic;
+            o.Smoothness = _Glossiness;
+            o.Alpha = c.a;
+        }
+        ENDCG
+    }
+    FallBack "Diffuse"
+}
+</code></pre>
+
+<p>上面的示例与常规<a href="SL-SurfaceShaders.html">表面着色器</a>之间存在许多微小差异，正是这些不同之处使得表面着色器可以使用粒子实例化。</p>
+
+<p>首先，必须添加以下两行以启用程序实例化 (Procedural Instancing)，并指定内置顶点设置函数。此函数位于 UnityStandardParticleInstancing.cginc 中，用于加载每个实例（每个粒子）的位置数据：</p>
+
+<pre><code>        #pragma instancing_options procedural:vertInstancingSetup
+                #include "UnityStandardParticleInstancing.cginc"
+</code></pre>
+
+<p>此示例中的其他修改是对顶点函数的修改，此函数增加了两行来应用每个实例的属性，具体而言就是粒子颜色和<a href="PartSysTexSheetAnimModule.html">纹理帧动画</a>纹理坐标：</p>
+
+<pre><code>            vertInstancingColor(o.vertexColor);
+                        vertInstancingUVs(v.texcoord, o.uv_MainTex);
+</code></pre>
+
+<p><a name="CustomShader"></a> </p>
+
+<h3>自定义着色器中的粒子系统 GPU 实例化</h3>
+
+<p>以下是使用粒子系统 GPU 实例化的自定义着色器的完整运行示例。此自定义着色器添加了标准粒子着色器所不具备的功能：<a href="PartSysTexSheetAnimModule.html">纹理帧动画</a>的各个帧之间的淡入淡出。</p>
+
+<pre><code>Shader "Instanced/ParticleMeshesCustom"
+{
+    Properties
+    {
+        _MainTex("Albedo", 2D) = "white" {}
+        [Toggle(_TSANIM_BLENDING)] _TSAnimBlending("Texture Sheet Animation Blending", Int) = 0
+    }
+    SubShader
+    {
+        Tags{ "RenderType" = "Opaque" }
+        LOD 100
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #pragma multi_compile __ _TSANIM_BLENDING
+            #pragma multi_compile_instancing
+            #pragma instancing_options procedural:vertInstancingSetup
+            #include "UnityCG.cginc"
+            #include "UnityStandardParticleInstancing.cginc"
+            struct appdata
+            {
+                float4 vertex : POSITION;
+                fixed4 color : COLOR;
+                float2 texcoord : TEXCOORD0;
+                UNITY_VERTEX_INPUT_INSTANCE_ID
+            };
+            struct v2f
+            {
+                float4 vertex : SV_POSITION;
+                fixed4 color : COLOR;
+                float2 texcoord : TEXCOORD0;
+# ifdef _TSANIM_BLENDING
+                float3 texcoord2AndBlend : TEXCOORD1;   
+# endif
+            };
+            sampler2D _MainTex;
+            float4 _MainTex_ST;
+            fixed4 readTexture(sampler2D tex, v2f IN)
+            {
+                fixed4 color = tex2D(tex, IN.texcoord);
+# ifdef _TSANIM_BLENDING
+                fixed4 color2 = tex2D(tex, IN.texcoord2AndBlend.xy);
+                color = lerp(color, color2, IN.texcoord2AndBlend.z);
+# endif
+                return color;
+            }
+            v2f vert(appdata v)
+            {
+                v2f o;
+                UNITY_SETUP_INSTANCE_ID(v);
+                o.color = v.color;
+                o.texcoord = v.texcoord;
+                vertInstancingColor(o.color);
+# ifdef _TSANIM_BLENDING
+                vertInstancingUVs(v.texcoord, o.texcoord, o.texcoord2AndBlend);
+# else
+                vertInstancingUVs(v.texcoord, o.texcoord);
+# endif
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                return o;
+            }
+            fixed4 frag(v2f i) : SV_Target
+            {
+                half4 albedo = readTexture(_MainTex, i);
+                return i.color * albedo;
+            }
+            ENDCG
+        }
+    }
+}
+</code></pre>
+
+<p>此示例包含与表面着色器相同的用于加载位置数据的设置代码：</p>
+
+<pre><code>        #pragma instancing_options procedural:vertInstancingSetup
+                #include "UnityStandardParticleInstancing.cginc"
+</code></pre>
+
+<p>对顶点函数的修改也与表面着色器非常相似：</p>
+
+<pre><code>                vertInstancingColor(o.color);
+                # ifdef _TSANIM_BLENDING
+                                vertInstancingUVs(v.texcoord, o.texcoord, o.texcoord2AndBlend);
+                # else
+                                vertInstancingUVs(v.texcoord, o.texcoord);
+                # endif
+</code></pre>
+
+<p>与上面的第一个示例相比，这里唯一的区别是纹理帧动画混合。这意味着，着色器需要一组额外的纹理坐标来读取纹理帧动画的两个帧而不是一个帧，然后将它们混合在一起。</p>
+
+<p>最后，片元着色器读取纹理并计算最终颜色。</p>
+
+<p><a name="CustomVertexStreams"></a> </p>
+
+<h3>粒子系统 GPU 实例化与自定义顶点流</h3>
+
+<p>上面的示例仅使用粒子的默认顶点流设置。这包括位置、法线、颜色和一个 UV。但是，通过使用<a href="PartSysVertexStreams.html">自定义顶点流</a>，可以将其他数据发送到着色器，例如速度、旋转和大小。</p>
+
+<p>在接下来这一个示例中，着色器用于显示特殊效果，使速度更快的粒子看起来更亮，更慢的粒子更暗。有一些额外的代码用于根据速度来提高粒子的亮度（使用速度顶点流）。此外，因为此着色器假定该效果不使用纹理帧动画，所以从自定义流结构中将其省略。</p>
+
+<p>以下是完整的着色器：</p>
+
+<pre><code>Shader "Instanced/ParticleMeshesCustomStreams"
+{
+    Properties
+    {
+        _MainTex("Albedo", 2D) = "white" {}
+    }
+    SubShader
+    {
+        Tags{ "RenderType" = "Opaque" }
+        LOD 100
+        Pass
+        {
+            CGPROGRAM
+# pragma exclude_renderers gles
+            #pragma vertex vert
+            #pragma fragment frag
+            #pragma multi_compile_instancing
+            #pragma instancing_options procedural:vertInstancingSetup
+            #define UNITY_PARTICLE_INSTANCE_DATA MyParticleInstanceData
+            #define UNITY_PARTICLE_INSTANCE_DATA_NO_ANIM_FRAME
+            struct MyParticleInstanceData
+            {
+                float3x4 transform;
+                uint color;
+                float speed;
+            };
+            #include "UnityCG.cginc"
+            #include "UnityStandardParticleInstancing.cginc"
+            struct appdata
+            {
+                float4 vertex : POSITION;
+                fixed4 color : COLOR;
+                float2 texcoord : TEXCOORD0;
+                UNITY_VERTEX_INPUT_INSTANCE_ID
+            };
+            struct v2f
+            {
+                float4 vertex : SV_POSITION;
+                fixed4 color : COLOR;
+                float2 texcoord : TEXCOORD0;
+            };
+            sampler2D _MainTex;
+            float4 _MainTex_ST;
+            v2f vert(appdata v)
+            {
+                v2f o;
+                UNITY_SETUP_INSTANCE_ID(v);
+                o.color = v.color;
+                o.texcoord = v.texcoord;
+                vertInstancingColor(o.color);
+                vertInstancingUVs(v.texcoord, o.texcoord);
+# if defined(UNITY_PARTICLE_INSTANCING_ENABLED)
+                UNITY_PARTICLE_INSTANCE_DATA data = unity_ParticleInstanceData[unity_InstanceID];
+                o.color.rgb += data.speed;
+# endif
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                return o;
+            }
+            fixed4 frag(v2f i) : SV_Target
+            {
+                half4 albedo = tex2D(_MainTex, i.texcoord);
+                return i.color * albedo;
+            }
+            ENDCG
+        }
+    }
+}
+
+</code></pre>
+
+<p>此着色器包含 <code>UnityStandardParticleInstancing.cginc</code>（其中含有未使用自定义顶点流时的默认实例化数据布局）。因此，在使用自定义流时，必须重载该头部中定义的某些默认值。这些重载必须位于包含 (include) <strong>之前</strong>。上面的示例设置了以下自定义重载：</p>
+
+<p>首先，有一行代码使用 UNITY_PARTICLE_INSTANCE_DATA 宏，告诉 Unity 为自定义流数据使用名为“MyParticleInstanceData”的自定义结构：</p>
+
+<pre><code>            #define UNITY_PARTICLE_INSTANCE_DATA MyParticleInstanceData
+</code></pre>
+
+<p>其次，另一个 define 语句告诉实例化系统在此着色器中不需要动画帧流 (Anim Frame Stream)，因为此示例中的效果不适用于纹理帧动画：</p>
+
+<pre><code>            #define UNITY_PARTICLE_INSTANCE_DATA_NO_ANIM_FRAME
+</code></pre>
+
+<p>第三，声明自定义流数据的结构：</p>
+
+<pre><code>            struct MyParticleInstanceData
+                        {
+                            float3x4 transform;
+                            uint color;
+                            float speed;
+                        };
+</code></pre>
+
+<p>这些重载全部都是在 <code>UnityStandardParticleInstancing.cginc</code> 之前包含进来的，因此着色器不会对这些定义使用自己的默认值。</p>
+
+<p>编写结构时，变量必须与粒子系统渲染器模块中检视面板 (Inspector) 中列出的顶点流相匹配。这意味着必须在渲染器模块 UI 中选择要使用的流，然后以相同的顺序将它们添加到自定义流数据结构中的变量定义，从而使它们匹配：</p>
+
+<figure>
+<img src="../uploads/Main/PartSysInstancingCustomVertexStreams.png" alt="渲染器模块 UI 中显示的自定义顶点流，显示了一些实例化的流和一些非实例化的流">
+<figcaption>渲染器模块 UI 中显示的自定义顶点流，显示了一些实例化的流和一些非实例化的流</figcaption>
+</figure>
+
+<p>第一项 (Position) 是必填项，因此无法将其删除。可使用加号和减号按钮自由添加/删除其他条目，从而自定义顶点流数据。</p>
+
+<p>列表中以 <strong>INSTANCED</strong> 结尾的条目包含实例数据，因此必须将它们包含在粒子实例数据结构中。直接附加到单词 <strong>INSTANCED</strong> 后面的数字（例如 <strong>INSTANCED0</strong> 中的 0 和 <strong>INSTANCED1</strong> 中的 1）表示变量必须在结构中的初始“transform”变量<em>之后</em>出现的顺序。尾部字母（.x、.xy、.xyz 或 .xyzw）表示变量的类型，并映射到着色器代码中的 float、float2、float3 和 float4 变量类型。</p>
+
+<p>可在粒子实例数据结构中忽略在列表中显示但结尾<em><em>没有</em></em>单词 <strong>INSTANCED</strong> 的任何其他顶点流数据，因为它不是着色器要处理的实例化数据。此数据属于源网格，例如 UV、法线和切线。</p>
+
+<p>完成我们的示例的最后一步是将速度应用于顶点着色器内的粒子颜色：</p>
+
+<pre><code># if defined(UNITY_PARTICLE_INSTANCING_ENABLED)
+                UNITY_PARTICLE_INSTANCE_DATA data = unity_ParticleInstanceData[unity_InstanceID];
+                o.color.rgb += data.speed;
+# endif
+</code></pre>
+
+<p>必须将所有实例化代码包装在 UNITY_PARTICLE_INSTANCING_ENABLED 的检查中，以便在未使用实例化时进行编译。</p>
+
+<p>此时，如果要将数据传递给片元着色器，可将数据写入 v2f 结构，就像对任何其他着色器数据的处理一样。</p>
+
+<p>此示例描述了如何修改自定义着色器以便用于自定义顶点流，但可以对表面着色器应用完全相同的方法来实现相同的功能。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–03–28 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 Unity <a href="../Manual/30_search.html?q=newin20181">2018.1</a> 版中添加了粒子系统 GPU 实例化 <span class="search-words">NewIn20181</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PartSysVertexStreams.html"></a></span><div class="tip">粒子系统顶点流和标准着色器支持</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PostProcessingOverview.html"></a></span><div class="tip">后期处理概述</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

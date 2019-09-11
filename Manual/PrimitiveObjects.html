@@ -1,0 +1,226 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="原始对象和占位对象 - Unity Manual">
+<title>原始对象和占位对象 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/PrimitiveCube.png">
+<meta name="description" content="Unity 可以使用通过建模软件创建的任何形状的 3D 模型。但是，还可以直接在 Unity 中创建许多原始对象类型，即__立方体 (Cube)、球体 (Sphere)、胶囊体 (Capsule)、圆柱体 (Cylinder)、平面 (Plane)__ 和__四边形 (Quad)。这些对象本身通常很有用（例如，平面通常用作平坦的地面），但它们也可用于快速创建占位对象和原型以便用于测试。可使用 GameObject &gt; 3D Object__ 菜单上的相应项将任何这些原始对象添加到场景中。">
+<meta property="og:description" content="Unity 可以使用通过建模软件创建的任何形状的 3D 模型。但是，还可以直接在 Unity 中创建许多原始对象类型，即__立方体 (Cube)、球体 (Sphere)、胶囊体 (Capsule)、圆柱体 (Cylinder)、平面 (Plane)__ 和__四边形 (Quad)。这些对象本身通常很有用（例如，平面通常用作平坦的地面），但它们也可用于快速创建占位对象和原型以便用于测试。可使用 GameObject &gt; 3D Object__ 菜单上的相应项将任何这些原始对象添加到场景中。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'PrimitiveObjects';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PrimitiveObjects.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PrimitiveObjects.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PrimitiveObjects.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PrimitiveObjects.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PrimitiveObjects.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PrimitiveObjects.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PrimitiveObjects.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PrimitiveObjects.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PrimitiveObjects.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PrimitiveObjects.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/PrimitiveObjects.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/PrimitiveObjects.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/PrimitiveObjects.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/PrimitiveObjects.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PrimitiveObjects.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PrimitiveObjects.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PrimitiveObjects.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PrimitiveObjects.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PrimitiveObjects.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PrimitiveObjects.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PrimitiveObjects.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PrimitiveObjects.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PrimitiveObjects.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PrimitiveObjects.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="AssetWorkflow.html">Asset Workflow</a></li>
+<li>原始对象和占位对象</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetTypes.html"></a></span><div class="tip">常见资源类型</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetPackages.html"></a></span><div class="tip">资源包</div>
+</div>
+</div></div>
+<h1>原始对象和占位对象</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 可以使用通过建模软件创建的任何形状的 3D 模型。但是，还可以直接在 Unity 中创建许多原始对象类型，即__立方体 (Cube)<strong>、</strong>球体 (Sphere)<strong>、</strong>胶囊体 (Capsule)<strong>、</strong>圆柱体 (Cylinder)<strong>、</strong>平面 (Plane)__ 和__四边形 (Quad)<strong>。这些对象本身通常很有用（例如，平面通常用作平坦的地面），但它们也可用于快速创建占位对象和原型以便用于测试。可使用 </strong>GameObject &gt; 3D Object__ 菜单上的相应项将任何这些原始对象添加到场景中。</p>
+
+<h2>立方体</h2>
+
+<figure>
+<img src="../uploads/Main/PrimitiveCube.png" alt="">
+</figure>
+
+<p>这是一个边长为一个单位的简单立方体，经过纹理化后使图像在六个面中的每个面上重复。就目前而言，立方体在大多数游戏中并不是十分常见的对象，但在经过缩放后，可用于创建墙壁、柱子、盒子、台阶和其他类似物品。此外，立方体也是一个方便的占位对象，供程序员在开发期间成品模型尚不可用时使用。例如，可以使用大致正确尺寸的细长盒体对车身进行粗略建模。虽然这种对象不适合最终游戏，但可作为测试汽车控制代码的简单代表性对象。由于立方体的边长为一个单位，因此可通过在旁边添加立方体并比较尺寸来检查导入到场景中的网格的比例。</p>
+
+<h2>球体</h2>
+
+<figure>
+<img src="../uploads/Main/PrimitiveSphere.png" alt="">
+</figure>
+
+<p>这是一个单位直径（即 0.5 单位半径）的球体，经过纹理化后使整个图像环绕一次，让顶部和底部“收缩”到两极。球体显然可用于表示球、行星和飞弹，但半透明球体也可制作一个很好的 GUI 工具来表示效果的半径。</p>
+
+<h2>胶囊体</h2>
+
+<figure>
+<img src="../uploads/Main/PrimitiveCapsule.png" alt="">
+</figure>
+
+<p>胶囊体是一个两端有半球形帽的圆柱体。此对象的直径为一个单位且高度为两个单位（主体为一个单位，两个半球形帽各为半个单位）。胶囊体经过纹理化后使图像恰好环绕一次并收缩到每个半球的顶点。虽然真实世界中没有很多这种形状的对象，但胶囊体是可用于原型设计的占位对象。特别是对于某些任务，圆形对象的物理性质有时优于盒体。</p>
+
+<h2>圆柱体</h2>
+
+<figure>
+<img src="../uploads/Main/PrimitiveCylinder.png" alt="">
+</figure>
+
+<p>这是一个高度为两个单元且直径为一个单元的简单圆柱体，经过纹理化后使图像围绕主体的管状环绕一次，但也分别出现在两个扁平的圆形端。圆柱体非常适合用于制作柱子、杆和轮子，但应该注意碰撞体的形状实际上是一个胶囊体（Unity 中没有原始圆柱体碰撞体）。如果需要将精确的圆柱形碰撞体用于物理目的，应在建模程序中创建适当形状的网格，并附加网格碰撞体。</p>
+
+<h2>平面</h2>
+
+<figure>
+<img src="../uploads/Main/PrimitivePlane.png" alt="">
+</figure>
+
+<p>这是一个边长为十个单位的扁平正方形，位于局部坐标空间的 XZ 平面内。平面经过纹理化后使整个图像在正方形内只出现一次。平面适用于表示大多数平坦表面，例如地板和墙壁。有时也需要使用表面在 GUI 和特殊效果中显示图像或电影。虽然平面_可以_用于这样的目的，但更简单的__四边形__原始对象通常更适合此类任务。</p>
+
+<h2>四边形</h2>
+
+<figure>
+<img src="../uploads/Main/PrimitiveQuad.png" alt="">
+</figure>
+
+<p>四边形原始对象类似于平面，但其边长仅为一个单位，并且表面位于局部坐标空间的 XY 平面中。此外，四边形仅分为两个三角形，而平面包含两百个。在场景对象必须仅用作图像或电影的显示屏幕的情况下，四边形非常有用。简单的 GUI 和信息显示面板可以使用四边形实现，而粒子、精灵和“冒充者”图像（替代远处观看的实体对象）也可以用四边形实现。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit"> 2018–04–25 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetTypes.html"></a></span><div class="tip">常见资源类型</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetPackages.html"></a></span><div class="tip">资源包</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

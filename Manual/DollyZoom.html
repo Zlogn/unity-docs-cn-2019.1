@@ -1,0 +1,284 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="推拉变焦（也称为“伸缩变焦”效果） - Unity Manual">
+<title>推拉变焦（也称为“伸缩变焦”效果） - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/EqualFrustumHeight.png">
+<meta name="description" content="推拉变焦 (Dolly Zoom) 是众所周知的摄像机同时向目标对象移动并将其缩小的视觉效果。结果是对象看起来大小大致相同，但场景中的其他所有对象都改变了视角。巧妙进行推拉变焦可实现突出目标对象的效果，因为它是场景中不会在图像中移位的唯一对象。或者，可特意快速执行变焦以产生迷失方向的效果。">
+<meta property="og:description" content="推拉变焦 (Dolly Zoom) 是众所周知的摄像机同时向目标对象移动并将其缩小的视觉效果。结果是对象看起来大小大致相同，但场景中的其他所有对象都改变了视角。巧妙进行推拉变焦可实现突出目标对象的效果，因为它是场景中不会在图像中移位的唯一对象。或者，可特意快速执行变焦以产生迷失方向的效果。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'DollyZoom';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/DollyZoom.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/DollyZoom.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/DollyZoom.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/DollyZoom.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/DollyZoom.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/DollyZoom.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/DollyZoom.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/DollyZoom.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/DollyZoom.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/DollyZoom.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/DollyZoom.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/DollyZoom.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/DollyZoom.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/DollyZoom.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/DollyZoom.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/DollyZoom.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/DollyZoom.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/DollyZoom.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/DollyZoom.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/DollyZoom.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/DollyZoom.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/DollyZoom.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/DollyZoom.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/DollyZoom.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="CamerasOverview.html">摄像机</a></li>
+<li><a href="CameraTricks.html">摄像机技巧</a></li>
+<li>推拉变焦（也称为“伸缩变焦”效果）</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="FrustumSizeAtDistance.html"></a></span><div class="tip">距摄像机一定距离的视锥体的大小</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="CameraRays.html"></a></span><div class="tip">摄像机射线</div>
+</div>
+</div></div>
+<h1>推拉变焦（也称为“伸缩变焦”效果）</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>推拉变焦 (Dolly Zoom) 是众所周知的摄像机同时向目标对象移动并将其缩小的视觉效果。结果是对象看起来大小大致相同，但场景中的其他所有对象都改变了视角。巧妙进行推拉变焦可实现突出目标对象的效果，因为它是场景中不会在图像中移位的唯一对象。或者，可特意快速执行变焦以产生迷失方向的效果。</p>
+
+<p>刚好垂直装入视锥体内的对象将占据屏幕上看到的整个视图的高度。无论对象与摄像机的距离以及视野如何，都是如此。例如，您可以将摄像机移近对象，但随后加宽视野，使对象仍然刚好装在视锥体的高度内。该特定对象在屏幕上将显示相同的大小，但随着距离和 FOV（视野）的变化，其他所有对象都将改变大小。这就是推拉变焦效果的本质。</p>
+
+<figure>
+<img src="../uploads/Main/EqualFrustumHeight.png" alt="">
+</figure>
+
+<p>通过代码创建该效果实际上就是在变焦开始时将视锥体高度保存在对象的位置。然后，摄像机移动时，找到它的新距离并调整 FOV 以使其在对象位置保持相同高度。通过以下代码可实现这一点：</p>
+
+<pre><code>using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    public Transform target;
+    public Camera camera;
+    
+    private float initHeightAtDist;
+    private bool dzEnabled;
+
+    // 计算距摄像机一定距离的视锥体高度。
+    void FrustumHeightAtDistance(float distance) {
+        return 2.0f * distance * Mathf.Tan(camera.fieldOfView * 0.5f * Mathf.Deg2Rad);
+    }
+
+    // 计算在给定距离处获得给定视锥体高度所需的 FOV。
+    void FOVForHeightAndDistance(float height, float distance) {
+        return 2.0f * Mathf.Atan(height * 0.5f / distance) * Mathf.Rad2Deg;
+    }
+
+    //启动推拉变焦效果。
+    void StartDZ() {
+        var distance = Vector3.Distance(transform.position, target.position);
+        initHeightAtDist = FrustumHeightAtDistance(distance);
+        dzEnabled = true;
+    }
+    
+    // 关闭推拉变焦。
+    void StopDZ() {
+        dzEnabled = false;
+    }
+    
+    void Start() {
+        StartDZ();
+    }
+
+    void Update () {
+        if (dzEnabled) {
+            //测量新距离并相应重新调整 FOV。
+            var currDistance = Vector3.Distance(transform.position, target.position);
+            camera.fieldOfView = FOVForHeightAndDistance(initHeightAtDist, currDistance);
+        }
+        
+        //采用简单控制方式，允许使用向上/向下箭头来移入和移出摄像机。
+        transform.Translate(Input.GetAxis("Vertical") * Vector3.forward * Time.deltaTime * 5f);
+    }
+}
+</code></pre>
+
+<p><em>C# 脚本示例</em></p>
+
+<pre><code>var target: Transform;
+
+private var initHeightAtDist: float;
+private var dzEnabled: boolean;
+
+
+// 计算距摄像机给定距离的视锥体高度。
+function FrustumHeightAtDistance(distance: float) {
+    return 2.0 * distance * Mathf.Tan(camera.fieldOfView * 0.5 * Mathf.Deg2Rad);
+}
+
+
+//计算在给定距离处获得给定视锥体高度所需的 FOV。
+function FOVForHeightAndDistance(height: float, distance: float) {
+    return 2 * Mathf.Atan(height * 0.5 / distance) * Mathf.Rad2Deg;
+}
+
+
+//启动推拉变焦效果。
+function StartDZ() {
+    var distance = Vector3.Distance(transform.position, target.position);
+    initHeightAtDist = FrustumHeightAtDistance(distance);
+    dzEnabled = true;
+}
+
+
+// 关闭推拉变焦。
+function StopDZ() {
+    dzEnabled = false;
+}
+
+
+function Start() {
+    StartDZ();
+}
+
+
+function Update () {
+    if (dzEnabled) {
+        //测量新距离并相应重新调整 FOV。
+        var currDistance = Vector3.Distance(transform.position, target.position);
+        camera.fieldOfView = FOVForHeightAndDistance(initHeightAtDist, currDistance);
+    }
+    
+    //采用简单控制方式，允许使用向上/向下箭头来移入和移出摄像机。
+    transform.Translate(Input.GetAxis("Vertical") * Vector3.forward * Time.deltaTime * 5);
+}
+
+</code></pre>
+
+<p><em>JS 脚本示例</em></p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="FrustumSizeAtDistance.html"></a></span><div class="tip">距摄像机一定距离的视锥体的大小</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="CameraRays.html"></a></span><div class="tip">摄像机射线</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

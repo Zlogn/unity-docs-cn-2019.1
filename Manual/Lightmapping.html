@@ -1,0 +1,262 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="光照贴图：入门 - Unity Manual">
+<title>光照贴图：入门 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/Lightmapping-0.jpg">
+<meta name="description" content="本页将介绍 Unity 中的光照贴图。光照贴图过程将预先计算场景中表面的亮度，并将结果存储在图表或&amp;#8220;光照贴图&amp;#8221;中供以后使用。">
+<meta property="og:description" content="本页将介绍 Unity 中的光照贴图。光照贴图过程将预先计算场景中表面的亮度，并将结果存储在图表或&amp;#8220;光照贴图&amp;#8221;中供以后使用。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'Lightmapping';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Lightmapping.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Lightmapping.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Lightmapping.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Lightmapping.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Lightmapping.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Lightmapping.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Lightmapping.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Lightmapping.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Lightmapping.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Lightmapping.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/Lightmapping.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/Lightmapping.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/Lightmapping.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/Lightmapping.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Lightmapping.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Lightmapping.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Lightmapping.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Lightmapping.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Lightmapping.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Lightmapping.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Lightmapping.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Lightmapping.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Lightmapping.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Lightmapping.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="LightingOverview.html">光照</a></li>
+<li><a href="GIIntro.html">全局光照</a></li>
+<li><a href="Lightmappers.html">Lightmapping</a></li>
+<li><a href="ProgressiveLightmapper.html">Progressive CPU Lightmapper</a></li>
+<li>光照贴图：入门</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ProgressiveLightmapper.html"></a></span><div class="tip">Progressive CPU Lightmapper</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Lightmapping-SeamStitching.html"></a></span><div class="tip">光照贴图接缝缝合</div>
+</div>
+</div></div>
+<h1>光照贴图：入门</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>本页将介绍 Unity 中的光照贴图。光照贴图过程将预先计算场景中表面的亮度，并将结果存储在图表或“光照贴图”中供以后使用。</p>
+
+<p>Unity 使用一个名为<a href="ProgressiveLightmapper.html">渐进光照贴图 (Progressive Lightmapper)</a> 的系统，该系统根据 Unity 中的场景设置来为场景烘焙光照贴图，同时考虑网格、材质、纹理和光源。光照贴图是渲染引擎不可或缺的一部分；在创建光照贴图后，游戏对象会自动使用它们。</p>
+
+<p>有关与特定光照贴图相关的设置的信息，请参阅<a href="GlobalIllumination.html">全局光照</a>的文档。</p>
+
+<h2>准备场景并烘焙光照贴图</h2>
+
+<p>从 Unity Editor 菜单中选择 <strong>Window</strong> &gt; <strong>Lighting</strong> &gt; <strong>Settings</strong> 以打开 Lighting 窗口。确保要应用光照贴图的网格具有适当的 UV 以进行光照贴图。最简单的方法是打开<a href="FBXImporter-Model.html">网格导入设置</a>并启用 <strong>Generate Lightmap UVs</strong> 设置。</p>
+
+<p>接下来，要控制光照贴图的分辨率，请前往 <strong>Lightmapping Settings</strong> 部分并调整 <strong>Lightmap Resolution</strong> 值。</p>
+
+<p><strong>注意：__为了更好地理解如何使用光照贴图纹理像素，请在 </strong>Scene 视图__中找到__Shaded<a href="GIVis.html">调试场景可视化模式</a>，切换到 <strong>Baked Lightmap__，并勾选 </strong>Show Resolution__ 复选框。</p>
+
+<figure>
+<img src="../uploads/Main/Lightmapping-0.jpg" alt="">
+</figure>
+
+<p>在游戏对象的 <strong>Mesh Renderer</strong> 和 <strong>Terrain</strong> 组件中，启用 <strong>Lightmap Static</strong> 属性。这将告知 Unity，这些游戏对象不会移动和变化，因此 Unity 可以将它们添加到光照贴图中。在 <strong>Mesh Renderer</strong> 组件中，还可以使用 <strong>Scale In Lightmap</strong> 参数来调整光照贴图的静态__网格__或__地形__的分辨率。</p>
+
+<p>此外，还可在 <a href="LightingExplorer.html">Light Explorer</a> 中调整光源设置。</p>
+
+<figure>
+<img src="../uploads/Main/Lightmapping-1.jpg" alt="">
+</figure>
+
+<p>要为场景生成光照贴图，请执行以下操作：</p>
+
+<p>1.在 <a href="GlobalIllumination.html">Lighting 窗口</a>中的 <strong>Scene</strong> 选项卡底部，单击 <strong>Generate Lighting__（或者确保勾选了 </strong>Auto Generate__）。</p>
+
+<p>2.Unity Editor 状态栏中将显示一个进度条（在右下角）。</p>
+
+<p>3.烘焙完成后，您可以在 Lighting 窗口的 <strong>Global Maps</strong> 和 <strong>Object Maps</strong> 选项卡中查看所有烘焙光照贴图。</p>
+
+<p>当光照贴图完成时，Unity 的 Scene 和 Game 视图会自动更新。</p>
+
+<figure>
+<img src="../uploads/Main/Lightmapping-2.jpg" alt="">
+</figure>
+
+<p>要查看网格的 UV 图表，请单击启用了 <strong>Lightmap Static</strong> 的游戏对象，然后导航到 Inspector 窗口并选择 <strong>Object Maps</strong> 选项卡。在此处，您可以切换不同的光照贴图可视化模式。手动生成光照时，Unity 将向 <a href="SpecialFolders.html">Assets</a> 文件夹中添加<a href="LightmapSnapshot.html">光照数据资源</a>、<a href="GlobalIllumination.html">烘焙光照贴图</a>和<a href="ReflectionProbes.html">反射探针</a>。</p>
+
+<h2>调整烘焙设置</h2>
+
+<p>场景的最终外观取决于光照设置和烘焙设置。我们来看一些可以提高光照质量的基本设置的示例。</p>
+
+<p>样本计数：
+渐进光照贴图生成由单个光线产生的颜色值以便消除噪点。这些颜色值称为样本。有两种设置可控制渐进光照贴图用于直接和间接光照计算的样本数：__Direct Samples__ 和 <strong>Indirect Samples</strong>。要找到这两个设置，请打开 Lighting 窗口 (<strong>Window</strong> &gt; <strong>Lighting</strong> &gt; <strong>Settings</strong>)，然后选择 <strong>Lightmapping Settings</strong> &gt; <strong>Lightmapper</strong>。</p>
+
+<p>较高的采样值可降低噪点并可提高光照贴图的质量，但也会增加烘焙时间。下面的图像显示了更多样本如何在不使用滤波的情况下提高光照贴图的质量，并产生噪点较小的结果。</p>
+
+<figure>
+<img src="../uploads/Main/Lightmapping-3.jpg" alt="使用 10 个样本的场景">
+<figcaption>使用 10 个样本的场景</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/Lightmapping-4.jpg" alt="使用 100 个样本的场景">
+<figcaption>使用 100 个样本的场景</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/Lightmapping-5.jpg" alt="使用 1000 个样本的场景">
+<figcaption>使用 1000 个样本的场景</figcaption>
+</figure>
+
+<h3>环境光照</h3>
+
+<p>除了所有<a href="LightSources.html">光源</a>之外，<a href="GlobalIllumination.html#Environment">环境光照</a>也会影响全局光照。您可以分配一个自定义天空盒材质 (Skybox Material) 来代替默认的__程序化天空盒 (Procedural Skybox)__ 并调整强度。下面的图像分别显示了在包含和不含__环境光照__的场景中光照如何变化，并提供了较柔和的结果。两个场景中的光源设置相同。Unity 在 <a href="https://assetstore.unity.com/packages/essentials/beta-projects/unity-hdri-pack-72511">Asset Store</a> 中提供了一些自定义的 HDRI 资源。</p>
+
+<figure>
+<img src="../uploads/Main/Lightmapping-6.jpg" alt="">
+</figure>
+
+<h3>滤波</h3>
+
+<p>滤波可以模糊噪点效果。渐进光照贴图提供了两种不同类型的滤波：__Gaussian__ 和 <strong>A-Trous</strong>。启用 <strong>Advanced</strong> 设置后，可单独对 <strong>Direct</strong>、<strong>Indirect __ 和 </strong>Ambient Occlusion__ 应用这些过滤器。有关更多信息，请参阅有关<a href="ProgressiveLightmapper.html">渐进光照贴图</a>的文档。</p>
+
+<figure>
+<img src="../uploads/Main/Lightmapping-7.jpg" alt="">
+</figure>
+
+<hr>
+
+<p><span class="page-edit"> 2018–03–28 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p>
+
+<p><span class="page-history">在 <a href="https://docs.unity3d.com/2018.1/Documentation/Manual/30_search.html?q=newin20181">2018.1</a> 版中添加了渐进光照贴图 <span class="search-words">NewIn20181</span></span></p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ProgressiveLightmapper.html"></a></span><div class="tip">Progressive CPU Lightmapper</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Lightmapping-SeamStitching.html"></a></span><div class="tip">光照贴图接缝缝合</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Gizmos 菜单 - Unity Manual">
+<title>Gizmos 菜单 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/GizmosMenu1.png">
+<meta name="description" content="Scene 视图和 Game 视图都有 Gizmos 菜单。单击 Scene 视图或 Game 视图的工具栏中的 Gizmos 按钮，即可访问 Gizmos 菜单。">
+<meta property="og:description" content="Scene 视图和 Game 视图都有 Gizmos 菜单。单击 Scene 视图或 Game 视图的工具栏中的 Gizmos 按钮，即可访问 Gizmos 菜单。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'GizmosMenu';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/GizmosMenu.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/GizmosMenu.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/GizmosMenu.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/GizmosMenu.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/GizmosMenu.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/GizmosMenu.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/GizmosMenu.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/GizmosMenu.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/GizmosMenu.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/GizmosMenu.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/GizmosMenu.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/GizmosMenu.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/GizmosMenu.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/GizmosMenu.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/GizmosMenu.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/GizmosMenu.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/GizmosMenu.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/GizmosMenu.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/GizmosMenu.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/GizmosMenu.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/GizmosMenu.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/GizmosMenu.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/GizmosMenu.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/GizmosMenu.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="UsingTheEditor.html">The Main Windows</a></li>
+<li><a href="UsingTheSceneView.html">The Scene view</a></li>
+<li>Gizmos 菜单</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SceneViewCamera.html"></a></span><div class="tip">Scene view Camera</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="GameView.html"></a></span><div class="tip">Game 视图</div>
+</div>
+</div></div>
+<h1>Gizmos 菜单</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><a href="UsingTheSceneView.html">Scene 视图</a>和 <a href="GameView.html">Game 视图</a>都有 <strong>Gizmos</strong> 菜单。单击 Scene 视图或 Game 视图的工具栏中的 <strong>Gizmos</strong> 按钮，即可访问 <strong>Gizmos</strong> 菜单。</p>
+
+<figure>
+<img src="../uploads/Main/GizmosMenu1.png" alt="Scene 视图中的 Gizmos 按钮">
+<figcaption>Scene 视图中的 <strong>Gizmos</strong> 按钮</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/GizmosMenu.png" alt="Scene 视图或 Game 视图窗口之上的 Gizmos 菜单">
+<figcaption>Scene 视图或 Game 视图窗口之上的 Gizmos 菜单</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>3D Icons</strong></td>
+	<td style="text-align:left;">
+<strong>3D Icons</strong> 复选框控制是否在 Scene 视图中由 Editor 绘制 3D 组件图标（例如光源和摄像机的图标）。<br><br>勾选 <strong>3D Icons</strong> 复选框后，组件图标由 Editor 根据组件与摄像机的距离进行缩放，并被场景中的游戏对象遮挡。可使用滑动条来控制外观的总体大小。未勾选 <strong>3D Icons</strong> 复选框时，以固定大小绘制组件图标，且这些图标始终绘制在 Scene 视图中所有游戏对象之上。<br><br>请参阅下面的<a href="#GizmosIcons">辅助图标和图标</a>以查看图像以及更多信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Show Grid</strong></td>
+	<td style="text-align:left;">
+<strong>Show Grid</strong> 复选框用于在 Scene 视图中打开（选中）和关闭（取消选中）标准场景测量网格。要更改网格的颜色，请访问 <strong>Unity</strong> &gt; <strong>Preferences</strong> &gt; <strong>Colors__，然后更改 </strong>Grid__ 设置。<br><br>此选项仅在 Scene 视图的 Gizmos 菜单中可用；无法在 Game 视图的 Gizmos 菜单中启用该选项。<br><br>请参阅下面的 <a href="#ShowGrid">Show Grid</a> 以查看图像以及更多信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Selection Outline</strong></td>
+	<td style="text-align:left;">Check <strong>Selection Outline</strong> to display selected GameObjects with a colored outline, and their children with a different colored outline. By default, Unity highlights the selected GameObject in orange, and child GameObjects in blue.<br><br><strong>NOTE:</strong> This option is only available in the Scene view Gizmos menu; you cannot enable it in the Game view Gizmos menu. <br><br>See <a href="#SelectionOutlineWire">Selection Outline and Selection Wire</a>, below, for images and further information.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Selection Wire</strong></td>
+	<td style="text-align:left;">选中 <strong>Selection Wire</strong> 可以在显示所选的游戏对象时使其线框网格可见。要更改 Selection Wire 的颜色，请选择 <strong>Unity</strong> &gt; <strong>Preferences</strong> &gt; <strong>Colors__，然后更改 </strong>Selected Wireframe__ 设置。<br><br>此选项仅在 Scene 视图的 Gizmos 菜单中可用；无法在 Game 视图的 Gizmos 菜单中启用该选项。<br><br>请参阅下面的 <a href="#SelectionOutlineWire">Selection Outline 和 Selection Wire</a> 以查看图像以及更多信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Recently Changed</strong></td>
+	<td style="text-align:left;">Controls the visibility of the icons and gizmos for components and scripts that you modified recently.<br><br>This section appears the first time you change one or more items, and updates after subsequent changes.<br><br>For more information, see <a href="#Components">Built-in components, scripts, and recently changed items</a>, below.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Scripts</strong></td>
+	<td style="text-align:left;">Controls the visibility of the icons and gizmos for scripts in the Scene.<br><br>This section appears only when your Scene uses scripts that meet specific criteria.<br><br>See <a href="#Components">Built-in components, scripts, and recently changed items</a>, below, for further information.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Built-in Components</strong></td>
+	<td style="text-align:left;">Controls the visibility of the icons and gizmos for all component types that have an icon or gizmo.<br><br>See <a href="#Components">Built-in components, scripts, and recently changed items</a>, below, for further information.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="GizmosIcons"></a> </p>
+
+<h2>辅助图标和图标</h2>
+
+<h3>辅助图标</h3>
+
+<p>__辅助图标__是与场景中的游戏对象相关联的图形。有些辅助图标仅在选择游戏对象时才会显示，而其他辅助图标由 Editor 显示（无论选择什么游戏对象）。这些辅助图标通常是线框，使用代码而不是位图图形来绘制，还可以交互。<strong>摄像机</strong>辅助图标和<strong>光线方向</strong>辅助图标（如下图所示）是内置辅助图标的两个示例；还可以使用脚本来创建自己的辅助图标。请参阅<a href="UnderstandingFrustum.html">了解视锥体</a>相关文档以了解有关摄像机的更多信息。</p>
+
+<p>有些辅助图标是被动图形覆盖层，显示来供参考（例如，<strong>光线方向</strong>辅助图标用于显示光线的方向）。其他辅助图标具有交互性，例如<a href="class-AudioSource.html">音频源 (AudioSource)</a> <strong>球形范围</strong>辅助图标，可以单击并拖动此辅助图标来调整音频源的最大范围。</p>
+
+<p><strong>移动</strong>、<strong>缩放</strong>、__旋转__和__变换__工具也是交互式辅助图标。请参阅关于<a href="PositioningGameObjects.html">游戏对象定位</a>的文档以了解关于这些工具的更多信息。</p>
+
+<figure>
+<img src="../uploads/Main/IconAndGizmoForLightAndCamera.png" alt="摄像机辅助图标和光源辅助图标。这些辅助图标仅在被选中时才可见。">
+<figcaption>摄像机辅助图标和光源辅助图标。这些辅助图标仅在被选中时才可见。</figcaption>
+</figure>
+
+<p>请参阅 <a href="../ScriptReference/MonoBehaviour.OnDrawGizmos.html">OnDrawGizmos</a> 函数的脚本参考页面以了解关于在脚本中实现自定义辅助图标的更多信息。</p>
+
+<h3>图标</h3>
+
+<p>可以在 Game 视图或 Scene 视图中显示__图标__。图标是扁平、公告牌式覆盖层，可以用来清楚地指示在处理游戏时游戏对象在游戏中的位置。<strong>摄像机</strong>图标和<strong>光源</strong>图标便是内置图标的示例；还可以将您自己的图标分配给游戏对象或各个脚本（请参阅关于<a href="AssigningIcons.html">分配图标</a>的文档以了解如何执行此操作）。</p>
+
+<figure>
+<img src="../uploads/Main/GizmosMenu2.png" alt="摄像机和光源的内置图标">
+<figcaption>摄像机和光源的内置图标</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/GizmoMenu2Dvs3Dicons.jpg" alt="左：3D 模式下的图标。右：2D 模式下的图标。">
+<figcaption><strong>左</strong>：3D 模式下的图标。<strong>右</strong>：2D 模式下的图标。</figcaption>
+</figure>
+
+<p><a name="ShowGrid"></a> </p>
+
+<h2>Show Grid</h2>
+
+<p><strong>Show Grid</strong> 功能可在场景平面上启用网格。以下图像显示了网格在 Scene 视图中的显示情况：</p>
+
+<figure>
+<img src="../uploads/Main/SceneViewGridWithAndWithout.jpg" alt="左：已启用 Scene 视图网格。右：已禁用 Scene 视图网格。">
+<figcaption><strong>左</strong>：已启用 Scene 视图网格。<strong>右</strong>：已禁用 Scene 视图网格。</figcaption>
+</figure>
+
+<p>要更改网格的颜色，请选择 <strong>Unity</strong> &gt; <strong>Preferences</strong> &gt; <strong>Colors__，然后更改 </strong>Grid__ 设置。在此图像中，Scene 视图网格为深蓝色，因此在浅色地板上更显眼：</p>
+
+<figure>
+<img src="../uploads/Main/SceneViewGridCustomColor.jpg" alt="">
+</figure>
+
+<p><a name="SelectionOutlineWire"></a> </p>
+
+<h2>Selection Outline 和 Selection Wire</h2>
+
+<h3>Selection Outline</h3>
+
+<p>When <strong>Selection Outline</strong> is enabled, an outline appears around selected GameObjects and their child GameObjects. By default, Unity outlines selected GameObjects in orange, and child GameObjects in blue. You can change these colors in the Unity preferences (see <a href="#SelectionColors">Selection Colors</a>, below).</p>
+
+<figure>
+<img src="../uploads/Main/GameObjectSelectedOutline.jpg" alt="Selecting a GameObject (the large ladybug) outlines it in orange, and outlines its child GameObjects (the smaller ladybugs) in blue.">
+<figcaption>Selecting a GameObject (the large ladybug) outlines it in orange, and outlines its child GameObjects (the smaller ladybugs) in blue.</figcaption>
+</figure>
+
+<p>When you select a GameObject, Unity outlines all of its child GameObjects (and their child GameObjects, and so on), but does not outline parent GameObjects (or their parent GameObjects, and so on).</p>
+
+<figure>
+<img src="../uploads/Main/GameObjectSelectedOutlineParentChild.jpg" alt="Selecting the medium ladybug highlights it in orange, and highlights its child GameObject (the small ladybug) in blue, but does not highlight its parent GameObject (the large ladybug). ">
+<figcaption>Selecting the medium ladybug highlights it in orange, and highlights its child GameObject (the small ladybug) in blue, but does not highlight its parent GameObject (the large ladybug).
+</figcaption>
+</figure>
+
+<p>If selected GameObjects extend beyond the edges of the Scene view, the selection outline runs along the edge of the window:</p>
+
+<figure>
+<img src="../uploads/Main/GameObjectSelectedBeyondEdges.png" alt="">
+</figure>
+
+<h3>Selection Wire</h3>
+
+<p>启用 <strong>Selection Wire</strong> 后，在 Scene 视图或 Hierarchy 窗口中选择游戏对象时，将在 Scene 视图中显示该游戏对象的线框网格：</p>
+
+<figure>
+<img src="../uploads/Main/GameObjectSelectedWire.jpg" alt="">
+</figure>
+
+<p><a name="SelectionColors"></a></p>
+
+<h3>选择颜色</h3>
+
+<p>You can set custom colors for selection wireframes. </p>
+
+<ol>
+<li>Go to <strong>Unity &gt; Preferences</strong> (macOS) or <strong>Edit &gt; Preferences</strong> (Windows) to open the <a href="Preferences.html">Preferences</a> editor.</li>
+<li>On the colors tab, change one or more of the following colors:
+
+<ul>
+<li>(A) <strong>Selected Children Outline</strong>: outline color for selected GameObjects’ children.</li>
+<li>(B) <strong>Selected Outline</strong>: outline color for selected GameObjects.</li>
+<li>(C) <strong>Wireframe Selected</strong>: outline color for selected GameObjects’ wireframes.</li>
+</ul>
+</li>
+</ol>
+
+<figure>
+<img src="../uploads/Main/GameObjectSelectedCustomColors.jpg" alt="">
+</figure>
+
+<p><a name="Components"></a> </p>
+
+<h2>Built-in components, scripts, and recently changed items</h2>
+
+<p>Use the list in the <strong>Gizmos</strong> menu to control the visibility of icons and gizmos for various components. The list is divided into sections:</p>
+
+<figure>
+<img src="../uploads/Main/GizmosMenuAll.png" alt="The Gizmos menu, displaying items with custom icons and some recently modified items">
+<figcaption>The Gizmos menu, displaying items with custom icons and some recently modified items</figcaption>
+</figure>
+
+<p><strong>A.</strong> The <strong>Recently Changed</strong> section controls the visibility of the icons and gizmos for items that you’ve modified recently. It appears the first time you change one or more items. Unity updates the list after subsequent changes.</p>
+
+<p><strong>B.</strong> The <strong>Scripts</strong> section controls the visibility of the icons and gizmos for scripts that:</p>
+
+<ul>
+<li><p>Have an icon assigned to them (see documentation on <a href="AssigningIcons.html">Assigning icons</a>).</p></li>
+<li><p>Implement the <a href="../ScriptReference/MonoBehaviour.OnDrawGizmos.html">OnDrawGizmos</a> function.</p></li>
+<li><p>Implement the <a href="../ScriptReference/MonoBehaviour.OnDrawGizmosSelected.html">OnDrawGizmosSelected</a> function.</p></li>
+</ul>
+
+<p>This section appears when your Scene contains one or more scripts that meet the above criteria.</p>
+
+<p><strong>C.</strong> The <strong>Built-in Components</strong> section controls the visibility of the icons and gizmos for all component types that have an icon or gizmo.</p>
+
+<p>Built-in component types that do not have an icon or gizmo shown in the Scene view (for example, Rigidbody) are not listed here.</p>
+
+<h3>Toggling icon visibility</h3>
+
+<p>The <strong>icon</strong> column shows or hides the icons for each component type. Full-color icons are displayed in the main Scene view window, faded icons are not.</p>
+
+<figure>
+<img src="../uploads/Main/GizmosFadedIcon.png" alt="The Light icon is faded, indicating that the Editor does not display light icons in the Scene view. The Camera icon is full-color, indicating that the Editor does display camera icons in the Scene view. ">
+<figcaption>The <strong>Light</strong> icon is faded, indicating that the Editor does not display light icons in the Scene view. The <strong>Camera</strong> icon is full-color, indicating that the Editor does display camera icons in the Scene view.
+</figcaption>
+</figure>
+
+<p>To toggle an icon’s visibility in the Scene view, click any icon in the <strong>icon</strong> column.</p>
+
+<p><strong>Note:</strong> If an item in the list has a gizmo but no icon, the <strong>icon</strong> column for that item is empty.</p>
+
+<h3>Changing script icons</h3>
+
+<p>Scripts with custom icons show a small drop-down menu arrow in the <strong>icon</strong> column. To change a custom icon, click the arrow to open the <a href="AssigningIcons.html">Select Icon</a> menu.</p>
+
+<figure>
+<img src="../uploads/Main/GizmosMenuIconsMenu.png" alt="">
+</figure>
+
+<h3>Toggling gizmo visibility</h3>
+
+<p>To control whether the Editor draws gizmo graphics for a particular component type (for example, a <strong>Collider’s</strong> wireframe gizmo or a <strong>Camera’s</strong> <a href="UnderstandingFrustum.html">view frustum</a> gizmo) or script, use the checkboxes in the <strong>Gizmo</strong> column.</p>
+
+<ul>
+<li><p>When a checkbox is checked, the Editor draws gizmos for that component type.</p></li>
+<li><p>When a checkbox is cleared, the Editor does not draw gizmos for that component type.</p></li>
+</ul>
+
+<p><strong>Note:</strong> If an item in the list has an icon but no gizmo, the <strong>Gizmo</strong> column for that item is empty.</p>
+
+<p>To toggle gizmo visibility for an entire section (all <strong>Built-in Components</strong>, all <strong>Scripts</strong>, and so on), use the checkboxes next to the section names.</p>
+
+<figure>
+<img src="../uploads/Main/GizmosMenuToggleSection.png" alt="The Built-in Components checkbox toggles gizmo visibility for every type of component listed in that section">
+<figcaption>The <strong>Built-in Components</strong> checkbox toggles gizmo visibility for every type of component listed in that section</figcaption>
+</figure>
+
+<p>When the checkbox displays a square, gizmo visibility is toggled on for some item types in the section, and off for others.</p>
+
+<figure>
+<img src="../uploads/Main/GizmosMenuToggleMix.png" alt="">
+</figure>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2019–03–11 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Selection outline for child GameObjects added in <a href="https://docs.unity3d.com/2018.3/Documentation/Manual/30_search.html?q=newin20183">2018.3</a> <span class="search-words">NewIn20183</span></span></p></li>
+<li><p><span class="page-history">Gizmo menu option to toggle Gizmo visibility for all components in a section added in <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/30_search.html?q=newin20191">2019.1</a> <span class="search-words">NewIn20191</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SceneViewCamera.html"></a></span><div class="tip">Scene view Camera</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="GameView.html"></a></span><div class="tip">Game 视图</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

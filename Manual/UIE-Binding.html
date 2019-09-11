@@ -1,0 +1,597 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Bindings - Unity Manual">
+<title>Bindings - Unity Manual</title>
+<meta name="description" content="The purpose of bindings is to synchronize properties within objects to the visible UI.
+A binding refers to the link between the property and the visual control that modifies it.">
+<meta property="og:description" content="The purpose of bindings is to synchronize properties within objects to the visible UI.
+A binding refers to the link between the property and the visual control that modifies it.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UIE-Binding';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UIE-Binding.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UIE-Binding.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UIE-Binding.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UIE-Binding.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UIE-Binding.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UIE-Binding.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UIE-Binding.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UIE-Binding.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UIE-Binding.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UIE-Binding.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UIE-Binding.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UIE-Binding.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UIE-Binding.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UIE-Binding.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UIE-Binding.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UIE-Binding.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UIE-Binding.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UIE-Binding.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UIE-Binding.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UIE-Binding.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UIE-Binding.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UIE-Binding.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UIE-Binding.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UIE-Binding.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UIToolkits.html">UI</a></li>
+<li><a href="UIElements.html">UIElements Developer Guide</a></li>
+<li>Bindings</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIE-Controls.html"></a></span><div class="tip">Built-in Controls</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UIE-IMGUI.html"></a></span><div class="tip">Supporting IMGUI</div>
+</div>
+</div></div>
+<h1>Bindings</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The purpose of bindings is to synchronize properties within objects to the visible UI.
+A <em>binding</em> refers to the link between the property and the visual control that modifies it.</p>
+
+<p>Binding is done between an object and any UIElement that either derives from BindableElement or implements the IBindable interface.</p>
+
+<p>From the <code>UnityEditor.UIElements</code> namespace:</p>
+
+<p><strong>Base Class:</strong></p>
+
+<ul>
+<li>BaseCompositeField</li>
+<li>BasePopupField</li>
+<li>CompoundFields</li>
+<li>TextValueField</li>
+</ul>
+
+<p><strong>Controls:</strong></p>
+
+<ul>
+<li>InspectorElement</li>
+<li>ProgressBar</li>
+<li>BoundsField</li>
+<li>BoundsIntField</li>
+<li>ColorField</li>
+<li>CurveField</li>
+<li>DoubleField</li>
+<li>EnumField</li>
+<li>FloatField</li>
+<li>GradientField</li>
+<li>IntegerField</li>
+<li>LayerField</li>
+<li>LayerMaskField</li>
+<li>LongField</li>
+<li>MaskField</li>
+<li>ObjectField</li>
+<li>PopupField</li>
+<li>PropertyControl</li>
+<li>RectField</li>
+<li>RectIntField</li>
+<li>TagField</li>
+<li>Vector2Field</li>
+<li>Vector2IntField</li>
+<li>Vector3Field</li>
+<li>Vector3IntField</li>
+<li>Vector4Field</li>
+</ul>
+
+<p>From the <code>UnityEngine.UIElements</code> namespace:</p>
+
+<p><strong>Base Class</strong></p>
+
+<ul>
+<li>BaseField</li>
+<li>BaseSlider</li>
+<li>TextInputBaseField</li>
+<li>TemplateContainer</li>
+</ul>
+
+<p><strong>Controls</strong></p>
+
+<ul>
+<li>Foldout</li>
+<li>MinMaxSlider</li>
+<li>Slider</li>
+<li>SliderInt</li>
+<li>TextField</li>
+<li>Toggle</li>
+</ul>
+
+<p>Binding is done by following these steps while using a Control from one of the namespaces listed above.</p>
+
+<ol>
+<li>In the Control, specify the bindingPath from the IBindable interface so the UI knows which property to bind. You can do this in C# or in UXML. An example of each is provided later in this topic.</li>
+<li>Create a SerializedObject for the object being bound.</li>
+<li>Bind this object to the UIElements Control or one of its parents.</li>
+</ol>
+
+<h3>Binding with C#</h3>
+
+<p>The following code snippet shows how to create a binding with C# code. To use this snippet, save this example as a C# file in an editor folder, in your project. Name the C# file <code>SimpleBindingExample.cs</code>. </p>
+
+<p>The contents of <code>SimpleBindingExample.cs</code>:</p>
+
+<pre><code class="c#">using UnityEditor;
+using UnityEngine;
+using UnityEditor.UIElements;
+using UnityEngine.UIElements;
+
+namespace UIElementsExamples
+{
+   public class SimpleBindingExample : EditorWindow
+   {
+       TextField m_ObjectNameBinding;
+      
+       [MenuItem("Window/UIElementsExamples/Simple Binding Example")]
+       public static void ShowDefaultWindow()
+       {
+           var wnd = GetWindow&lt;SimpleBindingExample&gt;();
+           wnd.titleContent = new GUIContent("Simple Binding");
+       }
+    
+       public void OnEnable()
+       {
+           var root = this.rootVisualElement;
+           m_ObjectNameBinding = new TextField("Object Name Binding");
+           m_ObjectNameBinding.bindingPath = "m_Name";
+           root.Add(m_ObjectNameBinding);
+           OnSelectionChange();
+       }
+    
+       public void OnSelectionChange()
+       {
+           GameObject selectedObject = Selection.activeObject as GameObject;
+           if (selectedObject != null)
+           {
+               // Create serialization object
+               SerializedObject so = new SerializedObject(selectedObject);
+               // Bind it to the root of the hierarchy. It will find the right object to bind to...
+               rootVisualElement.Bind(so);
+    
+               // ... or alternatively you can also bind it to the TextField itself.
+               // m_ObjectNameBinding.Bind(so);
+           }
+           else
+           {
+               // Unbind the object from the actual visual element
+               rootVisualElement.Unbind();
+              
+               // m_ObjectNameBinding.Unbind();
+              
+               // Clear the TextField after the binding is removed
+               m_ObjectNameBinding.value = "";
+           }
+       }
+   }
+}
+</code></pre>
+
+<p>In Unity, select <strong>Window</strong> &gt; <strong>UIElementsExamples</strong> &gt; <strong>Simple Binding Example</strong>. You can use this window to select any GameObject in your scene and modify its name with the TextField shown.</p>
+
+<h3>Binding with UXML</h3>
+
+<p>This section shows how to use binding through the UXML hierarchy set-up.</p>
+
+<p>In UXML, the attribute <code>binding-path</code> is defined in the TextField control. This is what binds the control to the effective property of the object.</p>
+
+<p>The contents of <code>SimpleBindingExample.uxml</code>:</p>
+
+<pre><code class="xml">&lt;UXML xmlns:ui="UnityEngine.UIElements"&gt;
+ &lt;ui:VisualElement name="top-element"&gt;
+   &lt;ui:Label name="top-label" text="UXML-Defined Simple Binding"/&gt;
+   &lt;ui:TextField name="GameObjectName" label="Name" text="" binding-path="m_Name"/&gt;
+ &lt;/ui:VisualElement&gt;
+&lt;/UXML&gt;
+</code></pre>
+
+<p>The contents of <code>SimpleBindingExample.cs</code>:</p>
+
+<pre><code class="c#">using UnityEditor;
+using UnityEngine;
+using UnityEditor.UIElements;
+using UnityEngine.UIElements;
+
+
+namespace UIElementsExamples
+{
+   public class SimpleBindingExampleUXML : EditorWindow
+   {
+       [MenuItem("Window/UIElementsExamples/Simple Binding Example UXML")]
+       public static void ShowDefaultWindow()
+       {
+           var wnd = GetWindow&lt;SimpleBindingExampleUXML&gt;();
+           wnd.titleContent = new GUIContent("Simple Binding UXML");
+       }
+
+       public void OnEnable()
+       {
+           var root = this.rootVisualElement;
+           var visualTree = AssetDatabase.LoadAssetAtPath&lt;VisualTreeAsset&gt;("Assets/Editor/SimpleBindingExample.uxml");
+           visualTree.CloneTree(root);
+           OnSelectionChange();
+       }
+    
+       public void OnSelectionChange()
+       {
+           GameObject selectedObject = Selection.activeObject as GameObject;
+           if (selectedObject != null)
+           {
+               // Create serialization object
+               SerializedObject so = new SerializedObject(selectedObject);
+               // Bind it to the root of the hierarchy. It will find the right object to bind to...
+               rootVisualElement.Bind(so);
+           }
+           else
+           {
+               // Unbind the object from the actual visual element
+               rootVisualElement.Unbind();
+              
+               // Clear the TextField after the binding is removed
+               // (this code is not safe if the Q() returns null)
+               rootVisualElement.Q&lt;TextField&gt;("GameObjectName").value = "";
+           }
+       }
+   }
+}
+</code></pre>
+
+<h2>Using bindings within InspectorElement</h2>
+
+<p>An <code>InspectorElement</code> is the UIElement counterpart of an inspector that is meant a specific type of Unity object. Using an <code>InspectorElement</code> to inspect objects gives the following advantages :</p>
+
+<ul>
+<li>Creates the UI.</li>
+<li>Automatically binds objects and the UI.</li>
+</ul>
+
+<p>Another simple binding example, found under <code>Assets/Editor/SimpleBindingExample.cs</code>, provides a usage example and an overview of the process.</p>
+
+<p>The contents of <code>Assets/Editor/SimpleBindingExample.cs</code>:</p>
+
+<pre><code>using UnityEditor;
+using UnityEngine;
+using UnityEditor.UIElements;
+
+namespace UIElementsExamples
+{
+   public class SimpleBindingExampleUXML : EditorWindow
+   {
+       [MenuItem("Window/UIElementsExamples/Simple Binding Example UXML")]
+       public static void ShowDefaultWindow()
+       {
+           var wnd = GetWindow&lt;SimpleBindingExampleUXML&gt;();
+           wnd.titleContent = new GUIContent("Simple Binding UXML");
+       }
+
+       TankScript m_Tank;
+       public void OnEnable()
+       {
+           m_Tank = GameObject.FindObjectOfType&lt;TankScript&gt;();
+           if (m_Tank == null)
+               return;
+    
+           var inspector = new InspectorElement(m_Tank);
+           rootVisualElement.Add(inspector);
+       }
+   }
+}
+</code></pre>
+
+<p>This code references the <code>TankScript</code> script and uses the <code>InspectorElement</code>.
+The <code>TankScript</code> script is an example of a MonoBehaviour assigned to a GameObject.</p>
+
+<p>The contents of <code>Assets/TankScript.cs</code>:</p>
+
+<pre><code>using UnityEngine;
+
+[ExecuteInEditMode]
+public class TankScript : MonoBehaviour
+{
+   public string tankName = "Tank";
+   public float tankSize = 1;
+
+   private void Update()
+   {
+       gameObject.name = tankName;
+       gameObject.transform.localScale = new Vector3(tankSize, tankSize, tankSize);
+   }
+}
+</code></pre>
+
+<p>The InspectorElement is customized with a specific UI. This is done with the <code>TankEditor</code> script. The <code>TankEditor</code>script defines a custom editor for the <code>TankScript</code> type. The <code>TankEditor</code>script also uses a UXML file for the hierarchy and a USS file to style the inspector.</p>
+
+<p>The contents of <code>Assets/Editor/TankEditor.cs</code>:</p>
+
+<pre><code>using UnityEditor;
+using UnityEngine;
+using UnityEngine.UIElements;
+
+[CustomEditor(typeof(TankScript))]
+public class TankEditor : Editor
+{
+   public override VisualElement CreateInspectorGUI()
+   {
+       var visualTree = Resources.Load("tank_inspector_uxml") as VisualTreeAsset;
+       var uxmlVE = visualTree.CloneTree();
+uxmlVE.styleSheets.Add(AssetDatabase.LoadAssetAtPath&lt;StyleSheet&gt;("Assets/Resources/tank_inspector_styles.uss"));
+      return uxmlVE;
+   }
+}
+</code></pre>
+
+<p>The contents of <code>Assets/Resources/tank_inspector_uxml.uxml</code>:</p>
+
+<pre><code>&lt;UXML xmlns:ui="UnityEngine.UIElements" xmlns:ue="UnityEditor.UIElements"&gt;
+   &lt;ui:VisualElement name="row" class="container"&gt;
+       &lt;ui:Label text="Tank Script - Custom Inspector" /&gt;
+       &lt;ue:PropertyField binding-path="tankName" name="tank-name-field" /&gt;
+       &lt;ue:PropertyField binding-path="tankSize" name="tank-size-field" /&gt;
+   &lt;/ui:VisualElement&gt;
+&lt;/UXML&gt;
+</code></pre>
+
+<p>The UXML file, <code>tank_inspector_uxml.uxml</code> specifies the binding. Specifically, each <code>binding-path</code> attribute, for each the <code>PropertyFields</code> tag, is set to the property to bind. What element is shown in the UI is based on the type of each bound property.</p>
+
+<p>The contents of <code>Assets/Resources/tank_inspector_styles.uss</code>:</p>
+
+<pre><code>.container {
+   background-color: rgb(80, 80, 80);
+   flex-direction: column;
+}
+Label {
+   background-color: rgb(80, 80, 80);
+}
+TextField:hover {
+   background-color: rgb(255, 255, 0);
+}
+FloatField {
+   background-color: rgb(0, 0, 255);
+}
+</code></pre>
+
+<p>The USS file, <code>tank_inspector_styles.uss</code>, defines the style of each element.</p>
+
+<p>The following table lists the fields supported by the PropertyField. Each field includes its data type. </p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Field</th>
+	<th style="text-align:left;">Type</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">BoundsField</td>
+	<td style="text-align:left;">Bounds</td>
+</tr>
+<tr>
+	<td style="text-align:left;">BoundsIntField</td>
+	<td style="text-align:left;">BoundsInt</td>
+</tr>
+<tr>
+	<td style="text-align:left;">ColorField</td>
+	<td style="text-align:left;">Color</td>
+</tr>
+<tr>
+	<td style="text-align:left;">CurveField</td>
+	<td style="text-align:left;">AnimationCurve</td>
+</tr>
+<tr>
+	<td style="text-align:left;">FloatField</td>
+	<td style="text-align:left;">浮点精度</td>
+</tr>
+<tr>
+	<td style="text-align:left;">GradientField</td>
+	<td style="text-align:left;">Gradient</td>
+</tr>
+<tr>
+	<td style="text-align:left;">IntegerField</td>
+	<td style="text-align:left;">int</td>
+</tr>
+<tr>
+	<td style="text-align:left;">IntegerField</td>
+	<td style="text-align:left;">int, for the ArraySize</td>
+</tr>
+<tr>
+	<td style="text-align:left;">LayerMaskField</td>
+	<td style="text-align:left;">unit</td>
+</tr>
+<tr>
+	<td style="text-align:left;">ObjectField</td>
+	<td style="text-align:left;">UnityEngine.Object</td>
+</tr>
+<tr>
+	<td style="text-align:left;">PopupField&lt;string&gt;</td>
+	<td style="text-align:left;">Enum</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RectField</td>
+	<td style="text-align:left;">Rect</td>
+</tr>
+<tr>
+	<td style="text-align:left;">RectIntField</td>
+	<td style="text-align:left;">RecInt</td>
+</tr>
+<tr>
+	<td style="text-align:left;">TextField</td>
+	<td style="text-align:left;">string</td>
+</tr>
+<tr>
+	<td style="text-align:left;">TextField, with a maxLength=1</td>
+	<td style="text-align:left;">char</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Toggle</td>
+	<td style="text-align:left;">bool</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Vector2Field</td>
+	<td style="text-align:left;">Vector2</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Vector2IntField</td>
+	<td style="text-align:left;">Vector2Int</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Vector3Field</td>
+	<td style="text-align:left;">Vector3</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Vector3IntField</td>
+	<td style="text-align:left;">Vector3Int</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Vector4Field</td>
+	<td style="text-align:left;">Vector4</td>
+</tr>
+</tbody>
+</table>
+
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIE-Controls.html"></a></span><div class="tip">Built-in Controls</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UIE-IMGUI.html"></a></span><div class="tip">Supporting IMGUI</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

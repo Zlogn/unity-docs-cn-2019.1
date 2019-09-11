@@ -1,0 +1,210 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="线性渲染概述 - Unity Manual">
+<title>线性渲染概述 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/LinearLighting-LinearGradients.png">
+<meta name="description" content="Unity Editor 允许您使用传统的伽马颜色空间以及线性颜色空间。伽马颜色空间是历史悠久的标准格式，但线性颜色空间渲染可提供更精确的结果。">
+<meta property="og:description" content="Unity Editor 允许您使用传统的伽马颜色空间以及线性颜色空间。伽马颜色空间是历史悠久的标准格式，但线性颜色空间渲染可提供更精确的结果。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'LinearLighting';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/LinearLighting.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/LinearLighting.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/LinearLighting.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/LinearLighting.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/LinearLighting.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/LinearLighting.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/LinearLighting.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/LinearLighting.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/LinearLighting.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/LinearLighting.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/LinearLighting.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/LinearLighting.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/LinearLighting.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/LinearLighting.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/LinearLighting.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/LinearLighting.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/LinearLighting.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/LinearLighting.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/LinearLighting.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/LinearLighting.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/LinearLighting.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/LinearLighting.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/LinearLighting.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/LinearLighting.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="LightingOverview.html">光照</a></li>
+<li><a href="LightingRelated.html">相关主题</a></li>
+<li>线性渲染概述</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LightingRelated.html"></a></span><div class="tip">相关主题</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LinearRendering-LinearOrGammaWorkflow.html"></a></span><div class="tip">线性或伽马工作流程</div>
+</div>
+</div></div>
+<h1>线性渲染概述</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity Editor 允许您使用传统的伽马颜色空间以及线性颜色空间。伽马颜色空间是历史悠久的标准格式，但线性颜色空间渲染可提供更精确的结果。</p>
+
+<p>如需进一步阅读这方面的信息，请参阅以下相关文档：</p>
+
+<ul>
+<li>
+<a href="LinearRendering-LinearOrGammaWorkflow.html">线性或伽马工作流程</a>，介绍应该选用线性颜色空间还是伽马颜色空间。</li>
+<li>
+<a href="LinearRendering-GammaTextures.html">采用线性渲染的伽马纹理</a>，介绍线性工作流程中的伽马纹理。</li>
+<li>
+<a href="LinearRendering-LinearTextures.html">线性纹理</a>，介绍如何使用线性纹理。</li>
+</ul>
+
+<h2>线性和伽马颜色空间</h2>
+
+<p>人眼对光强的反应不呈线性。我们在观察光时会发现一些亮度比另一些亮度更容易看到，即从黑到白的线性渐变在我们人眼中不是线性渐变的。</p>
+
+<figure>
+<img src="../uploads/Main/LinearLighting-LinearGradients.png" alt="左：线性渐变。右：人眼对该渐变的感知情况。注意每种情况下界限（正好是中灰色）与渐变相融合的位置">
+<figcaption>左：线性渐变。右：人眼对该渐变的感知情况。注意每种情况下界限（正好是中灰色）与渐变相融合的位置</figcaption>
+</figure>
+
+<p>由于历史原因，监视器和显示器具有相同的特性。向监视器发送线性信号会导致看起来像上图右侧的渐变，人眼观察感觉是错误的。为了弥补这一点，需要发送经校正的信号来确保监视器能够呈现出看起来自然的图像。这种校正称为伽马校正。</p>
+
+<p>伽马和线性颜色空间同时存在的原因是，光照计算应该在线性空间中进行，以便确保数学上的正确性，但结果应该在伽马空间中呈现以便让人眼看起来正确。</p>
+
+<p>在帧缓冲格式限制为每通道 8 位的旧硬件上，计算光照时使用伽马曲线可在人类可感知的范围内提供更高的精度。在人眼最敏感的范围内，使用的位数最多。</p>
+
+<p>即使当今的监视器是数字显示器，它们仍然采用伽马编码信号作为输入信号。图像文件和视频文件显式编码到伽马空间（这意味着它们带有伽马编码值，而不是线性强度）。这便是标准；一切数值都在伽马空间内。</p>
+
+<p>伽马空间的公认标准称为 sRGB（请参阅 <a href="https://en.wikipedia.org/wiki/SRGB">Wikipedia</a>）。该标准定义了它与线性空间之间的一个映射，使得人眼能充分利用 8 位/通道的精度。下面是此映射的图表。</p>
+
+<figure>
+<img src="../uploads/Main/LinearRenderingMapping.png" alt="图像由 Wikimedia 提供。许可证：公共领域">
+<figcaption>图像由 Wikimedia 提供。许可证：公共领域</figcaption>
+</figure>
+
+<p>线性渲染指的是渲染场景的过程，此情况下的所有输入都是线性的，也就是说，没有经过伽马校正以适合人眼观察或输出到显示器。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="LightingRelated.html"></a></span><div class="tip">相关主题</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="LinearRendering-LinearOrGammaWorkflow.html"></a></span><div class="tip">线性或伽马工作流程</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

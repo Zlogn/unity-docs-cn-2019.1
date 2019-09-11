@@ -1,0 +1,413 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Asset Server（团队许可证） - Unity Manual">
+<title>Asset Server（团队许可证） - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/AssetServer-ServerView.png">
+<meta name="description" content="PlasticSCM
+PerForce">
+<meta property="og:description" content="PlasticSCM
+PerForce">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'AssetServer';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AssetServer.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AssetServer.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AssetServer.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AssetServer.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AssetServer.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AssetServer.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AssetServer.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AssetServer.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AssetServer.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AssetServer.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/AssetServer.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/AssetServer.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/AssetServer.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/AssetServer.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AssetServer.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AssetServer.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AssetServer.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AssetServer.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AssetServer.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AssetServer.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AssetServer.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AssetServer.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AssetServer.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AssetServer.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="LegacyTopics.html">旧版主题</a></li>
+<li>Asset Server（团队许可证）</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="universal-windows-10-apps.html"></a></span><div class="tip">通用 Windows 10 应用程序：准备开始</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SettinguptheAssetServer.html"></a></span><div class="tip">设置 Asset Server</div>
+</div>
+</div></div>
+<h1>Asset Server（团队许可证）</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>警告：这是旧版文档</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">注意，从 2017.1 版开始，Asset Server 已被弃用。我们建议在您的Unity项目中使用 Plastic SCM 或 Perforce 进行版本控制。2017–06–30</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Unity Asset Server 概述</h2>
+
+<p><a href="plasticSCMIntegration.html">PlasticSCM</a>
+<a href="perForceIntegration.html">PerForce</a></p>
+
+<p><strong>Unity Asset Server</strong> 是一个资源和版本控制系统，具有集成到 Unity 中的图形用户界面。团队成员可以借助它进行不同计算机上的项目合作（无论是面对面还是远程的）。为了应对数千兆字节的大型项目文件夹，Asset Server 针对处理大型二进制资源进行了高度优化。上传资源时，还会将每个资源相关的__导入设置 (Import Settings)__ 和其他元数据上传到 Asset Server。对文件进行重命名和移动是该系统的核心，并得到很好的支持。</p>
+
+<p>只有团队许可证用户可使用该产品。要购买团队许可证（如果在 Unity Pro 中未包含该许可证），请访问 Unity 商店进行购买，网址为：<a href="http://unity3d.com/store">http://unity3d.com/store</a></p>
+
+<p>请注意，Asset Server 是旧版产品，不再对其进行维护。</p>
+
+<h2>Source Control 新手？</h2>
+
+<p>如果您以前从未使用过 Source Control，那么刚开始使用任何的版本控制系统时都可能会有点不适应。Source Control 是将所有资源（网格、纹理、材质、脚本等等）的完整集合存储在某种服务器上的数据库中。该服务器可以是您用于运行 Unity 的同一台家用计算机，可以是本地网络中的其他计算机，可以是位于世界其他地区的远程机器，甚至可以是虚拟机。有很多选择，但服务器的位置完全不重要。重要的是，您可以通过网络以某种方式访问该服务器，并且该服务器上存储了您的游戏数据。</p>
+
+<p>在某种程度上，Asset Server 用作项目文件夹的备份。在开发过程中，您不直接操作 Asset Server 的内容。您先在本地更改项目，完成后，再__提交更改__到服务器上的项目。这样可使本地项目和 Asset Server 项目完全相同。</p>
+
+<p>现在，当您的同事进行更改时，Asset Server 与他们的项目而不是与您的项目保持一致。为了同步您的本地项目，您需要请求__从服务器更新__。现在，您的团队成员所做的所有更改都将从服务器下载到您的本地项目。</p>
+
+<p>这便是使用 Asset Server 的基本工作流程。除此基本功能外，Asset Server 还允许回滚到资源以前的版本，详细的文件比较，合并两个不同的脚本，解决冲突，以及恢复已删除的资源。</p>
+
+<h2>设置 Asset Server</h2>
+
+<p>Asset Server 需要一次性的服务器设置和针对每个用户的客户端配置。有关如何配置，请阅读 <a href="SettinguptheAssetServer.html">Asset Server 设置页面</a>。</p>
+
+<p>本指南的其余部分将介绍如何部署、管理和日常使用 Asset Server。</p>
+
+<h2>Asset Server 的日常使用</h2>
+
+<p>本部分介绍日常使用 Asset Server 的常见任务、工作流程和最佳实践。</p>
+
+<h2>准备开始</h2>
+
+<p>如果您要加入已经在 Asset Server 上存储了大量工作的团队，正确开始并运行的最快速的方法如下。</p>
+
+<p>1.新建一个未导入任何资源包的空项目
+1. Go to <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Editor</strong> category, and select <strong>Asset Server</strong> as the version control mode.
+1. From the menubar, select <strong>Window</strong> &gt; <strong>Asset Management</strong> &gt; <strong>Version Control</strong>
+1.单击 <strong>Connection</strong> 按钮
+1.输入您的用户名和密码（由 Asset Server 管理员提供）
+1.单击 <strong>Show Projects</strong> 并选择所需的项目
+1.单击 <strong>Connect</strong>
+1.单击 <strong>Update</strong> 选项卡
+1.单击 <strong>Update</strong> 按钮
+1.如果发生冲突，放弃所有本地版本
+1.等待更新完成
+1.您准备好了</p>
+
+<h2>工作流程基础知识</h2>
+
+<p>在多人团队中使用 Asset Server 时，最好在开始工作时从服务器更新所有已更改的资源，并在一天结束时或在完成工作时提交更改。在某个方面取得重大进展时，即使一天的工作尚未结束，您也应提交更改。建议定期并经常提交更改。</p>
+
+<h2>了解 Server 视图</h2>
+
+<p>The <strong>Server View</strong> is your window into the Asset Server you’re connected to. You can open the Server View by selecting <strong>Window</strong> &gt; <strong>Asset Management</strong> &gt; <strong>Version Control</strong>.</p>
+
+<figure>
+<img src="../uploads/Main/AssetServer-ServerView.png" alt="Overview 选项卡">
+<figcaption><strong>Overview</strong> 选项卡</figcaption>
+</figure>
+
+<p>Server 视图分为多个选项卡：__Overview<strong>、</strong>Update__ 和 <strong>Commit</strong>。<strong>Overview</strong> 将显示您的本地项目与服务器上的最新版本之间的差异，并提供了快速提交本地更改或下载最新更新的选项。<strong>Update</strong> 将显示服务器上的最新远程更改，并允许您将它们下载到本地项目。<strong>Commit</strong> 允许您创建__变更集 (Changeset)__ 并将其提交到服务器供其他人下载。</p>
+
+<h3>连接到服务器</h3>
+
+<p>必须先连接到 Asset Server 后才能使用它。为此，请单击 <strong>Connection</strong> 按钮，随后将显示连接界面：</p>
+
+<figure>
+<img src="../uploads/Main/AssetServer-Connection.png" alt="Asset Server 连接界面">
+<figcaption>Asset Server 连接界面</figcaption>
+</figure>
+
+<p>在此处需要填入：</p>
+
+<p>1.服务器地址
+1.用户名
+1.密码</p>
+
+<p>通过单击 <strong>Show projects__，现在可看到 Asset Server 上的可用项目，并可通过单击 </strong>Connect__ 选择要连接的项目。请注意，您使用的用户名和密码可以从系统管理员处获得。系统管理员在安装 Asset Server 时创建了帐户。</p>
+
+<h3>从服务器更新</h3>
+
+<p>要从服务器下载所有更新，请从 Overview 选项卡中选择 <strong>Update</strong> 选项卡，随后将显示最新提交的变更集列表。通过选择其中一个变更集，可查看项目中进行的更改以及提供的提交消息。单击 <strong>Update</strong> 即可开始下载所有变更集更新。</p>
+
+<figure>
+<img src="../uploads/Main/AssetServer-UpdateTab.png" alt="Update 选项卡">
+<figcaption><strong>Update</strong> 选项卡</figcaption>
+</figure>
+
+<h3>将更改提交到服务器</h3>
+
+<p>当您对本地项目进行了更改并希望将这些更改存储在服务器上时，可使用顶部的 <strong>Commit</strong> 选项卡。</p>
+
+<figure>
+<img src="../uploads/Main/AssetServer-UploadAssets.png" alt="Commit 选项卡">
+<figcaption><strong>Commit</strong> 选项卡</figcaption>
+</figure>
+
+<p>现在，您将能够看到自上次更新以来在本地对项目所做的所有更改，并且能够选择要上传到服务器的更改。您可以将更改添加到变更集，方法是手动将更改拖到 Changeset 字段中，或者使用 Commit Message 字段下方的按钮。切记，应输入提交消息，此消息将为您在以后比较版本或还原到早期版本时提供帮助信息，这两个问题将在下面讨论。</p>
+
+<h3>解决冲突</h3>
+
+<p>多人同时处理同一个数据集合时，不可避免地会出现冲突。切记，没有必要恐慌！如果存在冲突，则在更新项目时将显示 <strong>Conflict Resolution</strong> 对话框。</p>
+
+<figure>
+<img src="../uploads/Main/AssetServer-ResolveConflict.png" alt="Conflict Resolution 界面">
+<figcaption><strong>Conflict Resolution</strong> 界面</figcaption>
+</figure>
+
+<p>在这里将显示每个冲突，并提供解决每个冲突的不同选项。对于任何一个冲突，您可以选择 <strong>Skip Asset__（将不会从服务器下载该资源）、</strong>Discard My Changes__（将完全覆盖该资源的本地版本）或 <strong>Ignore Server Changes__（将忽略其他人对资源所做的更改，并在进行此更新后，您将能够提交本地更改以覆盖服务器上的版本）。此外，对于文本资源（如脚本），可以选择 </strong>Merge__，以将服务器版本与本地版本合并。</p>
+
+<p><strong>注意：</strong>如果选择放弃更改，资源将更新为服务器上的最新版本（即，资源将包含其他用户在您工作时所做的更改）。如果您希望将资源恢复到您开始工作时的状态，应还原到先前签出的特定版本。（请参阅下面的_浏览修订历史并还原资源_。）</p>
+
+<p>如果在提交本地更改时遇到冲突，Unity 将拒绝提交更改并通知您存在冲突。要解决冲突，请选择 <strong>Update</strong>。您的本地更改不会自动被覆盖。此时将显示 <strong>Conflict Resolution</strong> 对话框，可按照上一段落中的说明进行操作。</p>
+
+<h3>浏览修订历史和还原资源</h3>
+
+<p>Asset Server 会在其数据库中保留资源的所有上传版本，因此您可以随时将本地版本还原为某个早期版本。您可以选择还原整个项目或单个文件。要将一个资源或项目还原为某个旧版本，请选择 Overview 选项卡，然后单击 Asset Server Actions 下面列出的 <strong>Show History</strong>。现在，您将看到所有提交操作的列表，并能够选择任何文件或整个项目并还原到旧版本。</p>
+
+<figure>
+<img src="../uploads/Main/AssetServer-RevertingAsset.png" alt="History 对话框">
+<figcaption><strong>History</strong> 对话框</figcaption>
+</figure>
+
+<p>在此处可查看每个资源或项目版本的版本号和添加的备注。这正是描述性注释很有用的一个原因。请选择任一资源来查看其历史记录，或选择 <strong>Entire Project</strong> 以查看项目中所做的所有更改。找到所需的修订版本。您可以选择整个修订版或修订版中的特定资源。然后，单击 <strong>Download Selected File</strong> 将本地资源替换为所选修订版的副本。<strong>Revert All Project</strong> 将把整个项目还原为所选修订版。</p>
+
+<p>在还原之前，如果本地版本与所选服务器版本之间存在任何差异，则在还原本地版本时将丢失这些更改。</p>
+
+<p>如果您只想放弃对本地副本所做的更改，则不必还原。您可以通过在 Asset Server 主窗口中选择 <strong>Discard Changes</strong> 来放弃这些本地修改。这样将立即从服务器下载项目的当前版本到本地项目。</p>
+
+<h3>比较资源版本</h3>
+
+<p>如果希望查看两个特定版本之间的差异，您可以显式地比较它们。为进行此操作，请打开 <strong>History</strong> 窗口，选择要比较的修订版和资源，然后按 <strong>Compare to Local Version</strong>。如果需要比较资源的两个不同修订版，请右键单击资源，在上下文菜单中选择 __Compare to Another Revision__，然后找到要比较的修订版并选择它。</p>
+
+<p>_注意_：此功能要求事先安装一个受支持的文件差异/合并工具。支持的工具为：</p>
+
+<ul>
+<li>Windows 上：
+
+<ul>
+<li>TortoiseMerge：属于 <a href="http://tortoisesvn.net/">TortoiseSVN</a> 的一部分，或从 <a href="http://sourceforge.net/project/showfiles.php?group_id=138498">项目站点</a>单独下载。</li>
+<li>
+<a href="http://winmerge.org/">WinMerge</a>。</li>
+<li>
+<a href="http://www.sourcegear.com/diffmerge/">SourceGear Diff/Merge</a>。</li>
+<li>
+<a href="http://www.perforce.com/perforce/products/merge.html">Perforce Merge (p4merge)</a>：属于 Perforce 可视化客户端套件 (P4V) 的一部分。</li>
+<li>
+<a href="http://sourceforge.net/projects/tkdiff/">TkDiff</a>。</li>
+</ul>
+</li>
+<li>Mac OS X 上：
+
+<ul>
+<li>
+<a href="http://www.sourcegear.com/diffmerge/">SourceGear Diff/Merge</a>。</li>
+<li>FileMerge：属于 Apple 的 <a href="http://developer.apple.com">XCode 开发工具</a>的一部分。</li>
+<li>
+<a href="http://sourceforge.net/projects/tkdiff/">TkDiff</a>。</li>
+<li>
+<a href="http://www.perforce.com/perforce/products/merge.html">Perforce Merge (p4merge)</a>：属于 Perforce 可视化客户端套件 (P4V) 的一部分。</li>
+</ul>
+</li>
+</ul>
+
+<h3>恢复已删除的资源</h3>
+
+<p>删除本地资源并将删除操作提交到服务器时，实际上不会永久删除资源。正如可通过 Overview 选项卡中的 <strong>History</strong> 窗口恢复资源的先前版本一样。</p>
+
+<figure>
+<img src="../uploads/Main/AssetServer-RecoverDeleted.png" alt="History 对话框">
+<figcaption><strong>History</strong> 对话框</figcaption>
+</figure>
+
+<p>展开 <strong>Deleted Assets</strong> 项，从列表中找到并选择资源，再点击 __Recover__，随后将下载所选资源并将其重新添加到本地项目中。如果资源删除前所在的文件夹现在仍然存在，则资源将恢复到原始位置，否则将该资源添加到本地项目 Assets 文件夹的根目录。</p>
+
+<h3>最佳做法和常见问题</h3>
+
+<p>下面总结了一些最佳做法和问题解决方案，可在您使用 Asset Server 时提供帮助：</p>
+
+<p>1.务必进行备份
+ * 对数据库进行备份。此操作非常重要。在遇到硬件问题、病毒、用户错误等不幸状况时，您可能会丢失所有工作进展。因此，请务必设置一个备份系统。网上有许多可用于设置备份系统的资源。</p>
+
+<p>1.在关机之前停止服务器
+ * 这样可防止在 PostgreSQL (Asset Server) 日志中生成“快速关闭”(fast shutdowns) 记录。如果发生这种情况，由于关机不当，Asset Server 必须进行恢复。如果是一个包含很多提交记录的大型项目，此过程可能需要很长时间。</p>
+
+<p>1.从控制台重置密码
+ * 您可以使用以下命令直接从 shell、控制台或命令行重置密码：</p>
+
+<pre><code> psql -U unitysrv -d template1 -c"alter role admin with password 'MYPASSWORD'"
+</code></pre>
+
+<p>1.无法连接到 Asset Server
+ * 密码可能已到期。尝试重置密码。
+ * 另外，用户名区分大小写：“Admin” != “admin”。确保大小写正确。
+ * 确保服务器正在实际运行：
+ * 在 OS X 或 Linux 上，可在终端上输入：ps -aux
+ * 在 Windows 上，可使用任务管理器。
+ * 确认 Asset Server 未在网络中的多台计算机上运行。否则您可能会连接到错误的服务器。</p>
+
+<p>1.Asset Server 不能在 64 位 Linux 上正常工作
+ * Asset Server 可以在 64 位 Linux 计算机上正常运行（如果安装了 32 位版本的所需软件包）。为此，可使用 “dpkg -i –force-architecture”。</p>
+
+<p>1.使用 Asset Server 日志获取更多信息
+ * Windows：
+ * <code>ProgramFiles\Unity\AssetServer\log</code>
+ * OS X：
+ * <code>/Library/UnityAssetServer/log</code></p>
+
+<h2>Asset Server 培训完成</h2>
+
+<p>您现在应该具备了有效使用 Asset Server 所需的知识。请开始使用该产品，务必遵循工作流程基本原则。经常提交更改，这样就无须担心丢失任何内容。</p>
+
+<p><br>
+<br></p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–06–30 Page amended with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2017.1/Documentation/Manual/30_search.html?q=newin20171">2017.1</a> 中已弃用 Asset Server <span class="search-words">NewIn20171</span></span></p></li>
+<li><p><span class="page-history">Windows XP support in Standalone Player removed in 2018.1</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="universal-windows-10-apps.html"></a></span><div class="tip">通用 Windows 10 应用程序：准备开始</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SettinguptheAssetServer.html"></a></span><div class="tip">设置 Asset Server</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="特别优化 - Unity Manual">
+<title>特别优化 - Unity Manual</title>
+<meta name="description" content="上一部分介绍了适用于所有项目的优化，本节将详细介绍在收集性能分析数据之前不应使用的优化。可能的原因是这些优化在实现时非常耗费精力，在提高性能的同时可能会损害代码整洁性或可维护性，或者解决的可能仅仅是特定的范围内才存在的问题。">
+<meta property="og:description" content="上一部分介绍了适用于所有项目的优化，本节将详细介绍在收集性能分析数据之前不应使用的优化。可能的原因是这些优化在实现时非常耗费精力，在提高性能的同时可能会损害代码整洁性或可维护性，或者解决的可能仅仅是特定的范围内才存在的问题。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'BestPracticeUnderstandingPerformanceInUnity8';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/BestPracticeUnderstandingPerformanceInUnity8.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/BestPracticeUnderstandingPerformanceInUnity8.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/BestPracticeUnderstandingPerformanceInUnity8.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/BestPracticeUnderstandingPerformanceInUnity8.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/BestPracticeUnderstandingPerformanceInUnity8.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/BestPracticeUnderstandingPerformanceInUnity8.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/BestPracticeUnderstandingPerformanceInUnity8.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/BestPracticeUnderstandingPerformanceInUnity8.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/BestPracticeUnderstandingPerformanceInUnity8.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/BestPracticeUnderstandingPerformanceInUnity8.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/BestPracticeUnderstandingPerformanceInUnity8.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/BestPracticeUnderstandingPerformanceInUnity8.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/BestPracticeUnderstandingPerformanceInUnity8.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/BestPracticeUnderstandingPerformanceInUnity8.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/BestPracticeUnderstandingPerformanceInUnity8.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/BestPracticeUnderstandingPerformanceInUnity8.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/BestPracticeUnderstandingPerformanceInUnity8.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/BestPracticeUnderstandingPerformanceInUnity8.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/BestPracticeUnderstandingPerformanceInUnity8.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/BestPracticeUnderstandingPerformanceInUnity8.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/BestPracticeUnderstandingPerformanceInUnity8.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/BestPracticeUnderstandingPerformanceInUnity8.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/BestPracticeUnderstandingPerformanceInUnity8.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/BestPracticeUnderstandingPerformanceInUnity8.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="BestPracticeGuides.html">最佳实践指南</a></li>
+<li><a href="BestPracticeUnderstandingPerformanceInUnity.html">了解 Unity 中的优化</a></li>
+<li>特别优化</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeUnderstandingPerformanceInUnity7.html"></a></span><div class="tip">一般优化</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeMakingBelievableVisuals.html"></a></span><div class="tip">在 Unity 中制作可信的视觉效果</div>
+</div>
+</div></div>
+<h1>特别优化</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>上一部分介绍了适用于所有项目的优化，本节将详细介绍在收集性能分析数据之前<em>不</em>应使用的优化。可能的原因是这些优化在实现时非常耗费精力，在提高性能的同时可能会损害代码整洁性或可维护性，或者解决的可能仅仅是特定的范围内才存在的问题。</p>
+
+<h2>多维数组与交错数组</h2>
+
+<p>如该 <a href="http://stackoverflow.com/questions/597720/what-are-the-differences-between-a-multidimensional-array-and-an-array-of-arrays">StackOverflow 文章</a>所述，遍历交错数组通常比遍历多维数组更高效，因为多维数组需要函数调用。</p>
+
+<p>注意：</p>
+
+<ul>
+<li><p>声明为 <code>type[x][y]</code> 则为数组的数组而与 <code>type[x,y</code>] 不同。</p></li>
+<li><p>使用 ILSpy 或类似工具检查通过访问多维数组生成的 IL 即可发现此情况。</p></li>
+</ul>
+
+<p>在 Unity 5.3 中进行性能分析时，在三维 100x100x100 数组上进行 100 次完全顺序的迭代得出了以下时间，这些值是通过 10 遍测试获得的平均结果：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">数组类型</th>
+	<th style="text-align:left;">总时间（100 次迭代）</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">一维数组</td>
+	<td style="text-align:left;">660 ms</td>
+</tr>
+<tr>
+	<td style="text-align:left;">交错数组</td>
+	<td style="text-align:left;">730 ms</td>
+</tr>
+<tr>
+	<td style="text-align:left;">多维数组</td>
+	<td style="text-align:left;">3470 ms</td>
+</tr>
+</tbody>
+</table>
+
+<p>根据访问多维数组与访问一维数组的成本差异，可看出额外函数调用的成本，而根据访问交错数组与访问一维数组的成本差异，可看出遍历非紧凑内存结构的成本。</p>
+
+<p>如上所述，额外函数调用的成本大大超过了使用非紧凑内存结构所带来的成本。</p>
+
+<p>如果操作对性能影响较大，建议使用一维数组。在任意其余情况下，如果需要一个具有多个维度的数组，请使用交错数组。不应使用多维数组。</p>
+
+<h2>粒子系统池</h2>
+
+<p>对粒子系统建池时，请注意它们至少消耗 3500 字节的内存。内存消耗根据粒子系统上激活的模块数量而增加。停用粒子系统时<em>不会</em>释放此内存；只有销毁粒子系统时才会释放。</p>
+
+<p>从 Unity 5.3 开始，大多数粒子系统设置都可在运行时进行操作。对于必须汇集大量不同粒子效果的项目，将粒子系统的配置参数提取到数据载体类或结构中可能更有效。</p>
+
+<p>需要某种粒子效果时，“通用”粒子效果池即可提供必需的粒子效果对象。然后，可将配置数据应用于对象以实现期望的图形效果。</p>
+
+<p>这种方案比尝试汇集给定场景中使用的粒子系统的所有可能变体和配置会更具内存使用效率，但需要大量的工程努力才能实现。</p>
+
+<h2>更新管理器</h2>
+
+<p>在内部，Unity 会跟踪感兴趣的列表中的对象的回调（例如 <code>Update</code>、<code>FixedUpdate</code> 和 <code>LateUpdate</code>）。这些列表以侵入式链接列表的形式进行维护，从而确保在固定时间进行列表更新。在启用或禁用 MonoBehaviour 时分别会在这些列表中添加/删除 MonoBehaviour。</p>
+
+<p>虽然直接将适当的回调添加到需要它们的 MonoBehaviour 十分方便，但随着回调数量的增加，这种方式将变得越来越低效。从原生代码调用托管代码回调有一个很小但很明显的开销。这会导致在调用大量每帧都执行的方法时延长帧时间，而且在实例化包含大量 MonoBehaviour 的预制件时延长实例化时间（注意：
+ 实例化成本归因于调用预制件中每个组件上的 Awake 和 OnEnable 回调时产生的性能开销）。</p>
+
+<p>当具有每帧回调的 MonoBehaviour 数量增长到数百或数千时，删除这些回调并将 MonoBehaviour（甚至标准 C# 对象）连接到全局管理器单例可以优化性能。然后，全局管理器单例可将 <code>Update</code>、<code>LateUpdate</code> 和其他回调分发给感兴趣的对象。这种方式的另一个好处是允许代码在回调没有操作的情况下巧妙地将回调取消订阅，从而减少每帧必须调用的大量函数。</p>
+
+<p>性能上最大的节约来自于消除很少执行的回调。请考虑以下伪代码：</p>
+
+<pre><code>void Update() {
+    if(!someVeryRareCondition) { return; }
+// … 某种操作 …
+}
+</code></pre>
+
+<p>如果大量 MonoBehaviour 具有上述类似 Update 回调，则运行 Update 回调所使用的大量时间会用于原生和托管代码域之间的切换以便执行 MonoBehaviour之后再立即退出。如果这些类仅在 <code>someVeryRareCondition</code> 为 true 时订阅了全局更新管理器 (Update Manager)，随后又取消了订阅，则可节省代码域切换和稀有条件评估所需的时间。</p>
+
+<h3>在更新管理器中使用 C# 委托</h3>
+
+<p>通常很容易想到使用普通的 C# 委托来实现这些回调。但是，C# 的委托实现方式适用于较低频率的订阅和取消订阅以及少量的回调。每次添加或删除回调时，C# 委托都会执行回调列表的完整拷贝。在单个帧期间，大型回调列表或大量回调订阅/取消订阅会导致内部 <code>Delegate.Combine</code> 方法性能消耗达到峰值。</p>
+
+<p>如果频繁发生添加/删除操作，请考虑使用专为快速插入/删除（而非委托）设计的数据结构。</p>
+
+<h2>加载线程控制</h2>
+
+<p>Unity 允许开发者控制用于加载数据的后台线程的优先级。这一点对于尝试在后台将 AssetBundle 流式传输到磁盘时尤为重要。</p>
+
+<p>主线程和图形线程的优先级都是 <code>ThreadPriority.Normal</code>；任何具有更高优先级的线程都会抢占主线程/图形线程的资源并导致帧率不稳，而优先级较低的线程则不会。如果任何线程与主线程具有相同的优先级，则 CPU 会尝试为这些线程提供相同的时间，在多个后台线程执行繁重操作（例如 AssetBundle 解压缩）的情况下，这通常会导致帧率卡顿。</p>
+
+<p>目前，可在三个位置控制该优先级。</p>
+
+<p>首先，资源加载调用（如 <code>Resources.LoadAsync</code> 和 <code>AssetBundle.LoadAssetAsync</code>）的默认优先级来自于 <a href="../ScriptReference/Application-backgroundLoadingPriority.html">Application.backgroundLoadingPriority</a> 设置。如文档所述，此调用还限制了主线程用于集成资源的时间（注意：
+ 大多数类型的 Unity 资源都必须“集成”到主线程上。集成期间将完成资源初始化并执行某些线程安全操作。这包括编写回调调用（例如 Awake 回调）的脚本。请参阅“资源管理”指南以了解更多详细信息，从而限制资源加载对帧时间的影响。</p>
+
+<p>其次，每个异步资源加载操作以及每个 UnityWebRequest 请求都返回一个 <code>AsyncOperation</code> 对象以监控和管理该操作。此 <code>AsyncOperation</code> 对象会显示 <a href="../ScriptReference/AsyncOperation-priority.html">priority</a> 属性，该属性可用于调整各个操作的优先级。</p>
+
+<p>最后，WWW 对象（例如从 <code>WWW.LoadFromCacheOrDownload</code> 调用返回的对象）会显示<a href="../ScriptReference/WWW-threadPriority.html">threadPriority</a> 属性。请务必注意，WWW 对象不会自动使用 <code>Application.backgroundLoadingPriority</code> 设置作为其默认值；WWW 对象总是被默认为 <code>ThreadPriority.Normal</code>。</p>
+
+<p>值得注意的是，用于底层系统在处理解压缩和加载数据时，不同 API 之间存在差异。<code>Resources.LoadAsync</code> 和 <code>AssetBundle.LoadAssetAsync</code> 由 Unity 的内部 PreloadManager 系统进行处理，该系统可管理自己的加载线程并执行自己的速率限制。<code>UnityWebRequest</code> 使用自己的专用线程池。<code>WWW</code> 在每次创建请求时都会生成一个全新的线程。</p>
+
+<p>虽然所有其他加载机制都有内置的排队系统，但 WWW 却没有。在大量经过压缩的 AssetBundle 上调用 <code>WWW.LoadFromCacheOrDownload</code> 会生成相同数量的线程，这些线程随后会与主线程竞争 CPU 时间。这很容易导致帧率卡顿。</p>
+
+<p>因此，使用 WWW 来加载和解压缩 AssetBundle 时，最佳做法是为创建的每个 WWW 对象的 <code>threadPriority</code> 设置适当的值。</p>
+
+<h2>大批量对象移动和 CullingGroup</h2>
+
+<p>正如“变换操作”部分所述，由于需要传播更改消息，移动大型变换层级视图的 CPU 成本相对较高。但是，在实际开发环境中，通常无法将层级视图精简为少量的游戏对象。</p>
+
+<p>同时，在开发中最好仅运行那些能维持游戏世界可信度的行为，并去掉那些用户不会注意到的行为；例如，在具有大量角色的场景中，较好的做法是仅对屏幕上的角色执行网格蒙皮和动画驱动的变换运动。对于屏幕上看不到的角色，消耗 CPU 时间来计算模拟它们的纯视觉元素是种浪费。</p>
+
+<p>使用 Unity 5.1 中首次引入的 <a href="CullingGroupAPI.html">CullingGroup</a> API 可以很好地解决这两个问题。</p>
+
+<p>不要直接操作场景中的一大群游戏对象，应该对系统进行更改以操作 CullingGroup 中的一群 BoundingSphere 的 Vector3 参数。每个 BoundingSphere 充当单个游戏逻辑实体的世界空间位置的表征，并在实体移动到 CullingGroup 主摄像机的视锥体附近/内部时接收回调。然后，可使用这些回调来激活/停用特定代码或组件（例如 Animator），从而控制那些仅应在实体可见时才需要运行的行为。</p>
+
+<h2>减少方法调用开销</h2>
+
+<p>C# 的字符串库提供了一个绝佳的案例研究，其中说明了向简单库代码添加额外方法调用的成本。在有关内置字符串 API <code>String.StartsWith</code> 和 <code>String.EndsWith</code> 的部分中，提到了手工编码的替换比内置方法快 10–100 倍，即使关闭了不需要的区域设置强制转换时也是如此。</p>
+
+<p>这种性能差异的主要原因仅仅是向紧凑内循环添加额外方法调用的成本不同。调用的每个方法都必须在内存中找到该方法的地址，并将另一个帧推入栈。所有这些操作都是有成本的，但在大多数代码中，它们都小到可以忽略不计。</p>
+
+<p>但是，在紧凑循环中运行较小的方法时，因引入额外方法调用而增加的开销可能会变得非常显著，甚至占主导地位。</p>
+
+<p>请考虑以下两个简单方法。</p>
+
+<p><strong>示例 1：</strong></p>
+
+<pre><code>int Accum { get; set; }
+Accum = 0;
+
+for(int i = 0; i &lt; myList.Count; i++) {
+    Accum += myList[i];
+}
+
+</code></pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre><code>int accum = 0;
+int len = myList.Count;
+
+for(int i = 0; i &lt; len; i++) {
+    accum += myList[i];
+}
+</code></pre>
+
+<p>这两个方法都在 C# 通用 <code>List&lt;int&gt;</code> 中计算所有整数之和。第一个示例是更“现代的 C#”，因为它使用自动生成的属性来保存其数据值。</p>
+
+<p>虽然从表面上看这两段代码似乎是等效的，但通过分析代码中的方法调用情况，可看出差异很明显。</p>
+
+<p><strong>示例 1：</strong></p>
+
+<pre><code>int Accum { get; set; }
+Accum = 0;
+
+for(int i = 0;
+       i &lt; myList.Count;    // 调用 List::getCount
+       i++) {
+    Accum       // 调用 set_Accum
++=      // 调用 get_Accum
+myList[i];  // 调用 List::get_Value
+}
+</code></pre>
+
+<p>每次循环执行时都有四个方法调用：</p>
+
+<ul>
+<li>
+<code>myList.Count</code> 调用 <code>Count</code> 属性上的 <code>get</code> 方法</li>
+<li>必须调用 <code>Accum</code> 属性上的 <code>get</code> 和 <code>set</code> 方法</li>
+<li>通过 <code>get</code> 检索 <code>Accum</code> 的当前值，以便将其传递给加法运算</li>
+<li>通过 <code>set</code> 将加法运算的结果分配给 <code>Accum</code>
+</li>
+<li>
+<em>[]</em> 运算符调用列表的 <em>get_Value</em> 方法来检索列表特定索引位置的项值。</li>
+</ul>
+
+<p><strong>示例 2：</strong></p>
+
+<pre><code>int accum = 0;
+int len = myList.Count;
+
+for(int i = 0;
+    i &lt; len; 
+    i++) {
+    accum += myList[i]; // 调用 List::get_Value
+}
+</code></pre>
+
+<p>在第二个示例中，<code>get_Value</code> 调用仍然存在，但已删除所有其他方法或不再是每个循环迭代便执行一次。</p>
+
+<ul>
+<li><p>由于 <code>accum</code> 现在是原始值而不是属性，因此不需要进行方法调用来设置或检索其值。</p></li>
+<li><p>由于假设 <code>myList.Count</code> 在循环运行期间不变化，其访问权限已移出循环的条件语句，因此不再在每次循环迭代开始时执行它。</p></li>
+</ul>
+
+<p>这两个版本的执行时间显示了从这一特定代码片段中减少 75% 方法调用开销的真正优势。在现代台式机上运行 100,000 次的情况下：</p>
+
+<ul>
+<li>示例 1 需要的执行时间为 324 毫秒</li>
+<li>示例 2 需要的执行时间为 128 毫秒</li>
+</ul>
+
+<p>这里的主要问题是 Unity 执行非常少的方法内联（即使有）。即使在 IL2CPP 下，许多方法目前也不能正确内联。对于属性尤其如此。此外，<em>虚拟</em>方法和接口方法根本无法内联。</p>
+
+<p>因此，在源代码 C# 中声明的方法调用很可能最后在最终的二进制应用程序中产生方法调用。</p>
+
+<h3>简单属性</h3>
+
+<p>为了方便开发者，Unity 为数据类型提供了许多“简单”常量。但是，鉴于上述情况，必须注意这些常量通常作为返回常量值的属性。</p>
+
+<p>Vector3.zero 的属性内容如下所示：</p>
+
+<pre><code>get { return new Vector3(0,0,0); }
+</code></pre>
+
+<p>Quaternion.identity 非常相似：</p>
+
+<pre><code>get { return new Quaternion(0,0,0,1); }
+
+</code></pre>
+
+<p>虽然访问这些属性的成本与它们周围的执行代码相比小的多，但它们每帧执行数千次（或更多次）时，可产生一定的影响。</p>
+
+<p>对于简单的原始类型，请改用 <code>const</code> 值。<code>Const</code> 值在编译时内联 - 对 <code>const</code> 变量的引用将替换为其值。</p>
+
+<p><strong>注意：</strong>因为对 <code>const</code> 变量的每个引用都替换为其值，所以不建议声明长字符串或其他大型数据类型 <code>const</code>。否则，由于最终二进制代码中的所有重复数据，将导致不必要地增加最终二进制文件的大小。</p>
+
+<p>当 <code>const</code> 不适合时，应使用 <code>static readonly</code> 变量。在有些项目中，即使 Unity 的内置简单属性也替换成了 <code>static readonly</code> 变量，使性能略有改善。</p>
+
+<h3>简单方法</h3>
+
+<p>简单方法比较棘手。如果能够在声明一次功能后在其他地方重用该功能，将非常有用。但是，在紧凑内部循环中，可能有必要打破美观编码规则，选择“手动内联”某些代码。</p>
+
+<p>有些方法可能需要彻底删除。例如，<code>Quaternion.Set</code>、<code>Transform.Translate</code> 或 <code>Vector3.Scale</code>。这些方法执行非常简单的操作，可以用简单的赋值语句替换。</p>
+
+<p>对于更复杂的方法，应权衡手动内联的性能提升与维护性能更高代码的长期成本之间的关系。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeUnderstandingPerformanceInUnity7.html"></a></span><div class="tip">一般优化</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeMakingBelievableVisuals.html"></a></span><div class="tip">在 Unity 中制作可信的视觉效果</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

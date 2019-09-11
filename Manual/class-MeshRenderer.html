@@ -1,0 +1,378 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="网格渲染器 (Mesh Renderer) - Unity Manual">
+<title>网格渲染器 (Mesh Renderer) - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/class-MeshRenderer-0.png">
+<meta name="description" content="The Mesh Renderer takes the geometry from the Mesh Filter and renders it at the position defined by the GameObject’s Transform component.">
+<meta property="og:description" content="The Mesh Renderer takes the geometry from the Mesh Filter and renders it at the position defined by the GameObject’s Transform component.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-MeshRenderer';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-MeshRenderer.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-MeshRenderer.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-MeshRenderer.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-MeshRenderer.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-MeshRenderer.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-MeshRenderer.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-MeshRenderer.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-MeshRenderer.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-MeshRenderer.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-MeshRenderer.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-MeshRenderer.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-MeshRenderer.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-MeshRenderer.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-MeshRenderer.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-MeshRenderer.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-MeshRenderer.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-MeshRenderer.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-MeshRenderer.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-MeshRenderer.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-MeshRenderer.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-MeshRenderer.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-MeshRenderer.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-MeshRenderer.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-MeshRenderer.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="comp-MeshGroup.html">网格组件</a></li>
+<li>网格渲染器 (Mesh Renderer)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-MeshFilter.html"></a></span><div class="tip">网格过滤器 (Mesh Filter)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-SkinnedMeshRenderer.html"></a></span><div class="tip">带蒙皮的网格渲染器 (Skinned Mesh Renderer)</div>
+</div>
+</div></div>
+<h1>网格渲染器 (Mesh Renderer)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The Mesh Renderer takes the geometry from the <a href="class-MeshFilter.html">Mesh Filter</a> and renders it at the position defined by the GameObject’s <a href="class-Transform.html">Transform</a> component.</p>
+
+<figure>
+<img src="../uploads/Main/class-MeshRenderer-0.png" alt="">
+</figure>
+
+<p>在 Inspector 窗口中显示的网格渲染器 (Mesh Renderer) 游戏对象组件</p>
+
+<h2><strong>属性</strong></h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Light Probes</strong></td>
+	<td style="text-align:left;">基于探针的光照插值模式。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Off</td>
+	<td style="text-align:left;">渲染器不使用任何插值光照探针。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Blend Probes</td>
+	<td style="text-align:left;">渲染器使用一个插值光照探针。这是默认选项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Use Proxy Volume</td>
+	<td style="text-align:left;">渲染器使用插值光照探针的 3D 网格。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Reflection Probes</strong></td>
+	<td style="text-align:left;">Specifies how the GameObject is affected by reflections in the scene. You cannot disable this property in deferred rendering modes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Off</td>
+	<td style="text-align:left;">禁用反射探针，将天空盒用于反射。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Blend Probes</td>
+	<td style="text-align:left;">启用反射探针。混合仅发生在探针之间，在室内环境中非常有用。如果附近没有反射探针，则渲染器将使用默认反射，但默认反射和探针之间不会发生混合。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Blend Probes and Skybox</td>
+	<td style="text-align:left;">启用反射探针。混合发生在探针之间或探针与默认反射之间，对于室外环境非常有用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Simple</td>
+	<td style="text-align:left;">启用反射探针，但当存在两个重叠的探针体积时，探针之间不会发生混合。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Anchor Override</strong></td>
+	<td style="text-align:left;">使用<a href="https://docs.unity3d.com/Manual/LightProbes.html">光照探针</a>或反射探针系统时用变换来确定插值位置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cast Shadows</strong></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">    On</td>
+	<td style="text-align:left;">阴影投射光源照在网格上时将投射阴影</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Off</td>
+	<td style="text-align:left;">网格不会投射阴影</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Two Sided</td>
+	<td style="text-align:left;">从网格的任一侧投射双面阴影。Enlighten 和渐进光照贴图 (Progressive Lightmapper) 不支持双面阴影。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Shadows Only</td>
+	<td style="text-align:left;">网格的阴影将可见，但网格本身不可见</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Receive Shadows</strong></td>
+	<td style="text-align:left;">启用此复选框可使网格显示任何投射在网格上的阴影。仅当使用渐进光照贴图时才支持 Review Shadows 选项</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Motion Vectors</strong></td>
+	<td style="text-align:left;">如果启用此属性，则线会将运动矢量渲染到摄像机运动矢量纹理中。请参阅脚本 API 参考文档中的 <a href="../ScriptReference/Renderer-motionVectorGenerationMode.html">Renderer.motionVectorGenerationMode</a> 以了解更多信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Lightmap Static</strong></td>
+	<td style="text-align:left;">Enable this check box to indicate to Unity that the GameObject’s location is fixed and it will participate in Global Illumination computations. If an GameObject is not marked as Lightmap Static then it can still be lit using <a href="LightProbes.html">Light Probes</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Materials</strong></td>
+	<td style="text-align:left;">用于渲染模型的材质列表。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Dynamic Occluded</strong></td>
+	<td style="text-align:left;">Enable this check box to indicate to Unity that occlusion culling should be performed for this GameObject even if it is not marked as static.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Tick the lightmap static checkbox to display MeshRenderer Lightmap information in the Inspector(see also the <strong>static</strong> checkbox of the GameObject).</p>
+
+<figure>
+<img src="../uploads/Main/class-MeshRenderer-1.png" alt="">
+</figure>
+
+<figure>
+<img src="../uploads/Main/class-MeshRenderer-2.png" alt="">
+</figure>
+
+<h2>UV Charting Control</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Optimize Realtime Uvs</strong></td>
+	<td style="text-align:left;">指定创作的网格 UV 是否针对实时全局光照 (Realtime Global Illumination) 进行优化。启用此属性后，便会对创作的 UV 进行合并、缩放和打包以实现优化。<br>禁用此属性后，会对创作的 UV 进行缩放和打包，但不合并。<br>请注意，优化机制有时会对原始 UV 贴图中的不连续性产生误判。例如，有意锐利的边缘可能被误解为连续表面。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max Distance</strong></td>
+	<td style="text-align:left;">指定用于简化 UV 图表的最大世界空间距离。如果图表在此距离之内，它们将被简化。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Max Angle</strong></td>
+	<td style="text-align:left;">指定共享 UV 边缘的面之间的最大角度（以度为单位）。如果面之间的角度小于此值，则将简化 UV 图表。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Ignore normal</strong></td>
+	<td style="text-align:left;">选中此复选框可防止在实时全局光照的预计算过程中拆分 UV 图表。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Min chart size</strong></td>
+	<td style="text-align:left;">指定用于 UV 图表的最小纹理像素大小。如果需要拼接，则值 4 将创建一个 4x4 纹理像素的图表来存储光照和方向性。如果不需要拼接，则值 2 将降低纹理像素密度并提供更好的光照构建时间和游戏性能。</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Lightmap"></a> </p>
+
+<h2>Lightmap settings</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Scale in Lightmap</strong></td>
+	<td style="text-align:left;">This value specifies the relative size of the GameObject’s UVs within a lightmap. A value of 0 will result in the GameObject not being lightmapped, but it will still contribute to lighting other GameObjects in the scene. A value greater than 1.0 increases the number of pixels (ie, the lightmap resolution) used for this GameObject while a value less than 1.0 decreases it. You can use this property to optimise lightmaps so that important and detailed areas are more accurately lit. For example: an isolated building with flat, dark walls will use a low lightmap scale (less than 1.0) while a collection of colourful motorcycles displayed close together warrant a high scale value.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Prioritize illumination</strong></td>
+	<td style="text-align:left;">Check this box to tell Unity to always include this GameObject in lighting calculations. Useful for GameObjects that are strongly emissive to make sure that other GameObjects will be illuminated by this GameObject.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Lightmap Parameters</strong></td>
+	<td style="text-align:left;">Allows you to choose or create a set of <a href="class-LightmapParameters.html">Lightmap Parameters</a> for the this GameObject.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>详细信息</h2>
+
+<p>从 3D 包导入的网格可使用多个<a href="Materials.html">材质</a>。网格渲染器使用的所有材质都保存在__材质__列表中。每个子网格使用材质列表中的一个材质。如果为网格渲染器分配的材质多于网格中的子网格，则第一个子网格将用剩余的每个材质逐一渲染，一个材质加在下一个材质之上。这样就能在该子网格上设置多个渲染通道，但请注意，这可能会影响运行时的性能。另外，请注意完全不透明的材质，这种材质只是覆盖以前的层，导致性能下降却没有任何好处。</p>
+
+<p>根据 <strong>Use Light Probes</strong> 和 <strong>Use Reflection Probes</strong> 选项的设置，网格可接受来自<a href="LightProbes.html">光照探针</a>系统的光照和来自<a href="class-ReflectionProbe.html">反射探针</a>系统的反射。这两种类型的探针使用同一个点作为网格的名义位置探针插值。默认情况下，此位置点是网格包围盒的中心，但可通过将<a href="class-Transform.html">变换 (Transform)</a> 拖动到 <strong>Anchor Override</strong> 属性来更改此值（Anchor Override 会同时影响这两种类型的探针）。</p>
+
+<p>It may be useful to set the anchor in cases where a GameObject contains two adjoining Meshes; since each Mesh has a separate bounding box, the two are lit discontinuously at the join by default. However, if you set both Meshes to use the same anchor point, then they are consistently lit. By default, a probe-lit Renderer receives lighting from a single Light Probe that is interpolated from the surrounding Light Probes in the Scene. Because of this, GameObjects have constant ambient lighting across the surface. It has a rotational gradient because it is using spherical harmonics, but it lacks a spatial gradient. This is more noticeable on larger GameObjects or Particle Systems. The lighting across the GameObject matches the lighting at the anchor point, and if the GameObject straddles a lighting gradient, parts of the GameObject look incorrect. </p>
+
+<p>为了缓解这种问题，请将 <strong>Light Probes</strong> 属性设置为 __Use Proxy Volume__，使用附加的<a href="class-LightProbeProxyVolume.html">光照探针代理体 (Light Probe Proxy Volume)</a> 组件。这样就能在包围体内生成插值光照探针的 3D 网格，这种情况下的网格分辨率可由用户指定。插值光照探针的球谐函数系数会更新到 3D 纹理中；在渲染时将对这些纹理进行采样以便计算对漫射环境光照的影响。这会向探针光照游戏对象添加空间渐变。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2018–09–21 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">更新了双面阴影 (Two Sided shadows) 和接受阴影 (Recieve shadows) 所支持的光照后端。</span></p></li>
+<li><p><span class="page-history">在 5.6 版中更新了 Mesh Renderer UI</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-MeshFilter.html"></a></span><div class="tip">网格过滤器 (Mesh Filter)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-SkinnedMeshRenderer.html"></a></span><div class="tip">带蒙皮的网格渲染器 (Skinned Mesh Renderer)</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,510 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="平台相关的编译 - Unity Manual">
+<title>平台相关的编译 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/BuildSettings.png">
+<meta name="description" content="Unity 包括名为__平台相关的编译 (Platform Dependent Compilation)__ 的功能。此功能包括一些预处理器指令，可让您对脚本进行分区，从而为受支持平台之一专门编译和执行一段代码。">
+<meta property="og:description" content="Unity 包括名为__平台相关的编译 (Platform Dependent Compilation)__ 的功能。此功能包括一些预处理器指令，可让您对脚本进行分区，从而为受支持平台之一专门编译和执行一段代码。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'PlatformDependentCompilation';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PlatformDependentCompilation.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PlatformDependentCompilation.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PlatformDependentCompilation.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PlatformDependentCompilation.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PlatformDependentCompilation.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PlatformDependentCompilation.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PlatformDependentCompilation.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PlatformDependentCompilation.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PlatformDependentCompilation.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PlatformDependentCompilation.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/PlatformDependentCompilation.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/PlatformDependentCompilation.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/PlatformDependentCompilation.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/PlatformDependentCompilation.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PlatformDependentCompilation.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PlatformDependentCompilation.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PlatformDependentCompilation.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PlatformDependentCompilation.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PlatformDependentCompilation.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PlatformDependentCompilation.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PlatformDependentCompilation.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PlatformDependentCompilation.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PlatformDependentCompilation.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PlatformDependentCompilation.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="ScriptingSection.html">脚本</a></li>
+<li><a href="ScriptingConcepts.html">脚本概述</a></li>
+<li>平台相关的编译</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnderstandingAutomaticMemoryManagement.html"></a></span><div class="tip">Understanding Automatic Memory Management</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ScriptCompileOrderFolders.html"></a></span><div class="tip">特殊文件夹和脚本编译顺序</div>
+</div>
+</div></div>
+<h1>平台相关的编译</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 包括名为__平台相关的编译 (Platform Dependent Compilation)__ 的功能。此功能包括一些预处理器指令，可让您对脚本进行分区，从而为受支持平台之一专门编译和执行一段代码。</p>
+
+<p>您可以在 Unity Editor 中运行此代码，这样便可专门为目标平台编译代码并在 Editor 中对其进行测试！</p>
+
+<h2>平台 #define 指令</h2>
+
+<p>Unity 支持对脚本使用的平台 #define 指令如下：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_EDITOR</strong></td>
+	<td style="text-align:left;">用于从游戏代码中调用 Unity Editor 脚本的 #define 指令。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_EDITOR_WIN</strong></td>
+	<td style="text-align:left;">用于 Windows 上的 Editor 代码的 #define 指令。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_EDITOR_OSX</strong></td>
+	<td style="text-align:left;">用于 Mac OS X 上的 Editor 代码的 #define 指令。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_STANDALONE_OSX</strong></td>
+	<td style="text-align:left;">用于专门为 Mac OS X（包括 Universal、PPC 和 Intel 架构）编译/执行代码的 #define 指令。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_STANDALONE_WIN</strong></td>
+	<td style="text-align:left;">用于专门为 Windows 独立平台应用程序编译/执行代码的 #define 指令。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_STANDALONE_LINUX</strong></td>
+	<td style="text-align:left;">用于专门为 Linux 独立平台应用程序编译/执行代码的 #define 指令。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_STANDALONE</strong></td>
+	<td style="text-align:left;">用于为任何独立平台（Mac OS X、Windows 或 Linux）编译/执行代码的 #define 指令。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_WII</strong></td>
+	<td style="text-align:left;">用于为 Wii 游戏主机编译/执行代码的 #define 指令。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_IOS</strong></td>
+	<td style="text-align:left;">用于为 iOS 平台编译/执行代码的 #define 指令。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_IPHONE</strong></td>
+	<td style="text-align:left;">已弃用。改用 <strong>UNITY_IOS</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_ANDROID</strong></td>
+	<td style="text-align:left;">用于 Android 平台的 #define 指令。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_PS4</strong></td>
+	<td style="text-align:left;">用于运行 PlayStation 4 代码的 #define 指令。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_XBOXONE</strong></td>
+	<td style="text-align:left;">用于执行 Xbox One 代码的 #define 指令。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_TIZEN</strong></td>
+	<td style="text-align:left;">用于 Tizen 平台的 #define 指令。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_TVOS</strong></td>
+	<td style="text-align:left;">用于 Apple TV 平台的 #define 指令。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_WSA</strong></td>
+	<td style="text-align:left;">用于通用 Windows 平台的 #define 指令。此外，根据 .NET Core 和使用 .NET 脚本后端来编译 C# 文件时会定义 <strong>NETFX_CORE</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_WSA_10_0</strong></td>
+	<td style="text-align:left;">用于通用 Windows 平台的 #define 指令。此外，根据 .NET Core 来编译 C# 文件时会定义 <strong>WINDOWS_UWP</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_WINRT</strong></td>
+	<td style="text-align:left;">与 <strong>UNITY_WSA</strong> 相同。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_WINRT_10_0</strong></td>
+	<td style="text-align:left;">等效于 <strong>UNITY_WSA_10_0</strong>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_WEBGL</strong></td>
+	<td style="text-align:left;">用于 WebGL 的 #define 指令。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_FACEBOOK</strong></td>
+	<td style="text-align:left;">用于 Facebook 平台（WebGL 或 Windows 独立平台）的 #define 指令。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_ADS</strong></td>
+	<td style="text-align:left;">用于从游戏代码中调用 Unity Ads 方法的 #define 指令。5.2 及更高版本。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_ANALYTICS</strong></td>
+	<td style="text-align:left;">用于从游戏代码中调用 Unity Analytics 方法的 #define 指令。5.2 及更高版本。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_ASSERTIONS</strong></td>
+	<td style="text-align:left;">用于断言控制过程的 #define 指令。</td>
+</tr>
+</tbody>
+</table>
+
+<p>从 Unity 2.6.0 开始，可有选择地编译代码。可用选项取决于所使用的 Editor 版本。
+如果版本号为 <strong>X.Y.Z__（例如，2.6.0），Unity 将使用以下格式公开三个全局 #define 指令：__UNITY_X</strong>、<strong>UNITY_X_Y</strong> 和 <strong>UNITY_X_Y_Z</strong>。</p>
+
+<p>以下是 Unity 5.0.1 中公开的 #define 指令的示例：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_5</strong></td>
+	<td style="text-align:left;">用于 Unity 5 发行版的 #define 指令，在每个 5.X.Y 版本中公开。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_5_0</strong></td>
+	<td style="text-align:left;">用于 Unity 5.0 主要版本的 #define 指令，在每个 5.0.Z 版本中公开。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>UNITY_5_0_1</strong></td>
+	<td style="text-align:left;">用于 Unity 5.0.1 次要版本的 #define 指令。</td>
+</tr>
+</tbody>
+</table>
+
+<p>从 Unity 5.3.4 开始，可根据编译或执行给定代码部分所需的最早 Unity 版本来有选择地编译代码。如果采用与上面相同的版本格式 (<strong>X.Y.Z</strong>)，Unity 将以 <strong>UNITY_X_Y_OR_NEWER</strong> 格式公开一个可用于此目的的全局 #define。</p>
+
+<p>支持的 #define 指令为：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>CSHARP_7_3_OR_NEWER</strong></td>
+	<td style="text-align:left;">Defined when building scripts with support for C# 7.3 or newer.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>ENABLE_MONO</strong></td>
+	<td style="text-align:left;">用于 Mono 的脚本后端 #define。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>ENABLE_IL2CPP</strong></td>
+	<td style="text-align:left;">用于 IL2CPP 的脚本后端 #define。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>NET_2_0</strong></td>
+	<td style="text-align:left;">在 Mono 和 IL2CPP 上根据 .NET 2.0 API 兼容性级别构建脚本时定义。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>NET_2_0_SUBSET</strong></td>
+	<td style="text-align:left;">在 Mono 和 IL2CPP 上根据 .NET 2.0 Subset API 兼容性级别构建脚本时定义。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>NET_LEGACY</strong></td>
+	<td style="text-align:left;">Defined when building scripts against .NET 2.0 or .NET 2.0 Subset API compatibility level on Mono and IL2CPP.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>NET_4_6</strong></td>
+	<td style="text-align:left;">在 Mono 和 IL2CPP 上根据 .NET 4.x API 兼容性级别构建脚本时定义。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>NET_STANDARD_2_0</strong></td>
+	<td style="text-align:left;">在 Mono 和 IL2CPP 上根据 .NET 标准 2.0 API 兼容性级别构建脚本时定义。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>ENABLE_WINMD_SUPPORT</strong></td>
+	<td style="text-align:left;">Defined when Windows Runtime support is enabled on IL2CPP. See <a href="IL2CPP-WindowsRuntimeSupport.html">Windows Runtime Support</a> for more details.</td>
+</tr>
+</tbody>
+</table>
+
+<p>可使用 DEVELOPMENT_BUILD #define 来确定脚本是否正在启用了“Development Build”选项的情况下构建的播放器中运行。</p>
+
+<p>还可根据脚本后端有选择地编译代码。</p>
+
+<h2>测试预编译的代码</h2>
+
+<p>下面是如何使用预编译代码的示例。该示例根据为目标构建选择的平台打印一条消息。</p>
+
+<p>首先，通过 <strong>File &gt; Build Settings</strong> 选择要测试代码的平台。随后将显示 <strong>Build Settings</strong> 窗口；从此处选择目标平台。</p>
+
+<figure>
+<img src="../uploads/Main/BuildSettings.png" alt="在 Build Settings 窗口中选择PC, Mac &amp; Linux作为目标平台">
+<figcaption>在 Build Settings 窗口中选择“PC, Mac &amp; Linux”作为目标平台</figcaption>
+</figure>
+
+<p>选择要测试预编译代码的平台，然后单击 <strong>Switch Platform</strong> 向 Unity 告知您所需的目标平台。</p>
+
+<p>创建脚本并复制/粘贴以下代码：</p>
+
+<pre><code>// C#
+using UnityEngine;
+using System.Collections;
+
+public class PlatformDefines : MonoBehaviour {
+  void Start () {
+
+    #if UNITY_EDITOR
+      Debug.Log("Unity Editor");
+    #endif
+    
+    #if UNITY_IOS
+      Debug.Log("Iphone");
+    #endif
+
+    #if UNITY_STANDALONE_OSX
+    Debug.Log("Stand Alone OSX");
+    #endif
+
+    #if UNITY_STANDALONE_WIN
+      Debug.Log("Stand Alone Windows");
+    #endif
+
+  }          
+}
+</code></pre>
+
+<p>要测试代码，请单击 <strong>Play Mode</strong>。通过在 Unity 控制台中检查相关消息来确认代码是否正常工作，具体取决于选择的平台；例如，如果选择 __iOS__，则消息“Iphone”设置为显示在控制台中。</p>
+
+<p>在 C# 中，可使用 <code>CONDITIONAL</code> 属性，这是一种更简洁、更不容易出错的函数剥离方式。请参阅 <a href="https://msdn.microsoft.com/en-us/library/system.diagnostics.conditionalattribute(v=vs.110).aspx">ConditionalAttribute 类</a>以了解更多信息。
+请注意，常见的 Unity 回调（例如：Start()、Update()、LateUpdate()、FixedUpdate()、Awake()）不受此属性的影响，因为它们是直接从引擎调用的，并且出于性能原因，此属性不会考虑它们。</p>
+
+<p>除了基本的 <code>#if</code> 编译器指令外，还可在 C# 中使用多路测试：</p>
+
+<pre><code>
+# if UNITY_EDITOR
+    Debug.Log("Unity Editor");
+
+# elif UNITY_IOS
+    Debug.Log("Unity iPhone");
+
+# else
+    Debug.Log("Any other platform");
+
+# endif
+
+
+</code></pre>
+
+<h2>平台自定义 #define 指令</h2>
+
+<p>It is also possible to add to the built-in selection of #define directives by supplying your own. Open the <strong>Other Settings</strong> panel of the <a href="class-PlayerSettings.html">Player</a> settings and navigate to the <strong>Scripting Define Symbols</strong> text box.</p>
+
+<figure>
+<img src="../uploads/Main/ScriptDefines.png" alt="">
+</figure>
+
+<p>输入要为该特定平台定义的符号名称，以分号分隔。随后可以将这些符号用作 <code>#if</code> 指令中的条件，就像内置条件一样。</p>
+
+<h2>全局自定义 #define 指令</h2>
+
+<p>您可以定义自己的预处理器指令来控制在编译时包含的代码。为此，必须将包含额外指令的文本文件添加到 <strong>Assets</strong> 文件夹。文件名取决于您使用的语言。扩展名为 __.rsp__：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">C#（播放器和 Editor 脚本）</td>
+	<td style="text-align:left;">&lt;项目路径&gt;/Assets/mcs.rsp</td>
+</tr>
+</tbody>
+</table>
+
+<p>举例来说，如果在 <strong>mcs.rsp</strong> 文件中包含单行 <code>-define:UNITY_DEBUG</code>，则 #define 指令 <code>UNITY_DEBUG</code> 将作为 C# 脚本的全局 #define 指令存在，但 Editor 脚本除外。</p>
+
+<p>每次对 <strong>.rsp</strong> 文件进行更改时，都需要重新编译才能使更改生效。可通过更新或重新导入单个脚本（.js 或 .cs）文件来完成此操作。</p>
+
+<p><strong>注意</strong></p>
+
+<p>If you want to modify only global #define directives, use <strong>Scripting Define Symbols</strong> in <a href="class-PlayerSettings.html">Player</a> settings, because this covers all the compilers. If you choose the <strong>.rsp</strong> files instead, you need to provide one file for every compiler Unity uses.</p>
+
+<p>The use of <strong>.rsp</strong> files is described in the ‘Help’ section of the <strong>mcs</strong> application, which is included in the Editor installation folder. You can get more information by running <code>mcs -help</code>. </p>
+
+<p>请注意，<strong>.rsp</strong> 文件需要与正在调用的编译器匹配。例如：</p>
+
+<ul>
+<li>when targeting the .NET 3.5 Equivalent (deprecated) scripting runtime version, <strong>mcs</strong> is used with <code>mcs.rsp</code>, and</li>
+<li>when targeting the .NET 4.x Eqivalent scripting runtime version compiler, <strong>csc</strong> is used with <code>csc.rsp</code>.</li>
+</ul>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–03–16 Page amended with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span><br></p></li>
+<li><p><span class="page-history">删除了三星电视支持。</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnderstandingAutomaticMemoryManagement.html"></a></span><div class="tip">Understanding Automatic Memory Management</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ScriptCompileOrderFolders.html"></a></span><div class="tip">特殊文件夹和脚本编译顺序</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="升级到 Unity 2017.2 - Unity Manual">
+<title>升级到 Unity 2017.2 - Unity Manual</title>
+<meta name="description" content="本页面列出了从早期版本的 Unity 升级到 2017.2 版时可能对现有项目造成影响的更改。">
+<meta property="og:description" content="本页面列出了从早期版本的 Unity 升级到 2017.2 版时可能对现有项目造成影响的更改。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UpgradeGuide20172';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UpgradeGuide20172.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UpgradeGuide20172.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UpgradeGuide20172.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UpgradeGuide20172.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UpgradeGuide20172.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UpgradeGuide20172.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UpgradeGuide20172.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UpgradeGuide20172.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UpgradeGuide20172.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UpgradeGuide20172.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UpgradeGuide20172.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UpgradeGuide20172.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UpgradeGuide20172.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UpgradeGuide20172.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UpgradeGuide20172.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UpgradeGuide20172.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UpgradeGuide20172.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UpgradeGuide20172.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UpgradeGuide20172.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UpgradeGuide20172.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UpgradeGuide20172.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UpgradeGuide20172.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UpgradeGuide20172.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UpgradeGuide20172.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="UpgradeGuides.html">升级指南</a></li>
+<li>升级到 Unity 2017.2</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide20173.html"></a></span><div class="tip">升级到 Unity 2017.3</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide20171.html"></a></span><div class="tip">升级到 Unity 2017.1</div>
+</div>
+</div></div>
+<h1>升级到 Unity 2017.2</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+<!-- Change submissions: https://docs.google.com/document/d/19UVEduEfbR6gjxQrl3Ob-0Wo4gGTilKUBU10lLpMNzM/edit -->
+
+<p>本页面列出了从早期版本的 Unity 升级到 2017.2 版时可能对现有项目造成影响的更改。</p>
+
+<p>例如：</p>
+
+<ul>
+<li><p>数据格式的变化可能导致需要重新烘焙。</p></li>
+<li><p>任何现有函数、参数或组件值的含义或行为的变化。</p></li>
+<li><p>任何函数或功能的弃用。（建议的替代方案。）</p></li>
+</ul>
+
+<hr>
+
+<p><strong>将 MonoBehaviour 添加到 Editor 中的游戏对象时，现在调用 MonoBehaviour.OnValidate</strong></p>
+
+<p>在加载场景、复制游戏对象或 Inspector 中值发生变化时会调用 MonoBehaviour.OnValidate。现在，将 MonoBehaviour 添加到 Editor 中的游戏对象时，也会调用它。</p>
+
+<hr>
+
+<p><strong>脚本：现在，在反序列化后会调用 InitializeOnLoad 回调</strong></p>
+
+<p>InitializeOnLoad 的回调时间发生了变化。以前在调用 Unity API 时，调用 InitializeOnLoad 回调可能导致现有序列化对象出现无效的对象状态。现在，在反序列化之后以及创建所有对象之后调用该回调。在创建对象的过程中，必须调用默认构造函数。此更改意味着现在会在 InitializeOnLoad 静态构造函数之前调用对象构造函数，而以前是在某些对象构造函数之前调用 InitializeOnLoad。</p>
+
+<p>示例：</p>
+
+<pre><code>[System.Serializable]
+public class SomeClass
+{
+    public SomeClass()
+    {
+        Debug.Log("SomeClass constructor");
+    }
+}
+
+public class SomeMonoBehaviour : MonoBehaviour
+{
+    public SomeClass SomeClass;
+}
+
+[InitializeOnLoad]
+public class SomeStaticClass
+{
+    static SomeStaticClass()
+    {
+        Debug.Log("SomeStaticClass static constructor");
+    }
+}
+</code></pre>
+
+<p>以前此代码段的结果为：<br>
+<code>SomeStaticClass static constructor</code> (InitializeOnLoad)<br>
+<code>SomeClass constructor</code>（对象构造函数）</p>
+
+<p>在进行此更改后，现在的结果为：以前此代码段的结果为：<br>
+<code>SomeClass constructor</code>（对象构造函数）<br>
+<code>SomeStaticClass static constructor</code> (InitializeOnLoad)</p>
+
+<hr>
+
+<p><strong>新增了支持 BC5 格式的法线贴图类型。</strong></p>
+
+<p>在此之前，Unity 支持不同压缩格式的 RGB 法线贴图或混合 AG 法线贴图（x 在 Alpha 通道，y 在绿色通道）。现在支持 RG 法线贴图（x 在红色通道，y 在绿色通道）。
+UnpackNormal 着色器函数已升级，现在允许使用 RGB、AG 和 RG 法线贴图而无需添加着色器变体。为了能够做到这一点，UnpackNormal 函数依赖于将法线贴图的未使用通道设置为 1。即，一个混合 AG 法线贴图必须编码为 (1, y, 1, x)，而 RG 为 (x, y, 0, 1)。Unity 法线贴图编码器强制执行此设置。</p>
+
+<p>如果用户使用的是未经修改的 Unity，则无需进行升级。然而，如果用户创建了自己的法线贴图着色器或自己的编码，他们可能需要考虑将混合 AG 法线贴图编码为 (1, y, 1, x)。如果用户在解压缩法线贴图之前在混合 AG 中混合了法线贴图，他们可能需要使用 UnpackNormalDXT5nm 而不是 UnpackNormal。</p>
+
+<hr>
+
+<p><strong>在 Editor 中启动时始终预编译的托管程序集 (.dll) 和程序集定义文件程序集。</strong></p>
+
+<p>即使在其他脚本中存在编译错误，也可以在 Editor 启动时加载预编译的托管程序集 (.dll) 和程序集定义文件程序集。这对于无论项目中是否存在其他脚本编译错误都应始终在启动时加载的 Editor 扩展程序集非常有用。</p>
+
+<hr>
+
+<p><strong>HDR 发光。</strong></p>
+
+<p>如果使用预计算实时 GI 或烘焙 GI，在早期版本的 Unity 中设置的强烈发光材质现在看起来会更加强烈，因为它们的范围不再受限制。先前使用的 RGBM 编码对于伽马空间给出了 97 的有效范围，对于线性颜色空间则给出了 8 的有效范围。HDR 拾色器的最大范围为 99，因此可以将某些材质设置为比看起来更强烈。
+升级后，发光颜色作为真 HDR 16 位浮点值（范围现在为 64K）传递到 GI 系统。在内部，实时 GI 系统使用 rgb9e5 共享指数格式，这种格式可以表示这些强烈的值，但烘焙光照贴图受其 RGBM 编码的限制。烘焙光照贴图的 HDR 将在以后的版本中添加。</p>
+
+<hr>
+
+<p><strong>VR 重命名为 XR。</strong></p>
+
+<p>UnityEngine.VR.* 命名空间已重命名为 UnityEngine.XR.*。名称中包含 VR 的所有类型也已重命名为相应的 XR 版本。例如：UnityEngine.VR.VRSettings 现在变为 UnityEngine.XR.XRSettings，等等。</p>
+
+<p>API Updater 已配置为自动将现有脚本和程序集更新为新类型名称和命名空间。如果不想使用 API Updater，还可以手动更新命名空间和类型。</p>
+
+<p>命名空间更改：</p>
+
+<ul>
+<li>UnityEngine.VR -&gt; UnityEngine.XR</li>
+<li>UnityEngine.VR.WSA -&gt; UnityEngine.XR.WSA</li>
+<li>UnityEngine.VR.WSA.Input -&gt; UnityEngine.XR.WSA.Input</li>
+<li>UnityEngine.VR.WSA.Persistence -&gt; UnityEngine.XR.WSA.Persistence</li>
+<li>UnityEngine.VR.WSA.Sharing -&gt; UnityEngine.XR.WSA.Sharing</li>
+<li>UnityEngine.VR.WSA.WebCam -&gt; UnityEngine.XR.WSA.WebCam</li>
+</ul>
+
+<p>UnityEngine.VR 类型更改：</p>
+
+<ul>
+<li>VRDevice -&gt; XRDevice</li>
+<li>VRNodeState -&gt; XRNodeState</li>
+<li>VRSettings -&gt; XRSettings</li>
+<li>VRStats -&gt; XRStats</li>
+<li>VRNode -&gt; XRNode</li>
+</ul>
+
+<p>所有 <code>VR.*</code> 性能分析器条目也已更改为 <code>XR.*</code>。</p>
+
+<hr>
+
+<p><strong>UnityEngine.dll 现在针对每个 UnityEngine 模块拆分为独立的 dll。</strong></p>
+
+<p>UnityEngine.dll（包含所有公共脚本 API）已被分成代码模块，涵盖引擎的不同子系统。这使 Unity 代码库更便于组织，具有更清晰的内部依赖关系，更适合使用内部工具，并使代码库更便于剥离。分离后的模块包括 UnityEngine.Collider（现在位于 UnityEngine.PhysicsModule.dll 中）和 UnityEngine.Font（现在位于 UnityEngine.TextRendering.dll 中）。</p>
+
+<p>此更改通常应该不会影响任何现有项目，并且脚本现在会根据正确的程序集自动编译。Unity 现在包含一个 UnityEngine.dll 程序集文件，其中包含所有 UnityEngine 类型的<a href="https://docs.microsoft.com/en-us/dotnet/framework/app-domains/type-forwarding-in-the-common-language-runtime">类型转发器</a>，适用于引用 DLL 的所有预编译程序集，通过将文件转发到新位置来确保向后兼容性。</p>
+
+<p>但是，有一种情况，现有代码可能因为此更改而中断。也就是说，如果代码使用反射来获取 UnityEngine 类型，并假设所有类型都存在于同一个程序集内。这意味着此类代码将失败，因为 Collider 和 Font 现在位于不同的程序集内：</p>
+
+<pre><code>System.Type colliderType = typeof(Collider);
+System.Type fontType = colliderType.Assembly.GetType("Font");
+</code></pre>
+
+<p>因为使用了类型转发器，从“UnityEngine”程序集获取 Collider 或 Font 类型仍然有效，如下所示：</p>
+
+<pre><code>System.Type.GetType("UnityEngine.Collider, UnityEngine")
+</code></pre>
+
+<p>Unity 仍然捆绑一个完整的单个 UnityEngine.dll，其中包含了 Unity Editor 的 Managed/UnityEngine.dll 文件夹中的所有 UnityEngine API。这样可以确保引用 UnityEngine.dll 的所有现有 Visual Studio/MonoDevelop 解决方案可以继续构建，而无需更新来引用新的模块化程序集。应继续使用此程序集在自定义解决方案中引用 UnityEngine API，因为模块的内部拆分可能会发生变化。</p>
+
+<hr>
+
+<p><strong>标准着色器中的材质平滑度。</strong></p>
+
+<p>使用 GGX 版本标准着色器的纯平滑材质现在可以接受镜面高光，因此增加了这些材质的真实感。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2017–10–06 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide20173.html"></a></span><div class="tip">升级到 Unity 2017.3</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide20171.html"></a></span><div class="tip">升级到 Unity 2017.1</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

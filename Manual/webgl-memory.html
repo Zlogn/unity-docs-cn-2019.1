@@ -1,0 +1,223 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Memory in WebGL - Unity Manual">
+<title>Memory in WebGL - Unity Manual</title>
+<meta name="description" content="Unity WebGL 中的内存可能成为限制可运行内容的复杂性的制约因素，因此我们希望在此提供一些关于如何在 WebGL 中使用内存的说明。">
+<meta property="og:description" content="Unity WebGL 中的内存可能成为限制可运行内容的复杂性的制约因素，因此我们希望在此提供一些关于如何在 WebGL 中使用内存的说明。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'webgl-memory';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/webgl-memory.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/webgl-memory.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/webgl-memory.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/webgl-memory.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/webgl-memory.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/webgl-memory.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/webgl-memory.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/webgl-memory.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/webgl-memory.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/webgl-memory.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/webgl-memory.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/webgl-memory.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/webgl-memory.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/webgl-memory.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/webgl-memory.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/webgl-memory.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/webgl-memory.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/webgl-memory.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/webgl-memory.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/webgl-memory.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/webgl-memory.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/webgl-memory.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/webgl-memory.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/webgl-memory.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
+<li><a href="webgl.html">WebGL</a></li>
+<li><a href="webgl-gettingstarted.html">WebGL 开发入门</a></li>
+<li>Memory in WebGL</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="webgl-performance.html"></a></span><div class="tip">WebGL 性能注意事项</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="webgl-interactingwithbrowserscripting.html"></a></span><div class="tip">WebGL：与浏览器脚本交互</div>
+</div>
+</div></div>
+<h1>Memory in WebGL</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity WebGL 中的内存可能成为限制可运行内容的复杂性的制约因素，因此我们希望在此提供一些关于如何在 WebGL 中使用内存的说明。</p>
+
+<p>WebGL 内容将在浏览器中运行，因此浏览器必须在浏览器的内存空间内分配内存。可用内存量可能会有很大差异，具体取决于所使用的浏览器、操作系统和设备。决定因素包括浏览器是 32 位还是 64 位进程，浏览器为每个标签使用单独的进程还是让您的内容与所有其他打开的标签共享内存空间，以及浏览器的 JavaScript 引擎需要多少内存来解析您的代码。</p>
+
+<p>Unity WebGL 内容在几个方面需要浏览器分配大量内存：</p>
+
+<h2>Unity Heap</h2>
+
+<p>This is the memory Unity uses to store all its state, managed and native objects and currently loaded assets and scenes. This is similar to the memory used by Unity Players on any other platform. You can configure the size of this in the Unity WebGL Player settings. You can use the Unity <a href="Profiler.html">Profiler</a> to profile and sample the contents of this memory. This memory will be created as a TypedArray of bytes in JavaScript code, and requires the browser be able to allocate a consecutive block of memory of this size. You will want this space to be as small as possible (so that the browser can allocate it even if memory is fragmented), but large enough to fit all the data required to play any scene of your content.</p>
+
+<h2>Asset Data</h2>
+
+<p>创建 Unity WebGL 构建时，Unity 将写出一个 .data 文件，其中包含您的内容所需的所有场景和资源。由于 WebGL 没有真正的文件系统，因此在您的内容启动之前将下载此文件，并且在内容运行的整个过程中，未压缩的数据将保存在连续的浏览器内存块中。因此，为了缩短下载时间和降低内存使用量，应尽量保持这些数据尽可能小。请参阅文档的<a href="ReducingFilesize.html">减小文件大小</a>页面以了解如何优化资源的构建大小。</p>
+
+<p>为减少加载时间和资源使用的内存量，可采取的另一项措施是将资源数据打包为 <a href="AssetBundlesIntro.html">AssetBundle</a>。通过这种做法，您可以完全控制何时需要下载资源，并可在不再需要它们时卸载它们，从而释放它们使用的内存。请注意，AssetBundle 将直接加载到 Unity 堆中，并且不会导致浏览器进行额外的分配（除非您使用 <strong><a href="../ScriptReference/WWW.LoadFromCacheOrDownload.html">WWW.LoadFromCacheOrDownload</a></strong> 进行资源包缓存；此情况下将使用内存映射式虚拟文件系统，由浏览器的 IndexedDB 提供支持）。</p>
+
+<h2>Dealing with memory issues</h2>
+
+<p>When you see an error related to memory in a Unity WebGL build, it is important to understand whether it is the browser which is failing to allocate memory or if the Unity WebGL runtime is failing to allocate a free block of memory within the pre-allocated block of the Unity heap. If the browser is failing to allocate memory, then it may help to try to reduce the size used by one or more of the memory areas above (for instance by reducing the size of the Unity heap). On the other hand, if the Unity runtime is failing to allocate a block inside the Unity heap, you may want to increase the size of that instead.</p>
+
+<p>Unity will try to interpret error messages to tell which of the two it is (and provide suggestions on what to do). Since different browsers may report different messages, that is not always easy, however, and we may not be interpreting all of them. When you see a generic “Out of memory” error from the browser, it is likely to be an issue of the browser running out of memory (where you might want to use a smaller Unity heap). Also, you may sometimes see browsers simply crashing when loading Unity content without showing a human-parseable error message. This can have many reasons, but is frequently caused by JavaScript engines requiring too much memory to parse and optimize the generated code.</p>
+
+<h3>Large-Allocation Http Header</h3>
+
+<p>Your server can emit the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Large-Allocation">Large-Allocation</a> http header for your content. This tells supported browsers (currently only Firefox) about your memory needs, allowing them to spawn a new process with an unfragmented memory space, or to perform other housekeeping to make sure that the large allocation succeeds. This can solve issues where the browser runs out of memory when trying to allocate the Unity heap, especially on 32-bit browsers.</p>
+
+<h2>Garbage Collection considerations</h2>
+
+<p>When you allocate managed objects in Unity, they will need to be garbage collected when they are no longer used. See our documentation on <a href="UnderstandingAutomaticMemoryManagement.html">automatic memory management</a> for more information. In WebGL, this is the same. Managed, garbage collected memory is allocated inside the Unity heap.</p>
+
+<p>One distinction in WebGL, however, concerns the points in time when garbage collection (GC) can take place. To perform garbage collection, the GC would normally need to pause all running threads and inspect their stacks and registers for loaded object references. This is not currently possible in JavaScript. For this reason, the GC will only run in WebGL in situations where the stack is known to be empty (which is currently once after every frame). This is not a problem for most content which deals with managed memory conservatively and has relatively few GC allocations within each frame (you can debug this using the Unity profiler). </p>
+
+<p>However, the following code would fail running on WebGL, becuase it would not get a chance to run the GC between iterations of the loop, to free up memory used by all the intermediate string objects - which would eventually cause it to run out of memory in the Unity heap.</p>
+
+<pre><code>string hugeString = "";
+
+for (int i = 0; i &lt; 100000; i++)
+{
+    hugeString += "foo";
+}
+</code></pre>
+
+<h2>Further reading</h2>
+
+<ul>
+<li><p><a href="https://blogs.unity3d.com/2016/09/20/understanding-memory-in-unity-webgl/">Unity blog: Understanding Memory in Unity WebGL</a></p></li>
+<li><p><a href="https://blogs.unity3d.com/2016/12/05/unity-webgl-memory-the-unity-heap/">Unity blog: Unity WebGL Memory: The Unity Heap</a></p></li>
+</ul>
+
+<hr>
+
+<p><span class="page-edit"> 2018–08–23 Page amended with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="webgl-performance.html"></a></span><div class="tip">WebGL 性能注意事项</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="webgl-interactingwithbrowserscripting.html"></a></span><div class="tip">WebGL：与浏览器脚本交互</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

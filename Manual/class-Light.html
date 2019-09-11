@@ -1,0 +1,303 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Light Inspector - Unity Manual">
+<title>Light Inspector - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/class-Light-0.png">
+<meta name="description" content="光源决定对象的着色及其投射的阴影。因此，它们是图形渲染的基本部分。请参阅关于光照和全局光照的文档以了解关于 Unity 中的光照概念的更多详细信息。">
+<meta property="og:description" content="光源决定对象的着色及其投射的阴影。因此，它们是图形渲染的基本部分。请参阅关于光照和全局光照的文档以了解关于 Unity 中的光照概念的更多详细信息。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-Light';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-Light.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-Light.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-Light.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-Light.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-Light.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-Light.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-Light.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-Light.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-Light.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-Light.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-Light.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-Light.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-Light.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-Light.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-Light.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-Light.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-Light.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-Light.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-Light.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-Light.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-Light.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-Light.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-Light.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-Light.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="LightingOverview.html">光照</a></li>
+<li><a href="LightSources.html">光源</a></li>
+<li>Light Inspector</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Lighting.html"></a></span><div class="tip">光源类型</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UsingLights.html"></a></span><div class="tip">使用光源</div>
+</div>
+</div></div>
+<h1>Light Inspector</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>光源决定对象的着色及其投射的阴影。因此，它们是图形渲染的基本部分。请参阅关于<a href="LightingOverview.html">光照</a>和<a href="GlobalIllumination.html">全局光照</a>的文档以了解关于 Unity 中的光照概念的更多详细信息。</p>
+
+<figure>
+<img src="../uploads/Main/class-Light-0.png" alt="">
+</figure>
+
+<h2>属性</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">属性：</th>
+	<th style="text-align:left;">功能：</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Type</strong></td>
+	<td style="text-align:left;">当前的光源类型。可能的值为 <strong>Directional</strong>、<strong>Point</strong>、<strong>Spot</strong> 和 <strong>Area__（请参阅<a href="Lighting.html">光照概述</a>以了解这些类型的详细信息）。 |
+| </strong>Range<strong>| 定义从对象中心发出的光线的行进距离（仅限__点光源__和__聚光灯__）。 |
+| </strong>Spot Angle<strong>| 定义聚光灯锥形底部的角度（以度为单位）（仅限__聚光灯__）。 |
+| </strong>Color<strong>| 使用拾色器来设置发光的颜色。 |
+| </strong>Mode<strong>| 指定<a href="LightModes.html">光照模式</a>，此模式用于确定是否以及如何“烘焙”光源。模式可能为 </strong>Realtime<strong>、</strong>Mixed__ 和 <strong>Baked</strong>。请参阅关于<a href="LightMode-Realtime.html">实时光照</a>、<a href="LightMode-Mixed.html">混合光照</a>和<a href="LightMode-Baked.html">烘焙光照</a>的文档以了解更多详细信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Intensity</strong></td>
+	<td style="text-align:left;">设置光源的亮度。<strong>方向光__的默认值为 0.5。</strong>点光源<strong>、</strong>聚光灯__或__面光源__的默认值为 1。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Indirect Multiplier</strong></td>
+	<td style="text-align:left;">使用此值可改变间接光的强度。间接光是从一个对象弹射到另一个对象的光。<strong>Indirect Multiplier</strong> 定义由全局光照 (GI) 系统计算的散射光的亮度。如果将 <strong>Indirect Multiplier</strong> 设置为低于 <strong>1</strong> 的值，每次反弹都会使散射光变得更暗。大于 <strong>1</strong> 的值使光线在每次弹射之后更明亮。例如，将阴暗处的阴暗面（例如洞穴内部）变亮到能够清晰可见，这个非常有用。或者，如果要使用<a href="GlobalIllumination.html">实时全局光照</a>，但是希望限制单一实时光源以便它只发出直射光，请将其 <strong>Indirect Multiplier</strong> 设置为 <strong>0</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Shadow Type</strong></td>
+	<td style="text-align:left;">决定此光源投射生硬阴影、柔和阴影还是根本不投射阴影。请参阅有关<a href="ShadowOverview.html">阴影</a>的文档以了解关于硬阴影以及软阴影的信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Baked Shadow Angle</td>
+	<td style="text-align:left;">如果 <strong>Type</strong> 设置为 <strong>Directional</strong> 且 <strong>Shadow Type</strong> 设置为 <strong>Soft Shadows__，此属性将为阴影边缘添加一些人工柔化，使其看起来更自然。 |
+|    Baked Shadow Radius| 如果 </strong>Type__ 设置为 <strong>Point</strong> 或 <strong>Spot</strong> 且 <strong>Shadow Type</strong> 设置为 <strong>Soft Shadows__，此属性将为阴影边缘添加一些人工柔化，使其看起来更自然。 |
+|    Realtime Shadows| 这些属性在 </strong>Shadow Type__ 设置为 <strong>Hard Shadows</strong> 或 <strong>Soft Shadows</strong> 时可用。使用这些属性可控制实时阴影渲染设置。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        Strength</td>
+	<td style="text-align:left;">使用滑动条来控制此光源所投射阴影的暗度（以 0 和 1 之间的值表示）。默认情况下，此值设置为 1。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        Resolution</td>
+	<td style="text-align:left;">控制阴影贴图的渲染分辨率。较高的分辨率会增加阴影的保真度，但需要更多的 GPU 时间和内存使用量。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        Bias</td>
+	<td style="text-align:left;">使用滑动条来控制阴影被推离光源的距离（定义为 0 到 2 之间的值）。这可用于避免错误的自阴影瑕疵。请参阅阴影贴图和 Bias 属性以了解更多信息。默认情况下，该值设置为 0.05。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        Normal Bias</td>
+	<td style="text-align:left;">使用滑动条来控制阴影投射面沿着表面法线收缩的距离（定义为 0 到 3 之间的值）。这可用于避免错误的自阴影瑕疵。请参阅关于阴影贴图和 Bias 属性的文档以了解更多信息。默认情况下，该值设置为 0.4。<br>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        Near Plane</td>
+	<td style="text-align:left;">使用滑动条来控制渲染阴影时近裁剪面的值，定义为介于 0.1 和 10 之间的值。此值被限制为光源的 <strong>Range</strong> 属性的 0.1 个单位或 1％（以较低者为准）。默认情况下，该值设置为 0.2。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cookie</strong></td>
+	<td style="text-align:left;">指定用于投射阴影的纹理遮罩（例如，为光源创建轮廓或图案光照）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Draw Halo</strong></td>
+	<td style="text-align:left;">勾选此框可绘制直径等于 <strong>Range</strong> 值的光源的球形<a href="class-Halo.html">光环 (Halo)</a>。您还可以使用 Halo 组件来实现此效果。请注意，除了光源 (Light) 组件中的光环外，还绘制 Halo 组件，并且 Halo 组件的 <strong>Size</strong> 参数将确定其半径，而不是直径。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Flare</strong></td>
+	<td style="text-align:left;">如果要设置<a href="class-Flare.html">光晕</a>在光源位置渲染，请将资源置于此字段中以用作其源。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Render Mode</strong></td>
+	<td style="text-align:left;">使用此下拉选单来设置所选光源的渲染优先级。这会影响光照保真度和性能（请参阅下文的<em>性能注意事项</em>）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Auto</td>
+	<td style="text-align:left;">The rendering method is determined at run time, depending on the brightness of nearby lights and the current <a href="class-QualitySettings.html">Quality</a> settings.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Important</td>
+	<td style="text-align:left;">光源始终以像素质量为单位进行渲染。<strong>Important</strong> 模式仅用于最显著的视觉效果（例如，玩家汽车的前照灯）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Not Important</td>
+	<td style="text-align:left;">光源以快速、顶点/对象模式进行渲染。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Culling Mask</strong></td>
+	<td style="text-align:left;">使用此属性可选择性排除对象组，使其不受光源影响。有关更多信息，请参阅<a href="Layers.html">层</a>。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>详细信息</h2>
+
+<p>如果创建包含 Alpha 通道的纹理并将其分配给光源的 <strong>Cookie</strong> 变量，则会从光源投射剪影。剪影的 Alpha 遮罩会调制光源亮度，从而在表面上产生亮点和暗点。是为场景增加复杂性或氛围的好方法。</p>
+
+<p>Unity 中的所有<a href="Built-inShaderGuide.html">内置着色器</a>能与任何类型的光源无缝协作。然而，<a href="Built-inShaderGuide.html">顶点光照 (VertexLit)</a> 着色器无法显示剪影或阴影。</p>
+
+<p>所有光源都可以选择性投射阴影。为此，应将每个光源的 <strong>Shadow Type</strong> 属性设置为 <strong>Hard Shadows</strong> 或 <strong>Soft Shadows</strong>。请参阅关于<a href="ShadowOverview.html">阴影</a>的文档以了解更多信息。</p>
+
+<h2>方向光阴影</h2>
+
+<p>请参阅关于<a href="DirLightShadows.html">方向光阴影</a>的文档以获取其工作原理的深入说明。请注意，使用前向渲染时，会对带有剪影的方向光禁用阴影。在此情况下，可以编写自定义着色器来启用阴影；请参阅关于<a href="SL-SurfaceShaders.html">编写表面着色器</a>的文档以了解更多详细信息。</p>
+
+<h2>提示</h2>
+
+<ul>
+<li>带有剪影的__聚光灯__可以非常有效地产生光线从窗户进入的效果。</li>
+<li>低强度点光源有助于为场景提供深度。</li>
+<li>为了达到最大性能，请使用<a href="Built-inShaderGuide.html">顶点光照 (VertexLit)</a> 着色器。此着色器仅执行顶点光照，从而在低端显卡上提供更高的吞吐量。</li>
+</ul>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2017–06–08 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">5.6 版更新</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Lighting.html"></a></span><div class="tip">光源类型</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UsingLights.html"></a></span><div class="tip">使用光源</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

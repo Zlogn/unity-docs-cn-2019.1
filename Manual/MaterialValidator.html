@@ -1,0 +1,421 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="基于物理的渲染材质验证器 - Unity Manual">
+<title>基于物理的渲染材质验证器 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/materialValidator1.png">
+<meta name="description" content="基于物理的渲染材质验证器 (Physically Based Rendering Material Validator) 是 Scene 视图中的一种绘制模式，它可以确保材质使用的值处于基于物理的着色器的建议参考值范围内。如果特定材质中的像素值落在参考范围之外，则材质验证器会突出显示不同颜色的像素以指示失败状态。">
+<meta property="og:description" content="基于物理的渲染材质验证器 (Physically Based Rendering Material Validator) 是 Scene 视图中的一种绘制模式，它可以确保材质使用的值处于基于物理的着色器的建议参考值范围内。如果特定材质中的像素值落在参考范围之外，则材质验证器会突出显示不同颜色的像素以指示失败状态。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'MaterialValidator';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/MaterialValidator.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/MaterialValidator.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/MaterialValidator.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/MaterialValidator.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/MaterialValidator.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/MaterialValidator.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/MaterialValidator.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/MaterialValidator.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/MaterialValidator.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/MaterialValidator.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/MaterialValidator.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/MaterialValidator.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/MaterialValidator.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/MaterialValidator.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/MaterialValidator.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/MaterialValidator.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/MaterialValidator.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/MaterialValidator.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/MaterialValidator.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/MaterialValidator.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/MaterialValidator.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/MaterialValidator.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/MaterialValidator.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/MaterialValidator.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="Shaders.html">材质、着色器和纹理</a></li>
+<li>基于物理的渲染材质验证器</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="shader-StandardParticleShaders.html"></a></span><div class="tip">Standard Particle Shaders</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="MaterialsAccessingViaScript.html"></a></span><div class="tip">通过脚本访问和修改材质参数</div>
+</div>
+</div></div>
+<h1>基于物理的渲染材质验证器</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>基于物理的渲染材质验证器 (Physically Based Rendering Material Validator) 是 Scene 视图中的一种绘制模式，它可以确保材质使用的值处于基于物理的着色器的建议参考值范围内。如果特定材质中的像素值落在参考范围之外，则材质验证器会突出显示不同颜色的像素以指示失败状态。</p>
+
+<p>要使用材质验证器，请选择 Scene 视图的__绘制模式 (Draw Mode)__ 下拉菜单，默认情况下该菜单通常设置为 <strong>Shaded</strong>。</p>
+
+<figure>
+<img src="../uploads/Main/materialValidator1.png" alt="Scene 视图的绘制模式下拉菜单">
+<figcaption>Scene 视图的绘制模式下拉菜单</figcaption>
+</figure>
+
+<p>导航到 <strong>Material Validation</strong> 部分。材质验证器有两种模式：__Validate Albedo__ 和 <strong>Validate Metal Specular</strong>。</p>
+
+<figure>
+<img src="../uploads/Main/materialValidator2.png" alt="Scene 视图绘制模式下拉菜单中的 Material Validation 选项">
+<figcaption>Scene 视图绘制模式下拉菜单中的 Material Validation 选项</figcaption>
+</figure>
+
+<p><strong>注意</strong>：还可以使用 <a href="StandardShaderMaterialCharts.html">Unity 的材质图表</a>来检查建议值。在创作材质时，您仍需要使用这些图表来决定__反照率__和__金属镜面反射__值。但是，材质验证器提供了一种可视化的编辑器内部验证方式，可让您在资源处于场景中时快速检查材质的值是否有效。</p>
+
+<p><strong>另请注意</strong>：验证器仅适用于线性颜色空间。基于物理的渲染不适用于伽马颜色空间，因此如果您要使用基于物理的渲染 (PBR) 和 PBR 材质验证器，那么同时还应使用<a href="LinearRendering-LinearOrGammaWorkflow.html">线性颜色空间</a>。</p>
+
+<h2>Validate Albedo 模式</h2>
+
+<figure>
+<img src="../uploads/Main/materialValidator3.png" alt="处于 Validate Albedo 模式时在 Scene 视图中显示的 PBR 验证设置 (PBR Validation Settings)">
+<figcaption>处于 Validate Albedo 模式时在 Scene 视图中显示的 PBR 验证设置 (PBR Validation Settings)</figcaption>
+</figure>
+
+<p>将 Material Validation 设置为 Validate Albedo 时，在 Scene 视图中显示的 PBR 验证设置 (PBR Validation Settings) 如下。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Check Pure Metals</strong></td>
+	<td style="text-align:left;">如果希望材质验证器以黄色突出显示所发现的由 Unity 定义为金属性但具有非零反照率值的像素，请启用此复选框。有关更多详细信息，请参阅下面的<a href="#pureMetals">纯金属</a>。默认情况下未启用此选项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Luminance Validation</strong></td>
+	<td style="text-align:left;">使用下拉选单选择材质验证器的预设配置。如果选择 <strong>Default Luminance</strong> 以外的任何选项，还可以调整 Hue Tolerance 和 Saturation Tolerance。此属性名称下方的色带表示该配置的反照率颜色。下拉选单下方的 Luminance 值表示最小和最大亮度值。材质验证器会突出显示亮度值超出这些值的所有像素。默认情况下，此选项设置为 <strong>Default Luminance</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Hue Tolerance</strong></td>
+	<td style="text-align:left;">检查材质的反照率颜色值时，此滑动条允许您控制材质色调与验证配置中的色调之间允许的误差量。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2">Saturation Tolerance</td>
+	<td style="text-align:left;">检查材质的反照率颜色值时，此滑动条允许您控制材质饱和度与验证配置中的饱和度之间允许的误差量。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Color Legend</strong></td>
+	<td style="text-align:left;">这些颜色对应于材质验证器在材质像素超出定义值时将会显示在 Scene 视图中的颜色。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">
+<strong>Red</strong> Below Minimum Luminance Value</td>
+	<td style="text-align:left;">材质验证器以红色突出显示低于 <strong>Luminance Validation</strong> 中定义的最小亮度值的任何像素（表示它们太暗）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">
+<strong>Blue</strong> Above Maximum Luminance Value</td>
+	<td style="text-align:left;">材质验证器以蓝色突出显示高于 <strong>Luminance Validation</strong> 中定义的最大亮度值的任何像素（表示它们太亮）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">
+<strong>Yellow</strong> Not A Pure Metal</td>
+	<td style="text-align:left;">如果启用了 Check Pure Metals 选项，则材质验证器会以黄色突出显示由 Unity 定义为金属性但具有非零反照率值的像素。有关更多详细信息，请参阅下面的“纯金属”。</td>
+</tr>
+</tbody>
+</table>
+
+<p>Unity 的<a href="StandardShaderMaterialCharts.html">材质图表</a>定义了非金属的标准亮度范围为 50–243 sRGB，而金属的标准亮度范围为 186–255 sRGB。<strong>Validate Albedo</strong> 模式会使用不同颜色显示处于这些范围之外的任何像素，以指示该值太低或太高。</p>
+
+<p>在下面的示例中，第一个纹理低于最小亮度值，因此太暗。第四个纹理高于最小亮度值，因此太亮。</p>
+
+<figure>
+<img src="../uploads/Main/materialValidator4.jpg" alt="一个场景（未启用材质验证器）中的第一个和第四个材质具有不正确的反照率值">
+<figcaption>一个场景（未启用材质验证器）中的第一个和第四个材质具有不正确的反照率值</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/materialValidator5.jpg" alt="启用了材质验证器并设置为 Validate Albedo 模式的相同场景。低于最小亮度值的纹理为红色。高于最小亮度值的纹理为蓝色">
+<figcaption>启用了材质验证器并设置为 Validate Albedo 模式的相同场景。低于最小亮度值的纹理为红色。高于最小亮度值的纹理为蓝色</figcaption>
+</figure>
+
+<p><a href="StandardShaderMaterialCharts.html">材质图表</a>提供常见材质的反照率值。反照率值的亮度对产生的漫射光量有巨大影响，因此<a href="GIIntro.html">全局光照</a>烘焙必须确保不同的材质类型位于正确的亮度范围内（彼此成比例），这一点十分重要。为了方便正确设置这些值，可从 Luminance Validation 下拉选单的预设选项中进行选择，该下拉选单提供了常用的材质反照率值以便验证特定材质类型的亮度范围。</p>
+
+<h3>覆盖默认亮度值</h3>
+
+<p>根据项目的美术风格，您可能希望材质的亮度值与预设的亮度范围不同。在这种情况下，可使用自己的值覆盖材质验证器使用的内置反照率值。要覆盖预设亮度范围，请将每种所需材质类型的 <a href="../ScriptReference/Rendering.AlbedoSwatchInfo.html">AlbedoSwatchInfo</a> 值数组分配给属性 <a href="../ScriptReference/Rendering.EditorGraphicsSettings-albedoSwatches.html">EditorGraphicsSettings.albedoSwatches</a>。</p>
+
+<h2>Validate Metal Specular 模式</h2>
+
+<figure>
+<img src="../uploads/Main/materialValidator6.png" alt="处于 Validate Metal Specular 模式时的 PBR 验证设置 (PBR Validation Settings)">
+<figcaption>处于 Validate Metal Specular 模式时的 PBR 验证设置 (PBR Validation Settings)</figcaption>
+</figure>
+
+<p>将 <strong>Material Validation</strong> 设置为 <strong>Validate Metal Specular</strong> 时，在 Scene 视图中显示的 PBR 验证设置 (PBR Validation Settings) 如下。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Check Pure Metals</strong></td>
+	<td style="text-align:left;">如果希望材质验证器以黄色突出显示所发现的由 Unity 定义为金属性但具有非零反照率值的像素，请启用此复选框。有关更多详细信息，请参阅下面的“纯金属”。默认情况下未启用此选项。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Color Legend</strong></td>
+	<td style="text-align:left;">这些颜色对应于材质验证器在材质像素无效时（这意味着它们的镜面反射值超出了该材质类型（金属性或非金属性）的有效范围）在 Scene 视图中显示的颜色。有效范围见下表。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">
+<strong>Blue</strong> Below Minimum Specular Value</td>
+	<td style="text-align:left;">材质验证器以红色突出显示低于最小镜面反射值的所有像素。（40 表示非金属性，155 表示金属性）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">
+<strong>Red</strong> Above Maximum Specular Value</td>
+	<td style="text-align:left;">材质验证器以蓝色突出显示高于最大镜面反射值的所有像素。（75 表示非金属性，255 表示金属性）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">
+<strong>Yellow</strong> Not A Pure Metal</td>
+	<td style="text-align:left;">如果启用了 <strong>Check Pure Metals</strong> 选项，则材质验证器会以黄色突出显示由 Unity 定义为金属性但具有非零反照率值的像素。有关更多详细信息，请参阅下面的“纯金属”。</td>
+</tr>
+</tbody>
+</table>
+
+<p>Unity 的<a href="StandardShaderMaterialCharts.html">材质图表</a>定义了两个独立的镜面反射颜色范围：</p>
+
+<ul>
+<li>__非金属性材质__：40–75 sRGB</li>
+<li>__金属性材质__：155 - 255 sRGB</li>
+</ul>
+
+<p>在 Unity 中，所有非金属性材质都具有始终处于正确范围内的恒定镜面反射颜色。然而，金属性材质通常具有太低的镜面反射值。为了帮助您识别存在此问题的金属性材质，材质验证器的 <strong>Validate Metal Specular</strong> 模式使用颜色来标示镜面反射颜色值太低的所有像素。根据定义，这包括所有非金属性材质。</p>
+
+<p>在下面的示例中，左侧材质低于最小镜面反射值，因此太暗。这也适用于场景的背景。右侧材质的镜面反射值处于有效范围内。</p>
+
+<figure>
+<img src="../uploads/Main/materialValidator7.jpg" alt="包含两种金属性材质的场景。左侧材质的金属性镜面反射值不正确">
+<figcaption>包含两种金属性材质的场景。左侧材质的金属性镜面反射值不正确</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/materialValidator8.png" alt="启用了材质验证器并设置为 Validate Metal Specular 模式的相同场景">
+<figcaption>启用了材质验证器并设置为 <strong>Validate Metal Specular</strong> 模式的相同场景</figcaption>
+</figure>
+
+<p><a name="pureMetals"></a> </p>
+
+<h3>纯金属</h3>
+
+<p>Unity 将镜面反射颜色大于 155 sRGB 的基于物理的着色材质定义为金属性材质。Unity 将金属性材质定义为__纯金属__</p>
+
+<p>如果非金属性表面的镜面反射颜色值太高，但反照率值为非零，则通常是由于创作错误导致的。材质验证器还有一个名为 <strong>Check Pure Metals</strong> 的选项。启用此选项后，材质验证器会以黄色显示由 Unity 定义为金属性但具有非零反照率值的所有材质。在下面的图像中可以看到这方面的一个例子。此处显示了三种材质，左侧和右侧材质为纯金属，但中间的材质不是，因此材质验证器将其显示为黄色：</p>
+
+<figure>
+<img src="../uploads/Main/materialValidator9.jpg" alt="包含三种金属性材质的场景。中间的材质不是纯金属（它具有非零反照率值）">
+<figcaption>包含三种金属性材质的场景。中间的材质不是纯金属（它具有非零反照率值）</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/materialValidator10.png" alt="启用了__材质验证器、设置为 Validate Metal Specular__ 模式并启用了 Check Pure Metals 的相同场景">
+<figcaption>启用了__材质验证器<strong>、设置为 </strong>Validate Metal Specular__ 模式并启用了 Check Pure Metals 的相同场景</figcaption>
+</figure>
+
+<p>在上面的第二张图中，背景为红色，这是因为背景中的材质低于材质验证器的 <strong>Validate Metal Specular</strong> 模式下的最小镜面反射值。</p>
+
+<p>对于金属性和非金属性属性相结合的复杂材质，纯金属检查器可能会拾取一些无效像素，但如果材质完全无效，则通常表示存在创作错误。</p>
+
+<h2>实现</h2>
+
+<p>只要材质使用 Unity <a href="shader-StandardShader.html">标准着色器</a>或<a href="SL-SurfaceShaders.html">表面着色器</a>，即可采用材质验证器。但是，自定义着色器需要一个名为 <code>"META"</code> 的 pass。大多数支持光照贴图的自定义着色器已经定义了此 pass。请参阅有关 <a href="MetaPass.html">Meta pass</a> 的文档以了解更多详细信息。</p>
+
+<p>执行以下步骤，使自定义着色器与材质验证器兼容：</p>
+
+<p>1.将以下 pragma 添加到 Meta pass：<code>#pragma shader_feature EDITOR_VISUALIZATION</code>
+2.在 <code>UnityMetaInput</code> 结构中，将材质的镜面反射颜色分配给名为 <code>SpecularColor</code> 的字段，如下面的代码示例所示。</p>
+
+<p>以下是自定义 Meta pass 的示例：</p>
+
+<pre><code>Pass
+{
+    Name "META" 
+    Tags { "LightMode"="Meta" }
+
+    Cull Off
+
+    CGPROGRAM
+    #pragma vertex vert_meta
+    #pragma fragment frag_meta
+
+    #pragma shader_feature _EMISSION
+    #pragma shader_feature _METALLICGLOSSMAP
+    #pragma shader_feature _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+    #pragma shader_feature ___ _DETAIL_MULX2
+    #pragma shader_feature EDITOR_VISUALIZATION
+
+    float4 frag_meta(v2f_meta i) : SV_TARGET
+    {
+        UnityMetaInput input;
+        UNITY_INITIALIZE_OUTPUT(UnityMetaInput, input);
+        float4 materialSpecularColor = float4(1.0f, 0.0f, 0.0f, 1.0f);
+        float4 materialAlbedo = float4(0.0f, 1.0f, 0.0f, 1.0f);
+        input.SpecularColor = materialSpecularColor;
+        input.Albedo = materialAlbedo;
+
+        return UnityMetaFragment(input);
+    }  
+}
+</code></pre>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–03–28 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li><span class="page-history">在 Unity 2017.3 版中更新了材质验证器</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="shader-StandardParticleShaders.html"></a></span><div class="tip">Standard Particle Shaders</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="MaterialsAccessingViaScript.html"></a></span><div class="tip">通过脚本访问和修改材质参数</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="创建导航网格代理 - Unity Manual">
+<title>创建导航网格代理 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/NavMeshAgentSetup.svg">
+<meta name="description" content="为关卡烘焙导航网格后，即可创建能够在场景中导航的角色了。我们将使用圆柱体构建原型代理，并将代理设置为运动状态。为实现此目的，需要使用导航网格代理 (NavMesh Agent) 组件和简单脚本。">
+<meta property="og:description" content="为关卡烘焙导航网格后，即可创建能够在场景中导航的角色了。我们将使用圆柱体构建原型代理，并将代理设置为运动状态。为实现此目的，需要使用导航网格代理 (NavMesh Agent) 组件和简单脚本。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'nav-CreateNavMeshAgent';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/nav-CreateNavMeshAgent.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/nav-CreateNavMeshAgent.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/nav-CreateNavMeshAgent.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/nav-CreateNavMeshAgent.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/nav-CreateNavMeshAgent.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/nav-CreateNavMeshAgent.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/nav-CreateNavMeshAgent.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/nav-CreateNavMeshAgent.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/nav-CreateNavMeshAgent.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/nav-CreateNavMeshAgent.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/nav-CreateNavMeshAgent.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/nav-CreateNavMeshAgent.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/nav-CreateNavMeshAgent.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/nav-CreateNavMeshAgent.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/nav-CreateNavMeshAgent.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/nav-CreateNavMeshAgent.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/nav-CreateNavMeshAgent.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/nav-CreateNavMeshAgent.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/nav-CreateNavMeshAgent.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/nav-CreateNavMeshAgent.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/nav-CreateNavMeshAgent.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/nav-CreateNavMeshAgent.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/nav-CreateNavMeshAgent.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/nav-CreateNavMeshAgent.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Navigation.html">导航和寻路</a></li>
+<li><a href="nav-Overview.html">导航概述</a></li>
+<li>创建导航网格代理</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="nav-AdvancedSettings.html"></a></span><div class="tip">高级导航网格烘焙设置</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="nav-CreateNavMeshObstacle.html"></a></span><div class="tip">创建导航网格障碍物</div>
+</div>
+</div></div>
+<h1>创建导航网格代理</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>为关卡烘焙导航网格后，即可创建能够在场景中导航的角色了。我们将使用圆柱体构建原型代理，并将代理设置为运动状态。为实现此目的，需要使用导航网格代理 (NavMesh Agent) 组件和简单脚本。</p>
+
+<figure>
+<img src="../uploads/Main/NavMeshAgentSetup.svg" alt="">
+</figure>
+
+<p>首先，让我们创建角色：</p>
+
+<p>1.创建一个<strong>圆柱体</strong>：__GameObject &gt; 3D Object &gt; Cylinder<strong>。
+2.默认的圆柱体尺寸（高度 2 和半径 0.5）适用于人形代理，因此我们将这些尺寸保持原样。
+3.添加一个<strong>导航网格代理</strong>组件：__Component &gt; Navigation &gt; NavMesh Agent</strong>。</p>
+
+<p>现在已设置简单的导航网格代理来准备接收命令！</p>
+
+<p>开始尝试使用导航网格代理时，很可能需要根据角色大小和速度调整代理的尺寸。</p>
+
+<p>__导航网格代理__组件将负责角色的寻路和移动控制。在脚本中，导航的设置十分简单，只需设置所需的目标点：导航网格代理可从此处进行所有内容的处理。</p>
+
+<pre><code>    // MoveTo.cs
+        using UnityEngine;
+        using System.Collections;
+    
+        public class MoveTo : MonoBehaviour {
+       
+           public Transform goal;
+       
+           void Start () {
+              NavMeshAgent agent = GetComponent&lt;NavMeshAgent&gt;();
+              agent.destination = goal.position; 
+           }
+        } 
+</code></pre>
+
+<p>接下来，我们需要构建一个简单的脚本，通过此脚本可将角色发送到另一个游戏对象指定的目标，并构建一个用作移动目标的球体：</p>
+
+<p>1.创建一个新的 <strong>C# 脚本</strong> (<code>MoveTo.cs</code>) 并将其内容替换为以上脚本。
+2.将 MoveTo 脚本分配给刚刚创建的角色。
+3.创建一个<strong>球体</strong>，此球体将用作代理移动到的目标。
+4.将球体从角色移动到靠近导航网格表面的位置。
+5.选择角色，找到 MoveTo 脚本，并将球体分配给 <strong>Goal</strong> 属性。
+6.<strong>按 Play</strong>；您应该会看到代理导航到球体的位置。</p>
+
+<p>总而言之，在脚本中，您需要获取对导航网格代理组件的引用，然后为了将代理设置为运动状态，只需将一个位置分配给其 <a href="../ScriptReference/AI.NavMeshAgent-destination.html">destination</a> 属性。<a href="nav-HowTos.html">导航操作方法</a>部分提供了进一步的一些示例来说明如何使用导航网格代理解决常见的游戏问题。</p>
+
+<h3>阅读更多信息</h3>
+
+<ul>
+<li>
+<a href="nav-HowTos.html">导航操作方法</a> - 导航网格代理的常见用例以及源代码。</li>
+<li>
+<a href="nav-InnerWorkings.html">导航系统的内部工作原理</a> - 了解有关寻路的更多信息。</li>
+<li>
+<a href="class-NavMeshAgent.html">导航网格代理组件参考</a> – 所有导航网格代理属性的完整描述。</li>
+<li>
+<a href="../ScriptReference/AI.NavMeshAgent.html">导航网格代理脚本参考</a> - NavMeshAgent 脚本 API 的完整描述。</li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="nav-AdvancedSettings.html"></a></span><div class="tip">高级导航网格烘焙设置</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="nav-CreateNavMeshObstacle.html"></a></span><div class="tip">创建导航网格障碍物</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

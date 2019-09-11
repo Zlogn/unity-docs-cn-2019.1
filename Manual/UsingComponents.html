@@ -1,0 +1,266 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="使用组件 - Unity Manual">
+<title>使用组件 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/EmptyGO.png">
+<meta name="description" content="__组件__是游戏中对象和行为的基本要素。它们是每个__游戏对象__的功能单元。如果还不了解组件和游戏对象之间的关系，请在继续之前阅读游戏对象页面。">
+<meta property="og:description" content="__组件__是游戏中对象和行为的基本要素。它们是每个__游戏对象__的功能单元。如果还不了解组件和游戏对象之间的关系，请在继续之前阅读游戏对象页面。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UsingComponents';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UsingComponents.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UsingComponents.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UsingComponents.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UsingComponents.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UsingComponents.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UsingComponents.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UsingComponents.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UsingComponents.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UsingComponents.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UsingComponents.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UsingComponents.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UsingComponents.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UsingComponents.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UsingComponents.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UsingComponents.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UsingComponents.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UsingComponents.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UsingComponents.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UsingComponents.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UsingComponents.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UsingComponents.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UsingComponents.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UsingComponents.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UsingComponents.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="CreatingGameplay.html">创建游戏玩法</a></li>
+<li><a href="GameObjects.html">游戏对象</a></li>
+<li>使用组件</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Components.html"></a></span><div class="tip">组件简介</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-Transform.html"></a></span><div class="tip">变换组件 (Transform)</div>
+</div>
+</div></div>
+<h1>使用组件</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>__组件__是游戏中对象和行为的基本要素。它们是每个__游戏对象__的功能单元。如果还不了解组件和游戏对象之间的关系，请在继续之前阅读<a href="GameObjects.html">游戏对象</a>页面。</p>
+
+<p>游戏对象是许多不同组件的容器。默认情况下，所有游戏对象都自动拥有__变换__组件。这是因为变换组件可指示游戏对象的位置以及是如何旋转和缩放的。如果没有变换组件，游戏对象将在世界中没有位置。现在请尝试创建一个空游戏对象作为示例。单击 <strong>GameObject &gt; Create Empty</strong> 菜单项。选择新的游戏对象，然后在 <strong>Inspector</strong> 窗口中进行查看。</p>
+
+<figure>
+<img src="../uploads/Main/EmptyGO.png" alt="即使空游戏对象也有变换组件">
+<figcaption>即使空游戏对象也有变换组件</figcaption>
+</figure>
+
+<p>请记住，随时都可以使用 Inspector 查看有哪些组件附加到选定的游戏对象。随着组件的添加和删除，Inspector 将始终显示当前附加的组件。应使用 Inspector 更改所有组件（包括脚本）的所有属性。</p>
+
+<h2>添加组件</h2>
+
+<p>可通过 Components 菜单将组件添加到选定的游戏对象。我们现在通过在刚创建的空游戏对象上添加__刚体 (Rigidbody)__ 来尝试该操作。选择该游戏对象，然后从菜单中选择 <strong>Component &gt; Physics &gt; Rigidbody</strong>。执行此操作时，您将看到刚体的属性出现在 Inspector 中。如果在仍然选中空游戏对象时按 __Play__，您可能会感到有点意外。尝试一下该操作，注意刚体为空游戏对象带来了什么功能。（游戏对象变换组件的 Y 位置开始减小。这是因为 Unity 中的物理引擎使游戏对象在重力作用下坠落。）</p>
+
+<figure>
+<img src="../uploads/Main/RigidBodyGO.png" alt="附加了刚体 (Rigidbody) 组件的空游戏对象">
+<figcaption>附加了刚体 (Rigidbody) 组件的空游戏对象</figcaption>
+</figure>
+
+<p>另一种选择是使用__组件浏览器 (Component Browser)<strong>，可以使用对象的 Inspector 中的 </strong>Add Component__ 按钮来激活它。</p>
+
+<figure>
+<img src="../uploads/Main/ComponentBrowser.png" alt="组件浏览器">
+<figcaption>组件浏览器</figcaption>
+</figure>
+
+<p>浏览器允许按类别方便地导航组件，还有一个搜索框可用于按名称查找组件。</p>
+
+<p>可以将任意数量的组件或组件的组合附加到单个游戏对象。某些组件与其他组件结合使用效果最佳。例如，刚体可与任何碰撞体 (Collider) 配合使用。刚体通过 <strong>NVIDIA PhysX</strong> 物理引擎来控制变换组件，而碰撞体允许刚体与其他碰撞体碰撞和交互。</p>
+
+<p>如果想了解有关使用特定组件的更多信息，可以在相关的组件参考页面中了解该组件。还可以通过单击 Inspector 中的组件标题上的小 <strong>?</strong> 号来访问 Unity 组件的参考页面。</p>
+
+<h2>编辑组件</h2>
+
+<p>组件的一个重要优点是灵活性。将组件附加到游戏对象时，组件中有不同的值或
+<strong>属性__，可以在构建游戏时在 Editor 中对它们进行调整，也可以在运行游戏时通过脚本进行调整。有两种主要类型的属性：__值__和__引用</strong>。</p>
+
+<p>请查看下图。该空游戏对象带有一个__音频源 (Audio Source)__ 组件。在 Inspector 中，__Audio Source__ 的所有值都是默认值。</p>
+
+<figure>
+<img src="../uploads/Main/AudioGO.png" alt="">
+</figure>
+
+<p>此组件包含一个引用属性和七个值属性。<strong>Audio Clip</strong> 是引用属性。当此音频源开始播放时，它将尝试播放 <strong>Audio Clip</strong> 属性中引用的音频文件。如果未进行引用，则会发生错误，因为没有可播放的音频。必须在 Inspector 中引用该文件。这很简单，只需将音频文件从 Project 视图拖动到该引用属性上或使用对象选择器 (Object Selector) 即可。</p>
+
+<figure>
+<img src="../uploads/Main/AudioReference.png" alt="现在 Audio Clip 属性中引用了声音效果文件">
+<figcaption>现在 Audio Clip 属性中引用了声音效果文件</figcaption>
+</figure>
+
+<p>组件可以包含对任何其他类型的组件、游戏对象或资源的引用。如需了解有关分配引用的更多信息，请参阅关于<a href="EditingValueProperties.html">编辑属性</a>的页面。</p>
+
+<p>Audio Clip 上的其余属性都是值属性。可以在 Inspector 中直接调整这些属性。Audio Clip 上的值属性都是开关、数值、下拉字段，但值属性也可以是文本字符串、颜色、曲线和其他类型。如需了解与此相关的更多信息以及如何编辑值属性，请参阅关于<a href="EditingValueProperties.html">编辑值属性</a>的页面。</p>
+
+<h2>组件上下文菜单命令</h2>
+
+<p>组件的上下文菜单包含许多有用的命令。</p>
+
+<figure>
+<img src="../uploads/Main/ComponentContextMenu.png" alt="组件上下文菜单">
+<figcaption>组件上下文菜单</figcaption>
+</figure>
+
+<p>通过 Inspector 中的组件面板右上角的“齿轮”图标也可以使用相同的命令。</p>
+
+<h3>Reset</h3>
+
+<p>此命令将恢复组件属性在最近编辑会话之前所具有的值。</p>
+
+<h3>Remove</h3>
+
+<p>如果不再需要附加到游戏对象的组件，可使用 <strong>Remove Component</strong> 命令。请注意，某些组合的组件相互依赖（例如，<a href="class-HingeJoint.html">铰链关节</a>仅在附加了<a href="class-Rigidbody.html">刚体</a>时才起作用）；如果尝试删除其他组件依赖的组件，则会显示一条警告消息。</p>
+
+<h3>Move Up/Down</h3>
+
+<p>使用 <strong>Move Up</strong> 和 <strong>Move Down</strong> 命令可以在 Inspector 中重新排列游戏对象组件的顺序。</p>
+
+<p><strong>Tip</strong>: Alternatively, click and drag the component’s name up or down in the Inspector window, and then drop it. </p>
+
+<h3>Copy/Paste</h3>
+
+<p><strong>Copy Component</strong> 命令可存储组件的类型和当前属性设置。然后可以使用 <strong>Paste Component Values</strong> 将它们粘贴到相同类型的另一个组件中。还可以使用 <strong>Paste Component As New</strong> 在对象上创建具有复制值的新组件</p>
+
+<h2>测试属性</h2>
+
+<p>当游戏处于__播放模式__时，可以在任何游戏对象的 Inspector 中自由更改属性。例如，有时可能希望尝试不同的跳跃高度。如果在脚本中创建了 <strong>Jump Height</strong> 属性，可以进入播放模式，更改属性的值，然后按 Jump 按钮查看发生的情况。接着，无需退出播放模式，可以再次更改该值，并在几秒钟内即可查看结果。退出播放模式时，属性将恢复为播放模式之前的值，因此不会丢失任何工作。此工作流程提供了测试、调整和优化游戏的强大功能，而无需在迭代周期中投入大量时间。请在播放模式下使用任何属性进行此尝试。我们相信这会给您留下深刻印象。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–09–18 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Ability to drag and drop components in Inspector window added in 5.6</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Components.html"></a></span><div class="tip">组件简介</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-Transform.html"></a></span><div class="tip">变换组件 (Transform)</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

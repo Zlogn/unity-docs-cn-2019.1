@@ -1,0 +1,346 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Terrain Layers - Unity Manual">
+<title>Terrain Layers - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/1.4-SandyTerrain.png">
+<meta name="description" content="A Terrain Layer is an Asset that defines a Terrain’s surface qualities. A Terrain Layer holds Textures and other properties that the Terrain&amp;#8217;s Material uses to render the Terrain surfaces. Because Terrain Layers are Assets, you can easily reuse them on multiple Terrain tiles.">
+<meta property="og:description" content="A Terrain Layer is an Asset that defines a Terrain’s surface qualities. A Terrain Layer holds Textures and other properties that the Terrain&amp;#8217;s Material uses to render the Terrain surfaces. Because Terrain Layers are Assets, you can easily reuse them on multiple Terrain tiles.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-TerrainLayer';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-TerrainLayer.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-TerrainLayer.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-TerrainLayer.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-TerrainLayer.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-TerrainLayer.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-TerrainLayer.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-TerrainLayer.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-TerrainLayer.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-TerrainLayer.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-TerrainLayer.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-TerrainLayer.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-TerrainLayer.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-TerrainLayer.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-TerrainLayer.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-TerrainLayer.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-TerrainLayer.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-TerrainLayer.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-TerrainLayer.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-TerrainLayer.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-TerrainLayer.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-TerrainLayer.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-TerrainLayer.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-TerrainLayer.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-TerrainLayer.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="script-Terrain.html">地形引擎</a></li>
+<li>Terrain Layers</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="terrain-StampTerrain.html"></a></span><div class="tip">Stamp Terrain</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-Brush.html"></a></span><div class="tip">Brushes</div>
+</div>
+</div></div>
+<h1>Terrain Layers</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>A <strong>Terrain Layer</strong> is an Asset that defines a Terrain’s surface qualities. A Terrain Layer holds <a href="class-TextureImporter.html">Textures</a> and other properties that the Terrain’s Material uses to render the Terrain surfaces. Because Terrain Layers are Assets, you can easily reuse them on multiple Terrain tiles.</p>
+
+<p>You can add Textures to the surface of a Terrain to create coloration and fine detail. Terrain GameObjects are usually large, so it is best to use a base Terrain Layer with Textures that tile over the surface and repeat seamlessly. You can use multiple Terrain Layers, each with different Textures, to build up interesting, varied Terrain surfaces.</p>
+
+<p>The first Terrain Layer you apply to a Terrain automatically becomes the base layer, and spreads over the whole landscape. In addition, you can paint areas with other Terrain Layers to simulate different ground surfaces, such as grass, desert, or snow. To create a gradual transition between grassy countryside and a sandy beach, you might choose to apply Textures with variable opacity.</p>
+
+<figure>
+<img src="../uploads/Main/1.4-SandyTerrain.png" alt="Terrain with sandy texture">
+<figcaption>Terrain with sandy texture</figcaption>
+</figure>
+
+<h2>Creating Terrain Layers</h2>
+
+<p>To create a Terrain Layer directly in the Terrain Inspector, click the paintbrush icon in the toolbar at the top of the Terrain Inspector, and select <strong>Paint Texture</strong> from the drop-down menu. At the bottom of the <strong>Terrain Layers</strong> section, click the <strong>Edit Terrain Layers</strong> button, and choose <strong>Create Layer</strong>.</p>
+
+<figure>
+<img src="../uploads/Main/1.4-CreateLayer.png" alt="Create Layer in the Terrain Inspector">
+<figcaption>Create Layer in the Terrain Inspector</figcaption>
+</figure>
+
+<p>When you select <strong>Create Layer</strong>, Unity opens the <strong>Select Texture2D</strong> window. Here, choose the image to use as the <strong>Diffuse</strong> channel of the Terrain Layer. To assign a <strong>Normal Map</strong> or <strong>Mask Map</strong> Texture to your Terrain Layer, select the corresponding Terrain Layer in the Project view, and use its Inspector window.</p>
+
+<p>Alternatively, to create a Terrain Layer Asset that isn’t automatically associated with a Terrain, right-click the Project window, and select <strong>Create &gt; Terrain Layer</strong> from the context menu. Then, configure the various properties in the Inspector window for your new Terrain Layer.</p>
+
+<p>For information about how the number of Terrain Layers affects rendering performance, see <a href="#Performance">Rendering performance</a>. Even assigned Terrain Layers that you do not actually paint onto the Terrain tile might impact the rendering performance.</p>
+
+<h2>Adding Terrain Layers</h2>
+
+<p>Initially, a Terrain has no Terrain Layers assigned to it. By default, it uses a checkerboard Texture until you add a Terrain Layer.</p>
+
+<p>After you create a Terrain Layer in your Project, click the <strong>Edit Terrain Layers</strong> button and select <strong>Add Layer</strong> to open the <strong>Select TerrainLayer</strong> window. Double-click on a Terrain Layer in this window to add it to your Terrain.</p>
+
+<h2>Terrain Layer properties</h2>
+
+<p>Depending on the Material that is set in the <a href="terrain-OtherSettings.html">Terrain Settings</a>, as well as the Render Pipeline that is currently in use, you might see different options and properties in the Inspector.</p>
+
+<figure>
+<img src="../uploads/Main/1.4-TerrainLayerSettings.png" alt="Terrain Layer settings in the Inspector">
+<figcaption>Terrain Layer settings in the Inspector</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性</strong></th>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Diffuse</strong></td>
+	<td style="text-align:left;" colspan="2">The Diffuse Texture represents the base color Texture of the Terrain Layer. The Alpha channel of the Diffuse Texture has different uses, which depend on the active Scriptable Render Pipeline and Shader you use to render the Terrain.<br><br>For example, the High Definition Render Pipeline (HDRP) uses the Alpha channel for Smoothness. However, if there is a Mask Map Texture on the Terrain Layer, it uses the Alpha channel of the Diffuse Texture for Density values.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Normal Map</strong></td>
+	<td style="text-align:left;" colspan="2">The Normal Map Texture contains the normal information for your Terrain Layer. Unity uses this information in lighting calculations.<br><br>• If you do not assign a Normal Map Texture and enable instancing in the <a href="terrain-OtherSettings.html">Terrain Settings</a>, the Terrain uses the normals generated from the Terrain heightmap.<br><br>• If you assign a Normal Map Texture and enable instancing, Unity uses the Normal Map Texture instead of the normals generated from the heightmap.<br><br>• If you disable instancing on the Terrain, the built-in Terrain Material uses normals generated from the Terrain geometry, even if you assign a Normal Map Texture on the Terrain Layer.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Normal Scale</strong></td>
+	<td style="text-align:left;" colspan="2">If you assign a Normal Map Texture, a new field called <strong>Normal Scale</strong> appears in the Terrain Layer settings. This value acts as a scaling factor for the normal values present in the Normal Map. A value of 0 means that the normals stored in the Normal Map have a scale of 0, while a value of 1 means that the normals are at full scale or influence.<br><br>Examples and results of different Normal Scale values:</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">
+<strong>Normal Scale</strong> = 0</td>
+	<td style="text-align:left;">• Multiplies the unpacked normal value by 0.<br>• The strength, and thus the length, of the normal will be 0, and has no effect on lighting calculations. The mesh triangle on the Terrain effectively uses the mesh normal for lighting calculations.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">
+<strong>Normal Scale</strong> = 1</td>
+	<td style="text-align:left;">• Multiplies the unpacked normal value by 1.<br>• The strength of the normal will be 100%.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">
+<strong>Normal Scale</strong> = 2</td>
+	<td style="text-align:left;">• Multiplies the unpacked normal value by 2.<br>• The strength of the normal will be 200%, and appear twice as pronounced as normals with a Normal Scale of 1.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">
+<strong>Normal Scale</strong> = –1</td>
+	<td style="text-align:left;">• Multiples the unpacked normal value by –1.<br>• The strength of the normal will be at 100% but negated, making the normals point in the opposite direction from normals with a Normal Scale of 1.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Mask Map</strong></td>
+	<td style="text-align:left;" colspan="2">The TerrainLit shader, which is part of the High Definition Render Pipeline (HDRP), uses this Mask Map Texture data. Custom Terrain shaders might also use this Texture for user-defined purposes, such as ambient occlusion or height-based blending.<br><br>For the HDRP TerrainLit Shader, the RGBA channels of the Mask Map Texture correspond to:</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>R</strong></td>
+	<td style="text-align:left;">Metallic</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>G</strong></td>
+	<td style="text-align:left;">Ambient Occlusion</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>B</strong></td>
+	<td style="text-align:left;">Height</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>A</strong></td>
+	<td style="text-align:left;">Smoothness (Diffuse Alpha becomes Density)</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Channel Remapping</strong></td>
+	<td style="text-align:left;" colspan="2">If you assign a Mask Map Texture, a new heading called <strong>Channel Remapping</strong> appears in the Terrain Layer settings. Click the triangle next to that heading to display the fields for minimum and maximum RGBA values. Unity uses these ranges to remap values in each channel of the Mask Map Texture.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Specular</strong></td>
+	<td style="text-align:left;" colspan="2">The specular highlight color of the Terrain Layer.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Metallic</strong></td>
+	<td style="text-align:left;" colspan="2">The overall metallic value of the Terrain Layer.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Smoothness</strong></td>
+	<td style="text-align:left;" colspan="2">The overall smoothness value of the Terrain Layer.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Tiling Settings</strong></td>
+	<td style="text-align:left;" colspan="2">The tiling settings that apply to all Textures the Terrain Layer uses.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Size</strong></td>
+	<td style="text-align:left;">The size of the Textures in Terrain space, and how often the Textures tile.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Offset</strong></td>
+	<td style="text-align:left;">A base offset that Unity applies to the sample location for each Texture in the Terrain Layer.</td>
+</tr>
+</tbody>
+</table>
+
+<h2><strong>Texture painting</strong></h2>
+
+<p>Unity applies the first Terrain Layer you add to the entire landscape. If you add multiple Terrain Layers, use the <a href="terrain-PaintTexture.html">Paint Texture</a> tool to apply subsequent Textures to your Terrain.</p>
+
+<p>If you add a new Terrain tile without any Terrain Layers, and paint on it, the system automatically adds the selected Terrain Layer to that new Terrain tile. Because this is the first Terrain Layer, that Texture becomes the base layer, and fills the entire Terrain tile.</p>
+
+<p>In the Terrain Inspector, under <strong>Brushes</strong>, there is a box that displays the available Brushes, along with the <strong>Brush Size</strong> and <strong>Opacity</strong> options underneath. See <a href="terrain-UsingTerrains.html">Creating and Editing Terrains</a> for more information about these tools.</p>
+
+<p><a name="Performance"></a></p>
+
+<h2><strong>Rendering performance</strong></h2>
+
+<p>The number of Terrain Layers you assign to a Terrain tile might impact the performance of the renderer.</p>
+
+<p>The built-in renderer and <a href="ScriptableRenderPipeline.html">Lightweight Render Pipeline</a> each support four Terrain Layers per Texture pass, with no limit on the number of passes. This means that although you are allowed to use as many Terrain Layers as you want, each pass increases the time spent rendering the Terrain. For maximum performance, limit each of your Terrain tiles to four Terrain Layers.</p>
+
+<p>If you’re using the <a href="ScriptableRenderPipeline.html">High Definition Render Pipeline</a>, you can add up to eight Terrain Layers per Terrain tile, and the system renders them in a single pass. No additional passes are possible. If you add more than eight Terrain Layers, they appear in the Unity Editor, but are ignored at run time.</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2019–04–18 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Updated screenshot to match new UI and improved description of properties</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="terrain-StampTerrain.html"></a></span><div class="tip">Stamp Terrain</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-Brush.html"></a></span><div class="tip">Brushes</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,429 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="平台特定的渲染差异 - Unity Manual">
+<title>平台特定的渲染差异 - Unity Manual</title>
+<meta name="description" content="Unity 在如下各种图形库平台上运行：Open GL、Direct3D、Metal 和游戏主机。在某些情况下，平台与着色器语言语义之间的图形渲染行为方式存在差异。大多数情况下，Unity Editor 会隐藏这些差异，但在某些情况下，Editor 无法为您执行此操作。在这些情况下，您需要确保消除平台之间的差异。下面列出了这些情况以及发生这些情况时需要采取的操作。">
+<meta property="og:description" content="Unity 在如下各种图形库平台上运行：Open GL、Direct3D、Metal 和游戏主机。在某些情况下，平台与着色器语言语义之间的图形渲染行为方式存在差异。大多数情况下，Unity Editor 会隐藏这些差异，但在某些情况下，Editor 无法为您执行此操作。在这些情况下，您需要确保消除平台之间的差异。下面列出了这些情况以及发生这些情况时需要采取的操作。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'SL-PlatformDifferences';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-PlatformDifferences.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-PlatformDifferences.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-PlatformDifferences.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-PlatformDifferences.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-PlatformDifferences.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-PlatformDifferences.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-PlatformDifferences.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-PlatformDifferences.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-PlatformDifferences.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-PlatformDifferences.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/SL-PlatformDifferences.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/SL-PlatformDifferences.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/SL-PlatformDifferences.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/SL-PlatformDifferences.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-PlatformDifferences.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-PlatformDifferences.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-PlatformDifferences.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-PlatformDifferences.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-PlatformDifferences.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SL-PlatformDifferences.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SL-PlatformDifferences.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SL-PlatformDifferences.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SL-PlatformDifferences.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SL-PlatformDifferences.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="SL-Reference.html">着色器参考</a></li>
+<li><a href="SL-AdvancedTopics.html">高级 ShaderLab 主题</a></li>
+<li>平台特定的渲染差异</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-CameraDepthTexture.html"></a></span><div class="tip">摄像机的深度纹理</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-ShaderLOD.html"></a></span><div class="tip">着色器细节级别</div>
+</div>
+</div></div>
+<h1>平台特定的渲染差异</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 在如下各种图形库平台上运行：<a href="https://www.opengl.org">Open GL</a>、<a href="https://msdn.microsoft.com/en-us/library/windows/desktop/hh309466.aspx">Direct3D</a>、<a href="https://developer.apple.com/metal/">Metal</a> 和游戏主机。在某些情况下，平台与着色器语言语义之间的图形渲染行为方式存在差异。大多数情况下，Unity Editor 会隐藏这些差异，但在某些情况下，Editor 无法为您执行此操作。在这些情况下，您需要确保消除平台之间的差异。下面列出了这些情况以及发生这些情况时需要采取的操作。</p>
+
+<h2>渲染纹理坐标</h2>
+
+<p>垂直纹理坐标约定在两种类型的平台之间有所不同，分别是 Direct3D 类和 OpenGL 类平台。</p>
+
+<ul>
+<li>
+<strong>Direct3D 类</strong>：顶部坐标为 0 并向下增加。此类型适用于 Direct3D、Metal 和游戏主机。</li>
+<li>
+<strong>OpenGL 类</strong>：底部坐标为 0 并向上增加。此类适用于 OpenGL 和 OpenGL ES。</li>
+</ul>
+
+<p>除了渲染到<a href="class-RenderTexture.html">渲染纹理</a>的情况下，这种差异不会对您的项目产生任何影响。在 Direct3D 类平台上渲染到纹理时，Unity 会在内部上下翻转渲染。这样就会使坐标约定在平台之间匹配，并以 OpenGL 类平台约定作为标准。</p>
+
+<p>在着色器中，有两种常见情况需要您采取操作确保不同的坐标约定不会在项目中产生问题，这两种情况就是图像效果和 UV 空间中的渲染。</p>
+
+<h3>图像效果</h3>
+
+<p>When you use <a href="https://docs.unity3d.com/Packages/com.unity.postprocessing@latest">Image Effects</a> and anti-aliasing, the resulting source Texture for an Image Effect is not flipped to match the OpenGL-like platform convention. In this case, Unity renders to the screen to get anti-aliasing and then resolves rendering into a Render Texture for further processing with an Image Effect.</p>
+
+<p>If your Image Effect is a simple one that processes one Render Texture at a time, <a href="../ScriptReference/Graphics.Blit.html">Graphics.Blit</a> deals with the inconsistent coordinates. However, if you’re processing more than one <a href="class-RenderTexture.html">Render Texture</a> together in your <a href="https://docs.unity3d.com/Packages/com.unity.postprocessing@latest">Image Effect</a>, the Render Textures are likely to come out at different vertical orientations in Direct3D-like platforms and when you use anti-aliasing. To standardise the coordinates, you need to manually “flip” the screen Texture upside down in your Vertex Shader so that it matches the OpenGL-like coordinate standard.</p>
+
+<p>以下代码示例演示了如何执行此操作：</p>
+
+<pre><code>// 翻转纹理的采样：
+// 主纹理的
+// 纹理像素大小将具有负 Y。
+
+# if UNITY_UV_STARTS_AT_TOP
+if (_MainTex_TexelSize.y &lt; 0)
+        uv.y = 1-uv.y;
+# endif
+
+</code></pre>
+
+<p>请参阅 Unity 的着色器替换示例项目中的边缘检测场景（请参阅 <a href="http://unity3d.com/support/resources/example-projects/shader-replacement">Unity 学习资源</a>），了解与此相关的更详细示例。此项目中的边缘检测同时使用屏幕纹理和摄像机的<a href="SL-CameraDepthTexture.html">深度+法线纹理</a>。</p>
+
+<p><a href="SL-GrabPass.html">GrabPass</a> 也出现了类似的情况。生成的渲染纹理实际上可能不会在 Direct3D 类（非 OpenGL 类）平台上进行上下翻转。如果着色器代码对 GrabPass 纹理进行采样，请使用 <a href="SL-BuiltinFunctions.html">UnityCG include</a> 文件中的 <code>ComputeGrabScreenPos</code> 函数。</p>
+
+<h3>在 UV 空间中渲染</h3>
+
+<p>在纹理坐标 (UV) 空间中渲染特殊效果或工具时，您可能需要调整着色器，以便在 Direct3D 类和 OpenGL 类系统之间进行一致渲染。您还可能需要在渲染到屏幕和渲染到纹理之间进行渲染调整。为进行此类调整，应上下翻转 Direct3D 类投影，使其坐标与 OpenGL 类投影坐标相匹配。</p>
+
+<p><a href="SL-UnityShaderVariables.html">内置变量</a> <code>ProjectionParams.x</code> 包含值 <code>+1</code> 或 <code>–1</code>。<code>-1</code> 表示投影已上下翻转以匹配 OpenGL 类投影坐标，而 <code>+1</code> 表示尚未翻转。
+您可以在着色器中检查此值，然后执行不同的操作。下面的示例将检查是否已翻转投影，如果已翻转，则再次进行翻转，然后返回 UV 坐标以便匹配。</p>
+
+<pre><code>float4 vert(float2 uv : TEXCOORD0) : SV_POSITION
+{
+    float4 pos;
+    pos.xy = uv;
+    // 此示例使用上下翻转的投影进行渲染，
+    // 因此也翻转垂直 UV 坐标
+    if (_ProjectionParams.x &lt; 0)
+        pos.y = 1 - pos.y;
+    pos.z = 0;
+    pos.w = 1;
+    return pos;
+}
+</code></pre>
+
+<h2>裁剪空间坐标</h2>
+
+<p>与纹理坐标类似，裁剪空间坐标（也称为投影后空间坐标）在 Direct3D 类和 OpenGL 类平台之间有所不同：</p>
+
+<ul>
+<li><p><strong>Direct3D 类</strong>：裁剪空间深度从近平面的 0.0 到远平面的 +1.0。此类型适用于 Direct3D、Metal 和游戏主机。</p></li>
+<li><p><strong>OpenGL 类</strong>：裁剪空间深度从近平面的 –1.0 到远平面的 +1.0。此类适用于 OpenGL 和 OpenGL ES。</p></li>
+</ul>
+
+<p>在着色器代码内，可使用<a href="SL-BuiltinMacros.html">内置宏</a> <code>UNITY_NEAR_CLIP_VALUE</code> 来获取基于平台的近平面值。</p>
+
+<p>在脚本代码内，使用 <a href="../ScriptReference/GL.GetGPUProjectionMatrix.html">GL.GetGPUProjectionMatrix</a> 将 Unity 的坐标系（遵循 OpenGL 类约定）转换为 Direct3D 类坐标（如果这是平台所期望的）。</p>
+
+<h2>着色器计算的精度</h2>
+
+<p>要避免精度问题，请确保在目标平台上测试着色器。移动设备和 PC 中的 GPU 在处理浮点类型方面有所不同。PC GPU 将所有浮点类型（浮点精度、半精度和固定精度）视为相同；PC GPU 使用完整 32 位精度进行所有计算，而许多移动设备 GPU 并不是这样做。</p>
+
+<p>有关详细信息，请参阅<a href="SL-DataTypesAndPrecision.html">数据类型和精度</a>的文档。</p>
+
+<h2>着色器中的 const 声明</h2>
+
+<p><code>const</code> 的使用在 Microsoft HSL（请参阅 <a href="http://msdn.microsoft.com">msdn.microsoft.com</a>）和 OpenGL 的 GLSL（请参阅 <a href="https://en.wikipedia.org/wiki/OpenGL_Shading_Language">Wikipedia</a>）着色器语言之间有所不同。</p>
+
+<ul>
+<li><p>Microsoft 的 HLSL <code>const</code> 与 C# 和 C++ 中的含义大致相同：声明的变量在其作用域内是只读的，但可按任何方式初始化。</p></li>
+<li><p>OpenGL 的 GLSL <code>const</code> 表示变量实际上是编译时常量，因此必须使用编译时约束（文字值或其他对于 <code>const</code> 的计算）进行初始化。</p></li>
+</ul>
+
+<p>最好是遵循 OpenGL 的 GLSL 语义，并且只有当变量真正不变时才将变量声明为 <code>const</code>。避免使用其他一些可变值初始化 <code>const</code> 变量（例如，作为函数中的局部变量）。这一原则也适用于 Microsoft 的 HLSL，因此以这种方式使用 <code>const</code> 可以避免在某些平台上混淆错误。</p>
+
+<h2>着色器使用的语义</h2>
+
+<p>要让着色器在所有平台上运行，一些着色器值应该使用以下语义：</p>
+
+<ul>
+<li><p>__顶点着色器输出（裁剪空间）位置__：<code>SV_POSITION</code>。有时，着色器使用 POSITION 语义来使着色器在所有平台上运行。请注意，这不适用于 Sony PS4 或有曲面细分的情况。</p></li>
+<li><p>__片元着色器输出颜色__：<code>SV_Target</code>。有时，着色器使用 <code>COLOR</code> 或 <code>COLOR0</code> 来使着色器在所有平台上运行。请注意，这不适用于 Sony PS4。</p></li>
+</ul>
+
+<p>将网格渲染为点时，从顶点着色器输出 <code>PSIZE</code> 语义（例如，将其设置为 1）。某些平台（如 OpenGL ES 或 Metal）在未从着色器写入点大小时会将点大小视为“未定义”。</p>
+
+<p>有关更多详细信息，请参阅有关<a href="SL-ShaderSemantics.html">着色器语义</a>的文档。</p>
+
+<h2>Direct3D 着色器编译器语法</h2>
+
+<p>Direct3D 平台使用 Microsoft 的 <a href="SL-ShadingLanguage.html">HLSL 着色器编译器</a>。对于各种细微的着色器错误，HLSL 编译器比其他编译器更严格。例如，它不接受未正确初始化的函数输出值。</p>
+
+<p>使用此编译器时，您可能遇到的最常见情况是：</p>
+
+<ul>
+<li>具有 <code>out</code> 参数的<a href="SL-SurfaceShaders.html">表面着色器</a>顶点修改器。按如下方式初始化输出：</li>
+</ul>
+
+<pre><code>  void vert (inout appdata_full v, out Input o) 
+      {
+        **UNITY_INITIALIZE_OUTPUT(Input,o);**
+        // ...
+      }
+</code></pre>
+
+<ul>
+<li><p>部分初始化的值。例如，函数返回 <code>float4</code>，但代码只设置它的 <code>.xyz</code> 值。如果只需要三个值，请设置所有值或更改为 <code>float3</code>。</p></li>
+<li><p>在顶点着色器中使用 <code>tex2D</code>。这是无效的，因为顶点着色器中不存在 UV 导数。这种情况下，您需要采样显式 Mip 级别；例如，使用 <code>tex2Dlod</code> (<code>tex, float4(uv,0,0)</code>)。此外，还需要添加 <code>#pragma target 3.0</code>，因为 <code>tex2Dlod</code> 是着色器模型 3.0 的功能。</p></li>
+</ul>
+
+<h2>着色器中的 DirectX 11 (DX11) HLSL 语法</h2>
+
+<p><a href="SL-SurfaceShaders.html">表面着色器</a>编译管线的某些部分不能理解特定于 DirectX 11 的 HLSL（Microsoft 的着色器语言）语法。</p>
+
+<p>如果您正在使用 HLSL 功能（比如 <code>StructuredBuffers</code>、<code>RWTextures</code> 和其他非 DirectX 9 语法），请将它们包裹在 DirectX X11 专用的预处理器宏中，如下例所示。</p>
+
+<pre><code># ifdef SHADER_API_D3D11
+// DirectX11 专用代码，例如
+StructuredBuffer&lt;float4&gt; myColors;
+RWTexture2D&lt;float4&gt; myRandomWriteTexture;
+# endif
+</code></pre>
+
+<h2>使用着色器帧缓冲提取</h2>
+
+<p>一些 GPU（最明显的是 iOS 上基于 PowerVR 的 GPU）允许您通过提供当前片元颜色作为片元着色器的输入来进行某种可编程混合（请参阅 <a href="https://www.khronos.org/registry/gles/extensions/EXT/EXT_shader_framebuffer_fetch.txt">khronos.org</a> 上的 <code>EXT_shader_framebuffer_fetch</code>）。</p>
+
+<p>可在 Unity 中编写使用帧缓冲提取功能的着色器。要执行此操作，请在使用 HLSL（Microsoft 的着色语言，请参阅 <a href="http://msdn.microsoft.com">msdn.microsoft.com</a>）或 Cg（Nvidia 的着色语言，请参阅 <a href="http://www.nvidia.co.uk/">nvidia.co.uk</a>）编写片元着色器时使用 <code>inout</code> 颜色参数。</p>
+
+<p>以下示例采用的是 Cg 语言。</p>
+
+<pre><code>CGPROGRAM
+// 只为可能支持该功能的平台（目前是 gles、gles3 和 metal）
+// 编译着色器
+# pragma only_renderers framebufferfetch
+
+void frag (v2f i, inout half4 ocol : SV_Target)
+{
+    // ocol 可以被读取（当前帧缓冲区颜色）
+    // 并且可以被写入（将颜色更改为该颜色）
+    // ...
+}   
+ENDCG
+</code></pre>
+
+<h2>着色器中的深度 (Z) 方向</h2>
+
+<p>深度 (Z) 方向在不同的着色器平台上不同。</p>
+
+<p><strong>DirectX 11、DirectX 12、PS4、Xbox One、Metal：反转方向</strong></p>
+
+<ul>
+<li><p>深度 (Z) 缓冲区在近平面处为 1.0，在远平面处减小到 0.0。</p></li>
+<li><p>裁剪空间范围是 [near,0]（表示近平面处的近平面距离，在远平面处减小到 0.0）。</p></li>
+</ul>
+
+<p><strong>其他平台：传统方向</strong></p>
+
+<ul>
+<li><p>深度 (Z) 缓冲区值在近平面处为 0.0，在远平面处为 1.0。</p></li>
+<li>裁剪空间取决于具体平台：
+
+<ul>
+<li>在 Direct3D 类平台上，范围是 [0,far]（表示在近平面处为 0.0，在远平面处增加到远平面距离）。</li>
+<li>在 OpenGL 类平台上，范围是 [-near,far]（表示在近平面处为负的近平面距离，在远平面处增加到远平面距离）。</li>
+</ul>
+</li>
+</ul>
+
+<p>请注意，使反转方向深度 (Z) 与浮点深度缓冲区相结合，可显著提高相对于传统方向的深度缓冲区精度。这样做的优点是降低 Z 坐标的冲突并改善阴影，特别是在使用小的近平面和大的远平面时。</p>
+
+<p>因此，在使用深度 (Z) 发生反转的平台上的着色器时：</p>
+
+<ul>
+<li>定义了 UNITY_REVERSED_Z。</li>
+<li>
+<code>_CameraDepth</code> 纹理的纹理范围是 1（近平面）到 0（远平面）。</li>
+<li>裁剪空间范围是“near”（近平面）到 0（远平面）。</li>
+</ul>
+
+<p>但是，以下宏和函数会自动计算出深度 (Z) 方向的任何差异：</p>
+
+<ul>
+<li><code>Linear01Depth(float z)</code></li>
+<li><code>LinearEyeDepth(float z)</code></li>
+<li>UNITY_CALC_FOG_FACTOR(coord)</li>
+</ul>
+
+<h3>提取深度缓冲区</h3>
+
+<p>如果要手动提取深度 (Z) 缓冲区值，则可能需要检查缓冲区方向。以下是执行此操作的示例：</p>
+
+<pre><code>float z = tex2D(_CameraDepthTexture, uv);
+# if defined(UNITY_REVERSED_Z)
+    z = 1.0f - z;
+# endif
+</code></pre>
+
+<h3>使用裁剪空间</h3>
+
+<p>如果要手动使用裁剪空间 (Z) 深度，则可能还需要使用以下宏来抽象化平台差异：</p>
+
+<p><code>float clipSpaceRange01 = UNITY_Z_0_FAR_FROM_CLIPSPACE(rawClipSpace);</code></p>
+
+<p><strong>注意</strong>：此宏不会改变 OpenGL 或 OpenGL ES 平台上的裁剪空间，因此在这些平台上，此宏返回“-near”1（近平面）到 far（远平面）之间的值。</p>
+
+<h3>投影矩阵</h3>
+
+<p>如果处于深度 (Z) 发生反转的平台上，则 <a href="../ScriptReference/GL.GetGPUProjectionMatrix.html">GL.GetGPUProjectionMatrix()</a> 返回一个还原了 z 的矩阵。
+但是，如果要手动从投影矩阵中进行合成（例如，对于自定义阴影或深度渲染），您需要通过脚本按需自行还原深度 (Z) 方向。</p>
+
+<p>以下是执行此操作的示例：</p>
+
+<pre><code>var shadowProjection = Matrix4x4.Ortho(...); //阴影摄像机投影矩阵
+var shadowViewMat = ...     //阴影摄像机视图矩阵
+var shadowSpaceMatrix = ... //从裁剪空间到阴影贴图纹理空间
+    
+//当引擎通过摄像机投影计算设备投影矩阵时，
+//"m_shadowCamera.projectionMatrix"被隐式反转
+m_shadowCamera.projectionMatrix = shadowProjection; 
+
+//"shadowProjection"在连接到"m_shadowMatrix"之前被手动翻转，
+//因为它被视为着色器的其他矩阵。
+if(SystemInfo.usesReversedZBuffer) 
+{
+    shadowProjection[2, 0] = -shadowProjection[2, 0];
+    shadowProjection[2, 1] = -shadowProjection[2, 1];
+    shadowProjection[2, 2] = -shadowProjection[2, 2];
+    shadowProjection[2, 3] = -shadowProjection[2, 3];
+}
+    m_shadowMatrix = shadowSpaceMatrix * shadowProjection * shadowViewMat;
+</code></pre>
+
+<h3>深度 (Z) 偏差</h3>
+
+<p>Unity 自动处理深度 (Z) 偏差，以确保其与 Unity 的深度 (Z) 方向匹配。但是，如果要使用本机代码渲染插件，则需要在 C 或 C++ 代码中消除（反转）深度 (Z) 偏差。</p>
+
+<h4>深度 (Z) 方向检查工具</h4>
+
+<ul>
+<li>使用 <a href="../ScriptReference/SystemInfo-usesReversedZBuffer.html">SystemInfo.usesReversedZBuffer</a> 可确认所在平台是否使用反转深度 (Z)。</li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-CameraDepthTexture.html"></a></span><div class="tip">摄像机的深度纹理</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-ShaderLOD.html"></a></span><div class="tip">着色器细节级别</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

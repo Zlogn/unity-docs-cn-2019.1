@@ -1,0 +1,281 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="导航网格代理与其他组件结合使用 - Unity Manual">
+<title>导航网格代理与其他组件结合使用 - Unity Manual</title>
+<meta name="description" content="您也可以将导航网格代理 (NavMesh Agent)、导航网格障碍物 (NavMesh Obstacle) 和网格外链接 (Off Mesh Link) 组件与其他 Unity 组件一起使用。此处列出了混用不同组件时的一些注意事项。">
+<meta property="og:description" content="您也可以将导航网格代理 (NavMesh Agent)、导航网格障碍物 (NavMesh Obstacle) 和网格外链接 (Off Mesh Link) 组件与其他 Unity 组件一起使用。此处列出了混用不同组件时的一些注意事项。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'nav-MixingComponents';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/nav-MixingComponents.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/nav-MixingComponents.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/nav-MixingComponents.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/nav-MixingComponents.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/nav-MixingComponents.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/nav-MixingComponents.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/nav-MixingComponents.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/nav-MixingComponents.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/nav-MixingComponents.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/nav-MixingComponents.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/nav-MixingComponents.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/nav-MixingComponents.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/nav-MixingComponents.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/nav-MixingComponents.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/nav-MixingComponents.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/nav-MixingComponents.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/nav-MixingComponents.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/nav-MixingComponents.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/nav-MixingComponents.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/nav-MixingComponents.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/nav-MixingComponents.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/nav-MixingComponents.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/nav-MixingComponents.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/nav-MixingComponents.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Navigation.html">导航和寻路</a></li>
+<li><a href="nav-Overview.html">导航概述</a></li>
+<li>导航网格代理与其他组件结合使用</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="nav-AdditiveLoading.html"></a></span><div class="tip">使用附加加载 (Additive Loading) 加载多个导航网格</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-NavMeshAgent.html"></a></span><div class="tip">导航网格代理 (NavMesh Agent)</div>
+</div>
+</div></div>
+<h1>导航网格代理与其他组件结合使用</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>您也可以将导航网格代理 (NavMesh Agent)、导航网格障碍物 (NavMesh Obstacle) 和网格外链接 (Off Mesh Link) 组件与其他 Unity 组件一起使用。此处列出了混用不同组件时的一些注意事项。</p>
+
+<h2>导航网格代理和物理组件</h2>
+
+<ul>
+<li>无需向导航网格代理添加物理碰撞体来让它们彼此避开
+
+<ul>
+<li>也就是说，导航系统会模拟代理及其对障碍物和静态世界的反应。此处所说的静态世界是指烘焙的导航网格。</li>
+</ul>
+</li>
+<li>如果希望导航网格代理推开物理对象或使用物理触发器：
+
+<ul>
+<li>添加碰撞体 (Collider) 组件（如果不存在）</li>
+<li>添加刚体 (Rigidbody) 组件
+
+<ul>
+<li>启用运动学 (Is Kinematic) - 这很重要！</li>
+<li>运动学意味着刚体由物理模拟以外的其他事物控制</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>如果导航网格代理和刚体（非运动学）同时处于激活状态，表示存在竞争条件
+
+<ul>
+<li>两个组件都可能尝试移动相同位置的代理，从而导致不明行为</li>
+</ul>
+</li>
+<li>可使用导航网格代理移动玩家角色之类的代理，无需使用物理组件
+
+<ul>
+<li>将玩家代理的躲避优先级设置为较小数字（高优先级），从而允许玩家穿过群体</li>
+<li>使用 <a href="../ScriptReference/AI.NavMeshAgent-velocity.html">NavMeshAgent.velocity</a> 移动玩家代理，使其他代理能够预测玩家的移动以避开玩家。</li>
+</ul>
+</li>
+</ul>
+
+<h2>导航网格代理和动画器</h2>
+
+<ul>
+<li>导航网格代理和带有根运动的动画器可能会导致竞争条件
+
+<ul>
+<li>两个组件都尝试在每帧移动变换</li>
+<li>两种可能的解决方案</li>
+</ul>
+</li>
+<li>信息应始终朝一个方向流动
+
+<ul>
+<li>要么由代理移动角色并使动画跟随</li>
+<li>要么根据模拟结果由动画移动角色</li>
+<li>否则，最终将发生难以调试的反馈循环</li>
+</ul>
+</li>
+<li>
+<em>动画跟随代理</em>
+
+<ul>
+<li>使用 <a href="../ScriptReference/AI.NavMeshAgent-velocity.html">NavMeshAgent.velocity</a> 作为动画器的输入，从而将代理的移动大致匹配成动画</li>
+<li>强大且易于实现，将导致脚滑（此情况下动画无法与速度匹配）</li>
+</ul>
+</li>
+<li>
+<em>代理跟随动画</em>
+
+<ul>
+<li>禁用 <a href="../ScriptReference/AI.NavMeshAgent-updatePosition.html">NavMeshAgent.updatePosition</a> 和 <a href="../ScriptReference/AI.NavMeshAgent-updateRotation.html">NavMeshAgent.updateRotation</a> 以从游戏对象位置解除模拟</li>
+<li>使用模拟代理的位置 (<a href="../ScriptReference/AI.NavMeshAgent-nextPosition.html">NavMeshAgent.nextPosition</a>) 和动画根 (<a href="../ScriptReference/Animator-rootPosition.html">Animator.rootPosition</a>) 之间的差异来计算动画的控制</li>
+<li>有关更多详细信息，请参阅<a href="nav-CouplingAnimationAndNavigation.html">耦合动画和导航</a>
+</li>
+</ul>
+</li>
+</ul>
+
+<h2>导航网格代理和导航网格障碍物</h2>
+
+<ul>
+<li>不要混用！
+
+<ul>
+<li>同时启用两者将使代理尝试避开自己</li>
+<li>如果此外还启用雕刻，则代理会尝试不断重新映射到雕刻孔的边缘，甚至会伴随出现更多错误行为</li>
+</ul>
+</li>
+<li>确保在任何给定时间只有其中一个为激活状态
+
+<ul>
+<li>死亡状态，可关闭代理并开启障碍物以迫使其他代理避开它</li>
+<li>或者，可使用优先级来更多地避开某些代理</li>
+</ul>
+</li>
+</ul>
+
+<h2>导航网格障碍物和物理组件</h2>
+
+<ul>
+<li>如果希望物理控制的对象影响导航网格代理的行为
+
+<ul>
+<li>将导航网格障碍物组件添加到代理应该知道的对象，这允许避让系统推断障碍物</li>
+</ul>
+</li>
+<li>如果游戏对象附加了刚体和导航网格障碍物，则自动从刚体获得障碍物的速度
+
+<ul>
+<li>这可让导航网格代理预测并避开移动的障碍物</li>
+</ul>
+</li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="nav-AdditiveLoading.html"></a></span><div class="tip">使用附加加载 (Additive Loading) 加载多个导航网格</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-NavMeshAgent.html"></a></span><div class="tip">导航网格代理 (NavMesh Agent)</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

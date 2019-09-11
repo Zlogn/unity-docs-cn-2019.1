@@ -1,0 +1,309 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="导入纹理 - Unity Manual">
+<title>导入纹理 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/ImportingTextures-AnisoFiltering.jpg">
+<meta name="description" content="本页面将提供有关使用 Unity Editor 纹理导入器 (Texture Importer) 导入纹理的详细信息和提示。向下滚动或选择您想要了解的部分。">
+<meta property="og:description" content="本页面将提供有关使用 Unity Editor 纹理导入器 (Texture Importer) 导入纹理的详细信息和提示。向下滚动或选择您想要了解的部分。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'ImportingTextures';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/ImportingTextures.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/ImportingTextures.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/ImportingTextures.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/ImportingTextures.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/ImportingTextures.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/ImportingTextures.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/ImportingTextures.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/ImportingTextures.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/ImportingTextures.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/ImportingTextures.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/ImportingTextures.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/ImportingTextures.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/ImportingTextures.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/ImportingTextures.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/ImportingTextures.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/ImportingTextures.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/ImportingTextures.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/ImportingTextures.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/ImportingTextures.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/ImportingTextures.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/ImportingTextures.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/ImportingTextures.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/ImportingTextures.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/ImportingTextures.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="comp-Textures.html">纹理组件</a></li>
+<li><a href="class-TextureImporter.html">纹理</a></li>
+<li>导入纹理</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-TextureImporter.html"></a></span><div class="tip">纹理</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="TextureTypes.html"></a></span><div class="tip">纹理类型</div>
+</div>
+</div></div>
+<h1>导入纹理</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>本页面将提供有关使用 Unity Editor <a href="class-TextureImporter.html">纹理导入器 (Texture Importer)</a> 导入<a href="Textures.html">纹理</a>的详细信息和提示。向下滚动或选择您想要了解的部分。</p>
+
+<ul>
+<li><a href="#Formats">支持的文件格式</a></li>
+<li><a href="#HDRTextures">HDR 纹理</a></li>
+<li><a href="#TextureSizes">纹理大小</a></li>
+<li><a href="#UVmapping">UV 贴图</a></li>
+<li><a href="#Mipmaps">Mipmap</a></li>
+<li><a href="#Normalmaps">法线贴图</a></li>
+<li><a href="#Detailmaps">细节贴图</a></li>
+<li><a href="#Reflections">反射（立方体贴图）</a></li>
+<li><a href="#AnisotropicFiltering">各向异性过滤</a></li>
+</ul>
+
+<p><a name="Formats"></a> </p>
+
+<h2>支持的文件格式</h2>
+
+<p>Unity 可读取以下文件格式：</p>
+
+<ul>
+<li>BMP</li>
+<li>EXR</li>
+<li>GIF</li>
+<li>HDR</li>
+<li>IFF</li>
+<li>JPG</li>
+<li>PICT</li>
+<li>PNG</li>
+<li>PSD</li>
+<li>TGA</li>
+<li>TIFF</li>
+</ul>
+
+<p>请注意，Unity 可导入多层 PSD 和 TIFF 文件；它们在导入时自动展平，但图层在资源本身中维护。这意味着在本机使用这些文件类型时，您不会丢失任何工作。这很重要，因为只需一个纹理副本即可在不同的应用程序（Photoshop、3D 建模应用程序以及 Unity）中使用纹理。</p>
+
+<p><a name="HDRTextures"></a> </p>
+
+<h2>HDR 纹理</h2>
+
+<p>从包含 HDR 信息的 EXR 或 HDR 文件导入时，<a href="class-TextureImporter.html">纹理导入器</a>会自动为输出纹理选择正确的 HDR 格式。此格式会根据您要构建的目标平台自动更改。</p>
+
+<p><a name="TextureSizes"></a> </p>
+
+<h2>纹理尺寸大小</h2>
+
+<p>理想情况下，纹理尺寸大小应该是每边为 2 的幂（即 2、4、8、16、32、64、128、256、512、1024、2048 像素 (px)，以此类推）。纹理不必是正方形；也就是宽度可与高度不同。
+请注意，特定平台可能会限定最大纹理尺寸大小。对于 DirectX，不同功能级别的最大纹理大小如下：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">图形 API/功能级别</th>
+	<th style="text-align:left;">最大 2D 和立方体贴图纹理尺寸大小（像素）</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">DX9 着色器模型 2（2004 年前的 PC GPU）/OpenGL ES 2.0</td>
+	<td style="text-align:left;">2048</td>
+</tr>
+<tr>
+	<td style="text-align:left;">DX9 着色器模型 3（2006 年前的 PC GPU）/Windows Phone DX11 9.3 级别/OpenGL ES 3.0</td>
+	<td style="text-align:left;">4096</td>
+</tr>
+<tr>
+	<td style="text-align:left;">DX10 着色器模型 4/GL3（2007 年前的 PC GPU）/OpenGL ES 3.1</td>
+	<td style="text-align:left;">8192</td>
+</tr>
+<tr>
+	<td style="text-align:left;">DX11 着色器模型 5/GL4（2008 年后的 PC GPU）</td>
+	<td style="text-align:left;">16384</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>注意：</strong></p>
+
+<ul>
+<li>纹理导入器仅允许您选择最大为 8K 的尺寸大小（即 8192 x 8192 像素）。</li>
+<li>对于立方体贴图，Mali-Txxx GPU（请参阅 <a href="https://en.wikipedia.org/wiki/Mali_(GPU)">Wikipedia</a>）和 OpenGL ES 3.1 (<a href="http://www.opengl.org">www.opengl.org</a>) 仅支持最高 4096 像素的纹理尺寸大小。</li>
+</ul>
+
+<p>在 Unity 中允许使用 NPOT（非 2 的幂）纹理大小；但是，NPOT 纹理大小通常需要稍微多一点的内存，并且 GPU 的采样速度可能更慢，因此，只要有可能，最好使用 2 的幂大小以提高性能。如果平台或 GPU 不支持 NPOT 纹理大小，Unity 会对纹理进行缩放和填充以达到下一个 2 的幂大小。此过程会使用更多内存并使加载速度变慢（尤其是在较旧的移动设备上）。通常，只应将 NPOT 大小用于 GUI 用途。</p>
+
+<p>您可以使用纹理导入器的 <strong>Advanced</strong> 部分中的 <strong>Non Power of 2</strong> 选项在导入时放大 NPOT 纹理资源。</p>
+
+<p><a name="UVmapping"></a> </p>
+
+<h2>UV 贴图</h2>
+
+<p>将 2D 纹理映射到 3D 模型上时，3D 建模应用程序会执行一种称为 UV 贴图的包裹。在 Unity 内部，可使用<a href="class-Material.html">材质</a>来缩放和移动纹理。缩放法线贴图和细节贴图特别有用。</p>
+
+<p><a name="Mipmaps"></a> </p>
+
+<h2>Mipmap</h2>
+
+<p>Mipmap 是图像逐渐减小版本的列表，用于优化实时 3D 引擎的性能。远离摄像机的对象使用较小的纹理版本。使用 Mipmap 会多占用 33% 的内存，但不使用它们会导致巨大的性能损失。游戏中的<a href="Textures.html">纹理</a>应当始终使用 Mipmap；唯一的例外是变小的纹理（例如，GUI 纹理、<a href="class-Skybox.html">天空盒</a>、游标和剪影）。Mipmap 对于避免许多形式的纹理锯齿和闪烁也是必不可少的。</p>
+
+<p><a name="Normalmaps"></a> </p>
+
+<h2>法线贴图</h2>
+
+<p>法线贴图由法线贴图着色器用于使简单多边形模型看起来好像包含更多细节。Unity 使用编码为 RGB 图像的法线贴图。您也可以选择从灰度高度贴图图像生成法线贴图。</p>
+
+<p><a name="Detailmaps"></a> </p>
+
+<h2>细节贴图</h2>
+
+<p>如果您想创建地形，通常要使用主纹理来显示地形的各个区域，如草地、岩石和沙地。如果地形很大，可能会变得非常模糊。细节纹理通过在靠近主纹理时淡入小细节来隐藏这一情况。</p>
+
+<p>绘制细节纹理时应注意，中性灰色不可见，白色使主纹理变亮两倍，黑色使主纹理完全变黑。</p>
+
+<p>请参阅有关<a href="StandardShaderMaterialParameterDetail.html">辅助贴图（细节贴图）</a>的文档以了解更多信息。</p>
+
+<p><a name="Reflections"></a> </p>
+
+<h2>反射（立方体贴图）</h2>
+
+<p>要将纹理用于反射贴图（例如在<a href="class-ReflectionProbe.html">反射探针</a>或立方体贴图的<a href="class-Skybox.html">天空盒</a>中），请将 <strong>Texture Shape</strong> 设置为 <strong>Cube</strong>。请参阅有关<a href="class-Cubemap.html">立方体贴图纹理</a>的文档以了解更多信息。</p>
+
+<p><a name="AnisotropicFiltering"></a> </p>
+
+<h2>各向异性过滤</h2>
+
+<p>Anisotropic filtering increases Texture quality when viewed from a grazing angle. This rendering is resource-intensive on the graphics card. Increasing the level of Anisotropy is usually a good idea for ground and floor Textures. Use <a href="class-QualitySettings.html">Quality</a> settings to force anisotropic filtering for all Textures or disable it completely.</p>
+
+<figure>
+<img src="../uploads/Main/ImportingTextures-AnisoFiltering.jpg" alt="在地面纹理上使用各向异性 {没有各向异性（左）| 最大各向异性（右）} ">
+<figcaption>在地面纹理上使用各向异性 {没有各向异性（左）| 最大各向异性（右）} </figcaption>
+</figure>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-TextureImporter.html"></a></span><div class="tip">纹理</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="TextureTypes.html"></a></span><div class="tip">纹理类型</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

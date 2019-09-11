@@ -1,0 +1,549 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="标准事件 - Unity Manual">
+<title>标准事件 - Unity Manual</title>
+<meta name="description" content="使用标准事件可以在五个主要方面跟踪用户体验和玩家行为：">
+<meta property="og:description" content="使用标准事件可以在五个主要方面跟踪用户体验和玩家行为：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UnityAnalyticsStandardEvents';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityAnalyticsStandardEvents.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityAnalyticsStandardEvents.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityAnalyticsStandardEvents.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityAnalyticsStandardEvents.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityAnalyticsStandardEvents.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityAnalyticsStandardEvents.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityAnalyticsStandardEvents.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityAnalyticsStandardEvents.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityAnalyticsStandardEvents.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityAnalyticsStandardEvents.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UnityAnalyticsStandardEvents.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UnityAnalyticsStandardEvents.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UnityAnalyticsStandardEvents.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UnityAnalyticsStandardEvents.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityAnalyticsStandardEvents.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityAnalyticsStandardEvents.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityAnalyticsStandardEvents.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityAnalyticsStandardEvents.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityAnalyticsStandardEvents.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityAnalyticsStandardEvents.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityAnalyticsStandardEvents.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityAnalyticsStandardEvents.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityAnalyticsStandardEvents.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityAnalyticsStandardEvents.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="UnityAnalytics.html">Unity Analytics</a></li>
+<li><a href="UnityAnalyticsEvents.html">Analytics 事件</a></li>
+<li>标准事件</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsCoreEvents.html"></a></span><div class="tip">核心事件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsCustomEvents.html"></a></span><div class="tip">自定义事件</div>
+</div>
+</div></div>
+<h1>标准事件</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>使用标准事件可以在五个主要方面跟踪用户体验和玩家行为：</p>
+
+<ul>
+<li>
+<strong>应用程序</strong> (Application)：跟踪应用程序用户界面中基本元素的使用情况</li>
+<li>
+<strong>进度</strong> (Progression)：跟踪玩家在应用程序或游戏中的进度</li>
+<li>
+<strong>入门</strong> (Onboarding)：跟踪玩家与应用程序或游戏最早进行的交互</li>
+<li>
+<strong>参与度</strong> (Engagement)：跟踪与社交分享、成就相关的重要活动</li>
+<li>
+<strong>变现</strong> (Monetization)：跟踪与收入相关的事件以及游戏内的经济情况</li>
+</ul>
+
+<p>标准事件列表涵盖可用于跟踪游戏和应用程序的一系列内容。例如，大多数游戏都有玩家进度的概念，其中可能包括完成的猜谜、参与过的比赛、获得的 RPG 类经验或其他一些概念。通过跟踪标准进度事件，可更好地了解玩家停止进度的位置以及最终停止玩游戏的位置。</p>
+
+<p>大多数标准事件都会定义必需参数和可选参数。这些参数可在发送 Analytics 事件时提供有关游戏状态的其他信息。您也可以定义自己的自定义参数。设置关于事件的参数可让您过滤事件发生时收集的数据。在 <a href="UnityAnalyticsDashboard.html">Analytics Dashboard</a> 上可以查看标准事件和自定义事件的可视化工具，包括 Data Explorer、Funnel Analyzer 和 Segment Builder。</p>
+
+<p>Unity Analytics 将它接收的标准事件和自定义事件的数量限制为每个用户每小时 100 个。换言之，如果玩游戏的单个用户设法在一小时内触发超过 100 个标准事件或自定义事件，Analytics 就会丢弃多余的事件。</p>
+
+<p><strong>注意</strong>：要在 Unity 2017.3 之前的版本中使用标准事件，首先需要从 Unity Asset Store 下载并导入 <a href="https://assetstore.unity.com/packages/add-ons/services/analytics/unity-analytics-standard-events-91846">Standard Events SDK</a>。</p>
+
+<h2>应用程序事件</h2>
+
+<p>应用程序事件跟踪玩家在游戏本身之外与应用程序的交互（例如，在菜单中或者关卡之前或之后的过场动画屏幕中进行的交互）。通过分析应用程序事件可以查看玩家是否按照预期经常使用用户界面的基本部分。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>事件名称</strong></th>
+	<th style="text-align:left;"><strong>目的</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">screen_visit</td>
+	<td style="text-align:left;">玩家在 UI 中打开一个界面，比如高分或设置界面。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">cutscene_start</td>
+	<td style="text-align:left;">玩家开始观看过场动画。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">cutscene_skip</td>
+	<td style="text-align:left;">玩家跳过过场动画。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>进度事件</h2>
+
+<p>进度事件跟踪玩家在游戏中的进度。分析标准进度事件可以监控玩家在游戏中的进度。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>事件名称</strong></th>
+	<th style="text-align:left;"><strong>目的</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">game_start</td>
+	<td style="text-align:left;">玩家开始新游戏（对于具有明显开头和结尾的游戏很有用）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">game_over</td>
+	<td style="text-align:left;">玩家结束游戏（对于具有明显开头和结尾的游戏很有用）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">level_start</td>
+	<td style="text-align:left;">玩家开始玩某个关卡。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">level_complete</td>
+	<td style="text-align:left;">玩家成功完成一个关卡。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">level_fail</td>
+	<td style="text-align:left;">玩家在某个关卡失败。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">level_quit</td>
+	<td style="text-align:left;">玩家退出某个关卡。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">level_skip</td>
+	<td style="text-align:left;">玩家跳过某个关卡。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">level_up</td>
+	<td style="text-align:left;">玩家等级或 RPG 风格经验级别提高。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>入门事件</h2>
+
+<p>入门事件跟踪首次用户体验 (FTUE)。分析标准入门事件可以监控教程的有效性。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>事件名称</strong></th>
+	<th style="text-align:left;"><strong>目的</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">first_interaction</td>
+	<td style="text-align:left;">玩家在第一次打开游戏后完成任一交互。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">tutorial_start</td>
+	<td style="text-align:left;">玩家启动教程。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">tutorial_step</td>
+	<td style="text-align:left;">玩家通过教程中的一个重要步骤。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">tutorial_complete</td>
+	<td style="text-align:left;">玩家完成教程。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">tutorial_skip</td>
+	<td style="text-align:left;">玩家跳过教程。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>参与事件</h2>
+
+<p>参与事件有助于了解玩家是否参与游戏，以及他们是否执行与用户留存和游戏传播高度相关的操作。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>事件名称</strong></th>
+	<th style="text-align:left;"><strong>目的</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">push_notification_enable</td>
+	<td style="text-align:left;">玩家启用推送通知。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">push_notification_click</td>
+	<td style="text-align:left;">玩家响应推送的消息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">chat_msg_sent</td>
+	<td style="text-align:left;">玩家发送聊天消息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">achievement_unlocked</td>
+	<td style="text-align:left;">玩家完成一项成就。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">achievement_step</td>
+	<td style="text-align:left;">玩家在迈向目标成就的过程中完成一个重要步骤。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">user_signup</td>
+	<td style="text-align:left;">玩家连接到社交网络。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">social_share</td>
+	<td style="text-align:left;">玩家通过社交网络分享邀请或礼物等内容。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">social_accept</td>
+	<td style="text-align:left;">玩家接受通过社交网络分享的内容。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>变现事件</h2>
+
+<p>变现事件跟踪收入和游戏经济以帮助您平衡资源并改善收入来源。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>事件名称</strong></th>
+	<th style="text-align:left;"><strong>目的</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">store_opened</td>
+	<td style="text-align:left;">玩家打开商店。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">store_item_click</td>
+	<td style="text-align:left;">玩家在商店中选择一件商品。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">iap_transaction</td>
+	<td style="text-align:left;">玩家花费真实货币进行应用内购 (IAP)。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">item_acquired</td>
+	<td style="text-align:left;">玩家在游戏中获得资源。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">item_spent</td>
+	<td style="text-align:left;">玩家在游戏中消耗一件物品。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">ad_offer</td>
+	<td style="text-align:left;">玩家有机会观看广告。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">ad_start</td>
+	<td style="text-align:left;">玩家开始观看广告。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">ad_complete</td>
+	<td style="text-align:left;">玩家看完广告。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">ad_skip</td>
+	<td style="text-align:left;">玩家在看完之前跳过广告。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">post_ad_action</td>
+	<td style="text-align:left;">玩家完成广告提示的操作。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>脚本标准事件</h2>
+
+<p>要从脚本分发标准事件，请添加以下命名空间：</p>
+
+<pre><code>using UnityEngine.Analytics;
+</code></pre>
+
+<p>注意：使用 Unity Asset Store 的 Standard Events SDK 时，请改用命名空间 <code>UnityEngine.Analytics.Experimental</code>。</p>
+
+<p>现在您可以使用 <a href="../ScriptReference/Analytics.AnalyticsEvent.html">AnalyticsEvent</a> 类来分发标准事件。每个标准事件都有相应的静态函数。例如，要发送 game_start 事件，请调用以下函数：</p>
+
+<pre><code>AnalyticsEvent.GameStart();
+</code></pre>
+
+<p>许多标准事件都有必需参数，有一些事件具有可选参数。您还可以在字典中添加自己的附加参数。例如，如果想要跟踪玩家使用 ScreenVisit 事件访问了哪些屏幕，但也想跟踪他们从哪个屏幕进行访问，则可以在字典对象中传递该信息：</p>
+
+<pre><code>public static void ReportScreenVisit(string screenName, string currentScreenName)
+{
+    AnalyticsEvent.ScreenVisit(screenName, new Dictionary&lt;string, object&gt;
+    {
+        { "from_screen", currentScreenName }
+    });
+}
+</code></pre>
+
+<p>必需参数、可选参数（仅统计您使用的参数）和附加参数的总数不得超过十个。换言之，如果一个事件函数有 2 个必需参数，并且您设置了 2 个可选参数中的 1 个，则还可以将包含最多 7 个附加键/值对的字典传递给该函数。如果在同一事件中同时设置了 2 个可选参数，则该字典只能包含最多 6 个键/值对。</p>
+
+<p><strong>标准事件代码示例</strong></p>
+
+<p>以下类提供的示例使用标准 MonoBehaviour 事件函数来分发与开始和结束关卡相关的标准事件。</p>
+
+<p>The <a href="../ScriptReference/MonoBehaviour.Start.html">Awake</a> function dispatches the level_start event. The example provides both the level name and the level index, but only one is required. The example also uses the name and index from the <a href="../ScriptReference/SceneManagement.Scene.html">Scene</a> object, but you can use different values. </p>
+
+<p>The <a href="../ScriptReference/MonoBehaviour.OnDestroy.html">OnDestroy</a> function dispatches a level_complete, level_fail, level_skip, or level_quit event, based on the current level state value (which, in a real game, would be set by other code in the level using the <code>SetLevelPlayState()</code> function defined in this example). The example adds some additional parameters to these events using a dictionary called “customParams”. </p>
+
+<pre><code>using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Analytics;
+
+public class LevelEventManager : MonoBehaviour {
+    public enum LevelPlayState {InProgress, Won, Lost, Skip, Quit}
+
+    private Scene thisScene;
+    private LevelPlayState state = LevelPlayState.InProgress;
+    private int score = 0;
+    private float secondsElapsed = 0;
+    private int deaths = 0;
+
+    void Awake () {
+        thisScene = SceneManager.GetActiveScene();
+        AnalyticsEvent.LevelStart(thisScene.name, 
+                                      thisScene.buildIndex);
+    }
+
+    public void SetLevelPlayState(LevelPlayState newState){
+        this.state = newState;
+    }
+
+    public void IncreaseScore(int points){
+        score += points;
+    }
+
+    public void IncrementDeaths(){
+        deaths++;
+    }
+
+    void Update(){
+        secondsElapsed += Time.deltaTime;
+    }
+
+    void OnDestroy(){
+        Dictionary&lt;string, object&gt; customParams = new Dictionary&lt;string, object&gt;();
+        customParams.Add("seconds_played", secondsElapsed);
+        customParams.Add("points", score);
+        customParams.Add("deaths", deaths);
+
+        switch(this.state){
+        case LevelPlayState.Won:
+            AnalyticsEvent.LevelComplete(thisScene.name,
+                                             thisScene.buildIndex, 
+                                             customParams);
+            break;
+        case LevelPlayState.Lost:
+            AnalyticsEvent.LevelFail(thisScene.name,
+                                         thisScene.buildIndex, 
+                                         customParams);
+            break;
+        case LevelPlayState.Skip:
+            AnalyticsEvent.LevelSkip(thisScene.name,
+                                         thisScene.buildIndex, 
+                                         customParams);
+            break;
+        case LevelPlayState.InProgress:
+        case LevelPlayState.Quit:
+        default:
+            AnalyticsEvent.LevelQuit(thisScene.name,
+                                         thisScene.buildIndex, 
+                                         customParams);
+            break;
+        }
+    }
+}
+</code></pre>
+
+<p>请注意，本示例仅使用一次 <code>OnDestroy()</code> 中创建的自定义参数字典。但是，在分发频繁使用这种字典的事件时，应创建该字典的单个实例并重复使用它，而不是每次创建一个新字典。重复使用字典对象可减少未来必须进行垃圾回收的内存分配。请参阅 <a href="UnityAnalyticsEventParameters.html">Analytics 事件参数</a>以了解更多信息。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–03–02 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-edit">截至 2018–03–02，服务与 Unity 5.2 之后的版本兼容，但是版本兼容性可能会发生变化</span></p></li>
+<li><p><span class="page-history">5.2 中的新功能</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityAnalyticsCoreEvents.html"></a></span><div class="tip">核心事件</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityAnalyticsCustomEvents.html"></a></span><div class="tip">自定义事件</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

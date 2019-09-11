@@ -1,0 +1,202 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="网格剖析 - Unity Manual">
+<title>网格剖析 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/MeshLighting.png">
+<meta name="description" content="网格由 3D 空间中排列的三角形组成，旨在产生实体对象的效果。三角形由其拐点或者顶点定义。在 Mesh 类中，顶点全部存储在单个数组中，并且每个三角形使用与顶点数组的索引对应的三个整数指定。这些三角形还将全部集合在一个整数数组中；从该数组的开头以三个为一组的方式解读数组中的整数，因此元素 0、1 和 2 定义第一个三角形，3、4 和 5 定义第二个三角形，依此类推。任何给定的顶点都可以根据需要，尽可能多的在三角形中重复使用，有些情况不需要这样做（请参阅下文）。">
+<meta property="og:description" content="网格由 3D 空间中排列的三角形组成，旨在产生实体对象的效果。三角形由其拐点或者顶点定义。在 Mesh 类中，顶点全部存储在单个数组中，并且每个三角形使用与顶点数组的索引对应的三个整数指定。这些三角形还将全部集合在一个整数数组中；从该数组的开头以三个为一组的方式解读数组中的整数，因此元素 0、1 和 2 定义第一个三角形，3、4 和 5 定义第二个三角形，依此类推。任何给定的顶点都可以根据需要，尽可能多的在三角形中重复使用，有些情况不需要这样做（请参阅下文）。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'AnatomyofaMesh';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AnatomyofaMesh.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AnatomyofaMesh.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AnatomyofaMesh.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AnatomyofaMesh.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AnatomyofaMesh.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AnatomyofaMesh.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AnatomyofaMesh.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AnatomyofaMesh.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AnatomyofaMesh.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AnatomyofaMesh.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/AnatomyofaMesh.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/AnatomyofaMesh.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/AnatomyofaMesh.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/AnatomyofaMesh.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AnatomyofaMesh.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AnatomyofaMesh.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AnatomyofaMesh.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AnatomyofaMesh.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AnatomyofaMesh.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AnatomyofaMesh.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AnatomyofaMesh.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AnatomyofaMesh.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AnatomyofaMesh.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AnatomyofaMesh.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="GeneratingMeshGeometryProcedurally.html">程序化网格几何体</a></li>
+<li>网格剖析</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="GeneratingMeshGeometryProcedurally.html"></a></span><div class="tip">程序化网格几何体</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UsingtheMeshClass.html"></a></span><div class="tip">使用 Mesh 类</div>
+</div>
+</div></div>
+<h1>网格剖析</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>网格由 3D 空间中排列的三角形组成，旨在产生实体对象的效果。三角形由其拐点或者顶点定义。在 Mesh 类中，顶点全部存储在单个数组中，并且每个三角形使用与顶点数组的索引对应的三个整数指定。这些三角形还将全部集合在一个整数数组中；从该数组的开头以三个为一组的方式解读数组中的整数，因此元素 0、1 和 2 定义第一个三角形，3、4 和 5 定义第二个三角形，依此类推。任何给定的顶点都可以根据需要，尽可能多的在三角形中重复使用，有些情况不需要这样做（请参阅下文）。</p>
+
+<h2>光照和法线</h2>
+
+<p>三角形足以定义对象的基本形状，但在大多数情况下需要额外的信息来显示网格。为了让对象正确着色以获得光照，必须为每个顶点提供法向矢量。法线是向外指向的矢量，垂直于与其相关联的顶点位置处的网格表面。在着色计算期间，会将每个顶点法线与入射光的方向进行比较（入射光也是矢量）。如果两个矢量完全对齐，则会在该位置表面正面接收光照，并会将全部光照亮度用于着色。与法向矢量完全相反的光不会在该位置表面产生任何光照。通常情况下，到达的光线与法线之间呈一定的角度，因此着色将介于全亮和全暗之间，具体取决于角度大小。</p>
+
+<figure>
+<img src="../uploads/Main/MeshLighting.png" alt="">
+</figure>
+
+<p>由于网格由三角形组成，因此法线在拐点处可能垂直于三角形平面。然而，对整个三角形插值计算两个拐点中间位置的表面方向的法线。如果三条法线指向同一个方向，则三角形将被完整照亮。单独给三角形均匀着色，三角形的边缘效果非常清晰并且明显不同。这种效果正是立方体模型或其他锋利边缘实体所需的，但可使用法线的插值创建平滑着色以便模拟曲面。</p>
+
+<p>为了获得清晰的边缘，有必要在每条边上使顶点数量加倍，因为两个相邻的三角形都需要它们自己独立的法线。
+对于曲面，通常在边上共享顶点，但往往需要通过直觉来确定共用法线的最佳方向。一条法线可能是周围三角形的平面法线的平均值。但是，对于像球体这样的对象，法线应该直接从球体的中心指向外部。</p>
+
+<p>通过调用 Mesh.RecalculateNormals，让 Unity 通过对网格几何形状的“意义”进行一些假设来计算法线的方向；假设三角形之间共享的顶点表示光滑的表面，而加倍的顶点表示清晰的边缘。虽然在大多数情况下这不是糟糕的近似算法，在遇到一些纹理处理情况时重新计算法线会有问题，此类情况下即使表面光滑，顶点也必须加倍。</p>
+
+<h2>纹理</h2>
+
+<p>除了光照，模型通常还会使用纹理技术在其表面上创建精细的细节。纹理有点像在可拉伸的橡胶片上印刷的图像。每个网格三角形都要求定义纹理图像的三角形区域，并对纹理三角形进行拉伸和“固定”以拟合网格三角形。为了确保此过程顺利进行，每个顶点需要存储将顶点固定图像位置的坐标。这些坐标是二维坐标并缩放到 0..1 范围内（0 表示图像的左下角，1 表示右上角）。为了避免将这些坐标与 3D 世界的笛卡尔坐标混淆，称为 U 和 V 而不是更熟悉的 X 和 Y，因此通常称作 UV 坐标。</p>
+
+<p>与法线一样，纹理坐标对于每个顶点都是唯一的，有时为了在边上获得不同的 UV 值，需要将顶点加倍。一个明显的例子是两个相邻的三角形使用纹理图像的不连续部分（例如，面部纹理上的眼睛）。此外，大多数完全封闭的对象都需要一条“接缝”，此处的一个纹理区域会环绕并连接在一起。接缝一侧的 UV 值与另一侧的 UV 值不同。</p>
+
+<h2>另请参阅</h2>
+
+<ul>
+<li>
+<a href="UsingtheMeshClass.html">使用 Mesh 类</a>页面。</li>
+<li>
+<a href="../ScriptReference/Mesh.html">Mesh</a> 脚本类参考。</li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="GeneratingMeshGeometryProcedurally.html"></a></span><div class="tip">程序化网格几何体</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UsingtheMeshClass.html"></a></span><div class="tip">使用 Mesh 类</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

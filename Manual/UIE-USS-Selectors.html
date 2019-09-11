@@ -1,0 +1,331 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="USS selectors - Unity Manual">
+<title>USS selectors - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/style-hierarchy-example.png">
+<meta name="description" content="To demonstrate selectors, this topic uses the following visual tree example:">
+<meta property="og:description" content="To demonstrate selectors, this topic uses the following visual tree example:">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UIE-USS-Selectors';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UIE-USS-Selectors.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UIE-USS-Selectors.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UIE-USS-Selectors.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UIE-USS-Selectors.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UIE-USS-Selectors.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UIE-USS-Selectors.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UIE-USS-Selectors.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UIE-USS-Selectors.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UIE-USS-Selectors.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UIE-USS-Selectors.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UIE-USS-Selectors.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UIE-USS-Selectors.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UIE-USS-Selectors.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UIE-USS-Selectors.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UIE-USS-Selectors.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UIE-USS-Selectors.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UIE-USS-Selectors.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UIE-USS-Selectors.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UIE-USS-Selectors.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UIE-USS-Selectors.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UIE-USS-Selectors.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UIE-USS-Selectors.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UIE-USS-Selectors.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UIE-USS-Selectors.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UIToolkits.html">UI</a></li>
+<li><a href="UIElements.html">UIElements Developer Guide</a></li>
+<li><a href="UIE-USS.html">Styles and Unity style sheets</a></li>
+<li>USS selectors</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIE-USS.html"></a></span><div class="tip">Styles and Unity style sheets</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UIE-USS-PropertyTypes.html"></a></span><div class="tip">USS Properties types</div>
+</div>
+</div></div>
+<h1>USS selectors</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>To demonstrate selectors, this topic uses the following visual tree example:</p>
+
+<figure>
+<img src="../uploads/Main/style-hierarchy-example.png" alt="Example hierarchy">
+<figcaption>Example hierarchy</figcaption>
+</figure>
+
+<h2>Simple selectors</h2>
+
+<p>A simple selector can be a wildcard or any combination of types, names, or class names. Based on the example visual tree above, here are some examples of valid simple selectors:</p>
+
+<ul>
+<li><code>#container1</code></li>
+<li><code>VisualElement</code></li>
+<li><code>VisualElement#container1</code></li>
+<li><code>VisualElement.yellow</code></li>
+<li><code>Button#OK.yellow:hover</code></li>
+</ul>
+
+<h3>Type</h3>
+
+<pre><code class="css">TypeName { ... }
+</code></pre>
+
+<p>Use the Type selector to match an element based on its C# type. For example, <code>Button</code> matches the two buttons.</p>
+
+<p>When using the Type selector, specify only the concrete object type. Do not include the namespace in the type name.</p>
+
+<h3>Name</h3>
+
+<pre><code class="css">#name { ... }
+</code></pre>
+
+<p>Use the Name selector to match an element based on the value of its <code>VisualElement.name</code> property.
+For example, <code>#Cancel</code> matches the second button based on its name.</p>
+
+<p>Element names should be unique inside a panel. This recommendation is not inforced but using non-unique names could lead to unexpected matches. </p>
+
+<p>Don’t include <code>#</code> when assigning the name to an element.</p>
+
+<h3>Class</h3>
+
+<pre><code class="css">.class { ... }
+</code></pre>
+
+<p>Use the Class selector to match an element assigned to a specific class. </p>
+
+<p>To match an element, the selector does not have to specify all the classes assigned to the element. Specifying a single class name matches the elements assigned the same class. For example, <code>.yellow</code> matches the element named <em>container2</em> and the button element named <em>OK</em>.</p>
+
+<p>If you specify multiple classes in a selector, for an element to match, it must be assigned the same class names. </p>
+
+<p>Don’t include <code>.</code> when you assign the class name to the element.</p>
+
+<p>Class names cannot begin with a number.</p>
+
+<h3>Wildcard</h3>
+
+<pre><code class="css">* { ... }
+</code></pre>
+
+<p>Matches any element.</p>
+
+<h3>Pseudo-states</h3>
+
+<pre><code class="css">:pseudo-state { ... }
+</code></pre>
+
+<p>Use pseudo-states to match an element when it enters a specific state. For example, <code>Button:hover</code> matches visual elements of type <code>Button</code>, but only when the user positions the cursor over the visual element.</p>
+
+<p>Supported pseudo-states:</p>
+
+<ul>
+<li>
+<code>hover</code> : the cursor is hovering over the visual element.</li>
+<li>
+<code>active</code> : the visual element is being interacted with.</li>
+<li>
+<code>inactive</code> : the visual element is no longer being interacted with.</li>
+<li>
+<code>focus</code> : the visual element has focus.</li>
+<li>
+<code>selected</code> : unused.</li>
+<li>
+<code>disabled</code> : the visual element is set to <code>enabled == false</code>.</li>
+<li>
+<code>enabled</code> : the visual element is set to <code>enabled == true</code>.</li>
+<li>
+<code>checked</code> : the visual element is a <code>Toggle</code> element and it is checked.</li>
+<li>
+<code>root</code> : the highest-level visual element in the tree.</li>
+</ul>
+
+<p>Pseudo-states are specified after other simple selectors. Pseudo-states cannot be extended. There is only a predefined set of supported pseudo-states.</p>
+
+<h2>Complex selectors</h2>
+
+<p>Complex selectors are combinations of simple selectors with delimiters. Complex selectors also include selector lists that provide a abbreviated way of applying the same style to many elements.</p>
+
+<h3>Delimiters</h3>
+
+<p>UIElements supports the following delimiters:</p>
+
+<ul>
+<li>The empty (or space) delimiter matches all descendants of an element.</li>
+<li>The “greater than” symbol (<code>&gt;</code>) matches visual elements that are the direct descendant of an element matched by the previous selectors.</li>
+</ul>
+
+<p>For example :</p>
+
+<ul>
+<li>
+<code>#container1 .yellow</code> : matches both the inner element and the first button</li>
+<li>
+<code>#container2 &gt; .yellow</code> : matches only the inner element</li>
+</ul>
+
+<h3>Selector List</h3>
+
+<p>Use a selector list to apply the same style definition to many elements. Each selector is separated by a comma and each selector can be a simple or complex selector.</p>
+
+<p>For example :</p>
+
+<pre><code class="css">#container1, Button { padding-top:10 }
+</code></pre>
+
+<p>is the same as</p>
+
+<pre><code class="css">#container1 { padding-top: 10 } Button { padding-top: 10}
+</code></pre>
+
+<h2>Selector precedence</h2>
+
+<p>If multiple selectors match the same element, the selector with the highest specificity takes precedence. For simple selectors, the basic specificity rule is: </p>
+
+<ul>
+<li>
+<strong>Name</strong> is more specific than,</li>
+<li>
+<strong>Class</strong>, which is more specific than,</li>
+<li>
+<strong>Type</strong>, which is more specific than,</li>
+<li>wildcard <code>*</code>.</li>
+</ul>
+
+<p>If two selectors are equal within the same style sheet, the selector that appears last in the file takes precedence.</p>
+
+<p>To determine selector specificity across different files, the algorithm first prioritizes selectors from user defined style sheets over default style sheets provided by Unity.</p>
+
+<p>The second way to resolve the precedence the order in which the tree is traversed for style application. Style sheets attached to elements with higher depth and sibling index take precedence.</p>
+
+<p>Note that the <code>!important</code> keyword is ignored.</p>
+
+<p>Finally, values set in C# always have the highest specificity and will override any styles from USS.</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–11–02 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIE-USS.html"></a></span><div class="tip">Styles and Unity style sheets</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UIE-USS-PropertyTypes.html"></a></span><div class="tip">USS Properties types</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

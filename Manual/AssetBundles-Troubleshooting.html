@@ -1,0 +1,260 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="故障排除 - Unity Manual">
+<title>故障排除 - Unity Manual</title>
+<meta name="description" content="本部分将介绍使用 AssetBundle 的项目中常见的几个问题。">
+<meta property="og:description" content="本部分将介绍使用 AssetBundle 的项目中常见的几个问题。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'AssetBundles-Troubleshooting';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AssetBundles-Troubleshooting.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AssetBundles-Troubleshooting.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AssetBundles-Troubleshooting.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AssetBundles-Troubleshooting.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AssetBundles-Troubleshooting.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AssetBundles-Troubleshooting.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AssetBundles-Troubleshooting.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AssetBundles-Troubleshooting.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AssetBundles-Troubleshooting.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AssetBundles-Troubleshooting.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/AssetBundles-Troubleshooting.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/AssetBundles-Troubleshooting.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/AssetBundles-Troubleshooting.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/AssetBundles-Troubleshooting.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AssetBundles-Troubleshooting.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AssetBundles-Troubleshooting.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AssetBundles-Troubleshooting.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AssetBundles-Troubleshooting.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AssetBundles-Troubleshooting.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AssetBundles-Troubleshooting.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AssetBundles-Troubleshooting.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AssetBundles-Troubleshooting.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AssetBundles-Troubleshooting.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AssetBundles-Troubleshooting.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="AdvancedDevelopment.html">高级开发</a></li>
+<li><a href="AssetBundlesIntro.html">AssetBundle</a></li>
+<li>故障排除</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetBundles-Patching.html"></a></span><div class="tip">修补 AssetBundle</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetBundles-Browser.html"></a></span><div class="tip">Unity Asset Bundle Browser 工具</div>
+</div>
+</div></div>
+<h1>故障排除</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>本部分将介绍使用 AssetBundle 的项目中常见的几个问题。</p>
+
+<h2>资源重复</h2>
+
+<p>当对象构建到 AssetBundle 中时，Unity 5 的 AssetBundle 系统会查找对象的所有依赖项。这是使用资源数据库完成的。此依赖关系信息用于确定包含在 AssetBundle 中的对象集。</p>
+
+<p>显式分配给 AssetBundle 的对象将仅构建到该 AssetBundle 中。当对象的 AssetImporter 将其 assetBundleName 属性设置为非空字符串时，表示“显式指定”该对象。</p>
+
+<p>未显式分配到 AssetBundle 中的任何对象将包含在所有 AssetBundle 中，这些 AssetBundle 会包含一个或多个引用该未标记对象的对象。</p>
+
+<p>如果将两个不同的对象分配给两个不同的 AssetBundle，但两者都引用了一个共同的依赖项对象，那么该依赖项对象将被复制到两个 AssetBundle 中。复制的依赖项也将被实例化，这意味着依赖项对象的两个副本将被视为具有不同标识符的不同对象。这将增加应用程序的 AssetBundle 的总大小。如果应用程序加载对象的两个父项，则还会导致将两个不同的对象副本加载到内存中。</p>
+
+<p>有几种方法可以解决这个问题：</p>
+
+<p>1.确保构建到不同 AssetBundle 中的对象不共享依赖项。任何共享依赖项的对象都可以放在同一个 AssetBundle 中，而不会复制它们的依赖项。</p>
+
+<pre><code>* 对于具有许多共享依赖项的项目，此方法通常不可行。这种情况下可能生成单独的 AssetBundle，必须高度频繁进行重建和重新下载，因此很不方便或高效。
+</code></pre>
+
+<p>2.对 AssetBundle 进行分段，确保不会同时加载两个共享依赖项的 AssetBundle。</p>
+
+<pre><code>* 此方法可能适用于某些类型的项目，例如基于关卡的游戏。但是，仍然会不必要地增加项目的 AssetBundle 大小，并增加构建时间和加载时间。
+</code></pre>
+
+<p>3.确保所有依赖项资源都构建到自己的 AssetBundle 中。这样可以完全消除重复资源的风险，但也带来了复杂性。应用程序必须跟踪 AssetBundle 之间的依赖关系，并确保在调用任何 AssetBundle.LoadAsset API 之前加载了正确的 AssetBundle。</p>
+
+<p>Unity 5 通过位于 UnityEditor 命名空间中的 AssetDatabase API 来跟踪对象依赖项。正如命名空间的名称所示，此 API 仅在 Unity Editor 中可用，而不能在运行时使用。可使用 AssetDatabase.GetDependencies 查找特定对象或资源的所有直接依赖项。请注意，这些依赖项可能还有自己的依赖项。此外，可使用 AssetImporter API 查询分配了任何特定对象的 AssetBundle。</p>
+
+<p>通过组合 AssetDatabase 和 AssetImporter API，可以编写一个 Editor 脚本，确保将所有 AssetBundle 的直接或间接依赖项都分配给 AssetBundle，或者不会有两个 AssetBundle 共享尚未分配给 AssetBundle 的依赖项。由于复制资源的内存成本，建议所有项目都采用这样的脚本。</p>
+
+<h2>精灵图集重复</h2>
+
+<p>以下部分将介绍 Unity 5 的资源依赖性计算代码在与自动生成的精灵图集结合使用时出现的奇怪行为。</p>
+
+<p>任何自动生成的精灵图集都将与生成精灵图集的精灵对象一起分配到同一个 AssetBundle。如果精灵对象被分配给多个 AssetBundle，则精灵图集将不会被分配给 AssetBundle 并且将被复制。如果精灵对象未分配给 AssetBundle，则精灵图集也不会分配给 AssetBundle。</p>
+
+<p>为了确保精灵图集不重复，请确保标记到相同精灵图集的所有精灵都被分配到同一个 AssetBundle。</p>
+
+<p>Unity 5.2.2p3 及更低版本</p>
+
+<p>自动生成的精灵图集永远不会分配给 AssetBundle。因此，它们将被包含在任何包含其组成精灵的 AssetBundle 中，还会包含在任何引用其组成精灵的 AssetBundle 中。</p>
+
+<p>由于这个问题，强烈建议将使用 Unity Sprite Packer 的所有 Unity 5 项目都升级到 Unity 5.2.2p4、5.3 或任何更高版本的 Unity。</p>
+
+<p>对于无法升级的项目，此问题有两种解决方法：</p>
+
+<p>1.简单：避免使用 Unity 的内置 Sprite Packer。外部工具生成的精灵图集将是正常的资源，可以正确分配给 AssetBundle。</p>
+
+<p>2.困难：将所有使用自动加入图集的精灵的对象分配给与精灵相同的 AssetBundle。</p>
+
+<pre><code>* 这将确保生成的精灵图集不被视为任何其他 AssetBundle 的间接依赖项，并且不会被复制。
+
+* 此解决方案保留了使用 Unity Sprite Packer 的工作流程，但会降低开发人员将资源分离到不同 AssetBundle 的能力，并会强制在引用图集的任何组件上的任何数据发生变化时重新下载整个精灵图集，即使该图集本身没有变化也是如此。
+</code></pre>
+
+<h2>Android 纹理</h2>
+
+<p>由于 Android 生态系统中存在严重的设备碎片，因此通常需要将纹理压缩为多种不同的格式。虽然所有 Android 设备都支持 ETC1，但 ETC1 不支持具有 Alpha 通道的纹理。如果应用程序不需要 OpenGL ES 2 支持，解决该问题的最简单方法是使用所有 Android OpenGL ES 3 设备都支持的 ETC2。</p>
+
+<p>大多数应用程序需要在不支持 ETC2 的旧设备上发布。解决这个问题的一种方法是使用 Unity 5 的 AssetBundle 变体。（有关其他方案的详细信息，请参阅 Unity 的 Android 优化指南。）</p>
+
+<p>要使用 AssetBundle 变体，必须将无法使用 ETC1 完全压缩的所有纹理隔离到仅包含纹理的 AssetBundle 中。接下来，使用供应商特有的纹理压缩格式（如 DXT5、PVRTC 和 ATITC），创建这些 AssetBundle 的足够多变体来支持 Android 生态系统中不支持 ETC2 的部分。对于每个 AssetBundle 变体，应将包含的纹理的 TextureImporter 设置更改为适合变体的压缩格式。</p>
+
+<p>在运行时，可以使用 <a href="http://docs.unity3d.com/ScriptReference/SystemInfo.SupportsTextureFormat.html?_ga=1.141687282.1751468213.1479139860">SystemInfo.SupportsTextureFormat</a> API 检测对不同纹理压缩格式的支持情况。应使用此信息来选择和加载含有以受支持格式压缩的纹理的 AssetBundle 变体。</p>
+
+<p>有关 Android 纹理压缩格式的更多信息，请查看<a href="http://developer.android.com/guide/topics/graphics/opengl.html#textures">此处</a>。</p>
+
+<h2>iOS 文件句柄过度使用</h2>
+
+<p>Unity 5.3.2p2 中修复了以下部分中描述的问题。最新版本的 Unity 不受此问题的影响。</p>
+
+<p>在 Unity 5.3.2p2 之前的版本中，Unity 将在加载 AssetBundle 的整个时间内保留 AssetBundle 的打开文件句柄。这在大多数平台上都不是问题。但是，iOS 将一个进程可以同时打开的文件句柄数量限制为 255。如果加载 AssetBundle 导致超出此限制，则加载调用将失败，并显示“Too Many Open File Handles”错误。</p>
+
+<p>对于试图将内容划分为数百或数千个 AssetBundle 的项目而言，这是一个常见问题。</p>
+
+<p>对于无法升级到修补版 Unity 的项目来说，临时解决方案如下：</p>
+
+<ul>
+<li>通过合并相关的 AssetBundle 减少正在使用的 AssetBundle 数量</li>
+<li>使用 AssetBundle.Unload(false) 关闭 AssetBundle 的文件句柄，并手动管理加载的对象的生命周期</li>
+</ul>
+
+<p><br> </p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2017–05–15 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AssetBundles-Patching.html"></a></span><div class="tip">修补 AssetBundle</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetBundles-Browser.html"></a></span><div class="tip">Unity Asset Bundle Browser 工具</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

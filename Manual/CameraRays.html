@@ -1,0 +1,247 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="摄像机射线 - Unity Manual">
+<title>摄像机射线 - Unity Manual</title>
+<meta name="description" content="了解视锥体部分说明了摄像机视图中的任何一点都对应于世界空间中的一条线。有时使用这条线的数学表示形式是有用的，Unity 能够以 Ray 对象的形式提供该表示形式。Ray 始终对应于视图中的一个点，因此 Camera 类提供 ScreenPointToRay 和 ViewportPointToRay 函数。两者之间的区别在于 ScreenPointToRay 期望以像素坐标的形式提供该点，而 ViewportPointToRay 则接受 0..1 范围内的标准化坐标（其中 0 表示视图的左下角，1 表示右上角）。这些函数中的每一个函数都返回由一个原点和一个矢量（该矢量显示从该原点出发的线条方向）组成的 Ray。射线 (Ray) 源自近裁剪面而不是摄像机 (Camera) 的 transform.position 点。">
+<meta property="og:description" content="了解视锥体部分说明了摄像机视图中的任何一点都对应于世界空间中的一条线。有时使用这条线的数学表示形式是有用的，Unity 能够以 Ray 对象的形式提供该表示形式。Ray 始终对应于视图中的一个点，因此 Camera 类提供 ScreenPointToRay 和 ViewportPointToRay 函数。两者之间的区别在于 ScreenPointToRay 期望以像素坐标的形式提供该点，而 ViewportPointToRay 则接受 0..1 范围内的标准化坐标（其中 0 表示视图的左下角，1 表示右上角）。这些函数中的每一个函数都返回由一个原点和一个矢量（该矢量显示从该原点出发的线条方向）组成的 Ray。射线 (Ray) 源自近裁剪面而不是摄像机 (Camera) 的 transform.position 点。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'CameraRays';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/CameraRays.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/CameraRays.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/CameraRays.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/CameraRays.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/CameraRays.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/CameraRays.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/CameraRays.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/CameraRays.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/CameraRays.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/CameraRays.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/CameraRays.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/CameraRays.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/CameraRays.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/CameraRays.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/CameraRays.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/CameraRays.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/CameraRays.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/CameraRays.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/CameraRays.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/CameraRays.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/CameraRays.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/CameraRays.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/CameraRays.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/CameraRays.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="CamerasOverview.html">摄像机</a></li>
+<li><a href="CameraTricks.html">摄像机技巧</a></li>
+<li>摄像机射线</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="DollyZoom.html"></a></span><div class="tip">推拉变焦（也称为“伸缩变焦”效果）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ObliqueFrustum.html"></a></span><div class="tip">Using an Oblique Frustum</div>
+</div>
+</div></div>
+<h1>摄像机射线</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><a href="UnderstandingFrustum.html">了解视锥体</a>部分说明了摄像机视图中的任何一点都对应于世界空间中的一条线。有时使用这条线的数学表示形式是有用的，Unity 能够以 <a href="../ScriptReference/Ray.html">Ray</a> 对象的形式提供该表示形式。Ray 始终对应于视图中的一个点，因此 Camera 类提供 <a href="../ScriptReference/Camera.ScreenPointToRay.html">ScreenPointToRay</a> 和 <a href="../ScriptReference/Camera.ViewportPointToRay.html">ViewportPointToRay</a> 函数。两者之间的区别在于 ScreenPointToRay 期望以像素坐标的形式提供该点，而 ViewportPointToRay 则接受 0..1 范围内的标准化坐标（其中 0 表示视图的左下角，1 表示右上角）。这些函数中的每一个函数都返回由一个原点和一个矢量（该矢量显示从该原点出发的线条方向）组成的 Ray。射线 (Ray) 源自近裁剪面而不是摄像机 (Camera) 的 transform.position 点。</p>
+
+<h2>射线投射</h2>
+
+<p>来自摄像机的射线最常见的用途是将<a href="../ScriptReference/Physics.Raycast.html">射线投射 (raycast)</a> 到场景中。射线投射从原点沿着射线方向发送假想的“激光束”，直至命中场景中的碰撞体。随后会返回有关该对象和 <a href="../ScriptReference/RaycastHit.html">RaycastHit</a> 对象内的投射命中点的信息。这是一种基于对象在屏幕上的图像来定位对象的非常有用的方法。例如，可使用以下代码确定鼠标位置处的对象：</p>
+
+<p><em>C# 脚本示例：</em></p>
+
+<pre><code>using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    public Camera camera;
+
+    void Start(){
+        RaycastHit hit;
+        Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+        
+        if (Physics.Raycast(ray, out hit)) {
+            Transform objectHit = hit.transform;
+            
+            // 对射线投射命中的对象执行一些操作。
+        }
+    }
+}
+</code></pre>
+
+<p><em>JS 脚本示例：</em></p>
+
+<pre><code>var hit: RaycastHit;
+var ray: Ray = camera.ScreenPointToRay(Input.mousePosition);
+
+if (Physics.Raycast(ray, hit)) {
+    var objectHit: Transform = hit.transform;
+    
+    // 对射线投射命中的对象执行一些操作。
+}
+
+</code></pre>
+
+<h2>沿着射线移动摄像机</h2>
+
+<p>获取对应于屏幕位置的射线再沿着该射线移动摄像机有时很有用。例如，需要允许用户使用鼠标选择对象，然后放大该对象，同时将其“固定”到鼠标下的相同屏幕位置（这种操作可能很有用，例如，当摄像机正在查看战术地图时）。执行此操作的代码非常简单：</p>
+
+<p><em>C# 脚本示例：</em></p>
+
+<pre><code>using UnityEngine;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    public bool zooming;
+    public float zoomSpeed;
+    public Camera camera;
+
+    void Update() {
+        if (zooming) {
+            Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+            float zoomDistance = zoomSpeed * Input.GetAxis("Vertical") * Time.deltaTime;
+            camera.transform.Translate(ray.direction * zoomDistance, Space.World);
+        }
+    }
+}
+</code></pre>
+
+<p><em>JS 脚本示例：</em></p>
+
+<pre><code>var zooming: boolean;
+var zoomSpeed: float;
+
+if (zooming) {
+    var ray: Ray = camera.ScreenPointToRay(Input.mousePosition);
+    zoomDistance = zoomSpeed * Input.GetAxis("Vertical") * Time.deltaTime;
+    camera.transform.Translate(ray.direction * zoomDistance, Space.World);
+}
+
+</code></pre>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="DollyZoom.html"></a></span><div class="tip">推拉变焦（也称为“伸缩变焦”效果）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ObliqueFrustum.html"></a></span><div class="tip">Using an Oblique Frustum</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

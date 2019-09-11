@@ -1,0 +1,252 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="变换组件 - Unity Manual">
+<title>变换组件 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/TransformExample2.png">
+<meta name="description" content="__变换组件__用于存储游戏对象的位置、旋转、缩放和父子化状态，因此非常重要。游戏对象始终附加一个变换组件，无法删除变换组件或创建没有变换组件的游戏对象。">
+<meta property="og:description" content="__变换组件__用于存储游戏对象的位置、旋转、缩放和父子化状态，因此非常重要。游戏对象始终附加一个变换组件，无法删除变换组件或创建没有变换组件的游戏对象。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'Transforms';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Transforms.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Transforms.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Transforms.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Transforms.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Transforms.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Transforms.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Transforms.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Transforms.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Transforms.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Transforms.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/Transforms.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/Transforms.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/Transforms.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/Transforms.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Transforms.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Transforms.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Transforms.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Transforms.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Transforms.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Transforms.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Transforms.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Transforms.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Transforms.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Transforms.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="CreatingGameplay.html">创建游戏玩法</a></li>
+<li>变换组件</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MobileKeyboard.html"></a></span><div class="tip">移动键盘</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Constraints.html"></a></span><div class="tip">约束</div>
+</div>
+</div></div>
+<h1>变换组件</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>__变换组件__用于存储游戏对象的位置、旋转、缩放和父子化状态，因此非常重要。游戏对象始终附加一个变换组件，无法删除变换组件或创建没有变换组件的游戏对象。</p>
+
+<h2>编辑变换组件</h2>
+
+<p>在 3D 空间中可在 X、Y 和 Z 轴上操作变换组件，但在 2D 空间中只能在 X 和 Y 轴上操作。在 Unity 中，这些轴分别由红色、绿色和蓝色表示。</p>
+
+<figure>
+<img src="../uploads/Main/TransformExample2.png" alt="一个用颜色标示不同轴的变换组件">
+<figcaption>一个用颜色标示不同轴的变换组件</figcaption>
+</figure>
+
+<p>可以在 Scene 视图中编辑变换组件，也可以在 Inspector 中更改其属性。在场景中，可以使用移动、旋转和缩放工具修改变换组件。这些工具位于 Unity Editor 的左上角。</p>
+
+<figure>
+<img src="../uploads/Main/Transform-Tools.png" alt="查看、移动、旋转和缩放工具">
+<figcaption>查看、移动、旋转和缩放工具</figcaption>
+</figure>
+
+<p>这些工具可用于场景中的任何对象。单击对象时，对象中将出现工具辅助图标。辅助图标的外观取决于选择的工具。</p>
+
+<figure>
+<img src="../uploads/Main/TransformGizmo35.png" alt="变换组件辅助图标">
+<figcaption>变换组件辅助图标</figcaption>
+</figure>
+
+<p>单击并拖动三个辅助图标轴的其中一个轴时，该轴的颜色变为黄色。拖动鼠标时，对象将沿选定轴移动、旋转或缩放。松开鼠标按键时，该轴保持选中状态。</p>
+
+<figure>
+<img src="../uploads/Main/TransformExample3.png" alt="一个已选中（黄色）X 轴的变换组件">
+<figcaption>一个已选中（黄色）X 轴的变换组件</figcaption>
+</figure>
+
+<p>在移动模式中还有一个附加选项可以锁定面向特定平面的移动（即允许在两个轴上拖动的同时保持第三个轴不变）。围绕移动辅助图标中心的三个小彩色方块可激活每个平面的锁定功能；这些颜色对应于单击方块时将锁定的轴（例如，蓝色锁定 Z 轴）。</p>
+
+<p><a name="parent"></a></p>
+
+<h2>父子化</h2>
+
+<p>父子化是使用 Unity 时需要理解的最重要概念之一。当一个游戏对象是另一个游戏对象的__父__项时，__子__游戏对象完全跟随其父项移动、旋转和缩放。可将父子化看作是手臂与身体之间的关系；每当身体移动时，手臂也随之移动。子对象也可以有自己的子项，以此类推。所以，手可以视为手臂的“子项”，然后每只手都有几根手指，等等。任何一个对象都可以有多个子项，但只有一个父项。这些多级父子关系形成了变换组件的_层级视图<em>。层级视图最顶层的对象（即层级视图中唯一没有父项的对象）称为__根</em>_。</p>
+
+<p>将 __Hierarchy 视图__中的任何游戏对象拖到另一个游戏对象上即可创建父项。这样就会在这两个游戏对象之间建立父子关系。</p>
+
+<figure>
+<img src="../uploads/Main/ParentingExample.png" alt="父子层级视图的示例。名称左侧有折叠箭头的游戏对象表示父项。">
+<figcaption>父子层级视图的示例。名称左侧有折叠箭头的游戏对象表示父项。</figcaption>
+</figure>
+
+<p>请注意，Inspector 中任何子游戏对象的 Transform 值都是相对于父项 Transform 值显示的结果。这些值称为__局部坐标__。回到刚才身体和手臂的类比，身体的位置可能会随着人的行走而移动，但手臂相对于身体的位置不变。在进行场景构建时，通常使用子对象的局部坐标就足够了，但在游戏中通常需要找到这些对象在世界空间或__全局坐标__中的确切位置。变换组件的脚本 API 具有局部和全局位置、旋转和缩放的单独属性，还允许在局部和全局坐标之间转换任何点。</p>
+
+<h2>非一致缩放的限制</h2>
+
+<p>非一致缩放是指变换组件中的 <strong>Scale</strong> 具有不同的 x、y 和 z 值；例如 (2, 4, 2)。相反，一致缩放则具有相同 x、y 和 z 值；例如 (3, 3, 3)。在一些特殊情况下，非一致缩放可能很有用，但这种缩放方式会导致一致缩放所没有的一些奇怪现象：</p>
+
+<ul>
+<li>某些组件不完全支持非一致缩放。例如，有些组件具有由 <strong>radius</strong> 属性定义的圆形或球形元素，这些组件包括__球形碰撞体 (Sphere Collider)<strong>、</strong>胶囊碰撞体 (Capsule Collider)<strong>、</strong>光源 (Light)__ 和__音频源 (Audio Source)__。在这种情况下，圆形形状不会像预期的那样在非一致缩放下变成椭圆形，而是仍然保持圆形。</li>
+<li>当子对象具有非一致缩放的父项并且相对于该父项旋转时，子对象可能看起来是倾斜或“截断”的。有些组件支持简单的非一致缩放，但在有这种倾斜的情况下无法正常工作。例如，倾斜的__盒型碰撞体 (Box Collider)__ 无法准确匹配渲染网格的形状。</li>
+<li>出于性能原因，如果父项非一致缩放，子对象在旋转时不会自动更新其缩放比例。因此，当缩放比例最终_更新_时，子对象的形状可能会突然发生变化，例如在子对象与父项分离的情况下。</li>
+</ul>
+
+<h2>缩放比例的重要性</h2>
+
+<p>变换组件的缩放比例决定了网格在建模应用程序中的大小与该网格在 Unity 中的大小之间的差异。Unity 中的网格大小（因此也就是变换组件的缩放比例）_非常_重要，尤其是在物理模拟过程中。默认情况下，物理引擎假定世界空间中的一个单位对应于一米。如果一个对象非常大，可能会出现“慢动作”问题；模拟实际上自生效以来是正确的，但您会看到非常大的对象滞后很远的距离。</p>
+
+<p>有三个因素会影响对象的缩放比例：</p>
+
+<ul>
+<li>网格在 3D 建模应用程序中的大小。</li>
+<li>对象的 <strong>Import Settings</strong> 中的 <strong>Mesh Scale Factor</strong> 设置。</li>
+<li>变换组件的 <strong>Scale</strong> 值。</li>
+</ul>
+
+<p>理想情况下，不应在变换组件中调整对象的 <strong>Scale</strong> 设置。最好的选择是以真实比例创建模型，这样就不必更改变换组件的比例。次好的选择是在具体网格的 <strong>Import Settings</strong> 中调整导入网格时的比例。有些优化是基于导入大小进行的，因此实例化调整了比例值的对象可能会降低性能。有关更多信息，请参阅<a href="class-Rigidbody.html">刚体 (Rigidbody)</a> 组件参考页面上关于优化缩放比例的部分。</p>
+
+<h2>关于使用变换组件的提示</h2>
+
+<ul>
+<li>在设置变换组件的父子关系时，一种有用的做法是在添加子项之前将父项的位置设置为 &lt;0,0,0&gt;。这意味着子项的局部坐标将与全局坐标相同，因此更容易确保子项处于正确位置。</li>
+<li>__粒子系统__不受变换组件的__缩放比例__所影响。为了缩放粒子系统，需要修改系统的粒子发射器、动画器和渲染器中的属性。</li>
+<li>如果使用__刚体__进行物理模拟，请务必阅读<a href="class-Rigidbody.html">刚体</a>组件参考页面上的 Scale 属性。</li>
+<li>可通过偏好设置（菜单：__Unity &gt; Preferences__，然后选择 <strong>Colors &amp; keys</strong> 面板）更改变换轴（和其他 UI 元素）的颜色。</li>
+<li>更改缩放比例会影响子项转换组件的位置。例如，将父项的缩放比例调整到 (0,0,0) 将使所有子项相对于父项位于 (0,0,0) 位置。</li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MobileKeyboard.html"></a></span><div class="tip">移动键盘</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Constraints.html"></a></span><div class="tip">约束</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

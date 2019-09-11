@@ -1,0 +1,305 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="自动布局 - Unity Manual">
+<title>自动布局 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/UI_LayoutElementInspector.png">
+<meta name="description" content="矩形变换布局系统足够灵活，可以处理许多不同类型的布局，还允许以完全自由形式的方式布置元素。但是，有时可能需要更结构化的系统。">
+<meta property="og:description" content="矩形变换布局系统足够灵活，可以处理许多不同类型的布局，还允许以完全自由形式的方式布置元素。但是，有时可能需要更结构化的系统。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UIAutoLayout';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UIAutoLayout.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UIAutoLayout.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UIAutoLayout.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UIAutoLayout.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UIAutoLayout.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UIAutoLayout.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UIAutoLayout.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UIAutoLayout.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UIAutoLayout.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UIAutoLayout.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UIAutoLayout.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UIAutoLayout.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UIAutoLayout.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UIAutoLayout.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UIAutoLayout.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UIAutoLayout.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UIAutoLayout.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UIAutoLayout.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UIAutoLayout.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UIAutoLayout.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UIAutoLayout.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UIAutoLayout.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UIAutoLayout.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UIAutoLayout.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UIToolkits.html">UI</a></li>
+<li><a href="UISystem.html">Unity UI: Unity User Interface</a></li>
+<li>自动布局</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIAnimationIntegration.html"></a></span><div class="tip">动画集成</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="StyledText.html"></a></span><div class="tip">富文本</div>
+</div>
+</div></div>
+<h1>自动布局</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>矩形变换布局系统足够灵活，可以处理许多不同类型的布局，还允许以完全自由形式的方式布置元素。但是，有时可能需要更结构化的系统。</p>
+
+<p>自动布局系统提供了将元素放置在嵌套布局组（如水平组、垂直组或网格）中的方法。使用该系统还可以根据元素包含的内容自动调整元素的大小。例如，按钮可动态调整大小来适合其文本内容并加上一些填充。</p>
+
+<p>自动布局系统是建立在基本矩形变换布局系统之上的系统。您可以选择将其用于某些或所有元素。</p>
+
+<h2>了解布局元素</h2>
+
+<p>自动布局系统基于<strong>布局元素</strong>和<strong>布局控制器</strong>的概念。一个布局元素是具有矩形变换以及其他可选组件的游戏对象。布局元素对自身应具有的大小有一定的了解。布局元素不直接设置自身的大小，而是可由用作布局控制器的其他组件使用布局元素提供的信息来计算布局元素要使用的大小。</p>
+
+<p>布局元素具有相应的属性来定义自身的以下参数：</p>
+
+<ul>
+<li>Minimum width</li>
+<li>Minimum height</li>
+<li>Preferred width</li>
+<li>Preferred height</li>
+<li>Flexible width</li>
+<li>Flexible height</li>
+</ul>
+
+<p>使用布局元素提供的信息的布局控制器组件示例为<strong>内容大小适配器 (Content Size Fitter)</strong> 以及各种<strong>布局组 (Layout Group)</strong> 组件。布局组中的布局元素大小设置的基本原则如下：</p>
+
+<ul>
+<li>首先分配最小大小。</li>
+<li>如果有足够的可用空间，则分配偏好大小。</li>
+<li>如果有额外的可用空间，则分配灵活大小。</li>
+</ul>
+
+<p>任何带有矩形变换的游戏对象都可以作为布局元素。默认情况下，布局元素的最小大小、偏好大小和灵活大小均为 0。某些组件在添加到游戏对象时将更改这些布局属性。</p>
+
+<p>图像 (Image) 和文本 (Text) 组件是提供布局元素属性的两个组件示例。这些组件会更改偏好宽度和高度来匹配精灵或文本内容。</p>
+
+<h3>布局元素组件</h3>
+
+<p>如果要覆盖最小大小、偏好大小或灵活大小，可通过向游戏对象添加布局元素组件来实现。</p>
+
+<figure>
+<img src="../uploads/Main/UI_LayoutElementInspector.png" alt="">
+</figure>
+
+<p>使用布局元素组件可以覆盖一个或多个布局属性的值。启用要覆盖的属性的复选框，然后指定要用于覆盖的值。</p>
+
+<p>请参阅<a href="script-LayoutElement.html">布局元素</a>参考页面以了解更多信息。</p>
+
+<h2>了解布局控制器</h2>
+
+<p>布局控制器是控制一个或多个布局元素（即具有矩形变换的游戏对象）的大小和可能位置的组件。布局控制器可以控制<strong>自己的布局元素</strong>（其本身所在的同一游戏对象），或者也可控制<strong>子布局元素</strong>。</p>
+
+<p>用作布局控制器的组件本身也可以同时用作布局元素。</p>
+
+<h3>内容大小适配器 (Content Size Fitter)</h3>
+
+<p>内容大小适配器充当布局控制器，可用于控制其自身布局元素的大小。查看实际自动布局系统的最简单方法是向带有文本组件的游戏对象添加内容大小适配器组件。</p>
+
+<figure>
+<img src="../uploads/Main/UI_ContentSizeFitterInspector.png" alt="">
+</figure>
+
+<p>如果将 Horizontal Fit 或 Vertical Fit 设置为 Preferred，则矩形变换将调整其宽度和/或高度以适应文本内容。</p>
+
+<p>请参阅<a href="script-ContentSizeFitter.html">内容大小适配器</a>参考页面以了解更多信息。</p>
+
+<h3>宽高比适配器 (Aspect Ratio Fitter)</h3>
+
+<p>宽高比适配器充当布局控制器，可用于控制其自身布局元素的大小。</p>
+
+<figure>
+<img src="../uploads/Main/UI_AspectRatioFitterInspector.png" alt="">
+</figure>
+
+<p>宽高比适配器可以调整高度来适应宽度或反之，也可以使元素在其父项内部适应或包裹其父项。宽高比适配器不考虑布局信息，例如最小大小和偏好大小。</p>
+
+<p>请参阅<a href="script-AspectRatioFitter.html">宽高比适配器</a>参考页面以了解更多信息。</p>
+
+<h3>布局组</h3>
+
+<p>布局组充当布局控制器，可用于控制其子布局元素的大小和位置。例如，水平布局组将其子项并排放置，而网格布局组将其子项放在网格中。</p>
+
+<p>布局组不控制自身的大小。相反，布局组自身作为布局元素，可由其他布局控制器进行控制或手动设置。</p>
+
+<p>无论分配给布局组的大小如何，在大多数情况下，布局组都将尝试根据其子布局元素报告的最小大小、偏好大小和灵活大小为每个子布局元素分配适当的空间量。布局组也可通过这种方式任意嵌套。</p>
+
+<p>请参阅<a href="script-HorizontalLayoutGroup.html">水平布局组</a>、<a href="script-VerticalLayoutGroup.html">垂直布局组</a>和<a href="script-GridLayoutGroup.html">网格布局组</a>的参考页面以了解更多信息。</p>
+
+<h3>矩形变换驱动属性</h3>
+
+<p>由于自动布局系统中的布局控制器可以自动控制某些 UI 元素的大小和位置，因此不应通过 Inspector 或 Scene 视图同时手动编辑这些大小和位置。无论如何，即使更改这些值，布局控制器在下一次布局计算时也会重置这些值。</p>
+
+<p>矩形变换有一个<strong>驱动属性</strong>的概念可解决这一问题。例如，Horizontal Fit 属性设置为 Minimum 或 Preferred 的内容大小适配器将在同一个游戏对象上驱动矩形变换的宽度。该宽度将显示为只读状态，并且矩形变换顶部的小信息框将指示一个或多个属性由内容大小适配器驱动。</p>
+
+<p>除了防止手动编辑之外，矩形变换使用驱动属性还有其他原因。只需更改 Game 视图的分辨率或大小即可更改布局。这样一来可以改变布局元素的大小或位置，进而改变驱动属性的值。但是，通常不希望仅仅因为调整了 Game 视图的大小就将场景标记为具有未保存的更改。为防止这种情况，驱动属性的值不会保存为场景的一部分，对这些属性的更改也不会将场景标记为已更改状态。</p>
+
+<h2>技术细节</h2>
+
+<p>自动布局系统内置了一些组件，但也可以创建以自定义方式控制布局的新组件。为此，应让组件实现可由自动布局系统识别的特定接口。</p>
+
+<h3>布局接口</h3>
+
+<p>如果组件实现 <strong>ILayoutElement</strong> 接口，则自动布局系统会将该组件视为布局元素。</p>
+
+<p>如果组件实现 <strong>ILayoutGroup</strong> 接口，则该组件应该驱动其子项的矩形变换。</p>
+
+<p>如果组件实现 <strong>ILayoutSelfController</strong> 接口，则该组件应该驱动自己的 RectTransform。</p>
+
+<h3>布局计算</h3>
+
+<p>自动布局系统按以下顺序计算和执行布局：</p>
+
+<p>1.通过在 ILayoutElement 组件上调用 CalculateLayoutInputHorizontal 来计算布局元素的最小宽度、偏好宽度和灵活宽度。此过程以自下而上的顺序执行，即子项的计算先于父项，这样父项可以在自己的计算中参考子项的信息。
+2.通过在 ILayoutController 组件上调用 SetLayoutHorizontal 来计算和设置布局元素的有效宽度。此过程自上而下的顺序执行，即子项的计算晚于父项，因为子项宽度的分配需要基于父项中可用的完整宽度。在此步骤之后，布局元素的矩形变换便有了新的宽度。
+3.通过在 ILayoutElement 组件上调用 CalculateLayoutInputVertical 来计算布局元素的最小高度、偏好高度和灵活高度。此过程以自下而上的顺序执行，即子项的计算先于父项，这样父项可以在自己的计算中参考子项的信息。
+4.通过在 ILayoutController 组件上调用 SetLayoutVertical 来计算和设置布局元素的有效高度。此过程自上而下的顺序执行，即子项的计算晚于父项，因为子项高度的分配需要基于父项中可用的完整高度。在此步骤之后，布局元素的矩形变换便有了新的高度。</p>
+
+<p>从上面可以看出，自动布局系统首先计算宽度，然后计算高度。因此，计算的高度可取决于宽度，但计算的宽度决不能取决于高度。</p>
+
+<h3>触发布局重新构建</h3>
+
+<p>如果组件上的属性发生变化，并可能导致当前布局不再有效，则需要重新计算布局。可使用以下调用来触发重新计算：</p>
+
+<p>LayoutRebuilder.MarkLayoutForRebuild (transform as RectTransform);</p>
+
+<p>重新构建不会立即发生，而是在当前帧结束时并在渲染之前进行。不立即执行的原因是这样做会导致布局在同一帧期间可能多次重新构建，而这对性能不利。</p>
+
+<p>应按以下准则触发重新构建：</p>
+
+<ul>
+<li>在可更改布局的属性的 setter 中进行。</li>
+<li>在以下回调中进行：</li>
+<li>OnEnable</li>
+<li>OnDisable</li>
+<li>OnRectTransformDimensionsChange</li>
+<li>OnValidate（仅在 Editor 中需要，在运行时不需要）</li>
+<li>OnDidApplyAnimationProperties</li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIAnimationIntegration.html"></a></span><div class="tip">动画集成</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="StyledText.html"></a></span><div class="tip">富文本</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

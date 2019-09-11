@@ -1,0 +1,500 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="创建 DownloadHandler - Unity Manual">
+<title>创建 DownloadHandler - Unity Manual</title>
+<meta name="description" content="DownloadHandlers 有多种类型：">
+<meta property="og:description" content="DownloadHandlers 有多种类型：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UnityWebRequest-CreatingDownloadHandlers';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityWebRequest-CreatingDownloadHandlers.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityWebRequest-CreatingDownloadHandlers.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityWebRequest-CreatingDownloadHandlers.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityWebRequest-CreatingDownloadHandlers.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityWebRequest-CreatingDownloadHandlers.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityWebRequest-CreatingDownloadHandlers.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityWebRequest-CreatingDownloadHandlers.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityWebRequest-CreatingDownloadHandlers.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityWebRequest-CreatingDownloadHandlers.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityWebRequest-CreatingDownloadHandlers.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/UnityWebRequest-CreatingDownloadHandlers.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/UnityWebRequest-CreatingDownloadHandlers.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/UnityWebRequest-CreatingDownloadHandlers.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/UnityWebRequest-CreatingDownloadHandlers.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityWebRequest-CreatingDownloadHandlers.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityWebRequest-CreatingDownloadHandlers.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityWebRequest-CreatingDownloadHandlers.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityWebRequest-CreatingDownloadHandlers.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityWebRequest-CreatingDownloadHandlers.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityWebRequest-CreatingDownloadHandlers.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityWebRequest-CreatingDownloadHandlers.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityWebRequest-CreatingDownloadHandlers.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityWebRequest-CreatingDownloadHandlers.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityWebRequest-CreatingDownloadHandlers.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UNet.html">多玩家和联网</a></li>
+<li><a href="UnityWebRequest.html">UnityWebRequest</a></li>
+<li><a href="UnityWebRequest-LLAPI.html">高级操作：使用 LLAPI</a></li>
+<li>创建 DownloadHandler</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityWebRequest-CreatingUploadHandlers.html"></a></span><div class="tip">创建 UploadHandler</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Audio.html"></a></span><div class="tip">音频</div>
+</div>
+</div></div>
+<h1>创建 DownloadHandler</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><code>DownloadHandlers</code> 有多种类型：</p>
+
+<ul>
+<li>
+<code>DownloadHandlerBuffer</code> 用于简单的数据存储。</li>
+<li>
+<code>DownloadHandlerFile</code> 用于下载文件并将文件保存到磁盘（内存占用少）。</li>
+<li>
+<code>DownloadHandlerTexture</code> 用于下载图像。</li>
+<li>
+<code>DownloadHandlerAssetBundle</code> 用于提取 AssetBundle。</li>
+<li>
+<code>DownloadHandlerAudioClip</code> 用于下载音频文件。</li>
+<li>
+<code>DownloadHandlerMovieTexture</code> is used for downloading video files. It is recommended that you use <a href="../ScriptReference/Video.VideoPlayer.html">VideoPlayer</a> for video download and movie playback since MovieTexture is soon to be deprecated.</li>
+<li>
+<code>DownloadHandlerScript</code> 是一个特殊类。就其本身而言，不会执行任何操作。但是，此类可由用户定义的类继承。此类接收来自 UnityWebRequest 系统的回调，然后可以使用这些回调在数据从网络到达时执行完全自定义的数据处理。</li>
+</ul>
+
+<p>这些 API 类似于 <code>DownloadHandlerTexture</code> 的接口。</p>
+
+<p><code>UnityWebRequest</code> 具有一个 <code>disposeDownloadHandlerOnDispose</code> 属性，其默认值为 true。如果此属性为 true，则在处理 UnityWebRequest 对象时还将在附加的下载处理程序上调用 Dispose()，致使下载处理程序无用。如果保持对下载处理程序的引用时间长度超过对 UnityWebRequest 的引用时间长度，应将 disposeDownloadHandlerOnDispose 设置为 false。</p>
+
+<h2>DownloadHandlerBuffer</h2>
+
+<p>此下载处理程序是最简单的，可处理大多数用例。它将接收的数据存储在本机代码缓冲区中。下载完成后，可使用字节数组或文本字符串的形式访问缓冲的数据。</p>
+
+<h3>示例</h3>
+
+<pre><code>using UnityEngine;
+using UnityEngine.Networking; 
+using System.Collections;
+
+ 
+public class MyBehaviour : MonoBehaviour {
+    void Start() {
+        StartCoroutine(GetText());
+    }
+ 
+    IEnumerator GetText() {
+        UnityWebRequest www = new UnityWebRequest("http://www.my-server.com");
+        www.downloadHandler = new DownloadHandlerBuffer();
+        yield return www.SendWebRequest();
+ 
+        if(www.isNetworkError || www.isHttpError) {
+            Debug.Log(www.error);
+        }
+        else {
+            // 将结果显示为文本
+            Debug.Log(www.downloadHandler.text);
+ 
+            // 或者以二进制数据格式检索结果
+            byte[] results = www.downloadHandler.data;
+        }
+    }
+}
+</code></pre>
+
+<h2>DownloadHandlerFile</h2>
+
+<p>这是大型文件的特殊下载处理程序。它将下载的字节直接写入文件，因此无论下载的文件大小如何，内存使用量都很低。与其他下载处理程序的区别在于，无法从此下载处理程序获取数据，所有数据都将保存到文件中。</p>
+
+<h2>示例</h2>
+
+<pre><code>using System.Collections;
+using System.IO;
+using UnityEngine;
+using UnityEngine.Networking;
+
+public class FileDownloader : MonoBehaviour {
+
+    void Start () {
+        StartCoroutine(DownloadFile());
+    }
+    
+    IEnumerator DownloadFile() {
+        var uwr = new UnityWebRequest("https://unity3d.com/", UnityWebRequest.kHttpVerbGET);
+        string path = Path.Combine(Application.persistentDataPath, "unity3d.html");
+        uwr.downloadHandler = new DownloadHandlerFile(path);
+        yield return uwr.SendWebRequest();
+        if (uwr.isNetworkError || uwr.isHttpError)
+            Debug.LogError(uwr.error);
+        else
+            Debug.Log("File successfully downloaded and saved to " + path);
+    }
+}
+</code></pre>
+
+<h2>DownloadHandlerTexture</h2>
+
+<p>相较于使用 <code>DownloadHandlerBuffer</code> 下载图像文件，然后再使用 <code>Texture.LoadImage</code> 从原始字节创建纹理，使用 <code>DownloadHandlerTexture</code> 会更有效。</p>
+
+<p>此下载处理程序将接收的数据存储在 <code>UnityEngine.Texture</code>中。在下载完成时，它将 JPEG 和 PNG 解码为有效的 <code>UnityEngine.Texture objects</code>。每个 <code>DownloadHandlerTexture</code> 对象只创建一个 <code>UnityEngine.Texture</code> 副本。这样会减少垃圾收集的性能问题。此处理程序在本机代码中执行缓冲、解压缩和纹理创建。另外，解压缩和纹理创建任务在工作程序线程上而不是主线程上执行，这样可以在加载大型纹理时改善帧时间。</p>
+
+<p>最后，<code>DownloadHandlerTexture</code> 仅在最终创建纹理本身时分配托管内存，因此消除了与脚本中执行字节到纹理转换相关的垃圾收集开销。</p>
+
+<h3>示例</h3>
+
+<p>以下示例从互联网下载 PNG 文件，将其转换为精灵，并将其分配给<a href="script-Image.html">图像</a>：</p>
+
+<pre><code>using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Networking; 
+using System.Collections;
+
+[RequireComponent(typeof(UnityEngine.UI.Image))]
+public class ImageDownloader : MonoBehaviour {
+    UnityEngine.UI.Image _img;
+ 
+    void Start () {
+        _img = GetComponent&lt;UnityEngine.UI.Image&gt;();
+        Download("http://www.mysite.com/myimage.png");
+    }
+ 
+    public void Download(string url) {
+        StartCoroutine(LoadFromWeb(url));
+    }
+ 
+    IEnumerator LoadFromWeb(string url)
+    {
+        UnityWebRequest wr = new UnityWebRequest(url);
+        DownloadHandlerTexture texDl = new DownloadHandlerTexture(true);
+        wr.downloadHandler = texDl;
+        yield return wr.SendWebRequest();
+        if(!(wr.isNetworkError || wr.isHttpError)) {
+            Texture2D t = texDl.texture;
+            Sprite s = Sprite.Create(t, new Rect(0, 0, t.width, t.height),
+                                     Vector2.zero, 1f);
+            _img.sprite = s;
+        }
+    }
+}
+</code></pre>
+
+<h2>DownloadHandlerAssetBundle</h2>
+
+<p>这种专门的下载处理程序的优势在于能够将数据流式传输到 Unity 的 AssetBundle 系统。一旦 AssetBundle 系统收到足够的数据，AssetBundle 就可以作为 <code>UnityEngine.AssetBundle</code> 对象使用。仅会创建 <code>UnityEngine.AssetBundle</code> 对象的一个副本。因此大大减少了运行时内存分配以及加载 AssetBundle 带来的内存影响。此下载处理程序还允许在未完全下载的情况下部分使用 AssetBundle，因此可以流式传输资源。</p>
+
+<p>所有下载和解压缩都在工作线程上进行。</p>
+
+<p>AssetBundle 通过 <code>DownloadHandlerAssetBundle</code> 对象进行下载，该对象具有特殊的 <code>assetBundle</code> 属性可用于检索 AssetBundle。</p>
+
+<p>由于 AssetBundle 系统的工作方式，所有 AssetBundle 都必须具有关联的地址。通常，该地址是它们所在的名义 URL（表示任何重定向之前的 URL）。在几乎任何情况下，都应该传入与传递给 UnityWebRequest 相同的 URL。使用高级 API (HLAPI) 时，此操作将自动完成。</p>
+
+<h3>示例</h3>
+
+<pre><code>using UnityEngine;
+using UnityEngine.Networking; 
+using System.Collections;
+ 
+public class MyBehaviour : MonoBehaviour {
+    void Start() {
+        StartCoroutine(GetAssetBundle());
+    }
+ 
+    IEnumerator GetAssetBundle() {
+        UnityWebRequest www = new UnityWebRequest("http://www.my-server.com");
+        DownloadHandlerAssetBundle handler = new DownloadHandlerAssetBundle(www.url, uint.MaxValue);
+        www.downloadHandler = handler;
+        yield return www.SendWebRequest();
+ 
+        if(www.isNetworkError || www.isHttpError) {
+            Debug.Log(www.error);
+        }
+        else {
+            // 提取 AssetBundle
+            AssetBundle bundle = handler.assetBundle;
+        }
+    }
+}
+</code></pre>
+
+<h2>DownloadHandlerAudioClip</h2>
+
+<p>此下载处理程序经过优化，用于下载音频文件。与使用 <code>DownloadHandlerBuffer</code> 来下载原始字节再从中创建 <code>AudioClip</code> 相比，此下载处理程序可以更方便地执行此操作。</p>
+
+<h2>示例</h2>
+
+<pre><code>using System.Collections;
+using UnityEngine;
+using UnityEngine.Networking;
+
+public class AudioDownloader : MonoBehaviour {
+
+    void Start () {
+        StartCoroutine(GetAudioClip());
+    }
+
+    IEnumerator GetAudioClip() {
+        using (var uwr = UnityWebRequestMultimedia.GetAudioClip("http://myserver.com/mysound.ogg", AudioType.OGGVORBIS)) {
+            yield return uwr.SendWebRequest();
+            if (uwr.isNetworkError || uwr.isHttpError) {
+                Debug.LogError(uwr.error);
+                yield break;
+            }
+
+            AudioClip clip = DownloadHandlerAudioClip.GetContent(uwr);
+            // 使用音频剪辑
+        }
+    }   
+}
+</code></pre>
+
+<h2>DownloadHandlerMovieTexture</h2>
+
+<p><strong>Note:</strong> MovieTexture will be deprecated. You should use <a href="../ScriptReference/Video.VideoPlayer.html">VideoPlayer</a> for video download and movie playback. </p>
+
+<p>此下载处理程序经过优化，用于下载视频文件。与使用 <code>DownloadHandlerBuffer</code> 来下载原始字节再从中创建 <code>MovieTexture</code> 相比，此下载处理程序可以更方便地执行此操作。</p>
+
+<h2>示例</h2>
+
+<pre><code>using System.Collections;
+using UnityEngine;
+using UnityEngine.Networking;
+
+public class MovieDownloader : MonoBehaviour {
+
+    void Start () {
+        StartCoroutine(GetAudioClip());
+    }
+
+    IEnumerator GetAudioClip() {
+        using (var uwr = UnityWebRequestMultimedia.GetMovieTexture("http://myserver.com/mysound.ogg")) {
+            yield return uwr.SendWebRequest();
+            if (uwr.isNetworkError || uwr.isHttpError) {
+                Debug.LogError(uwr.error);
+                yield break;
+            }
+
+            MovieTexture movie = DownloadHandlerMovieTexture.GetContent(uwr);
+            // 使用电影纹理
+        }
+    }   
+}
+</code></pre>
+
+<h2>DownloadHandlerScript</h2>
+
+<p>对于需要完全控制下载数据处理的用户，Unity 提供了 <code>DownloadHandlerScript</code> 类。</p>
+
+<p>默认情况下，此类的实例不执行任何操作。但是，如果您从 <code>DownloadHandlerScript</code> 派生自己的类，则可以重写某些函数并使用它们在数据从网络到达时接收回调。</p>
+
+<p><strong>注意：</strong>实际下载发生在工作线程上，但所有 <code>DownloadHandlerScript</code> 回调都在主线程上运行。应避免在这些回调期间执行计算量很大的操作。</p>
+
+<h3>要重写的函数</h3>
+
+<h4>ReceiveContentLength()</h4>
+
+<pre><code>protected void ReceiveContentLength(long contentLength);
+</code></pre>
+
+<p>收到 Content-Length 标头时调用此函数。请注意，如果服务器在处理 UnityWebRequest 的过程中发送一个或多个重定向响应，则此回调可能会多次发生。</p>
+
+<h4>OnContentComplete()</h4>
+
+<pre><code>protected void OnContentComplete();
+</code></pre>
+
+<p>当 UnityWebRequest 完全从服务器下载所有数据并且已将所有接收的数据转发到 ReceiveData 回调时，将调用此函数。</p>
+
+<h4>ReceiveData()</h4>
+
+<pre><code>protected bool ReceiveData(byte[] data, long dataLength);
+</code></pre>
+
+<p>数据从远程服务器到达后调用此函数，每帧调用一次。<code>data</code> 参数包含从远程服务器接收的原始字节，<code>dataLength</code> 表示数据数组中新数据的长度。</p>
+
+<p>不使用预先分配的数据缓冲区的情况下，系统每次调用此回调时都会创建一个新的字节数组，而 <code>dataLength</code> 始终等于 <code>data.Length</code>。使用预分配的数据缓冲区的情况下，将重复使用数据缓冲区，并且必须使用 <code>dataLength</code> 来查找更新的字节数。</p>
+
+<p>此函数需要返回值 <strong>true</strong> 或 <strong>false</strong>。如果返回 <strong>false__，系统会立即中止 UnityWebRequest。如果返回 </strong>true__，则处理将正常继续。</p>
+
+<h3>避免垃圾收集开销</h3>
+
+<p>Unity 的许多高级用户都会关注如何减少因垃圾收集而导致的 CPU 峰值。对于这些用户，UnityWebRequest 系统允许预先分配托管代码字节数组，该数组用于将下载的数据传递给 DownloadHandlerScript 的 <code>ReceiveData</code> 回调。</p>
+
+<p>使用此函数可以完全消除使用 DownloadHandlerScript 派生类捕获下载数据时的托管代码内存分配。</p>
+
+<p>要让 <code>DownloadHandlerScript</code> 使用预先分配的托管缓冲区运行，请向 <code>DownloadHandlerScript</code> 的构造函数提供一个字节数组。</p>
+
+<p><strong>注意：</strong>字节数组的大小限制了每帧传递给 ReceiveData 回调的数据量。如果数据经过很多帧才缓慢到达，可能是因为提供的字节数组太小。</p>
+
+<h4>示例</h4>
+
+<pre><code>using UnityEngine;
+using UnityEngine.Networking; 
+using System.Collections;
+
+public class LoggingDownloadHandler : DownloadHandlerScript {
+
+    // 标准脚本化下载处理程序 - 在每个 ReceiveData 回调时分配内存
+   
+    public LoggingDownloadHandler(): base() {
+    }
+
+    // 预先分配的脚本化下载处理程序
+    // 重用提供的字节数组来传递数据。
+    //消除内存分配。
+    
+    public LoggingDownloadHandler(byte[] buffer): base(buffer) {
+    }
+
+    //对于 DownloadHandler 基类而言是必需的。在处理"bytes"属性时调用。
+    
+    protected override byte[] GetData() { return null; }
+
+    //从网络收到数据后每帧调用一次。
+    
+    protected override bool ReceiveData(byte[] data, int dataLength) {
+        if(data == null || data.Length &lt; 1) {
+            Debug.Log("LoggingDownloadHandler :: ReceiveData - received a null/empty buffer");
+            return false;
+        }
+
+        Debug.Log(string.Format("LoggingDownloadHandler :: ReceiveData - received {0} bytes", dataLength));
+        return true;
+    }
+
+    // 从服务器收到所有数据并通过 ReceiveData 传递后调用。
+    
+    protected override void CompleteContent() {
+        Debug.Log("LoggingDownloadHandler :: CompleteContent - DOWNLOAD COMPLETE!");
+    }
+
+    // 从服务器收到 Content-Length 标头时调用。
+    
+    protected override void ReceiveContentLength(int contentLength) {
+        Debug.Log(string.Format("LoggingDownloadHandler :: ReceiveContentLength - length {0}", contentLength));
+    }
+}
+</code></pre>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityWebRequest-CreatingUploadHandlers.html"></a></span><div class="tip">创建 UploadHandler</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Audio.html"></a></span><div class="tip">音频</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

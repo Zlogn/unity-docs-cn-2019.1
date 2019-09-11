@@ -1,0 +1,326 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="字体 - Unity Manual">
+<title>字体 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/font_importer.png">
+<meta name="description" content="可创建或导入__字体__以便在 GUI 文本 (GUI Text) 或文本网格 (Text Mesh) __组件__中使用。">
+<meta property="og:description" content="可创建或导入__字体__以便在 GUI 文本 (GUI Text) 或文本网格 (Text Mesh) __组件__中使用。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-Font';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-Font.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-Font.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-Font.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-Font.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-Font.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-Font.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-Font.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-Font.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-Font.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-Font.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/class-Font.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/class-Font.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/class-Font.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/class-Font.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-Font.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-Font.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-Font.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-Font.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-Font.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-Font.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-Font.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-Font.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-Font.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-Font.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="comp-MeshGroup.html">网格组件</a></li>
+<li><a href="class-TextMesh.html">文本网格</a></li>
+<li>字体</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-TextAsset.html"></a></span><div class="tip">文本资源</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="comp-Textures.html"></a></span><div class="tip">纹理组件</div>
+</div>
+</div></div>
+<h1>字体</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>可创建或导入__字体__以便在 <a href="class-GUIText.html">GUI 文本 (GUI Text)</a> 或<a href="class-TextMesh.html">文本网格 (Text Mesh)</a> __组件__中使用。</p>
+
+<h2>导入字体文件</h2>
+
+<p>要在项目中添加字体，必须将字体文件放在 Assets 文件夹中。然后，Unity 会自动将其导入。支持的字体格式为 TrueType 字体（.ttf 文件）和 OpenType 字体（.otf 文件）。</p>
+
+<p>要更改字体的__大小 (Size)<strong>，请在 </strong>Project 视图__中突出显示该字体，随后将在 <strong>Inspector</strong> 的__导入设置 (Import Settings)__ 中提供多个选项。</p>
+
+<figure>
+<img src="../uploads/Main/font_importer.png" alt="字体的导入设置 (Import Settings)">
+<figcaption>字体的导入设置 (Import Settings)</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Font Size</strong></td>
+	<td style="text-align:left;">字体的大小，基于文字处理程序中设置的大小。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Rendering mode</strong></td>
+	<td style="text-align:left;">字体渲染模式，告诉 Unity 如何对字形应用平滑。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Character</strong></td>
+	<td style="text-align:left;">要导入字体纹理的字体的字符集</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">将此模式设置为 Dynamic 会导致 Unity 嵌入字体数据本身并在运行时渲染字体字形（见下文）。</td>
+</tr>
+</tbody>
+</table>
+
+<p><em>特定于动态字体的导入设置</em></p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Include Font Data</strong></td>
+	<td style="text-align:left;">与动态 (Dynamic) 字体属性一起使用时，此设置可控制字体的打包。选中复选框后，TTF 将包含在构建的输出中。如果未选中复选框，则假定最终用户将在自己的计算机上安装该字体。请注意，字体受版权保护，因此您只应当包含已获得许可或自己创建的字体。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Font Names</strong></td>
+	<td style="text-align:left;">当字体或字符不可用时使用的后备字体列表（见下文）。</td>
+</tr>
+</tbody>
+</table>
+
+<p>导入字体后，可在 Project 视图中展开字体，查看其已自动生成的某些资源。导入期间创建两个资源：“字体材质”和“字体纹理”。与您可能熟悉的许多应用程序不同，Unity 中的字体会转换为纹理，并且显示的字形将使用纹理四边形进行渲染。有效调整字体大小会更改此生成的纹理中每个字形使用的像素数。文本网格资源便是使用这些自动生成的字体纹理进行纹理化的 3D 几何体。您需要改变字体的大小以使这些资源看起来清晰。</p>
+
+<h2>动态字体</h2>
+
+<p>在 Import Settings 中将 <strong>Characters</strong> 下拉选单设置为 <strong>Dynamic</strong> 时，Unity 将不会预先生成包含所有字体字符的纹理。取而代之的做法是，它将使用 FreeType 字体渲染引擎来即时创建纹理。这样做的好处是它可以节省下载流量和纹理内存，特别是使用通常包含在用户系统中的字体时（这种情况下不必包含字体数据），或者需要支持亚洲语言或大型字体大小时（这种情况下使用普通字体纹理可能使字体纹理非常大）。</p>
+
+<p>当 Unity 尝试使用动态字体渲染文本但无法找到字体时（因为未选择 <strong>Include Font Data__，并且用户计算机上未安装该字体），或者字体不包含请求的字形时（例如尝试使用拉丁字体在东亚脚本中渲染文本时，或者使用粗体/斜体字形文本时），它将尝试 </strong>Font Names__ 字段中列出的每种字体，从而查看是否可以找到与项目中的字体名称匹配的字体（包含字体数据）或者用户计算机上安装的字体是否具有请求的字形。如果找不到列出的后备字体或者这些字体不具有所请求的字形，Unity 将回退到硬编码的全局后备字体列表，其中包含当前运行时平台上通常安装的各种国际字体。</p>
+
+<p>请注意，有些目标平台（WebGL 和有些游戏主机）没有可供 Unity 访问以渲染文本的操作系统默认字体。对于这些平台，将忽略 <strong>Include Font Data</strong> 设置，并会始终包含字体数据。所有要用作后备字体的字体都必须包含在项目中，因此如果需要渲染国际文本或是字体的粗体/斜体版本，则需要在项目中添加一个具有所需字符的字体文件，并在其他字体的 <strong>Font Names</strong> 列表中设置该字体，这样应该就会将该字体用作后备字体。如果字体设置正确，则后备字体将在字体导入器 (Font Importer) 检视面板中列出，显示在 <em>References to other fonts in project</em> 下。</p>
+
+<h2>默认字体资源</h2>
+
+<p>默认字体资源是动态字体，设置为使用 <a href="https://en.wikipedia.org/wiki/Arial">Arial</a>。如果 Unity 无法在计算机上找到 Arial 字体（例如，如果没有安装该字体），则将回退到 Unity 捆绑的字体，名为 <a href="https://en.wikipedia.org/wiki/Liberation_fonts">Liberation Sans</a>。</p>
+
+<p>Liberation Sans 看起来很像 Arial，但它不包括粗体和斜体字体样式，并且只有基本的拉丁字符集，所以带样式的文本或非拉丁字符可能会回退到其他字体或无法渲染出来。但是该字体有许可证，因此允许在播放器构建中包含该字体。</p>
+
+<h2>自定义字体</h2>
+
+<p>要创建自定义字体，请从 Project 窗口中选择“Create &gt; Custom Font”。随后将在项目库中添加自定义的字体资源。</p>
+
+<figure>
+<img src="../uploads/Main/customFontInspector.png" alt="">
+</figure>
+
+<p><strong>Ascii Start Offset</strong> 字段是一个十进制数，用于定义您希望作为 <strong>Character Rects</strong> 索引起点的 Ascii 索引。例如，如果 Ascii Start Offset 设置为 0，则大写字母 A 将位于索引 65 处，但如果 Ascii Start Offset 设置为 65，则字母 A 将位于索引 0 处。您可以在<a href="http://ascii.cl/">这里</a>查阅 Ascii 表，但应记住，自定义字体使用十进制 Ascii 编号系统。</p>
+
+<p>通过 <strong>Tracking</strong> 设置可修改每个字符与同一行下一个字符的接近程度，而通过 <strong>Line spacing</strong> 设置可定义每行与下一行的接近程度。</p>
+
+<p>要创建字体材质，您需要将字体作为纹理导入，然后将该纹理应用于材质，再将字体材质拖到 <strong>Default Material</strong> 部分。</p>
+
+<p><strong>Character Rects</strong> 部分可定义字体的每个字符。</p>
+
+<figure>
+<img src="../uploads/Main/customFontElements.png" alt="">
+</figure>
+
+<p><strong>Size</strong> 字段用于定义字体中的字符数。</p>
+
+<p>在每个 <strong>Element</strong> 中，有一个用于字符 Ascii 索引的索引 (Index) 字段。此值将是一个整数，表示该元素中的字符。</p>
+
+<p>要计算 <strong>UV</strong> 值，您需要弄清楚字符在 0 到 1 范围内的位置。为此，应将 1 除以尺寸上的字符数。例如，如果有一个字体，该字体上的图像尺寸为 256x128，横向 4 个字符，纵向 2 个字符（所以为 64x64），那么 UV 宽度将是 0.25，UV 高度将是 0.5。</p>
+
+<p>对于 UV X 和 Y，只需要确定所需的字符，然后将宽度或高度值乘以字母的列/行。</p>
+
+<p><strong>Vert</strong> 大小基于字符的像素大小，例如，如果每个字符均为 128x128，则将 128 和 –128 填入垂直 (Vert) 宽度 (W) 和高度 (H) 将得出正确比例的字母。Vert Y 必须为负。</p>
+
+<p><strong>Advance</strong> 将是从该字符的原点到下一个字符的原点所需的水平距离（以像素为单位）。在计算实际距离时，应将其乘以 <strong>Tracking</strong>。</p>
+
+<figure>
+<img src="../uploads/Main/ExampleCustomFont.png" alt="填入值后的自定义字体检视面板 (Inspector) 示例">
+<figcaption>填入值后的自定义字体检视面板 (Inspector) 示例</figcaption>
+</figure>
+
+<h2>Unicode 支持</h2>
+
+<p>Unity 拥有完整的 Unicode 支持。Unicode 文本允许您显示 ASCII 字符集通常不支持的德语、法语、丹麦语或日语字符。如果您的字体支持，还可以输入许多不同的特殊用途字符，如箭头符号或 Option 键符号。</p>
+
+<p>要使用 Unicode 字符，请从 Import Settings 中的 <strong>Characters</strong> 下拉选单中选择 <strong>Unicode</strong> 或 <strong>Dynamic</strong>。现在便可使用此字体显示 Unicode 字符。如果要使用 <strong>GUIText</strong> 或__文本网格 (Text Mesh)<strong>，可在该组件的 Inspector 的 </strong>Text__ 字段中输入 Unicode 字符。</p>
+
+<p>You can also use unicode characters if you want to set the displayed text from scripting. The C# compiler fully supports Unicode based scripts. You have to save your scripts with UTF–16 encoding. Now you can add unicode characters to a string in your script and they will display as expected in <strong>UnityGUI</strong>, a GUIText, or a Text Mesh.</p>
+
+<p>请注意，不支持代理项对。</p>
+
+<h2>更改字体颜色</h2>
+
+<p>根据字体的使用方式，可通过多种方法更改显示字体的颜色。</p>
+
+<h3>GUIText 和文本网格 (Text Mesh)</h3>
+
+<p>如果使用 GUIText 或文本网格 (Text Mesh)，可通过该字体的自定义__材质 (Material)__ 更改其颜色。在 Project 视图中，单击 <strong>Create &gt; Material__，然后在 </strong>Inspector__ 中选择并设置新创建的材质。确保将字体资源中的纹理指定给该材质。如果对字体材质使用内置的 <strong>GUI/Text Shader</strong> 着色器，则可在材质的 <strong>Text Color</strong> 属性中选择颜色。</p>
+
+<h3>UnityGUI</h3>
+
+<p>如果使用 UnityGUI 脚本来显示字体，则可在不同情况下更好地控制字体的颜色。要更改字体的颜色，请通过 <strong>Assets &gt; Create &gt; GUI Skin</strong> 创建 <strong>GUISkin__，然后定义特定控制状态的颜色，例如：__Label &gt; Normal &gt; Text Color</strong>。有关更多详细信息，请阅读 <a href="class-GUISkin.html">GUI 皮肤 (GUI Skin) 页面</a>。</p>
+
+<h2>提示</h2>
+
+<ul>
+<li>要显示导入的字体，请选择字体并选择 <strong>GameObject &gt; Create Other &gt; 3D Text</strong>。</li>
+<li>可通过仅使用小写或大写字符来减小生成的字体纹理大小。</li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-TextAsset.html"></a></span><div class="tip">文本资源</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="comp-Textures.html"></a></span><div class="tip">纹理组件</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

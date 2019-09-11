@@ -1,0 +1,264 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="创建和使用材质 - Unity Manual">
+<title>创建和使用材质 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/StandardShaderNewEmptyMaterial.png">
+<meta name="description" content="要创建新材质，请从主菜单或 Project 视图__上下文菜单中选择 Assets &gt; Create &gt; Material__。">
+<meta property="og:description" content="要创建新材质，请从主菜单或 Project 视图__上下文菜单中选择 Assets &gt; Create &gt; Material__。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'Materials';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Materials.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Materials.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Materials.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Materials.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Materials.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Materials.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Materials.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Materials.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Materials.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Materials.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/Materials.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/Materials.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/Materials.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/Materials.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Materials.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Materials.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Materials.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Materials.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Materials.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Materials.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Materials.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Materials.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Materials.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Materials.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="Shaders.html">材质、着色器和纹理</a></li>
+<li>创建和使用材质</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Textures.html"></a></span><div class="tip">纹理</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="shader-StandardShader.html"></a></span><div class="tip">标准着色器</div>
+</div>
+</div></div>
+<h1>创建和使用材质</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>要创建新材质，请从主菜单或 <strong>Project 视图__上下文菜单中选择 </strong>Assets &gt; Create &gt; Material__。</p>
+
+<p>默认情况下会为新材质指定标准着色器，并且所有贴图属性都为空，如下所示：</p>
+
+<figure>
+<img src="../uploads/Main/StandardShaderNewEmptyMaterial.png" alt="">
+</figure>
+
+<p>创建材质后，可将其应用于对象并在 <strong>Inspector</strong> 中调整其所有属性。要将材质应用于对象，只需将其从 <strong>Project 视图__拖到 </strong>Scene__ 或 <strong>Hierarchy</strong> 视图中的任何对象上。</p>
+
+<h2>设置材质属性</h2>
+
+<p>您可以选择希望特定材质使用的着色器。只需在 Inspector 中展开 <strong>Shader</strong> 下拉选单，然后选择新的着色器。所选的着色器将决定可更改的属性。属性可能包括颜色、滑动条、纹理、数字或矢量。如果已将材质应用于 <strong>Scene</strong> 视图中的活动对象，您将看到属性更改会实时应用于对象。</p>
+
+<p>将__纹理__应用于属性时可采用两种方法。</p>
+
+<p>1.将其从 Project 视图拖到纹理方块上
+1.单击 <strong>Select</strong> 按钮，然后从显示的下拉列表中选择纹理</p>
+
+<h2>内置着色器</h2>
+
+<p>除了<a href="shader-StandardShader.html">标准着色器</a>，还有许多其他类别的内置着色器可用于特殊目的：</p>
+
+<ul>
+<li>
+<strong>FX</strong>：光照和玻璃特效。</li>
+<li>
+<strong>GUI</strong> 和 <strong>UI</strong>：用于显示用户界面图形。</li>
+<li>
+<strong>移动端 (Mobile)</strong>：适用于移动设备的简化高性能着色器。</li>
+<li>
+<strong>大自然 (Nature)</strong>：用于树木和地形。</li>
+<li>
+<strong>粒子 (Particles)</strong>：粒子系统特效。</li>
+<li>
+<strong>天空盒 (Skybox)</strong>：用于渲染所有几何体后面的背景环境</li>
+<li>
+<strong>精灵 (Sprites)</strong>：与 2D 精灵系统结合使用</li>
+<li>
+<strong>卡通 (Toon)</strong>：卡通风格的渲染。</li>
+<li>
+<strong>无光照 (Unlit)</strong>：用于完全绕过所有光照和阴影的渲染</li>
+<li>
+<strong>旧版 (Legacy)</strong>：已被标准着色器取代的大量旧着色器</li>
+</ul>
+
+<h2>着色器技术细节</h2>
+
+<p>一个着色器就是一个脚本，其中包含数学计算和算法，用于定义像素在模型表面上的显示效果。标准着色器执行复杂和逼真的光照计算。其他着色器可能使用更简单或不同的计算来显示不同的结果。在给定的着色器中有许多属性，可由使用该着色器的材质为它们赋值。这些属性可以是数字、颜色定义或纹理，在查看材质时会显示在检视面板中。然后，附加到游戏对象的渲染器组件将使用材质来渲染每个游戏对象的网格。</p>
+
+<p>允许并且通常希望多种不同的材质引用相同的纹理。根据要求，这些材质还可使用相同或不同的着色器。</p>
+
+<p>下面的示例展示了一种可能的设置组合，其中使用三种材质、两种着色器和一种纹理。</p>
+
+<figure>
+<img src="../uploads/Main/material_diagram.jpg" alt="">
+</figure>
+
+<p>图中有一辆红色汽车和一辆蓝色汽车。两个模型对车身使用不同的材质，分别为“Red car material”（红色汽车材质）和“Blue car material”（蓝色汽车材质）。</p>
+
+<p>这两种车身材质使用同一个自定义着色器“Carbody Shader”（车身着色器）。使用自定义着色器的原因是该着色器为专门汽车添加了额外的特性（例如金属性闪光渲染），或者可能具有自定义损坏遮罩功能。</p>
+
+<p>每种车身材质均引用“Car Texture”（汽车纹理），这是包含车身所有细节但没有具体油漆颜色的纹理贴图。</p>
+
+<p>车身着色器还接受一种色调颜色；红色和蓝色汽车设置为不同的颜色，使每辆汽车的外观不同，但两者使用同一种纹理。</p>
+
+<p>车轮模型也使用单独的材质，但这次两辆汽车共用相同的车轮材质，因为每辆汽车的车轮没有差异。车轮材质使用标准着色器，并同样引用汽车纹理。</p>
+
+<p>注意汽车纹理包含的车身<em>和</em>车轮细节：这是一个<em>纹理图集</em>，意味着纹理图像的不同部分被显式映射到模型的不同部分。</p>
+
+<p>即使车身材质使用的纹理也包含车轮图像，车轮细节也不会出现在车身上，因为该纹理的那部分未映射到车身几何体。</p>
+
+<p>同样，车轮材质使用相同的纹理，其中也有车身细节。车轮上不会出现车身细节，因为只有显示车轮细节的纹理部分才映射到了车轮几何体。</p>
+
+<p>此映射由 3D 美术师在外部 3D 应用程序中完成，称为“UV 贴图”。</p>
+
+<p>更具体地说，着色器定义了：</p>
+
+<ul>
+<li>对象渲染方法。此方法包括代码和数学计算，其中可能包括光源的角度、视角以及任何其他相关计算。着色器还可根据最终用户的图形硬件指定不同的方法。</li>
+<li>可在材质检视面板中自定义的参数，例如纹理贴图、颜色和数值。</li>
+</ul>
+
+<p>材质定义了：</p>
+
+<ul>
+<li>用于渲染此材质的着色器。</li>
+<li>着色器参数（例如要使用的纹理贴图、颜色和数值）的具体值。</li>
+</ul>
+
+<p>自定义着色器应由图形工程师构建。为创建自定义着色器，需要使用一种十分简单的语言：__ShaderLab__。然而，让着色器在各种显卡上正常工作是一项复杂的工作，需要相当全面的显卡工作原理知识。</p>
+
+<p>Unity 中直接内置了许多着色器，还有一些着色器位于<a href="AssetTypes.html#Standard">标准资源 (Standard Assets)</a> 库中。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="Textures.html"></a></span><div class="tip">纹理</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="shader-StandardShader.html"></a></span><div class="tip">标准着色器</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

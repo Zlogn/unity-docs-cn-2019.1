@@ -1,0 +1,243 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="导入非人形动画 - Unity Manual">
+<title>导入非人形动画 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/Rig-1.png">
+<meta name="description" content="人形 (Humanoid) 模型是一种非常特别的结构，包含至少 15 种骨骼，这些骨骼的组织方式与实际人体骨架大致相符。所有其他使用 Unity 动画系统的模型则属于非人形或__通用 (Generic)__ 类别。这意味着通用模型可能是从茶壶到飞龙的任何物体，因此非人形骨架可能拥有大量各式各样的骨骼结构。">
+<meta property="og:description" content="人形 (Humanoid) 模型是一种非常特别的结构，包含至少 15 种骨骼，这些骨骼的组织方式与实际人体骨架大致相符。所有其他使用 Unity 动画系统的模型则属于非人形或__通用 (Generic)__ 类别。这意味着通用模型可能是从茶壶到飞龙的任何物体，因此非人形骨架可能拥有大量各式各样的骨骼结构。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'GenericAnimations';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/GenericAnimations.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/GenericAnimations.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/GenericAnimations.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/GenericAnimations.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/GenericAnimations.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/GenericAnimations.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/GenericAnimations.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/GenericAnimations.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/GenericAnimations.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/GenericAnimations.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/GenericAnimations.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/GenericAnimations.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/GenericAnimations.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/GenericAnimations.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/GenericAnimations.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/GenericAnimations.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/GenericAnimations.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/GenericAnimations.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/GenericAnimations.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/GenericAnimations.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/GenericAnimations.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/GenericAnimations.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/GenericAnimations.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/GenericAnimations.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="ImportingAssets.html">导入</a></li>
+<li><a href="ImportingModelFiles.html">Importing Models</a></li>
+<li>导入非人形动画</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ConfiguringtheAvatar.html"></a></span><div class="tip">导入人形动画</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-FBXImporter.html"></a></span><div class="tip">Model Import Settings 窗口</div>
+</div>
+</div></div>
+<h1>导入非人形动画</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><em>人形 (Humanoid)</em> 模型是一种非常特别的结构，包含至少 <a href="ConfiguringtheAvatar.html">15 种骨骼</a>，这些骨骼的组织方式与实际人体骨架大致相符。所有其他使用 <a href="AnimationOverview.html">Unity 动画系统</a>的模型则属于<em>非人形</em>或__通用 (Generic)__ 类别。这意味着通用模型可能是从茶壶到飞龙的任何物体，因此非人形骨架可能拥有大量各式各样的骨骼结构。</p>
+
+<p>为了处理这种复杂性，Unity 只需知道哪个骨骼是__根节点 (Root node)__。就通用角色而言，这是人形角色质心的最佳近似值。它有助于 Unity 确定如何以最可靠的方式渲染动画。由于只有一个骨骼要映射，通用设置不使用 <a href="class-Avatar.html">Humanoid Avatar 窗口</a>。因此，准备将非人形模型文件导入 Unity 时所需的步骤比人形模型所需的步骤要少。</p>
+
+<p>1.<a href="#RigSetup">设置 Rig</a> 为 <strong>Generic</strong>。
+2.可以选择通过<a href="#AvatarMask">定义 Avatar 遮罩</a>来限制在某些骨骼上导入的动画。
+3.从 <strong>Animation</strong> 选项卡中，启用 <strong>Import Animation</strong> 选项，然后设置其他特定于资源的属性。
+4.如果文件包含多个动画或动作，可<a href="Splittinganimations.html">将特定帧范围定义为动画剪辑</a>。
+5.对于文件中定义的每个动画剪辑，可以：
+ * <a href="class-AnimationClip.html#ClipProperties">设置姿势和根变换</a>
+ * <a href="LoopingAnimationClips.html">优化循环</a>
+ * <a href="AnimationCurvesOnImportedClips.html">向剪辑添加曲线</a>以便动画化其他项的时序
+ * <a href="AnimationEventsOnImportedClips.html">向剪辑添加事件</a>以便在动画期间触发某些动作
+ * <a href="AnimationMaskOnImportedClips.html">丢弃动画的一部分</a>（类似于使用运行时 <a href="class-AvatarMask.html">Avatar 遮罩</a>，但却是在导入时执行的）
+ * <a href="AnimationRootMotionNodeOnImportedClips.html">选择其他根运动节点</a>来驱动动作
+ * <a href="class-AnimationClip.html#ImportMessages">阅读 Unity 提供的有关导入剪辑的任何消息</a>
+ * <a href="class-AnimationClip.html#AnimationPreview">观看动画剪辑的预览</a>
+6.要保存更改，请单击 <strong>Import Settings</strong> 窗口底部的 <strong>Apply</strong> 按钮，也可单击 <strong>Revert</strong> 放弃所做的更改。</p>
+
+<p><a name="RigSetup"></a> </p>
+
+<h2>设置骨架</h2>
+
+<p>从 <a href="FBXImporter-Rig.html">Inspector 窗口的 Rig 选项卡</a>中，将 <strong>Avatar__（动画）类型设置为 </strong>Generic<strong>。默认情况下，__Avatar Definition</strong> 属性设置为 <strong>Create From This Model__，而 </strong>Root node__ 选项设置为 <strong>None</strong>。</p>
+
+<p>在某些情况下，可将 <strong>Avatar Definition</strong> 选项更改为 __Copy From Other Avatar__，从而使用事先为其他模型文件定义的 Avatar。例如，如果在 3D 建模应用程序中使用多个不同的动画来创建一个网格（皮肤），则可以将网格导出到一个 FBX 文件，并将每个动画导出到各自的 FBX 文件。将这些文件导入 Unity 时，只需为导入的第一个文件（通常是网格）创建一个 Avatar 即可。只要所有文件都使用相同的骨骼结构，便可以将该 Avatar 用于其余文件（例如，所有动画）。</p>
+
+<figure>
+<img src="../uploads/Main/Rig-1.png" alt="通用骨架">
+<figcaption>通用骨架</figcaption>
+</figure>
+
+<p>如果保留 <strong>Create From This Model</strong> 选项，则必须从 <strong>Root node</strong> 属性中选择一种骨骼。</p>
+
+<p>如果将 <strong>Avatar Definition</strong> 选项更改为 <strong>Copy From Other Avatar__，必须通过设置 </strong>Source__ 属性来指定要使用的 Avatar。</p>
+
+<p>单击 <strong>Apply</strong> 按钮。Unity 会创建__通用__ __Avatar__，并将 Avatar 子资源添加到模型资源（可以在项目视图中找到该资源）下。</p>
+
+<figure>
+<img src="../uploads/Main/MecanimFBXNoAvatar2.png" alt="Avatar 显示为导入模型的子资源">
+<figcaption>Avatar 显示为导入模型的子资源</figcaption>
+</figure>
+
+<p><strong>注意：</strong>通用 Avatar 与人形 Avatar 不同，但它会显示在项目视图中，也会保存根节点映射。但是，如果单击项目视图中的 Avatar 图标在 <strong>Inspector</strong> 中显示其属性，则仅会显示其名称，不显示 <strong>Configure Avatar</strong> 按钮。</p>
+
+<p><a name="AvatarMask"></a> </p>
+
+<h2>创建 Avatar 遮罩</h2>
+
+<p>可以在导入时或运行时将遮罩应用于动画剪辑。最好是在导入时应用遮罩，因为这样做允许从构建中忽略丢弃的动画数据，从而使文件更小，进而使用更少的内存。此外还可以提高处理速度，因为在运行时需要混合的动画数据更少。在某些情况下，导入遮罩可能对您不适用。这种情况下，可在运行时应用遮罩，为此需要创建 <strong>Avatar 遮罩 (Avatar Mask)</strong> 资源，并在 <strong>Animator Controller</strong> 的<a href="AnimationLayers.html">层设置中使用该资源</a>。</p>
+
+<p>要创建空的 Avatar 遮罩资源，可以：</p>
+
+<ul>
+<li>从 <strong>Assets</strong> 菜单中选择 <strong>Create</strong> &gt; <strong>Avatar Mask</strong>。</li>
+<li>在__项目__视图中单击要定义遮罩的模型对象，然后单击右键并选择 <strong>Create</strong> &gt; <strong>Avatar Mask</strong>。</li>
+</ul>
+
+<p>新资源将显示在__项目__视图中：</p>
+
+<figure>
+<img src="../uploads/Main/ConfiguringtheAvatar-Mask.png" alt="Avatar Mask 窗口">
+<figcaption>Avatar Mask 窗口</figcaption>
+</figure>
+
+<p>现在可以从 <a href="class-AvatarMask.html#Transform">Transform 层级视图</a>中选择要包含或排除的骨骼，然后将遮罩添加到<a href="AnimationLayers.html">动画层</a>或添加对遮罩的引用（在 <a href="class-AnimationClip.html">Animation 选项卡</a>的 <a href="AnimationMaskOnImportedClips.html">Mask</a> 部分）。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit"> 2018–04–25 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ConfiguringtheAvatar.html"></a></span><div class="tip">导入人形动画</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-FBXImporter.html"></a></span><div class="tip">Model Import Settings 窗口</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

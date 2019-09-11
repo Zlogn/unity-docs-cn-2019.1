@@ -1,0 +1,211 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="异步纹理上传 - Unity Manual">
+<title>异步纹理上传 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/AsyncUploadQualitySettings.png">
+<meta name="description" content="异步纹理上传 (Asynchronous Texture Upload) 允许从磁盘异步加载纹理数据，并允许在Render-thread 上以时间切片的方式上传至 GPU。由此缩短了主线程中的 GPU 上传等待时间。异步纹理上传将自动应用于所有未启用读/写权限的纹理，因此无需直接操作即可使用此功能。但是，异步上传操作的某些方面可由您进行控制，因此为了能够使用这些控制，了解一些该过程是很有用的。">
+<meta property="og:description" content="异步纹理上传 (Asynchronous Texture Upload) 允许从磁盘异步加载纹理数据，并允许在Render-thread 上以时间切片的方式上传至 GPU。由此缩短了主线程中的 GPU 上传等待时间。异步纹理上传将自动应用于所有未启用读/写权限的纹理，因此无需直接操作即可使用此功能。但是，异步上传操作的某些方面可由您进行控制，因此为了能够使用这些控制，了解一些该过程是很有用的。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'AsyncTextureUpload';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AsyncTextureUpload.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AsyncTextureUpload.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AsyncTextureUpload.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AsyncTextureUpload.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AsyncTextureUpload.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AsyncTextureUpload.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AsyncTextureUpload.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AsyncTextureUpload.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AsyncTextureUpload.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AsyncTextureUpload.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/AsyncTextureUpload.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/AsyncTextureUpload.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/AsyncTextureUpload.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/AsyncTextureUpload.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AsyncTextureUpload.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AsyncTextureUpload.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AsyncTextureUpload.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AsyncTextureUpload.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AsyncTextureUpload.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AsyncTextureUpload.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AsyncTextureUpload.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AsyncTextureUpload.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AsyncTextureUpload.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AsyncTextureUpload.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li>高级渲染功能</li>
+<li>异步纹理上传</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="CullingGroupAPI.html"></a></span><div class="tip">CullingGroup API</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="GeneratingMeshGeometryProcedurally.html"></a></span><div class="tip">程序化网格几何体</div>
+</div>
+</div></div>
+<h1>异步纹理上传</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>异步纹理上传 (Asynchronous Texture Upload) 允许从磁盘异步加载纹理数据，并允许在Render-thread 上以时间切片的方式上传至 GPU。由此缩短了主线程中的 GPU 上传等待时间。异步纹理上传将自动应用于所有未启用读/写权限的纹理，因此无需直接操作即可使用此功能。但是，异步上传操作的某些方面可由您进行控制，因此为了能够使用这些控制，了解一些该过程是很有用的。</p>
+
+<p>项目构建完成后，可异步加载的纹理的纹理数据将存储为流媒体资源文件并异步加载。</p>
+
+<h2>对内存和时间切片的简单和完全控制</h2>
+
+<p>此过程重复使用单个环形缓冲区来加载纹理数据并将其上传到 GPU，因此可减少所需的内存分配量。例如，如果您有 20 个小纹理，Unity 将一次性为这 20 个纹理设置一个异步加载请求。如果您有一个大型纹理，Unity 仅会设置一个请求。</p>
+
+<p>如果缓冲区大小不足以容纳所请求的纹理，它将自动调整大小来满足需求，但最佳做法是尽可能设置合理的大小，确保从一开始就能容纳即将上传的最大纹理，以免缓冲区为容纳遇到的每个新的更大纹理而需要重新调整大小。</p>
+
+<p>每一帧纹理上传所使用的时间是可控的；数值越大，纹理就会越快在 GPU 上准备就绪，但代价是在这些帧期间需要更长的 CPU 时间来进行其他处理。仅当缓冲区中有纹理等待上传至 GPU 时，才会使用该 CPU 时间。</p>
+
+<p>The size of the buffer and time-slice can be specified through the <strong>Quality</strong> settings:</p>
+
+<figure>
+<img src="../uploads/Main/AsyncUploadQualitySettings.png" alt="The Async Upload settings in the Quality settings">
+<figcaption>The Async Upload settings in the Quality settings</figcaption>
+</figure>
+
+<h2>异步纹理上传脚本 API</h2>
+
+<p>我们提供了从脚本中控制缓冲区大小 (Buffer Size) 和时间片 (Time-Slice) 值的功能。</p>
+
+<h3>时间片</h3>
+
+<p>请参阅脚本参考：<a href="../ScriptReference/QualitySettings-asyncUploadTimeSlice.html">QualitySettings.asyncUploadTimeSlice</a>。</p>
+
+<p>设置每一帧异步纹理上传所用的 CPU 时间的时间片（以毫秒为单位）。根据不同的目标平台和 API，您可能需要进行该设置。仅当存在要上传的纹理时，函数调用才会消耗时间，否则将提前退出。</p>
+
+<h3>缓冲区大小</h3>
+
+<p>请参阅脚本参考：<a href="../ScriptReference/QualitySettings-asyncUploadBufferSize.html">QualitySettings.asyncUploadBufferSize</a></p>
+
+<p>为异步纹理上传设置环形缓冲区大小。此大小以兆字节 (MB) 为单位。请确保根据目标平台设置合理的大小。另外，请确保该大小始终足以在游戏中加载任何大型纹理。例如，如果您有一个大小为 22MB 的立方体贴图，而将环形缓冲区 (RingBuffer) 的大小设置为 16MB，则应用程序会在加载该场景时自动将环形缓冲区的大小调整为 22MB。</p>
+
+<h2>注意</h2>
+
+<p>对于未启用读/写权限的纹理，TextureData 是 resS（流媒体资源）的一部分，现在上传操作在 Render-Thread 上进行。跟以前一样，在调用 AwakeFromLoad 的过程中可以保证纹理的可用性，因此渲染时的纹理加载顺序或纹理可用性方面没有变化。</p>
+
+<p>对于其他类型的纹理加载，例如已启用读/写权限的纹理、直接通过 LoadImage(byte[] data) 函数加载的纹理，或者从 Resources 文件夹加载的纹理，不采用异步缓冲区加载，而是采用较早的同步方法。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="CullingGroupAPI.html"></a></span><div class="tip">CullingGroup API</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="GeneratingMeshGeometryProcedurally.html"></a></span><div class="tip">程序化网格几何体</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

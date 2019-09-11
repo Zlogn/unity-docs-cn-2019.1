@@ -1,0 +1,294 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Unity 中的水 - Unity Manual">
+<title>Unity 中的水 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/Water_Reflective.jpg">
+<meta name="description" content="Unity 在标准资源包中包含几个水预制件（包括必要的着色器、脚本和艺术资源）。提供了单独的日间和夜间水预制件。">
+<meta property="og:description" content="Unity 在标准资源包中包含几个水预制件（包括必要的着色器、脚本和艺术资源）。提供了单独的日间和夜间水预制件。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'HOWTO-Water';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/HOWTO-Water.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/HOWTO-Water.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/HOWTO-Water.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/HOWTO-Water.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/HOWTO-Water.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/HOWTO-Water.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/HOWTO-Water.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/HOWTO-Water.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/HOWTO-Water.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/HOWTO-Water.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/HOWTO-Water.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/HOWTO-Water.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/HOWTO-Water.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/HOWTO-Water.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/HOWTO-Water.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/HOWTO-Water.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/HOWTO-Water.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/HOWTO-Water.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/HOWTO-Water.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/HOWTO-Water.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/HOWTO-Water.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/HOWTO-Water.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/HOWTO-Water.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/HOWTO-Water.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsHowTos.html">图形操作方法</a></li>
+<li>Unity 中的水</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="HOWTO-FixZAxisIsUp.html"></a></span><div class="tip">如何修复导入模型的旋转问题？</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="HOWTO-ArtAssetBestPracticeGuide.html"></a></span><div class="tip">艺术资源最佳实践指南</div>
+</div>
+</div></div>
+<h1>Unity 中的水</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 在<a href="AssetTypes.html#Standard">标准资源包</a>中包含几个水预制件（包括必要的着色器、脚本和艺术资源）。提供了单独的日间和夜间水预制件。</p>
+
+<p>请注意，本文档中描述的水反射在 VR 中不适用。</p>
+
+<figure>
+<img src="../uploads/Main/Water_Reflective.jpg" alt="Reflective daylight water">
+<figcaption>Reflective daylight water</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/Water_ReflectiveRefractive.jpg" alt="Reflective/Refractive daylight water">
+<figcaption>Reflective/Refractive daylight water</figcaption>
+</figure>
+
+<h2>设置水</h2>
+
+<p>将一个现有的水预制件放入场景中。确保<a href="AssetTypes.html#Standard">已安装标准资源</a>：</p>
+
+<ul>
+<li>
+<strong>Standard Assets</strong> &gt; <strong>Water</strong> 中的简单 <strong>Daylight Simple Water</strong> 和 <strong>Nighttime Simple Water</strong>。</li>
+<li>高级水 - <strong>Pro Standard Assets</strong> &gt; <strong>Water</strong> 中的 <strong>Daylight Water</strong> 和 <strong>Nighttime Water__（此情况下还需要 </strong>Standard Assets__ &gt; <strong>Water</strong> 中的一些资源）。可在 Inspector 中设置水模式（Simple、Reflective、Refractive）。</li>
+</ul>
+
+<p>预制件对水使用椭圆形网格。如果需要使用其他不同的<a href="class-Mesh.html">网格</a>，请在水游戏对象的__网格过滤器 (Mesh Filter)__ 中进行更改：</p>
+
+<figure>
+<img src="../uploads/Main/Water_ChangeMesh.jpg" alt="">
+</figure>
+
+<h2>从头创建水（高级）</h2>
+
+<p>简单的水需要将脚本附加到类似平面的网格并使用水着色器：</p>
+
+<p>1.具备水的网格。此网格应该是一个水平定向的平面网格。不需要 UV 坐标。水游戏对象应使用水__层__（可在 Inspector 中设置）。
+1.将 <strong>WaterSimple</strong> 脚本（来自于 <strong>Standard Assets/Water/Sources__）附加到该游戏对象。
+1.使用材质中的 </strong>FX/Water (simple)__ 着色器，或调整提供的水材质之一（__Daylight Simple Water__ 或 __Nighttime Simple Water__）。</p>
+
+<p>反射/折射水在从头开始设置时需要类似的步骤：</p>
+
+<p>1.创建水的网格。此网格应该是一个水平定向的平面网格。不需要 UV 坐标。水游戏对象应使用水__层__（可在 Inspector 中设置）。
+1.将 <strong>Water</strong> 脚本（来自于 <strong>Pro Standard Assets/Water/Sources__）附加到该游戏对象（可在 Inspector 中设置渲染模式：__Simple</strong>、<strong>Reflective</strong> 或 <strong>Refractive__）。
+1.使用材质中的 </strong>FX/Water__ 着色器，或调整提供的水材质之一（__Daylight Water__ 或 __Nighttime Water__）。</p>
+
+<h2>水材质中的属性</h2>
+
+<p>这些属性用在__反射 (Reflective)__ 和__折射 (Refractive)__ 水着色器中。它们中的大多数也用于__简单 (Simple)__ 水着色器。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Wave scale</strong></td>
+	<td style="text-align:left;">缩放水波法线贴图。该值越小，水波越大。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Reflection/refraction distort</strong></td>
+	<td style="text-align:left;">水波法线贴图会扭曲多少反射/折射。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Refraction color</strong></td>
+	<td style="text-align:left;">额外的折射色调。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Environment reflection/refraction</strong></td>
+	<td style="text-align:left;">实时反射和折射的渲染纹理。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Normalmap</strong></td>
+	<td style="text-align:left;">定义水波的形状。通过组合这两个法线贴图产生最终水波（每个法线贴图以不同的方向、比例和速度滚动）。第二个法线贴图的大小是第一个法线贴图的一半。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Wave speed</strong></td>
+	<td style="text-align:left;">第一个法线贴图（第一和第二个数字）和第二个法线贴图（第三和第四个数字）的滚动速度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Fresnel</strong></td>
+	<td style="text-align:left;">该纹理具有控制菲涅耳效应（根据视角可以看到多少反射与折射）的 Alpha 通道。</td>
+</tr>
+</tbody>
+</table>
+
+<p>__反射__和__折射__着色器不使用其余属性，但仍然需要设置这些属性以防用户的显卡不支持该着色器而必须回退到更简单的着色器：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Reflective color/cube and fresnel</strong></td>
+	<td style="text-align:left;">该纹理根据视角定义水颜色 (RGB) 和菲涅耳效应 (A)。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Horizon color</strong></td>
+	<td style="text-align:left;">水在地平线上的颜色。此属性仅用于__简单__水着色器。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Fallback texture</strong></td>
+	<td style="text-align:left;">定义用于在极旧的显卡上表示水（如果没有更好看的着色器可运行）的后备纹理。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="HOWTO-FixZAxisIsUp.html"></a></span><div class="tip">如何修复导入模型的旋转问题？</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="HOWTO-ArtAssetBestPracticeGuide.html"></a></span><div class="tip">艺术资源最佳实践指南</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

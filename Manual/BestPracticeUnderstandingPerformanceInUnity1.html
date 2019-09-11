@@ -1,0 +1,291 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="性能分析 - Unity Manual">
+<title>性能分析 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/UnderstandingPerformanceinUnity-ProfilingSection_image_0.png">
+<meta name="description" content="谈到性能就不得不提如何监测性能。首先监测应用的性能，分析并发现其性能消耗点，然后根据项目的技术和资源架构对性能进行分析。">
+<meta property="og:description" content="谈到性能就不得不提如何监测性能。首先监测应用的性能，分析并发现其性能消耗点，然后根据项目的技术和资源架构对性能进行分析。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'BestPracticeUnderstandingPerformanceInUnity1';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/BestPracticeUnderstandingPerformanceInUnity1.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/BestPracticeUnderstandingPerformanceInUnity1.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/BestPracticeUnderstandingPerformanceInUnity1.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/BestPracticeUnderstandingPerformanceInUnity1.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/BestPracticeUnderstandingPerformanceInUnity1.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/BestPracticeUnderstandingPerformanceInUnity1.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/BestPracticeUnderstandingPerformanceInUnity1.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/BestPracticeUnderstandingPerformanceInUnity1.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/BestPracticeUnderstandingPerformanceInUnity1.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/BestPracticeUnderstandingPerformanceInUnity1.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/BestPracticeUnderstandingPerformanceInUnity1.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/BestPracticeUnderstandingPerformanceInUnity1.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/BestPracticeUnderstandingPerformanceInUnity1.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/BestPracticeUnderstandingPerformanceInUnity1.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/BestPracticeUnderstandingPerformanceInUnity1.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/BestPracticeUnderstandingPerformanceInUnity1.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/BestPracticeUnderstandingPerformanceInUnity1.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/BestPracticeUnderstandingPerformanceInUnity1.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/BestPracticeUnderstandingPerformanceInUnity1.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/BestPracticeUnderstandingPerformanceInUnity1.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/BestPracticeUnderstandingPerformanceInUnity1.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/BestPracticeUnderstandingPerformanceInUnity1.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/BestPracticeUnderstandingPerformanceInUnity1.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/BestPracticeUnderstandingPerformanceInUnity1.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="BestPracticeGuides.html">最佳实践指南</a></li>
+<li><a href="BestPracticeUnderstandingPerformanceInUnity.html">了解 Unity 中的优化</a></li>
+<li>性能分析</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeUnderstandingPerformanceInUnity.html"></a></span><div class="tip">了解 Unity 中的优化</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeUnderstandingPerformanceInUnity2.html"></a></span><div class="tip">内存分析</div>
+</div>
+</div></div>
+<h1>性能分析</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>谈到性能就不得不提如何监测性能。首先监测应用的性能，分析并发现其性能消耗点，然后根据项目的技术和资源架构对性能进行分析。</p>
+
+<p><strong>注意</strong>：本章节提及的原生代码性能分析跟踪中使用的方法名称出自 Unity 5.3。方法名称在 Unity 的后续版本中可能会发生变更。</p>
+
+<h2>工具</h2>
+
+<p>Unity 开发者可使用多种工具进行性能分析。Unity 有一套内置工具，如 <a href="ProfilerCPU.html">CPU 性能分析器 (CPU Profiler)</a>、<a href="ProfilerMemory.html">内存性能分析器 (Memory Profiler)</a> 和新的 5.3 版内存分析器。</p>
+
+<p>但是，最佳数据通常来自特定于平台的工具。这些工具包括：</p>
+
+<ul>
+<li><p>针对 iOS 平台的：__Instruments__ 和 <strong>XCode Frame Debugger</strong></p></li>
+<li><p>针对 Android 平台的：__Snapdragon Profiler__</p></li>
+<li><p>针对 Intel CPU/GPU 平台的：__VTune__ 和 <strong>Intel GPA</strong></p></li>
+<li><p>For PS4: the <strong>Razor</strong> suite and <strong>VR Trace</strong></p></li>
+<li><p>针对 Xbox 平台的：__Pix__ 工具</p></li>
+</ul>
+
+<p>这些工具通常在能使用 <a href="IL2CPP.html">IL2CPP</a> 生成 C++ 版项目的平台上利用率最高。这些原生代码版本提供了，在 Mono 下无法调用的透明的调用栈和高时域频度的方法调用。</p>
+
+<p>Unity 已创建了使用 Instruments 来分析 iOS 游戏性能的基础指南；请参阅<a href="http://blogs.unity3d.com/2016/02/01/profiling-with-instruments/">使用 Instruments 进行性能分析 (Profiling with Instruments)</a>。</p>
+
+<h2>解析启动跟踪</h2>
+
+<p>在查看启动时刻的跟踪记录时，需要关注两种关键方法。这两种方法是项目的配置、资源和代码可能影响启动时间的主要原因。</p>
+
+<p>请注意，启动时间在不同平台上的表现方式不同。在大多数平台上，以静态启动画面的形式呈现给用户。</p>
+
+<figure>
+<img src="../uploads/Main/UnderstandingPerformanceinUnity-ProfilingSection_image_0.png" alt="">
+</figure>
+
+<p>上图的截屏是 Instruments 跟踪的在 iOS 设备上运行的示例项目。在基于平台的 <code>startUnity</code> 方法中，请注意 <code>UnityInitApplicationGraphics</code> 和 <code>UnityLoadApplication</code> 方法。</p>
+
+<p><code>UnityInitApplicationGraphics</code> 执行大量内部工作，例如设置图形设备和初始化 Unity 的大量内部系统。此外，它还初始化资源系统 (Resources system)。为此，它必须加载资源系统包含的所有文件的索引。</p>
+
+<p>每个“Resources”文件夹中的每个资源文件 (1)（注意：
+ 这仅适用于项目“Assets”文件夹中名为“Resources”的文件夹，以及这些“Resources”文件夹中的所有子文件夹。）都作为资源系统的数据。因此，初始化资源系统所需的时间与“Resources”文件夹中的文件数量呈线性关系。</p>
+
+<p><code>UnityLoadApplication</code> 包含加载并初始化项目的第一个场景的方法。它包括反序列化并实例化显示第一个场景所需的所有数据，例如编译着色器、上传纹理和实例化游戏对象。此外，第一个场景中的所有 MonoBehaviour 都在此时执行 <code>Awake</code> 回调。</p>
+
+<p>这就意味着，如果在项目的第一个场景中的 <code>Awake</code> 回调中存在任何执行时间很长的代码，那么该代码可能会导致项目的初始启动时间的延长。解决此问题的方法是删除这些运行速度慢的代码，或者在应用程序生命周期的其他地方执行该代码。</p>
+
+<h2>解析运行时跟踪</h2>
+
+<p>对于在初始化之后的性能分析跟踪而言，最需要关注的是 <code>PlayerLoop</code> 方法。这是 Unity 的主循环，该循环中的代码每帧运行一次。</p>
+
+<figure>
+<img src="../uploads/Main/UnderstandingPerformanceinUnity-ProfilingSection_image_1.png" alt="">
+</figure>
+
+<p>上面的截屏来自 Unity 5.4 示例项目的性能分析运行结果，其中展示了 <code>PlayerLoop</code> 中几个最值得关注的方法。请注意，<code>PlayerLoop</code> 中的方法名称可能因 Unity 版本而异。</p>
+
+<p><code>PlayerRender</code> 是运行 Unity 渲染系统的方法。此方法进行的操作包括剔除对象、计算动态批次以及向 GPU 提交绘图指令。任何图像效果或基于渲染的脚本回调（例如 <code>OnWillRenderObject</code>）也在此时运行。通常情况下，当项目进行交互时，此方法应该对 CPU 时间的消耗最大。</p>
+
+<p><code>BaseBehaviourManager</code> 调用三个模板化版本的 <code>CommonUpdate</code>。这些调用的某些回调存在于当前场景中激活的游戏对象的 MonoBehaviour 中。</p>
+
+<ul>
+<li><p><code>CommonUpdate&lt;UpdateManager&gt;</code> 调用 <code>Update</code> 回调</p></li>
+<li><p><code>CommonUpdate&lt;LateUpdateManager&gt;</code> 调用 <code>LateUpdate</code> 回调</p></li>
+<li><p><code>CommonUpdate&lt;FixedUpdateManager&gt;</code> 调用 <code>FixedUpdate</code>（如果物理系统已勾选）</p></li>
+</ul>
+
+<p>通常情况下，<code>BaseBehaviourManager::CommonUpdate&lt;UpdateManager&gt;</code> 是最值得关注和检查的方法族，因为它是 Unity 项目中运行的大多数脚本代码的入口点。</p>
+
+<p>还有其他几个需要关注的方法：</p>
+
+<p><code>UI::CanvasManager</code> 如果项目使用 Unity UI，它将调用几个不同的回调。包括 Unity UI 的批量计算和布局更新；这两种操作是 <code>CanvasManager</code> 出现在性能分析器中的最常见原因。</p>
+
+<p><code>DelayedCallManager::Update</code> 运行协程。该内容在本文档的“协程”章节中有更详细的介绍。</p>
+
+<p><code>PhysicsManager::FixedUpdate</code> 运行 PhysX 物理系统。这主要涉及运行 PhysX 的内部代码，并受当前场景中物理对象（例如刚体和碰撞体）数量的影响。但是，基于物理系统的回调也会出现在此处，例如 <code>OnTriggerStay</code> 和 <code>OnCollisionStay</code>。</p>
+
+<p>如果项目使用的是 2D 物理设置，那么会在 <code>Physics2DManager::FixedUpdate</code> 下显示为一组与上面相似的调用。</p>
+
+<h2>解析脚本方法</h2>
+
+<p>在使用 IL2CPP 进行跨平台编译调用脚本时，应查找包含 <code>ScriptingInvocation</code> 对象的跟踪行。它是将 Unity 的内部原生代码转换到脚本运行时以便执行脚本代码的命令 (2)（注意：
+ 从技术上讲，在经过 IL2CPP 编译后，C#/JS 脚本代码也会成为原生代码。但是，这种交叉编译后的代码的方法主要通过 IL2CPP 运行时框架来执行，与手写的 C++ 不太一样）。</p>
+
+<figure>
+<img src="../uploads/Main/UnderstandingPerformanceinUnity-ProfilingSection_image_2.png" alt="">
+</figure>
+
+<p>上图的截屏是另一个来自 Unity 5.4 运行的示例项目的跟踪记录。嵌套在 <code>RuntimeInvoker_Void</code> 行下面的所有方法都是每帧执行一次的交叉编译 C# 脚本的一部分。</p>
+
+<p>跟踪行相当易读：每一行都是原始类的名称，后跟下划线和原始方法的名称。对于此跟踪示例，可以看到 <code>EventSystem.Update</code>、<code>PlayerShooting.Update</code> 和其他几个 <code>Update</code> 方法。这些是 MonoBehaviour 中的常见的标准 Unity <code>Update</code> 回调。</p>
+
+<p>展开这些方法的节点，可以准确发现其中的哪些方法正在消耗 CPU 时间。它包括项目中的其他脚本方法、Unity API 和 C# 库代码。</p>
+
+<p>上面的跟踪记录显示了 <code>StandaloneInputModule.Process</code> 方法逐帧对整个 UI 进行射线投射判断，以便检测是否有任何触摸事件正在发生或激活了某些 UI 元素。主要消耗是迭代测试鼠标的位置是否在UI 元素的边界矩形内。</p>
+
+<h2>资源加载</h2>
+
+<p>CPU 跟踪记录中也可以识别出资源加载记录。标识资源加载的主要方法是 <code>SerializedFile::ReadObject</code>。此方法将二进制数据流（从文件）通过运行名为 <code>Transfer</code> 的方法连接到 Unity 的序列化系统中。可以在所有资源类型（例如纹理、MonoBehaviour 和粒子系统）上找到 <code>Transfer</code> 方法。</p>
+
+<figure>
+<img src="../uploads/Main/UnderstandingPerformanceinUnity-ProfilingSection_image_3.png" alt="">
+</figure>
+
+<p>在上面的截屏中，正在加载场景文件。这需要 Unity 读取并反序列化场景中的所有资源，如 <code>SerializedFile::ReadObject</code> 中包含的各种调用 <code>Transfer</code> 的方法。</p>
+
+<p>通常，如果在运行时期间看到性能不稳定，并且性能跟踪记录显示 <code>SerializedFile::ReadObject</code> 使用了大量时间，那么帧率降低的原因是由于资源加载。请注意，在大多数情况下，只有在通过 <code>SceneManager</code>、<code>Resources</code> 或 AssetBundle API 来请求同步的资源加载时，才能在主线程上找到 <code>SerializedFile::ReadObject</code>。</p>
+
+<p>这种性能不稳问题的最常见的修正方式是，将资源加载异步进行（将资源消耗严重的 <code>ReadObject</code> 调用移到工作线程），或预加载某些大型资源。</p>
+
+<p>请注意，在克隆对象（在跟踪记录中以 <code>CloneObject</code> 方法表示）时也会出现 <code>Transfer</code> 调用。如果在 <code>CloneObject</code> 调用下面出现 <code>Transfer</code> 调用，该调用是不会从存储中加载资源的。而是将旧对象的数据传输到新对象。为此，Unity 会序列化旧对象，并将结果数据反序列化为新对象。</p>
+
+<h3>脚注</h3>
+
+<ul>
+<li>(1) 这仅适用于项目 <em>Assets</em> 文件夹中名为 <em>Resources</em> 的文件夹，以及这些 <em>Resources</em> 文件夹中的所有子文件夹。</li>
+<li>(2) 从技术上讲，经过 IL2CPP 编译后，C#/JS 脚本代码也会成为原生代码。但是，这种交叉编译后的代码主要通过 IL2CPP 运行时框架来执行方法，与手写的 C++ 不太一样。</li>
+</ul>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–04–25 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="BestPracticeUnderstandingPerformanceInUnity.html"></a></span><div class="tip">了解 Unity 中的优化</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BestPracticeUnderstandingPerformanceInUnity2.html"></a></span><div class="tip">内存分析</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

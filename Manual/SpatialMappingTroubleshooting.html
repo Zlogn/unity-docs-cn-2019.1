@@ -1,0 +1,240 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="空间映射常见问题故障排除 - Unity Manual">
+<title>空间映射常见问题故障排除 - Unity Manual</title>
+<meta name="description" content="空间映射会生成大量数据。这会对应用程序的速度和性能产生影响。本部分将讨论使用空间映射时可能产生的常见问题，并提供关于如何避免这些问题的指导。">
+<meta property="og:description" content="空间映射会生成大量数据。这会对应用程序的速度和性能产生影响。本部分将讨论使用空间映射时可能产生的常见问题，并提供关于如何避免这些问题的指导。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'SpatialMappingTroubleshooting';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SpatialMappingTroubleshooting.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SpatialMappingTroubleshooting.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SpatialMappingTroubleshooting.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SpatialMappingTroubleshooting.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SpatialMappingTroubleshooting.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SpatialMappingTroubleshooting.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SpatialMappingTroubleshooting.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SpatialMappingTroubleshooting.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SpatialMappingTroubleshooting.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SpatialMappingTroubleshooting.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/SpatialMappingTroubleshooting.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/SpatialMappingTroubleshooting.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/SpatialMappingTroubleshooting.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/SpatialMappingTroubleshooting.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SpatialMappingTroubleshooting.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SpatialMappingTroubleshooting.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SpatialMappingTroubleshooting.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SpatialMappingTroubleshooting.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SpatialMappingTroubleshooting.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SpatialMappingTroubleshooting.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SpatialMappingTroubleshooting.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SpatialMappingTroubleshooting.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SpatialMappingTroubleshooting.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SpatialMappingTroubleshooting.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="XR.html">XR</a></li>
+<li><a href="XR-SDK_overviews.html">XR SDK</a></li>
+<li><a href="wmr_sdk_overview.html">Windows Mixed Reality</a></li>
+<li><a href="SpatialMapping.html">HoloLens 空间映射</a></li>
+<li>空间映射常见问题故障排除</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SpatialMappingLowLevelApi.html"></a></span><div class="tip">空间映射低级 API</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="xr_input.html"></a></span><div class="tip">Unity XR Input</div>
+</div>
+</div></div>
+<h1>空间映射常见问题故障排除</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>空间映射会生成大量数据。这会对应用程序的速度和性能产生影响。本部分将讨论使用空间映射时可能产生的常见问题，并提供关于如何避免这些问题的指导。</p>
+
+<h2>碰撞数据生成需要很长时间</h2>
+
+<p>生成碰撞数据比空间映射的任何其他方面需要的 CPU 处理时间都要多。确保仅在必要时请求碰撞数据，这样可以优化 CPU 资源的使用效率并延长电池续航时间。</p>
+
+<h3>最佳实践解决方案：</h3>
+
+<ul>
+<li><p>仅在必要时请求碰撞数据。避免在不需要时请求碰撞数据可降低其他空间映射请求的延迟，并延长电池续航时间。</p></li>
+<li><p>使用__表面__的更新时间和包围盒来确定数据请求的优先级，仅请求高优先级的__表面__。</p></li>
+</ul>
+
+<h2>较高的三角形密度会产生大量几何体</h2>
+
+<p>在使用 <a href="../ScriptReference/XR.WSA.SurfaceObserver.RequestMeshAsync.html">RequestMeshAsync</a> 方法请求 <strong>Surface</strong> 数据时，如果通过 <a href="../ScriptReference/XR.WSA.SurfaceData.html">SurfaceData</a> 结构设置较高的 <a href="../ScriptReference/XR.WSA.SurfaceData-trianglesPerCubicMeter.html">trianglesPerCubicMeter</a> 值，则会在场景中生成大量的几何体。在包含大量对象的空间（如杂乱的办公室）中尤其如此。场景中的大量几何体会增加数据生成延迟和应用程序内存使用量。场景中较高的网格密度也会降低渲染和物理系统等运行时系统的速度，从而可影响性能。</p>
+
+<h3>最佳实践解决方案：</h3>
+
+<p>使用应用程序所需的空间映射数据的最小分辨率。为此，必须测试应用程序并验证生成的空间映射网格的准确性，但结果需要在精度和性能之间取得平衡，最终提供更出色的用户体验。生成的网格的分辨率越低，网格更新时应用程序所使用的 CPU 时间就越少。这样可以降低设备的功耗，延长电池续航时间，还可以降低检索网格数据时的延迟。较低分辨率的网格还使用较少的内存，对渲染和物理系统等运行时系统（期望低复杂度的几何体）的影响也较小。</p>
+
+<h2>太多网格请求处于排队状态导致不必要的工作</h2>
+
+<p>当您调用 <a href="../ScriptReference/XR.WSA.SurfaceObserver.Update.html">SurfaceObserver.Update</a> 方法时，<a href="../ScriptReference/XR.WSA.SurfaceObserver.html">SurfaceObserver</a> 会报告所在体积中所有已添加、更新和移除的__表面__。</p>
+
+<p>这样就会将所有已更改的__表面__作为一个列表添加到工作队列中，因此可能导致在空间映射删除这些表面后在工作队列中保留未使用的__表面__。这些__表面__在系统中移动时仍会占用 CPU 时间，但不生成任何网格数据。这会增加所有处于等待状态的请求的延迟时间。</p>
+
+<h3>最佳实践解决方案：</h3>
+
+<p>尽可能限制工作队列中的__表面__数量。查询网格是一项高成本、高延迟的操作，因此在任何给定时间只保留一个 <a href="../ScriptReference/XR.WSA.SurfaceObserver.RequestMeshAsync.html">RequestMeshAsync</a> 请求可以最大限度减少这些操作导致的任何减速问题。应用程序可以使用__表面__报告的更新时间和边界来确定 <code>RequestMeshAsync</code> 调用的优先级。</p>
+
+<p>确定__表面__数据请求的优先级也很重要，这样应用程序才能首先收到最重要的数据。确定优先级的常用方法的示例包括：</p>
+
+<ul>
+<li><p>新__表面__的优先级高于更新现有表面。</p></li>
+<li><p>离用户更近的__表面__的优先级高于离用户更远的表面。</p></li>
+</ul>
+
+<h2>重叠的 SurfaceObserver 体积会产生重复的 RequestMeshAsync 调用</h2>
+
+<p><a href="../ScriptReference/XR.WSA.SurfaceObserver.html">SurfaceObserver</a> 会报告与其体积重叠的所有__表面__的更改。一个__表面__可能重叠多个 <code>SurfaceObserver</code> 体积（如果它们非常靠近）。因此，应用程序代码可能多次请求相同的__表面__，这可能导致性能问题。</p>
+
+<p><strong>最佳实践解决方案：</strong></p>
+
+<p>对来自 <code>SurfaceObserver</code> 的请求使用单个工作提交队列。</p>
+
+<p>对于多个应用程序，通常只需要一个 <code>SurfaceObserver</code>。</p>
+
+<p>使用单个 <code>SurfaceObserver</code> 有助于降低开发应用程序的复杂性。但是，__空间映射__有几种高级用途需要多个 <code>SurfaceObserver</code> 成员。在这些情况下，应该为场景中的所有 <code>SurfaceObserver</code> 成员使用单个工作队列，从而唯一确定网格请求的优先级。</p>
+
+<h2>更新 SurfaceObserver 不会生成 onSurfaceChanged 回调</h2>
+
+<p>这是一个常见问题，通常由设置过程中的问题引起。</p>
+
+<h3>最佳实践解决方案：</h3>
+
+<p>使用 <a href="../ScriptReference/XR.WSA.SurfaceObserver.SetVolumeAsAxisAlignedBox.html">SetVolumeAsAxisAlignedBox</a> 等方法在 <code>SurfaceObserver</code> 上设置有效体积。</p>
+
+<p>还应确保在 <strong>Publishing Settings__（菜单：__File &gt; Build Settings &gt; Player Settings &gt; Publishing Settings__）中启用 </strong>Spatial Perception__ 功能。</p>
+
+<p>有关 WMR 的该功能和发布设置 (Publishing Settings) 的更多信息，请参阅 Unity 的 <a href="wmr_quick_start.html">Windows Mixed Reality 快速入门指南</a>。</p>
+
+<p>–</p>
+
+<ul>
+<li><p><span class="page-edit">2018–05–01 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 2017.3 版中更新了 Hololens 空间映射文档</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SpatialMappingLowLevelApi.html"></a></span><div class="tip">空间映射低级 API</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="xr_input.html"></a></span><div class="tip">Unity XR Input</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

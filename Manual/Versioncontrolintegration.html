@@ -1,0 +1,452 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="版本控制集成 - Unity Manual">
+<title>版本控制集成 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/EditorVersionControlSettings.png">
+<meta name="description" content="Unity 可集成 Perforce 和 Plastic SCM 等版本控制系统。请参阅这些页面了解所选择的版本控制系统的具体信息。">
+<meta property="og:description" content="Unity 可集成 Perforce 和 Plastic SCM 等版本控制系统。请参阅这些页面了解所选择的版本控制系统的具体信息。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'Versioncontrolintegration';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Versioncontrolintegration.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Versioncontrolintegration.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Versioncontrolintegration.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Versioncontrolintegration.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Versioncontrolintegration.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Versioncontrolintegration.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Versioncontrolintegration.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Versioncontrolintegration.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Versioncontrolintegration.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Versioncontrolintegration.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/Versioncontrolintegration.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/Versioncontrolintegration.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/Versioncontrolintegration.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/Versioncontrolintegration.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Versioncontrolintegration.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Versioncontrolintegration.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Versioncontrolintegration.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Versioncontrolintegration.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Versioncontrolintegration.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Versioncontrolintegration.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Versioncontrolintegration.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Versioncontrolintegration.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Versioncontrolintegration.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Versioncontrolintegration.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="EditorFeatures.html">编辑器功能</a></li>
+<li><a href="VersionControl.html">版本控制</a></li>
+<li>版本控制集成</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="VersionControl.html"></a></span><div class="tip">版本控制</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="perForceIntegration.html"></a></span><div class="tip">Perforce 集成</div>
+</div>
+</div></div>
+<h1>版本控制集成</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 可集成 <a href="perForceIntegration.html">Perforce</a> 和 <a href="plasticSCMIntegration.html">Plastic SCM</a> 等版本控制系统。请参阅这些页面了解所选择的版本控制系统的具体信息。</p>
+
+<p>使用<strong>版本控制系统</strong>可以更方便用户（或多个用户）管理其代码。此系统用于存储文件并管理它们的访问权限。就 Unity 而言，包括与 Unity 项目相关的所有文件。通过使用版本控制，可以跟踪对源代码的所有更改，还可了解更改人员、更改原因以及更改内容的信息。这样可以轻松恢复到早期版本的代码，或者比较版本之间的差异。而且，更容易找出错误最初发生的时间，以及是什么更改可能导致了该错误。</p>
+
+<h2>在 Unity 中设置版本控制</h2>
+
+<p>根据版本控制软件的说明来设置该软件，然后按照以下步骤操作：</p>
+
+<p>1.使用所选客户端在计算机上设置或同步工作空间（请参阅 <a href="plasticSCMIntegration.html">Plastic SCM 集成指南</a>或 <a href="perForceIntegration.html">Perforce 集成指南</a>以获取此步骤的帮助）。
+1.将现有项目复制到工作空间，或启动 Unity 并在工作空间中创建新项目。
+1. Open the project and go to <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Editor</strong> category.
+1.在 <strong>Version Control</strong> 下，根据所选的版本控制系统选择__模式 (Mode)__。
+ <img src="../uploads/Main/EditorVersionControlSettings.png" alt=""></p>
+
+<p>1.填写版本控制设置，例如用户名/密码/服务器/工作空间。
+1.如果希望文件在添加到项目（或磁盘上的文件夹）时自动添加到版本控制系统，请保持 <strong>Automatic add</strong> 为选中状态。否则，需要手动添加新文件。
+1.可以选择脱机工作。仅当了解如何将更改手动集成到版本控制软件中时，才建议使用此模式（<a href="perForceIntegration.html">脱机使用 Perforce</a>）。
+1.根据工作团队的偏好和选择的版本控制系统，可以编辑 <strong>Asset Serialization</strong>、<strong>Default Behaviour Mode</strong> 和 <strong>Sprite Packer</strong> 选项。
+1.单击 <strong>Connect</strong> 并确认片刻后在 <strong>Connect</strong> 按钮上方显示“Connected”。
+1.使用标准客户端（例如 p4v）确保添加 <em>Assets</em> 和 <em>ProjectSettings</em> 文件夹中的所有文件（包括以 <em>.meta</em> 结尾的文件）。</p>
+
+<p>注意：随时都可以转到 <strong>Prefences</strong> 菜单并选择 __External Tools__，然后调整 Revision Control Diff/Merge 工具。</p>
+
+<h2>使用版本控制系统</h2>
+
+<p>就目前而言，您应该能够通过右键单击 Project 视图中的资源（而不是通过版本控制客户端）来直接执行大多数重要的版本控制操作。版本控制操作取决于所选择的版本控制系统，下表显示了每个版本控制系统中可直接使用的操作：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>版本控制操作</strong></td>
+	<td style="text-align:left;"><strong>描述</strong></td>
+	<td style="text-align:left;"><strong>Perforce</strong></td>
+	<td style="text-align:left;"><strong>Plastic SCM</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;">签出 (Check Out)</td>
+	<td style="text-align:left;">允许对文件进行更改</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">与 HEAD 的差异 (Diff against head)</td>
+	<td style="text-align:left;">比较本地文件和 HEAD 中的文件之间的差异</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">获取最新 (Get Latest)</td>
+	<td style="text-align:left;">拉取最新更改并更新文件</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">否*</td>
+</tr>
+<tr>
+	<td style="text-align:left;">锁定 (Lock)</td>
+	<td style="text-align:left;">阻止其他用户对文件进行更改</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">否**</td>
+</tr>
+<tr>
+	<td style="text-align:left;">标记添加 (Mark Add)</td>
+	<td style="text-align:left;">在本地添加但不添加到版本控制系统</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">解决冲突 (Resolve Conflicts)</td>
+	<td style="text-align:left;">解决已被多个用户更改的文件的冲突</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">否***</td>
+</tr>
+<tr>
+	<td style="text-align:left;">还原 (Revert)</td>
+	<td style="text-align:left;">放弃对打开的已更改文件所做的更改</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">还原未更改内容 (Revert Unchanged)</td>
+	<td style="text-align:left;">放弃对打开的未更改文件所做的更改</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">提交 (Submit)</td>
+	<td style="text-align:left;">将文件当前状态提交给版本控制系统</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">是</td>
+</tr>
+<tr>
+	<td style="text-align:left;">解锁 (Unlock)</td>
+	<td style="text-align:left;">解锁并允许任何人进行更改</td>
+	<td style="text-align:left;">是</td>
+	<td style="text-align:left;">否**</td>
+</tr>
+</tbody>
+</table>
+
+<p>* 要使用 Plastic SCM 获取最新更改并更新文件，需要使用版本控制窗口。</p>
+
+<p>** 使用 Plastic SCM 来锁定和解锁需要您在外部编辑特定的 Plastic SCM 锁定文件，请参阅 <a href="plasticSCMIntegration.html">Plastic SCM 集成</a>页面以了解更多信息。</p>
+
+<p>*** 冲突会显示在版本控制菜单中，但需要在 Plastic SCM GUI 中解决。</p>
+
+<figure>
+<img src="../uploads/Main/plasticSCM_version_control_ops.png" alt="Mac 上的 Plastic SCM 版本控制操作">
+<figcaption>Mac 上的 Plastic SCM 版本控制操作</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/Source_control_menu.png" alt="Windows 上的 Perforce 版本控制操作">
+<figcaption>Windows 上的 Perforce 版本控制操作</figcaption>
+</figure>
+
+<h2>版本控制窗口</h2>
+
+<p>You can overview the files in your changelist from the <strong>Version Control Window</strong> (<strong>Window</strong> &gt; <strong>Asset Management</strong> &gt; <strong>Version Control</strong>). It is shown here docked next to Inspector in the editor:</p>
+
+<figure>
+<img src="../uploads/Main/VersionControlWindowOutgoingChanges.png" alt="">
+</figure>
+
+<p>“Outgoing”选项卡列出等待提交到版本控制系统的所有本地更改，而“Incoming”选项卡列出需要从版本控制系统中拉取的所有更改。</p>
+
+<p>通过右键单击此窗口中的资源或变更列表，可以对它们执行操作。要在变更列表之间移动资源，只需将资源从一个变更列表拖动到目标变更列表的标题上。</p>
+
+<h2>图标</h2>
+
+<p>Unity Editor 中会显示以下图标，从而显示文件/资源的版本控制状态：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>图标</strong></td>
+	<td style="text-align:left;"><strong>含义</strong></td>
+	<td style="text-align:left;"><strong>其他信息</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/VersionControl_P4_AddedLocal.png" alt=""></td>
+	<td style="text-align:left;">已在本地添加文件</td>
+	<td style="text-align:left;">等待添加到版本控制系统</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/VersionControl_P4_AddedRemote.png" alt=""></td>
+	<td style="text-align:left;">文件由另一个用户添加到版本控制系统</td>
+	<td style="text-align:left;">等待添加到版本控制系统</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/VersionControl_P4_CheckOutLocal.png" alt=""></td>
+	<td style="text-align:left;">文件已被您签出</td>
+	<td style="text-align:left;">已在本地签出</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/VersionControl_P4_CheckOutRemote.png" alt=""></td>
+	<td style="text-align:left;">文件已被另一个用户签出</td>
+	<td style="text-align:left;">已远程签出</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/VersionControl_P4_Conflicted.png" alt=""></td>
+	<td style="text-align:left;">合并此文件时存在冲突</td>
+	<td style="text-align:left;">需要解决冲突</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/VersionControl_P4_DeletedLocal.png" alt=""></td>
+	<td style="text-align:left;">文件已被您删除</td>
+	<td style="text-align:left;">等待版本控制系统中删除</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/VersionControl_P4_DeletedRemote.png" alt=""></td>
+	<td style="text-align:left;">文件已被另一个用户删除</td>
+	<td style="text-align:left;">等待版本控制系统中删除</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/VersionControl_P4_Local.png" alt=""></td>
+	<td style="text-align:left;">文件尚未受版本控制</td>
+	<td style="text-align:left;">无</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/VersionControl_P4_LockedLocal.png" alt=""></td>
+	<td style="text-align:left;">文件已被您锁定</td>
+	<td style="text-align:left;">其他用户无法修改</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/VersionControl_P4_LockedRemote.png" alt=""></td>
+	<td style="text-align:left;">文件已被另一个用户锁定</td>
+	<td style="text-align:left;">您无法修改</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/VersionControl_P4_OutOfSync.png" alt=""></td>
+	<td style="text-align:left;">另一个用户已签入此文件的新版本</td>
+	<td style="text-align:left;">使用“Apply Incoming Changes”获取最新版本</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><img src="../uploads/Main/VersionControl_P4_AsyncUpdate.png" alt=""></td>
+	<td style="text-align:left;">服务器正在请求此文件的版本控制状态，或正在等待响应</td>
+	<td style="text-align:left;">只有在使用 Perforce 等集中式版本控制系统时才会看到此图标</td>
+</tr>
+</tbody>
+</table>
+
+<p>注意事项：</p>
+
+<ul>
+<li>有些版本控制系统在资源标记为 <em>Checked out</em> 之前不允许编辑资源（除非已选中 __Work offline__）。</li>
+<li>保存对 .scene 文件的更改时，将自动签出。</li>
+<li>Project Settings Inspector 的右下角有一个 <strong>checkout</strong> 按钮可用于签出设置。</li>
+<li>通常会出现黄色警告，提醒将项签出以便对其进行更改，主要出现在 Project Settings Inspector 中。</li>
+<li>在 Plastic SCM 中会自动添加/签出自动生成的资源（例如光照贴图）。</li>
+</ul>
+
+<h2>在提交时自动还原未更改的文件</h2>
+
+<p>处理资源时，Unity 会自动签出资源文件以及相关的 .meta 文件。但是，在大多数情况下，不会修改 .meta 文件，这可能会导致一些额外的工作，例如在稍后合并分支时。</p>
+
+<h2>脱机模式</h2>
+
+<p>Unity 支持在脱机模式下工作，例如，在没有网络连接到版本控制库的情况下继续工作。</p>
+
+<ul>
+<li>如果希望能够与版本控制系统断开连接，请从 Version Control Settings 中选择 <strong>Work offline</strong>。</li>
+</ul>
+
+<h2>允许异步更新</h2>
+
+<p>Unity 支持某些版本控制提供程序（如 Perforce）的异步版本控制状态查询。此选项允许这些提供程序更新文件的版本控制状态，而不会使 Unity 卡顿。当与版本控制服务器的连接存在高延迟时，请使用此选项。</p>
+
+<ul>
+<li>如果在状态查询期间遇到卡顿问题，请转到 <strong>Version Control Settings</strong> 并选择 <strong>Allow Async Update</strong>。</li>
+</ul>
+
+<p><strong>注意</strong>：只有状态查询才是异步的。更改文件状态或需要了解最新文件状态的操作则是同步执行的。</p>
+
+<h2>故障排除</h2>
+
+<p>如果 Unity 无法将更改提交到版本控制客户端（例如，如果服务器关闭或发生许可证问题），这些更改将存储于单独的变更集。</p>
+
+<h2>使用 Asset Server</h2>
+
+<p>要了解有关使用 Asset Server（Unity 的内部版本控制系统）的更多信息，请参阅关于 <a href="AssetServer.html">Asset Server</a>的文档。</p>
+
+<h2>使用其他版本控制系统</h2>
+
+<p>To work with a version control system unsupported by Unity, select <strong>MetaData</strong> as the <strong>Mode</strong> for Version Control in the <a href="class-EditorManager.html">Editor</a> window. This allows you to manage the source Assets and metadata for those Assets with a version control system of your choice. For more on this, see documentation on <a href="ExternalVersionControlSystemSupport.html">External Version Control Systems</a>.</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–02–12 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 Unity 2017.3 中添加了关于异步版本控制状态查询的文档。</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="VersionControl.html"></a></span><div class="tip">版本控制</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="perForceIntegration.html"></a></span><div class="tip">Perforce 集成</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

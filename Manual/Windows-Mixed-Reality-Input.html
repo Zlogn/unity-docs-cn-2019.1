@@ -1,0 +1,344 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Windows Mixed Reality 的输入 - Unity Manual">
+<title>Windows Mixed Reality 的输入 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/Windows_logo.png">
+<meta name="description" content="">
+<meta property="og:description" content="">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'Windows-Mixed-Reality-Input';
+      if(!page) page = 'index';
+      var version = '2019.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Windows-Mixed-Reality-Input.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Windows-Mixed-Reality-Input.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Windows-Mixed-Reality-Input.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Windows-Mixed-Reality-Input.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Windows-Mixed-Reality-Input.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Windows-Mixed-Reality-Input.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Windows-Mixed-Reality-Input.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Windows-Mixed-Reality-Input.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Windows-Mixed-Reality-Input.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Windows-Mixed-Reality-Input.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.1/Documentation/Manual/Windows-Mixed-Reality-Input.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2019.1/Manual/Windows-Mixed-Reality-Input.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.1/Manual/Windows-Mixed-Reality-Input.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.1/Manual/Windows-Mixed-Reality-Input.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Windows-Mixed-Reality-Input.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Windows-Mixed-Reality-Input.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Windows-Mixed-Reality-Input.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Windows-Mixed-Reality-Input.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Windows-Mixed-Reality-Input.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Windows-Mixed-Reality-Input.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Windows-Mixed-Reality-Input.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Windows-Mixed-Reality-Input.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Windows-Mixed-Reality-Input.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Windows-Mixed-Reality-Input.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
+<li><a href="XR.html">XR</a></li>
+<li><a href="xr_input.html">Unity XR Input</a></li>
+<li>Windows Mixed Reality 的输入</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="xr_input.html"></a></span><div class="tip">Unity XR Input</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="OpenVRControllers.html"></a></span><div class="tip">OpenVR 控制器的输入</div>
+</div>
+</div></div>
+<h1>Windows Mixed Reality 的输入</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><img src="../uploads/Main/Windows_logo.png" alt=""><img src="../uploads/Main/Windows_MR_Controllers_image.png" alt=""> </p>
+
+<p>Windows Mixed Reality 运动控制器允许用户在混合现实应用程序中进行交互，从而允许在 Windows Mixed Reality 头盔的视野 (FOV) 内进行精确、低延迟的移动跟踪。这是使用头盔内置的传感器实现的。</p>
+
+<p>为了在 Unity Editor 中实现对 Windows Mixed Reality 输入硬件的原生支持，Unity VR 子系统将三个输入作为单独的摇杆。使用 <a href="../ScriptReference/Input.html">UnityEngine.Input</a> 类来读取这些输入的轴和按钮值。</p>
+
+<h2>Controller naming conventions and detection</h2>
+
+<p>正确配置和连接到计算机后，运动控制器在 <a href="../ScriptReference/Input.GetJoystickNames.html">UnityEngine.Input.GetJoystickNames()</a> 返回的列表中显示为 <strong>Spatial Controller - Left</strong> 和 <strong>Spatial Controller - Right</strong>。有关正确配置和连接运动控制器的信息，请参阅 <a href="https://developer.microsoft.com/en-us/windows/mixed-reality/motion_controllers">Windows 开发人员中心文档</a>。</p>
+
+<p>在 Unity 中，可以通过脚本定期检查摇杆名称列表中是否存在这些控制器来检查其可用性。当控制器关闭或电池被移除时，<a href="../ScriptReference/Input.GetJoystickNames.html">UnityEngine.Input.GetJoystickNames()</a> 返回的列表中的控制器名称将替换为空字符串。当控制器再次开启时，控制器名称将再次出现在列表中。</p>
+
+<h2>Unity Input system mappings</h2>
+
+<p>下图显示了 Windows Mixed Reality 控制器上可用的按钮。</p>
+
+<figure>
+<img src="../uploads/Main/Input_mapping.png" alt="Windows Mixed Reality 控制器按钮（图像由 developer.microsoft.com 提供）">
+<figcaption>Windows Mixed Reality 控制器按钮（图像由 developer.microsoft.com 提供）</figcaption>
+</figure>
+
+<p>下表显示了 Unity 中由控制器提供的每个输入的交互类型、按钮 ID、轴和值范围。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>硬件功能</strong></th>
+	<th style="text-align:left;"><strong>交互类型</strong></th>
+	<th style="text-align:left;"><strong>Unity 按钮 ID</strong></th>
+	<th style="text-align:left;"><strong>Unity 轴 ID</strong></th>
+	<th style="text-align:left;"><strong>Unity 轴值范围</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">触控板</td>
+	<td style="text-align:left;">触控</td>
+	<td style="text-align:left;">左：18<br>右：19</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+</tr>
+<tr>
+	<td style="text-align:left;">触控板</td>
+	<td style="text-align:left;">按压</td>
+	<td style="text-align:left;">左：16<br>右：17</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+</tr>
+<tr>
+	<td style="text-align:left;">触控板</td>
+	<td style="text-align:left;">水平移动</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">左：17<br>右：19</td>
+	<td style="text-align:left;">–1.0 到 1.0</td>
+</tr>
+<tr>
+	<td style="text-align:left;">触控板</td>
+	<td style="text-align:left;">垂直移动</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">左：18<br>右：20</td>
+	<td style="text-align:left;">–1.0 到 1.0</td>
+</tr>
+<tr>
+	<td style="text-align:left;">控制棒</td>
+	<td style="text-align:left;">按压</td>
+	<td style="text-align:left;">左：8<br>右：9</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+</tr>
+<tr>
+	<td style="text-align:left;">控制棒</td>
+	<td style="text-align:left;">水平移动</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">左：1<br>右：4</td>
+	<td style="text-align:left;">–1.0 到 1.0</td>
+</tr>
+<tr>
+	<td style="text-align:left;">控制棒</td>
+	<td style="text-align:left;">垂直移动</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">左：2<br>右：5</td>
+	<td style="text-align:left;">–1.0 到 1.0</td>
+</tr>
+<tr>
+	<td style="text-align:left;">选择触发器</td>
+	<td style="text-align:left;">按压</td>
+	<td style="text-align:left;">左：14<br>右：15</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+</tr>
+<tr>
+	<td style="text-align:left;">选择触发器</td>
+	<td style="text-align:left;">挤压</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">左：9<br>右：10</td>
+	<td style="text-align:left;">0.0 到 1.0</td>
+</tr>
+<tr>
+	<td style="text-align:left;">握把按钮</td>
+	<td style="text-align:left;">按压</td>
+	<td style="text-align:left;">左：4<br>右：5</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+</tr>
+<tr>
+	<td style="text-align:left;">握把按钮</td>
+	<td style="text-align:left;">挤压</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">左：11<br>右：12</td>
+	<td style="text-align:left;">0.0 和 1.0*</td>
+</tr>
+<tr>
+	<td style="text-align:left;">菜单按钮</td>
+	<td style="text-align:left;">按压</td>
+	<td style="text-align:left;">左：6<br>右：7</td>
+	<td style="text-align:left;">-</td>
+	<td style="text-align:left;">-</td>
+</tr>
+</tbody>
+</table>
+
+<p>Unity 的 Windows Mixed Reality 控制器输入详细信息</p>
+
+<p>*握把挤压轴是二进制控制装置，因此仅报告 0 或 1 的值，没有介于两者之间的值。</p>
+
+<p>下表列出了使用 Window Mixed Reality 控制器输入时可用的不同轴以及每个轴的正负方向。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>轴</strong></th>
+	<th style="text-align:left;"><strong>位置方向</strong></th>
+	<th style="text-align:left;"><strong>负方向</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">水平</td>
+	<td style="text-align:left;">Left</td>
+	<td style="text-align:left;">Right</td>
+</tr>
+<tr>
+	<td style="text-align:left;">垂直</td>
+	<td style="text-align:left;">向上</td>
+	<td style="text-align:left;">向下</td>
+</tr>
+</tbody>
+</table>
+
+<p>For more information on using the Windows MR motion controllers with Unity, visit the Windows Developer Center documentation on <a href="https://developer.microsoft.com/en-us/windows/mixed-reality/gestures_and_motion_controllers_in_unity">Motion Controllers in Unity</a>.</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–11–21 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">2017.2 版中的新功能</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="xr_input.html"></a></span><div class="tip">Unity XR Input</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="OpenVRControllers.html"></a></span><div class="tip">OpenVR 控制器的输入</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>
