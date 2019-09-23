@@ -1,8 +1,14 @@
+
+/****************************************
+  ==== DARK MODE
+****************************************/
+
 @media (prefers-color-scheme: light) {
   :root {
     --main-bg-color: #fff;
     --main-text-color: #1b2229;
     --nextprev-bar-bg-color: #f0f0f0;
+    --message-error-bg-color: #ffe2d7;
   }
 }
 
@@ -11,6 +17,7 @@
     --main-bg-color: #2b2c2f;
     --main-text-color: #fff;
     --nextprev-bar-bg-color: hsla(0, 0%, 30%, 1);
+    --message-error-bg-color: #b22222;
   }
 }
 
@@ -21,6 +28,10 @@
   height: 100% !important;
 }
 
+.sidebar-wrap {
+  background-color: var(--main-bg-color) !important;
+}
+
 li:before {
   color: var(--main-text-color) !important;
 }
@@ -28,6 +39,45 @@ li:before {
 .nextprev {
   background: var(--nextprev-bar-bg-color);
 }
+
+code, pre, pre.codeExampleCS {
+  background: var(--nextprev-bar-bg-color) !important;
+  border-color: var(--nextprev-bar-bg-color) !important;
+}
+
+pre code, pre.codeExampleCS {
+  color: var(--main-text-color) !important;
+}
+
+.content .section table thead th {
+  background: var(--nextprev-bar-bg-color) !important;
+  border-color: var(--nextprev-bar-bg-color) !important;
+}
+
+table.list tr:nth-child(odd) { 
+  background: var(--nextprev-bar-bg-color) !important;
+}
+
+.version-list {
+  background: var(--nextprev-bar-bg-color) !important;
+  color: var(--main-text-color) !important;
+}
+
+.version-list a {
+  color: var(--main-text-color) !important;
+}
+
+div.message-error {
+  background: var(--message-error-bg-color) !important;
+}
+
+html, body{
+  background-color: var(--main-bg-color);
+}
+
+/****************************************
+  ==== FIX LAYOUT
+****************************************/
 
 html, body {
   height: 100%;
