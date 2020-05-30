@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="no-js">
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,11 +10,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="Dynamic resolution - Unity Manual">
-<title>Dynamic resolution - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/DynamicResolution.png">
-<meta name="description" content="Dynamic resolution is a Camera setting that allows you to dynamically scale individual render targets, to reduce workload on the GPU. In cases where the application’s frame rate reduces, you can gradually scale down the resolution to maintain a consistent frame rate instead. Unity triggers this scaling if performance data suggests that the frame rate is about to decrease as a result of the application being GPU-bound. You can also trigger the scaling manually by preempting a particularly GPU-intensive section of the application and controlling the scaling via a script. If scaled gradually, dynamic resolution can be almost unnoticeable.">
-<meta property="og:description" content="Dynamic resolution is a Camera setting that allows you to dynamically scale individual render targets, to reduce workload on the GPU. In cases where the application’s frame rate reduces, you can gradually scale down the resolution to maintain a consistent frame rate instead. Unity triggers this scaling if performance data suggests that the frame rate is about to decrease as a result of the application being GPU-bound. You can also trigger the scaling manually by preempting a particularly GPU-intensive section of the application and controlling the scaling via a script. If scaled gradually, dynamic resolution can be almost unnoticeable.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="动态分辨率 - Unity 手册">
+<title>动态分辨率 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.1/uploads/Main/DynamicResolution.png">
+<meta name="description" content="动态分辨率是一种摄像机设置，允许动态缩放单个渲染目标，以便减少 GPU 上的工作负载。在应用程序的帧率降低的情况下，可以逐渐缩小分辨率来保持帧率稳定。如果性能数据表明由于应用程序受 GPU 限制而导致帧率即将降低，则 Unity 会触发此缩放。还可以手动触发缩放，方法是抢占应用程序中 GPU 资源消耗特别高的部分，并通过脚本控制缩放。如果缩放逐渐进行，动态分辨率几乎不可察觉。">
+<meta property="og:description" content="动态分辨率是一种摄像机设置，允许动态缩放单个渲染目标，以便减少 GPU 上的工作负载。在应用程序的帧率降低的情况下，可以逐渐缩小分辨率来保持帧率稳定。如果性能数据表明由于应用程序受 GPU 限制而导致帧率即将降低，则 Unity 会触发此缩放。还可以手动触发缩放，方法是抢占应用程序中 GPU 资源消耗特别高的部分，并通过脚本控制缩放。如果缩放逐渐进行，动态分辨率几乎不可察觉。">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -28,13 +29,20 @@
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
 <script>
       var docs_type = 'Manual';
-      var lang = 'zh_CN';
+      var lang = 'cn';
       var page = 'DynamicResolution';
       if(!page) page = 'index';
       var version = '2019.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2020.1',version_string: '2020.1'},{version: '2019.3',version_string: '2019.3'},{version: '2019.2',version_string: '2019.2'},{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.1/Manual/DynamicResolution.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.1/Manual/DynamicResolution.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.1/Manual/DynamicResolution.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.1/Manual/DynamicResolution.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.1/Manual/DynamicResolution.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.1/Manual/DynamicResolution.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.1/Documentation/Manual/DynamicResolution.html" hreflang="x-default">
 </head>
 <body>
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -44,11 +52,11 @@
 <div id="nav-open" for="nav-input"><span></span></div>
 <div class="logo"><a href="https://docs.unity3d.com"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
-<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
 <ul class="menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 </div></div>
 <div class="more">
@@ -68,25 +76,28 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/DynamicResolution.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/DynamicResolution.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/DynamicResolution.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/DynamicResolution.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/DynamicResolution.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/DynamicResolution.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/DynamicResolution.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/DynamicResolution.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/DynamicResolution.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/DynamicResolution.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/DynamicResolution.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/DynamicResolution.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/DynamicResolution.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/DynamicResolution.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/DynamicResolution.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/DynamicResolution.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/DynamicResolution.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/DynamicResolution.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/DynamicResolution.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/DynamicResolution.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/DynamicResolution.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/DynamicResolution.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/DynamicResolution.html">5.6</a></li>
 </ul></div>
 </div>
 <ul class="nav-menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 <div class="lang-switcher">
 <div class="current toggle" data-target=".lang-list">
-<div class="lbl">Language:
+<div class="lbl">语言:
         <span class="b">中文</span>
 </div>
 <div class="arrow"></div>
@@ -96,13 +107,14 @@
 <li><a data-lang="ja" href="/ja/2019.1/Manual/DynamicResolution.html">日本語</a></li>
 <li><a data-lang="es" href="/es/2019.1/Manual/DynamicResolution.html">Español</a></li>
 <li><a data-lang="kr" href="/kr/2019.1/Manual/DynamicResolution.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.1/Manual/DynamicResolution.html">Русский</a></li>
 </ul></div>
 </div>
 </div></div>
 </div>
 <div id="master-wrapper" class="master-wrapper clear">
 <div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
-<h2>Manual</h2>
+<h2>手册</h2>
 <div class="version-switcher">
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
@@ -112,16 +124,19 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/DynamicResolution.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/DynamicResolution.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/DynamicResolution.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/DynamicResolution.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/DynamicResolution.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/DynamicResolution.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/DynamicResolution.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/DynamicResolution.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/DynamicResolution.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/DynamicResolution.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/DynamicResolution.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/DynamicResolution.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/DynamicResolution.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/DynamicResolution.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/DynamicResolution.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/DynamicResolution.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/DynamicResolution.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/DynamicResolution.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/DynamicResolution.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/DynamicResolution.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/DynamicResolution.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/DynamicResolution.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/DynamicResolution.html">5.6</a></li>
 </ul></div>
 </div>
 <div class="clear"></div>
@@ -133,7 +148,7 @@
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsOverview.html">图形概述</a></li>
 <li><a href="CamerasOverview.html">摄像机</a></li>
-<li>Dynamic resolution</li>
+<li>动态分辨率</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
@@ -143,43 +158,43 @@
 <span class="next"><a href="Shaders.html"></a></span><div class="tip">材质、着色器和纹理</div>
 </div>
 </div></div>
-<h1>Dynamic resolution</h1>
+<h1>动态分辨率</h1>
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>Dynamic resolution is a Camera setting that allows you to dynamically scale individual render targets, to reduce workload on the GPU. In cases where the application’s frame rate reduces, you can gradually scale down the resolution to maintain a consistent frame rate instead. Unity triggers this scaling if performance data suggests that the frame rate is about to decrease as a result of the application being GPU-bound. You can also trigger the scaling manually by preempting a particularly GPU-intensive section of the application and controlling the scaling via a script. If scaled gradually, dynamic resolution can be almost unnoticeable.</p>
+<p>动态分辨率是一种摄像机设置，允许动态缩放单个渲染目标，以便减少 GPU 上的工作负载。在应用程序的帧率降低的情况下，可以逐渐缩小分辨率来保持帧率稳定。如果性能数据表明由于应用程序受 GPU 限制而导致帧率即将降低，则 Unity 会触发此缩放。还可以手动触发缩放，方法是抢占应用程序中 GPU 资源消耗特别高的部分，并通过脚本控制缩放。如果缩放逐渐进行，动态分辨率几乎不可察觉。</p>
 
 <h2>支持的平台</h2>
 
 <p>Unity supports dynamic resolution on Xbox One, PS4, Nintendo Switch, iOS, macOS and tvOS (Metal only), Android (Vulkan only), Windows Standalone and UWP (DirectX 12 only).</p>
 
-<h2>Impact on render targets</h2>
+<h2>对渲染目标的影响</h2>
 
-<p>With dynamic resolution, Unity does not re-allocate render targets. Conceptually, Unity scales the render target; however, in reality, Unity uses aliasing, and the scaled-down render target only uses a small portion of the original render target. Unity allocates the render targets at their full resolution, and then the dynamic resolution system scales them down and back up again, using a portion of the original target instead of re-allocating a new target.</p>
+<p>使用动态分辨率，Unity 不会重新分配渲染目标。从概念上讲，Unity 会缩放渲染目标；但实际上，Unity 使用锯齿，而且缩小的渲染目标仅使用原始渲染目标的一小部分。Unity 以全分辨率分配渲染目标，然后动态分辨率系统会缩小渲染目标并再次备份，使用的是原始目标的一部分而不是重新分配新目标。</p>
 
-<h2>Scaling render targets</h2>
+<h2>缩放渲染目标</h2>
 
-<p>With dynamic resolution, render targets have the <a href="../ScriptReference/RenderTextureCreationFlags.DynamicallyScalable.html">DynamicallyScalable</a> flag. You can set this to state whether Unity should scale this render texture as part of the dynamic resolution process or not. Cameras also have the <a href="../ScriptReference/Camera-allowDynamicResolution.html">allowDynamicResolution</a> flag, which you can use to set up dynamic resolution so that there is no need to override the render target if you just want to apply dynamic resolution to a less complex Scene.</p>
+<p>使用动态分辨率时，渲染目标具有 <a href="../ScriptReference/RenderTextureCreationFlags.DynamicallyScalable.html">DynamicallyScalable</a> 标志。可通过设置此标志来指明 Unity 是否应该将此渲染纹理作为动态分辨率过程的一部分进行缩放。摄像机还具有 <a href="../ScriptReference/Camera-allowDynamicResolution.html">allowDynamicResolution</a> 标志，使用该标志可以这样设置动态分辨率：在只想将动态分辨率应用于不太复杂的场景时，无需覆盖渲染目标。</p>
 
 <figure>
 <img src="../uploads/Main/DynamicResolution.png" alt="">
 </figure>
 
-<h2>MRT buffers</h2>
+<h2>MRT 缓冲区</h2>
 
-<p>When you enable <strong>Allow Dynamic Resolution</strong> on the Camera, Unity scales all of that Camera’s targets.</p>
+<p>在 Camera 组件上启用 <strong>Allow Dynamic Resolution</strong> 时，Unity 会缩放该摄像机的所有目标。</p>
 
-<h2>Controlling the scaling</h2>
+<h2>控制缩放</h2>
 
-<p>You can control the scale through the <a href="../ScriptReference/ScalableBufferManager.html">ScalableBufferManager</a>. The <a href="../ScriptReference/ScalableBufferManager.html">ScalableBufferManager</a> gives you control of the dynamic width and height scale for all render targets you have marked for the dynamic resolution system to scale. </p>
+<p>可以通过 <a href="../ScriptReference/ScalableBufferManager.html">ScalableBufferManager</a> 控制缩放。借助 <a href="../ScriptReference/ScalableBufferManager.html">ScalableBufferManager</a>，可以控制已标记由动态分辨率系统进行扩展的所有渲染目标的动态宽度和高度缩放。</p>
 
-<p>As an example, assume your application is running at a desirable frame rate, but under some circumstances the GPU performance decreases, due to a combination of increased particles, post-effects and screen complexity. The Unity <a href="../ScriptReference/FrameTimingManager.html">FrameTimingManager</a> allows you to detect when the CPU or GPU performance start to decrease. So you can use the <code>FrameTimingManager</code> to calculate a new desired width and height scale to keep the frame rate within your desired range, and bring the scale down to that value to keep performance stable (either instantly or gradually over a set amount of frames). When the screen complexity reduces and the GPU is performing consistently, you may then raise the width and height scale back to a value that you’ve calculated the GPU can handle.</p>
+<p>例如，假设应用程序以理想的帧率运行，但在某些情况下，由于粒子增多、后期效果和屏幕复杂性等多重因素的影响，GPU 性能会下降。Unity <a href="../ScriptReference/FrameTimingManager.html">FrameTimingManager</a> 可以检测 CPU 或 GPU 性能何时开始下降。因此，可使用 <code>FrameTimingManager</code> 计算新的所需宽度和高度缩放以将帧率保持在所需范围内，并将缩放降低到该值以保持性能稳定（立即进行或在设定的帧数内逐渐进行）。当屏幕复杂度降低并且 GPU 性能稳定时，可将宽度和高度缩放提高到事先计算出的 GPU 可以处理的值。</p>
 
 <h2>示例</h2>
 
-<p>This example script demonstrates basic use of the API. Add it to a Camera in your Scene, and check <strong>Allow Dynamic Resolution</strong> in the Camera settings. You also need to open the <strong>Player</strong> settings (menu: <strong>Edit &gt; Project Settings</strong>, then select the <strong>Player</strong> category) and check the <strong>Enable Frame Timing Stats</strong> checkbox.</p>
+<p>以下示例脚本演示了 API 的基本用法。将该脚本添加到场景中的摄像机，然后在 Camera 设置中选中 <strong>Allow Dynamic Resolution</strong>。还需要打开 <strong>Player</strong> 设置（菜单：__Edit &gt; Project Settings__，然后选择 <strong>Player</strong> 类别）并选中 <strong>Enable Frame Timing Stats</strong> 复选框。</p>
 
-<p>Clicking the mouse, or tapping the screen with one finger, lowers the height and width resolution by the amount in the <code>scaleWidthIncrement</code> and <code>scaleHeightIncrement</code> variables respectively. Tapping with two fingers raises the resolutions by the same increment.</p>
+<p>单击鼠标或用一根手指点击屏幕，分别将高度和宽度分辨率降低 <code>scaleWidthIncrement</code> 和 <code>scaleHeightIncrement</code> 变量中的大小。用两根手指点击会以相同的增量提高分辨率。</p>
 
 <pre><code>using System;
 using System.Collections;
@@ -203,7 +218,7 @@ public class DynamicResolutionTest : MonoBehaviour
     float m_widthScale = 1.0f;
     float m_heightScale = 1.0f;
 
-    // Variables for dynamic resolution algorithm that persist across frames
+    // 跨帧保持的动态分辨率算法变量
     uint m_frameCount = 0;
 
     const uint kNumFrameTimings = 2;
@@ -211,7 +226,7 @@ public class DynamicResolutionTest : MonoBehaviour
     double m_gpuFrameTime;
     double m_cpuFrameTime;
 
-    // Use this for initialization
+    // 使用此函数进行初始化
     void Start()
     {
         int rezWidth = (int)Mathf.Ceil(ScalableBufferManager.widthScaleFactor * Screen.currentResolution.width);
@@ -223,20 +238,20 @@ public class DynamicResolutionTest : MonoBehaviour
             rezHeight);
     }
 
-    // Update is called once per frame
+    // 每帧调用一次 Update
     void Update()
     {
         float oldWidthScale = m_widthScale;
         float oldHeightScale = m_heightScale;
 
-        // One finger lowers the resolution
+        // 一根手指降低分辨率
         if (Input.GetButtonDown("Fire1"))
         {
             m_heightScale = Mathf.Max(minResolutionHeightScale, m_heightScale - scaleHeightIncrement);
             m_widthScale = Mathf.Max(minResolutionWidthScale, m_widthScale - scaleWidthIncrement);
         }
 
-        // Two fingers raises the resolution
+        // 两根手指提高分辨率
         if (Input.GetButtonDown("Fire2"))
         {
             m_heightScale = Mathf.Min(maxResolutionHeightScale, m_heightScale + scaleHeightIncrement);
@@ -261,7 +276,7 @@ public class DynamicResolutionTest : MonoBehaviour
             m_cpuFrameTime);
     }
 
-    // Estimate the next frame time and update the resolution scale if necessary.
+    // 估算下一帧时间并在必要时更新分辨率缩放。
     private void DetermineResolution()
     {
         ++m_frameCount;
@@ -289,17 +304,17 @@ public class DynamicResolutionTest : MonoBehaviour
 
 <ul>
 <li>
-<a href="../ScriptReference/FrameTimingManager.html">FrameTimingManager</a> scripting class reference.</li>
+<a href="../ScriptReference/FrameTimingManager.html">FrameTimingManager</a> 脚本类参考。</li>
 <li>
-<a href="../ScriptReference/ScalableBufferManager.html">ScalableBufferManager</a> scripting class reference.</li>
+<a href="../ScriptReference/ScalableBufferManager.html">ScalableBufferManager</a> 脚本类参考。</li>
 </ul>
 
 <hr>
 
 <ul>
-<li><p><span class="page-edit">2018–09–20 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><p><span class="page-edit">2018–09–20 页面已发布并进行了<a href="DocumentationEditorialReview.html">编辑审查</a>
 </span></p></li>
-<li><p><span class="page-history">Documentation on dynamic resolution added in 2017.4</span></p></li>
+<li><p><span class="page-history">在 2017.4 版中添加了有关动态分辨率的文档</span></p></li>
 <li><p><span class="page-history">Dynamic Resolution support for macOS (Metal only), Windows Standalone and UWP (DirectX 12 only) added in 2019.1</span></p></li>
 </ul>
 <div class="nextprev clear">
@@ -313,9 +328,9 @@ public class DynamicResolutionTest : MonoBehaviour
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2019.1</div>
 <div class="menu">
-<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>
 </div>
 <div></div>

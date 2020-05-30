@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="no-js">
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,10 +10,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="WebGL 图形 - Unity Manual">
-<title>WebGL 图形 - Unity Manual</title>
-<meta name="description" content="WebGL is an API for rendering graphics in web browsers, which is based on the functionality of the OpenGL ES graphics library. WebGL 1.0 roughly matches OpenGL ES 2.0 functionality, and WebGL 2.0 roughly matches OpenGL ES 3.0 functionality.">
-<meta property="og:description" content="WebGL is an API for rendering graphics in web browsers, which is based on the functionality of the OpenGL ES graphics library. WebGL 1.0 roughly matches OpenGL ES 2.0 functionality, and WebGL 2.0 roughly matches OpenGL ES 3.0 functionality.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="WebGL 图形 - Unity 手册">
+<title>WebGL 图形 - Unity 手册</title>
+<meta name="description" content="WebGL 是一种用于在 Web 浏览器中渲染图形的 API，基于 OpenGL ES 图形库的功能。WebGL 1.0 大致与 OpenGL ES 2.0 功能相匹配，而 WebGL 2.0 大致与 OpenGL ES 3.0 功能相匹配。">
+<meta property="og:description" content="WebGL 是一种用于在 Web 浏览器中渲染图形的 API，基于 OpenGL ES 图形库的功能。WebGL 1.0 大致与 OpenGL ES 2.0 功能相匹配，而 WebGL 2.0 大致与 OpenGL ES 3.0 功能相匹配。">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -27,13 +28,20 @@
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
 <script>
       var docs_type = 'Manual';
-      var lang = 'zh_CN';
+      var lang = 'cn';
       var page = 'webgl-graphics';
       if(!page) page = 'index';
       var version = '2019.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2020.1',version_string: '2020.1'},{version: '2019.3',version_string: '2019.3'},{version: '2019.2',version_string: '2019.2'},{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.1/Manual/webgl-graphics.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.1/Manual/webgl-graphics.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.1/Manual/webgl-graphics.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.1/Manual/webgl-graphics.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.1/Manual/webgl-graphics.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.1/Manual/webgl-graphics.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.1/Documentation/Manual/webgl-graphics.html" hreflang="x-default">
 </head>
 <body>
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -43,11 +51,11 @@
 <div id="nav-open" for="nav-input"><span></span></div>
 <div class="logo"><a href="https://docs.unity3d.com"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
-<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
 <ul class="menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 </div></div>
 <div class="more">
@@ -67,25 +75,28 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/webgl-graphics.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/webgl-graphics.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/webgl-graphics.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/webgl-graphics.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/webgl-graphics.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/webgl-graphics.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/webgl-graphics.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/webgl-graphics.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/webgl-graphics.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/webgl-graphics.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/webgl-graphics.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/webgl-graphics.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/webgl-graphics.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/webgl-graphics.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/webgl-graphics.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/webgl-graphics.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/webgl-graphics.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/webgl-graphics.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/webgl-graphics.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/webgl-graphics.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/webgl-graphics.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/webgl-graphics.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/webgl-graphics.html">5.6</a></li>
 </ul></div>
 </div>
 <ul class="nav-menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 <div class="lang-switcher">
 <div class="current toggle" data-target=".lang-list">
-<div class="lbl">Language:
+<div class="lbl">语言:
         <span class="b">中文</span>
 </div>
 <div class="arrow"></div>
@@ -95,13 +106,14 @@
 <li><a data-lang="ja" href="/ja/2019.1/Manual/webgl-graphics.html">日本語</a></li>
 <li><a data-lang="es" href="/es/2019.1/Manual/webgl-graphics.html">Español</a></li>
 <li><a data-lang="kr" href="/kr/2019.1/Manual/webgl-graphics.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.1/Manual/webgl-graphics.html">Русский</a></li>
 </ul></div>
 </div>
 </div></div>
 </div>
 <div id="master-wrapper" class="master-wrapper clear">
 <div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
-<h2>Manual</h2>
+<h2>手册</h2>
 <div class="version-switcher">
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
@@ -111,16 +123,19 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/webgl-graphics.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/webgl-graphics.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/webgl-graphics.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/webgl-graphics.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/webgl-graphics.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/webgl-graphics.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/webgl-graphics.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/webgl-graphics.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/webgl-graphics.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/webgl-graphics.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/webgl-graphics.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/webgl-graphics.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/webgl-graphics.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/webgl-graphics.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/webgl-graphics.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/webgl-graphics.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/webgl-graphics.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/webgl-graphics.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/webgl-graphics.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/webgl-graphics.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/webgl-graphics.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/webgl-graphics.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/webgl-graphics.html">5.6</a></li>
 </ul></div>
 </div>
 <div class="clear"></div>
@@ -136,7 +151,7 @@
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="webgl-debugging.html"></a></span><div class="tip">Debugging and troubleshooting WebGL builds</div>
+<span class="prev"><a href="webgl-debugging.html"></a></span><div class="tip">对 WebGL 构建进行调试和故障排除</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
 <span class="next"><a href="webgl-networking.html"></a></span><div class="tip">WebGL 网络</div>
@@ -146,11 +161,11 @@
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p><a href="https://www.khronos.org/webgl/">WebGL</a> is an API for rendering graphics in web browsers, which is based on the functionality of the OpenGL ES graphics library. WebGL 1.0 roughly matches OpenGL ES 2.0 functionality, and WebGL 2.0 roughly matches OpenGL ES 3.0 functionality.</p>
+<p><a href="https://www.khronos.org/webgl/">WebGL</a> 是一种用于在 Web 浏览器中渲染图形的 API，基于 OpenGL ES 图形库的功能。WebGL 1.0 大致与 OpenGL ES 2.0 功能相匹配，而 WebGL 2.0 大致与 OpenGL ES 3.0 功能相匹配。</p>
 
-<h2>Camera Clear</h2>
+<h2>摄像机清除</h2>
 
-<p>The default WebGL behaviour is to clear the drawing buffer after each frame. This means on Unity WebGL, the content of the frame buffer clears regardless of the <a href="https://docs.unity3d.com/ScriptReference/Camera-clearFlags.html">Camera.clearFlags</a> setting. However, you can change this behaviour at instantiation time. To do this, set <code>webglContextAttributes.preserveDrawingBuffer</code> to <code>true</code> in your WebGL template:</p>
+<p>默认的 WebGL 行为是在每帧之后清除绘制缓冲区。这意味着在 Unity WebGL 上，无论 <a href="https://docs.unity3d.com/ScriptReference/Camera-clearFlags.html">Camera.clearFlags</a> 设置如何，帧缓冲区的内容都会清除。但是，可以在实例化时更改此行为。为此，请在 WebGL 模板中将 <code>webglContextAttributes.preserveDrawingBuffer</code> 设置为 <code>true</code>：</p>
 
 <pre><code>UnityLoader.instantiate("unityContainer", "%UNITY_WEBGL_BUILD_URL%", {
     Module: {
@@ -163,13 +178,13 @@
 
 <p>如果 WebGL2.0 可用，Unity WebGL 仅支持<a href="RenderTech-DeferredShading.html">延迟渲染路径</a>。在 WebGL1.0 上，Unity WebGL 运行时将回退到<a href="RenderTech-ForwardRendering.html">前向渲染</a>。</p>
 
-<h2>全局光照</h2>
+<h2>Global Illumination</h2>
 
 <p>Unity WebGL 仅支持<a href="GIIntro.html">烘焙 GI</a>。WebGL 当前不支持实时 GI。此外，仅支持非方向光照贴图。</p>
 
 <h2>线性渲染</h2>
 
-<p>Unity WebGL only supports <a href="LinearLighting.html">linear color space rendering</a> with WebGL 2.0. Linear color space rendering doesn’t have fallback support for WebGL 1.0. To build a WebGL player using linear color space rendering, you need to remove WebGL 1.0 API in the <strong>Player</strong> settings, open the <strong>Other Settings</strong> panel, disable the <strong>Automatic Graphics API</strong> setting.</p>
+<p>采用 WebGL 2.0 时，Unity WebGL 仅支持<a href="LinearLighting.html">线性颜色空间渲染</a>。线性颜色空间渲染不支持回退到 WebGL 1.0。要使用线性颜色空间渲染来构建 WebGL 播放器，必须在 <strong>Player</strong> 设置中打开的 <strong>Other Settings</strong> 面板中删除 WebGL 1.0 API，并禁用 <strong>Automatic Graphics API</strong> 设置。</p>
 
 <p>某些 Web 浏览器不支持 <a href="class-TextureImporterOverride.html">sRGB DXT 纹理压缩</a>。因此在使用线性渲染时会降低渲染性能的质量，原因是所有 DXT 纹理都要在运行时解压缩。</p>
 
@@ -179,7 +194,7 @@
 
 <h2>WebGL 着色器代码限制</h2>
 
-<p>The <a href="https://www.khronos.org/registry/webgl/specs/1.0/">WebGL 1.0 specification</a> imposes some limitations on GLSLS shader code, which are more restrictive than many OpenGL ES 2.0 implementations. This is mostly relevant when you write your own shaders.</p>
+<p><a href="https://www.khronos.org/registry/webgl/specs/1.0/">WebGL 1.0 规范</a>对 GLSLS 着色器代码施加了一些限制，比许多 OpenGL ES 2.0 实现方案更严格。当您编写自己的着色器时，受此影响最大。</p>
 
 <p>具体而言，WebGL 限制了哪些值可用于索引数组或矩阵：WebGL 仅允许使用常量表达式、循环索引或组合的方式进行动态索引。唯一的例外是顶点着色器中的 uniform 访问，这种情况可使用任何表达式进行索引。</p>
 
@@ -191,15 +206,15 @@
 
 <h2>抗锯齿</h2>
 
-<p>WebGL supports anti-aliasing on most (but not on all) combinations of browsers and GPUs. To use it, anti-aliasing must be enabled in the default <a href="class-QualitySettings.html">Quality</a> setting for the WebGL platform.</p>
+<p>WebGL 对于大多数（但不是全部）浏览器和 GPU 组合均支持抗锯齿功能。要使用抗锯齿功能，必须在 WebGL 平台的默认 <a href="class-QualitySettings.html">Quality</a> 设置中启用该功能。</p>
 
 <p>请注意，在 WebGL1.0 上有几个限制：</p>
 
 <ul>
-<li><p>Switching <strong>Quality</strong> settings at runtime will not enable or disable anti-aliasing. It has to be set up in the default <strong>Quality</strong> setting loaded at player start up. </p></li>
+<li><p>在运行时切换 <strong>Quality</strong> 设置将不会启用或禁用抗锯齿。必须在播放器启动时加载的默认 <strong>Quality</strong> 设置中进行此设置。</p></li>
 <li><p>不同的多重采样级别（2x、4x 等）在 WebGL 中没有任何影响，开启或关闭都可以。</p></li>
 <li><p>应用于摄像机的任何<a href="PostProcessingOverview.html">后期处理效果</a>都会禁用内置的抗锯齿功能。</p></li>
-<li><p>HDR is not compatible with anti-aliasing so make sure the <strong>Allow HDR</strong> camera option is disabled.</p></li>
+<li><p>HDR 与抗锯齿功能不兼容，因此请确保禁用 <strong>Allow HDR</strong> 摄像机选项。</p></li>
 </ul>
 
 <p>WebGL2.0 没有这样的限制。</p>
@@ -210,24 +225,24 @@
 
 <h2>WebGL 2.0 支持</h2>
 
-<p>Unity includes support for the <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/">WebGL 2.0 API</a>, which brings OpenGL ES 3.0-level rendering capabilities to the web. </p>
+<p>Unity 包含对 <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/">WebGL 2.0 API</a> 的支持，因此为 Web 带来了 OpenGL ES 3.0 级的渲染功能。</p>
 
-<p>By default, Unity WebGL builds support both WebGL 1.0 and WebGL 2.0 APIs, This can be configured in the WebGL <strong>Player</strong> settings under the <strong>Other Settings</strong> panel by disabling the <strong>Automatic Graphics API</strong> property.</p>
+<p>默认情况下，Unity WebGL 构建可支持 WebGL 1.0 和 WebGL 2.0 API。可在 WebGL <strong>Player</strong> 设置（位于 <strong>Other Settings</strong> 面板下）中对此进行配置；禁用 <strong>Automatic Graphics API</strong> 属性即可实现此目的。</p>
 
 <p>浏览器支持 WebGL 2.0 时，内容可获得以下方面的优势：标准着色器提供的更高质量、<a href="GPUInstancing.html">GPU 实例化</a>支持、方向光照贴图支持、着色器代码中的索引和循环不受限制以及更出色的性能。</p>
 
-<p>You can use <a href="../ScriptReference/SystemInfo-graphicsDeviceType.html">SystemInfo.graphicsDeviceType</a> at run time to determine whether the Unity instance is rendering with OpenGLES3 (WebGL2.0) or OpenGLES2 (WebGL1.0).</p>
+<p>可以在运行时使用 <a href="../ScriptReference/SystemInfo-graphicsDeviceType.html">SystemInfo.graphicsDeviceType</a> 来确定 Unity 实例是使用 OpenGLES3 (WebGL2.0) 还是 OpenGLES2 (WebGL1.0) 进行渲染。</p>
 
 <hr>
 
 <ul>
-<li><p><span class="page-edit"> 2018–10–26 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><p><span class="page-edit"> 2018–10–26 页面已修订并只进行了有限的<a href="DocumentationEditorialReview.html">编辑审查</a>
 </span></p></li>
 <li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2017.2/Documentation/Manual/30_search.html?q=newin20172">2017.2</a> 中添加了适用于 WebGL 2.0 的线性渲染 <span class="search-words">NewIn20172</span></span></p></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="webgl-debugging.html"></a></span><div class="tip">Debugging and troubleshooting WebGL builds</div>
+<span class="prev"><a href="webgl-debugging.html"></a></span><div class="tip">对 WebGL 构建进行调试和故障排除</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
 <span class="next"><a href="webgl-networking.html"></a></span><div class="tip">WebGL 网络</div>
@@ -236,9 +251,9 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2019.1</div>
 <div class="menu">
-<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>
 </div>
 <div></div>

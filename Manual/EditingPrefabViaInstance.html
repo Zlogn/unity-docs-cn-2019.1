@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="no-js">
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,11 +10,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="Editing a Prefab via its instances - Unity Manual">
-<title>Editing a Prefab via its instances - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/PrefabsInspectorControls.png">
-<meta name="description" content="The Inspector for the root of a Prefab instance has three more controls than a normal GameObject: Open, Select and Overrides.">
-<meta property="og:description" content="The Inspector for the root of a Prefab instance has three more controls than a normal GameObject: Open, Select and Overrides.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="通过预制件的实例编辑预制件 - Unity 手册">
+<title>通过预制件的实例编辑预制件 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.1/uploads/Main/PrefabsInspectorControls.png">
+<meta name="description" content="与普通游戏对象相比，预制件实例的根的 Inspector 有三个额外的控件：__Open、Select__ 和 Overrides。">
+<meta property="og:description" content="与普通游戏对象相比，预制件实例的根的 Inspector 有三个额外的控件：__Open、Select__ 和 Overrides。">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -28,13 +29,20 @@
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
 <script>
       var docs_type = 'Manual';
-      var lang = 'zh_CN';
+      var lang = 'cn';
       var page = 'EditingPrefabViaInstance';
       if(!page) page = 'index';
       var version = '2019.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2020.1',version_string: '2020.1'},{version: '2019.3',version_string: '2019.3'},{version: '2019.2',version_string: '2019.2'},{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.1/Manual/EditingPrefabViaInstance.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.1/Manual/EditingPrefabViaInstance.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.1/Manual/EditingPrefabViaInstance.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.1/Manual/EditingPrefabViaInstance.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.1/Manual/EditingPrefabViaInstance.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.1/Manual/EditingPrefabViaInstance.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.1/Documentation/Manual/EditingPrefabViaInstance.html" hreflang="x-default">
 </head>
 <body>
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -44,11 +52,11 @@
 <div id="nav-open" for="nav-input"><span></span></div>
 <div class="logo"><a href="https://docs.unity3d.com"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
-<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
 <ul class="menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 </div></div>
 <div class="more">
@@ -68,25 +76,28 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/EditingPrefabViaInstance.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/EditingPrefabViaInstance.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/EditingPrefabViaInstance.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/EditingPrefabViaInstance.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/EditingPrefabViaInstance.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/EditingPrefabViaInstance.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/EditingPrefabViaInstance.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/EditingPrefabViaInstance.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/EditingPrefabViaInstance.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/EditingPrefabViaInstance.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/EditingPrefabViaInstance.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/EditingPrefabViaInstance.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/EditingPrefabViaInstance.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/EditingPrefabViaInstance.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/EditingPrefabViaInstance.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/EditingPrefabViaInstance.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/EditingPrefabViaInstance.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/EditingPrefabViaInstance.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/EditingPrefabViaInstance.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/EditingPrefabViaInstance.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/EditingPrefabViaInstance.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/EditingPrefabViaInstance.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/EditingPrefabViaInstance.html">5.6</a></li>
 </ul></div>
 </div>
 <ul class="nav-menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 <div class="lang-switcher">
 <div class="current toggle" data-target=".lang-list">
-<div class="lbl">Language:
+<div class="lbl">语言:
         <span class="b">中文</span>
 </div>
 <div class="arrow"></div>
@@ -96,13 +107,14 @@
 <li><a data-lang="ja" href="/ja/2019.1/Manual/EditingPrefabViaInstance.html">日本語</a></li>
 <li><a data-lang="es" href="/es/2019.1/Manual/EditingPrefabViaInstance.html">Español</a></li>
 <li><a data-lang="kr" href="/kr/2019.1/Manual/EditingPrefabViaInstance.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.1/Manual/EditingPrefabViaInstance.html">Русский</a></li>
 </ul></div>
 </div>
 </div></div>
 </div>
 <div id="master-wrapper" class="master-wrapper clear">
 <div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
-<h2>Manual</h2>
+<h2>手册</h2>
 <div class="version-switcher">
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
@@ -112,16 +124,19 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/EditingPrefabViaInstance.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/EditingPrefabViaInstance.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/EditingPrefabViaInstance.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/EditingPrefabViaInstance.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/EditingPrefabViaInstance.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/EditingPrefabViaInstance.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/EditingPrefabViaInstance.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/EditingPrefabViaInstance.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/EditingPrefabViaInstance.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/EditingPrefabViaInstance.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/EditingPrefabViaInstance.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/EditingPrefabViaInstance.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/EditingPrefabViaInstance.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/EditingPrefabViaInstance.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/EditingPrefabViaInstance.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/EditingPrefabViaInstance.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/EditingPrefabViaInstance.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/EditingPrefabViaInstance.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/EditingPrefabViaInstance.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/EditingPrefabViaInstance.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/EditingPrefabViaInstance.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/EditingPrefabViaInstance.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/EditingPrefabViaInstance.html">5.6</a></li>
 </ul></div>
 </div>
 <div class="clear"></div>
@@ -133,129 +148,129 @@
 <li><a href="UnityOverview.html">在 Unity 中操作</a></li>
 <li><a href="CreatingGameplay.html">创建游戏玩法</a></li>
 <li><a href="Prefabs.html">预制件</a></li>
-<li>Editing a Prefab via its instances</li>
+<li>通过预制件的实例编辑预制件</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="PrefabInstanceOverrides.html"></a></span><div class="tip">Instance overrides</div>
+<span class="prev"><a href="PrefabInstanceOverrides.html"></a></span><div class="tip">实例覆盖</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="NestedPrefabs.html"></a></span><div class="tip">Nested Prefabs</div>
+<span class="next"><a href="NestedPrefabs.html"></a></span><div class="tip">嵌套预制件</div>
 </div>
 </div></div>
-<h1>Editing a Prefab via its instances</h1>
+<h1>通过预制件的实例编辑预制件</h1>
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>The Inspector for the root of a Prefab instance has three more controls than a normal GameObject: <strong>Open</strong>, <strong>Select</strong> and <strong>Overrides</strong>.</p>
+<p>与普通游戏对象相比，预制件实例的根的 Inspector 有三个额外的控件：__Open<strong>、</strong>Select__ 和 <strong>Overrides</strong>。</p>
 
 <figure>
-<img src="../uploads/Main/PrefabsInspectorControls.png" alt="The three Prefab controls in the Inspector window for a Prefab instance">
-<figcaption>The three Prefab controls in the Inspector window for a Prefab instance</figcaption>
+<img src="../uploads/Main/PrefabsInspectorControls.png" alt="预制件实例的 Inspector 窗口中的三个预制件控件">
+<figcaption>预制件实例的 Inspector 窗口中的三个预制件控件</figcaption>
 </figure>
 
-<p>The <strong>Open</strong> button opens the Prefab Asset that the instance is from in Prefab Mode, allowing you to edit the Prefab Asset and thereby change all of its instances. The <strong>Select</strong> button selects the Prefab Asset that this instance is from in the Project window. The <strong>Overrides</strong> button opens the overrides drop-down window.</p>
+<p><strong>Open</strong> 按钮在预制件模式下打开实例所在的预制件资源，然后可以编辑预制件资源，从而更改其所有实例。<strong>Select</strong> 按钮在 Project 窗口中选择用于生成此实例的预制件资源。<strong>Overrides</strong> 按钮打开 Overrides 下拉窗口。</p>
 
 <p><a name="OverridesDropdown"></a></p>
 
-<h2>Overrides dropdown</h2>
+<h2>Overrides 下拉选单</h2>
 
-<p>The <strong>Overrides</strong> drop-down window shows all the overrides on the Prefab instance. It also lets you apply overrides from the instance to the Prefab Asset, or revert overrides on the instance back to the values on the Prefab Asset. The <strong>Overrides</strong> drop-down button only appears for the root Prefab instance, not for Prefabs that are inside other Prefabs.</p>
+<p><strong>Overrides</strong> 下拉窗口显示预制件实例上的所有覆盖。还允许将实例的覆盖应用于预制件资源，或将实例上的覆盖恢复为预制件资源上的值。只有根预制件实例会显示 <strong>Overrides</strong> 下拉选单按钮，其他预制件内的预制件不会显示此按钮。</p>
 
-<p>The <strong>Overrides</strong> drop-down window allows you to apply or revert individual prefab overrides, or apply or revert all the prefab overrides in one go.</p>
+<p><strong>Overrides</strong> 下拉窗口可以应用或恢复单个预制件覆盖，或一次性应用或恢复所有预制件覆盖。</p>
 
 <ul>
-<li><p><strong>Applying</strong> an override modifies the Prefab Asset. This puts the override (which is currently only on your Prefab instance) onto the Asset. This means the Prefab Asset now has that modification, and the Prefab instance no longer has that modification as an override.</p></li>
-<li><p><strong>Reverting</strong> an override modifies the Prefab instance. This essentially discards your override and reverts it back to the state of the Prefab Asset.</p></li>
+<li><p><strong>应用</strong>覆盖会修改预制件资源。此操作会将覆盖（当前仅在您的预制件实例上）置于资源之上。这意味着预制件资源现在具有该修改，而预制件实例不再具有该修改作为覆盖。</p></li>
+<li><p><strong>还原</strong>覆盖会修改预制件实例。此操作实质上会丢弃您的覆盖并将其恢复为预制件资源的状态。</p></li>
 </ul>
 
-<p>The drop-down window shows a list of changes on the instance in the form of modified, added and removed components, and added GameObjects (including other Prefabs).</p>
+<p>下拉窗口以修改、添加和删除的组件以及添加的游戏对象（包括其他预制件）的形式显示实例更改列表。</p>
 
 <figure>
-<img src="../uploads/Main/PrefabsOverridesDropdown.png" alt="The Overrides dropdown in the Inspector window when viewing a Prefab instance">
-<figcaption>The Overrides dropdown in the Inspector window when viewing a Prefab instance</figcaption>
+<img src="../uploads/Main/PrefabsOverridesDropdown.png" alt="查看预制件实例时，Inspector 窗口中的 Overrides 下拉选单">
+<figcaption>查看预制件实例时，Inspector 窗口中的 Overrides 下拉选单</figcaption>
 </figure>
 
-<p>To inspect an entry, click it. This displays a floating view that shows the change and allows you to revert or apply that change.</p>
+<p>要检查条目，请单击该条目。此时将出现一个浮动视图，其中显示更改并允许您还原或应用该更改。</p>
 
 <figure>
-<img src="../uploads/Main/PrefabsOverridesDropdownAddedComponent.png" alt="The overrides dropdown window with an added component override selected">
-<figcaption>The overrides dropdown window with an added component override selected</figcaption>
+<img src="../uploads/Main/PrefabsOverridesDropdownAddedComponent.png" alt="Overrides 下拉窗口中选中了添加的组件覆盖">
+<figcaption>Overrides 下拉窗口中选中了添加的组件覆盖</figcaption>
 </figure>
 
-<p>For components with modified values, the view displays a side-by-side comparison of the component’s values on the Prefab Asset and the modified component on the Prefab instance. This allows you to compare the original Prefab Asset values with the current overrides, so that you can decide whether you would like to revert or apply those values.</p>
+<p>对于修改了值的组件，此视图会显示预制件资源上组件值与预制件实例上已修改组件的并排比较。这样就可以将原始预制件资源值与当前覆盖进行比较，从而可以决定是要还原还是应用这些值。</p>
 
-<p>In the example below, the “Fruit” child GameObject exists on both the Prefab Asset and the Prefab instance, however its scale has been increased on the instance. This increase in scale is an instance override, and can be seen as a side-by-side comparison in the <strong>Overrides</strong> drop-down window.</p>
+<p>在下面的示例中，预制件资源和预制件实例上都存在“Fruit”子游戏对象，但实例上的缩放已增大。此缩放增大结果就是一个实例覆盖，两者的视图可以在 <strong>Overrides</strong> 下拉窗口中进行并排比较。</p>
 
 <figure>
-<img src="../uploads/Main/PrefabsOverridesDropdownCompareComponent.png" alt="The Overrides dropdown with comparison view, showing modified values in the Transform component of a child GameObject of the prefab instance">
-<figcaption>The Overrides dropdown with comparison view, showing modified values in the Transform component of a child GameObject of the prefab instance</figcaption>
+<img src="../uploads/Main/PrefabsOverridesDropdownCompareComponent.png" alt="具有比较视图的 Overrides 下拉选单，其中显示了预制件实例子游戏对象的变换 (Transform) 组件中的修改值">
+<figcaption>具有比较视图的 Overrides 下拉选单，其中显示了预制件实例子游戏对象的变换 (Transform) 组件中的修改值</figcaption>
 </figure>
 
-<p>The <strong>Overrides</strong> drop-down window also has <strong>Revert All</strong> and <em>Apply All</em>_ buttons for reverting or applying all changes at once. If you have Prefabs inside other Prefabs, the <strong>Apply All</strong> button always applies to the outermost Prefab, which is the one that has the <strong>Overrides</strong> drop-down button on its root GameObject.</p>
+<p><strong>Overrides</strong> 下拉窗口还有 <strong>Revert All</strong> 和 <strong>Apply All</strong> 按钮，用于一次性还原或应用所有更改。如果在其他预制件中有预制件，则 <strong>Apply All</strong> 按钮始终适用于最外面的预制件，即在根游戏对象上具有 <strong>Overrides</strong> 下拉选单按钮的预制件。</p>
 
 <p><a name="ContextMenus"></a></p>
 
-<h2>Context menus</h2>
+<h2>上下文菜单</h2>
 
-<p>You can also <strong>revert</strong> and <strong>apply</strong> individual overrides using the context menu in the Inspector, instead of using the Overrides drop-down window.</p>
+<p>除了 Overrides 下拉窗口，还可以使用 Inspector 中的上下文菜单来<strong>还原</strong>和<strong>应用</strong>各个覆盖。</p>
 
-<p>Overridden properties are shown in bold. They can be reverted or applied via a context menu:</p>
+<p>被覆盖的属性以粗体显示。可以通过上下文菜单还原或应用这些属性：</p>
 
 <figure>
-<img src="../uploads/Main/PrefabsContextSingleProperty.png" alt="Context menu for a single property">
-<figcaption>Context menu for a single property</figcaption>
+<img src="../uploads/Main/PrefabsContextSingleProperty.png" alt="单个属性的上下文菜单">
+<figcaption>单个属性的上下文菜单</figcaption>
 </figure>
 
-<p>Modified components can be reverted or applied via the cog drop-down button or context menu of the component header:</p>
+<p>可通过组件标题的齿轮下拉选单按钮或上下文菜单还原或应用已修改的组件：</p>
 
 <figure>
-<img src="../uploads/Main/PrefabsContextModifiedComponent.png" alt="Context menu for modified component">
-<figcaption>Context menu for modified component</figcaption>
+<img src="../uploads/Main/PrefabsContextModifiedComponent.png" alt="修改的组件的上下文菜单">
+<figcaption>修改的组件的上下文菜单</figcaption>
 </figure>
 
-<p>Added components have a plus badge that overlays the icon. They can be reverted or applied via the cog drop-down button or context menu of the component header:</p>
+<p>添加的组件在图标上有一个叠加的加号标示。可通过组件标题的齿轮下拉选单按钮或上下文菜单还原或应用这些组件：</p>
 
 <figure>
-<img src="../uploads/Main/PrefabsContextAddedComponent.png" alt="Context menu for added component">
-<figcaption>Context menu for added component</figcaption>
+<img src="../uploads/Main/PrefabsContextAddedComponent.png" alt="添加的组件的上下文菜单">
+<figcaption>添加的组件的上下文菜单</figcaption>
 </figure>
 
-<p>Removed components have a minus badge that overlays the icon. The removal can be reverted or applied via the cog drop-down button or context menu of the component header. Reverting the removal puts the component back, and applying the removal deletes it from the Prefab Asset as well:</p>
+<p>删除的组件在图标上有一个叠加的减号标示。可通过组件标题的齿轮下拉选单按钮或上下文菜单还原或应用删除操作。还原删除操作会使组件恢复，而应用删除操作还会将组件从预制件资源中删除：</p>
 
 <figure>
-<img src="../uploads/Main/PrefabsContextRemovedComponent.png" alt="Context menu for removed component">
-<figcaption>Context menu for removed component</figcaption>
+<img src="../uploads/Main/PrefabsContextRemovedComponent.png" alt="删除的组件的上下文菜单">
+<figcaption>删除的组件的上下文菜单</figcaption>
 </figure>
 
-<p>GameObjects (including other Prefabs) that are added as children to a Prefab instance have a plus badge that overlays the icon in the Hierarchy. They can be reverted or applied via the context menu on the object in the Hierarchy:</p>
+<p>作为子项添加到预制件实例的游戏对象（包括其他预制件）在 Hierarchy 中的图标上有一个叠加的加号标示。可通过 Hierarchy 窗口中的对象的上下文菜单还原或应用这些游戏对象：</p>
 
 <figure>
-<img src="../uploads/Main/PrefabsContextAddedGameObject.png" alt="Context menu for added GameObject child">
-<figcaption>Context menu for added GameObject child</figcaption>
+<img src="../uploads/Main/PrefabsContextAddedGameObject.png" alt="添加的游戏对象子项的上下文菜单">
+<figcaption>添加的游戏对象子项的上下文菜单</figcaption>
 </figure>
 
 <hr>
 
 <ul>
-<li><p><span class="page-edit">2018–07–31 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><p><span class="page-edit">2018–07–31 页面已发布并只进行了有限的<a href="DocumentationEditorialReview.html">编辑审查</a>
 </span></p></li>
-<li><p><span class="page-history">Nested Prefabs and Prefab Variants added in 2018.3</span></p></li>
+<li><p><span class="page-history">在 2018.3 版中添加了嵌套预制件和预制件变体</span></p></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="PrefabInstanceOverrides.html"></a></span><div class="tip">Instance overrides</div>
+<span class="prev"><a href="PrefabInstanceOverrides.html"></a></span><div class="tip">实例覆盖</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="NestedPrefabs.html"></a></span><div class="tip">Nested Prefabs</div>
+<span class="next"><a href="NestedPrefabs.html"></a></span><div class="tip">嵌套预制件</div>
 </div>
 </div>
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2019.1</div>
 <div class="menu">
-<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>
 </div>
 <div></div>

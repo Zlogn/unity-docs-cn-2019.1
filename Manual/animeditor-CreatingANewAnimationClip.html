@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="no-js">
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,11 +10,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="创建新动画剪辑 - Unity Manual">
-<title>创建新动画剪辑 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/AnimationEditorNewClip.png">
-<meta name="description" content="要在 Unity 中对游戏对象进行动画化，对象需要附加 Animator 组件 (Animator Component)。此 Animator 组件必须引用 Animator Controller__，后者进一步包含对一个或多个__动画剪辑 (Animation Clips) 的引用。">
-<meta property="og:description" content="要在 Unity 中对游戏对象进行动画化，对象需要附加 Animator 组件 (Animator Component)。此 Animator 组件必须引用 Animator Controller__，后者进一步包含对一个或多个__动画剪辑 (Animation Clips) 的引用。">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Creating a new Animation Clip - Unity 手册">
+<title>Creating a new Animation Clip - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.1/uploads/Main/AnimationEditorNewClip.png">
+<meta name="description" content="To create a new Animation Clip, select a GameObject in your Scene, and open the Animation Window (top menu:) Window &gt; Animation &gt; Animation.">
+<meta property="og:description" content="To create a new Animation Clip, select a GameObject in your Scene, and open the Animation Window (top menu:) Window &gt; Animation &gt; Animation.">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -28,13 +29,20 @@
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
 <script>
       var docs_type = 'Manual';
-      var lang = 'zh_CN';
+      var lang = 'cn';
       var page = 'animeditor-CreatingANewAnimationClip';
       if(!page) page = 'index';
       var version = '2019.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2020.1',version_string: '2020.1'},{version: '2019.3',version_string: '2019.3'},{version: '2019.2',version_string: '2019.2'},{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.1/Manual/animeditor-CreatingANewAnimationClip.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.1/Manual/animeditor-CreatingANewAnimationClip.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.1/Manual/animeditor-CreatingANewAnimationClip.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.1/Manual/animeditor-CreatingANewAnimationClip.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.1/Manual/animeditor-CreatingANewAnimationClip.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.1/Manual/animeditor-CreatingANewAnimationClip.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.1/Documentation/Manual/animeditor-CreatingANewAnimationClip.html" hreflang="x-default">
 </head>
 <body>
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -44,11 +52,11 @@
 <div id="nav-open" for="nav-input"><span></span></div>
 <div class="logo"><a href="https://docs.unity3d.com"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
-<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
 <ul class="menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 </div></div>
 <div class="more">
@@ -68,25 +76,28 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/animeditor-CreatingANewAnimationClip.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/animeditor-CreatingANewAnimationClip.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/animeditor-CreatingANewAnimationClip.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/animeditor-CreatingANewAnimationClip.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/animeditor-CreatingANewAnimationClip.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/animeditor-CreatingANewAnimationClip.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/animeditor-CreatingANewAnimationClip.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/animeditor-CreatingANewAnimationClip.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/animeditor-CreatingANewAnimationClip.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/animeditor-CreatingANewAnimationClip.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/animeditor-CreatingANewAnimationClip.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/animeditor-CreatingANewAnimationClip.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/animeditor-CreatingANewAnimationClip.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/animeditor-CreatingANewAnimationClip.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/animeditor-CreatingANewAnimationClip.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/animeditor-CreatingANewAnimationClip.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/animeditor-CreatingANewAnimationClip.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/animeditor-CreatingANewAnimationClip.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/animeditor-CreatingANewAnimationClip.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/animeditor-CreatingANewAnimationClip.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/animeditor-CreatingANewAnimationClip.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/animeditor-CreatingANewAnimationClip.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/animeditor-CreatingANewAnimationClip.html">5.6</a></li>
 </ul></div>
 </div>
 <ul class="nav-menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 <div class="lang-switcher">
 <div class="current toggle" data-target=".lang-list">
-<div class="lbl">Language:
+<div class="lbl">语言:
         <span class="b">中文</span>
 </div>
 <div class="arrow"></div>
@@ -96,13 +107,14 @@
 <li><a data-lang="ja" href="/ja/2019.1/Manual/animeditor-CreatingANewAnimationClip.html">日本語</a></li>
 <li><a data-lang="es" href="/es/2019.1/Manual/animeditor-CreatingANewAnimationClip.html">Español</a></li>
 <li><a data-lang="kr" href="/kr/2019.1/Manual/animeditor-CreatingANewAnimationClip.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.1/Manual/animeditor-CreatingANewAnimationClip.html">Русский</a></li>
 </ul></div>
 </div>
 </div></div>
 </div>
 <div id="master-wrapper" class="master-wrapper clear">
 <div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
-<h2>Manual</h2>
+<h2>手册</h2>
 <div class="version-switcher">
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
@@ -112,16 +124,19 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/animeditor-CreatingANewAnimationClip.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/animeditor-CreatingANewAnimationClip.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/animeditor-CreatingANewAnimationClip.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/animeditor-CreatingANewAnimationClip.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/animeditor-CreatingANewAnimationClip.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/animeditor-CreatingANewAnimationClip.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/animeditor-CreatingANewAnimationClip.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/animeditor-CreatingANewAnimationClip.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/animeditor-CreatingANewAnimationClip.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/animeditor-CreatingANewAnimationClip.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/animeditor-CreatingANewAnimationClip.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/animeditor-CreatingANewAnimationClip.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/animeditor-CreatingANewAnimationClip.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/animeditor-CreatingANewAnimationClip.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/animeditor-CreatingANewAnimationClip.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/animeditor-CreatingANewAnimationClip.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/animeditor-CreatingANewAnimationClip.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/animeditor-CreatingANewAnimationClip.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/animeditor-CreatingANewAnimationClip.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/animeditor-CreatingANewAnimationClip.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/animeditor-CreatingANewAnimationClip.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/animeditor-CreatingANewAnimationClip.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/animeditor-CreatingANewAnimationClip.html">5.6</a></li>
 </ul></div>
 </div>
 <div class="clear"></div>
@@ -133,7 +148,7 @@
 <li><a href="AnimationSection.html">动画</a></li>
 <li><a href="AnimationClips.html">动画剪辑</a></li>
 <li><a href="AnimationEditorGuide.html">Animation 窗口指南</a></li>
-<li>创建新动画剪辑</li>
+<li>Creating a new Animation Clip</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
@@ -143,89 +158,78 @@
 <span class="next"><a href="animeditor-AnimatingAGameObject.html"></a></span><div class="tip">动画化游戏对象</div>
 </div>
 </div></div>
-<h1>创建新动画剪辑</h1>
+<h1>Creating a new Animation Clip</h1>
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>要在 Unity 中对游戏对象进行动画化，对象需要附加 <strong>Animator 组件 (Animator Component)</strong>。此 Animator 组件必须引用 <strong>Animator Controller__，后者进一步包含对一个或多个__动画剪辑 (Animation Clips)</strong> 的引用。</p>
+<p>To create a new <strong>Animation Clip</strong>, select a GameObject in your Scene, and open the <strong>Animation Window</strong> (top menu:) <strong>Window</strong> &gt; <strong>Animation</strong> &gt; <strong>Animation</strong>.</p>
 
-<p>使用 Animation 视图开始在 Unity 中对游戏对象进行动画化时，系统将自动为您创建、附加和设置所有这些项。</p>
+<p>If the GameObject does not yet have any Animation Clips assigned, the “Create” button appears in the centre of the Animation Window timeline area (see <em>Fig 1: Create a new Animation Clip</em>).</p>
 
-<p>为选定游戏对象创建新的__动画剪辑__，并确保 __Animation 窗口__可见。</p>
-
-<p>如果游戏对象尚未分配任何动画剪辑，您将在 Animation 窗口时间轴区域的中心位置看到“Create”按钮。单击 Create 按钮。然后，系统会提示您将新的空动画剪辑保存在 <strong>Assets</strong> 文件夹中的某个位置。</p>
+<p>Click the <strong>Create</strong> button. Unity prompts you to save your new empty Animation Clip in your <strong>Assets</strong> folder. </p>
 
 <figure>
-<img src="../uploads/Main/AnimationEditorNewClip.png" alt="创建新动画剪辑">
-<figcaption>创建新动画剪辑</figcaption>
+<img src="../uploads/Main/AnimationEditorNewClip.png" alt="Fig 1: Create a new Animation Clip">
+<figcaption>Fig 1: Create a new Animation Clip</figcaption>
 </figure>
 
-<p>保存这个新的空动画剪辑后，系统会自动执行以下若干操作：</p>
+<p>When you save this new empty Animation Clip, Unity does the following:</p>
 
 <ul>
-<li>创建新的 Animator Controller 资源</li>
-<li>创建的新剪辑将以默认状态添加到Animator Controller中</li>
-<li>Animator组件将添加到要动画化的游戏对象</li>
-<li>为Animator组件分配新的Animator Controller</li>
+<li>Creates a new Animator Controller Asset</li>
+<li>Adds the new clip into the Animator Controller as the default state</li>
+<li>Adds an Animator Component to the GameObject that you are applying animation to</li>
+<li>Assigns the new Animator Controller to the Animator Component</li>
 </ul>
 
-<p>此自动操作序列的结果已为您设置好动画系统所有必需的元素，因此您现在可以开始动画化对象。</p>
+<p>All the required elements of the animation system are now set up, and you can begin animating the GameObject.</p>
 
 <h2>添加另一动画剪辑</h2>
 
-<p>如果已经为游戏对象分配一个或多个动画剪辑，“Create”按钮将不可见。此情况下，这些剪辑的其中之一将在 Animation 窗口中可见。您可以使用 Animation 窗口左上角的菜单（就在播放控件下方）来切换窗口中可见的动画剪辑。</p>
+<p>If the GameObject already has one or more Animation Clips assigned, the “Create” button is not visible. Instead, one of the existing clips is visible in the Animation window. To switch between Animation Clips, use the menu in the top-left of the Animation window, under the playback controls (see <em>Fig 2: Adding more Animation Clips</em>).</p>
 
-<p>如果要在已具有动画的对象上创建新的动画剪辑，必须从此菜单中选择“Create New Clip”。系统将再次提示您保存新的空动画剪辑，然后才可以使用该动画剪辑。</p>
+<p>To create a new Animation Clip on a GameObject that has existing animations, select <strong>Create New Clip</strong> from this menu. Again, Unity prompts you to save your new empty Animation Clip before you can work on it.</p>
 
 <figure>
-<img src="../uploads/Main/AnimationEditorNewClipMenu.png" alt="在已分配了一些剪辑的对象上额外添加新的动画剪辑">
-<figcaption>在已分配了一些剪辑的对象上额外添加新的动画剪辑</figcaption>
+<img src="../uploads/Main/AnimationEditorNewClipMenu.png" alt="Fig 2: Adding more Animation Clips">
+<figcaption>Fig 2: Adding more Animation Clips</figcaption>
 </figure>
 
 <h2>如何整合到一起</h2>
 
-<p>虽然上述步骤会自动设置相关组件和引用，但了解哪些部件必须连接在一起会很有用。</p>
+<p>The above steps automatically set up the relevant components and references. However, it is useful to understand how the pieces connect.</p>
 
 <ul>
 <li>游戏对象必须有__Animator__组件</li>
-<li>必须为Animator组件分配__Animator Controller__资源</li>
+<li>The Animator component must have an <strong>Animator Controller</strong> Asset assigned</li>
 <li>必须为Animator Controller资源分配一个或多个动画剪辑</li>
 </ul>
 
-<p>下图以 Animation 窗口中创建新动画剪辑为起点，展示了如何分配这些部件：</p>
+<p>The diagram below shows how Unity assigns these pieces, starting from the new Animation Clip in the Animation Window (see <em>Fig 3: Animation Clip Diagram</em>).</p>
 
 <figure>
-<img src="../uploads/Main/AnimationNewClipAutoSetup.png" alt="创建一个新剪辑并将其另存为资源。该剪辑以默认状态自动添加到新的Animator Controller（也另存为资源）。将Animator Controller分配给Animator组件，再将该组件添加到游戏对象。">
-<figcaption>创建一个新剪辑并将其另存为资源。该剪辑以默认状态自动添加到新的Animator Controller（也另存为资源）。将Animator Controller分配给Animator组件，再将该组件添加到游戏对象。</figcaption>
+<img src="../uploads/Main/AnimationNewClipAutoSetup.png" alt="Fig 3: Animation Clip Diagram. ">
+<figcaption>Fig 3: Animation Clip Diagram. </figcaption>
 </figure>
 
-<p>在下图中，您可以看到一个尚未动画化的游戏对象（“Cube”）被选中。当前，我们只有一个不带Animator组件的简单立方体。为清晰起见，Animation、Hierarchy、Project 和 Inspector 窗口以并排方式排列。</p>
-
-<figure>
-<img src="../uploads/Main/AnimationEditorNewAnimationBefore.png" alt="在此之前：已选择未动画化的游戏对象（Cube）。该对象尚无Animator组件，也不存在Animator Controller。">
-<figcaption>在此之前：已选择未动画化的游戏对象（“Cube”）。该对象尚无Animator组件，也不存在Animator Controller。</figcaption>
-</figure>
-
-<p>通过按下 Animation 视图中的 Create 按钮创建新的动画剪辑。Unity 将要求选择名称和位置来保存这个新的动画剪辑。Unity 还会创建一个与所选游戏对象同名的Animator Controller资源，将Animator组件添加到游戏对象，并适当地连接资源。</p>
-
-<figure>
-<img src="../uploads/Main/AnimationEditorNewAnimationAdded.png" alt="之后：创建新剪辑后，您可以看到 Project 窗口中创建了新资源，并且 Inspector 窗口中分配了 Animator 组件（最右侧）。此外，还可以在 Animator 窗口中看到以默认状态分配的新剪辑">
-<figcaption>之后：创建新剪辑后，您可以看到 Project 窗口中创建了新资源，并且 Inspector 窗口中分配了 Animator 组件（最右侧）。此外，还可以在 Animator 窗口中看到以默认状态分配的新剪辑</figcaption>
-</figure>
-
-<p>在以上新视图中，您可以看到：</p>
+<p>After you create a new Animation Clip, you can now see:</p>
 
 <ul>
-<li>Animation 窗口（左上角）现在显示带有白色回放头线的时间轴，表明已准备好录制新的关键帧。该剪辑的名称显示在剪辑菜单中，位于回放控件下方。</li>
-<li>Inspector（中心位置）显示 Cube 游戏对象现在已添加__Animator组件__，该组件的“Controller”字段显示已分配一个名为“Cube”的Animator Controller资源</li>
-<li>Project 窗口（右下角）显示已创建两个新资源：一个名为“Cube”的Animator Controller资源和一个名为“Cube Animation Clip”的动画剪辑资源</li>
-<li>Animator 窗口（左下角）显示Animator Controller的内容：您可以看到 Cube Animation Clip 已添加到控制器，并处于“默认状态”（以橙色指示）。添加到控制器的后续剪辑将呈灰色，表示它们不是默认状态。</li>
+<li>The Animation Window (top left) shows a timeline with a white playback head line, ready to record new keyframes. The clip’s name is visible in the clip menu, just below the playback controls.</li>
+<li>The Inspector (center) shows that the “Cube” GameObject has an <strong>Animator Component</strong>, and the <strong>Controller</strong> field of the component shows that an Animator Controller Asset called <strong>Cube</strong> is assigned to it.</li>
+<li>The Project Window (bottom right) shows that two new Assets have been created: an Animator Controller asset called <strong>Cube</strong> and an Animation Clip Asset called <strong>Cube Animation Clip</strong>.</li>
+<li>The Animator Window (bottom left) shows the contents of the Animator Controller: there is a <strong>Cube Animation Clip</strong> on the controller, and that it is in the default state (as indicated by the orange color). Subsequent clips you add to the controller have a grey color, indicating they are not the default state (see <em>Fig 4: New Animation Clip in the Project Window</em>).</li>
 </ul>
+
+<figure>
+<img src="../uploads/Main/AnimationEditorNewAnimationAdded.png" alt="Fig 4: New Animation Clip in the Project Window">
+<figcaption>Fig 4: New Animation Clip in the Project Window</figcaption>
+</figure>
 
 <hr>
 
 <ul>
-<li><span class="page-edit">2017–09–05 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><span class="page-edit">2017–09–05 页面已修订并只进行了有限的<a href="DocumentationEditorialReview.html">编辑审查</a>
 </span></li>
 </ul>
 <div class="nextprev clear">
@@ -239,9 +243,9 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2019.1</div>
 <div class="menu">
-<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>
 </div>
 <div></div>

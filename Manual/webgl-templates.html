@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="no-js">
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,11 +10,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="使用 WebGL 模板 - Unity Manual">
-<title>使用 WebGL 模板 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/WebGLTemplate1.png">
-<meta name="description" content="When you build a WebGL project, Unity embeds the player in an HTML page so that it can be played in the browser. The default page is a simple white page with a loading bar on a grey canvas. Alternatively, you can select a minimal template (with only the necessary boilerplate code to run the WebGL content) in the Player settings (menu: Edit &gt; Project Settings, then select the Player category).">
-<meta property="og:description" content="When you build a WebGL project, Unity embeds the player in an HTML page so that it can be played in the browser. The default page is a simple white page with a loading bar on a grey canvas. Alternatively, you can select a minimal template (with only the necessary boilerplate code to run the WebGL content) in the Player settings (menu: Edit &gt; Project Settings, then select the Player category).">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="使用 WebGL 模板 - Unity 手册">
+<title>使用 WebGL 模板 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.1/uploads/Main/WebGLTemplate1.png">
+<meta name="description" content="构建 WebGL 项目时，Unity 会将播放器嵌入到 HTML 页面中，以便能在浏览器中进行播放。默认页面是一个简单的白色页面，其中的灰色画布上有一个加载进度条。或者，可在 Player 设置（菜单：Edit &gt; Project Settings，然后选择 Player 类别）中选择最小模板（仅使用必要的样板代码来运行 WebGL 内容）。">
+<meta property="og:description" content="构建 WebGL 项目时，Unity 会将播放器嵌入到 HTML 页面中，以便能在浏览器中进行播放。默认页面是一个简单的白色页面，其中的灰色画布上有一个加载进度条。或者，可在 Player 设置（菜单：Edit &gt; Project Settings，然后选择 Player 类别）中选择最小模板（仅使用必要的样板代码来运行 WebGL 内容）。">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -28,13 +29,20 @@
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
 <script>
       var docs_type = 'Manual';
-      var lang = 'zh_CN';
+      var lang = 'cn';
       var page = 'webgl-templates';
       if(!page) page = 'index';
       var version = '2019.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2020.1',version_string: '2020.1'},{version: '2019.3',version_string: '2019.3'},{version: '2019.2',version_string: '2019.2'},{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.1/Manual/webgl-templates.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.1/Manual/webgl-templates.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.1/Manual/webgl-templates.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.1/Manual/webgl-templates.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.1/Manual/webgl-templates.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.1/Manual/webgl-templates.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.1/Documentation/Manual/webgl-templates.html" hreflang="x-default">
 </head>
 <body>
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -44,11 +52,11 @@
 <div id="nav-open" for="nav-input"><span></span></div>
 <div class="logo"><a href="https://docs.unity3d.com"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
-<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
 <ul class="menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 </div></div>
 <div class="more">
@@ -68,25 +76,28 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/webgl-templates.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/webgl-templates.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/webgl-templates.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/webgl-templates.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/webgl-templates.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/webgl-templates.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/webgl-templates.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/webgl-templates.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/webgl-templates.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/webgl-templates.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/webgl-templates.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/webgl-templates.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/webgl-templates.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/webgl-templates.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/webgl-templates.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/webgl-templates.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/webgl-templates.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/webgl-templates.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/webgl-templates.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/webgl-templates.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/webgl-templates.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/webgl-templates.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/webgl-templates.html">5.6</a></li>
 </ul></div>
 </div>
 <ul class="nav-menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 <div class="lang-switcher">
 <div class="current toggle" data-target=".lang-list">
-<div class="lbl">Language:
+<div class="lbl">语言:
         <span class="b">中文</span>
 </div>
 <div class="arrow"></div>
@@ -96,13 +107,14 @@
 <li><a data-lang="ja" href="/ja/2019.1/Manual/webgl-templates.html">日本語</a></li>
 <li><a data-lang="es" href="/es/2019.1/Manual/webgl-templates.html">Español</a></li>
 <li><a data-lang="kr" href="/kr/2019.1/Manual/webgl-templates.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.1/Manual/webgl-templates.html">Русский</a></li>
 </ul></div>
 </div>
 </div></div>
 </div>
 <div id="master-wrapper" class="master-wrapper clear">
 <div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
-<h2>Manual</h2>
+<h2>手册</h2>
 <div class="version-switcher">
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
@@ -112,16 +124,19 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/webgl-templates.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/webgl-templates.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/webgl-templates.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/webgl-templates.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/webgl-templates.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/webgl-templates.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/webgl-templates.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/webgl-templates.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/webgl-templates.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/webgl-templates.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/webgl-templates.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/webgl-templates.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/webgl-templates.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/webgl-templates.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/webgl-templates.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/webgl-templates.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/webgl-templates.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/webgl-templates.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/webgl-templates.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/webgl-templates.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/webgl-templates.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/webgl-templates.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/webgl-templates.html">5.6</a></li>
 </ul></div>
 </div>
 <div class="clear"></div>
@@ -147,13 +162,13 @@
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>When you build a WebGL project, Unity embeds the player in an HTML page so that it can be played in the browser. The default page is a simple white page with a loading bar on a grey canvas. Alternatively, you can select a minimal template (with only the necessary boilerplate code to run the WebGL content) in the <strong>Player</strong> settings (menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Player</strong> category).</p>
+<p>构建 WebGL 项目时，Unity 会将播放器嵌入到 HTML 页面中，以便能在浏览器中进行播放。默认页面是一个简单的白色页面，其中的灰色画布上有一个加载进度条。或者，可在 <strong>Player</strong> 设置（菜单：<strong>Edit</strong> &gt; <strong>Project Settings</strong>，然后选择 <strong>Player</strong> 类别）中选择最小模板（仅使用必要的样板代码来运行 WebGL 内容）。</p>
 
 <figure>
 <img src="../uploads/Main/WebGLTemplate1.png" alt="">
 </figure>
 
-<p>The built-in HTML pages are fine for testing and demonstrating a minimal Player, but for production purposes, it is often good to see the Player hosted in the page where it will eventually be deployed. For example, if the Unity content interacts with other elements in the page via the external call interface then it must be tested with a page that provides those interacting elements. Unity allows you to supply your own pages to host the Player by using <strong>WebGL templates</strong>.</p>
+<p>内置的 HTML 页面适合用于测试和演示最小的播放器，但若是为了生产目的，通常希望播放器托管在最终要部署到的页面中。例如，如果 Unity 内容通过外部调用接口与页面中的其他元素交互，则必须使用提供这些交互元素的页面对其进行测试。Unity 允许使用 __WebGL 模板__提供您自己的页面来托管播放器。</p>
 
 <h2>WebGL 模板的结构</h2>
 
@@ -163,7 +178,7 @@
 <img src="../uploads/Main/WebGLTemplate2.png" alt="">
 </figure>
 
-<p>Once created, the template appears among the options on the <strong>Player</strong> settings. The name of the template is the same as its folder. Optionally, the folder can contain a file named <em>thumbnail.png</em>, which should have dimensions of 128x128 pixels. The thumbnail image is displayed in the inspector to hint at what the finished page will look like.</p>
+<p>创建模板后，该模板会显示在 <strong>Player</strong> 设置窗口上的选项中。模板的名称与其文件夹相同。（可选）文件夹可包含名为 <em>thumbnail.png</em> 的文件，其尺寸应为 128x128 像素。该缩略图会显示在 Inspector 中，用于提示完成的页面的外观。</p>
 
 <p>该 html 文件至少需要包含以下元素：</p>
 
@@ -210,7 +225,7 @@
 
 <p>在构建过程中，Unity 会在页面文本中查找特殊标签字符串，并将这些字符串替换为 Editor 提供的值。这些字符串包括名称、屏幕尺寸以及有关播放器的其他有用信息。</p>
 
-<p>Tags are delimited by percent signs (%) in the page source. For example, if the product name is defined as <strong>MyPlayer</strong> in the <strong>Player</strong> settings:</p>
+<p>标签由页面源代码中的百分号 (%) 分隔。例如，如果产品名称在 <strong>Player</strong> 设置中定义为 __MyPlayer__，则模板的索引文件中的</p>
 
 <p><code>&lt;title&gt;%UNITY_WEB_NAME%&lt;/title&gt;</code></p>
 
@@ -218,14 +233,14 @@
 
 <p><code>&lt;title&gt;MyPlayer&lt;/title&gt;</code></p>
 
-<p>…in the host page generated for the build. The complete set of tags is given below:</p>
+<p>进行替换。完整的标签集如下：</p>
 
 <ul>
 <li><p>__UNITY_WEB_NAME__：播放器的名称。</p></li>
 <li><p>__UNITY_WEBGL_LOADER_URL__：UnityLoader.js 脚本的 URL，该脚本用于执行构建的实例化。</p></li>
 <li><p>__UNITY_WEBGL_BUILD_URL__：JSON 文件的 URL，该文件包含有关构建的所有必要信息。</p></li>
 <li><p><strong>UNITY_WIDTH</strong> 和 __UNITY_HEIGHT__：播放器的屏幕宽度和高度（以像素为单位）。</p></li>
-<li><p><strong>UNITY_CUSTOM_SOME_TAG</strong>: If you add a tag to the index file in the form <code>UNITY_CUSTOM_XXX</code>, then this tag will appear in the <strong>Player</strong> settings when your template is selected. For example, if you add <code>&amp;lt;title&amp;gt;Unity Player | %UNITY_CUSTOM_MYTAG%&amp;lt;/title&amp;gt;</code> to the source, the Player settings look like this:</p></li>
+<li><p>__UNITY_CUSTOM_SOME_TAG__：如果以 <code>UNITY_CUSTOM_XXX</code> 的形式向索引文件添加一个标签，则在选择模板后，此标签将显示在 <strong>Player</strong> 设置中。例如，如果向源代码添加 <code>&amp;amp;lt;title&amp;gt;Unity Player | %UNITY_CUSTOM_MYTAG%&amp;lt;/title&amp;gt;</code>，Player 设置将如下所示：</p></li>
 </ul>
 
 <figure>
@@ -307,7 +322,7 @@
 <hr>
 
 <ul>
-<li><p><span class="page-edit">2018–10–18 Page amended with no <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><p><span class="page-edit">2018–10–18 页面已修订但未经<a href="DocumentationEditorialReview.html">编辑审查</a>
 </span></p></li>
 <li><p><span class="page-history">5.6 版更新</span></p></li>
 <li><p><span class="page-history">WebGL instance renamed from <code>gameInstance</code> to <code>unityInstance</code> in <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/30_search.html?q=newin20191">2019.1</a> <span class="search-words">NewIn20191</span></span></p></li>
@@ -323,9 +338,9 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2019.1</div>
 <div class="menu">
-<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>
 </div>
 <div></div>

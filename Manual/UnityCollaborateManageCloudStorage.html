@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="no-js">
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,10 +10,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="Managing cloud storage - Unity Manual">
-<title>Managing cloud storage - Unity Manual</title>
-<meta name="description" content="The Collaborate service uses cloud storage to backup your entire Project in the cloud and make it accessible anywhere.">
-<meta property="og:description" content="The Collaborate service uses cloud storage to backup your entire Project in the cloud and make it accessible anywhere.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="管理云存储 - Unity 手册">
+<title>管理云存储 - Unity 手册</title>
+<meta name="description" content="Collaborate 服务使用云存储在云端备份整个项目，使其可在任何地方访问。">
+<meta property="og:description" content="Collaborate 服务使用云存储在云端备份整个项目，使其可在任何地方访问。">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -27,13 +28,20 @@
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
 <script>
       var docs_type = 'Manual';
-      var lang = 'zh_CN';
+      var lang = 'cn';
       var page = 'UnityCollaborateManageCloudStorage';
       if(!page) page = 'index';
       var version = '2019.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2020.1',version_string: '2020.1'},{version: '2019.3',version_string: '2019.3'},{version: '2019.2',version_string: '2019.2'},{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.1/Manual/UnityCollaborateManageCloudStorage.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.1/Manual/UnityCollaborateManageCloudStorage.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.1/Manual/UnityCollaborateManageCloudStorage.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.1/Manual/UnityCollaborateManageCloudStorage.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.1/Manual/UnityCollaborateManageCloudStorage.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.1/Manual/UnityCollaborateManageCloudStorage.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.1/Documentation/Manual/UnityCollaborateManageCloudStorage.html" hreflang="x-default">
 </head>
 <body>
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -43,11 +51,11 @@
 <div id="nav-open" for="nav-input"><span></span></div>
 <div class="logo"><a href="https://docs.unity3d.com"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
-<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
 <ul class="menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 </div></div>
 <div class="more">
@@ -67,25 +75,28 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityCollaborateManageCloudStorage.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityCollaborateManageCloudStorage.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityCollaborateManageCloudStorage.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityCollaborateManageCloudStorage.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityCollaborateManageCloudStorage.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityCollaborateManageCloudStorage.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityCollaborateManageCloudStorage.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityCollaborateManageCloudStorage.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityCollaborateManageCloudStorage.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityCollaborateManageCloudStorage.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UnityCollaborateManageCloudStorage.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UnityCollaborateManageCloudStorage.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UnityCollaborateManageCloudStorage.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UnityCollaborateManageCloudStorage.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UnityCollaborateManageCloudStorage.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UnityCollaborateManageCloudStorage.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UnityCollaborateManageCloudStorage.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UnityCollaborateManageCloudStorage.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UnityCollaborateManageCloudStorage.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UnityCollaborateManageCloudStorage.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UnityCollaborateManageCloudStorage.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UnityCollaborateManageCloudStorage.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/UnityCollaborateManageCloudStorage.html">5.6</a></li>
 </ul></div>
 </div>
 <ul class="nav-menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 <div class="lang-switcher">
 <div class="current toggle" data-target=".lang-list">
-<div class="lbl">Language:
+<div class="lbl">语言:
         <span class="b">中文</span>
 </div>
 <div class="arrow"></div>
@@ -95,13 +106,14 @@
 <li><a data-lang="ja" href="/ja/2019.1/Manual/UnityCollaborateManageCloudStorage.html">日本語</a></li>
 <li><a data-lang="es" href="/es/2019.1/Manual/UnityCollaborateManageCloudStorage.html">Español</a></li>
 <li><a data-lang="kr" href="/kr/2019.1/Manual/UnityCollaborateManageCloudStorage.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.1/Manual/UnityCollaborateManageCloudStorage.html">Русский</a></li>
 </ul></div>
 </div>
 </div></div>
 </div>
 <div id="master-wrapper" class="master-wrapper clear">
 <div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
-<h2>Manual</h2>
+<h2>手册</h2>
 <div class="version-switcher">
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
@@ -111,16 +123,19 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityCollaborateManageCloudStorage.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityCollaborateManageCloudStorage.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityCollaborateManageCloudStorage.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityCollaborateManageCloudStorage.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityCollaborateManageCloudStorage.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityCollaborateManageCloudStorage.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityCollaborateManageCloudStorage.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityCollaborateManageCloudStorage.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityCollaborateManageCloudStorage.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityCollaborateManageCloudStorage.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UnityCollaborateManageCloudStorage.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UnityCollaborateManageCloudStorage.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UnityCollaborateManageCloudStorage.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UnityCollaborateManageCloudStorage.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UnityCollaborateManageCloudStorage.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UnityCollaborateManageCloudStorage.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UnityCollaborateManageCloudStorage.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UnityCollaborateManageCloudStorage.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UnityCollaborateManageCloudStorage.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UnityCollaborateManageCloudStorage.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UnityCollaborateManageCloudStorage.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UnityCollaborateManageCloudStorage.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/UnityCollaborateManageCloudStorage.html">5.6</a></li>
 </ul></div>
 </div>
 <div class="clear"></div>
@@ -131,190 +146,176 @@
 <li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
 <li><a href="UnityServices.html">Unity 服务</a></li>
 <li><a href="UnityCollaborate.html">Unity Collaborate</a></li>
-<li>Managing cloud storage</li>
+<li>管理云存储</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
 <span class="prev"><a href="CollaborateInProgress.html"></a></span><div class="tip">进行中 (In-Progress) 编辑通知</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="UnityCollaborateExportProject.html"></a></span><div class="tip">Moving your Project to another version control system</div>
+<span class="next"><a href="UnityCollaborateExportProject.html"></a></span><div class="tip">将项目移动到另一个版本控制系统</div>
 </div>
 </div></div>
-<h1>Managing cloud storage</h1>
+<h1>管理云存储</h1>
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>The Collaborate service uses cloud storage to backup your entire Project in the cloud and make it accessible anywhere.</p>
+<p>Collaborate 服务使用云存储在云端备份整个项目，使其可在任何地方访问。</p>
 
 <p>本主题介绍：</p>
 
 <ul>
-<li><a href="#howmuchstorage">Determining how much storage your Projects are using</a></li>
-<li><a href="#addingstorage">Adding more storage</a></li>
-<li><a href="#retention">Cloud storage data retention</a></li>
-<li><a href="#archivingprojects">Archiving Projects</a></li>
-<li><a href="#archiveforcollab">Archiving Projects for Collaborate</a></li>
+<li><a href="#howmuchstorage">确定项目当前使用的存储空间</a></li>
+<li><a href="#addingstorage">添加更多存储空间</a></li>
+<li><a href="#retention">云存储数据保留</a></li>
+<li><a href="#archivingprojects">将项目存档</a></li>
+<li><a href="#archiveforcollab">为 Collaborate 存档项目</a></li>
 </ul>
 
 <p><a name="howmuchstorage"></a></p>
 
-<h2>Determining how much storage your Projects are using</h2>
+<h2>确定项目当前使用的存储空间</h2>
 
-<p>Cloud storage is calculated on a per Organization basis. Unity calculates the amount of cloud storage that your Organization is using by summing the size of the latest versions of all your Organization’s Collaborate Projects. Only the latest version of your project counts towards your storage limit. Historical (non-head) versions of your Projects do not count towards cloud storage.</p>
+<p>云存储是基于每个组织计算的。Unity 通过汇总组织的所有 Collaborate 项目的最新版本的大小来计算组织正在使用的云存储量。只有最新版本的项目会计入存储限制。项目的历史（无头）版本不计入云存储。</p>
 
-<p>To view your current storage usage:</p>
+<p>要查看当前的存储使用量，请执行以下操作：</p>
 
-<ol>
-<li>Sign into the <a href="https://developer.cloud.unity3d.com/">Unity Developer Dashboard</a>.</li>
-<li>Select a Project in the Organization whose storage you want to view.</li>
-<li>In the left navigation window, click <strong>Settings</strong>, then click <strong>Usage</strong>.</li>
-</ol>
+<p>1.登录 <a href="https://developer.cloud.unity3d.com/">Unity 开发者控制面板 (Developer Dashboard)</a>。
+2.在组织中选择要查看存储空间的项目。
+3.在左侧导航窗口中，单击 <strong>Settings__，然后单击 </strong>Usage__。</p>
 
-<p>In the main Project window there are tiles that show:</p>
+<p>在项目主窗口中会显示一些磁贴：</p>
 
 <ul>
 <li>
-<strong>Cloud storage</strong> - How much storage the current Project is using compared to the rest of the Projects in your Organization, and your entire cloud storage space.</li>
+<strong>Cloud storage</strong> - 当前项目与组织中其他项目相比使用的存储空间以及整个云存储空间。</li>
 <li>
-<strong>Percent of storage per project</strong> - How much storage is used by each Project in your Organization.</li>
+<strong>Percent of storage per project</strong> - 组织中每个项目使用的存储空间。</li>
 <li>
-<strong>Storage used by &lt;Project name&gt; over time</strong> - How much storage the current Project has used since it was created, until the current time.</li>
+<strong>Storage used by &lt;Project name&gt; over time</strong> - 当前项目自创建以来一直到当前时间使用的存储空间。</li>
 </ul>
 
 <p><a name="addingstorage"></a></p>
 
-<h2>Adding more storage</h2>
+<h2>添加更多存储空间</h2>
 
-<p>You can obtain more cloud storage in two ways: </p>
-
-<ul>
-<li>Upgrade to Unity Teams Advanced, which also provides 25GB of cloud storage.</li>
-<li>Purchase Storage Packs on the Unity ID dashboard. Each storage Pack adds 25GB of cloud storage to an Organization.</li>
-</ul>
-
-<p><strong>Upgrading to Unity Teams Advanced</strong></p>
-
-<p>To upgrade to Unity Teams Advanced, visit the Unity Teams page at <a href="https://unity3d.com/teams">unity3d.com/teams</a>. On the Unity Teams page you can learn more about the features of Unity Teams Advanced and then upgrade. </p>
-
-<p><strong>Purchase storage packs</strong></p>
-
-<p>To add storage packs:</p>
-
-<ol>
-<li>Sign in to the <a href="https://id.unity.com/">Unity ID</a> dashboard.
-2.在左侧导航栏中，单击 <strong>Organizations</strong>。</li>
-<li>In the main <strong>Organizations</strong> window, select an Organization.</li>
-<li>In the left navigation bar, click <strong>Service Usage</strong>.</li>
-<li>In the <strong>Usage overview</strong> window, click the <strong>Manage storage</strong> button.</li>
-<li>On the <strong>Add cloud storage</strong> dialog, select the amount of storage that you need, and then click the <strong>Continue to purchase</strong> button. If you have only one Organization, proceed to step 6.</li>
-<li>In the <strong>Checkout</strong> window, enter your payment information and then click <strong>Pay now</strong>.</li>
-</ol>
-
-<p><strong>Modifying your contracted amount of storage</strong></p>
-
-<ol>
-<li>Sign in to the <a href="https://id.unity.com/">Unity ID</a> dashboard.</li>
-<li>In the left navigation window, click <strong>Organizations</strong>.</li>
-<li>In the main <strong>Organizations</strong> window, select an Organization.</li>
-<li>In the left navigation bar, click <strong>Service Usage</strong>. The Service Usage window displays your contract period and the number of storage packs that you are contracted for.</li>
-<li>In the <strong>Usage overview</strong> window, click the <strong>Manage storage</strong> button.</li>
-<li>On the <strong>Add cloud storage</strong> tab, enter the number of storage packs to add.</li>
-<li>Click the <strong>Next</strong> button.</li>
-<li>In the <strong>Review order</strong> window, review the order information and then click the <strong>Confirm purchase</strong> button.</li>
-</ol>
-
-<p>You can reduce the number storage packs on the <strong>Manage subscription</strong> tab:</p>
+<p>您可以通过两种方式获得更多云存储：</p>
 
 <ul>
-<li>To remove all contracted storage packs, turn off <strong>Automatic Renewal</strong>. When automatic renewal is turned off, all storage packs are removed on the renewal date.</li>
-<li>To reduce the number of storage packs that are renewed, enter the number of storage packs to renew in the <strong>Select the number of storage packs you want to renew upon renewal</strong> field.</li>
+<li>升级到 Unity Teams Advanced，此版本也提供 25GB 的云存储。</li>
+<li>在 Unity ID 控制面板上购买存储包。每个存储包为组织增加 25GB 的云存储。</li>
 </ul>
 
-<p>Then click the <strong>Save</strong> button.</p>
+<p><strong>升级到 Unity Teams Advanced</strong></p>
+
+<p>要升级到 Unity Teams Advanced，请访问 Unity Teams 页面 <a href="https://unity3d.com/teams">unity3d.com/teams</a>。在 Unity Teams 页面上，可以了解有关 Unity Teams Advanced 功能的更多信息，然后进行升级。</p>
+
+<p><strong>购买存储包</strong></p>
+
+<p>要添加存储包，请执行以下操作：</p>
+
+<p>1.登录 <a href="https://id.unity.com/">Unity ID</a> 控制面板。
+2.在左侧导航栏中，单击 <strong>Organizations</strong>。
+3.在 <strong>Organizations</strong> 主窗口中，选择一个组织。
+4.在左侧导航栏中，单击 <strong>Service Usage</strong>。
+5.在 <strong>Usage overview</strong> 窗口中，单击 <strong>Manage storage</strong> 按钮。
+6.在 <strong>Add cloud storage</strong> 对话框中，选择所需的存储量，然后单击 <strong>Continue to purchase</strong> 按钮。如果只有一个组织，请继续执行步骤 6。
+7.在 <strong>Checkout</strong> 窗口中，输入付款信息，然后单击 <strong>Pay now</strong>。</p>
+
+<p><strong>修改您签约的存储量</strong></p>
+
+<p>1.登录 <a href="https://id.unity.com/">Unity ID</a> 控制面板。
+2.在左侧导航窗口中，单击 <strong>Organizations</strong>。
+3.在 <strong>Organizations</strong> 主窗口中，选择一个组织。
+4.在左侧导航栏中，单击 <strong>Service Usage</strong>。Service Usage 窗口会显示您的合同期限以及您签约的存储包数量。
+5.在 <strong>Usage overview</strong> 窗口中，单击 <strong>Manage storage</strong> 按钮。
+6.在 <strong>Add cloud storage</strong> 选项卡上，输入要添加的存储包数量。
+7.单击 <strong>Next</strong> 按钮。
+8.在 <strong>Review order</strong> 窗口中，查看订单信息，然后单击 <strong>Confirm purchase</strong> 按钮。</p>
+
+<p>可在 <strong>Manage subscription</strong> 选项卡上减少存储包数量：</p>
+
+<ul>
+<li>要删除所有签约的存储包，请关闭 <strong>Automatic Renewal</strong>。关闭自动续订后，将在续订日期删除所有存储包。</li>
+<li>要减少续订的存储包数量，请在 <strong>Select the number of storage packs you want to renew upon renewal</strong> 字段中输入要续订的存储包数量。</li>
+</ul>
+
+<p>然后，单击 <strong>Save</strong> 按钮。</p>
 
 <p><a name="retention"></a></p>
 
-<h2>Cloud storage data retention</h2>
+<h2>云存储数据保留</h2>
 
-<p>If you’re using Unity Teams Advanced, Unity does not delete any version history for your Projects.</p>
+<p>如果使用的是 Unity Teams Advanced，则 Unity 不会删除项目的任何版本历史记录。</p>
 
-<p>If you’re using Unity Teams Basic, Unity stores your data in cloud storage for at least 1 year. Unity reserves the right to delete Project history older than 1 year. You always have access to the latest version of your Project, but you only have access to the last 90 days of your version history. If you’re using Unity Teams Basic and want full access to the last 1 year of your history, you must upgrade to Unity Teams Advanced. When you upgrade to Unity Teams Advanced, you have access to your full history going forward.</p>
+<p>如果使用的是 Unity Teams Basic，Unity 会将您的数据存储在云存储中至少 1 年。Unity 保留删除超过 1 年的项目历史记录的权利。您始终可以访问最新版本的项目，但只能访问过去 90 天的版本历史记录。如果使用的是 Unity Teams Basic 并希望完整访问过去 1 年的历史记录，则必须升级到 Unity Teams Advanced。升级到 Unity Teams Advanced 后，就能访问完整的历史记录。</p>
 
-<h2>Reducing your cloud storage usage</h2>
+<h2>减少云存储使用量</h2>
 
-<p>You have three options to reduce your cloud storage usage:</p>
+<p>有三种方法可以减少云存储使用量：</p>
 
 <ul>
-<li>Delete or reduce the size of Assets in your Project. It is important to remember that Project history does not count toward your cloud storage usage.</li>
-<li>Archive unused Projects. See <a href="#archivingprojects">Archiving Projects</a>.</li>
-<li>Archive Projects for Collaborate only. Archiving a Project for Collaborate only allows you to free cloud storage space, while still being able to use other Unity services such as Ads, Analytics, and Performance Reporting. See <a href="#archiveforcollab">Archiving Projects for Collaborate</a>.</li>
+<li>删除项目中的资源或减小资源大小。请务必注意，项目历史记录不计入云存储使用量。</li>
+<li>将未使用的项目存档。请参阅<a href="#archivingprojects">将项目存档</a>。</li>
+<li>仅为 Collaborate 存档项目。仅为 Collaborate 存档项目可以释放云存储空间，同时仍然可以使用其他 Unity 服务，如 Ads、Analytics 和 Performance Reporting。请参阅<a href="#archiveforcollab">为 Collaborate 存档项目</a>。</li>
 </ul>
 
 <p><a name="archivingprojects"></a></p>
 
-<h2>Archiving Projects</h2>
+<h2>将项目存档</h2>
 
-<p>Archiving a Project automatically archives any Collaborate cloud storage associated with the Project and Unity services are no longer accessible.</p>
+<p>将项目存档会自动将与项目关联的任何 Collaborate 云存储进行存档，且不再可以访问 Unity 服务。</p>
 
-<p>To archive a Project:</p>
+<p>要对项目存档，请执行以下操作：</p>
 
-<ol>
-<li>Sign into the <a href="https://developer.cloud.unity3d.com/">Unity Developer Dashboard</a>.
-2.选择要存档的项目。</li>
-<li>In the left navigation bar, click <strong>Settings</strong>, then click <strong>General</strong>.</li>
-<li>At the bottom of the main window, read the important note and, if you are certain you want to archive the Project, click the <strong>Archive my Project for ALL Unity services</strong> button.</li>
-<li>In the <strong>Are you sure you want to archive this Project</strong> dialog, enter the name of the Project and then click the <strong>Yes, archive it</strong> button.</li>
-</ol>
+<p>1.登录 <a href="https://developer.cloud.unity3d.com/">Unity 开发者控制面板 (Developer Dashboard)</a>。
+2.选择要存档的项目。
+3.在左侧导航栏中，单击 <strong>Settings__，然后单击 </strong>General<strong>。
+4.在主窗口的底部，阅读重要说明，如果您确定要将项目存档，请单击 </strong>Archive my Project for ALL Unity services__ 按钮。
+5.在 <strong>Are you sure you want to archive this Project</strong> 对话框中，输入项目名称，然后单击 <strong>Yes, archive it</strong> 按钮。</p>
 
-<p>To unarchive a Project:</p>
+<p>要对项目取消存档，请执行以下操作：</p>
 
-<ol>
-<li>Sign into the <a href="https://developer.cloud.unity3d.com/">Unity Developer Dashboard</a>.</li>
-<li>At the top right of the main window, under the <strong>CREATE NEW PROJECT</strong> button, click the <strong>View Archived Projects</strong> link.</li>
-<li>Locate the Project to reactivate, click the vertical ellipsis to the right of the Project name and then select <strong>Unarchive Project</strong>.</li>
-</ol>
+<p>1.登录 <a href="https://developer.cloud.unity3d.com/">Unity 开发者控制面板 (Developer Dashboard)</a>。
+2.在主窗口右上角的 <strong>CREATE NEW PROJECT</strong> 按钮下，单击 <strong>View Archived Projects</strong> 链接。
+3.找到要重新激活的项目，单击项目名称右侧的垂直省略号，然后选择 <strong>Unarchive Project</strong>。</p>
 
 <p><a name="archiveforcollab"></a></p>
 
-<h2>Archiving Projects for Collaborate</h2>
+<h2>为 Collaborate 存档项目</h2>
 
-<p>To archive a Project for Collaborate only:</p>
+<p>要仅为 Collaborate 存档项目，请执行以下操作：</p>
 
-<ol>
-<li>Sign into the <a href="https://developer.cloud.unity3d.com/">Unity Developer Dashboard</a>.
-2.选择要存档的项目。</li>
-<li>In the left navigation window, click <strong>Collaborate</strong>, then click <strong>Storage</strong>.</li>
-<li>In the main window, click the <strong>ARCHIVE</strong> button.</li>
-</ol>
+<p>1.登录 <a href="https://developer.cloud.unity3d.com/">Unity 开发者控制面板 (Developer Dashboard)</a>。
+2.选择要存档的项目。
+3.在左侧导航窗口中，单击 <strong>Collaborate__，然后单击 </strong>Storage<strong>。
+4.在主窗口中，单击 </strong>ARCHIVE__ 按钮。</p>
 
-<p>To unarchive a Project for Collaborate:</p>
+<p>要为 Collaborate 取消项目存档，请执行以下操作：</p>
 
-<ol>
-<li>Sign into the <a href="https://developer.cloud.unity3d.com/">Unity Developer Dashboard</a>.</li>
-<li>Select the Project to unarchive.</li>
-<li>In the left navigation window, click <strong>Collaborate</strong>, then click <strong>Storage</strong>.</li>
-<li>In the main window, click the <strong>UNARCHIVE</strong> button.</li>
-</ol>
+<p>1.登录 <a href="https://developer.cloud.unity3d.com/">Unity 开发者控制面板 (Developer Dashboard)</a>。
+2.选择要取消存档的项目。
+3.在左侧导航窗口中，单击 <strong>Collaborate__，然后单击 </strong>Storage<strong>。
+4.在主窗口中，单击 </strong>UNARCHIVE__ 按钮。</p>
 
 <hr>
 
-<p><span class="page-edit">2018–07–16Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+<p><span class="page-edit">2018–07–16页面已发布并进行了<a href="DocumentationEditorialReview.html">编辑审查</a>
 </span></p>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
 <span class="prev"><a href="CollaborateInProgress.html"></a></span><div class="tip">进行中 (In-Progress) 编辑通知</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="UnityCollaborateExportProject.html"></a></span><div class="tip">Moving your Project to another version control system</div>
+<span class="next"><a href="UnityCollaborateExportProject.html"></a></span><div class="tip">将项目移动到另一个版本控制系统</div>
 </div>
 </div>
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2019.1</div>
 <div class="menu">
-<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>
 </div>
 <div></div>

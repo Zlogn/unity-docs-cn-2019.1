@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="no-js">
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,8 +10,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="优化 - Unity Manual">
-<title>优化 - Unity Manual</title>
+<meta name="robots" content="noindex">
+<meta property="og:title" content="优化 - Unity 手册">
+<title>优化 - Unity 手册</title>
 <meta name="description" content="就像在 PC 上一样，iOS 和 Android 等移动平台拥有各种性能水平的设备。可轻松找到比其他手机功能强大 10 倍的手机。
 非常简单的扩展方式：">
 <meta property="og:description" content="就像在 PC 上一样，iOS 和 Android 等移动平台拥有各种性能水平的设备。可轻松找到比其他手机功能强大 10 倍的手机。
@@ -29,13 +30,20 @@
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
 <script>
       var docs_type = 'Manual';
-      var lang = 'zh_CN';
+      var lang = 'cn';
       var page = 'MobileOptimisation';
       if(!page) page = 'index';
       var version = '2019.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2020.1',version_string: '2020.1'},{version: '2019.3',version_string: '2019.3'},{version: '2019.2',version_string: '2019.2'},{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.1/Manual/MobileOptimisation.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.1/Manual/MobileOptimisation.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.1/Manual/MobileOptimisation.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.1/Manual/MobileOptimisation.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.1/Manual/MobileOptimisation.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.1/Manual/MobileOptimisation.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.1/Documentation/Manual/MobileOptimisation.html" hreflang="x-default">
 </head>
 <body>
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -45,11 +53,11 @@
 <div id="nav-open" for="nav-input"><span></span></div>
 <div class="logo"><a href="https://docs.unity3d.com"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
-<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
 <ul class="menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 </div></div>
 <div class="more">
@@ -69,25 +77,28 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/MobileOptimisation.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/MobileOptimisation.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/MobileOptimisation.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/MobileOptimisation.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/MobileOptimisation.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/MobileOptimisation.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/MobileOptimisation.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/MobileOptimisation.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/MobileOptimisation.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/MobileOptimisation.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/MobileOptimisation.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/MobileOptimisation.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/MobileOptimisation.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/MobileOptimisation.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/MobileOptimisation.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/MobileOptimisation.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/MobileOptimisation.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/MobileOptimisation.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/MobileOptimisation.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/MobileOptimisation.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/MobileOptimisation.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/MobileOptimisation.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/MobileOptimisation.html">5.6</a></li>
 </ul></div>
 </div>
 <ul class="nav-menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 <div class="lang-switcher">
 <div class="current toggle" data-target=".lang-list">
-<div class="lbl">Language:
+<div class="lbl">语言:
         <span class="b">中文</span>
 </div>
 <div class="arrow"></div>
@@ -97,13 +108,14 @@
 <li><a data-lang="ja" href="/ja/2019.1/Manual/MobileOptimisation.html">日本語</a></li>
 <li><a data-lang="es" href="/es/2019.1/Manual/MobileOptimisation.html">Español</a></li>
 <li><a data-lang="kr" href="/kr/2019.1/Manual/MobileOptimisation.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.1/Manual/MobileOptimisation.html">Русский</a></li>
 </ul></div>
 </div>
 </div></div>
 </div>
 <div id="master-wrapper" class="master-wrapper clear">
 <div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
-<h2>Manual</h2>
+<h2>手册</h2>
 <div class="version-switcher">
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
@@ -113,16 +125,19 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/MobileOptimisation.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/MobileOptimisation.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/MobileOptimisation.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/MobileOptimisation.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/MobileOptimisation.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/MobileOptimisation.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/MobileOptimisation.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/MobileOptimisation.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/MobileOptimisation.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/MobileOptimisation.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/MobileOptimisation.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/MobileOptimisation.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/MobileOptimisation.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/MobileOptimisation.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/MobileOptimisation.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/MobileOptimisation.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/MobileOptimisation.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/MobileOptimisation.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/MobileOptimisation.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/MobileOptimisation.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/MobileOptimisation.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/MobileOptimisation.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/MobileOptimisation.html">5.6</a></li>
 </ul></div>
 </div>
 <div class="clear"></div>
@@ -165,7 +180,7 @@
 
 <p>在移动平台，本质上将受填充率限制（填充率 = 屏幕像素 * 着色器复杂度 * 过度绘制），而过于复杂的着色器是导致问题的最常见原因。因此，请使用 Unity 附带的移动端着色器，或设计您自己的着色器，但尽可能简化它们。如果可能，通过将代码移动到顶点着色器来简化像素着色器。</p>
 
-<p>If reducing the Texture Quality in <strong>Quality</strong> settings makes the game run faster, you are probably limited by memory bandwidth. So compress textures, use mipmaps, reduce texture size, etc.</p>
+<p>如果降低 <strong>Quality</strong> 设置中的纹理质量 (Texture Quality) 能提高游戏运行速度，表明可能受到内存带宽的限制。因此，应压缩纹理、使用 Mipmap、减小纹理大小等。</p>
 
 <p>LOD（细节级别）：将对象简化或在对象移动到更远位置时完全剔除它们。</p>
 
@@ -182,8 +197,8 @@
 1.如果使用纹理图集和共享材质，请用 <em>Renderer.sharedMaterial</em> 而不是 <em>Renderer.material</em>。
 1.前向渲染的像素光源的成本很高。
  * 尽可能使用光照贴图而不是实时光源。
- * Adjust pixel light count in <strong>Quality</strong> settings. Essentially only the directional light should be per pixel, everything else - per vertex. Certainly this depends on the game.
-1. Experiment with Render Mode of Lights in the <strong>Quality</strong> settings to get the correct priority.
+ * 调整 <strong>Quality</strong> 设置中的像素光源数。本质上只有方向光应该是每个像素光源，其他所有光源都应该是每顶点光源。当然这取决于游戏。
+1.尝试 <strong>Quality</strong> 设置中的光源渲染模式，以获取正确的优先级。
 1.除非确实有必要，否则避免使用镂空（Alpha 测试）着色器。
 1.保持透明（Alpha 混合）屏幕覆盖率最小化。
 1.尽量避免多个光源为给定对象提供光照的情况。
@@ -239,7 +254,7 @@
 
 <ul>
 <li>尽可能将 <em>Time.fixedDeltaTime_（在 Project settings &gt; Time 中）调整到允许的最大值。如果游戏的移动速度很慢，所需的固定更新可能少于具有快动作的游戏。快节奏的游戏需要更频繁的计算，因此 </em>fixedDeltaTime_ 将需要更低的值，否则碰撞可能失败。</li>
-<li>Physics.solverIterationCount (<a href="class-PhysicsManager.html">Physics</a> settings).</li>
+<li>Physics.solverIterationCount（<a href="class-PhysicsManager.html">Physics</a> 设置）。</li>
 <li>使用尽可能少的布料 (Cloth) 对象。</li>
 <li>仅在必要时才使用刚体。</li>
 <li>优先使用原始碰撞体而不是网格碰撞体。</li>
@@ -375,9 +390,9 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2019.1</div>
 <div class="menu">
-<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>
 </div>
 <div></div>

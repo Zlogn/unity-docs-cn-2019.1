@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="no-js">
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,11 +10,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="Single Pass Stereo rendering (Double-Wide rendering) - Unity Manual">
-<title>Single Pass Stereo rendering (Double-Wide rendering) - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/SinglePassStereoRendering1.gif">
-<meta name="description" content="Single Pass Stereo rendering is a feature for PC and Playstation 4-based VR applications. It renders both left and right eye images at the same time into one packed Render Texture that is twice the width of a single eye texture. Unity renders the Scene twice using 2 draw calls for each GameObject that has a Renderer component, however, it only iterates through the Scene graph once when rendering for both the left and right eyes. During Single Pass Stereo rendering, both eyes share the work required by culling and shadow computation. There are also fewer graphics command state change switches, because the GPU renders each GameObject in a ping pong fashion (alternates rendering of objects between eyes).">
-<meta property="og:description" content="Single Pass Stereo rendering is a feature for PC and Playstation 4-based VR applications. It renders both left and right eye images at the same time into one packed Render Texture that is twice the width of a single eye texture. Unity renders the Scene twice using 2 draw calls for each GameObject that has a Renderer component, however, it only iterates through the Scene graph once when rendering for both the left and right eyes. During Single Pass Stereo rendering, both eyes share the work required by culling and shadow computation. There are also fewer graphics command state change switches, because the GPU renders each GameObject in a ping pong fashion (alternates rendering of objects between eyes).">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="单通道立体渲染（双宽渲染） - Unity 手册">
+<title>单通道立体渲染（双宽渲染） - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.1/uploads/Main/SinglePassStereoRendering1.gif">
+<meta name="description" content="__单通道立体渲染__功能适合基于 PC 和 Playstation 4 的 VR 应用。该功能可将两只眼睛的图像同时渲染到同一个经打包的渲染纹理，该纹理的宽度是单眼纹理宽度的两倍。Unity 针对每个包含渲染器组件的游戏对象使用 2 个绘制调用，从而将场景渲染两次，但是当同时针对左眼和右眼渲染时，Unity 仅对场景图迭代一次。在单通道立体渲染期间，双眼共享剔除和阴影计算所需要的工作。图形命令状态更改切换也会减少，因为 GPU 以往返方式（在双眼之间交替渲染对象）渲染每个游戏对象。">
+<meta property="og:description" content="__单通道立体渲染__功能适合基于 PC 和 Playstation 4 的 VR 应用。该功能可将两只眼睛的图像同时渲染到同一个经打包的渲染纹理，该纹理的宽度是单眼纹理宽度的两倍。Unity 针对每个包含渲染器组件的游戏对象使用 2 个绘制调用，从而将场景渲染两次，但是当同时针对左眼和右眼渲染时，Unity 仅对场景图迭代一次。在单通道立体渲染期间，双眼共享剔除和阴影计算所需要的工作。图形命令状态更改切换也会减少，因为 GPU 以往返方式（在双眼之间交替渲染对象）渲染每个游戏对象。">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -28,13 +29,20 @@
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
 <script>
       var docs_type = 'Manual';
-      var lang = 'zh_CN';
+      var lang = 'cn';
       var page = 'SinglePassStereoRendering';
       if(!page) page = 'index';
       var version = '2019.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2020.1',version_string: '2020.1'},{version: '2019.3',version_string: '2019.3'},{version: '2019.2',version_string: '2019.2'},{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.1/Manual/SinglePassStereoRendering.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.1/Manual/SinglePassStereoRendering.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.1/Manual/SinglePassStereoRendering.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.1/Manual/SinglePassStereoRendering.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.1/Manual/SinglePassStereoRendering.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.1/Manual/SinglePassStereoRendering.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.1/Documentation/Manual/SinglePassStereoRendering.html" hreflang="x-default">
 </head>
 <body>
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -44,11 +52,11 @@
 <div id="nav-open" for="nav-input"><span></span></div>
 <div class="logo"><a href="https://docs.unity3d.com"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
-<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
 <ul class="menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 </div></div>
 <div class="more">
@@ -68,25 +76,28 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SinglePassStereoRendering.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SinglePassStereoRendering.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SinglePassStereoRendering.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SinglePassStereoRendering.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SinglePassStereoRendering.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SinglePassStereoRendering.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SinglePassStereoRendering.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SinglePassStereoRendering.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SinglePassStereoRendering.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SinglePassStereoRendering.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/SinglePassStereoRendering.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/SinglePassStereoRendering.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/SinglePassStereoRendering.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/SinglePassStereoRendering.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/SinglePassStereoRendering.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/SinglePassStereoRendering.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/SinglePassStereoRendering.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/SinglePassStereoRendering.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/SinglePassStereoRendering.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/SinglePassStereoRendering.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/SinglePassStereoRendering.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/SinglePassStereoRendering.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/SinglePassStereoRendering.html">5.6</a></li>
 </ul></div>
 </div>
 <ul class="nav-menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 <div class="lang-switcher">
 <div class="current toggle" data-target=".lang-list">
-<div class="lbl">Language:
+<div class="lbl">语言:
         <span class="b">中文</span>
 </div>
 <div class="arrow"></div>
@@ -96,13 +107,14 @@
 <li><a data-lang="ja" href="/ja/2019.1/Manual/SinglePassStereoRendering.html">日本語</a></li>
 <li><a data-lang="es" href="/es/2019.1/Manual/SinglePassStereoRendering.html">Español</a></li>
 <li><a data-lang="kr" href="/kr/2019.1/Manual/SinglePassStereoRendering.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.1/Manual/SinglePassStereoRendering.html">Русский</a></li>
 </ul></div>
 </div>
 </div></div>
 </div>
 <div id="master-wrapper" class="master-wrapper clear">
 <div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
-<h2>Manual</h2>
+<h2>手册</h2>
 <div class="version-switcher">
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
@@ -112,16 +124,19 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SinglePassStereoRendering.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SinglePassStereoRendering.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SinglePassStereoRendering.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SinglePassStereoRendering.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SinglePassStereoRendering.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SinglePassStereoRendering.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SinglePassStereoRendering.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SinglePassStereoRendering.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SinglePassStereoRendering.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SinglePassStereoRendering.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/SinglePassStereoRendering.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/SinglePassStereoRendering.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/SinglePassStereoRendering.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/SinglePassStereoRendering.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/SinglePassStereoRendering.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/SinglePassStereoRendering.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/SinglePassStereoRendering.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/SinglePassStereoRendering.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/SinglePassStereoRendering.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/SinglePassStereoRendering.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/SinglePassStereoRendering.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/SinglePassStereoRendering.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/SinglePassStereoRendering.html">5.6</a></li>
 </ul></div>
 </div>
 <div class="clear"></div>
@@ -131,7 +146,7 @@
 <div class="breadcrumbs clear"><ul>
 <li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
 <li><a href="XR.html">XR</a></li>
-<li>Single Pass Stereo rendering (Double-Wide rendering)</li>
+<li>单通道立体渲染（双宽渲染）</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
@@ -141,46 +156,46 @@
 <span class="next"><a href="SinglePassInstancing.html"></a></span><div class="tip">单通道实例化渲染</div>
 </div>
 </div></div>
-<h1>Single Pass Stereo rendering (Double-Wide rendering)</h1>
+<h1>单通道立体渲染（双宽渲染）</h1>
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p><strong>Single Pass Stereo rendering</strong> is a feature for PC and Playstation 4-based VR applications. It renders both left and right eye images at the same time into one packed Render Texture that is twice the width of a single eye texture. Unity renders the Scene twice using 2 draw calls for each GameObject that has a Renderer component, however, it only iterates through the Scene graph once when rendering for both the left and right eyes. During Single Pass Stereo rendering, both eyes share the work required by culling and shadow computation. There are also fewer graphics command state change switches, because the GPU renders each GameObject in a ping pong fashion (alternates rendering of objects between eyes).</p>
+<p>__单通道立体渲染__功能适合基于 PC 和 Playstation 4 的 VR 应用。该功能可将两只眼睛的图像同时渲染到同一个经打包的渲染纹理，该纹理的宽度是单眼纹理宽度的两倍。Unity 针对每个包含渲染器组件的游戏对象使用 2 个绘制调用，从而将场景渲染两次，但是当同时针对左眼和右眼渲染时，Unity 仅对场景图迭代一次。在单通道立体渲染期间，双眼共享剔除和阴影计算所需要的工作。图形命令状态更改切换也会减少，因为 GPU 以往返方式（在双眼之间交替渲染对象）渲染每个游戏对象。</p>
 
-<p>Single Pass Stereo rendering allows the GPU to share culling for both eyes. The GPU only needs to iterate through all the GameObjects in the Scene once for culling purposes, and then renders the GameObjects that survived the culling process. </p>
+<p>单通道立体渲染允许 GPU 针对双眼共享剔除。为了进行剔除，GPU 只需要对场景中的所有游戏对象迭代一次，然后渲染在剔除过程之后仍然存在的游戏对象。</p>
 
-<p>The comparison images below show the difference between normal VR rendering and Single Pass Stereo rendering.</p>
+<p>下面的比较图显示了普通 VR 渲染和单通道立体渲染之间的区别。</p>
 
-<p><strong>Normal VR rendering:</strong></p>
-
-<figure>
-<img src="../uploads/Main/SinglePassStereoRendering1.gif" alt="Left-eye image on the left, right-eye image on the right">
-<figcaption>Left-eye image on the left, right-eye image on the right</figcaption>
-</figure>
-
-<p><strong>Single-Pass Stereo VR rendering:</strong></p>
+<p><strong>普通 VR 渲染：</strong></p>
 
 <figure>
-<img src="../uploads/Main/SinglePassStereoRendering2.gif" alt="Left-eye and right-eye images packed together">
-<figcaption>Left-eye and right-eye images packed together</figcaption>
+<img src="../uploads/Main/SinglePassStereoRendering1.gif" alt="左侧是左眼图像；右侧是右眼图像">
+<figcaption>左侧是左眼图像；右侧是右眼图像</figcaption>
 </figure>
 
-<p>To enable this feature, open the <a href="class-PlayerSettings.html">Player</a> settings (menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Player</strong> category). Then navigate to the <strong>XR Settings</strong> panel, ensure the <strong>Virtual Reality Supported</strong> checkbox is ticked, and select the <strong>Single Pass</strong> option from the <strong>Stereo Rendering Method</strong> dropdown.</p>
+<p><strong>单通道立体 VR 渲染：</strong></p>
 
 <figure>
-<img src="../uploads/Main/SinglePassStereoRendering3.png" alt="Selecting Single Pass rendering from the Players XR Settings panel">
-<figcaption>Selecting Single Pass rendering from the Player’s XR Settings panel</figcaption>
+<img src="../uploads/Main/SinglePassStereoRendering2.gif" alt="左眼和右眼图像打包在一起">
+<figcaption>左眼和右眼图像打包在一起</figcaption>
 </figure>
 
-<p>Unity’s built-in rendering features and Standard Assets all support this feature. However, custom-built Shaders and Shaders downloaded from the Asset Store might need to be modified (for example, you might need to scale and offset screen space coordinates to access the appropriate half of the packed Render Texture) to add Single Pass Stereo rendering support.</p>
+<p>要启用此功能，请打开 <a href="class-PlayerSettings.html">Player</a> 设置（菜单：__Edit__ &gt; <strong>Project Settings__，然后选择 </strong>Player__ 类别）。然后，导航至 <strong>XR Settings</strong> 面板，确保勾选 <strong>Virtual Reality Supported</strong> 复选框，并从 <strong>Stereo Rendering Method</strong> 下拉菜单中选择 <strong>Single Pass</strong> 选项。</p>
 
-<h2>Adding Single Pass Stereo rendering support to Shaders</h2>
+<figure>
+<img src="../uploads/Main/SinglePassStereoRendering3.png" alt="从 Player 的 XR Settings 面板中选择单通道 (Single Pass) 渲染">
+<figcaption>从 Player 的 XR Settings 面板中选择单通道 (Single Pass) 渲染</figcaption>
+</figure>
 
-<p>Existing helper methods in <code>UnityCG.cginc</code> support Single Pass Stereo rendering. Whether your application is XR or not, you still need to perform transformations on vertices. For example, when creating any type of application, the vertices enter the vertex shader stage in model space and exit in clip space. The vertex shader must output clip space vertex coordinates. The set of vertices affected by the shader normally begins in model space before the vertex shader transforms them into clip space. However, in order for these vertices to arrive in clip space, the vertex shader first transforms them into world space and then to viewport space.</p>
+<p>Unity 的内置渲染功能和标准资源都支持该功能。但是，定制着色器以及从 Asset Store 下载的着色器可能需要进行修改（例如，可能需要缩放和偏移屏幕空间坐标，以访问大约一半的打包渲染纹理），然后才能添加对单通道立体渲染的支持。</p>
 
-<p>In the case of XR, there are multiple view matrices: one for both the left and right eye. You can use the built-in method <code>UnityWorldToClipPos</code> to ensure that Unity takes into consideration whether the calculation requires handling multiple view matrices. If you use the<code>UnityWorldToClipPos</code> method, the shader automatically performs the transformation calculation correctly, regardless of the platform your application is running on.</p>
+<h2>为着色器添加对单通道立体渲染的支持</h2>
 
-<p><code>UnityCG.cginc</code> also contains the following helper methods to assist you with authoring stereoscopic Shaders:</p>
+<p><code>UnityCG.cginc</code> 中现有的 helper 方法支持单通道立体渲染。无论应用程序是否为 XR 应用，仍然需要对顶点执行变换。例如，在创建任何类型的应用程序时，顶点以模型空间进入顶点着色器阶段，并以裁剪空间退出。顶点着色器必须输出裁剪空间顶点坐标。受着色器影响的顶点集合通常以模型空间开始，然后顶点着色器将它们变换为裁剪空间。但是，为了使这些顶点以裁剪空间出现，顶点着色器首会先将这些顶点变换为世界空间，然后再变换为视口空间。</p>
+
+<p>在 XR 应用中会有多个视图矩阵：一个视图矩阵同时用于左眼和右眼。可以使用内置方法 <code>UnityWorldToClipPos</code> 来确保 Unity 会考虑计算是否需要处理多个视图矩阵。如果使用 <code>UnityWorldToClipPos</code> 方法，无论应用程序在哪个平台上运行，着色器都会自动正确地执行变换计算。</p>
+
+<p><code>UnityCG.cginc</code> 还包含有助于创作立体着色器的以下 helper 方法：</p>
 
 <table>
 <colgroup>
@@ -192,7 +207,7 @@
 <thead>
 <tr>
 	<th style="text-align:left;"><strong>属性</strong></th>
-	<th style="text-align:left;"><strong>Parameters</strong></th>
+	<th style="text-align:left;"><strong>参数</strong></th>
 	<th style="text-align:left;"><strong>描述</strong></th>
 </tr>
 </thead>
@@ -201,27 +216,27 @@
 <tr>
 	<td style="text-align:left;"><strong>UnityStereoScreenSpaceUVAdjust(uv, sb)</strong></td>
 	<td style="text-align:left;">
-<code>uv</code>: UV texture coordinates. Either a float2 for a standard UV or a float4 for a packed pair of two UVs.<br><code>sb</code>: A float4 containing a 2D scale and 2D bias which the shader applies to the UV, with scale in xy and bias in zw.</td>
-	<td style="text-align:left;">If <code>UNITY_SINGLE_PASS_STEREO</code> is defined, this returns the result of applying the scale and bias in sb to the texture coordinates in uv. Otherwise, this returns the texture coordinates unmodified. Use this to apply a per-eye scale and bias only when in Single Pass Stereo rendering mode.</td>
+<code>uv</code>：UV 纹理坐标。类型为 float2 或 float4，前者表示标准 UV，后者表示一对打包的 UV（两个）。<br><code>sb</code>：类型为 float4，其中包含由着色器应用于 UV 的 2D 缩放和 2D 偏置（缩放以 xy 表示，偏置以 zw 表示）。</td>
+	<td style="text-align:left;">如果定义了 <code>UNITY_SINGLE_PASS_STEREO</code>，则会返回将 sb 中的缩放和偏置应用于 uv 中的纹理坐标后产生的结果。否则，将返回未经修改的纹理坐标。仅在单通道立体渲染模式下才应使用此属性来应用每个眼睛的缩放和偏置。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>UnityStereoTransformScreenSpaceTex(uv)</strong></td>
 	<td style="text-align:left;">
-<code>uv</code>: UV texture coordinates. Either a float2 for a standard UV or a float4 for a packed pair of two UVs.</td>
-	<td style="text-align:left;">If <code>UNITY_SINGLE_PASS_STEREO</code> is defined, this returns the result of applying the current eye’s scale and bias to the texture coordinates in uv. Otherwise, this returns the texture coordinates unaltered.</td>
+<code>uv</code>：UV 纹理坐标。类型为 float2 或 float4，前者表示标准 UV，后者表示一对打包的 UV（两个）。</td>
+	<td style="text-align:left;">如果定义了 <code>UNITY_SINGLE_PASS_STEREO</code>，则会返回将当前眼睛的缩放和偏置应用于 uv 中的纹理坐标后产生的结果。否则，将原封不动返回纹理坐标。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>UnityStereoClamp(uv, sb)</strong></td>
 	<td style="text-align:left;">
-<code>uv</code>: UV texture coordinates. Either a float2 for a standard UV or a float4 for a packed pair of two UVs. <br><code>sb</code>: A float4 containing a 2D scale and 2D bias which the shader applies to the UV, with scale in xy and bias in zw.</td>
-	<td style="text-align:left;">If <code>UNITY_SINGLE_PASS_STEREO</code> is defined, this returns the result of applying the clamp to the x value, using the width, and bias, provided by sb, to the texture’s coordinates in uv. Otherwise returns the texture coordinates unmodified. Use this to apply a per-eye clamping in Single Pass Stereo rendering mode to avoid color bleeding between eyes.</td>
+<code>uv</code>：UV 纹理坐标。类型为 float2 或 float4，前者表示标准 UV，后者表示一对打包的 UV（两个）。<br><code>sb</code>：类型为 float4，其中包含由着色器应用于 UV 的 2D 缩放和 2D 偏置（缩放以 xy 表示，偏置以 zw 表示）。</td>
+	<td style="text-align:left;">如果定义了 <code>UNITY_SINGLE_PASS_STEREO</code>，则会返回将钳制应用于 x 值（使用宽度）以及将偏置（由 sb 提供）应用于 uv 中的纹理坐标后产生的结果。否则，将返回未经修改的纹理坐标。使用此属性可在单通道立体渲染模式下应用每个眼睛的钳制，从而避免双眼之间出现渗色现象。</td>
 </tr>
 </tbody>
 </table>
 
-<p>Shaders expose the constant in-built variable ‘unity_StereoEyeIndex’, so that Unity can perform eye-dependent calculations. The value of <code>unity_StereoEyeIndex</code> is 0 for left-eye rendering, and 1 for right-eye rendering.</p>
+<p>着色器会公开恒定的内置变量“unity_StereoEyeIndex”，这样 Unity 便可以执行与眼睛相关的计算。对于左眼渲染，<code>unity_StereoEyeIndex</code> 的值为 0，对于右眼渲染，值为 1。</p>
 
-<p>Here is an example from <code>UnityCG.cginc</code>, demonstrating how you can use<code>unity_StereoEyeIndex</code> to modify screen space coordinates:</p>
+<p>下面是 <code>UnityCG.cginc</code> 中的一个示例，演示了如何使用 <code>unity_StereoEyeIndex</code> 修改屏幕空间坐标：</p>
 
 <pre><code>float2 TransformStereoScreenSpaceTex(float2 uv, float w)
 {
@@ -230,35 +245,35 @@
 }
 </code></pre>
 
-<p>In most cases, you don’t need to modify your Shaders. However, there are situations in which you might need to sample a <a href="http://www.immersionvr.co.uk/mono-vs-stereo/">monoscopic Texture</a> as a source for Single Pass Stereo rendering (for example, if you are creating a full-screen film grain or noise effect where the source image should be the same for both eyes, rather than packed into a <a href="http://www.immersionvr.co.uk/mono-vs-stereo/">stereoscopic image</a>). In such situations, use <code>ComputeNonStereoScreenPos()</code> instead of <code>ComputeScreenPos()</code> to calculate locations from the full source Texture.</p>
+<p>在大多数情况下，无需修改着色器。然而，在有些情况下，可能需要采样一个<a href="http://www.immersionvr.co.uk/mono-vs-stereo/">单视场纹理</a>以作为单通道立体渲染的源（例如，如果正在创建一个全屏胶片颗粒或噪点效果，此时两只眼睛看到的源图像应该是相同的，而不应该打包到一个<a href="http://www.immersionvr.co.uk/mono-vs-stereo/">立体图像</a>中）。在这种情况下，请使用 <code>ComputeNonStereoScreenPos()</code>（而不是 <code>ComputeScreenPos()</code>）从完整的源纹理中计算位置。</p>
 
-<h2>Post-processing effects</h2>
+<h2>后期处理效果</h2>
 
-<p><a href="PostProcessingOverview.html">Post-processing effects</a> require some extra work to support Single Pass Stereo rendering. Each post-processing effect runs once on the packed Render Texture (which contains both the left and right eye images), but applies all draw commands that run during the post-processing twice: once to the left-eye half of the destination Render Texture, and once to the right-eye half.</p>
+<p><a href="PostProcessingOverview.html">后期处理效果</a>需要一些额外的工作才能支持单通道立体渲染。每个后期处理效果在打包的渲染纹理（同时包含左眼和右眼图像）上运行一次，但对于在后期处理过程中运行的所有绘制命令，这种效果将应用两次：一次是左眼的一半目标渲染纹理，一次是右眼的一半。</p>
 
-<p>Post-processing effects do not automatically detect Single Pass Stereo rendering, so you need to adjust any reads of packed Stereo Render Textures so that they only read from the correct side for the eye being rendered. There are two ways to do this depending on how your post-processing effect is being rendered:</p>
+<p>后期处理效果不会自动检测单通道立体渲染，所以您需要调整打包的渲染纹理的任何读取操作，使得这些读取操作仅读取对于正在渲染的眼睛来说正确的一面。根据后期处理效果的渲染方式，有两种方法可以实现这一点：</p>
 
 <ul>
-<li>Using <a href="../ScriptReference/Graphics.Blit.html">Graphics.Blit()</a>
+<li>使用 <a href="../ScriptReference/Graphics.Blit.html">Graphics.Blit()</a>
 </li>
-<li>Mesh-based drawing</li>
+<li>基于网格的绘制</li>
 </ul>
 
-<p>Without the above-mentioned adjustments, each draw command reads the whole of the source Render Texture (containing both the left and right eye views), and outputs the entire image pair to both the left and right eye sides of the output Render Texture, resulting in incorrect duplication of the source image in each eye.</p>
+<p>在没有做上述调整的情况下，每条绘制命令读取整个源渲染纹理（同时包含左眼和右眼视图），并将整个对图像同时输出到输出渲染纹理的左眼侧和右眼侧，导致在每只眼睛上错误地重现源图像。</p>
 
-<p>This happens when using <code>Graphics.Blit</code> or a fullscreen polygon with a Texture map to draw each post-processing effect . Both methods reference the entire output of the previous post-processing effect in the chain. When referring to an area in a packed stereo Render Texture, they reference the whole packed Render Texture instead of just the relevant half of it.</p>
+<p>使用 <code>Graphics.Blit</code> 或带有纹理贴图的全屏多边形来绘制每个后期处理效果时，就会发生这种情况。这两种方法都会引用链条中前一个后期处理效果的整个输出。在引用打包的立体渲染纹理中的某个区域时，这两种方法会引用整个打包的渲染纹理，而不是仅仅引用相关的一半。</p>
 
 <h3>Graphics.Blit()</h3>
 
-<p>Post-processing effects rendered with <code>Blit()</code> do not automatically reference the correct part of packed stereo Render Textures. By default, they refer to the entire texture. This incorrectly stretches the post-processing effect across both eyes.</p>
+<p>使用 <code>Blit()</code> 渲染的后期处理效果不会自动引用打包的立体渲染纹理的正确部分。默认情况下，引用的是整个纹理。这会错误地在两眼之间拉伸后期处理效果。</p>
 
-<p>For Single Pass Stereo rendering using <code>Blit()</code>, texture samplers in Shaders have an additional auto-calculated variable which refers to the correct half of a packed stereo Render Texture, depending on the eye being drawn. The variable contains scale and offset values that allow you to transform your target coordinates to the correct location.</p>
+<p>对于使用 <code>Blit()</code> 的单通道立体渲染，着色器中的纹理采样器有一个额外的自动计算变量，能够根据正在绘制的眼睛来引用打包的立体渲染纹理的正确一半。该变量包含缩放值和偏移值，允许您将目标坐标变换为正确的位置。</p>
 
-<p>To access this variable, declare a <code>half4</code> in your Shader with the same name as your sampler, and add the <code>suffix _ST</code> (see below for a code example of this). To adjust UV coordinates, pass in your <code>_ST</code> variable to <code>scaleAndOffset</code> and use <code>UnityStereoScreenSpaceUVAdjust(uv, scaleAndOffset)</code>. This method compiles to nothing in non-Single Pass Stereo builds, meaning that shaders modified to support this mode are still compatible with non-Single Pass Stereo builds.</p>
+<p>要访问此变量，请在与采样器同名的着色器中声明一个 <code>half4</code>，并添加 <code>suffix _ST</code>（参阅下文中的代码示例）。要调整 UV 坐标，请将 <code>_ST</code> 变量传递给 <code>scaleAndOffset</code>，并使用 <code>UnityStereoScreenSpaceUVAdjust(uv, scaleAndOffset)</code>。此方法在非单通道立体构建中的编译结果为空，这意味着为支持此模式而进行了修改的着色器仍然兼容非单通道立体构建。</p>
 
-<p>The following examples demonstrate what you need to change in your fragment shader code to support Single Pass Stereo rendering.</p>
+<p>下面的示例演示了需要在片元着色器代码中更改哪些内容才能支持单通道立体渲染。</p>
 
-<p>Without stereo rendering:</p>
+<p>无立体渲染：</p>
 
 <pre><code>uniform sampler2D _MainTex;
 
@@ -269,7 +284,7 @@ fixed4 frag (v2f_img i) : SV_Target
 }
 </code></pre>
 
-<p>With stereo rendering:</p>
+<p>有立体渲染：</p>
 
 <pre><code>uniform sampler2D _MainTex;
 half4 _MainTex_ST;
@@ -281,19 +296,19 @@ fixed4 frag (v2f_img i) : SV_Target
 }
 </code></pre>
 
-<h3>Mesh-based drawing</h3>
+<h3>基于网格的绘制</h3>
 
-<p>Rendering Post-processing effects using meshes (for example, by drawing a quadrilateral in immediate mode using the <a href="../ScriptReference/GL.html">low level graphics API</a>) also need to adjust the UV coordinates on the target Texture when rendering each eye. To adjust your coordinates in these circumstances, use <code>UnityStereoTransformScreenSpaceTex(uv)</code>. This method correctly adjusts for packed stereo Render Textures in Single Pass Stereo rendering mode, and automatically compiles for non-packed Render Textures if you have disabled Single Pass Stereo rendering mode. However, if you intend to use a Shader both for packed and unpacked Render Textures in the same mode, you need to have two separate Shaders.</p>
+<p>如果使用网格来渲染后期处理效果（例如，使用<a href="../ScriptReference/GL.html">低级图形 API</a> 以即时模式绘制四边形），那么在绘制每只眼睛时还需要调整目标纹理上的 UV 坐标。要在此类情况下调整坐标，请使用 <code>UnityStereoTransformScreenSpaceTex(uv)</code>。在单通道立体渲染模式下，该方法可针对打包的立体渲染纹理进行正确调整，而如果已禁用单通道立体渲染模式，那么可针对非打包的渲染纹理进行自动编译。但是，如果您打算在相同模式下将某个着色器同时用于打包和非打包的渲染纹理，则需要有两个单独的着色器。</p>
 
-<h2>Screen space effects</h2>
+<h2>屏幕空间效果</h2>
 
-<p>Screen space effects are visual effects that are drawn over a pre-rendered image. Examples of screen space effects include <a href="PostProcessing-AmbientOcclusion.html">ambient occlusion</a>, <a href="PostProcessing-DepthOfField.html">depth of field</a>, and <a href="PostProcessing-Bloom.html">bloom</a>.</p>
+<p>屏幕空间效果是指在预先渲染的图像上绘制的视觉效果。屏幕空间效果的例子包括<a href="PostProcessing-AmbientOcclusion.html">环境光遮挡</a>、<a href="PostProcessing-DepthOfField.html">景深</a>和<a href="PostProcessing-Bloom.html">泛光</a>。</p>
 
-<p>For example, imagine a screen space effect that requires an image to be drawn over the screen (perhaps you are drawing some kind of dirt spattered on the screen). Instead of applying the effect over the entire output display, which would stretch the dirt image across both eyes, you need to apply it twice: once for each eye. In cases like this, you need to convert from using texture coordinates that reference the whole packed Render Texture, to coordinates that reference each eye.</p>
+<p>例如，假设有一种屏幕空间效果要求在屏幕上绘制一幅图像（也许您正在绘制飞溅到屏幕上某种污垢）。只需要应用这种效果两次：每只眼睛应用一次，而不必将效果应用于整个输出显示，否则将使污垢图像在两只眼睛之间拉伸。在这种情况下，需要从引用整个打包渲染纹理的纹理坐标转换为引用每只眼睛的坐标。</p>
 
-<p>The following code examples show a Surface Shader that repeats an input Texture (called _<strong>Detail</strong>) 8 x 6 times across the output image. In the second example, the shader transforms the destination coordinates in Single Pass Stereo mode to refer to the part of the output Texture that represents the eye currently being rendered.</p>
+<p>下面的代码示例显示了一个表面着色器。此着色器可在输出图像上重复绘制输入纹理（名为 <em>_</em>Detail__）8 x 6 次。在第二个示例中，着色器在单通道立体模式下变换目标坐标，以引用表示当前正在渲染的眼睛的输出纹理部分。</p>
 
-<p><strong>Example 1:</strong> Detail Texture with no Single-Pass Stereo support</p>
+<p><strong>示例 1：</strong>不支持单通道立体渲染的细节纹理</p>
 
 <pre><code>void surf(Input IN, inout SurfaceOutput o) 
 {
@@ -304,15 +319,15 @@ fixed4 frag (v2f_img i) : SV_Target
 }
 </code></pre>
 
-<p><strong>Example 2:</strong> Detail Texture with Single-Pass Stereo support</p>
+<p><strong>示例 2：</strong>支持单通道立体渲染的细节纹理</p>
 
 <pre><code>void surf(Input IN, inout SurfaceOutput o) 
 {
     o.Albedo = tex2D(_MainTex, IN.uv_MainTex).rgb;
     float2 screenUV = IN.screenPos.xy / IN.screenPos.w;
     #if UNITY_SINGLE_PASS_STEREO
-    // If Single-Pass Stereo mode is active, transform the
-    // coordinates to get the correct output UV for the current eye.
+    // 如果已激活单通道立体渲染模式，则变换
+    //坐标以获取当前眼睛的正确输出 UV。
     float4 scaleOffset = unity_StereoScaleOffset[unity_StereoEyeIndex];
     screenUV = (screenUV - scaleOffset.zw) / scaleOffset.xy;
     #endif
@@ -324,9 +339,9 @@ fixed4 frag (v2f_img i) : SV_Target
 <hr>
 
 <ul>
-<li><span class="page-edit">2018–08–16 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><span class="page-edit">2018–08–16 页面已发布并只进行了有限的<a href="DocumentationEditorialReview.html">编辑审查</a>
 </span></li>
-<li><span class="page-history">New in Unity <a href="https://docs.unity3d.com/2017.3/Documentation/Manual/30_search.html?q=newin20173">2017.3</a> <span class="search-words">NewIn20173</span></span></li>
+<li><span class="page-history">Unity <a href="https://docs.unity3d.com/2017.3/Documentation/Manual/30_search.html?q=newin20173">2017.3</a> 中的新功能 <span class="search-words">NewIn20173</span></span></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
@@ -339,9 +354,9 @@ fixed4 frag (v2f_img i) : SV_Target
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2019.1</div>
 <div class="menu">
-<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>
 </div>
 <div></div>

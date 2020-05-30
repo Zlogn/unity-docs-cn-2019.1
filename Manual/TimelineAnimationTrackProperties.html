@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="no-js">
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,11 +10,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="动画轨道属性 - Unity Manual">
-<title>动画轨道属性 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/timeline_inspector_animation_track.png">
-<meta name="description" content="使用 Inspector 窗口可更改动画轨道的名称，应用化身遮罩，应用轨道偏移，并指定在匹配动画剪辑之间的剪辑偏移时匹配的变换。">
-<meta property="og:description" content="使用 Inspector 窗口可更改动画轨道的名称，应用化身遮罩，应用轨道偏移，并指定在匹配动画剪辑之间的剪辑偏移时匹配的变换。">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Animation track properties - Unity 手册">
+<title>Animation track properties - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.1/uploads/Main/timeline_inspector_animation_track.png">
+<meta name="description" content="Use the Inspector window to change the name of an Animation track, set how track offsets are applied, apply an avatar mask, and set which transforms are modified by default when you match clip offsets.">
+<meta property="og:description" content="Use the Inspector window to change the name of an Animation track, set how track offsets are applied, apply an avatar mask, and set which transforms are modified by default when you match clip offsets.">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -28,13 +29,20 @@
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
 <script>
       var docs_type = 'Manual';
-      var lang = 'zh_CN';
+      var lang = 'cn';
       var page = 'TimelineAnimationTrackProperties';
       if(!page) page = 'index';
       var version = '2019.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2020.1',version_string: '2020.1'},{version: '2019.3',version_string: '2019.3'},{version: '2019.2',version_string: '2019.2'},{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.1/Manual/TimelineAnimationTrackProperties.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.1/Manual/TimelineAnimationTrackProperties.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.1/Manual/TimelineAnimationTrackProperties.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.1/Manual/TimelineAnimationTrackProperties.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.1/Manual/TimelineAnimationTrackProperties.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.1/Manual/TimelineAnimationTrackProperties.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.1/Documentation/Manual/TimelineAnimationTrackProperties.html" hreflang="x-default">
 </head>
 <body>
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -44,11 +52,11 @@
 <div id="nav-open" for="nav-input"><span></span></div>
 <div class="logo"><a href="https://docs.unity3d.com"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
-<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
 <ul class="menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 </div></div>
 <div class="more">
@@ -68,25 +76,28 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/TimelineAnimationTrackProperties.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/TimelineAnimationTrackProperties.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/TimelineAnimationTrackProperties.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/TimelineAnimationTrackProperties.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/TimelineAnimationTrackProperties.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/TimelineAnimationTrackProperties.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/TimelineAnimationTrackProperties.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/TimelineAnimationTrackProperties.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/TimelineAnimationTrackProperties.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/TimelineAnimationTrackProperties.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/TimelineAnimationTrackProperties.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/TimelineAnimationTrackProperties.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/TimelineAnimationTrackProperties.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/TimelineAnimationTrackProperties.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/TimelineAnimationTrackProperties.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/TimelineAnimationTrackProperties.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/TimelineAnimationTrackProperties.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/TimelineAnimationTrackProperties.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/TimelineAnimationTrackProperties.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/TimelineAnimationTrackProperties.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/TimelineAnimationTrackProperties.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/TimelineAnimationTrackProperties.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/TimelineAnimationTrackProperties.html">5.6</a></li>
 </ul></div>
 </div>
 <ul class="nav-menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 <div class="lang-switcher">
 <div class="current toggle" data-target=".lang-list">
-<div class="lbl">Language:
+<div class="lbl">语言:
         <span class="b">中文</span>
 </div>
 <div class="arrow"></div>
@@ -96,13 +107,14 @@
 <li><a data-lang="ja" href="/ja/2019.1/Manual/TimelineAnimationTrackProperties.html">日本語</a></li>
 <li><a data-lang="es" href="/es/2019.1/Manual/TimelineAnimationTrackProperties.html">Español</a></li>
 <li><a data-lang="kr" href="/kr/2019.1/Manual/TimelineAnimationTrackProperties.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.1/Manual/TimelineAnimationTrackProperties.html">Русский</a></li>
 </ul></div>
 </div>
 </div></div>
 </div>
 <div id="master-wrapper" class="master-wrapper clear">
 <div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
-<h2>Manual</h2>
+<h2>手册</h2>
 <div class="version-switcher">
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
@@ -112,16 +124,19 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/TimelineAnimationTrackProperties.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/TimelineAnimationTrackProperties.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/TimelineAnimationTrackProperties.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/TimelineAnimationTrackProperties.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/TimelineAnimationTrackProperties.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/TimelineAnimationTrackProperties.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/TimelineAnimationTrackProperties.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/TimelineAnimationTrackProperties.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/TimelineAnimationTrackProperties.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/TimelineAnimationTrackProperties.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/TimelineAnimationTrackProperties.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/TimelineAnimationTrackProperties.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/TimelineAnimationTrackProperties.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/TimelineAnimationTrackProperties.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/TimelineAnimationTrackProperties.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/TimelineAnimationTrackProperties.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/TimelineAnimationTrackProperties.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/TimelineAnimationTrackProperties.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/TimelineAnimationTrackProperties.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/TimelineAnimationTrackProperties.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/TimelineAnimationTrackProperties.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/TimelineAnimationTrackProperties.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/TimelineAnimationTrackProperties.html">5.6</a></li>
 </ul></div>
 </div>
 <div class="clear"></div>
@@ -131,83 +146,99 @@
 <div class="breadcrumbs clear"><ul>
 <li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
 <li><a href="TimelineSection.html">时间轴</a></li>
-<li><a href="TimelineInspector.html">时间轴和 Inspector 窗口</a></li>
-<li><a href="script-EditorTrack.html">设置轨道属性</a></li>
-<li>动画轨道属性</li>
+<li><a href="TimelineInspector.html">Timeline properties in the Inspector window</a></li>
+<li><a href="script-EditorTrack.html">Setting track properties</a></li>
+<li>Animation track properties</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="TimelineActivationTrackProperties.html"></a></span><div class="tip">激活轨道属性</div>
+<span class="prev"><a href="TimelineActivationTrackProperties.html"></a></span><div class="tip">Activation track properties</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="script-EditorClip.html"></a></span><div class="tip">设置剪辑属性</div>
+<span class="next"><a href="script-EditorClip.html"></a></span><div class="tip">Setting clip properties</div>
 </div>
 </div></div>
-<h1>动画轨道属性</h1>
+<h1>Animation track properties</h1>
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>使用 Inspector 窗口可更改动画轨道的名称，应用化身遮罩，应用轨道偏移，并指定在匹配动画剪辑之间的剪辑偏移时匹配的变换。</p>
+<p>Use the Inspector window to change the name of an Animation track, set how track offsets are applied, apply an avatar mask, and set which transforms are modified by default when you <a href="TimelineMatchOffsets.html">match clip offsets</a>.</p>
 
 <figure>
-<img src="../uploads/Main/timeline_inspector_animation_track.png" alt="在 Timeline Editor 窗口中选择动画轨道 (Animation Track) 时显示的 Inspector 窗口">
-<figcaption>在 Timeline Editor 窗口中选择动画轨道 (Animation Track) 时显示的 Inspector 窗口</figcaption>
+<img src="../uploads/Main/timeline_inspector_animation_track.png" alt="Inspector window when selecting an Animation track in the Timeline window">
+<figcaption>Inspector window when selecting an Animation track in the Timeline window</figcaption>
 </figure>
 
 <table>
 <colgroup>
 <col style="text-align:left;">
 <col style="text-align:left;">
+<col style="text-align:left;">
 </colgroup>
 
 <thead>
 <tr>
-	<th style="text-align:left;"><strong>属性：</strong></th>
-	<th style="text-align:left;"><strong>功能：</strong></th>
+	<th style="text-align:left;" colspan="2"><strong>属性</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
-	<td style="text-align:left;"><strong>显示名称</strong></td>
-	<td style="text-align:left;">动画轨道在 Timeline Editor 窗口和 Playable Director 组件中的显示名称。显示名称适用于时间轴资源及其所有时间轴实例。只能通过在编辑时间轴实例时选择动画轨道来修改显示名称。</td>
+	<td style="text-align:left;" colspan="2"><strong>Display Name</strong></td>
+	<td style="text-align:left;">The name of the Animation track shown in the Timeline window and in the Playable Director component. The Display Name applies to the Timeline Asset and all of its Timeline instances.</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>Apply Avatar Mask</strong></td>
-	<td style="text-align:left;">使用此属性可启用化身遮罩。启用后将会根据所选的化身遮罩应用轨道上所有动画剪辑的动画。</td>
+	<td style="text-align:left;" colspan="2"><strong>Track Offsets</strong></td>
+	<td style="text-align:left;">Applies a position and rotation offset to the start of each Animation clip on the selected Animation track. The position and rotation offset starts from a specific position and rotation or from the position and rotation relative to a state machine or another Timeline instance.</td>
 </tr>
 <tr>
-	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;<em>Avatar Mask</em>
-</td>
-	<td style="text-align:left;">使用此属性可选择应用于动画轨道上所有动画剪辑的化身遮罩 (Avatar Mask)。化身遮罩定义了所选动画轨道上的动画剪辑对哪些人形身体部位进行动画化。被遮罩的身体部位由时间轴资源中的其他动画轨道进行动画化。例如，可以使用化身遮罩<a href="TimelineWorkflowOverrideMasking.html">将动画轨道上的下半身动画与覆盖动画轨道上的上半身动画相结合</a>。</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Apply Transform Offsets</td>
+	<td style="text-align:left;">Starts the animation in each Animation clip from a specific position and rotation offset. Use the Move and Rotate tools, and the Position and Rotation fields, to set the starting position and rotation.</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>Apply Track Offsets</strong></td>
-	<td style="text-align:left;">启用 Apply Track Offsets 可将相同的位置和旋转偏移应用于所选动画轨道上的所有动画剪辑。应用轨道偏移有两种方法：在 Scene 视图中使用小辅助图标设置位置和旋转偏移，或指定精确的位置和旋转轨道偏移。</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Apply Scene Offsets</td>
+	<td style="text-align:left;">Starts the animated GameObject from its current position and rotation in the Scene. Use this mode to build a Timeline instance that transitions to and from a state machine or to and from another Timeline instance.</td>
 </tr>
 <tr>
-	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;<em>Move tool</em>
-</td>
-	<td style="text-align:left;">启用移动工具 (Move tool) 可在 Scene 视图中显示移动辅助图标 (Move Gizmo)。使用移动辅助图标可直观定位轨道偏移。定位移动辅助图标会更改 Position 属性。</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Auto (deprecated)</td>
+	<td style="text-align:left;">If you load a Scene or Project that was built before 2018.3, Track Offsets is automatically set to Auto (deprecated). This is a special mode for backwards compatibility.<br><br>After opening an old Project, choose another Track Offsets mode because the Auto (deprecated) offset disables key animation recording.</td>
 </tr>
 <tr>
-	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;<em>Rotate tool</em>
-</td>
-	<td style="text-align:left;">启用旋转工具 (Rotate tool) 可在 Scene 视图中显示旋转辅助图标 (Rotate Gizmo)。使用旋转辅助图标可直观旋转轨道偏移。旋转“旋转辅助图标”会更改 Rotation 属性。</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Move tool</td>
+	<td style="text-align:left;">Enable the Move tool to show the Move Gizmo in the Scene view. Use the Move Gizmo to visually position the transform offset. Positioning the Move Gizmo changes the Position properties.<br><br>The Move tool only appears when Track Offsets is set to Apply Transform Offsets.</td>
 </tr>
 <tr>
-	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;<em>Position</em>
-</td>
-	<td style="text-align:left;">使用 Position 属性可设置轨道在 X、Y 和 Z 坐标上的偏移。</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Rotate tool</td>
+	<td style="text-align:left;">Enable the Rotate tool to show the Rotate Gizmo in the Scene view. Use the Rotate Gizmo to visually rotate the track offset. Rotating the Rotate Gizmo changes the Rotation properties.<br><br>The Rotate tool only appears when Track Offsets is set to Apply Transform Offsets.</td>
 </tr>
 <tr>
-	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;<em>Rotation</em>
-</td>
-	<td style="text-align:left;">使用 Rotation 属性可设置轨道围绕 X、Y 和 Z 轴的旋转偏移。</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Position</td>
+	<td style="text-align:left;">Sets the track position offset in X, Y, and Z coordinates. The Position fields only appears when Track Offsets is set to Apply Transform Offsets.</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>Clip Offset Match Fields</strong></td>
-	<td style="text-align:left;">展开 Clip Offset Match Fields 可显示一系列复选框，这些复选框用于在动画剪辑之间<a href="TimelineMatchOffsets.html">匹配剪辑偏移</a>时选择匹配的变换。Clip Offset Match Fields 设置同一轨道上所有动画剪辑的默认匹配选项。使用<a href="TimelineAnimationClipPlayableProperties.html">动画剪辑可播放资源属性</a>可覆盖每个动画剪辑的这些默认值。</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Rotation</td>
+	<td style="text-align:left;">Sets the track rotation offset in X, Y, and Z coordinates. The Rotation fields appear when Track Offsets is set to Apply Transform Offsets.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Apply Avatar Mask</strong></td>
+	<td style="text-align:left;">Enables Avatar masking. When enabled, Timeline applies the animation of all Animation clips on the track based on the selected Avatar Mask.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Avatar Mask</td>
+	<td style="text-align:left;">Selects the Avatar Mask applied to all Animation clips on the Animation track.<br>An Avatar Mask defines which humanoid body parts are animated by Animation clips on the selected Animation track. The body parts that are masked are animated by other Animation tracks in the Timeline Asset.<br><br>For example, you can use an Avatar Mask to combine the lower-body animation on an Animation track with the upper body animation on an <a href="TimelineWorkflowOverrideMasking.html">Override Animation track</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Default Offset Match Fields</strong></td>
+	<td style="text-align:left;">Expand to display a series of checkboxes that choose which transforms are matched when <a href="TimelineMatchOffsets.html">matching clip offsets</a> between Animation clips.<br><br>The Default Offset Match Fields set the default matching options for all Animation clips on the same track. Use the <a href="TimelineAnimationClipPlayableProperties.html">Animation Playable Asset properties</a> to override these defaults for each Animation clip.</td>
 </tr>
 </tbody>
 </table>
@@ -215,23 +246,23 @@
 <hr>
 
 <ul>
-<li><span class="page-edit">2017–12–07 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><span class="page-edit">2019–08–20 页面已发布并只进行了有限的<a href="DocumentationEditorialReview.html">编辑审查</a>
 </span></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="TimelineActivationTrackProperties.html"></a></span><div class="tip">激活轨道属性</div>
+<span class="prev"><a href="TimelineActivationTrackProperties.html"></a></span><div class="tip">Activation track properties</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="script-EditorClip.html"></a></span><div class="tip">设置剪辑属性</div>
+<span class="next"><a href="script-EditorClip.html"></a></span><div class="tip">Setting clip properties</div>
 </div>
 </div>
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2019.1</div>
 <div class="menu">
-<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>
 </div>
 <div></div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="no-js">
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,10 +10,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="Measuring performance with the built-in profiler - Unity Manual">
-<title>Measuring performance with the built-in profiler - Unity Manual</title>
-<meta name="description" content="Unity iOS and Android contain a built-in profiler. The built-in profiler emits console messages from the game running on device. These messages are written every 30 seconds and will provide insight into how the game is running. Understanding what these messages mean is not always easy, but as a minimum, you should quickly be able to determine if your game is CPU or GPU bound, and if CPU bound whether it&amp;#8217;s script code, or perhaps Mono garbage collection that is slowing you down. See later in this page to learn how to configure the built-in profiler.">
-<meta property="og:description" content="Unity iOS and Android contain a built-in profiler. The built-in profiler emits console messages from the game running on device. These messages are written every 30 seconds and will provide insight into how the game is running. Understanding what these messages mean is not always easy, but as a minimum, you should quickly be able to determine if your game is CPU or GPU bound, and if CPU bound whether it&amp;#8217;s script code, or perhaps Mono garbage collection that is slowing you down. See later in this page to learn how to configure the built-in profiler.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="使用内置性能分析器来衡量性能 - Unity 手册">
+<title>使用内置性能分析器来衡量性能 - Unity 手册</title>
+<meta name="description" content="Unity iOS and Android contain a built-in profiler. The built-in profiler emits console messages from the game running on device. These messages are written every 30 frames and will provide insight into how the game is running. Understanding what these messages mean is not always easy, but as a minimum, you should quickly be able to determine if your game is CPU or GPU bound, and if CPU bound whether it&amp;#8217;s script code, or perhaps Mono garbage collection that is slowing you down. See later in this page to learn how to configure the built-in profiler.">
+<meta property="og:description" content="Unity iOS and Android contain a built-in profiler. The built-in profiler emits console messages from the game running on device. These messages are written every 30 frames and will provide insight into how the game is running. Understanding what these messages mean is not always easy, but as a minimum, you should quickly be able to determine if your game is CPU or GPU bound, and if CPU bound whether it&amp;#8217;s script code, or perhaps Mono garbage collection that is slowing you down. See later in this page to learn how to configure the built-in profiler.">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -27,13 +28,20 @@
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
 <script>
       var docs_type = 'Manual';
-      var lang = 'zh_CN';
+      var lang = 'cn';
       var page = 'iphone-InternalProfiler';
       if(!page) page = 'index';
       var version = '2019.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2020.1',version_string: '2020.1'},{version: '2019.3',version_string: '2019.3'},{version: '2019.2',version_string: '2019.2'},{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.1/Manual/iphone-InternalProfiler.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.1/Manual/iphone-InternalProfiler.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.1/Manual/iphone-InternalProfiler.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.1/Manual/iphone-InternalProfiler.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.1/Manual/iphone-InternalProfiler.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.1/Manual/iphone-InternalProfiler.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.1/Documentation/Manual/iphone-InternalProfiler.html" hreflang="x-default">
 </head>
 <body>
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -43,11 +51,11 @@
 <div id="nav-open" for="nav-input"><span></span></div>
 <div class="logo"><a href="https://docs.unity3d.com"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
-<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
 <ul class="menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 </div></div>
 <div class="more">
@@ -67,25 +75,28 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/iphone-InternalProfiler.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/iphone-InternalProfiler.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/iphone-InternalProfiler.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/iphone-InternalProfiler.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/iphone-InternalProfiler.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/iphone-InternalProfiler.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/iphone-InternalProfiler.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/iphone-InternalProfiler.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/iphone-InternalProfiler.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/iphone-InternalProfiler.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/iphone-InternalProfiler.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/iphone-InternalProfiler.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/iphone-InternalProfiler.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/iphone-InternalProfiler.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/iphone-InternalProfiler.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/iphone-InternalProfiler.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/iphone-InternalProfiler.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/iphone-InternalProfiler.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/iphone-InternalProfiler.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/iphone-InternalProfiler.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/iphone-InternalProfiler.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/iphone-InternalProfiler.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/iphone-InternalProfiler.html">5.6</a></li>
 </ul></div>
 </div>
 <ul class="nav-menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 <div class="lang-switcher">
 <div class="current toggle" data-target=".lang-list">
-<div class="lbl">Language:
+<div class="lbl">语言:
         <span class="b">中文</span>
 </div>
 <div class="arrow"></div>
@@ -95,13 +106,14 @@
 <li><a data-lang="ja" href="/ja/2019.1/Manual/iphone-InternalProfiler.html">日本語</a></li>
 <li><a data-lang="es" href="/es/2019.1/Manual/iphone-InternalProfiler.html">Español</a></li>
 <li><a data-lang="kr" href="/kr/2019.1/Manual/iphone-InternalProfiler.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.1/Manual/iphone-InternalProfiler.html">Русский</a></li>
 </ul></div>
 </div>
 </div></div>
 </div>
 <div id="master-wrapper" class="master-wrapper clear">
 <div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
-<h2>Manual</h2>
+<h2>手册</h2>
 <div class="version-switcher">
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
@@ -111,16 +123,19 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/iphone-InternalProfiler.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/iphone-InternalProfiler.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/iphone-InternalProfiler.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/iphone-InternalProfiler.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/iphone-InternalProfiler.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/iphone-InternalProfiler.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/iphone-InternalProfiler.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/iphone-InternalProfiler.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/iphone-InternalProfiler.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/iphone-InternalProfiler.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/iphone-InternalProfiler.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/iphone-InternalProfiler.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/iphone-InternalProfiler.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/iphone-InternalProfiler.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/iphone-InternalProfiler.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/iphone-InternalProfiler.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/iphone-InternalProfiler.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/iphone-InternalProfiler.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/iphone-InternalProfiler.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/iphone-InternalProfiler.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/iphone-InternalProfiler.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/iphone-InternalProfiler.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/iphone-InternalProfiler.html">5.6</a></li>
 </ul></div>
 </div>
 <div class="clear"></div>
@@ -133,25 +148,25 @@
 <li><a href="iphone.html">iOS</a></li>
 <li>iOS 高级主题</li>
 <li><a href="iphone-performance.html">在 iOS 上优化性能</a></li>
-<li>Measuring performance with the built-in profiler</li>
+<li>使用内置性能分析器来衡量性能</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="iphone-iOS-Optimization.html"></a></span><div class="tip">iOS-specific optimizations</div>
+<span class="prev"><a href="iphone-iOS-Optimization.html"></a></span><div class="tip">iOS 特定优化</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="iphone-playerSizeOptimization.html"></a></span><div class="tip">Optimizing the size of the built iOS Player</div>
+<span class="next"><a href="iphone-playerSizeOptimization.html"></a></span><div class="tip">优化构建的 iOS 播放器的大小</div>
 </div>
 </div></div>
-<h1>Measuring performance with the built-in profiler</h1>
+<h1>使用内置性能分析器来衡量性能</h1>
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>Unity iOS and Android contain a built-in profiler. The built-in profiler emits console messages from the game running on device. These messages are written every 30 seconds and will provide insight into how the game is running. Understanding what these messages mean is not always easy, but as a minimum, you should quickly be able to determine if your game is CPU or GPU bound, and if CPU bound whether it’s script code, or perhaps Mono garbage collection that is slowing you down. See later in this page to learn how to configure the built-in profiler.</p>
+<p>Unity iOS and Android contain a built-in profiler. The built-in profiler emits console messages from the game running on device. These messages are written every 30 frames and will provide insight into how the game is running. Understanding what these messages mean is not always easy, but as a minimum, you should quickly be able to determine if your game is CPU or GPU bound, and if CPU bound whether it’s script code, or perhaps Mono garbage collection that is slowing you down. See later in this page to learn how to configure the built-in profiler.</p>
 
-<h2>What the profiler tells you</h2>
+<h2>性能分析器提供的信息</h2>
 
-<p>Here’s an example of the built-in profiler’s output.</p>
+<p>以下是内置性能分析器的输出示例。</p>
 
 <pre><code>iPhone/iPad Unity internal profiler stats:
 cpu-player&gt; min: 9.8 max: 24.0 avg: 16.3
@@ -162,14 +177,14 @@ frametime&gt; min: 31.9 max: 37.8 avg: 34.1
 draw-call #&gt; min: 4 max: 9 avg: 6 | batched: 10
 tris #&gt; min: 3590 max: 4561 avg: 3871 | batched: 3572
 verts #&gt; min: 1940 max: 2487 avg: 2104 | batched: 1900
-player-detail&gt; physx: 1.2 animation: 1.2 culling: 0.5 skinning: 0.0 batching: 0.2 render: 12.0 fixed-update-count: 1 .. 2
+player-detail&gt; physx: 1.2 animation: 1.2 culling: 0.5 skinning: 0.0 batching: 0.2 render: 12.0 fixed-update-count: 1 ..2
 mono-scripts&gt; update: 0.5 fixedUpdate: 0.0 coroutines: 0.0 
 mono-memory&gt; used heap: 233472 allocated heap: 548864 max number of collections: 1 collection total duration: 5.7
 </code></pre>
 
-<p>All times are measured in milliseconds per frame. You can see the minimum, maximum and average times over the last thirty frames.</p>
+<p>所有时间均以毫秒/帧为单位。可以查看最近三十帧的最短时间、最长时间和平均时间。</p>
 
-<h2>General CPU activity</h2>
+<h2>常规 CPU 活动</h2>
 
 <table>
 <colgroup>
@@ -180,41 +195,39 @@ mono-memory&gt; used heap: 233472 allocated heap: 548864 max number of collectio
 <thead>
 <tr>
 	<th style="text-align:left;">
-<strong>Property</strong>:</th>
-	<th style="text-align:left;">
-<strong>Function</strong>:</th>
+<strong>属性__： |</strong>功能__：</th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
 	<td style="text-align:left;"><strong>cpu-player</strong></td>
-	<td style="text-align:left;">Displays the time your game spends executing code inside the Unity engine and executing scripts on the CPU.</td>
+	<td style="text-align:left;">显示游戏在 Unity 引擎中执行代码以及在 CPU 上执行脚本所用的时间。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>cpu-ogles-drv</strong></td>
-	<td style="text-align:left;">Displays the time spent executing OpenGL ES driver code on the CPU. Many factors like the number of draw calls, number of internal rendering state changes, the rendering pipeline setup and even the number of processed vertices can have an effect on the driver stats.</td>
+	<td style="text-align:left;">显示在 CPU 上执行 OpenGL ES 驱动程序代码所用的时间。绘制调用的数量、内部渲染状态变化的数量、渲染管线设置甚至已处理顶点的数量等大量因素都会影响驱动程序的统计信息。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>cpu-waits-gpu</strong></td>
-	<td style="text-align:left;">Displays the time the CPU is idle while waiting for the GPU to finish rendering. If this number exceeds 2–3 milliseconds then your application is most probably fillrate/GPU processing bound. If this value is too small then the profile skips displaying the value.</td>
+	<td style="text-align:left;">显示 CPU 在等待 GPU 完成渲染时处于空闲状态的时间。如果此数字超过 2–3 毫秒，那么应用程序很可能受限于填充率/GPU 处理。如果该值太小，则性能分析中不会显示该值。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>msaa-resolve</strong></td>
-	<td style="text-align:left;">The time taken to apply anti-aliasing.</td>
+	<td style="text-align:left;">应用抗锯齿所用的时间。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>cpu-present</strong></td>
-	<td style="text-align:left;">The amount of time spent executing the presentRenderbuffer command in OpenGL ES.</td>
+	<td style="text-align:left;">在 OpenGL ES 中执行 presentRenderbuffer 命令所用的时间。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>frametime</strong></td>
-	<td style="text-align:left;">Represents the overall time of a game frame. Note that iOS hardware is always locked at a 60Hz refresh rate, so you will always get multiples times of 16.7ms (1000ms/60Hz = 16.7ms).</td>
+	<td style="text-align:left;">表示一个游戏帧的总时间。请注意，iOS 硬件始终锁定在 60Hz 的刷新率，因此您将始终得到 16.7ms (1000ms/60Hz = 16.7ms) 的倍数。</td>
 </tr>
 </tbody>
 </table>
 
-<h2>Rendering statistics</h2>
+<h2>渲染统计信息</h2>
 
 <table>
 <colgroup>
@@ -225,31 +238,29 @@ mono-memory&gt; used heap: 233472 allocated heap: 548864 max number of collectio
 <thead>
 <tr>
 	<th style="text-align:left;">
-<strong>Property</strong>:</th>
-	<th style="text-align:left;">
-<strong>Function</strong>:</th>
+<strong>属性__： |</strong>功能__：</th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
 	<td style="text-align:left;"><strong>tris #</strong></td>
-	<td style="text-align:left;">Total number of triangles sent for rendering.</td>
+	<td style="text-align:left;">为渲染发送的三角形总数。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>verts #</strong></td>
-	<td style="text-align:left;">Total number of vertices sent for rendering. You should keep this number below 10000 if you use only static geometry but if you have lots of skinned geometry then you should keep it much lower.</td>
+	<td style="text-align:left;">为渲染发送的顶点总数。如果仅使用静态几何体，应将此数字保持在 10000 以下，但是如果有大量的蒙皮几何体，应将其设置为小得多的值。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>batched</strong></td>
-	<td style="text-align:left;">Number of draw-calls, triangles and vertices which were automatically batched by the engine. Comparing these numbers with draw-call and triangle totals will give you an idea how well is your scene prepared for batching. Share as many materials as possible among your objects to improve batching.</td>
+	<td style="text-align:left;">由引擎自动批处理的绘制调用、三角形和顶点的数量。将这些数字与绘制调用和三角形总数比较，就会知道场景的批处理准备状态。为改善批处理性能，应当在对象之间尽可能多分享材质。</td>
 </tr>
 </tbody>
 </table>
 
-<h2>Detailed Unity Player statistics</h2>
+<h2>详细 Unity Player 统计信息</h2>
 
-<p>The <strong>player-detail</strong> section provides a detailed breakdown of what is happening inside the engine:</p>
+<p><strong>player-detail</strong> 部分提供引擎内部情况的详细分类：</p>
 
 <table>
 <colgroup>
@@ -260,47 +271,45 @@ mono-memory&gt; used heap: 233472 allocated heap: 548864 max number of collectio
 <thead>
 <tr>
 	<th style="text-align:left;">
-<strong>Property</strong>:</th>
-	<th style="text-align:left;">
-<strong>Function</strong>:</th>
+<strong>属性__： |</strong>功能__：</th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
 	<td style="text-align:left;"><strong>physx</strong></td>
-	<td style="text-align:left;">Time spent on physics.</td>
+	<td style="text-align:left;">在物理方面所用的时间。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>animation</strong></td>
-	<td style="text-align:left;">Time spent animating bones.</td>
+	<td style="text-align:left;">为骨骼生成动画时所用的时间。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>culling</strong></td>
-	<td style="text-align:left;">Time spent culling objects outside the camera frustum.</td>
+	<td style="text-align:left;">剔除摄像机视锥体外的对象所用的时间。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>skinning</strong></td>
-	<td style="text-align:left;">Time spent applying animations to skinned meshes.</td>
+	<td style="text-align:left;">将动画应用于蒙皮网格所用的时间。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>batching</strong></td>
-	<td style="text-align:left;">Time spent batching geometry. Batching dynamic geometry is considerably more expensive than batching static geometry.</td>
+	<td style="text-align:left;">对几何体进行批处理所用的时间。与静态几何体的批处理相比，动态几何体的批处理成本要高得多。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>render</strong></td>
-	<td style="text-align:left;">Time spent rendering visible objects.</td>
+	<td style="text-align:left;">对可见对象进行渲染所用的时间。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>fixed-update-count</strong></td>
-	<td style="text-align:left;">Minimum and maximum number of FixedUpdates executed during this frame. Too many FixedUpdates will deteriorate performance considerably.</td>
+	<td style="text-align:left;">在此帧期间执行的 FixedUpdates 的最小和最大数量。过多的 FixedUpdates 将大大降低性能。</td>
 </tr>
 </tbody>
 </table>
 
-<h2>Detailed script statistics</h2>
+<h2>详细脚本统计信息</h2>
 
-<p>The <strong>mono-scripts</strong> section provides a detailed breakdown of the time spent executing code in the Mono runtime:</p>
+<p><strong>mono-scripts</strong> 部分提供 Mono 运行时期间执行代码所用的时间的详细分类：</p>
 
 <table>
 <colgroup>
@@ -311,31 +320,29 @@ mono-memory&gt; used heap: 233472 allocated heap: 548864 max number of collectio
 <thead>
 <tr>
 	<th style="text-align:left;">
-<strong>Property</strong>:</th>
-	<th style="text-align:left;">
-<strong>Function</strong>:</th>
+<strong>属性__： |</strong>功能__：</th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
 	<td style="text-align:left;"><strong>update</strong></td>
-	<td style="text-align:left;">Total time spent executing all Update() functions in scripts.</td>
+	<td style="text-align:left;">脚本中执行所有 Update() 函数所用的总时间。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>fixedUpdate</strong></td>
-	<td style="text-align:left;">Total time spent executing all FixedUpdate() functions in scripts.</td>
+	<td style="text-align:left;">脚本中执行所有 FixedUpdate() 函数所用的总时间。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>coroutines</strong></td>
-	<td style="text-align:left;">Time spent inside script coroutines.</td>
+	<td style="text-align:left;">在脚本协程内所用的时间。</td>
 </tr>
 </tbody>
 </table>
 
-<h2>Detailed statistics on memory allocated by scripts</h2>
+<h2>按脚本分配的内存的详细统计信息</h2>
 
-<p>The <strong>mono-memory</strong> section gives you an idea of how memory is being managed by the Mono garbage collector:</p>
+<p><strong>mono-memory</strong> 部分让您了解 Mono 垃圾回收器如何管理内存：</p>
 
 <table>
 <colgroup>
@@ -346,66 +353,64 @@ mono-memory&gt; used heap: 233472 allocated heap: 548864 max number of collectio
 <thead>
 <tr>
 	<th style="text-align:left;">
-<strong>Property</strong>:</th>
-	<th style="text-align:left;">
-<strong>Function</strong>:</th>
+<strong>属性__： |</strong>功能__：</th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
 	<td style="text-align:left;"><strong>allocated heap</strong></td>
-	<td style="text-align:left;">Total amount of memory available for allocations. A garbage collection will be triggered if there is not enough memory left in the heap for a given allocation. If there is still not enough free memory even after the collection then the allocated heap will grow in size.</td>
+	<td style="text-align:left;">可用于分配的内存总量。如果堆中没有足够的内存用于给定的分配，将触发垃圾收集。如果即使在收集之后仍然没有足够的可用内存，那么分配的堆的大小将增大。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>used heap</strong></td>
-	<td style="text-align:left;">The portion of the <strong>allocated heap</strong> which is currently used up by objects. Every time you create a new class instance (not a struct) this number will grow until the next garbage collection.</td>
+	<td style="text-align:left;">在 <strong>allocated heap</strong> 中当前已由对象使用的部分。每次创建新类实例（不是结构）时，该数字都会增长，直到进行下一次垃圾收集。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>max number of collections</strong></td>
-	<td style="text-align:left;">Number of garbage collection passes during the last 30 frames.</td>
+	<td style="text-align:left;">最近 30 帧期间的垃圾收集执行次数。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>collection total duration</strong></td>
-	<td style="text-align:left;">Total time (in milliseconds) of all garbage collection passes that have happened during the last 30 frames.</td>
+	<td style="text-align:left;">在最近 30 帧期间发生的所有垃圾收集过程的总时间（毫秒）。</td>
 </tr>
 </tbody>
 </table>
 
-<h2>Configuration</h2>
+<h2>配置</h2>
 
-<p>On iOS, it’s disabled by default. To enable it, open the Unity-generated XCode project, select the <code>InternalProfiler.h</code> file, and change the line</p>
+<p>在 iOS 上，内部性能分析器默认处于禁用状态。要启用，请打开 Unity 生成的 XCode 项目，选择 <code>InternalProfiler.h</code> 文件，将以下行</p>
 
 <pre><code> #define ENABLE_INTERNAL_PROFILER 0
 </code></pre>
 
-<p>to</p>
+<p>更改为</p>
 
 <pre><code> #define ENABLE_INTERNAL_PROFILER 1
 </code></pre>
 
-<p>Select <strong>View &gt; Debug Area &gt; Activate Console</strong> in the XCode menu to display the output console (GDB) and then run your project. Unity will output statistics to the console window every thirty frames.</p>
+<p>选择 XCode 菜单中的 <strong>View &gt; Debug Area &gt; Activate Console</strong> 以显示输出控制台 (GDB)，然后运行您的项目。Unity 每 30 帧就将统计信息输出到控制台窗口。</p>
 
-<p>To enable it on Android, click the <strong>Enable Internal Profiler</strong> (Deprecated) checkbox in the <a href="class-PlayerSettings.html">Player</a> window (<strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Player</strong> category). Make sure <strong>Development Build</strong> is checked in the <strong>Build Settings</strong> when building, and the statistics should show up in logcat when run on the device. To view logcat, you need <strong>adb</strong> or the Android Debug Bridge. Once you have that, simply run the shell command <strong>adb logcat</strong>.</p>
+<p>若要在 Android 上启用内部性能分析器，单击 <a href="class-PlayerSettings.html">Player</a> 窗口（__Edit__ &gt; <strong>Project Settings__，然后选择 </strong>Player__ 类别）中的 <strong>Enable Internal Profiler__（已弃用）复选框。构建时，确保已在 </strong>Build Settings__ 中选中 <strong>Development Build__，然后在设备上运行时应该会在 logcat 中显示统计信息。需要 </strong>adb__ 或 Android Debug Bridge 才能查看 logcat。拥有这些工具后，只需运行 shell 命令 <strong>adb logcat</strong>。</p>
 
 <ul>
-<li><span class="page-edit">2018–06–14 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><span class="page-edit">2018–06–14 页面已修订并只进行了有限的<a href="DocumentationEditorialReview.html">编辑审查</a>
 </span></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="iphone-iOS-Optimization.html"></a></span><div class="tip">iOS-specific optimizations</div>
+<span class="prev"><a href="iphone-iOS-Optimization.html"></a></span><div class="tip">iOS 特定优化</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="iphone-playerSizeOptimization.html"></a></span><div class="tip">Optimizing the size of the built iOS Player</div>
+<span class="next"><a href="iphone-playerSizeOptimization.html"></a></span><div class="tip">优化构建的 iOS 播放器的大小</div>
 </div>
 </div>
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2019.1</div>
 <div class="menu">
-<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>
 </div>
 <div></div>

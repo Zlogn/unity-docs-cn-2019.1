@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="no-js">
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,8 +10,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="移动设备输入 - Unity Manual">
-<title>移动设备输入 - Unity Manual</title>
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Mobile device input - Unity 手册">
+<title>Mobile device input - Unity 手册</title>
 <meta name="description" content="在移动设备上，Input 类提供对触摸屏、加速度计和地理/位置输入的访问。">
 <meta property="og:description" content="在移动设备上，Input 类提供对触摸屏、加速度计和地理/位置输入的访问。">
 <meta name="author" content="Unity Technologies">
@@ -27,13 +28,20 @@
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
 <script>
       var docs_type = 'Manual';
-      var lang = 'zh_CN';
+      var lang = 'cn';
       var page = 'MobileInput';
       if(!page) page = 'index';
       var version = '2019.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2020.1',version_string: '2020.1'},{version: '2019.3',version_string: '2019.3'},{version: '2019.2',version_string: '2019.2'},{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.1/Manual/MobileInput.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.1/Manual/MobileInput.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.1/Manual/MobileInput.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.1/Manual/MobileInput.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.1/Manual/MobileInput.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.1/Manual/MobileInput.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.1/Documentation/Manual/MobileInput.html" hreflang="x-default">
 </head>
 <body>
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -43,11 +51,11 @@
 <div id="nav-open" for="nav-input"><span></span></div>
 <div class="logo"><a href="https://docs.unity3d.com"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
-<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
 <ul class="menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 </div></div>
 <div class="more">
@@ -67,25 +75,28 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/MobileInput.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/MobileInput.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/MobileInput.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/MobileInput.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/MobileInput.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/MobileInput.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/MobileInput.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/MobileInput.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/MobileInput.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/MobileInput.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/MobileInput.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/MobileInput.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/MobileInput.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/MobileInput.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/MobileInput.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/MobileInput.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/MobileInput.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/MobileInput.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/MobileInput.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/MobileInput.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/MobileInput.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/MobileInput.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/MobileInput.html">5.6</a></li>
 </ul></div>
 </div>
 <ul class="nav-menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 <div class="lang-switcher">
 <div class="current toggle" data-target=".lang-list">
-<div class="lbl">Language:
+<div class="lbl">语言:
         <span class="b">中文</span>
 </div>
 <div class="arrow"></div>
@@ -95,13 +106,14 @@
 <li><a data-lang="ja" href="/ja/2019.1/Manual/MobileInput.html">日本語</a></li>
 <li><a data-lang="es" href="/es/2019.1/Manual/MobileInput.html">Español</a></li>
 <li><a data-lang="kr" href="/kr/2019.1/Manual/MobileInput.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.1/Manual/MobileInput.html">Русский</a></li>
 </ul></div>
 </div>
 </div></div>
 </div>
 <div id="master-wrapper" class="master-wrapper clear">
 <div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
-<h2>Manual</h2>
+<h2>手册</h2>
 <div class="version-switcher">
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
@@ -111,16 +123,19 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/MobileInput.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/MobileInput.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/MobileInput.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/MobileInput.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/MobileInput.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/MobileInput.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/MobileInput.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/MobileInput.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/MobileInput.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/MobileInput.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/MobileInput.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/MobileInput.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/MobileInput.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/MobileInput.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/MobileInput.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/MobileInput.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/MobileInput.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/MobileInput.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/MobileInput.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/MobileInput.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/MobileInput.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/MobileInput.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/MobileInput.html">5.6</a></li>
 </ul></div>
 </div>
 <div class="clear"></div>
@@ -132,7 +147,7 @@
 <li><a href="UnityOverview.html">在 Unity 中操作</a></li>
 <li><a href="CreatingGameplay.html">创建游戏玩法</a></li>
 <li><a href="Input.html">输入</a></li>
-<li>移动设备输入</li>
+<li>Mobile device input</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
@@ -142,7 +157,7 @@
 <span class="next"><a href="MobileKeyboard.html"></a></span><div class="tip">移动键盘</div>
 </div>
 </div></div>
-<h1>移动设备输入</h1>
+<h1>Mobile device input</h1>
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
@@ -150,9 +165,9 @@
 
 <p>通过 <a href="MobileKeyboard.html">iOS 键盘</a>可以访问移动设备上的键盘。</p>
 
-<h3>多点触控屏幕</h3>
+<h3>Multi-touch screen</h3>
 
-<p>iPhone 和 iPod Touch 设备最多可跟踪五根手指同时触摸屏幕。可通过访问 <a href="../ScriptReference/Input-touches.html">Input.touches</a> 属性数组来检索在最后一帧期间触摸屏幕的每根手指的状态。</p>
+<p>The iPhone, iPad and iPod Touch devices are capable of tracking up to five fingers touching the screen simultaneously. You can retrieve the status of each finger touching the screen during the last frame by accessing the <a href="../ScriptReference/Input-touches.html">Input.touches</a> property array.</p>
 
 <p>Android 设备对其跟踪的手指数量没有统一限制。相反，此限制因设备而异，可能是旧设备上的双手指触摸到某些新设备上的五指触摸。</p>
 
@@ -166,98 +181,92 @@
 
 <thead>
 <tr>
-	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
-	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+	<th style="text-align:left;" colspan="2"><strong><em>Property:</em></strong></th>
+	<th style="text-align:left;"><strong><em>Description:</em></strong></th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
-	<td style="text-align:left;"><strong>fingerId</strong></td>
-	<td style="text-align:left;">触摸的唯一索引。</td>
+	<td style="text-align:left;" colspan="2"><strong>fingerId</strong></td>
+	<td style="text-align:left;">The unique index for a touch.</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>position</strong></td>
-	<td style="text-align:left;">触摸的屏幕位置。</td>
+	<td style="text-align:left;" colspan="2"><strong>position</strong></td>
+	<td style="text-align:left;">The screen position of the touch.</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>deltaPosition</strong></td>
-	<td style="text-align:left;">自上一帧以来的屏幕位置变化。</td>
+	<td style="text-align:left;" colspan="2"><strong>deltaPosition</strong></td>
+	<td style="text-align:left;">The screen position change since the last frame.</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>deltaTime</strong></td>
-	<td style="text-align:left;">自上次状态变化以来经过的时间。</td>
+	<td style="text-align:left;" colspan="2"><strong>deltaTime</strong></td>
+	<td style="text-align:left;">Amount of time that has passed since the last state change.</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>tapCount</strong></td>
-	<td style="text-align:left;">iPhone/iPad 屏幕能够区分用户的快速手指点击。此计数器将记录用户在不将手指移到侧面的情况下点击屏幕的次数。Android 设备不计算点击次数，此字段始终为 1。</td>
+	<td style="text-align:left;" colspan="2"><strong>tapCount</strong></td>
+	<td style="text-align:left;">The iPhone/iPad screen is able to distinguish quick finger taps by the user. This counter will let you know how many times the user has tapped the screen without moving a finger to the sides. Android devices do not count number of taps, this field is always 1.</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>phase</strong></td>
-	<td style="text-align:left;">描述所谓的“阶段”或触摸状态。有助于确定触摸刚开始、用户移动了手指还是刚抬起手指。</td>
+	<td style="text-align:left;" colspan="2"><strong>phase</strong></td>
+	<td style="text-align:left;">Describes the state of the touch, which can help you determine whether the user has just started to touch screen, just moved their finger or just lifted their finger.</td>
 </tr>
-</tbody>
-</table>
-
-<p>允许的阶段如下：</p>
-
-<table>
-<colgroup>
-<col style="text-align:left;">
-<col style="text-align:left;">
-</colgroup>
-
-<thead>
 <tr>
-	<th style="text-align:left;"></th>
-	<th style="text-align:left;"></th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
+	<td style="text-align:left;"></td>
 	<td style="text-align:left;"><strong>Began</strong></td>
-	<td style="text-align:left;">手指刚触摸了屏幕。</td>
+	<td style="text-align:left;">A finger just touched the screen.</td>
 </tr>
 <tr>
+	<td style="text-align:left;"></td>
 	<td style="text-align:left;"><strong>Moved</strong></td>
-	<td style="text-align:left;">手指在屏幕上进行了移动。</td>
+	<td style="text-align:left;">A finger moved on the screen.</td>
 </tr>
 <tr>
+	<td style="text-align:left;"></td>
 	<td style="text-align:left;"><strong>Stationary</strong></td>
-	<td style="text-align:left;">手指正在触摸屏幕但自上一帧以来尚未移动。</td>
+	<td style="text-align:left;">A finger is touching the screen but hasn’t moved since the last frame.</td>
 </tr>
 <tr>
+	<td style="text-align:left;"></td>
 	<td style="text-align:left;"><strong>Ended</strong></td>
-	<td style="text-align:left;">从屏幕上抬起了手指。这是触摸的最后一个阶段。</td>
+	<td style="text-align:left;">A finger was lifted from the screen. This is the final phase of a touch.</td>
 </tr>
 <tr>
+	<td style="text-align:left;"></td>
 	<td style="text-align:left;"><strong>Canceled</strong></td>
-	<td style="text-align:left;">由于某种情况，例如用户将设备放在他们的脸部或同时执行超过五次触摸，系统取消了对触摸的跟踪。这是触摸的最后一个阶段。</td>
+	<td style="text-align:left;">The system cancelled tracking for the touch, as when (for example) the user puts the device to their face or more than five touches happened simultaneously. This is the final phase of a touch.</td>
 </tr>
 </tbody>
 </table>
 
-<p>以下是一个示例脚本，只要用户点击屏幕，就会发出一条射线：</p>
+<p>Here’s an example script that shoots a ray whenever the user taps on the screen:</p>
 
-<pre><code>var particle : GameObject;
-function Update () {
-    for (var touch : Touch in Input.touches) {
-        if (touch.phase == TouchPhase.Began) {
-            // 从当前触摸坐标构造一条射线
-            var ray = Camera.main.ScreenPointToRay (touch.position);
-            if (Physics.Raycast (ray)) {
-                // 如果命中，则创建一个粒子
-                Instantiate (particle, transform.position, transform.rotation);
+<pre><code>using UnityEngine;
+
+public class TouchInput : MonoBehaviour
+{
+    GameObject particle;
+
+    void Update()
+    {
+        foreach(Touch touch in Input.touches)
+        {
+            if (touch.phase == TouchPhase.Began)
+            {
+                // Construct a ray from the current touch coordinates
+                Ray ray = Camera.main.ScreenPointToRay(touch.position);
+                if (Physics.Raycast(ray))
+                {
+                    // Create a particle if hit
+                    Instantiate(particle, transform.position, transform.rotation);
+                }
             }
         }
     }
 }
-
-
 </code></pre>
 
-<h3>鼠标模拟</h3>
+<h3>Mouse simulation</h3>
 
 <p>除了原生触摸支持，Unity iOS/Android 还提供鼠标模拟功能。可使用标准 <a href="../ScriptReference/Input.html">Input</a> 类中的鼠标功能。请注意，根据设计，iOS/Android 设备支持多指触摸。使用鼠标功能时仅支持单指触摸。此外，移动设备上的手指触摸可从一个区域移动到另一个区域，而它们之间没有移动。移动设备上的鼠标模拟将提供移动，因此与触摸输入相比非常不同。建议在早期开发期间使用鼠标模拟，但要尽快使用触摸输入。</p>
 
@@ -275,31 +284,36 @@ function Update () {
 
 <p>以下是使用加速度计移动对象的示例脚本：</p>
 
-<pre><code>var speed = 10.0;
-function Update () {
-    var dir : Vector3 = Vector3.zero;
+<pre><code>using UnityEngine;
 
-    // 我们假设设备与地面平行，
-    // 主屏幕按钮位于右侧
+public class Accelerometer : MonoBehaviour
+{
+    float speed = 10.0f;
 
-    // 将设备的加速度轴重新映射到游戏坐标：
-    // 1) 设备的 XY 平面映射到 XZ 平面
-    // 2) 绕 Y 轴旋转 90 度
-    dir.x = -Input.acceleration.y;
-    dir.z = Input.acceleration.x;
+    void Update()
+    {
+        Vector3 dir = Vector3.zero;
+        // we assume that the device is held parallel to the ground
+        // and the Home button is in the right hand
 
-    // 将加速度矢量限制为单位球体
-    if (dir.sqrMagnitude &gt; 1)
-        dir.Normalize();
+        // remap the device acceleration axis to game coordinates:
+        // 1) XY plane of the device is mapped onto XZ plane
+        // 2) rotated 90 degrees around Y axis
 
-    // 使其每秒移动 10 米而不是每帧 10 米...
-    dir *= Time.deltaTime;
+        dir.x = -Input.acceleration.y;
+        dir.z = Input.acceleration.x;
 
-    //移动对象
-    transform.Translate (dir * speed);
+        // clamp acceleration vector to the unit sphere
+        if (dir.sqrMagnitude &gt; 1)
+            dir.Normalize();
+
+        // Make it move 10 meters per second instead of 10 meters per frame...
+        dir *= Time.deltaTime;
+
+        // Move object
+        transform.Translate(dir * speed);
+    }
 }
-
-
 </code></pre>
 
 <h3>低通滤波器</h3>
@@ -308,21 +322,33 @@ function Update () {
 
 <p>以下脚本显示了如何将低通滤波应用于加速度计读数：</p>
 
-<pre><code>var AccelerometerUpdateInterval : float = 1.0 / 60.0;
-var LowPassKernelWidthInSeconds : float = 1.0;
+<pre><code>using UnityEngine;
 
-private var LowPassFilterFactor : float = AccelerometerUpdateInterval / LowPassKernelWidthInSeconds; // 可调整
-private var lowPassValue : Vector3 = Vector3.zero;
-function Start () {
-    lowPassValue = Input.acceleration;
+public class LowPassFilterExample : MonoBehaviour
+{
+    float accelerometerUpdateInterval = 1.0f / 60.0f;
+    float lowPassKernelWidthInSeconds = 1.0f;
+
+    private float lowPassFilterFactor;
+    private Vector3 lowPassValue = Vector3.zero;
+
+    void Start()
+    {
+        lowPassFilterFactor = accelerometerUpdateInterval / lowPassKernelWidthInSeconds;
+        lowPassValue = Input.acceleration;
+    }
+
+    private void Update()
+    {
+        lowPassValue = LowPassFilterAccelerometer(lowPassValue);
+    }
+
+    Vector3 LowPassFilterAccelerometer(Vector3 prevValue)
+    {
+        Vector3 newValue = Vector3.Lerp(prevValue, Input.acceleration, lowPassFilterFactor);
+        return newValue;
+    }
 }
-
-function LowPassFilterAccelerometer() : Vector3 {
-    lowPassValue = Vector3.Lerp(lowPassValue, Input.acceleration, LowPassFilterFactor);
-    return lowPassValue;
-}
-
-
 </code></pre>
 
 <p><code>LowPassKernelWidthInSeconds</code> 的值越大，滤波值向当前输入样本收敛的速度越慢（反之亦然）。</p>
@@ -333,17 +359,30 @@ function LowPassFilterAccelerometer() : Vector3 {
 
 <p>您可以访问加速度计在帧内执行的所有测量。以下代码将展示在最后一帧内收集的所有加速度计事件的简单平均值：</p>
 
-<pre><code>var period : float = 0.0;
-var acc : Vector3 = Vector3.zero;
-for (var evnt : iPhoneAccelerationEvent in iPhoneInput.accelerationEvents) {
-    acc += evnt.acceleration * evnt.deltaTime;
-    period += evnt.deltaTime;
+<pre><code>public class AccelerationEvents : MonoBehaviour
+{ 
+    void Update()
+    {
+        GetAccelerometerValue();
+    }
+
+    Vector3 GetAccelerometerValue()
+    {
+        Vector3 acc = Vector3.zero;
+        float period = 0.0f;
+
+        foreach(AccelerationEvent evnt in Input.accelerationEvents)
+        {
+            acc += evnt.acceleration * evnt.deltaTime;
+            period += evnt.deltaTime;
+        }
+        if (period &gt; 0)
+        {
+            acc *= 1.0f / period;
+        }
+        return acc;
+    }
 }
-if (period &gt; 0)
-    acc *= 1.0/period;
-return acc;
-
-
 </code></pre>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
@@ -356,9 +395,9 @@ return acc;
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2019.1</div>
 <div class="menu">
-<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>
 </div>
 <div></div>

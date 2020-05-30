@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="no-js">
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,10 +10,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="Unity Analytics 和欧盟一般数据保护条例 (GDPR) - Unity Manual">
-<title>Unity Analytics 和欧盟一般数据保护条例 (GDPR) - Unity Manual</title>
-<meta name="description" content="The General Data Protection Regulation (GDPR) is a European Union law regulating the data privacy of EU citizens.">
-<meta property="og:description" content="The General Data Protection Regulation (GDPR) is a European Union law regulating the data privacy of EU citizens.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Unity Analytics 和欧盟一般数据保护条例 (GDPR) - Unity 手册">
+<title>Unity Analytics 和欧盟一般数据保护条例 (GDPR) - Unity 手册</title>
+<meta name="description" content="一般数据保护条例 (General Data Protection Regulation, GDPR) 是欧盟关于规范欧盟公民数据隐私的法律。">
+<meta property="og:description" content="一般数据保护条例 (General Data Protection Regulation, GDPR) 是欧盟关于规范欧盟公民数据隐私的法律。">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -27,13 +28,20 @@
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
 <script>
       var docs_type = 'Manual';
-      var lang = 'zh_CN';
+      var lang = 'cn';
       var page = 'UnityAnalyticsDataPrivacy';
       if(!page) page = 'index';
       var version = '2019.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2020.1',version_string: '2020.1'},{version: '2019.3',version_string: '2019.3'},{version: '2019.2',version_string: '2019.2'},{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.1/Manual/UnityAnalyticsDataPrivacy.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.1/Manual/UnityAnalyticsDataPrivacy.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.1/Manual/UnityAnalyticsDataPrivacy.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.1/Manual/UnityAnalyticsDataPrivacy.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.1/Manual/UnityAnalyticsDataPrivacy.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.1/Manual/UnityAnalyticsDataPrivacy.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.1/Documentation/Manual/UnityAnalyticsDataPrivacy.html" hreflang="x-default">
 </head>
 <body>
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -43,11 +51,11 @@
 <div id="nav-open" for="nav-input"><span></span></div>
 <div class="logo"><a href="https://docs.unity3d.com"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
-<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
 <ul class="menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 </div></div>
 <div class="more">
@@ -67,25 +75,28 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityAnalyticsDataPrivacy.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityAnalyticsDataPrivacy.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityAnalyticsDataPrivacy.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityAnalyticsDataPrivacy.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityAnalyticsDataPrivacy.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityAnalyticsDataPrivacy.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityAnalyticsDataPrivacy.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityAnalyticsDataPrivacy.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityAnalyticsDataPrivacy.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityAnalyticsDataPrivacy.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UnityAnalyticsDataPrivacy.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UnityAnalyticsDataPrivacy.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UnityAnalyticsDataPrivacy.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UnityAnalyticsDataPrivacy.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UnityAnalyticsDataPrivacy.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UnityAnalyticsDataPrivacy.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UnityAnalyticsDataPrivacy.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UnityAnalyticsDataPrivacy.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UnityAnalyticsDataPrivacy.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UnityAnalyticsDataPrivacy.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UnityAnalyticsDataPrivacy.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UnityAnalyticsDataPrivacy.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/UnityAnalyticsDataPrivacy.html">5.6</a></li>
 </ul></div>
 </div>
 <ul class="nav-menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 <div class="lang-switcher">
 <div class="current toggle" data-target=".lang-list">
-<div class="lbl">Language:
+<div class="lbl">语言:
         <span class="b">中文</span>
 </div>
 <div class="arrow"></div>
@@ -95,13 +106,14 @@
 <li><a data-lang="ja" href="/ja/2019.1/Manual/UnityAnalyticsDataPrivacy.html">日本語</a></li>
 <li><a data-lang="es" href="/es/2019.1/Manual/UnityAnalyticsDataPrivacy.html">Español</a></li>
 <li><a data-lang="kr" href="/kr/2019.1/Manual/UnityAnalyticsDataPrivacy.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.1/Manual/UnityAnalyticsDataPrivacy.html">Русский</a></li>
 </ul></div>
 </div>
 </div></div>
 </div>
 <div id="master-wrapper" class="master-wrapper clear">
 <div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
-<h2>Manual</h2>
+<h2>手册</h2>
 <div class="version-switcher">
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
@@ -111,16 +123,19 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityAnalyticsDataPrivacy.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityAnalyticsDataPrivacy.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityAnalyticsDataPrivacy.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityAnalyticsDataPrivacy.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityAnalyticsDataPrivacy.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityAnalyticsDataPrivacy.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityAnalyticsDataPrivacy.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityAnalyticsDataPrivacy.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityAnalyticsDataPrivacy.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityAnalyticsDataPrivacy.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UnityAnalyticsDataPrivacy.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UnityAnalyticsDataPrivacy.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UnityAnalyticsDataPrivacy.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UnityAnalyticsDataPrivacy.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UnityAnalyticsDataPrivacy.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UnityAnalyticsDataPrivacy.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UnityAnalyticsDataPrivacy.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UnityAnalyticsDataPrivacy.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UnityAnalyticsDataPrivacy.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UnityAnalyticsDataPrivacy.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UnityAnalyticsDataPrivacy.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UnityAnalyticsDataPrivacy.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/UnityAnalyticsDataPrivacy.html">5.6</a></li>
 </ul></div>
 </div>
 <div class="clear"></div>
@@ -145,41 +160,41 @@
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>The General Data Protection Regulation (GDPR) is a European Union law regulating the data privacy of EU citizens. </p>
+<p>一般数据保护条例 (General Data Protection Regulation, GDPR) 是欧盟关于规范欧盟公民数据隐私的法律。</p>
 
 <ul>
-<li><p>For more information about EU GDPR, see <a href="https://www.eugdpr.org">https://www.eugdpr.org</a></p></li>
-<li><p>For information about Unity and GDPR, see<a href="https://unity3d.com/legal/gdpr"> https://unity3d.com/legal/gdpr</a></p></li>
-<li><p>For Unity’s own privacy policy, see <a href="https://unity3d.com/legal/privacy-policy">https://unity3d.com/legal/privacy-policy</a></p></li>
+<li><p>有关欧盟 GDPR 的更多信息，请参阅 <a href="https://www.eugdpr.org">https://www.eugdpr.org</a></p></li>
+<li><p>有关 Unity 和 GDPR 的信息，请参阅 <a href="https://unity3d.com/legal/gdpr">https://unity3d.com/legal/gdpr</a></p></li>
+<li><p>有关 Unity 自身的隐私政策，请参阅 <a href="https://unity3d.com/legal/privacy-policy">https://unity3d.com/legal/privacy-policy</a></p></li>
 </ul>
 
-<p>Maintaining compliance with GDPR when you use Unity Analytics is a shared responsibility. Unity collects data to help you improve the player experience with ads and gameplay. Some of that data includes personally identifiable information (PII) regulated under GDPR. Unity provides the tools to allow a player to opt out of the PII collection, and to manage the personal data that Unity collects about them, as required by the GDPR. Your responsibilities include adding an opt-out button to your app, and providing a link to Unity’s privacy policy from your own privacy policy. </p>
+<p>使用 Unity Analytics 时保持对 GDPR 的遵从性是我们共同的责任。Unity 会收集数据来帮助您通过广告和游戏改善玩家体验。这些数据中的一些数据包括 GDPR 规定的涉及个人身份的信息 (PII)。Unity 提供了一些工具，让玩家可以选择退出 PII 收集以及管理 Unity 根据 GDPR 规定收集的个人数据。您的责任包括为应用程序添加一个选择退出 (opt-out) 按钮，并在您自己的隐私政策中提供 Unity 隐私政策的链接。</p>
 
-<p>When your app uses Unity Ads, Unity displays a notice to the player the first time an ad is shown on their phone giving them the option to opt in or out of personally identifiable information collection. Subsequent ads also display a button that users can use to manage their data privacy options. For more information about GDPR and the Unity Ads SDK, see <a href="https://unityads.unity3d.com/help/legal/gdpr">Unity Ads Knowledge Base: GDPR Compliance</a>.</p>
+<p>如果您的应用程序使用 Unity Ads，Unity 会在首次在手机上展示广告时向玩家显示通知，让他们可以选择加入或退出涉及个人身份的信息收集。后续广告也会显示一个按钮，用户可以使用该按钮来管理其数据隐私选项。有关 GDPR 和 Unity Ads SDK 的更多信息，请参阅 <a href="https://unityads.unity3d.com/help/legal/gdpr">Unity Ads Knowledge Base：GDPR 合规性 (GDPR Compliance)</a>。</p>
 
-<p>If you use both Unity Ads and Analytics, the Unity Ads opt-out mechanism applies to both services.</p>
+<p>如果您同时使用 Unity Ads 和 Analytics，则 Unity Ads 的选择退出机制适用于这两种服务。</p>
 
-<p>If you do not use Unity Ads, but do use other Unity services, such as Unity Analytics, IAP, Multiplayer, or Performance Reporting, then you must use the <strong>Unity Analytics Data Privacy</strong> plug-in to provide an opt-out choice to your players. The plug-in provides a button you can add to your game that opens a Unity web page where players can manage their privacy settings. Players manage their preferences on a per-game, per-device basis. Unity Analytics does not track whether the same player plays more than one game made with Unity, or plays the same game on multiple devices.</p>
+<p>如果您不使用 Unity Ads，但使用其他 Unity 服务，例如 Unity Analytics、IAP、Multiplayer 或 Performance Reporting，则必须使用 <strong>Unity Analytics Data Privacy</strong> 插件为玩家提供选择退出选项。该插件提供了一个可添加到游戏中的按钮，此按钮可打开 Unity 网页，让玩家可在其中管理其隐私设置。玩家根据每个设备管理每个游戏的偏好设置。Unity Analytics 不会跟踪同一玩家是否在玩使用 Unity 制作的多个游戏或者在多个设备上玩同一个游戏。</p>
 
 <p>以上选项涵盖 Unity 收集的用于定制广告和玩家服务的所有数据。但是，如果您自行收集涉及个人身份信息的数据，您有责任保护和管理该数据。</p>
 
-<p>Best practices:</p>
+<p>最佳实践：</p>
 
 <ul>
 <li><p>自行征求法律意见。本文档中的任何内容均不应视为法律意见。</p></li>
-<li><p>Read and understand the <a href="https://unity3d.com/profiles/unity3d/themes/unity/images/pages/gdpr/Controller-Controller-DPA-5-2-2018.pdf">Data Processing Addendum (DPA)</a> [PDF]</p></li>
-<li><p>List Unity as a third-party which collects data in your privacy policy, and include a link to Unity’s <a href="https://unity3d.com/legal/privacy-policy">privacy policy</a> in your privacy policy.</p></li>
+<li><p>阅读并理解<a href="https://unity3d.com/profiles/unity3d/themes/unity/images/pages/gdpr/Controller-Controller-DPA-5-2-2018.pdf">数据处理附录 (Data Processing Addendum, DPA)</a> [PDF]</p></li>
+<li><p>在您的隐私政策中将 Unity 列为收集数据的第三方，并在您的隐私政策中包含 Unity <a href="https://unity3d.com/legal/privacy-policy">隐私政策</a>的链接。</p></li>
 <li><p>请勿在标准或自定义事件中向 Unity Analytics 发送涉及个人身份的信息。</p></li>
-<li><p>Do not use the <code>Analytics.SetUserGender()</code> or <code>Analytics.SetUserBirthYear()</code> to send gender and age information to Unity Analytics. These APIs are deprecated.</p></li>
+<li><p>请勿使用 <code>Analytics.SetUserGender()</code> 或 <code>Analytics.SetUserBirthYear()</code> 将性别和年龄信息发送到 Unity Analytics。这些 API 已弃用。</p></li>
 </ul>
 
-<h2>The Unity Analytics Data Privacy Plug-in</h2>
+<h2>Unity Analytics Data Privacy 插件</h2>
 
-<p>If you do not use Unity Ads, then you must use the Unity Analytics Data Privacy plug-in to give your players control over Unity Analytics data collection.</p>
+<p>如果您不使用 Unity Ads，则必须使用 Unity Analytics Data Privacy 插件让您的玩家控制 Unity Analytics 数据收集。</p>
 
-<p>The Data Privacy plug-in is part of the Unity <strong>Analytics Library</strong> package. You can use the Unity Package Manager (menu: <strong>Window</strong> &gt; <strong>Package Manager</strong>) to double-check that the package is enabled in a project. </p>
+<p>Data Privacy 插件是 Unity <strong>Analytics Library</strong> 包的一部分。您可以使用 Unity Package Manager（菜单：<strong>Window</strong> &gt; <strong>Package Manager</strong>）来仔细检查项目中是否启用了该包。</p>
 
-<p>The plug-in does <strong>not</strong> support the following platforms:</p>
+<p>该插件<strong>不</strong>支持以下平台：</p>
 
 <ul>
 <li>Linux</li>
@@ -189,42 +204,42 @@
 <li>Blackberry</li>
 </ul>
 
-<p>The Unity Analytics service deletes personally identifiable information sent from games running on those platforms automatically. Contact <a href="mailto:DPO@unity3d.com">DPO@unity3d.com</a> if you have questions.</p>
+<p>Unity Analytics 服务会自动删除从这些平台上运行的游戏发送的涉及个人身份的信息。如有任何问题，请联系 <a href="mailto:DPO@unity3d.com">DPO@unity3d.com</a>。</p>
 
-<p>If your game displays ads from the Unity Ad network, the Unity Ads SDK already displays a data collection opt-out choice to the player, and configures Unity Analytics based on the player’s data privacy choice. You only need to use the Unity Analytics Data Privacy plug-in when you do not use the Unity Ads service.</p>
+<p>如果您的游戏显示来自 Unity Ads 网络的广告，则 Unity Ads SDK 已经向玩家显示数据收集选择退出选项，并已根据玩家的数据隐私选项配置 Unity Analytics。如果不使用 Unity Ads 服务，您只需要使用 Unity Analytics Data Privacy 插件。</p>
 
-<p><strong>Note:</strong> For versions of Unity prior to 2018.3, you must use the Unity Analytics Data Privacy asset package from the <a href="https://www.assetstore.unity3d.com/#!/content/118922">Unity Asset Store</a>. The Asset Store version can be used with Unity 4.7, 5.1+, 2017.1+, 2018.1, and 2018.2. </p>
+<p><strong>注意：</strong>对于 2018.3 之前的 Unity 版本，必须使用来自 <a href="https://www.assetstore.unity3d.com/#!/content/118922">Unity Asset Store</a> 的 Unity Analytics Data Privacy 资源包。Asset Store 版本可与 Unity 4.7、5.1+、2017.1+、2018.1 和 2018.2 一起使用。</p>
 
-<h3>Presenting the opt-out choice to the player</h3>
+<h3>向玩家提供选择退出选项</h3>
 
-<p>The Data Privacy plug-in includes a Unity UI button prefab, which you can place in a suitable location of your user interface. When a player clicks this button, it opens the Player Data Privacy page in a web browser. Players can opt-out of Unity’s data collection on this page as well as view the data that Unity has collected in the past. You can also provide your own user interface and open the Player Data Privacy page using the <a href="UnityAnalyticsDataPrivacyAPI.html">API</a>.</p>
+<p>Data Privacy 插件包含一个 Unity UI 按钮预制件，您可以将其放置在用户界面的合适位置。当玩家单击此按钮时，它会在 Web 浏览器中打开 Player Data Privacy 页面。玩家可以在此页面中选择退出 Unity 的数据收集，还可以查看 Unity 过去收集的数据。您还可以提供自己的用户界面并使用 <a href="UnityAnalyticsDataPrivacyAPI.html">API</a> 打开 Player Data Privacy 页面。</p>
 
-<p><strong>Important:</strong> If a player has a browser pop-up blocker enabled, their browser can prevent the data privacy page from opening. Some browsers note that a page has been blocked, but others provide no notice at all. Consider adding a message in your user interface that warns players that a pop-up blocker might prevent the page from opening.</p>
+<p><strong>重要信息：</strong>如果玩家启用了浏览器弹出窗口阻止程序，则其浏览器可能阻止打开数据隐私页面。有些浏览器会提示某个页面已被阻止，但其他浏览器根本没有提供任何提示。因此，应考虑在您的用户界面中添加一条消息，告知玩家弹出窗口阻止程序可能会阻止打开页面。</p>
 
-<p><strong>Method 1: Using Unity UI</strong></p>
+<p><strong>方法 1：使用 Unity UI</strong></p>
 
-<ol>
-<li><p>If you do not already have a <a href="UICanvas.html">Canvas</a> GameObject in the Scene, add one. Unity automatically adds an <a href="script-EventSystem.html">EventSystem</a> when you add the <strong>Canvas</strong>.</p></li>
-<li><p>Drag the <strong>DataPrivacyButton</strong> prefab to the <strong>Canvas</strong> GameObject in the Scene. Find the prefab in the Project window, in the <strong>Packages/Analytics Library/DataPrivacy</strong> folder.</p></li>
-<li><p>Adjust the position, graphics, and text of the button to suit.</p></li>
-<li><p>The button is already connected to the Data Privacy API, so that it opens the player’s personal data management page when the player clicks it. The page opens in a web browser.</p></li>
-</ol>
+<p>1.如果场景中还没有 <a href="UICanvas.html">Canvas</a> 游戏对象，请添加一个。在添加 <strong>Canvas</strong> 时，Unity 会自动添加一个 <a href="script-EventSystem.html">EventSystem</a>。</p>
 
-<p><strong>Note:</strong> The version of the button prefab under the <strong>Packages</strong> folder is read-only. You can make changes to the instance of the button in the <strong>Scene</strong> hierarchy, but you cannot save those changes back to the original prefab.</p>
+<p>2.将 <strong>DataPrivacyButton</strong> 预制件拖到场景中的 <strong>Canvas</strong> 游戏对象上。在 Project 窗口的 <strong>Packages/Analytics Library/DataPrivacy</strong> 文件夹中找到该预制件。</p>
 
-<p><strong>Method 2: Using you own UI</strong></p>
+<p>3.根据需要调整按钮的位置、图形和文本。</p>
 
-<p>To use your own user interface for the button, you can request the URL of the user’s data opt-out page and then open that URL in a browser or web view:</p>
+<p>4.该按钮已连接到 Data Privacy API，因此在玩家单击该按钮时会打开玩家的个人数据管理页面。此页面将在 Web 浏览器中打开。</p>
 
-<ol>
-<li>
-<p>Create your own UI control that informs the player of their ability to opt-out of data collection.</p>
+<p><strong>注意：</strong>位于 <strong>Packages</strong> 文件夹下的按钮预制件版本是只读的。您可以在 <strong>Scene</strong> 层级视图中更改按钮实例，但无法将这些更改保存回原始预制件。</p>
 
-<p><strong>Note:</strong> The Data Privacy plug-in includes an icon in the <em>Packages/Analytics Library/DataPrivacy</em> folder. Unity encourages you to use this icon on your data privacy button (or similar control) to provide a consistent graphical cue to players encountering data privacy controls in Unity games.</p>
-</li>
-<li><p>In response to the player’s click or interaction with this control, call the <code>DataPrivacy.FetchPrivacyUrl()</code> function. This function takes an <code>Action&lt;string&gt;</code> object that it invokes when the network request completes. You can optionally pass in a second <code>Action&lt;string&gt;</code> function to handle cases where the network request fails.</p></li>
-<li><p>In your handler for the <code>FetchPrivacyUrl()</code> request, use <code>Application.OpenURL()</code> to open the URL received in a browser.</p></li>
-</ol>
+<p><strong>方法 2：使用您自己的 UI</strong></p>
+
+<p>要使用您自己的用户界面创建该按钮，您可以请求用户数据选择退出页面的 URL，然后在浏览器或 Web 视图中打开该 URL：</p>
+
+<p>1.创建您自己的 UI 控件，告知玩家可以选择退出数据收集。</p>
+
+<pre><code>**注意：**Data Privacy 插件在 *Packages/Analytics Library/DataPrivacy* 文件夹中包含一个图标。Unity 鼓励您在 Data Privacy 按钮（或类似控件）上使用此图标，从而给在 Unity 游戏中遇到数据隐私控件的玩家提供一致的图形提示。
+</code></pre>
+
+<p>2.为了响应玩家对此控件的单击操作或与此控件的交互，调用 <code>DataPrivacy.FetchPrivacyUrl()</code> 函数。此函数采用在网络请求完成时调用的 <code>Action&lt;string&gt;</code> 对象。还可以选择传入第二个 <code>Action&lt;string&gt;</code> 函数来处理网络请求失败的情况。</p>
+
+<p>3.在 <code>FetchPrivacyUrl()</code> 请求的处理程序中，请使用 <code>Application.OpenURL()</code> 打开在浏览器中收到的 URL。</p>
 
 <p>例如，以下脚本将打开 Player Data Privacy 页面来响应对游戏对象的单击：</p>
 
@@ -257,15 +272,15 @@ public class OptOutHandler : MonoBehaviour {
 }
 </code></pre>
 
-<p>See <a href="UnityAnalyticsDataPrivacyAPI.html">Unity Analytics DataPrivacy API</a> for more information.</p>
+<p>想了解更多相关信息，请参阅 <a href="UnityAnalyticsDataPrivacyAPI.html">Unity Analytics DataPrivacy API</a>。</p>
 
 <hr>
 
 <ul>
-<li><span class="page-edit">2018–09–21 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><span class="page-edit">2018–09–21 页面已发布并只进行了有限的<a href="DocumentationEditorialReview.html">编辑审查</a>
 </span></li>
-<li><span class="page-history">Data Privacy plugin incorporated into Analytics package in 2018.3+.</span></li>
-<li><span class="page-history">Removed Editor menu command for inserting the Data Privacy button. Added the Data Privacy Button prefab.</span></li>
+<li><span class="page-history">在 2018.3+ 版中将 Data Privacy 插件整合到 Analytics 包中。</span></li>
+<li><span class="page-history">删除了用于插入 Data Privacy 按钮的 Editor 菜单命令。添加了 Data Privacy Button 预制件。</span></li>
 <li><span class="page-history">Unity 2018.1 中的新功能</span></li>
 </ul>
 <div class="nextprev clear">
@@ -279,9 +294,9 @@ public class OptOutHandler : MonoBehaviour {
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2019.1</div>
 <div class="menu">
-<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>
 </div>
 <div></div>

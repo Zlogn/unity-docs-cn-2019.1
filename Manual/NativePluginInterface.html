@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="no-js">
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,8 +10,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="Low-level native plug-in interface - Unity Manual">
-<title>Low-level native plug-in interface - Unity Manual</title>
+<meta name="robots" content="noindex">
+<meta property="og:title" content="低级原生插件接口 - Unity 手册">
+<title>低级原生插件接口 - Unity 手册</title>
 <meta name="description" content="In addition to the basic script interface, Native Code Plug-ins in Unity can receive callbacks when certain events happen. This is mostly used to implement low-level rendering in your plug-in and enable it to work with Unity&amp;#8217;s multithreaded rendering.">
 <meta property="og:description" content="In addition to the basic script interface, Native Code Plug-ins in Unity can receive callbacks when certain events happen. This is mostly used to implement low-level rendering in your plug-in and enable it to work with Unity&amp;#8217;s multithreaded rendering.">
 <meta name="author" content="Unity Technologies">
@@ -27,13 +28,20 @@
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
 <script>
       var docs_type = 'Manual';
-      var lang = 'zh_CN';
+      var lang = 'cn';
       var page = 'NativePluginInterface';
       if(!page) page = 'index';
       var version = '2019.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2020.1',version_string: '2020.1'},{version: '2019.3',version_string: '2019.3'},{version: '2019.2',version_string: '2019.2'},{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.1/Manual/NativePluginInterface.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.1/Manual/NativePluginInterface.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.1/Manual/NativePluginInterface.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.1/Manual/NativePluginInterface.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.1/Manual/NativePluginInterface.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.1/Manual/NativePluginInterface.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.1/Documentation/Manual/NativePluginInterface.html" hreflang="x-default">
 </head>
 <body>
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -43,11 +51,11 @@
 <div id="nav-open" for="nav-input"><span></span></div>
 <div class="logo"><a href="https://docs.unity3d.com"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
-<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
 <ul class="menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 </div></div>
 <div class="more">
@@ -67,25 +75,28 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/NativePluginInterface.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/NativePluginInterface.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/NativePluginInterface.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/NativePluginInterface.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/NativePluginInterface.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/NativePluginInterface.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/NativePluginInterface.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/NativePluginInterface.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/NativePluginInterface.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/NativePluginInterface.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/NativePluginInterface.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/NativePluginInterface.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/NativePluginInterface.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/NativePluginInterface.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/NativePluginInterface.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/NativePluginInterface.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/NativePluginInterface.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/NativePluginInterface.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/NativePluginInterface.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/NativePluginInterface.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/NativePluginInterface.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/NativePluginInterface.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/NativePluginInterface.html">5.6</a></li>
 </ul></div>
 </div>
 <ul class="nav-menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 <div class="lang-switcher">
 <div class="current toggle" data-target=".lang-list">
-<div class="lbl">Language:
+<div class="lbl">语言:
         <span class="b">中文</span>
 </div>
 <div class="arrow"></div>
@@ -95,13 +106,14 @@
 <li><a data-lang="ja" href="/ja/2019.1/Manual/NativePluginInterface.html">日本語</a></li>
 <li><a data-lang="es" href="/es/2019.1/Manual/NativePluginInterface.html">Español</a></li>
 <li><a data-lang="kr" href="/kr/2019.1/Manual/NativePluginInterface.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.1/Manual/NativePluginInterface.html">Русский</a></li>
 </ul></div>
 </div>
 </div></div>
 </div>
 <div id="master-wrapper" class="master-wrapper clear">
 <div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
-<h2>Manual</h2>
+<h2>手册</h2>
 <div class="version-switcher">
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
@@ -111,16 +123,19 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/NativePluginInterface.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/NativePluginInterface.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/NativePluginInterface.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/NativePluginInterface.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/NativePluginInterface.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/NativePluginInterface.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/NativePluginInterface.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/NativePluginInterface.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/NativePluginInterface.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/NativePluginInterface.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/NativePluginInterface.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/NativePluginInterface.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/NativePluginInterface.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/NativePluginInterface.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/NativePluginInterface.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/NativePluginInterface.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/NativePluginInterface.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/NativePluginInterface.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/NativePluginInterface.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/NativePluginInterface.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/NativePluginInterface.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/NativePluginInterface.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/NativePluginInterface.html">5.6</a></li>
 </ul></div>
 </div>
 <div class="clear"></div>
@@ -131,18 +146,18 @@
 <li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
 <li><a href="UnityOverview.html">在 Unity 中操作</a></li>
 <li><a href="AdvancedDevelopment.html">高级开发</a></li>
-<li><a href="Plugins.html">Plug-ins</a></li>
-<li>Low-level native plug-in interface</li>
+<li><a href="Plugins.html">插件</a></li>
+<li>低级原生插件接口</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="PluginsForDesktop.html"></a></span><div class="tip">Building plug-ins for desktop platforms</div>
+<span class="prev"><a href="PluginsForDesktop.html"></a></span><div class="tip">构建适用于桌面平台的插件</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="LowLevelNativePluginProfiler.html"></a></span><div class="tip">Low-level native plug-in Profiler API</div>
+<span class="next"><a href="LowLevelNativePluginProfiler.html"></a></span><div class="tip">低级原生插件 Profiler API</div>
 </div>
 </div></div>
-<h1>Low-level native plug-in interface</h1>
+<h1>低级原生插件接口</h1>
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
@@ -152,7 +167,7 @@
 
 <h2>接口注册表</h2>
 
-<p>A plug-in should export <code>UnityPluginLoad</code> and <code>UnityPluginUnload</code> functions to handle main Unity events. See <code>IUnityInterface.h</code> for the correct signatures. <code>IUnityInterfaces</code> is provided to the plug-in to access further Unity APIs.</p>
+<p>插件应导出 <code>UnityPluginLoad</code> 和 <code>UnityPluginUnload</code> 函数来处理主要的 Unity 事件。请参阅 <code>IUnityInterface.h</code> 以查看正确的签名。提供给插件的 <code>IUnityInterfaces</code> 是为了访问更多的 Unity API。</p>
 
 <pre><code># include "IUnityInterface.h"
 # include "IUnityGraphics.h"
@@ -166,7 +181,7 @@ extern "C" void UNITY_INTERFACE_EXPORT UNITY_INTERFACE_API
 
 <h2>访问图形设备</h2>
 
-<p>A plug-in can access generic graphics device functionality by getting the <code>IUnityGraphics</code> interface. In earlier versions of Unity a <code>UnitySetGraphicsDevice</code> function had to be exported in order to receive notification about events on the graphics device. Starting with Unity 5.2 the new IUnityGraphics interface (found in <code>IUnityGraphics.h</code>) provides a way to register a callback.</p>
+<p>插件可通过获取 <code>IUnityGraphics</code> 接口来访问通用图形设备功能。在早期版本的 Unity 中，必须导出 <code>UnitySetGraphicsDevice</code> 函数才能接收图形设备上的事件的相关通知。从 Unity 5.2 开始，新的 IUnityGraphics 接口（位于 <code>IUnityGraphics.h</code> 中）提供了一种注册回调的方式。</p>
 
 <pre><code># include "IUnityInterface.h"
 # include "IUnityGraphics.h"
@@ -227,7 +242,7 @@ static void UNITY_INTERFACE_API
 }
 </code></pre>
 
-<h2>Plug-in Callbacks on the Rendering Thread</h2>
+<h2>渲染线程上的插件回调</h2>
 
 <p>如果平台和可用 CPU 数允许，则在 Unity 中的渲染可以是多线程的。当使用多线程渲染时，执行这些渲染 API 命令的线程完全独立于运行 MonoBehaviour 脚本的线程。因此，您的插件并非总是可以立即开始进行渲染，因为它可能会干扰渲染线程此时正在进行的工作。</p>
 
@@ -250,7 +265,7 @@ extern "C" UnityRenderingEvent UNITY_INTERFACE_EXPORT UNITY_INTERFACE_API
 }
 </code></pre>
 
-<p>Managed plug-in code example:</p>
+<p>托管插件代码示例：</p>
 
 <pre><code># if UNITY_IPHONE &amp;amp;&amp;amp; !UNITY_EDITOR
 [DllImport ("__Internal")]
@@ -265,17 +280,17 @@ GL.IssuePluginEvent(GetRenderEventFunc(), 1);
 
 <p>现在还可通过 <a href="../ScriptReference/Rendering.CommandBuffer.IssuePluginEvent.html">CommandBuffer.IssuePluginEvent</a> 将此类回调添加到 CommandBuffer。</p>
 
-<h2>Plug-in using the OpenGL graphics API</h2>
+<h2>使用 OpenGL 图形 API 的插件</h2>
 
 <p>有两种 OpenGL 对象：跨 OpenGL 上下文共享的对象（纹理、缓冲、渲染缓冲、采样器、查询、着色器和程序对象）和每个 OpenGL 的上下文对象（顶点数组、帧缓冲、程序管线、变换反馈和同步对象）。</p>
 
 <p>Unity 使用多个 OpenGL 上下文。在初始化和关闭 Editor 和播放器时，我们依赖于<strong>主</strong>上下文，但我们使用专用上下文进行渲染。因此，在 <code>kUnityGfxDeviceEventInitialize</code> 和 <code>kUnityGfxDeviceEventShutdown</code> 事件期间无法创建每个上下文的对象。</p>
 
-<p>For example, a native plug-in can’t create a vertex array object during a <code>kUnityGfxDeviceEventInitialize</code> event and use it in a <code>UnityRenderingEvent</code> callback, because the active context is not the one used during the vertex array object creation.</p>
+<p>例如，原生插件在 <code>kUnityGfxDeviceEventInitialize</code> 事件期间无法创建顶点数组对象并在 <code>UnityRenderingEvent</code> 回调中使用该对象，因为活动上下文不是顶点数组对象创建期间使用的上下文。</p>
 
 <h2>示例</h2>
 
-<p>An example of a low-level rendering plug-in is on bitbucket: <strong><a href="https://bitbucket.org/Unity-Technologies/graphicsdemos">bitbucket.org/Unity-Technologies/graphicsdemos</a></strong> (NativeRenderingPlugin folder). It demonstrates two things:</p>
+<p>Bitbucket 上提供了一个低级渲染插件的示例：<strong><a href="https://bitbucket.org/Unity-Technologies/graphicsdemos">bitbucket.org/Unity-Technologies/graphicsdemos</a></strong>（NativeRenderingPlugin 文件夹）。该示例展示了两个方面：</p>
 
 <ul>
 <li>在完成所有常规渲染后，从 C++ 代码渲染旋转三角形。</li>
@@ -294,22 +309,22 @@ GL.IssuePluginEvent(GetRenderEventFunc(), 1);
 
 <hr>
 
-<p><span class="page-edit">• 2017–05–16 Page amended with no <a href="DocumentationEditorialReview.html">editorial review</a>
+<p><span class="page-edit">• 2017–05–16 页面已修订但未经<a href="DocumentationEditorialReview.html">编辑审查</a>
 </span><br></p>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="PluginsForDesktop.html"></a></span><div class="tip">Building plug-ins for desktop platforms</div>
+<span class="prev"><a href="PluginsForDesktop.html"></a></span><div class="tip">构建适用于桌面平台的插件</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="LowLevelNativePluginProfiler.html"></a></span><div class="tip">Low-level native plug-in Profiler API</div>
+<span class="next"><a href="LowLevelNativePluginProfiler.html"></a></span><div class="tip">低级原生插件 Profiler API</div>
 </div>
 </div>
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2019.1</div>
 <div class="menu">
-<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>
 </div>
 <div></div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="no-js">
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,11 +10,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="App thinning - Unity Manual">
-<title>App thinning - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/AppThinning-BuildSettings.png">
-<meta name="description" content="The Apple store and iOS optimize the installation of iOS, tvOS, and watchOS apps by tailoring app delivery to the capabilities of a user’s particular device. This optimization is called app thinning. App thinning lets you create apps that use the most device features, occupy minimum disk space, and accommodate future updates that can be applied by Apple. Learn more about this optimization process on Apple&amp;#8217;s Developer Library page on App Thinning.">
-<meta property="og:description" content="The Apple store and iOS optimize the installation of iOS, tvOS, and watchOS apps by tailoring app delivery to the capabilities of a user’s particular device. This optimization is called app thinning. App thinning lets you create apps that use the most device features, occupy minimum disk space, and accommodate future updates that can be applied by Apple. Learn more about this optimization process on Apple&amp;#8217;s Developer Library page on App Thinning.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="应用程序精简 - Unity 手册">
+<title>应用程序精简 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.1/uploads/Main/AppThinning-BuildSettings.png">
+<meta name="description" content="Apple 商店和 iOS 可根据用户具体设备的性能来定制 iOS、tvOS 和 watchOS 应用程序的分发，从而优化这些应用程序的安装。此优化称为应用程序精简。借助应用程序精简，可以使创建的应用程序利用最多的设备功能、占用最少的磁盘空间并适应 Apple 未来可能应用的更新。请参阅 Apple 关于应用程序精简的开发者库页面，了解有关此优化过程的更多信息。">
+<meta property="og:description" content="Apple 商店和 iOS 可根据用户具体设备的性能来定制 iOS、tvOS 和 watchOS 应用程序的分发，从而优化这些应用程序的安装。此优化称为应用程序精简。借助应用程序精简，可以使创建的应用程序利用最多的设备功能、占用最少的磁盘空间并适应 Apple 未来可能应用的更新。请参阅 Apple 关于应用程序精简的开发者库页面，了解有关此优化过程的更多信息。">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -28,13 +29,20 @@
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
 <script>
       var docs_type = 'Manual';
-      var lang = 'zh_CN';
+      var lang = 'cn';
       var page = 'AppThinning';
       if(!page) page = 'index';
       var version = '2019.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2020.1',version_string: '2020.1'},{version: '2019.3',version_string: '2019.3'},{version: '2019.2',version_string: '2019.2'},{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.1/Manual/AppThinning.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.1/Manual/AppThinning.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.1/Manual/AppThinning.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.1/Manual/AppThinning.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.1/Manual/AppThinning.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.1/Manual/AppThinning.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.1/Documentation/Manual/AppThinning.html" hreflang="x-default">
 </head>
 <body>
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -44,11 +52,11 @@
 <div id="nav-open" for="nav-input"><span></span></div>
 <div class="logo"><a href="https://docs.unity3d.com"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
-<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
 <ul class="menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 </div></div>
 <div class="more">
@@ -68,25 +76,28 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AppThinning.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AppThinning.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AppThinning.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AppThinning.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AppThinning.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AppThinning.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AppThinning.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AppThinning.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AppThinning.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AppThinning.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/AppThinning.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/AppThinning.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/AppThinning.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/AppThinning.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/AppThinning.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/AppThinning.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/AppThinning.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/AppThinning.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/AppThinning.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/AppThinning.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/AppThinning.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/AppThinning.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/AppThinning.html">5.6</a></li>
 </ul></div>
 </div>
 <ul class="nav-menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 <div class="lang-switcher">
 <div class="current toggle" data-target=".lang-list">
-<div class="lbl">Language:
+<div class="lbl">语言:
         <span class="b">中文</span>
 </div>
 <div class="arrow"></div>
@@ -96,13 +107,14 @@
 <li><a data-lang="ja" href="/ja/2019.1/Manual/AppThinning.html">日本語</a></li>
 <li><a data-lang="es" href="/es/2019.1/Manual/AppThinning.html">Español</a></li>
 <li><a data-lang="kr" href="/kr/2019.1/Manual/AppThinning.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.1/Manual/AppThinning.html">Русский</a></li>
 </ul></div>
 </div>
 </div></div>
 </div>
 <div id="master-wrapper" class="master-wrapper clear">
 <div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
-<h2>Manual</h2>
+<h2>手册</h2>
 <div class="version-switcher">
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
@@ -112,16 +124,19 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/AppThinning.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/AppThinning.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/AppThinning.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/AppThinning.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/AppThinning.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/AppThinning.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/AppThinning.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/AppThinning.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/AppThinning.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/AppThinning.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/AppThinning.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/AppThinning.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/AppThinning.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/AppThinning.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/AppThinning.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/AppThinning.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/AppThinning.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/AppThinning.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/AppThinning.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/AppThinning.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/AppThinning.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/AppThinning.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/AppThinning.html">5.6</a></li>
 </ul></div>
 </div>
 <div class="clear"></div>
@@ -133,82 +148,82 @@
 <li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
 <li><a href="iphone.html">iOS</a></li>
 <li>iOS 高级主题</li>
-<li>App thinning</li>
+<li>应用程序精简</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="iosCustomWWWRequest.html"></a></span><div class="tip">Customising WWW requests on iOS</div>
+<span class="prev"><a href="iosCustomWWWRequest.html"></a></span><div class="tip">自定义 iOS 上的 WWW 请求</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
 <span class="next"><a href="iOSManagedStackTraces.html"></a></span><div class="tip">iOS 上的托管堆栈跟踪</div>
 </div>
 </div></div>
-<h1>App thinning</h1>
+<h1>应用程序精简</h1>
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>The Apple store and iOS optimize the installation of iOS, tvOS, and watchOS apps by tailoring app delivery to the capabilities of a user’s particular device. This optimization is called app thinning. App thinning lets you create apps that use the most device features, occupy minimum disk space, and accommodate future updates that can be applied by Apple. Learn more about this optimization process on <a href="https://developer.apple.com/library/tvos/documentation/IDEs/Conceptual/AppDistributionGuide/AppThinning/AppThinning.html">Apple’s Developer Library page on App Thinning</a>.</p>
+<p>Apple 商店和 iOS 可根据用户具体设备的性能来定制 iOS、tvOS 和 watchOS 应用程序的分发，从而优化这些应用程序的安装。此优化称为应用程序精简。借助应用程序精简，可以使创建的应用程序利用最多的设备功能、占用最少的磁盘空间并适应 Apple 未来可能应用的更新。请参阅 <a href="https://developer.apple.com/library/tvos/documentation/IDEs/Conceptual/AppDistributionGuide/AppThinning/AppThinning.html">Apple 关于应用程序精简的开发者库页面</a>，了解有关此优化过程的更多信息。</p>
 
-<p>This chapter describes the two major components of app thinning that can be implemented in Unity:</p>
+<p>本章介绍可以在 Unity 中实现的应用程序精简的两个主要组件：</p>
 
 <ul>
-<li><a href="#OnDemandResources">On-demand resources (ODR)</a></li>
-<li><a href="#AppSlicing">App slicing</a></li>
+<li><a href="#OnDemandResources">按需加载资源 (ODR)</a></li>
+<li><a href="#AppSlicing">应用程序切片</a></li>
 </ul>
 
 <p><a name="OnDemandResources"></a> </p>
 
-<h1>On-demand resources</h1>
+<h1>按需加载资源</h1>
 
-<p>On-demand resources (ODR) is a feature available for the iOS and tvOS platforms, from version 9.0 of iOS and tvOS onwards. It allows you to reduce the size of your application by separating the core Assets (those that are needed from application startup) from Assets which may be optional, or which appear in later levels of your game. These additional Assets are called <a href="AssetBundlesIntro.html">AssetBundles</a>. They’re available across all Unity build targets, but extra steps must be taken to enable them to be hosted via the App Store.</p>
+<p>按需加载资源 (ODR) 是适用于 iOS 和 tvOS 平台（从 iOS 和 tvOS 9.0 版开始）的功能。此功能允许将核心资源（应用程序启动时需要的资源）与可选资源（或者出现在游戏后期关卡中的资源）分开，从而减小应用程序的大小。这些附加资源称为 <a href="AssetBundlesIntro.html">AssetBundles</a>。它们可用于所有 Unity 构建目标，但必须采取额外步骤才能通过 App Store 托管它们。</p>
 
-<p>AssetBundles can contain Asset files such as models, Materials, Textures and Scenes, but they cannot include scripts. This means that all your scripting logic must reside in the main application. Apple recommends that an AssetBundle be no larger than 64MB in size, to reduce loading time (particularly over-the-air) and minimize the amount of storage space used on the device.</p>
+<p>AssetBundles 可以包含资源文件，例如模型、材质、纹理和场景，但不能包含脚本。这意味着所有脚本逻辑都必须位于主应用程序中。为减少加载时间（特别是在无线条件下）并最大限度减少设备上使用的存储空间，Apple 建议 AssetBundle 的大小不要超过 64MB。</p>
 
-<h2>Setting up ODR</h2>
+<h2>设置 ODR</h2>
 
-<p>To set up your project for ODR, first check that your build type is set to iOS. In the menu bar, go to <strong>File</strong> &gt; <strong>Build Settings</strong>.</p>
+<p>要对项目进行 ODR 设置，请首先确认构建类型设置为 iOS。在菜单栏中，选择 <strong>File</strong> &gt; <strong>Build Settings</strong>。</p>
 
 <figure>
 <img src="../uploads/Main/AppThinning-BuildSettings.png" alt="">
 </figure>
 
-<p>If it isn’t already selected, click on <strong>iOS</strong>, then click the <strong>Switch Platform</strong> button. Next, click the <strong>Player Settings</strong> button. In the Inspector window, open <strong>Other Settings,</strong> navigate to the <strong>Configuration</strong> section, and enable the <strong>Use on demand resources</strong> checkbox.</p>
+<p>如果尚未选中相关选项，请单击 <strong>iOS__，然后单击 </strong>Switch Platform__ 按钮。接下来，单击 <strong>Player Settings</strong> 按钮。在 Inspector 窗口中，打开 <strong>Other Settings__，导航到 </strong>Configuration__ 部分，然后启用 <strong>Use on demand resources</strong> 复选框。</p>
 
 <figure>
 <img src="../uploads/Main/AppThinning-OtherSettings.png" alt="">
 </figure>
 
-<h2>Creating an AssetBundle</h2>
+<h2>创建 AssetBundle</h2>
 
-<p>First, create a new folder to group the Assets you want to place into an AssetBundle. To do this, right-click inside the Project window and go to <strong>Create</strong> &gt; <strong>Folder</strong> (or click <strong>Create</strong> &gt; <strong>Folder</strong> in the top-left of the Project window). </p>
+<p>首先，创建一个新文件夹以放置需要添加到 AssetBundle 的资源。要执行此操作，请在 Project 窗口内右键单击，然后选择 <strong>Create</strong> &gt; <strong>Folder__（或单击 Project 窗口左上角的 </strong>Create__ &gt; __Folder__）。</p>
 
 <figure>
 <img src="../uploads/Main/AppThinning-CreateFolder.png" alt="">
 </figure>
 
-<p>Select the Asset files you wish to add to the AssetBundle, then drag-and-drop them into your new folder.</p>
+<p>选择要添加到 AssetBundle 的资源文件，然后将它们拖放到新文件夹中。</p>
 
-<p>When creating an AssetBundle, you need to assign it a tag, which is used as an identifier when requesting the AssetBundle download. It’s good practice to create a label that matches the bundle’s filename; this ensure a unique label, and makes it easier to recognise when you are working with it later.</p>
+<p>创建 AssetBundle 时，需要为其分配一个标签，该标签将在请求下载 AssetBundle 时用作标识符。最好创建一个与捆绑包的文件名匹配的标签；这样可以确保标签的唯一性，并便于以后使用时进行识别。</p>
 
-<p>To create or assign a tag, select your new folder and navigate to the Asset Labels section at the bottom of the Inspector window. Click the left-hand drop-down menu, select <strong>New</strong>, and enter the name of your new label. Note that AssetBundle labels must be lower-case.</p>
+<p>要创建或分配标签，请选择新文件夹，然后导航到 Inspector 窗口底部的 Asset Labels 部分。单击左侧下拉菜单，选择 __New__，然后输入新标签的名称。请注意，AssetBundle 标签必须为小写字母。</p>
 
 <figure>
 <img src="../uploads/Main/AppThinning-AssetLabels.png" alt="">
 </figure>
 
-<p>In this example, a folder called <em>Textures</em> is being given a new label</p>
+<p>在此示例中，一个名为 <em>Textures</em> 的文件夹被赋予了新标签</p>
 
-<p>To generate the new AssetBundle file, the new label must be referenced in an Editor script. To create an Editor script, create a new folder inside the Project window called <em>Editor</em>. Right-click on the <em>Editor</em> folder and select <strong>Create</strong> &gt; <strong>C# Script</strong>. Name the new script <strong>BuildiOSAssetBundles.cs</strong>.</p>
+<p>要生成新的 AssetBundle 文件，必须在 Editor 脚本中引用新标签。要创建 Editor 脚本，请在 Project 窗口中创建一个名为 <em>Editor</em> 的新文件夹。右键单击 <em>Editor</em> 文件夹，然后选择 <strong>Create</strong> &gt; <strong>C# Script</strong>。将新脚本命名为 <strong>BuildiOSAssetBundles.cs</strong>。</p>
 
 <figure>
 <img src="../uploads/Main/AppThinning-NewScript.png" alt="">
 </figure>
 
-<p>In this example, the <em>Textures</em> folder has been given the label <em>textures</em>. The new script <strong>BuildiOSAssetBundles.cs</strong> has been created in the <em>Editor</em> folder.</p>
+<p>在此示例中，为 <em>Textures</em> 文件夹赋予了标签 <em>textures</em>。在 <em>Editor</em> 文件夹中创建了新脚本 <strong>BuildiOSAssetBundles.cs</strong>。</p>
 
-<p>Open <strong>BuildiOSAssetBundles.cs</strong> and copy in the code below. In this example, the label <em>textures</em> has been used; change this throughout with the name of your label (in lower-case text).</p>
+<p>打开 <strong>BuildiOSAssetBundles.cs</strong> 并将以下代码复制到其中。此示例中使用了标签 _textures_；请用所需的标签名称（小写文本）通改此名称。</p>
 
-<p>Note that this example uses uncompressed bundles; however, this is not a requirement for app thinning.</p>
+<p>请注意，此示例使用未压缩的捆绑包；但这并非应用程序精简的要求。</p>
 
 <pre><code>using UnityEngine;
 using UnityEditor;
@@ -238,20 +253,20 @@ public class BuildiOSAssetBundles : MonoBehaviour
 
         bool shouldCheckODR = EditorUserBuildSettings.activeBuildTarget == BuildTarget.iOS;
 
-#if UNITY_TVOS
+# if UNITY_TVOS
             shouldCheckODR |= EditorUserBuildSettings.activeBuildTarget == BuildTarget.tvOS;
-#endif
+# endif
 
         if( shouldCheckODR )
         {
-#if ENABLE_IOS_ON_DEMAND_RESOURCES
+# if ENABLE_IOS_ON_DEMAND_RESOURCES
             if( PlayerSettings.iOS.useOnDemandResources )
                 options |= BuildAssetBundleOptions.UncompressedAssetBundle;
-#endif
+# endif
 
-#if ENABLE_IOS_APP_SLICING
+# if ENABLE_IOS_APP_SLICING
             options |= BuildAssetBundleOptions.UncompressedAssetBundle;
-#endif
+# endif
         }
 
         BuildPipeline.BuildAssetBundles( "Assets/ODR", options, EditorUserBuildSettings.activeBuildTarget );
@@ -260,23 +275,23 @@ public class BuildiOSAssetBundles : MonoBehaviour
 }
 </code></pre>
 
-<p>The significant line in the above code sample is the following, which takes the files tagged with the <em>textures</em> label and creates an AssetBundle file called <em>textures</em> within the Assets/ODR folder:</p>
+<p>上面代码示例中的重要代码行如下，其中使用带有 <em>textures</em> 标签的文件，并在 Assets/ODR 文件夹中创建名为 <em>textures</em> 的 AssetBundle 文件：</p>
 
 <pre><code>new UnityEditor.iOS.Resource( "textures", "Assets/ODR/textures" ).AddOnDemandResourceTags( "textures" )
 </code></pre>
 
-<p>For demonstration purposes, the above code sample also includes the following line, which adds an AssetBundle called <em>bundle</em> that has already been built - for example, from another project or a third-party vendor:</p>
+<p>出于演示目的，上面的代码示例还包括以下代码行，用于添加一个已经构建的名为 <em>bundle</em> 的 AssetBundle（例如，来自其他项目或第三方供应商）：</p>
 
 <pre><code>new UnityEditor.iOS.Resource( "bundle", "Assets/Bundles/bundle.unity3d" ).AddOnDemandResourceTags( "bundle" )
 </code></pre>
 
-<p>The whole code sample creates a new menu in the Unity Editor menu bar. Go to <strong>Bundle</strong> &gt; <strong>Build iOS AssetBundle</strong>. This generates the AssetBundles in the <em>ODR</em> folder.</p>
+<p>整个代码示例将在 Unity Editor 菜单栏中创建一个新菜单。选择 <strong>Bundle</strong> &gt; <strong>Build iOS AssetBundle</strong>。此时将在 <em>ODR</em> 文件夹中生成 AssetBundles。</p>
 
 <figure>
 <img src="../uploads/Main/AppThinning-BuildiOSAssetBundle.png" alt="">
 </figure>
 
-<p>The following script downloads the <em>textures</em> ODR Asset Bundle, assigning it to the public member <strong>TextureBundle</strong>. Place this somewhere in your project.</p>
+<p>以下脚本下载 <em>textures</em> ODR Asset Bundle，并将其分配给公共成员 <strong>TextureBundle</strong>。将此包放在项目的某个位置。</p>
 
 <pre><code>using UnityEngine;
 using UnityEngine.iOS;
@@ -295,13 +310,13 @@ public class LoadBundle : MonoBehaviour
 
     public IEnumerator LoadAsset( string resourceName, string odrTag )
     {
-        // Create the request
+        // 创建请求
         OnDemandResourcesRequest request = OnDemandResources.PreloadAsync( new string[] { odrTag } );
 
-        // Wait until request is completed
+        // 等待请求完成
         yield return request;
 
-        // Check for errors
+        // 检查是否有错误
         if( request.error != null )
             throw new Exception( "ODR request failed: " + request.error );
 
@@ -312,15 +327,15 @@ public class LoadBundle : MonoBehaviour
 }
 </code></pre>
 
-<p>The next step is to generate an Xcode project, build an .IPA, and upload it to iTunes Connect’s TestFlight. As part of the TestFlight processing procedure, the embedded ODR AssetBundles are removed from the app and hosted on Apple’s servers, ready for downloading.</p>
+<p>下一步是生成 Xcode 项目，构建 .IPA，并将其上传到 iTunes Connect 的 TestFlight。在 TestFlight 处理过程中，嵌入式 ODR AssetBundles 将从应用程序中删除并托管在 Apple 的服务器上，可供下载。</p>
 
-<p>Before you build the .IPA in Xcode, check in XCode’s Build Settings to make sure that in the Assets section, <strong>Embed Asset packs In Product Bundle</strong> is set to <strong>No</strong>, and <strong>Enable On Demand Resources</strong> is set to <strong>Yes</strong>.</p>
+<p>在 Xcode 中构建 .IPA 之前，请检查 XCode 的 Build Settings，确保 Assets 部分中的 <strong>Embed Asset packs In Product Bundle</strong> 设置为 <strong>No__，而 </strong>Enable On Demand Resources__ 设置为 <strong>Yes</strong>。</p>
 
 <figure>
 <img src="../uploads/Main/AppThinning-XCodeBuildSettings.png" alt="">
 </figure>
 
-<p>Once iTunes Connect has finished processing your app upload, click on the build version in TestFlight Builds to see more information about it:</p>
+<p>iTunes Connect 处理完应用程序的上传后，单击 TestFlight Builds 中的构建版本即可查看相关的更多信息：</p>
 
 <figure>
 <img src="../uploads/Main/AppThinning-XCodeTestFlightBuilds.png" alt="">
@@ -328,19 +343,19 @@ public class LoadBundle : MonoBehaviour
 
 <p><a name="AppSlicing"></a></p>
 
-<h2>App slicing</h2>
+<h2>应用程序切片</h2>
 
-<p>App slicing follows a similar process to on-demand resourcing, allowing you to dynamically download Assets according the specification of the device the app is running on (for example, to download high-resolution Assets for retina iPads, and low-resolution Assets for smaller devices like iPhones and the iPad Mini). This is achieved by defining AssetBundles, with the added provision of <strong>variants</strong>. This way, you can decide at startup which variant to use, and automatically append this to the Asset file name upon download.</p>
+<p>应用程序切片遵循与按需加载资源类似的流程，允许根据运行应用程序的设备的规格动态下载资源（例如，下载用于 Retina iPad 的高分辨率资源，以及用于 iPhone 和 iPad Mini 等小型设备的低分辨率资源）。这是通过定义 AssetBundles 以及添加__变体__配置来实现的。这样可以在启动时决定使用哪种变体，并在下载时自动将其附加到资源文件名。</p>
 
-<p>To create a Variant, click on your new folder and navigate to the <strong>Asset Labels</strong> section at the bottom of the Inspector window. Click on the right-hand drop-down menu, select <strong>New</strong>, and enter the name of your new variant. Note that AssetBundle variants must be lower-case.</p>
+<p>要创建变体，请单击新文件夹，然后导航到 Inspector 窗口底部的 <strong>Asset Labels</strong> 部分。单击右侧下拉菜单，选择 __New__，然后输入新变体的名称。请注意，AssetBundle 变体必须为小写字母。</p>
 
 <figure>
 <img src="../uploads/Main/AppThinning-AssetBundleVariants.png" alt="">
 </figure>
 
-<p>The new variant must be referenced in an Editor script. To create an Editor script, create a new folder inside the Project window called <em>Editor</em>. Right-click on the Editor folder and select <strong>Create</strong> &gt; <strong>C# Script</strong>. Name the new script <strong>BuildiOSAppSlices.cs</strong>.</p>
+<p>必须在 Editor 脚本中引用新变体。要创建 Editor 脚本，请在 Project 窗口中创建一个名为 <em>Editor</em> 的新文件夹。右键单击 Editor 文件夹，然后选择 <strong>Create</strong> &gt; <strong>C# Script</strong>。将新脚本命名为 <strong>BuildiOSAppSlices.cs</strong>。</p>
 
-<p>Copy and paste the code below, replacing the example label (“textures”) and variants (“hd” and “sd”) with your own. In this code example, multiple folders are referred to: one containing HD textures, and one containing SD textures. These have been given the variants “hd” and “sd” respectively.</p>
+<p>复制并粘贴下面的代码，将示例标签（“textures”）和变体（“hd”和“sd”）替换为您自己的标签和变体。在此代码示例中，引用了多个文件夹：一个包含 HD 纹理，一个包含 SD 纹理。它们分别被赋予了变体“hd”和“sd”。</p>
 
 <pre><code>using UnityEngine;
 using UnityEditor;
@@ -371,20 +386,20 @@ public class BuildiOSAppSlices : MonoBehaviour
 
         bool shouldCheckODR = EditorUserBuildSettings.activeBuildTarget == BuildTarget.iOS;
 
-#if UNITY_TVOS
+# if UNITY_TVOS
             shouldCheckODR |= EditorUserBuildSettings.activeBuildTarget == BuildTarget.tvOS;
-#endif
+# endif
 
         if( shouldCheckODR )
         {
-#if ENABLE_IOS_ON_DEMAND_RESOURCES
+# if ENABLE_IOS_ON_DEMAND_RESOURCES
             if( PlayerSettings.iOS.useOnDemandResources )
                 options |= BuildAssetBundleOptions.UncompressedAssetBundle;
-#endif
+# endif
 
-#if ENABLE_IOS_APP_SLICING
+# if ENABLE_IOS_APP_SLICING
             options |= BuildAssetBundleOptions.UncompressedAssetBundle;
-#endif
+# endif
         }
 
         BuildPipeline.BuildAssetBundles( "Assets/ODR", options, EditorUserBuildSettings.activeBuildTarget );
@@ -393,9 +408,9 @@ public class BuildiOSAppSlices : MonoBehaviour
 }
 </code></pre>
 
-<p>This creates a new menu in the Unity Editor menu bar called <strong>Bundle</strong>. Click this and select the only item in the list, <strong>Build iOS App Slices</strong>. This generates the AssetBundles in the <strong>ODR</strong> folder.</p>
+<p>这段代码将在 Unity Editor 菜单栏中创建一个名为 <strong>Bundle</strong> 的新菜单。单击此菜单并选择列表中唯一的菜单项 <strong>Build iOS App Slices</strong>。此时将在 <strong>ODR</strong> 文件夹中生成 AssetBundles。</p>
 
-<p>Then, to load an Asset, place this class somewhere in your project and pass in the name of the Variant you wish to load:</p>
+<p>然后，要加载资源，请将此类放在项目中的某个位置，并传入要加载的变体的名称：</p>
 
 <pre><code>using UnityEngine;
 using UnityEngine.iOS;
@@ -414,13 +429,13 @@ public class LoadBundle : MonoBehaviour
 
     public IEnumerator LoadAsset( string resourceName, string odrTag )
     {
-        // Create the request
+        // 创建请求
         OnDemandResourcesRequest request = OnDemandResources.PreloadAsync( new string[] { odrTag } );
 
-        // Wait until request is completed
+        // 等待请求完成
         yield return request;
 
-        // Check for errors
+        // 检查是否有错误
         if( request.error != null )
             throw new Exception( "ODR request failed: " + request.error );
 
@@ -431,23 +446,23 @@ public class LoadBundle : MonoBehaviour
 }
 </code></pre>
 
-<p>You can now see and modify variants in <strong>Player Settings &gt; Other Settings &gt; Configuration</strong> in a <strong>Variant map for app slicing</strong> drop-down menu (the menu is only visible if <strong>Use on demand resources</strong> is enabled in the Player Settings).</p>
+<p>现在可以在 <strong>Player Settings &gt; Other Settings &gt; Configuration</strong> 中的 <strong>Variant map for app slicing</strong> 下拉菜单中查看和修改变体（仅当在 Player Settings 中启用了 <strong>Use on demand resources</strong> 时，此菜单才可见）。</p>
 
 <figure>
 <img src="../uploads/Main/AppThinning-VariantMap.png" alt="">
 </figure>
 
-<p>To learn more about AssetBundles and on-demand resources, see Unity’s <a href="https://bitbucket.org/Unity-Technologies/assetbundledemo">AssetBundle Manager demo project</a>, hosted on Bitbucket. The landing page offers a comprehensive description of how to use and tweak the demo.</p>
+<p>要了解有关 AssetBundles 和按需加载资源的更多信息，请参阅 Bitbucket 上托管的 Unity <a href="https://bitbucket.org/Unity-Technologies/assetbundledemo">AssetBundle Manager 演示项目</a>。登陆页面提供了有关如何使用和调整演示项目的全面说明。</p>
 
 <hr>
 
 <ul>
-<li><span class="page-edit">2018–06–14 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><span class="page-edit">2018–06–14 页面已修订并只进行了有限的<a href="DocumentationEditorialReview.html">编辑审查</a>
 </span></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="iosCustomWWWRequest.html"></a></span><div class="tip">Customising WWW requests on iOS</div>
+<span class="prev"><a href="iosCustomWWWRequest.html"></a></span><div class="tip">自定义 iOS 上的 WWW 请求</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
 <span class="next"><a href="iOSManagedStackTraces.html"></a></span><div class="tip">iOS 上的托管堆栈跟踪</div>
@@ -456,9 +471,9 @@ public class LoadBundle : MonoBehaviour
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2019.1</div>
 <div class="menu">
-<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>
 </div>
 <div></div>

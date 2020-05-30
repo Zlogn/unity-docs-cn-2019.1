@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="no-js">
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,10 +10,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="Responding to Events - Unity Manual">
-<title>Responding to Events - Unity Manual</title>
-<meta name="description" content="You can make a visual element react to an event that it receives in two ways:">
-<meta property="og:description" content="You can make a visual element react to an event that it receives in two ways:">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="事件响应 - Unity 手册">
+<title>事件响应 - Unity 手册</title>
+<meta name="description" content="可让视觉元素以两种方式对接收的事件做出反应：">
+<meta property="og:description" content="可让视觉元素以两种方式对接收的事件做出反应：">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -27,13 +28,20 @@
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
 <script>
       var docs_type = 'Manual';
-      var lang = 'zh_CN';
+      var lang = 'cn';
       var page = 'UIE-Events-Handling';
       if(!page) page = 'index';
       var version = '2019.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2020.1',version_string: '2020.1'},{version: '2019.3',version_string: '2019.3'},{version: '2019.2',version_string: '2019.2'},{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.1/Manual/UIE-Events-Handling.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.1/Manual/UIE-Events-Handling.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.1/Manual/UIE-Events-Handling.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.1/Manual/UIE-Events-Handling.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.1/Manual/UIE-Events-Handling.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.1/Manual/UIE-Events-Handling.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.1/Documentation/Manual/UIE-Events-Handling.html" hreflang="x-default">
 </head>
 <body>
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -43,11 +51,11 @@
 <div id="nav-open" for="nav-input"><span></span></div>
 <div class="logo"><a href="https://docs.unity3d.com"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
-<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
 <ul class="menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 </div></div>
 <div class="more">
@@ -67,25 +75,28 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UIE-Events-Handling.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UIE-Events-Handling.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UIE-Events-Handling.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UIE-Events-Handling.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UIE-Events-Handling.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UIE-Events-Handling.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UIE-Events-Handling.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UIE-Events-Handling.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UIE-Events-Handling.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UIE-Events-Handling.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UIE-Events-Handling.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UIE-Events-Handling.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UIE-Events-Handling.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UIE-Events-Handling.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UIE-Events-Handling.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UIE-Events-Handling.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UIE-Events-Handling.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UIE-Events-Handling.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UIE-Events-Handling.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UIE-Events-Handling.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UIE-Events-Handling.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UIE-Events-Handling.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/UIE-Events-Handling.html">5.6</a></li>
 </ul></div>
 </div>
 <ul class="nav-menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 <div class="lang-switcher">
 <div class="current toggle" data-target=".lang-list">
-<div class="lbl">Language:
+<div class="lbl">语言:
         <span class="b">中文</span>
 </div>
 <div class="arrow"></div>
@@ -95,13 +106,14 @@
 <li><a data-lang="ja" href="/ja/2019.1/Manual/UIE-Events-Handling.html">日本語</a></li>
 <li><a data-lang="es" href="/es/2019.1/Manual/UIE-Events-Handling.html">Español</a></li>
 <li><a data-lang="kr" href="/kr/2019.1/Manual/UIE-Events-Handling.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.1/Manual/UIE-Events-Handling.html">Русский</a></li>
 </ul></div>
 </div>
 </div></div>
 </div>
 <div id="master-wrapper" class="master-wrapper clear">
 <div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
-<h2>Manual</h2>
+<h2>手册</h2>
 <div class="version-switcher">
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
@@ -111,16 +123,19 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UIE-Events-Handling.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UIE-Events-Handling.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UIE-Events-Handling.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UIE-Events-Handling.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UIE-Events-Handling.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UIE-Events-Handling.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UIE-Events-Handling.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UIE-Events-Handling.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UIE-Events-Handling.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UIE-Events-Handling.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UIE-Events-Handling.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UIE-Events-Handling.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UIE-Events-Handling.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UIE-Events-Handling.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UIE-Events-Handling.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UIE-Events-Handling.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UIE-Events-Handling.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UIE-Events-Handling.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UIE-Events-Handling.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UIE-Events-Handling.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UIE-Events-Handling.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UIE-Events-Handling.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/UIE-Events-Handling.html">5.6</a></li>
 </ul></div>
 </div>
 <div class="clear"></div>
@@ -129,181 +144,179 @@
 <div class="section">
 <div class="breadcrumbs clear"><ul>
 <li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
-<li><a href="UIToolkits.html">UI</a></li>
-<li><a href="UIElements.html">UIElements Developer Guide</a></li>
-<li><a href="UIE-Events.html">The Event System</a></li>
-<li>Responding to Events</li>
+<li><a href="UIToolkits.html">User interfaces (UI)</a></li>
+<li><a href="UIElements.html">UIElements 开发者指南</a></li>
+<li><a href="UIE-Events.html">事件系统</a></li>
+<li>事件响应</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="UIE-Events-Dispatching.html"></a></span><div class="tip">Dispatching Events</div>
+<span class="prev"><a href="UIE-Events-Dispatching.html"></a></span><div class="tip">分发事件</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="UIE-Events-Synthesizing.html"></a></span><div class="tip">Synthesizing Events</div>
+<span class="next"><a href="UIE-Events-Synthesizing.html"></a></span><div class="tip">合成事件</div>
 </div>
 </div></div>
-<h1>Responding to Events</h1>
+<h1>事件响应</h1>
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>You can make a visual element react to an event that it receives in two ways:</p>
+<p>可让视觉元素以两种方式对接收的事件做出反应：</p>
 
 <ul>
-<li>by registering an event callback,</li>
-<li>by implementing a default action.</li>
+<li>对事件回调进行注册。</li>
+<li>实现默认操作。</li>
 </ul>
 
-<p>Whether you should register an event callback or implement default actions depends on many factors.</p>
+<p>应该对事件回调进行注册还是实现默认操作，取决于许多因素。</p>
 
-<p>For example, if you instantiate objects from an existing class and you want the instance to react in a specific way when it receive events, your only option is to register callbacks on this instance.</p>
+<p>例如，如果将现有类的对象实例化，并希望实例在接收事件时以特定方式做出反应，则唯一的选择是在此实例上注册回调。</p>
 
-<p>However, if you derive a new class from VisualElement and you want all instances of this class to react to events in the same way, you can either register callbacks on all instances of this class in the constructor, or implement default actions for the class.</p>
+<p>但是，如果从 VisualElement 派生新类，并希望该类的所有实例以相同方式对事件做出反应，则可以使用构造函数在该类的所有实例上注册回调，或者实现该类的默认操作。</p>
 
-<p>The fundamental differences between callbacks and default actions are as follows:</p>
+<p>回调和默认操作之间的重要区别如下：</p>
 
 <ul>
-<li>Callbacks must be registered on instances of the class. Default actions are implemented as virtual functions on the class.</li>
-<li>Callbacks are executed for all elements along the propagation path. Default actions are executed for the event target only.</li>
+<li>必须在类的实例上注册回调。默认操作在类上实现为虚拟函数。</li>
+<li>传播路径上的所有元素都会执行回调。仅对事件目标执行默认操作。</li>
 </ul>
 
-<p>You can prevent default actions from executing by calling <code>event.PreventDefault()</code>. Some event types cannot be cancelled which means that their default actions cannot be cancelled. You can prevent callbacks from executing by calling <code>event.StopPropagation()</code> or <code>event.StopImmediatePropagation()</code>, even for events that are not cancellable.</p>
+<p>可以调用 <code>event.PreventDefault()</code> 来阻止执行默认操作。无法取消某些事件类型，这意味着无法取消其默认操作。即使对于无法取消的事件，也可以调用 <code>event.StopPropagation()</code> 或 <code>event.StopImmediatePropagation()</code> 来阻止执行回调。</p>
 
-<p>You should view default actions as the behaviors that an element of a specific type should have when it receives an event. </p>
+<p>应该将默认操作视为特定类型的元素在接收事件时应该具有的行为。</p>
 
-<p>For example, a checkbox should respond to a click event by toggling its state. This behavior should be implemented by overriding a default action virtual function rather than registering callbacks on all checkboxes. </p>
+<p>例如，复选框应通过切换单击事件的状态来响应该事件。应通过覆盖默认操作虚拟函数（而不是在所有复选框上注册回调）来实现此行为。</p>
 
-<p>In general, you should prefer implementing the behaviors that are naturally expected from your element with default actions. This ensures that default element behaviors can be cancelled on an instance by instance basis by calling <code>PreventDefault()</code> in a callback attached to an instance.</p>
+<p>通常，应该优先使用默认操作实现元素中正常需要的行为。这样确保了可以通过在附加到实例的回调中调用 <code>PreventDefault()</code> 来逐个实例取消默认元素行为。</p>
 
-<p>Additional benefits of implementing behaviors as default actions are that their execution do not require a lookup in the callback registry and instances without callbacks are optimized out of the trickle down/bubble-up propagation process.</p>
+<p>将行为实现为默认操作的其他好处在于，执行这些行为时不需要在回调注册表中进行查找，并且无回调的实例在涓滴/冒泡传播过程中得到优化。</p>
 
-<p>For greater flexibility, default actions of the event target can be executed at two moments during the event dispatch process:</p>
+<p>为了获得更大灵活性，可在事件分发过程中的以下两个时刻执行事件目标的默认操作：</p>
 
 <ul>
-<li>between the trickle down and the bubble up propagation phase, immediately after the target callbacks are executed, by overriding <code>ExecuteDefaultActionsAtTarget()</code>;</li>
-<li>at the end of the event dispatch process, by overriding <code>ExecuteDefaultActions()</code>.</li>
+<li>在涓滴与冒泡传播阶段之间，刚执行目标回调之后，通过覆盖 <code>ExecuteDefaultActionsAtTarget()</code>；</li>
+<li>在事件分发过程结束时，通过覆盖 <code>ExecuteDefaultActions()</code>。</li>
 </ul>
 
-<p>Whenever possible, implement your class default actions in <code>ExecuteDefaultActions()</code>. This gives the users of your class more options to override them: they can call <code>PreventDefault()</code> either during the trickle down phase or the bubble up phase of the event propagation process.</p>
+<p>如有可能，尽量在 <code>ExecuteDefaultActions()</code> 中实现类的默认操作。这样可以给类用户提供更多覆盖这些操作的选择：他们可以在事件传播过程的涓滴阶段或冒泡阶段调用 <code>PreventDefault()</code>。</p>
 
-<p>Sometimes, however, you must enforce that an event executing a default action on your class is not propagated to the parent of the element. For example, a text field receives key down events that modifies its value. These key down events are not propagated to the parent that might, for example, use the Delete key to delete content. In this case, implement your default action using <code>ExecuteDefaultActionsAtTarget()</code> and call <code>StopPropagation()</code>. This ensures that the event is not processed by callbacks during the bubble up phase.</p>
+<p>但是，有时必须确保在类上执行默认操作的事件不会传播到元素的父级。例如，文本字段收到修改字段值的键按下事件。这些键按下事件不会传播到父级，例如，父级可能使用 Delete 键来删除内容。在此情况下，请使用 <code>ExecuteDefaultActionsAtTarget()</code> 实现默认操作并调用 <code>StopPropagation()</code>。这样可以确保回调在冒泡阶段不会处理该事件。</p>
 
-<p>Default actions are only executed for the target of an event. They are not executed when the element receives the event as a result of the event propagation process. If you want your class to react to events targeted at their children or at their parents, you must register a callback on each instance of your class. This is sometimes necessary, but for better expandability and better performance, try to avoid registering callbacks on every instance of your class.</p>
+<p>只有事件目标才执行默认操作。如果元素由于事件传播过程而接收事件，则不执行默认操作。如果您希望自己的类响应以其子项或父级为目标的事件，必须在该类的每个实例上注册回调。有时，这是必要的，但是为了更好的可扩展性和更好的性能，请尽量避免在类的每个实例上注册回调。</p>
 
-<h2>Registering an event callback</h2>
+<h2>对事件回调进行注册</h2>
 
-<p>To add a custom behavior to a specific instance of a visual element, you must register a callback for the event that triggers the custom behavior. </p>
+<p>要向视觉元素的特定实例添加自定义行为，必须为触发自定义行为的事件注册回调。</p>
 
-<p>The advantage of registering an event callback is that it lets you customize the behavior of an individual instance of an existing class. The disadvantage of registering an event callback is that it is less performant because it takes longer to execute. It takes longer to execute because, whenever an event is received, the registered event is checked to determine which callback should be executed. </p>
+<p>注册事件回调的优点是允许自定义现有类的单个实例的行为。注册事件回调的缺点是执行时间更长，所以性能更差。执行需要更长时间的原因在于，无论何时收到事件，都要检查注册的事件以确定应该执行哪个回调。</p>
 
-<p>For example, the following code registers two callbacks for the <code>MouseDownEvent</code>:</p>
+<p>例如，以下代码为 <code>MouseDownEvent</code> 注册两个回调：</p>
 
-<pre><code class="csharp">    // Register a callback on a mouse down event
-    myElement.RegisterCallback&lt;MouseDownEvent&gt;(MyCallback);
-    // Same, but also send some user data to the callback
-    myElement.RegisterCallback&lt;MouseDownEvent, MyType&gt;(MyCallbackWithData, myData);
+<pre><code class="csharp">    // 对鼠标按下事件注册回调
+        myElement.RegisterCallback&lt;MouseDownEvent&gt;(MyCallback);
+        // 同上，而且将一些用户数据发送到回调
+        myElement.RegisterCallback&lt;MouseDownEvent, MyType&gt;(MyCallbackWithData, myData);
 </code></pre>
 
-<p>Your callback signature should look like this:</p>
+<p>回调签名应如下所示：</p>
 
 <pre><code class="csharp">void MyCallback(MouseDownEvent evt) { /* ... */ }
 void MyCallbackWithData(MouseDownEvent evt, MyType data) { /* ... */ }
 </code></pre>
 
-<p>You can register as many callbacks as you wish for an event. However, the callback registration system prevents you from registering the same callback function more than once on a given event and propagation phase. You can remove a callback from a <code>VisualElement</code> by calling the <code>myElement.UnregisterCallback()</code> method.</p>
+<p>可为事件注册任意数量的回调。但是，回调注册系统会阻止对给定的事件和传播阶段多次注册相同的回调函数。通过调用 <code>myElement.UnregisterCallback()</code> 方法，可从 <code>VisualElement</code> 中移除回调。</p>
 
-<p>Each element along the propagation path, except the target, receives the event twice: once during the trickle down phase and once during the bubble-up phase. To avoid executing a registered callback twice, use the optional <code>RegisterCallback</code> to specify during which phase a callback is executed.</p>
+<p>传播路径上除了目标之外的每个元素都接收该事件两次：一次在涓滴阶段，另一次在冒泡阶段。要避免执行两次已注册的回调，请使用可选的 <code>RegisterCallback</code> 来指定在哪个阶段执行回调。</p>
 
-<p>By default, a registered callback is executed during the target phase and the bubble-up phase. This default behavior ensures that a parent element reacts after its children. If, for example, you want a parent to react first, to override the behaviour of its children, you would register your callback with the <code>TrickleDown.TrickleDown</code> option:</p>
+<p>默认情况下，在目标阶段和冒泡阶段执行已注册的回调。此默认行为可确保父元素在其子元素之后做出反应。例如，如果希望父级先做出反应来覆盖其子项的行为，可使用 <code>TrickleDown.TrickleDown</code> 选项来注册回调：</p>
 
-<pre><code class="csharp">    // Register a callback for the trickle down phase
-    myElement.RegisterCallback&lt;MouseDownEvent&gt;(MyCallback, TrickleDown.TrickleDown);
+<pre><code class="csharp">    // 为涓滴阶段注册回调
+        myElement.RegisterCallback&lt;MouseDownEvent&gt;(MyCallback, TrickleDown.TrickleDown);
 </code></pre>
 
-<p>This informs the dispatcher to execute the callback at the target phase and the trickle down phase.</p>
+<p>此代码将通知分发程序在目标阶段和涓滴阶段执行回调。</p>
 
-<h2>Implementing a default action</h2>
+<h2>实现默认操作</h2>
 
-<p>A default action applies to all instances of the class. This means that one or both methods are called for every event the element receives. </p>
+<p>默认操作适用于该类的所有实例。这意味着会为元素收到的每个事件调用一个或两个方法。</p>
 
-<p>A class that implements default actions can also have callbacks registered on its instances.</p>
+<p>实现默认操作的类也可以在该类的实例上注册回调。</p>
 
-<p>An event class implements behaviors that are executed either before or after processing an event. The events class does this by overriding the <code>PreDispatch()</code> of <code>PostDispatch()</code> method of the <code>EventBase</code> class. Since events are queued, these methods can update the state or perform tasks when the event is handled instead of when the event is emitted. For example, the <code>BlurEvent</code>changes the currently focused element before it proceses the element.</p>
+<p>事件类实现在处理事件之前或之后执行的行为。事件类通过覆盖 <code>EventBase</code> 类的 <code>PreDispatch()</code> 方法或 <code>PostDispatch()</code> 来达到此目的。由于会对事件进行排队，所以这些方法可以在处理事件（而不是发出事件）后更新状态或执行任务。例如，<code>BlurEvent</code> 更改当前聚焦的元素，然后处理该元素。</p>
 
-<p>Implementing a default action requires deriving a new subclass of <code>VisualElement</code> and implementing either the <code>ExecuteDefaultActionAtTarget()</code> method, the <code>ExecuteDefaultAction()</code> method, or both. </p>
+<p>为了实现默认操作，需要派生 <code>VisualElement</code> 的新子类并实现 <code>ExecuteDefaultActionAtTarget()</code> 和/或 <code>ExecuteDefaultAction()</code> 方法。</p>
 
-<p>Default actions are actions that are executed by each instance of a visual element sub-class when it receives an event. You can customize default actions by overriding <code>ExecuteDefaultActionAtTarget()</code> and <code>ExecuteDefaultAction()</code>:</p>
+<p>默认操作是视觉元素子类的每个实例在接收事件时执行的操作。可以覆盖 <code>ExecuteDefaultActionAtTarget()</code> 和 <code>ExecuteDefaultAction()</code> 来自定义默认操作：</p>
 
 <pre><code class="csharp">override void ExecuteDefaultActionAtTarget(EventBase evt)
 {
-    // Do not forget to call the base function.
+    // 不要忘记调用基础函数。
     base.ExecuteDefaultActionAtTarget(evt);
 
     if (evt.GetEventTypeId() == MouseDownEvent.TypeId())
     {
-        // ...
+        //...
     }
     else if (evt.GetEventTypeId() == MouseUpEvent.TypeId())
     {
-        // ...
+        //...
     }
-    // More event types
+    //更多事件类型
 }
 </code></pre>
 
-<p>For greater flexibility, you should implement your default actions in <code>ExecuteDefaultAction()</code>. This allows users to stop or prevent the execution of a default action, if needed. </p>
+<p>为了实现更大灵活性，应在 <code>ExecuteDefaultAction()</code> 中实现默认操作。这允许用户在必要时停止或阻止默认操作的执行。</p>
 
-<p>If you want the target default action to be executed before its parent callback, implement the default actions in <code>ExecuteDefaultActionAtTarget()</code>.</p>
+<p>如果希望在父级回调之前执行目标默认操作，请在 <code>ExecuteDefaultActionAtTarget()</code> 中实现默认操作。</p>
 
-<h1>The event handling sequence</h1>
+<h1>事件处理顺序</h1>
 
-<p>When an event occurs, it is sent along the propagation path in the visual element tree. Assuming that the event type demands that all phases of event propagation be followed, the event is sent to each visual element. The event handling sequence is a follows:</p>
+<p>事件发生时，将沿着视觉元素树中的传播路径发送事件。假设事件类型要求遵循事件传播的所有阶段，事件将发送到每个视觉元素。事件处理顺序如下：</p>
 
-<ol>
-<li>Execute event callbacks on elements from the root element down to the parent of the event target. This is the <em>trickle down phase</em> of the dispatch process.</li>
-<li>Execute event callbacks on the event target. This is the <em>target phase</em> of the dispatch process.</li>
-<li>Call the target <code>ExecuteDefaultActionAtTarget()</code>.</li>
-<li>Execute event callbacks on elements from the event target parent up to the root. This is the <em>bubble-up phase</em> of the dispatch process.</li>
-<li>Call the target <code>ExecuteDefaultAction()</code>.</li>
-</ol>
+<p>1.针对从根元素往下到事件目标父级的元素执行事件回调。这是分发过程的<em>涓滴阶段</em>。
+2.针对事件目标执行事件回调。这是分发过程的<em>目标阶段</em>。
+3.调用目标 <code>ExecuteDefaultActionAtTarget()</code>。
+4.针对从事件目标父级往上到根的元素执行事件回调。这是分发过程的<em>冒泡阶段</em>。
+5.调用目标 <code>ExecuteDefaultAction()</code>。</p>
 
-<p>As an event is sent along the propagation path, <code>Event.currentTarget</code> is updated to the element currently handling the event. This means that within an event callback function, <code>Event.currentTarget</code> is the element on which the callback was registered and <code>Event.target</code> is the element on which the event occured.</p>
+<p>在沿着传播路径发送事件时，<code>Event.currentTarget</code> 更新为当前正在处理事件的元素。这意味着，在事件回调函数中，<code>Event.currentTarget</code> 是对回调注册的元素，而 <code>Event.target</code> 是发生事件的元素。</p>
 
-<h2>Stopping event propagation and cancelling default actions</h2>
+<h2>停止事件传播并取消默认操作</h2>
 
-<p>You can use callbacks to stop, prevent, and cancel actions from being executed. However, you cannot prevent the <code>EventBase.PreDispatch()</code> and <code>EventBase.PostDispatch()</code>methods from being executed.</p>
+<p>可以使用回调来停止、阻止和取消操作的执行。然而，无法阻止 <code>EventBase.PreDispatch()</code> 和 <code>EventBase.PostDispatch()</code> 方法的执行。</p>
 
-<p>The following methods affect event propagation and default actions: </p>
+<p>以下方法影响事件传播和默认操作：</p>
 
 <ul>
 <li>
-<code>StopImmediatePropagation()</code> stops the event propagation process immediately. No other callbacks are executed for this event. However, the <code>ExecuteDefaultActionAtTarget()</code> and <code>ExecuteDefaultAction()</code> default actions are still executed.</li>
+<code>StopImmediatePropagation()</code> 立即停止事件传播过程。不会为此事件执行其他回调。但是，仍然执行 <code>ExecuteDefaultActionAtTarget()</code> 和 <code>ExecuteDefaultAction()</code> 默认操作。</li>
 <li>
-<code>StopPropagation()</code> stops the event propagation process after the last callback on the current element. This ensure that all callbacks on the current element are executed, but that no further elements react to the event. The <code>ExecuteDefaultActionAtTarget()</code> and <code>ExecuteDefaultAction()</code> default actions are still be executed.</li>
+<code>StopPropagation()</code> 在当前元素的上次回调后停止事件传播过程。这将确保当前元素的所有回调都得到执行，但是其他元素不会再对事件做出反应。仍然会执行 <code>ExecuteDefaultActionAtTarget()</code> 和 <code>ExecuteDefaultAction()</code> 默认操作。</li>
 <li>
-<code>PreventDefaultAction()</code> prevents the <code>ExecuteDefaultActionAtTarget()</code> and
- <code>ExecuteDefaultAction()</code> default actions from being called. <code>PreventDefaultAction()</code> does not prevent other callbacks from being executed. In addition, if you call <code>PreventDefaultAction()</code> during the bubble-up phase, the <code>ExecuteDefaultActionAtTarget()</code> default action is not prevented because it has already been executed. The <code>ExecuteDefaultActionAtTarget()</code> default action is executed during the trickle down phase.</li>
+<code>PreventDefaultAction()</code> 阻止会调用 <code>ExecuteDefaultActionAtTarget()</code> 和
+ <code>ExecuteDefaultAction()</code> 默认操作。<code>PreventDefaultAction()</code> 不会阻止其他回调的执行。此外，如果在冒泡阶段调用 <code>PreventDefaultAction()</code>，则不会阻止 <code>ExecuteDefaultActionAtTarget()</code> 默认操作，因为已经执行该操作。在涓滴阶段已执行 <code>ExecuteDefaultActionAtTarget()</code> 默认操作。</li>
 </ul>
 
 <hr>
 
 <ul>
-<li><span class="page-edit">2018–11–02 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><span class="page-edit">2018–11–02 页面已修订并只进行了有限的<a href="DocumentationEditorialReview.html">编辑审查</a>
 </span></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="UIE-Events-Dispatching.html"></a></span><div class="tip">Dispatching Events</div>
+<span class="prev"><a href="UIE-Events-Dispatching.html"></a></span><div class="tip">分发事件</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="UIE-Events-Synthesizing.html"></a></span><div class="tip">Synthesizing Events</div>
+<span class="next"><a href="UIE-Events-Synthesizing.html"></a></span><div class="tip">合成事件</div>
 </div>
 </div>
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2019.1</div>
 <div class="menu">
-<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>
 </div>
 <div></div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="no-js">
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,10 +10,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="2D Sorting - Unity Manual">
-<title>2D Sorting - Unity Manual</title>
-<meta name="description" content="Unity sorts Renderers according to a priority order that depends on their types and usages. You can specify the render order of Renderers through their Render Queue. In general, there are two main queues: the Opaque queue and the Transparent queue. 2D Renderers are mainly within the Transparent queue, and include the Sprite Renderer, Tilemap Renderer, and Sprite Shape Renderer types.">
-<meta property="og:description" content="Unity sorts Renderers according to a priority order that depends on their types and usages. You can specify the render order of Renderers through their Render Queue. In general, there are two main queues: the Opaque queue and the Transparent queue. 2D Renderers are mainly within the Transparent queue, and include the Sprite Renderer, Tilemap Renderer, and Sprite Shape Renderer types.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="2D 排序 - Unity 手册">
+<title>2D 排序 - Unity 手册</title>
+<meta name="description" content="Unity 根据优先级顺序对渲染器进行排序，而优先级顺序取决于渲染器的类型和用途。可以通过渲染队列指定渲染器的渲染顺序。通常有两个主要队列：不透明队列和透明队列。2D 渲染器主要位于透明队列中，包括精灵渲染器 (Sprite Renderer)、瓦片地图渲染器 (Tilemap Renderer) 和精灵形状渲染器 (Sprite Shape Renderer) 类型。">
+<meta property="og:description" content="Unity 根据优先级顺序对渲染器进行排序，而优先级顺序取决于渲染器的类型和用途。可以通过渲染队列指定渲染器的渲染顺序。通常有两个主要队列：不透明队列和透明队列。2D 渲染器主要位于透明队列中，包括精灵渲染器 (Sprite Renderer)、瓦片地图渲染器 (Tilemap Renderer) 和精灵形状渲染器 (Sprite Shape Renderer) 类型。">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -27,13 +28,20 @@
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
 <script>
       var docs_type = 'Manual';
-      var lang = 'zh_CN';
+      var lang = 'cn';
       var page = '2DSorting';
       if(!page) page = 'index';
       var version = '2019.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2020.1',version_string: '2020.1'},{version: '2019.3',version_string: '2019.3'},{version: '2019.2',version_string: '2019.2'},{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.1/Manual/2DSorting.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.1/Manual/2DSorting.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.1/Manual/2DSorting.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.1/Manual/2DSorting.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.1/Manual/2DSorting.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.1/Manual/2DSorting.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.1/Documentation/Manual/2DSorting.html" hreflang="x-default">
 </head>
 <body>
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -43,11 +51,11 @@
 <div id="nav-open" for="nav-input"><span></span></div>
 <div class="logo"><a href="https://docs.unity3d.com"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
-<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
 <ul class="menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 </div></div>
 <div class="more">
@@ -67,25 +75,28 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/2DSorting.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/2DSorting.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/2DSorting.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/2DSorting.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/2DSorting.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/2DSorting.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/2DSorting.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/2DSorting.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/2DSorting.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/2DSorting.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/2DSorting.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/2DSorting.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/2DSorting.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/2DSorting.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/2DSorting.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/2DSorting.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/2DSorting.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/2DSorting.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/2DSorting.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/2DSorting.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/2DSorting.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/2DSorting.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/2DSorting.html">5.6</a></li>
 </ul></div>
 </div>
 <ul class="nav-menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 <div class="lang-switcher">
 <div class="current toggle" data-target=".lang-list">
-<div class="lbl">Language:
+<div class="lbl">语言:
         <span class="b">中文</span>
 </div>
 <div class="arrow"></div>
@@ -95,13 +106,14 @@
 <li><a data-lang="ja" href="/ja/2019.1/Manual/2DSorting.html">日本語</a></li>
 <li><a data-lang="es" href="/es/2019.1/Manual/2DSorting.html">Español</a></li>
 <li><a data-lang="kr" href="/kr/2019.1/Manual/2DSorting.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.1/Manual/2DSorting.html">Русский</a></li>
 </ul></div>
 </div>
 </div></div>
 </div>
 <div id="master-wrapper" class="master-wrapper clear">
 <div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
-<h2>Manual</h2>
+<h2>手册</h2>
 <div class="version-switcher">
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
@@ -111,16 +123,19 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/2DSorting.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/2DSorting.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/2DSorting.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/2DSorting.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/2DSorting.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/2DSorting.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/2DSorting.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/2DSorting.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/2DSorting.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/2DSorting.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/2DSorting.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/2DSorting.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/2DSorting.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/2DSorting.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/2DSorting.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/2DSorting.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/2DSorting.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/2DSorting.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/2DSorting.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/2DSorting.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/2DSorting.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/2DSorting.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/2DSorting.html">5.6</a></li>
 </ul></div>
 </div>
 <div class="clear"></div>
@@ -130,7 +145,7 @@
 <div class="breadcrumbs clear"><ul>
 <li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
 <li><a href="Unity2D.html">2D</a></li>
-<li>2D Sorting</li>
+<li>2D 排序</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
@@ -140,99 +155,90 @@
 <span class="next"><a href="Sprites.html"></a></span><div class="tip">精灵</div>
 </div>
 </div></div>
-<h1>2D Sorting</h1>
+<h1>2D 排序</h1>
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
 <h2>概述</h2>
 
-<p>Unity sorts Renderers according to a priority order that depends on their types and usages. You can specify the render order of Renderers through their <a href="SL-SubShaderTags.html">Render Queue</a>. In general, there are two main queues: the <a href="../ScriptReference/Rendering.RenderQueue.Geometry.html">Opaque queue</a> and the <a href="../ScriptReference/Rendering.RenderQueue.Transparent.html">Transparent queue</a>. 2D Renderers are mainly within the Transparent queue, and include the <a href="class-SpriteRenderer.html">Sprite Renderer</a>, <a href="class-TilemapRenderer.html">Tilemap Renderer</a>, and <a href="../ScriptReference/Experimental.U2D.SpriteShapeRenderer.html">Sprite Shape Renderer</a> types.</p>
+<p>Unity 根据优先级顺序对渲染器进行排序，而优先级顺序取决于渲染器的类型和用途。可以通过<a href="SL-SubShaderTags.html">渲染队列</a>指定渲染器的渲染顺序。通常有两个主要队列：<a href="../ScriptReference/Rendering.RenderQueue.Geometry.html">不透明队列</a>和<a href="../ScriptReference/Rendering.RenderQueue.Transparent.html">透明队列</a>。2D 渲染器主要位于透明队列中，包括<a href="class-SpriteRenderer.html">精灵渲染器 (Sprite Renderer)</a>、<a href="class-TilemapRenderer.html">瓦片地图渲染器 (Tilemap Renderer)</a> 和<a href="../ScriptReference/Experimental.U2D.SpriteShapeRenderer.html">精灵形状渲染器 (Sprite Shape Renderer)</a> 类型。</p>
 
-<h2>Transparent Queue Sorting Order by Priority</h2>
+<h2>透明队列按优先级排序</h2>
 
-<p>2D Renderers within the Transparent Queue generally follow the priority order below:</p>
+<p>透明队列中的 2D 渲染器通常遵循以下优先级顺序：</p>
 
-<ol>
-<li><a href="#sortlayer">Sorting Layer and Order in Layer</a></li>
-<li><a href="#renderqueue">Specify Render Queue</a></li>
-<li>
-<a href="#cameradistance">Distance to Camera</a>
+<p>1.<a href="#sortlayer">排序图层和图层中的顺序</a>
+2.<a href="#renderqueue">指定渲染队列</a>
+3.<a href="#cameradistance">与摄像机的距离</a>
+ * <a href="#persp">透视</a>/<a href="#ortho">正交</a>
+ * <a href="#customaxis">自定义轴排序模式</a>
+ * <a href="#sortpoint">精灵排序点</a>
+4.<a href="#sortgroup">排序组</a>
+5.<a href="#material">材质/着色器</a>
+6.多个渲染器具有相同的排序优先级时，将由<a href="#tiebreak">仲裁程序</a>决定优先级。</p>
+
+<p>还有其他一些因素可能导致排序顺序与常规优先级顺序不同。这些因素因项目而异。</p>
+
+<h2>排序图层和图层中的顺序<a name="sortlayer"></a>
+</h2>
+
+<p>可以通过 Inspector 窗口或通过 Unity Scripting API 将<a href="https://docs.unity3d.com/Manual/class-TagManager.html#SortingLayers">排序图层 (Sorting Layer)</a> 和<strong>图层中的顺序 (Order in Layer)</strong>（位于渲染器的 <strong>Property</strong> 设置中）用于所有 2D 渲染器。为确定渲染器在渲染队列中的优先级，可以将渲染器设置为现有的<strong>排序图层</strong>，或创建一个新排序图层。更改 <strong>Order in Layer</strong> 的值，即可设置渲染器在同一<strong>排序图层</strong>中的其他渲染器之间的优先级。</p>
+
+<h2>指定渲染队列<a name="renderqueue"></a>
+</h2>
+
+<p>可以在渲染器材质设置中或渲染器材质的着色器设置中指定渲染器的渲染队列类型。这对于使用不同材质的渲染器的分组和排序很有用。请参阅关于 <a href="SL-SubShaderTags.html">ShaderLab：SubShader 标签</a>的文档以了解更多详细信息。</p>
+
+<h2>与摄像机的距离<a name="cameradistance"></a>
+</h2>
+
+<p><a href="class-Camera.html">Camera 组件</a>根据其 <strong>Projection</strong> 设置对渲染器进行排序。两个选项分别是 <strong>Perspective</strong> 和 <strong>Orthographic</strong>。</p>
+
+<h3>透视 (Perspective)<a name="persp"></a>
+</h3>
+
+<p>在此模式下，渲染器的排序距离是渲染器与摄像机位置的直接距离。</p>
+
+<h3>正交 (Orthographic)<a name="ortho"></a>
+</h3>
+
+<p>渲染器的排序距离是渲染器位置与摄像机沿着摄像机视图方向的距离。对于默认的 2D 设置，此方向是指沿着 (0, 0, 1) 轴。</p>
+
+<p>将 Camera 组件设置为 <strong>Perspective</strong> 或 <strong>Orthographic</strong> 时，Unity 会自动设置摄像机的 <a href="../ScriptReference/TransparencySortMode.html">TransparencySortMode</a> 以匹配所选的模式。可以通过两种方式手动设置透明排序模式 (Transparency Sort Mode)：</p>
 
 <ul>
-<li>
-<a href="#persp">Perspective</a>/<a href="#ortho">Orthographic</a>
-</li>
-<li><a href="#customaxis">Custom Axis sort mode</a></li>
-<li><a href="#sortpoint">Sprite Sort Point</a></li>
-</ul>
-</li>
-<li><a href="#sortgroup">Sorting Group</a></li>
-<li><a href="#material">Material/Shader</a></li>
-<li>A <a href="#tiebreak">Tiebreaker</a> occurs when multiple Renderers have the same sorting priorities.</li>
-</ol>
-
-<p>There are other factors which can cause the sorting order to differ from the regular priority order. These factors vary from project to project.</p>
-
-<h2>Sorting Layer and Order in Layer<a name="sortlayer"></a>
-</h2>
-
-<p>The <a href="https://docs.unity3d.com/Manual/class-TagManager.html#SortingLayers">Sorting Layer</a> and <strong>Order in Layer</strong> (in the Renderer’s <strong>Property</strong> settings) are available to all 2D Renderers through the Inspector window or via the Unity Scripting API. Set the Renderer to an existing <strong>Sorting Layer</strong> or create a new one to determine its priority in the rendering queue. Change the value of the <strong>Order in Layer</strong> to set the Renderer’s priority among other Renderers within the same <strong>Sorting Layer</strong>.</p>
-
-<h2>Specify Render Queue<a name="renderqueue"></a>
-</h2>
-
-<p>You can specify the Render Queue type of the Renderer in its Material settings or in the Shader settings of its Material. This is useful for grouping and sorting Renderers which are using different Materials. Refer to documentation on <a href="SL-SubShaderTags.html">ShaderLab: SubShader Tags</a> for more details.</p>
-
-<h2>Distance to Camera<a name="cameradistance"></a>
-</h2>
-
-<p>The <a href="class-Camera.html">Camera component</a> sorts Renderers based on its <strong>Projection</strong> setting. The two options are <strong>Perspective</strong> and <strong>Orthographic</strong>. </p>
-
-<h3>Perspective<a name="persp"></a>
-</h3>
-
-<p>In this mode, the sorting distance of a Renderer is the direct distance of the Renderer from the Camera’s position.</p>
-
-<h3>Orthographic<a name="ortho"></a>
-</h3>
-
-<p>The sorting distance of a Renderer is the distance between the position of the Renderer and the Camera along the Camera’s view direction. For the default 2D setting, this is along the (0, 0, 1) axis.</p>
-
-<p>When you set the Camera component to <strong>Perspective</strong> or <strong>Orthographic,</strong> Unity automatically sets the Camera’s <a href="../ScriptReference/TransparencySortMode.html">TransparencySortMode</a> to match the selected mode. You can set the Transparency Sort Mode manually in two ways: </p>
-
-<ul>
-<li>Open the <strong>Project Settings</strong> and go to <a href="class-GraphicsSettings.html#Camera">Graphics</a>, then under <strong>Camera Settings</strong> use Transparent Sort Mode</li>
-<li>Set the Camera’s <a href="../ScriptReference/TransparencySortMode.html">TransparencySortMode</a> via the Scripting API.</li>
+<li>打开 <strong>Project Settings</strong>，选择 <a href="class-GraphicsSettings.html#Camera">Graphics</a>，然后在 <strong>Camera Settings</strong> 下设置 Transparent Sort Mode</li>
+<li>通过脚本 API 设置摄像机的 <a href="../ScriptReference/TransparencySortMode.html">TransparencySortMode</a>。</li>
 </ul>
 
-<p>The Camera <strong>Transparency Sort Mode</strong> settings are under the <strong>Graphics</strong> category in the <strong>Project Settings</strong> (main menu: <strong>Edit</strong> &gt; <strong>Project Settings </strong>&gt; <strong>Graphics</strong>). When this is set to <strong>Default</strong>, a Camera component’s Projection setting take priority. When this is set to an option other than <strong>Default</strong>, the Camera component’s Projection setting remains the same, but the Camera’s <strong>Transparency Sort Mode</strong> changes to that option. </p>
+<p>摄像机 <strong>Transparency Sort Mode</strong> 设置位于 <strong>Project Settings</strong> 中的 <strong>Graphics</strong> 类别下（主菜单：<strong>Edit</strong> &gt; <strong>Project Settings </strong>&gt; <strong>Graphics</strong>）。当此设置为 <strong>Default</strong> 时，Camera 组件的 Projection 设置将具有更高优先级。当此设置为 <strong>Default</strong> 以外的选项时，Camera 组件的 Projection 设置保持不变，但摄像机的 <strong>Transparency Sort Mode</strong> 将更改为该选项。</p>
 
-<p>An additional option available through the Project settings and via the Scripting API is the <a href="../ScriptReference/TransparencySortMode.CustomAxis.html">Custom Axis sort mode</a>.</p>
+<p>通过 Project Settings 和脚本 API 提供的另一个选项是<a href="../ScriptReference/TransparencySortMode.CustomAxis.html">自定义轴 (Custom Axis) 排序模式</a>。</p>
 
-<h3>Custom Axis sort mode<a name="customaxis"></a>
+<h3>自定义轴排序模式<a name="customaxis"></a>
 </h3>
 
-<p>Select this mode to sort Renderers based on their distance along the custom axis you set in the Project settings (main menu: <strong>Edit</strong> &gt; <strong>Projecting Settings</strong> &gt; <strong>Graphics</strong> &gt; <strong>Transparency Sort Axis</strong>). This is commonly used in projects with <a href="Tilemap-Isometric.html">Isometric Tilemaps</a> to sort and render the Tile Sprites correctly on the Tilemap. Refer to <a href="Tilemap-Isometric-CreateIso.html">Creating an Isometric Tilemap</a> for further information.</p>
+<p>选择此模式可根据 Project Settings（主菜单：<strong>Edit</strong> &gt; <strong>Projecting Settings</strong> &gt; <strong>Graphics</strong> &gt; <strong>Transparency Sort Axis</strong>）中设置的渲染器在自定义轴上的距离对渲染器进行排序。此模式通常用于具有<a href="Tilemap-Isometric.html">等距瓦片地图 (Isometric Tilemaps)</a> 的项目中，以便在瓦片地图 (Tilemap) 上正确排序和渲染瓦片精灵 (Tile Sprites)。请参阅<a href="Tilemap-Isometric-CreateIso.html">创建等距瓦片地图</a>以了解更多信息。</p>
 
-<h3>Sprite Sort Point<a name="sortpoint"></a>
+<h3>精灵排序点<a name="sortpoint"></a>
 </h3>
 
-<p>By default, a Sprite’s <strong><a href="https://docs.unity3d.com/Manual/class-SpriteRenderer.html#sortpoint">Sort Point</a></strong> is set to its <strong>Center</strong>, and Unity measures the distance between the camera’s Transform position and the Center of the Sprite to determine their render order during sorting. An alternate option is to set a Sprite’s <strong>Sort Point</strong> to its <strong>Pivot</strong> position in World Space. Select the <strong>Pivot</strong> option in the Sprite’s <a href="class-SpriteRenderer.html">Sprite Renderer</a> property settings and edit the Sprite’s Pivot position in the <a href="SpriteEditor.html">Sprite Editor</a>.</p>
+<p>默认情况下，精灵的 <strong><a href="https://docs.unity3d.com/Manual/class-SpriteRenderer.html#sortpoint">Sort Point（排序点）</a></strong>设置为其 <strong>Center</strong>，因此 Unity 会测量摄像机的变换位置与精灵的中心之间的距离，以确定它们在排序过程中的渲染顺序。另一种选项是将精灵的 <strong>Sort Point</strong> 设置为世界空间中的 <strong>Pivot</strong> 位置。为此，请在精灵的 <a href="class-SpriteRenderer.html">Sprite Renderer</a> 属性设置中选择 <strong>Pivot</strong> 选项，然后在 <a href="SpriteEditor.html">Sprite Editor</a> 中编辑精灵的 Pivot 位置。</p>
 
-<h2>Sorting Group<a name="sortgroup"></a>
+<h2>排序组<a name="sortgroup"></a>
 </h2>
 
-<p>The <a href="class-SortingGroup.html">Sorting Group</a> is a component that groups Renderers which share a common root together for sorting purposes. All Renderers within the same Sorting Group share the same <strong>Sorting Layer, Order in Layer,</strong> and <strong>Distance to Camera</strong>. Refer to documentation on the <a href="class-SortingGroup.html">Sorting Group</a> component and its settings for more details.</p>
+<p><a href="class-SortingGroup.html">排序组 (Sorting Group)</a> 是一个组件，它将具有共同根的渲染器分组到一起以进行排序。同一排序组中的所有渲染器具有相同的<strong>排序图层 (Sorting Layer)、图层中的顺序 (Order in Layer)</strong> 和<strong>与摄像机的距离 (Distance to Camera)</strong>。请参阅有关<a href="class-SortingGroup.html">排序组 (Sorting Group)</a> 组件及其相关设置的文档以了解更多详细信息。</p>
 
-<h2>Material/Shader<a name="material"></a>
+<h2>材质/着色器<a name="material"></a>
 </h2>
 
-<p>Unity sorts Renderers with the same <a href="Shaders.html">Material settings</a> together for more efficient rendering performance, such as with <a href="DrawCallBatching.html">dynamic batching</a>.</p>
+<p>Unity 将具有相同<a href="Shaders.html">材质设置</a>的渲染器排序到一起，以获得更高效的渲染性能，例如在进行<a href="DrawCallBatching.html">动态批处理</a>时。</p>
 
-<h2>Tiebreaker<a name="tiebreak"></a>
+<h2>仲裁程序<a name="tiebreak"></a>
 </h2>
 
-<p>When multiple Renderers have identical sorting priority, the tiebreaker is the order that Unity places the Renderers in the Render Queue. Because this is an internal process that you have no control over, you should use the sorting options (such as <strong>Sorting Layers</strong> and <strong>Sorting Groups</strong>) to make sure all Renderers have distinct sorting priorities.</p>
+<p>当多个渲染器具有相同的排序优先级时，由仲裁程序决定 Unity 将渲染器放置在渲染队列中的顺序。因为这是您无法控制的内部过程，所以您应该使用排序选项（例如 <strong>Sorting Layers</strong> 和 <strong>Sorting Groups</strong>）确保所有渲染器具有不同的排序优先级。</p>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
 <span class="prev"><a href="Overview2D.html"></a></span><div class="tip">2D 游戏</div>
@@ -244,9 +250,9 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2019.1</div>
 <div class="menu">
-<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>
 </div>
 <div></div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="no-js">
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,11 +10,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="Hexagonal Tilemaps - Unity Manual">
-<title>Hexagonal Tilemaps - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/2DHexMap_0.png">
-<meta name="description" content="In addition to regular Tilemaps, Unity provides both Hexagonal Point Top and Hexagonal Flat Top Tilemaps. Hexagonal tiles are often used in strategic tabletop games, because they have consistent distance between their centres and any point on their edge, and neighboring tiles always share edges. This makes them ideal for constructing almost any kind of large play area and allows players to make tactical decisions regarding movement and positioning.">
-<meta property="og:description" content="In addition to regular Tilemaps, Unity provides both Hexagonal Point Top and Hexagonal Flat Top Tilemaps. Hexagonal tiles are often used in strategic tabletop games, because they have consistent distance between their centres and any point on their edge, and neighboring tiles always share edges. This makes them ideal for constructing almost any kind of large play area and allows players to make tactical decisions regarding movement and positioning.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="六边形瓦片地图 - Unity 手册">
+<title>六边形瓦片地图 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.1/uploads/Main/2DHexMap_0.png">
+<meta name="description" content="除常规瓦片地图外，Unity 还提供 Hexagonal Point Top Tilemap 和 Hexagonal Flat Top Tilemap 瓦片地图。六角形瓦片通常用于战略类桌面游戏，因为它们的中心与边上的任何点之间具有一致的距离，并且相邻的瓦片总是共享边。因此，这些瓦片非常适合构建几乎任何类型的大型游戏区域，并让玩家做出关于移动和定位的战术决策。">
+<meta property="og:description" content="除常规瓦片地图外，Unity 还提供 Hexagonal Point Top Tilemap 和 Hexagonal Flat Top Tilemap 瓦片地图。六角形瓦片通常用于战略类桌面游戏，因为它们的中心与边上的任何点之间具有一致的距离，并且相邻的瓦片总是共享边。因此，这些瓦片非常适合构建几乎任何类型的大型游戏区域，并让玩家做出关于移动和定位的战术决策。">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -28,13 +29,20 @@
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
 <script>
       var docs_type = 'Manual';
-      var lang = 'zh_CN';
+      var lang = 'cn';
       var page = 'Tilemap-Hexagonal';
       if(!page) page = 'index';
       var version = '2019.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2020.1',version_string: '2020.1'},{version: '2019.3',version_string: '2019.3'},{version: '2019.2',version_string: '2019.2'},{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.1/Manual/Tilemap-Hexagonal.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.1/Manual/Tilemap-Hexagonal.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.1/Manual/Tilemap-Hexagonal.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.1/Manual/Tilemap-Hexagonal.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.1/Manual/Tilemap-Hexagonal.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.1/Manual/Tilemap-Hexagonal.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.1/Documentation/Manual/Tilemap-Hexagonal.html" hreflang="x-default">
 </head>
 <body>
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -44,11 +52,11 @@
 <div id="nav-open" for="nav-input"><span></span></div>
 <div class="logo"><a href="https://docs.unity3d.com"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
-<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
 <ul class="menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 </div></div>
 <div class="more">
@@ -68,25 +76,28 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Tilemap-Hexagonal.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Tilemap-Hexagonal.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Tilemap-Hexagonal.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Tilemap-Hexagonal.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Tilemap-Hexagonal.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Tilemap-Hexagonal.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Tilemap-Hexagonal.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Tilemap-Hexagonal.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Tilemap-Hexagonal.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Tilemap-Hexagonal.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/Tilemap-Hexagonal.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/Tilemap-Hexagonal.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/Tilemap-Hexagonal.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/Tilemap-Hexagonal.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/Tilemap-Hexagonal.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/Tilemap-Hexagonal.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/Tilemap-Hexagonal.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/Tilemap-Hexagonal.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/Tilemap-Hexagonal.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/Tilemap-Hexagonal.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/Tilemap-Hexagonal.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/Tilemap-Hexagonal.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/Tilemap-Hexagonal.html">5.6</a></li>
 </ul></div>
 </div>
 <ul class="nav-menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 <div class="lang-switcher">
 <div class="current toggle" data-target=".lang-list">
-<div class="lbl">Language:
+<div class="lbl">语言:
         <span class="b">中文</span>
 </div>
 <div class="arrow"></div>
@@ -96,13 +107,14 @@
 <li><a data-lang="ja" href="/ja/2019.1/Manual/Tilemap-Hexagonal.html">日本語</a></li>
 <li><a data-lang="es" href="/es/2019.1/Manual/Tilemap-Hexagonal.html">Español</a></li>
 <li><a data-lang="kr" href="/kr/2019.1/Manual/Tilemap-Hexagonal.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.1/Manual/Tilemap-Hexagonal.html">Русский</a></li>
 </ul></div>
 </div>
 </div></div>
 </div>
 <div id="master-wrapper" class="master-wrapper clear">
 <div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
-<h2>Manual</h2>
+<h2>手册</h2>
 <div class="version-switcher">
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
@@ -112,16 +124,19 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Tilemap-Hexagonal.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Tilemap-Hexagonal.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Tilemap-Hexagonal.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Tilemap-Hexagonal.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Tilemap-Hexagonal.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Tilemap-Hexagonal.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Tilemap-Hexagonal.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Tilemap-Hexagonal.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Tilemap-Hexagonal.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Tilemap-Hexagonal.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/Tilemap-Hexagonal.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/Tilemap-Hexagonal.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/Tilemap-Hexagonal.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/Tilemap-Hexagonal.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/Tilemap-Hexagonal.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/Tilemap-Hexagonal.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/Tilemap-Hexagonal.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/Tilemap-Hexagonal.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/Tilemap-Hexagonal.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/Tilemap-Hexagonal.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/Tilemap-Hexagonal.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/Tilemap-Hexagonal.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/Tilemap-Hexagonal.html">5.6</a></li>
 </ul></div>
 </div>
 <div class="clear"></div>
@@ -132,67 +147,67 @@
 <li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
 <li><a href="Unity2D.html">2D</a></li>
 <li><a href="class-Tilemap.html">Tilemap</a></li>
-<li>Hexagonal Tilemaps</li>
+<li>六边形瓦片地图</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="Tilemap-Palette.html"></a></span><div class="tip">Tile Palette</div>
+<span class="prev"><a href="Tilemap-Palette.html"></a></span><div class="tip">瓦片面板 (Tile Palette)</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="Tilemap-Isometric.html"></a></span><div class="tip">Isometric Tilemaps</div>
+<span class="next"><a href="Tilemap-Isometric.html"></a></span><div class="tip">等距瓦片地图</div>
 </div>
 </div></div>
-<h1>Hexagonal Tilemaps</h1>
+<h1>六边形瓦片地图</h1>
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>In addition to regular <a href="class-Tilemap.html">Tilemaps</a>, Unity provides both <strong>Hexagonal Point Top</strong> and <strong>Hexagonal Flat Top</strong> Tilemaps. Hexagonal tiles are often used in strategic tabletop games, because they have consistent distance between their centres and any point on their edge, and neighboring tiles always share edges. This makes them ideal for constructing almost any kind of large play area and allows players to make tactical decisions regarding movement and positioning.</p>
+<p>除常规<a href="class-Tilemap.html">瓦片地图</a>外，Unity 还提供 <strong>Hexagonal Point Top Tilemap</strong> 和 <strong>Hexagonal Flat Top Tilemap</strong> 瓦片地图。六角形瓦片通常用于战略类桌面游戏，因为它们的中心与边上的任何点之间具有一致的距离，并且相邻的瓦片总是共享边。因此，这些瓦片非常适合构建几乎任何类型的大型游戏区域，并让玩家做出关于移动和定位的战术决策。</p>
 
-<p>To create a <strong>Hexagonal Tilemap</strong>, follow the same steps to <a href="Tilemap-CreatingTilemaps.html">create a regular Tilemap</a> (menu: <strong>GameObject &gt; 2D Object</strong>) but choose one of the <strong>Hexagonal</strong> options in the <strong>2D Object</strong> menu.</p>
+<p>要创建__六边形瓦片地图 (Hexagonal Tilemap)<strong>，请按照与<a href="Tilemap-CreatingTilemaps.html">创建常规瓦片地图</a>相同的步骤操作（菜单：__GameObject &gt; 2D Object__），但在 </strong>2D Object__ 菜单中选择 <strong>Hexagonal</strong> 选项之一。</p>
 
 <figure>
-<img src="../uploads/Main/2DHexMap_0.png" alt="Hexagonal Tilemap options in the 2D Object menu">
-<figcaption>Hexagonal Tilemap options in the 2D Object menu</figcaption>
+<img src="../uploads/Main/2DHexMap_0.png" alt="2D Object 菜单中的 Hexagonal Tilemap 选项">
+<figcaption>2D Object 菜单中的 Hexagonal Tilemap 选项</figcaption>
 </figure>
 
-<p>Select the <strong>Hexagonal Tilemap</strong> option that matches the orientation of the hexagonal Tiles you are using. The following are examples of a <strong>Hexagonal Point Top Tilemap</strong> and a <strong>Hexagonal Flat Top Tilemap</strong>.</p>
+<p>选择与当前使用的六边形瓦片方向相匹配的 <strong>Hexagonal Tilemap</strong> 选项。以下是 <strong>Hexagonal Point Top Tilemap</strong> 和 <strong>Hexagonal Flat Top Tilemap</strong> 的示例。</p>
 
 <figure>
-<img src="../uploads/Main/2DHexMap_1.png" alt="Example of hexagonal Tiles oriented with points facing top">
-<figcaption>Example of hexagonal Tiles oriented with points facing top</figcaption>
+<img src="../uploads/Main/2DHexMap_1.png" alt="点朝顶部的六角形瓦片示例">
+<figcaption>点朝顶部的六角形瓦片示例</figcaption>
 </figure>
 
 <figure>
-<img src="../uploads/Main/2DHexMap_2.png" alt="Example of hexagonal Tiles oriented with flat sides facing top">
-<figcaption>Example of hexagonal Tiles oriented with flat sides facing top</figcaption>
+<img src="../uploads/Main/2DHexMap_2.png" alt="平边朝顶部的六角形瓦片示例">
+<figcaption>平边朝顶部的六角形瓦片示例</figcaption>
 </figure>
 
-<p>When creating the <strong>Tile Palette</strong> for a Hexagonal Tilemap, set the <strong>Grid</strong> setting of the <strong>Tile Palette</strong> to <strong>Hexagon</strong> and select the <strong>Hexagon Type</strong> that matches the Tilemap and Tiles you are using, as shown below.</p>
+<p>为六边形瓦片地图创建__瓦片面板 (Tile Palette)__ 时，将 <strong>Tile Palette</strong> 的 <strong>Grid</strong> 设置设为 <strong>Hexagon__，并将 </strong>Hexagon Type__ 设置为与当前使用的瓦片地图和瓦片相匹配的六角形类型，如下所示。</p>
 
 <figure>
-<img src="../uploads/Main/2DHexMap_3.png" alt="Hexagon Type must match the orientation of the hexagonal Tiles">
-<figcaption><strong>Hexagon Type</strong> must match the orientation of the hexagonal Tiles</figcaption>
+<img src="../uploads/Main/2DHexMap_3.png" alt="Hexagon Type 必须与六边形瓦片的方向相匹配">
+<figcaption><strong>Hexagon Type</strong> 必须与六边形瓦片的方向相匹配</figcaption>
 </figure>
 
 <hr>
 
 <ul>
-<li><span class="page-history">Hexagonal Tilemaps added in <a href="https://docs.unity3d.com/2018.2/Documentation/Manual/30_search.html?q=newin20182">2018.2</a> <span class="search-words">NewIn20182</span></span></li>
+<li><span class="page-history">在 <a href="https://docs.unity3d.com/2018.2/Documentation/Manual/30_search.html?q=newin20182">2018.2</a> 版中添加了六边形瓦片地图 <span class="search-words">NewIn20182</span></span></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="Tilemap-Palette.html"></a></span><div class="tip">Tile Palette</div>
+<span class="prev"><a href="Tilemap-Palette.html"></a></span><div class="tip">瓦片面板 (Tile Palette)</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="Tilemap-Isometric.html"></a></span><div class="tip">Isometric Tilemaps</div>
+<span class="next"><a href="Tilemap-Isometric.html"></a></span><div class="tip">等距瓦片地图</div>
 </div>
 </div>
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2019.1</div>
 <div class="menu">
-<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>
 </div>
 <div></div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="no-js">
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,11 +10,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="SpeedTree - Unity Manual">
-<title>SpeedTree - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/SpeedTreeView.jpg">
-<meta name="description" content="SpeedTree is a third-party product by IDV Inc, which provides prebuilt tree Assets and modeling software focused specifically on trees.">
-<meta property="og:description" content="SpeedTree is a third-party product by IDV Inc, which provides prebuilt tree Assets and modeling software focused specifically on trees.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="SpeedTree - Unity 手册">
+<title>SpeedTree - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.1/uploads/Main/SpeedTreeView.jpg">
+<meta name="description" content="SpeedTree 是 IDV Inc 公司的第三方产品，提供专门针对树的预建树资源和建模软件。">
+<meta property="og:description" content="SpeedTree 是 IDV Inc 公司的第三方产品，提供专门针对树的预建树资源和建模软件。">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -28,13 +29,20 @@
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
 <script>
       var docs_type = 'Manual';
-      var lang = 'zh_CN';
+      var lang = 'cn';
       var page = 'SpeedTree';
       if(!page) page = 'index';
       var version = '2019.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2020.1',version_string: '2020.1'},{version: '2019.3',version_string: '2019.3'},{version: '2019.2',version_string: '2019.2'},{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.1/Manual/SpeedTree.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.1/Manual/SpeedTree.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.1/Manual/SpeedTree.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.1/Manual/SpeedTree.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.1/Manual/SpeedTree.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.1/Manual/SpeedTree.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.1/Documentation/Manual/SpeedTree.html" hreflang="x-default">
 </head>
 <body>
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -44,11 +52,11 @@
 <div id="nav-open" for="nav-input"><span></span></div>
 <div class="logo"><a href="https://docs.unity3d.com"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
-<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
 <ul class="menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 </div></div>
 <div class="more">
@@ -68,25 +76,28 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SpeedTree.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SpeedTree.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SpeedTree.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SpeedTree.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SpeedTree.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SpeedTree.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SpeedTree.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SpeedTree.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SpeedTree.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SpeedTree.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/SpeedTree.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/SpeedTree.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/SpeedTree.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/SpeedTree.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/SpeedTree.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/SpeedTree.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/SpeedTree.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/SpeedTree.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/SpeedTree.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/SpeedTree.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/SpeedTree.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/SpeedTree.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/SpeedTree.html">5.6</a></li>
 </ul></div>
 </div>
 <ul class="nav-menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 <div class="lang-switcher">
 <div class="current toggle" data-target=".lang-list">
-<div class="lbl">Language:
+<div class="lbl">语言:
         <span class="b">中文</span>
 </div>
 <div class="arrow"></div>
@@ -96,13 +107,14 @@
 <li><a data-lang="ja" href="/ja/2019.1/Manual/SpeedTree.html">日本語</a></li>
 <li><a data-lang="es" href="/es/2019.1/Manual/SpeedTree.html">Español</a></li>
 <li><a data-lang="kr" href="/kr/2019.1/Manual/SpeedTree.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.1/Manual/SpeedTree.html">Русский</a></li>
 </ul></div>
 </div>
 </div></div>
 </div>
 <div id="master-wrapper" class="master-wrapper clear">
 <div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
-<h2>Manual</h2>
+<h2>手册</h2>
 <div class="version-switcher">
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
@@ -112,16 +124,19 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SpeedTree.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SpeedTree.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SpeedTree.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SpeedTree.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SpeedTree.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SpeedTree.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SpeedTree.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SpeedTree.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SpeedTree.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SpeedTree.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/SpeedTree.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/SpeedTree.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/SpeedTree.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/SpeedTree.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/SpeedTree.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/SpeedTree.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/SpeedTree.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/SpeedTree.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/SpeedTree.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/SpeedTree.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/SpeedTree.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/SpeedTree.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/SpeedTree.html">5.6</a></li>
 </ul></div>
 </div>
 <div class="clear"></div>
@@ -133,12 +148,12 @@
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsOverview.html">图形概述</a></li>
 <li><a href="script-Terrain.html">地形引擎</a></li>
-<li><a href="terrain-Trees.html">Trees</a></li>
+<li><a href="terrain-Trees.html">树</a></li>
 <li>SpeedTree</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="terrain-Trees.html"></a></span><div class="tip">Trees</div>
+<span class="prev"><a href="terrain-Trees.html"></a></span><div class="tip">树</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
 <span class="next"><a href="terrain-WindZones.html"></a></span><div class="tip">风区（Wind Zones）</div>
@@ -152,47 +167,47 @@
 <img src="../uploads/Main/SpeedTreeView.jpg" alt="">
 </figure>
 
-<p><a href="https://store.speedtree.com/unity/">SpeedTree</a> is a third-party product by IDV Inc, which provides prebuilt tree Assets and modeling software focused specifically on trees.</p>
+<p><a href="https://store.speedtree.com/unity/">SpeedTree</a> 是 IDV Inc 公司的第三方产品，提供专门针对树的预建树资源和建模软件。</p>
 
-<p>Unity recognizes and imports SpeedTree Assets in the same way that it handles other Assets. If you’re using SpeedTree Modeler 7, make sure to resave your <code>.spm</code> files using the Unity version of the Modeler. If you’re using SpeedTree Modeler 8, save your <code>.st</code> files directly into the Unity Project folder. </p>
+<p>Unity 采用与其他资源相同的处理方式来识别和导入 SpeedTree 资源。如果使用的是 SpeedTree Modeler 7，请确保使用 Unity 版本的 Modeler 重新保存 <code>.spm</code> 文件。如果使用的是 SpeedTree Modeler 8，请将 <code>.st</code> 文件直接保存到 Unity Project 文件夹中。</p>
 
-<p>Make sure that Textures are reachable in the Project folder, and that Unity automatically generates Materials for each <a href="LevelOfDetail.html">Level of Detail (LOD)</a>. When you select an Asset, there are <a href="class-SpeedTreeImporter.html">import settings</a> to tweak the generated GameObject and attached Materials. Unity does not re-generate Materials when you re-import them, unless you click the <strong>Generate Materials</strong> or <strong>Apply &amp; Generate Materials</strong> button. Therefore, it is possible to preserve any customizations to the Materials.</p>
+<p>确保 Project 文件夹中的纹理为可访问状态，并且 Unity 自动生成每个<a href="LevelOfDetail.html">细节级别 (LOD)</a> 的材质。选择资源时会有一些<a href="class-SpeedTreeImporter.html">导入设置</a>，您可以使用这些设置来调整生成的游戏对象和附加的材质。重新导入时，除非单击 <strong>Generate Materials</strong> 或 <strong>Apply &amp; Generate Materials</strong> 按钮，否则 Unity 不会重新生成材质。因此可以保留对材质所进行的任何自定义。</p>
 
-<p>The SpeedTree importer generates a Prefab with the <a href="class-LODGroup.html">LODGroup</a> component configured. You can instantiate the Prefab in a Scene as a common Prefab instance, or select the Prefab as a tree prototype and paint it across the Terrain.</p>
+<p>SpeedTree 导入器生成一个配置了 <a href="class-LODGroup.html">LODGroup</a> 组件的预制件。可以在场景中将此预制件实例化为普通的预制件实例，也可以选择此预制件作为树原型并在地形上对其进行绘制。</p>
 
-<p>Additionally, the Terrain accepts any GameObject with an LODGroup component as a tree prototype, and does not place limitations on the Mesh size, or number of Materials used. This is different from Unity <a href="class-Tree.html">Tree Editor</a> trees. However, be aware that SpeedTree trees usually use three to four different Materials, which as a result, issues a number of draw calls every frame. Thus, we recommend that you avoid heavy use of LOD trees on platforms, such as the mobile platforms, where additional draw calls are relatively costly in terms of rendering performance.</p>
+<p>此外，地形接受任何带有 LODGroup 组件的游戏对象作为树原型，并且对网格大小或所使用的材质数量没有限制。这与 Unity <a href="class-Tree.html">Tree Editor</a> 树不同。但是，请注意 SpeedTree 树通常使用三到四种不同的材质，因此每帧都会发出一些绘制调用。所以，我们建议避免在移动平台之类的平台上大量使用 LOD 树，因为在这些平台上，额外的绘制调用在渲染性能方面的成本相对较高。</p>
 
-<h2>Materials</h2>
+<h2>材质</h2>
 
-<p>The model importer has a <strong>Materials</strong> tab to improve the workflow for handling SpeedTree Material Assets. See documentation on the Model Importer’s <a href="FBXImporter-Materials.html">Material tab</a> page for more information.</p>
+<p>模型导入器具有 <strong>Materials</strong> 选项卡，用于改进处理 SpeedTree 材质资源的工作流程。请参阅有关模型导入器 <a href="FBXImporter-Materials.html">Material 选项卡</a>手册页的文档以了解更多信息。</p>
 
-<h2>Casting and receiving real-time shadows</h2>
+<h2>投射和接受实时阴影</h2>
 
-<p>To make billboards cast shadows correctly, Unity rotates billboards during the shadow caster pass to make them face the light direction (or light position in the case of point light) instead of facing the camera.</p>
+<p>为了使公告牌正确投射阴影，在阴影投射物 pass 期间，Unity 会旋转公告牌以使它们面向光线方向（在点光源的情况下为光源位置）而不是面向摄像机。</p>
 
-<p>To enable these options, select the <strong>Billboard</strong> LOD level in the <strong>Inspector</strong> of a SpeedTree Asset, check <strong>Cast Shadows</strong> or <strong>Receive Shadows</strong> in <strong>Billboard Options</strong>, and click <strong>Apply Prefab</strong>.</p>
+<p>要启用这些选项，请在 SpeedTree 资源的 <strong>Inspector</strong> 中选择 <strong>Billboard</strong> LOD 级别，在 <strong>Billboard Options</strong> 中选中 <strong>Cast Shadows</strong> 或 <strong>Receive Shadows__，然后单击 </strong>Apply Prefab__。</p>
 
 <figure>
-<img src="../uploads/Main/1.6.1-SpeedTreeImporter.png" alt="SpeedTree import settings">
-<figcaption>SpeedTree import settings</figcaption>
+<img src="../uploads/Main/1.6.1-SpeedTreeImporter.png" alt="SpeedTree 导入设置">
+<figcaption>SpeedTree 导入设置</figcaption>
 </figure>
 
-<p>To change the billboard shadow options of instantiated SpeedTree GameObjects, select the billboard GameObject in the <strong>Hierarchy</strong> window and tweak these options in the <strong>Inspector</strong> of the <strong>Billboard Renderer</strong>.</p>
+<p>要更改实例化的 SpeedTree 游戏对象的公告牌阴影选项，请在 <strong>Hierarchy</strong> 窗口中选择公告牌游戏对象，然后在__公告牌渲染器 (Billboard Renderer)__ 的 <strong>Inspector</strong> 中调整这些选项。</p>
 
-<p>The trees you paint on a Terrain inherit billboard shadow options from the Prefab. Use <code>BillboardRenderer.shadowCastingMode</code> and <code>BillboardRenderer.receiveShadows</code> to alter these options at runtime.</p>
+<p>在地形上绘制的树继承来自预制件的公告牌阴影选项。使用 <code>BillboardRenderer.shadowCastingMode</code> 和 <code>BillboardRenderer.receiveShadows</code> 在运行时更改这些选项。</p>
 
-<p><strong>Known issues:</strong> As with any other renderer, the <strong>Receive Shadows</strong> option has no effect while using deferred rendering. Billboards always receive shadows in deferred path.</p>
+<p><strong>已知问题：__与任何其他渲染器一样，__Receive Shadows</strong> 选项在使用延迟渲染时无效。公告牌始终在延迟路径中接受阴影。</p>
 
 <hr>
 
 <ul>
-<li><p><span class="page-edit">2019–01–29 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><p><span class="page-edit">2019–01–29 页面已修订并进行了<a href="DocumentationEditorialReview.html">编辑审查</a>
 </span></p></li>
-<li><p><span class="page-history">Added information about SpeedTree 8 and related links</span></p></li>
+<li><p><span class="page-history">添加了关于 SpeedTree 8 的信息以及相关链接</span></p></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="terrain-Trees.html"></a></span><div class="tip">Trees</div>
+<span class="prev"><a href="terrain-Trees.html"></a></span><div class="tip">树</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
 <span class="next"><a href="terrain-WindZones.html"></a></span><div class="tip">风区（Wind Zones）</div>
@@ -201,9 +216,9 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2019.1</div>
 <div class="menu">
-<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>
 </div>
 <div></div>

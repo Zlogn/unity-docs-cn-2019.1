@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="no-js">
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,10 +10,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="ScriptableObject - Unity Manual">
-<title>ScriptableObject - Unity Manual</title>
-<meta name="description" content="A ScriptableObject is a data container that you can use to save large amounts of data, independent of class instances. One of the main use cases for ScriptableObjects is to reduce your Project’s memory usage by avoiding copies of values. This is useful if your Project has a Prefab that stores unchanging data in attached MonoBehaviour scripts. Everytime you instantiate that Prefab, it will get its own copy of that data. Instead of using the method, and storing duplicated data, you can use a ScriptableObject to store the data and then access it by reference from all of the Prefabs. This means that there is one copy of the data in memory.">
-<meta property="og:description" content="A ScriptableObject is a data container that you can use to save large amounts of data, independent of class instances. One of the main use cases for ScriptableObjects is to reduce your Project’s memory usage by avoiding copies of values. This is useful if your Project has a Prefab that stores unchanging data in attached MonoBehaviour scripts. Everytime you instantiate that Prefab, it will get its own copy of that data. Instead of using the method, and storing duplicated data, you can use a ScriptableObject to store the data and then access it by reference from all of the Prefabs. This means that there is one copy of the data in memory.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="ScriptableObject - Unity 手册">
+<title>ScriptableObject - Unity 手册</title>
+<meta name="description" content="ScriptableObject 是一个可独立于类实例来保存大量数据的数据容器。ScriptableObjects 的一个主要用例是通过避免重复值来减少项目的内存使用量。如果项目有一个预制件在附加的 MonoBehaviour 脚本中存储不变的数据，这将非常有用。每次实例化预制件时，都会产生单独的数据副本。这种情况下可以不使用该方法并且不存储重复数据，而是使用 ScriptableObject 来存储数据，然后通过所有预制件的引用访问数据。这意味着内存中只有一个数据副本。">
+<meta property="og:description" content="ScriptableObject 是一个可独立于类实例来保存大量数据的数据容器。ScriptableObjects 的一个主要用例是通过避免重复值来减少项目的内存使用量。如果项目有一个预制件在附加的 MonoBehaviour 脚本中存储不变的数据，这将非常有用。每次实例化预制件时，都会产生单独的数据副本。这种情况下可以不使用该方法并且不存储重复数据，而是使用 ScriptableObject 来存储数据，然后通过所有预制件的引用访问数据。这意味着内存中只有一个数据副本。">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -27,13 +28,20 @@
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
 <script>
       var docs_type = 'Manual';
-      var lang = 'zh_CN';
+      var lang = 'cn';
       var page = 'class-ScriptableObject';
       if(!page) page = 'index';
       var version = '2019.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2020.1',version_string: '2020.1'},{version: '2019.3',version_string: '2019.3'},{version: '2019.2',version_string: '2019.2'},{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.1/Manual/class-ScriptableObject.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.1/Manual/class-ScriptableObject.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.1/Manual/class-ScriptableObject.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.1/Manual/class-ScriptableObject.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.1/Manual/class-ScriptableObject.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.1/Manual/class-ScriptableObject.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.1/Documentation/Manual/class-ScriptableObject.html" hreflang="x-default">
 </head>
 <body>
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -43,11 +51,11 @@
 <div id="nav-open" for="nav-input"><span></span></div>
 <div class="logo"><a href="https://docs.unity3d.com"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
-<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
 <ul class="menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 </div></div>
 <div class="more">
@@ -67,25 +75,28 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-ScriptableObject.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-ScriptableObject.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-ScriptableObject.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-ScriptableObject.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-ScriptableObject.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-ScriptableObject.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-ScriptableObject.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-ScriptableObject.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-ScriptableObject.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-ScriptableObject.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-ScriptableObject.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-ScriptableObject.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-ScriptableObject.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-ScriptableObject.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-ScriptableObject.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-ScriptableObject.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-ScriptableObject.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-ScriptableObject.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-ScriptableObject.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-ScriptableObject.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-ScriptableObject.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-ScriptableObject.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/class-ScriptableObject.html">5.6</a></li>
 </ul></div>
 </div>
 <ul class="nav-menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 <div class="lang-switcher">
 <div class="current toggle" data-target=".lang-list">
-<div class="lbl">Language:
+<div class="lbl">语言:
         <span class="b">中文</span>
 </div>
 <div class="arrow"></div>
@@ -95,13 +106,14 @@
 <li><a data-lang="ja" href="/ja/2019.1/Manual/class-ScriptableObject.html">日本語</a></li>
 <li><a data-lang="es" href="/es/2019.1/Manual/class-ScriptableObject.html">Español</a></li>
 <li><a data-lang="kr" href="/kr/2019.1/Manual/class-ScriptableObject.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.1/Manual/class-ScriptableObject.html">Русский</a></li>
 </ul></div>
 </div>
 </div></div>
 </div>
 <div id="master-wrapper" class="master-wrapper clear">
 <div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
-<h2>Manual</h2>
+<h2>手册</h2>
 <div class="version-switcher">
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
@@ -111,16 +123,19 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-ScriptableObject.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-ScriptableObject.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-ScriptableObject.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-ScriptableObject.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-ScriptableObject.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-ScriptableObject.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-ScriptableObject.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-ScriptableObject.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-ScriptableObject.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-ScriptableObject.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-ScriptableObject.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-ScriptableObject.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-ScriptableObject.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-ScriptableObject.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-ScriptableObject.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-ScriptableObject.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-ScriptableObject.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-ScriptableObject.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-ScriptableObject.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-ScriptableObject.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-ScriptableObject.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-ScriptableObject.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/class-ScriptableObject.html">5.6</a></li>
 </ul></div>
 </div>
 <div class="clear"></div>
@@ -135,7 +150,7 @@
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="StreamingAssets.html"></a></span><div class="tip">流媒体资源 (Streaming Assets)</div>
+<span class="prev"><a href="StreamingAssets.html"></a></span><div class="tip">Streaming Assets</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
 <span class="next"><a href="AdvancedEditor.html"></a></span><div class="tip">Editor 高级主题</div>
@@ -145,25 +160,25 @@
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<h2>What is a ScriptableObject?</h2>
+<h2>ScriptableObject 是什么？</h2>
 
-<p>A ScriptableObject is a data container that you can use to save large amounts of data, independent of class instances. One of the main use cases for ScriptableObjects is to reduce your Project’s memory usage by avoiding copies of values. This is useful if your Project has a <a href="Prefabs.html">Prefab</a> that stores unchanging data in attached MonoBehaviour scripts. Everytime you instantiate that Prefab, it will get its own copy of that data. Instead of using the method, and storing duplicated data, you can use a ScriptableObject to store the data and then access it by reference from all of the Prefabs. This means that there is one copy of the data in memory.</p>
+<p>ScriptableObject 是一个可独立于类实例来保存大量数据的数据容器。ScriptableObjects 的一个主要用例是通过避免重复值来减少项目的内存使用量。如果项目有一个<a href="Prefabs.html">预制件</a>在附加的 MonoBehaviour 脚本中存储不变的数据，这将非常有用。每次实例化预制件时，都会产生单独的数据副本。这种情况下可以不使用该方法并且不存储重复数据，而是使用 ScriptableObject 来存储数据，然后通过所有预制件的引用访问数据。这意味着内存中只有一个数据副本。</p>
 
-<p>Just like MonoBehaviours, ScriptableObjects derive from the base Unity Object but, unlike MonoBehaviours, you can not attach a ScriptableObject to a <a href="class-GameObject.html">GameObject</a>. Instead, you save them as Assets in your Project.</p>
+<p>与 MonoBehaviours 类似，ScriptableObjects 派生自 Unity 基对象，但不同于 MonoBehaviours 之处在于，不能将 ScriptableObject 附加到 <a href="class-GameObject.html">GameObject</a>。而是应该将它们保存为项目中的资源。</p>
 
-<p>When using the Editor, you can save data to ScriptableObjects while editing and at run time because ScriptableObjects use the Editor namespace and Editor scripting. In a deployed build, however, you can’t use ScriptableObjects to save data, but you can use the saved data from the ScriptableObject Assets that you set up during development.
-Data that you save from Editor Tools to ScriptableObjects as an asset is written to disk and is therefore persistent between sessions.</p>
+<p>如果使用 Editor，可以在编辑时和运行时将数据保存到 ScriptableObjects，因为 ScriptableObjects 使用 Editor 命名空间和 Editor 脚本。但是，在已部署的构建中，不能使用 ScriptableObjects 来保存数据，但可以使用在开发期间设置的 ScriptableObject 资源中保存的数据。
+从 Editor 工具作为资源保存到 ScriptableObjects 的数据将写入磁盘，因此将在会话之间一直保留。</p>
 
-<h2>Using a ScriptableObject</h2>
+<h2>使用 ScriptableObject</h2>
 
-<p>The main use cases for ScriptableObjects are:</p>
+<p>ScriptableObjects 的主要用例为：</p>
 
 <ul>
-<li>Saving and storing data during an Editor session</li>
-<li>Saving data as an Asset in your Project to use at run time</li>
+<li>在 Editor 会话期间保存和存储数据</li>
+<li>将数据保存为项目中的资源，以便在运行时使用</li>
 </ul>
 
-<p>To use a ScriptableObject, you need to create a script in your <strong>Assets</strong> folder and make it inherit from the <code>ScriptableObject</code> class. You can use the <a href="../ScriptReference/CreateAssetMenuAttribute.html">CreateAssetMenu</a> attribute to make it easy to create custom assets using your class. For example:</p>
+<p>要使用 ScriptableObject，必须在 <strong>Assets</strong> 文件夹中创建一个脚本，并使其继承自 <code>ScriptableObject</code> 类。您可以使用 <a href="../ScriptReference/CreateAssetMenuAttribute.html">CreateAssetMenu</a> 属性，从而使用您的类轻松创建自定义资源。例如：</p>
 
 <pre><code>using UnityEngine;
 
@@ -177,19 +192,19 @@ public class SpawnManagerScriptableObject : ScriptableObject
 }
 </code></pre>
 
-<p>With the above script in your <strong>Assets</strong> folder, you can create an instance of your ScriptableObject by navigating to <strong>Assets &gt; Create &gt; ScriptableObjects &gt; SpawnManagerScriptableObject</strong>. Give your new ScriptableObject instance a meaningful name and alter the values. To use these values, you need to create a new script that references your ScriptableObject, in this case, a <code>SpawnManagerScriptableObject</code>. For example:</p>
+<p>使用上述在 <strong>Assets</strong> 文件夹中创建的脚本，您可以通过导航到 <strong>Assets &gt; Create &gt; ScriptableObjects &gt; SpawnManagerScriptableObject</strong> 来创建 ScriptableObject 的实例。为新的 ScriptableObject 实例提供有意义的名称并更改值。要使用这些值，必须创建一个引用 ScriptableObject（在本例中为 <code>SpawnManagerScriptableObject</code>）的新脚本。例如：</p>
 
 <pre><code>using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    // The GameObject to instantiate.
+    // 要实例化的游戏对象。
     public GameObject entityToSpawn;
 
-    // An instance of the ScriptableObject defined above.
+    //上面定义的 ScriptableObject 的一个实例。
     public SpawnManagerScriptableObject spawnManagerValues;
 
-    // This will be appended to the name of the created entities and increment when each is created.
+    //这将附加到创建的实体的名称，并在创建每个实体时递增。
     int instanceNumber = 1;
 
     void Start()
@@ -203,13 +218,13 @@ public class Spawner : MonoBehaviour
 
         for (int i = 0; i &lt; spawnManagerValues.numberOfPrefabsToCreate; i++)
         {
-            // Creates an instance of the prefab at the current spawn point.
+            //在当前生成点处创建预制件的实例。
             GameObject currentEntity = Instantiate(entityToSpawn, spawnManagerValues.spawnPoints[currentSpawnPointIndex], Quaternion.identity);
 
-            // Sets the name of the instantiated entity to be the string defined in the ScriptableObject and then appends it with a unique number. 
+            //将实例化实体的名称设置为 ScriptableObject 中定义的字符串，然后为其附加一个唯一编号。
             currentEntity.name = spawnManagerValues.prefabName + instanceNumber;
 
-            // Moves to the next spawn point index. If it goes out of range, it wraps back to the start.
+            // 移动到下一个生成点索引。如果超出范围，则回到起始点。
             currentSpawnPointIndex = (currentSpawnPointIndex + 1) % spawnManagerValues.spawnPoints.Length;
 
             instanceNumber++;
@@ -218,20 +233,20 @@ public class Spawner : MonoBehaviour
 }
 </code></pre>
 
-<p>Attach the above script to a GameObject in your <a href="CreatingScenes.html">Scene</a>. Then, in the Inspector, set the <strong>Spawn Manager Values</strong> field to be the new <code>SpawnManagerScriptableObject</code> that you set up. Set the <strong>Entity To Spawn</strong> field to be any Prefab in your Assets folder, and then click <strong>Play</strong> in the Editor. You will see the Prefab you referenced in the <code>Spawner</code> instantiated using the settings you set in the <code>SpawnManagerScriptableObject</code>.
-ableObject-derived class, you can use the <a href="../ScriptReference/CreateAssetMenuAttribute.html">CreateAssetMenu</a> attribute to make it easy to create custom assets using your class.</p>
+<p>将上述脚本附加到<a href="CreatingScenes.html">场景</a>中的游戏对象。然后，在 Inspector 中，将 <strong>Spawn Manager Values</strong> 字段设置为新设置的 <code>SpawnManagerScriptableObject</code>。将 <strong>Entity To Spawn</strong> 字段设置为 Assets 文件夹中的任何预制件，然后在 Editor 中单击 <strong>Play</strong>。您将在使用 <code>SpawnManagerScriptableObject</code> 设置实例化的 <code>Spawner</code> 中看到引用的预制件。
+定义了 ScriptableObject 派生类后，可以使用 <a href="../ScriptReference/CreateAssetMenuAttribute.html">CreateAssetMenu</a> 属性，从而轻松地使用该类创建自定义资源。</p>
 
 <p>提示：在 Inspector 中使用 ScriptableObject 引用时，可以双击引用字段来打开 ScriptableObject 的 Inspector。还可以创建自定义编辑器来定义该类型的 Inspector 外观，从而帮助管理它所代表的数据。</p>
 
 <hr>
 
 <ul>
-<li><span class="page-edit">2018–10–15 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><span class="page-edit">2018–10–15 页面已发布并进行了<a href="DocumentationEditorialReview.html">编辑审查</a>
 </span></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="StreamingAssets.html"></a></span><div class="tip">流媒体资源 (Streaming Assets)</div>
+<span class="prev"><a href="StreamingAssets.html"></a></span><div class="tip">Streaming Assets</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
 <span class="next"><a href="AdvancedEditor.html"></a></span><div class="tip">Editor 高级主题</div>
@@ -240,9 +255,9 @@ ableObject-derived class, you can use the <a href="../ScriptReference/CreateAsse
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2019.1</div>
 <div class="menu">
-<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>
 </div>
 <div></div>

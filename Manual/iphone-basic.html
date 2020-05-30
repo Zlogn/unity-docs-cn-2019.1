@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="no-js">
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,10 +10,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="Unity iOS Basics - Unity Manual">
-<title>Unity iOS Basics - Unity Manual</title>
-<meta name="description" content="This section covers the most common and important questions that come up when starting to work with iOS.">
-<meta property="og:description" content="This section covers the most common and important questions that come up when starting to work with iOS.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Unity iOS 基础知识 - Unity 手册">
+<title>Unity iOS 基础知识 - Unity 手册</title>
+<meta name="description" content="本部分介绍在开始使用 iOS 时出现的最常见和最重要的问题。">
+<meta property="og:description" content="本部分介绍在开始使用 iOS 时出现的最常见和最重要的问题。">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -27,13 +28,20 @@
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
 <script>
       var docs_type = 'Manual';
-      var lang = 'zh_CN';
+      var lang = 'cn';
       var page = 'iphone-basic';
       if(!page) page = 'index';
       var version = '2019.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2020.1',version_string: '2020.1'},{version: '2019.3',version_string: '2019.3'},{version: '2019.2',version_string: '2019.2'},{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.1/Manual/iphone-basic.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.1/Manual/iphone-basic.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.1/Manual/iphone-basic.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.1/Manual/iphone-basic.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.1/Manual/iphone-basic.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.1/Manual/iphone-basic.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.1/Documentation/Manual/iphone-basic.html" hreflang="x-default">
 </head>
 <body>
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -43,11 +51,11 @@
 <div id="nav-open" for="nav-input"><span></span></div>
 <div class="logo"><a href="https://docs.unity3d.com"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
-<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
 <ul class="menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 </div></div>
 <div class="more">
@@ -67,25 +75,28 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/iphone-basic.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/iphone-basic.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/iphone-basic.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/iphone-basic.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/iphone-basic.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/iphone-basic.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/iphone-basic.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/iphone-basic.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/iphone-basic.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/iphone-basic.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/iphone-basic.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/iphone-basic.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/iphone-basic.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/iphone-basic.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/iphone-basic.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/iphone-basic.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/iphone-basic.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/iphone-basic.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/iphone-basic.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/iphone-basic.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/iphone-basic.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/iphone-basic.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/iphone-basic.html">5.6</a></li>
 </ul></div>
 </div>
 <ul class="nav-menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 <div class="lang-switcher">
 <div class="current toggle" data-target=".lang-list">
-<div class="lbl">Language:
+<div class="lbl">语言:
         <span class="b">中文</span>
 </div>
 <div class="arrow"></div>
@@ -95,13 +106,14 @@
 <li><a data-lang="ja" href="/ja/2019.1/Manual/iphone-basic.html">日本語</a></li>
 <li><a data-lang="es" href="/es/2019.1/Manual/iphone-basic.html">Español</a></li>
 <li><a data-lang="kr" href="/kr/2019.1/Manual/iphone-basic.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.1/Manual/iphone-basic.html">Русский</a></li>
 </ul></div>
 </div>
 </div></div>
 </div>
 <div id="master-wrapper" class="master-wrapper clear">
 <div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
-<h2>Manual</h2>
+<h2>手册</h2>
 <div class="version-switcher">
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
@@ -111,16 +123,19 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/iphone-basic.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/iphone-basic.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/iphone-basic.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/iphone-basic.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/iphone-basic.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/iphone-basic.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/iphone-basic.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/iphone-basic.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/iphone-basic.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/iphone-basic.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/iphone-basic.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/iphone-basic.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/iphone-basic.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/iphone-basic.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/iphone-basic.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/iphone-basic.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/iphone-basic.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/iphone-basic.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/iphone-basic.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/iphone-basic.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/iphone-basic.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/iphone-basic.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/iphone-basic.html">5.6</a></li>
 </ul></div>
 </div>
 <div class="clear"></div>
@@ -131,81 +146,81 @@
 <li><a href="UnityManual.html">Unity User Manual (2019.1)</a></li>
 <li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
 <li><a href="iphone.html">iOS</a></li>
-<li><a href="iphone-GettingStarted.html">Getting started with iOS development</a></li>
-<li>Unity iOS Basics</li>
+<li><a href="iphone-GettingStarted.html">iOS 开发入门</a></li>
+<li>Unity iOS 基础知识</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="iphone-GettingStarted.html"></a></span><div class="tip">Getting started with iOS development</div>
+<span class="prev"><a href="iphone-GettingStarted.html"></a></span><div class="tip">iOS 开发入门</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="iphone-accountsetup.html"></a></span><div class="tip">iOS account setup</div>
+<span class="next"><a href="iphone-accountsetup.html"></a></span><div class="tip">iOS 帐户设置</div>
 </div>
 </div></div>
-<h1>Unity iOS Basics</h1>
+<h1>Unity iOS 基础知识</h1>
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>This section covers the most common and important questions that come up when starting to work with iOS.</p>
+<p>本部分介绍在开始使用 iOS 时出现的最常见和最重要的问题。</p>
 
 <h2>先决条件</h2>
 
-<h3>I’ve just received iPhone Developer approval from Apple, but I’ve never developed for iOS before. What do I do first?</h3>
+<h3>我刚收到 Apple 的 iPhone 开发者审批，但我以前从未进行过 iOS 的开发。我首先需要做什么？</h3>
 
-<p><strong>A</strong>: Download the SDK, get up and running on the Apple developer site, and set up your team, devices, and provisioning. We’ve provided a <a href="iphone-accountsetup.html">basic list of steps</a> to get you started.</p>
+<p><strong>答</strong>：下载 SDK，在 Apple 开发者网站上设置并运行，建立开发团队，准备好设备，并调配资源。我们提供了一份<a href="iphone-accountsetup.html">基本步骤列表</a>供您入门之用。</p>
 
-<h3>Can Unity-built games run in the iPhone Simulator?</h3>
+<h3>Unity 构建的游戏可以在 iPhone 模拟器中运行吗？</h3>
 
 <p><strong>A</strong>: No, but Unity iOS can build to iPad Simulator if you’re using the latest SDK. However the simulator itself is not very useful for Unity because it does not simulate all inputs from iOS or properly emulate the performance you get on the iPhone/iPad. You should test out gameplay directly inside Unity using the iPhone/iPad as a remote control while it is running the <a href="UnityRemote5.html">Unity Remote</a> application. Then, when you are ready to test performance and optimize the game, you should publish to iOS devices.</p>
 
-<h2>Unity Features</h2>
+<h2>Unity 功能</h2>
 
-<h3>How do I work with the touch screen and accelerometer?</h3>
+<h3>如何使用触摸屏和加速度计？</h3>
 
-<p><strong>A</strong>: In the scripting reference inside your Unity iOS installation, you will find classes that provide the hooks into the device functionality that you will need to build your apps. Consult the <a href="Input.html">Input page</a> for more information.</p>
+<p><strong>答</strong>：在 Unity iOS 安装附带的脚本参考中，您将找到构建应用程序所需的钩入设备功能的类。请参阅<a href="Input.html">输入页面</a>以了解更多信息。</p>
 
-<h3>My existing particle systems seem to run very slowly on iOS. What should I do?</h3>
+<h3>我现有的粒子系统似乎在 iOS 上运行得非常慢。我该怎么办？</h3>
 
-<p><strong>A</strong>: iOS has a relatively low fillrate. If your particles cover a large portion of the screen with multiple layers, it will kill iOS performance even with the simplest shader. We suggest baking your particle effects into a series of textures offline. Then, at run-time, you can use 1–2 particles to display them via animated textures. You can get ok results with a minimum amount of overdraw this way.</p>
+<p><strong>答</strong>：iOS 的填充率相对较低。如果您的粒子有多层并覆盖了大部分屏幕，即使使用最简单的着色器也会严重影响 iOS 性能。我们建议将粒子效果烘焙成一系列离线纹理。然后，在运行时，可以使用 1–2 个粒子通过动画纹理显示这些粒子。这样可以通过最少量的过度绘制获得良好的结果。</p>
 
-<h3>Can I make a game that uses heavy physics?</h3>
+<h3>我可以制作大量使用物理系统的游戏吗？</h3>
 
-<p><strong>A</strong>: Physics can be expensive on iOS as it requires a lot of floating point number calculations. You should completely avoid MeshColliders if at all possible, but they can be used if they are really necessary. To improve performance, use a low fixed framerate using <strong>Edit-&gt;Time-&gt;Fixed Delta Time</strong>. A framerate of 10–30 is recommended. Enable rigidbody interpolation to achieve smooth motion while using low physics frame rates. In order to achieve completely fluid framerate without oscillations, it is best to pick a fixed <code>deltaTime</code> value based on the average framerate your game is getting on iOS. Either 1:1 or half the frame rate is recommended. For example, if you get 30 fps, you should use 15 or 30 fps for fixed frame rate (0.033 or 0.066)</p>
+<p><strong>A</strong>：物理系统在 iOS 上的成本可能很高，因为它需要大量的浮点数计算。如果可能的话，应该完全避免使用 MeshColliders，但如果确实有必要，也可以使用。要提高性能，请使用 <strong>Edit &gt; Time &gt; Fixed Delta Time</strong> 设置低固定帧率。建议帧率为 10–30。在使用低物理帧率时，启用刚体插值可以实现平滑运动。为了实现完全流畅的帧率而不出现振荡，最好根据游戏在 iOS 上获得的平均帧率来选择固定的 <code>deltaTime</code> 值。建议使用 1:1 或一半的帧率。例如，如果获得的帧率为 30 fps，则应使用 15 或 30 fps 的固定帧率（0.033 或 0.066）</p>
 
-<h3>Can I access the gallery, music library or the native iPod player in Unity iOS?</h3>
+<h3>我可以在 Unity iOS 中访问图库、音乐库或原生 iPod 播放器吗？</h3>
 
-<p><strong>A</strong>: Yes, if you implement it. Unity iPhone supports the native plugin system, where you can add any feature you need – including access to Gallery, Music library, iPod Player and any other feature that the iOS SDK exposes. Unity iOS does not provide an API for accessing the listed features through Unity scripts.</p>
+<p><strong>答</strong>：可以，如果您实现它的话。Unity iPhone 支持原生插件系统，您可以在其中添加所需的任何功能，包括访问图库、音乐库、iPod 播放器以及 iOS SDK 公开的任何其他功能。Unity iOS 不提供 API 来通过 Unity 脚本访问列出的功能。</p>
 
-<h2>UnityGUI Considerations</h2>
+<h2>UnityGUI 注意事项</h2>
 
-<h3>What kind of performance impact will UnityGUI make on my games?</h3>
+<h3>UnityGUI 会对我的游戏产生什么样的性能影响？</h3>
 
-<p><strong>A</strong>: UnityGUI consumes more resources when more controls are used. It is ideal to limit your use of UnityGUI to game menus or very minimal GUI Controls while your game is running. It is important to note that every object with a script containing an <code>OnGUI()</code> call will require additional processor time – even if it is an empty <code>OnGUI()</code> block. It is best to disable any scripts that have an <code>OnGUI()</code> call if the GUI Controls are not being used. You can do this by marking the script as <code>enabled = false</code>.</p>
+<p><strong>答</strong>：使用更多控件时，UnityGUI 会消耗更多资源。在游戏运行时，最好将 UnityGUI 的使用范围仅限于游戏菜单或非常小的 GUI 控件。必须注意，只要对象具有包含 <code>OnGUI()</code> 调用的脚本，就需要额外的处理器时间，即使是空的 <code>OnGUI()</code> 代码块也是如此。如果未使用 GUI 控件，最好禁用所有具有 <code>OnGUI()</code> 调用的脚本。为此，可将脚本标记为 <code>enabled = false</code>。</p>
 
-<h3>Any other tips for using UnityGUI?</h3>
+<h3>是否有任何其他关于使用 UnityGUI 的技巧？</h3>
 
-<p><strong>A</strong>: Try using GUILayout as little as possible. If you are not using GUILayout at all from one <code>OnGUI()</code> call, you can disable all GUILayout rendering using <code>MonoBehaviour.useGUILayout = false;</code> This doubles GUI rendering performance. Finally, use as few GUI elements while rendering 3D scenes as possible.</p>
+<p><strong>答</strong>：尽可能减少 GUILayout 的使用。如果在一个 <code>OnGUI()</code> 调用中未使用任何 GUILayout，可以使用 <code>MonoBehaviour.useGUILayout = false;</code> 禁用所有 GUILayout 渲染。这样可以使 GUI 渲染性能提高一倍。最后，在渲染 3D 场景时使用尽可能少的 GUI 元素。</p>
 
 <hr>
 
 <ul>
-<li><span class="page-edit">2018–06–14 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><span class="page-edit">2018–06–14 页面已修订并只进行了有限的<a href="DocumentationEditorialReview.html">编辑审查</a>
 </span></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="iphone-GettingStarted.html"></a></span><div class="tip">Getting started with iOS development</div>
+<span class="prev"><a href="iphone-GettingStarted.html"></a></span><div class="tip">iOS 开发入门</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="iphone-accountsetup.html"></a></span><div class="tip">iOS account setup</div>
+<span class="next"><a href="iphone-accountsetup.html"></a></span><div class="tip">iOS 帐户设置</div>
 </div>
 </div>
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2019.1</div>
 <div class="menu">
-<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>
 </div>
 <div></div>

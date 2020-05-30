@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="no-js">
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,11 +10,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="音频 - Unity Manual">
-<title>音频 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/AudioSet.png">
-<meta name="description" content="The Audio settings (main menu: Edit &gt; Project Settings, then select the Audio category) allows you to tweak the maximum volume of all sounds playing in the Scene.">
-<meta property="og:description" content="The Audio settings (main menu: Edit &gt; Project Settings, then select the Audio category) allows you to tweak the maximum volume of all sounds playing in the Scene.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="音频 - Unity 手册">
+<title>音频 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.1/uploads/Main/AudioSet.png">
+<meta name="description" content="Audio 设置（主菜单：Edit &gt; Project Settings，然后选择 Audio 类别）可用于调整场景中播放的所有声音的最大音量。">
+<meta property="og:description" content="Audio 设置（主菜单：Edit &gt; Project Settings，然后选择 Audio 类别）可用于调整场景中播放的所有声音的最大音量。">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -28,13 +29,20 @@
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
 <script>
       var docs_type = 'Manual';
-      var lang = 'zh_CN';
+      var lang = 'cn';
       var page = 'class-AudioManager';
       if(!page) page = 'index';
       var version = '2019.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2020.1',version_string: '2020.1'},{version: '2019.3',version_string: '2019.3'},{version: '2019.2',version_string: '2019.2'},{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.1/Manual/class-AudioManager.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.1/Manual/class-AudioManager.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.1/Manual/class-AudioManager.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.1/Manual/class-AudioManager.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.1/Manual/class-AudioManager.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.1/Manual/class-AudioManager.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.1/Documentation/Manual/class-AudioManager.html" hreflang="x-default">
 </head>
 <body>
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -44,11 +52,11 @@
 <div id="nav-open" for="nav-input"><span></span></div>
 <div class="logo"><a href="https://docs.unity3d.com"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
-<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
 <ul class="menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 </div></div>
 <div class="more">
@@ -68,25 +76,28 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-AudioManager.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-AudioManager.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-AudioManager.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-AudioManager.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-AudioManager.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-AudioManager.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-AudioManager.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-AudioManager.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-AudioManager.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-AudioManager.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-AudioManager.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-AudioManager.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-AudioManager.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-AudioManager.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-AudioManager.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-AudioManager.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-AudioManager.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-AudioManager.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-AudioManager.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-AudioManager.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-AudioManager.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-AudioManager.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/class-AudioManager.html">5.6</a></li>
 </ul></div>
 </div>
 <ul class="nav-menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 <div class="lang-switcher">
 <div class="current toggle" data-target=".lang-list">
-<div class="lbl">Language:
+<div class="lbl">语言:
         <span class="b">中文</span>
 </div>
 <div class="arrow"></div>
@@ -96,13 +107,14 @@
 <li><a data-lang="ja" href="/ja/2019.1/Manual/class-AudioManager.html">日本語</a></li>
 <li><a data-lang="es" href="/es/2019.1/Manual/class-AudioManager.html">Español</a></li>
 <li><a data-lang="kr" href="/kr/2019.1/Manual/class-AudioManager.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.1/Manual/class-AudioManager.html">Русский</a></li>
 </ul></div>
 </div>
 </div></div>
 </div>
 <div id="master-wrapper" class="master-wrapper clear">
 <div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
-<h2>Manual</h2>
+<h2>手册</h2>
 <div class="version-switcher">
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
@@ -112,16 +124,19 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-AudioManager.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-AudioManager.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-AudioManager.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-AudioManager.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-AudioManager.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-AudioManager.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-AudioManager.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-AudioManager.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-AudioManager.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-AudioManager.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-AudioManager.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-AudioManager.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-AudioManager.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-AudioManager.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-AudioManager.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-AudioManager.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-AudioManager.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-AudioManager.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-AudioManager.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-AudioManager.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-AudioManager.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-AudioManager.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/class-AudioManager.html">5.6</a></li>
 </ul></div>
 </div>
 <div class="clear"></div>
@@ -147,11 +162,11 @@
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>The <strong>Audio</strong> settings (main menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Audio</strong> category) allows you to tweak the maximum volume of all sounds playing in the Scene.</p>
+<p><strong>Audio</strong> 设置（主菜单：<strong>Edit</strong> &gt; <strong>Project Settings</strong>，然后选择 <strong>Audio</strong> 类别）可用于调整场景中播放的所有声音的最大音量。</p>
 
 <figure>
-<img src="../uploads/Main/AudioSet.png" alt="Audio settings">
-<figcaption>Audio settings</figcaption>
+<img src="../uploads/Main/AudioSet.png" alt="Audio 设置">
+<figcaption>Audio 设置</figcaption>
 </figure>
 
 <table>
@@ -171,71 +186,69 @@
 <tbody>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Global Volume</strong></td>
-	<td style="text-align:left;">Set the volume for all sounds during playback.</td>
+	<td style="text-align:left;">设置播放期间所有声音的音量。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Volume Rolloff Scale</strong></td>
-	<td style="text-align:left;">Set the global attenuation rolloff factor for <a href="class-AudioSource.html">Logarithmic rolloff-based sources</a>. The higher the value, the faster the volume attenuates. Conversely, the lower the value, the slower it attenuates. <br><strong>Tip:</strong> A value of 1 simulates the “real world”.</td>
+	<td style="text-align:left;">设置<a href="class-AudioSource.html">基于对数衰减的音频源</a>的全局衰减系数。该值越大，音量衰减就越快。相反，值越小，衰减越慢。<br><strong>提示：</strong>值为 1 将模拟“真实世界”。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Doppler Factor</strong></td>
-	<td style="text-align:left;">Set how audible the Doppler effect is. Use 0 to disable it. Use 1 make it audible for fast moving objects.<br><strong>Tip:</strong> After setting the <strong>Doppler Factor</strong> to 1, you can tweak both <strong>Speed of Sound</strong> and <strong>Doppler Factor</strong> until you are satisfied.</td>
-</tr>
-<tr>
-	<td style="text-align:left;" colspan="2"><strong>Default Speaker Mode</strong></td>
-	<td style="text-align:left;">Set which speaker mode should be the default for your project. The default is 2, which corresponds to stereo speakers. For the full list of modes, see the <a href="../ScriptReference/AudioSpeakerMode.html">AudioSpeakerMode</a> API reference.<br><strong>Note:</strong> You can also change the speaker mode at runtime through scripting. See <a href="../ScriptReference/AudioSettings.html">Audio Settings</a> for details.</td>
+	<td style="text-align:left;" colspan="2">设置多普勒效应的听觉影响。值为 0 将其禁用。值为 1 表示对于快速移动的对象应该能听得见声音。<br><strong>提示：</strong>将 <strong>Doppler Factor</strong> 设置为 1 后，可调整 <strong>Speed of Sound</strong> 和 <strong>Doppler Factor__，直到满意为止。 |
+|</strong>Default Speaker Mode__</td>
+	<td style="text-align:left;">设置项目的默认扬声器模式。默认值为 2，对应于立体声扬声器。如需查看模式的完整列表，请参阅 <a href="../ScriptReference/AudioSpeakerMode.html">AudioSpeakerMode</a> API 参考。<br><strong>注意：</strong>还可以通过脚本在运行时更改扬声器模式。有关详细信息，请参阅<a href="../ScriptReference/AudioSettings.html">音频设置 (Audio Settings)</a>。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>System Sample Rate</strong></td>
-	<td style="text-align:left;">Set the output sample rate. If set to 0, Unity uses the sample rate of the system. <br><strong>Note:</strong> This only serves as a reference only, since certain platforms allow you to change the sample rate, such as iOS or Android.</td>
+	<td style="text-align:left;">设置输出采样率。如果设置为 0，Unity 将使用系统的采样率。<br><strong>注意：</strong>这仅作为参考，因为部分平台允许更改此采样率，例如 iOS 或 Android。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>DSP Buffer Size</strong></td>
-	<td style="text-align:left;">Set the size of the DSP buffer to optimize for latency or performance.</td>
+	<td style="text-align:left;">设置 DSP 缓冲区的大小来优化延迟或性能。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
 	<td style="text-align:left;"><strong>Default</strong></td>
-	<td style="text-align:left;">Default buffer size.</td>
+	<td style="text-align:left;">默认缓冲区大小。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
 	<td style="text-align:left;"><strong>Best Latency</strong></td>
-	<td style="text-align:left;">Trade off performance in favour of latency.</td>
+	<td style="text-align:left;">在牺牲性能的情况下降低延迟。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
 	<td style="text-align:left;"><strong>Good Latency</strong></td>
-	<td style="text-align:left;">Balance between latency and performance.</td>
+	<td style="text-align:left;">在延迟和性能之间取得平衡。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
 	<td style="text-align:left;"><strong>Best Performance</strong></td>
-	<td style="text-align:left;">Trade off latency in favour of performance.</td>
+	<td style="text-align:left;">在牺牲延迟的情况下提高性能。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Max Virtual Voices</strong></td>
-	<td style="text-align:left;">Set the number of virtual voices that the audio system manages. This value should always be larger than the number of voices played by the game. If not, Unity displays warnings in the console.</td>
+	<td style="text-align:left;">设置音频系统管理的虚拟语音数。该值应始终大于游戏所播放的语音数量。否则，Unity 将在控制台中显示警告。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Max Real Voices</strong></td>
-	<td style="text-align:left;">Set the number of real voices that can play at the same time. At every frame, the loudest voice is picked.</td>
+	<td style="text-align:left;">设置可以同时播放的真实语音的数量。每一帧都会选取最响亮的语音。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Spatializer Plugin</strong></td>
-	<td style="text-align:left;">Choose which native audio plugin to use in order to perform spatialized filtering of 3D sources.</td>
+	<td style="text-align:left;">选择要使用哪个原生音频插件来执行 3D 音频源的空间滤波。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Ambisonic Decoder Plugin</strong></td>
-	<td style="text-align:left;">Choose which native audio plugin to perform ambisonic-to-binaural filtering of sources.</td>
+	<td style="text-align:left;">选择要使用哪个原生音频插件来执行音频源的环绕声到双耳滤波。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Disable Unity Audio</strong></td>
-	<td style="text-align:left;">Enable to deactivate the audio system in standalone builds. Note that this also affects the audio of MovieTextures. <br>In the Editor the audio system is still on and supports previewing audio clips, but Unity does not handle calls to <a href="../ScriptReference/AudioSource.Play.html">AudioSource.Play</a> and <a href="../ScriptReference/AudioSource.playOnAwake.html">AudioSource.playOnAwake</a> in order to simulate behavior of the standalone build.</td>
+	<td style="text-align:left;">启用此属性可在独立构建中停用音频系统。请注意，这也会影响 MovieTextures 的音频。<br>在 Editor 中，音频系统仍然打开并支持预览音频剪辑，但 Unity 不会处理对 <a href="../ScriptReference/AudioSource.Play.html">AudioSource.Play</a> 和 <a href="../ScriptReference/AudioSource.playOnAwake.html">AudioSource.playOnAwake</a> 的调用来模拟独立构建的行为。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Virtualize Effect</strong></td>
-	<td style="text-align:left;">Enable to dynamically turn off effects and spatializers on AudioSources that are culled in order to save CPU.</td>
+	<td style="text-align:left;">启用此属性可动态关闭为节省 CPU 而剔除的 AudioSources 上的效果和空间音响。</td>
 </tr>
 </tbody>
 </table>
@@ -251,9 +264,9 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2019.1</div>
 <div class="menu">
-<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>
 </div>
 <div></div>

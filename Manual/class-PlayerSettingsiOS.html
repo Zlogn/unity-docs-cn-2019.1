@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="no-js">
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,11 +10,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="iOS Player settings - Unity Manual">
-<title>iOS Player settings - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/class-PlayerSettingsiOS.png">
-<meta name="description" content="This page details the Player settings specific to iOS. For a description of the general Player settings, see Player settings.">
-<meta property="og:description" content="This page details the Player settings specific to iOS. For a description of the general Player settings, see Player settings.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="iOS Player settings - Unity 手册">
+<title>iOS Player settings - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.1/uploads/Main/class-PlayerSettingsiOS.png">
+<meta name="description" content="本页面将详细介绍 iOS 特有的 Player 设置。有关常规 Player 设置的描述，请参阅 Player 设置。">
+<meta property="og:description" content="本页面将详细介绍 iOS 特有的 Player 设置。有关常规 Player 设置的描述，请参阅 Player 设置。">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -28,13 +29,20 @@
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
 <script>
       var docs_type = 'Manual';
-      var lang = 'zh_CN';
+      var lang = 'cn';
       var page = 'class-PlayerSettingsiOS';
       if(!page) page = 'index';
       var version = '2019.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2020.1',version_string: '2020.1'},{version: '2019.3',version_string: '2019.3'},{version: '2019.2',version_string: '2019.2'},{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.1/Manual/class-PlayerSettingsiOS.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.1/Manual/class-PlayerSettingsiOS.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.1/Manual/class-PlayerSettingsiOS.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.1/Manual/class-PlayerSettingsiOS.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.1/Manual/class-PlayerSettingsiOS.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.1/Manual/class-PlayerSettingsiOS.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.1/Documentation/Manual/class-PlayerSettingsiOS.html" hreflang="x-default">
 </head>
 <body>
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -44,11 +52,11 @@
 <div id="nav-open" for="nav-input"><span></span></div>
 <div class="logo"><a href="https://docs.unity3d.com"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
-<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
 <ul class="menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 </div></div>
 <div class="more">
@@ -68,25 +76,28 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-PlayerSettingsiOS.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-PlayerSettingsiOS.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-PlayerSettingsiOS.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-PlayerSettingsiOS.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-PlayerSettingsiOS.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-PlayerSettingsiOS.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-PlayerSettingsiOS.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-PlayerSettingsiOS.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-PlayerSettingsiOS.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-PlayerSettingsiOS.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-PlayerSettingsiOS.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-PlayerSettingsiOS.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-PlayerSettingsiOS.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-PlayerSettingsiOS.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-PlayerSettingsiOS.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-PlayerSettingsiOS.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-PlayerSettingsiOS.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-PlayerSettingsiOS.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-PlayerSettingsiOS.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-PlayerSettingsiOS.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-PlayerSettingsiOS.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-PlayerSettingsiOS.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/class-PlayerSettingsiOS.html">5.6</a></li>
 </ul></div>
 </div>
 <ul class="nav-menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 <div class="lang-switcher">
 <div class="current toggle" data-target=".lang-list">
-<div class="lbl">Language:
+<div class="lbl">语言:
         <span class="b">中文</span>
 </div>
 <div class="arrow"></div>
@@ -96,13 +107,14 @@
 <li><a data-lang="ja" href="/ja/2019.1/Manual/class-PlayerSettingsiOS.html">日本語</a></li>
 <li><a data-lang="es" href="/es/2019.1/Manual/class-PlayerSettingsiOS.html">Español</a></li>
 <li><a data-lang="kr" href="/kr/2019.1/Manual/class-PlayerSettingsiOS.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.1/Manual/class-PlayerSettingsiOS.html">Русский</a></li>
 </ul></div>
 </div>
 </div></div>
 </div>
 <div id="master-wrapper" class="master-wrapper clear">
 <div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
-<h2>Manual</h2>
+<h2>手册</h2>
 <div class="version-switcher">
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
@@ -112,16 +124,19 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-PlayerSettingsiOS.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-PlayerSettingsiOS.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-PlayerSettingsiOS.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-PlayerSettingsiOS.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-PlayerSettingsiOS.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-PlayerSettingsiOS.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-PlayerSettingsiOS.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-PlayerSettingsiOS.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-PlayerSettingsiOS.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-PlayerSettingsiOS.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/class-PlayerSettingsiOS.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/class-PlayerSettingsiOS.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/class-PlayerSettingsiOS.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/class-PlayerSettingsiOS.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/class-PlayerSettingsiOS.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/class-PlayerSettingsiOS.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/class-PlayerSettingsiOS.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/class-PlayerSettingsiOS.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/class-PlayerSettingsiOS.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/class-PlayerSettingsiOS.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/class-PlayerSettingsiOS.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/class-PlayerSettingsiOS.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/class-PlayerSettingsiOS.html">5.6</a></li>
 </ul></div>
 </div>
 <div class="clear"></div>
@@ -136,26 +151,26 @@
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="iphone-Hardware.html"></a></span><div class="tip">iOS Hardware Guide</div>
+<span class="prev"><a href="iphone-Hardware.html"></a></span><div class="tip">iOS 硬件指南</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="class-TextureImporterIos.html"></a></span><div class="tip">iOS 2D Texture Overrides</div>
+<span class="next"><a href="class-TextureImporterIos.html"></a></span><div class="tip">iOS 2D 纹理覆盖</div>
 </div>
 </div></div>
 <h1>iOS Player settings</h1>
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>This page details the <strong>Player</strong> settings specific to iOS. For a description of the general <strong>Player</strong> settings, see <a href="class-PlayerSettings.html#general">Player</a> settings.</p>
+<p>本页面将详细介绍 iOS 特有的 <strong>Player</strong> 设置。有关常规 <strong>Player</strong> 设置的描述，请参阅 <a href="class-PlayerSettings.html#general">Player</a> 设置。</p>
 
-<p><strong>Note:</strong> Unity iOS requires iOS 7.0 or higher. Unity does not support iOS 6.0 or earlier versions.</p>
+<p><strong>注意：</strong>Unity iOS 需要 iOS 7.0 或更高版本。Unity 不支持 iOS 6.0 和更低版本。</p>
 
 <figure>
-<img src="../uploads/Main/class-PlayerSettingsiOS.png" alt="Standalone Mac Player settings">
-<figcaption>Standalone Mac Player settings</figcaption>
+<img src="../uploads/Main/class-PlayerSettingsiOS.png" alt="独立平台 Mac Player 设置">
+<figcaption>独立平台 Mac Player 设置</figcaption>
 </figure>
 
-<p>You can find documentation for the properties in the following sections:</p>
+<p>您可以在以下部分找到这些属性的文档：</p>
 
 <ul>
 <li><a href="#Icon">Icon</a></li>
@@ -170,13 +185,13 @@
 
 <h2>Icon</h2>
 
-<p>Use the <strong>Icon</strong> settings to customize the branding for your app on the Apple Store.</p>
+<p>使用 <strong>Icon</strong> 设置可自定义您的应用程序在 Apple 商店中的品牌标记。</p>
 
 <figure>
 <img src="../uploads/Main/PlayerSetiOSIcon.jpg" alt="">
 </figure>
 
-<p><strong>Note</strong>: If any icon textures are omitted, the icon texture with the nearest size is scaled accordingly (with a preference towards larger resolution textures).</p>
+<p><strong>注意</strong>：如果省略任何图标纹理，则相应地缩放最近大小的图标纹理（偏向于更大的分辨率纹理）。</p>
 
 <table>
 <colgroup>
@@ -186,7 +201,7 @@
 
 <thead>
 <tr>
-	<th style="text-align:left;"><strong>Setting</strong></th>
+	<th style="text-align:left;"><strong>设置</strong></th>
 	<th style="text-align:left;"><strong>功能</strong></th>
 </tr>
 </thead>
@@ -194,23 +209,23 @@
 <tbody>
 <tr>
 	<td style="text-align:left;"><strong>Application icons</strong></td>
-	<td style="text-align:left;">Assign the custom icon that you would like to appear on your app for each iOS device.</td>
+	<td style="text-align:left;">为每个 iOS 设备分配您希望出现在应用程序上的自定义图标。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Spotlight icons</strong></td>
-	<td style="text-align:left;">Assign the custom icon that you would like to appear in the Spotlight search results for your game for each iOS device.</td>
+	<td style="text-align:left;">为每个 iOS 设备分配要在 Spotlight 搜索结果中针对您的游戏显示的自定义图标。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Settings icons</strong></td>
-	<td style="text-align:left;">Assign the custom icon that you would like to appear on the phone’s main Settings page for each iOS device.</td>
+	<td style="text-align:left;">为每个 iOS 设备分配要显示在手机主设置页面上的自定义图标。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Notification icons</strong></td>
-	<td style="text-align:left;">Assign the custom icon that you would like to appear when sending notifications from your game for each iOS device.</td>
+	<td style="text-align:left;">为每个 iOS 设备分配您的游戏发送通知时您希望显示的自定义图标。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Marketing icons</strong></td>
-	<td style="text-align:left;">Assign the custom icon that you would like to appear for your game in the App Store for each iOS device.</td>
+	<td style="text-align:left;">为每个 iOS 设备分配要在 App Store 中针对您的游戏显示的自定义图标。</td>
 </tr>
 </tbody>
 </table>
@@ -219,7 +234,7 @@
 
 <h2>Resolution and Presentation</h2>
 
-<p>Use the <strong>Resolution and Presentation</strong> section to customize aspects of the screen’s appearance:</p>
+<p>使用 <strong>Resolution and Presentation</strong> 部分可以自定义屏幕外观的各个方面：</p>
 
 <ul>
 <li><a href="#Scaling">Resolution Scaling</a></li>
@@ -234,11 +249,11 @@
 <h3>Resolution Scaling</h3>
 
 <figure>
-<img src="../uploads/Main/PlayerSetiOSResPres.png" alt="Resolution Scaling player settings for the iOS platform">
-<figcaption>Resolution Scaling player settings for the iOS platform</figcaption>
+<img src="../uploads/Main/PlayerSetiOSResPres.png" alt="iOS 平台的 Resolution Scaling 播放器设置">
+<figcaption>iOS 平台的 Resolution Scaling 播放器设置</figcaption>
 </figure>
 
-<p>The <strong>Resolution Scaling Mode</strong> allows you to set the scaling to be equal to or below the native screen resolution:</p>
+<p><strong>Resolution Scaling Mode</strong> 允许将缩放设置为等于或低于屏幕原始分辨率：</p>
 
 <table>
 <colgroup>
@@ -256,29 +271,29 @@
 <tbody>
 <tr>
 	<td style="text-align:left;"><strong>FixedDPI</strong></td>
-	<td style="text-align:left;">Allows you to scale the device’s screen resolution below its native resolution and show the <strong>Target DPI</strong> property. Use this to optimize performance and battery life or target a specific DPI setting.</td>
+	<td style="text-align:left;">允许将设备的屏幕分辨率缩放为低于其原始分辨率，并显示 <strong>Target DPI</strong> 属性。使用此属性可优化性能和电池续航时间，或者针对特定的 DPI 设置。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Disabled</strong></td>
-	<td style="text-align:left;">Ensures that scaling is not applied and the game renders to its native screen resolution.</td>
+	<td style="text-align:left;">确保不应用缩放，并且游戏渲染屏幕原始分辨率。</td>
 </tr>
 </tbody>
 </table>
 
-<p>Set the <strong>Target DPI</strong> of the game screen. Unity downscales the game screen to match this setting if the device’s native screen DPI is higher than this value. The scale is calculated as <code>min(Target DPI * Factor / Screen DPI, 1)</code>. The <strong>Factor</strong> is controlled by the <strong>Resolution Scaling Fixed DPI Factor</strong> on the <a href="class-QualitySettings.html">Quality</a> settings.</p>
+<p>设置游戏画面的 <strong>Target DPI</strong> 属性。如果设备的屏幕原始 DPI 高于此值，则 Unity 会降低游戏画面分辨率以匹配此设置。缩放的计算公式为 <code>min(Target DPI * Factor / Screen DPI, 1)</code>。<strong>Factor</strong> 由 <a href="class-QualitySettings.html">Quality</a> 设置中的 <strong>Resolution Scaling Fixed DPI Factor</strong> 属性控制。</p>
 
-<p><strong>Note:</strong> This option only appears when the <strong>Resolution Scaling Mode</strong> is set to <strong>Fixed DPI</strong>.</p>
+<p><strong>注意：</strong>仅当 <strong>Resolution Scaling Mode</strong> 设置为 <strong>Fixed DPI</strong> 时才会显示此选项。</p>
 
 <p><a name="Orientation"></a></p>
 
 <h3>Orientation</h3>
 
 <figure>
-<img src="../uploads/Main/PlayerSetiOSResPresOri.png" alt="Orientation player settings for the iOS platform">
-<figcaption>Orientation player settings for the iOS platform</figcaption>
+<img src="../uploads/Main/PlayerSetiOSResPresOri.png" alt="iOS 平台的 Orientation 播放器设置">
+<figcaption>iOS 平台的 Orientation 播放器设置</figcaption>
 </figure>
 
-<p>Choose the game’s screen orientation from the <strong>Default Orientation</strong> drop-down menu: </p>
+<p>从 <strong>Default Orientation</strong> 下拉菜单中选择游戏的屏幕方向：</p>
 
 <table>
 <colgroup>
@@ -288,7 +303,7 @@
 
 <thead>
 <tr>
-	<th style="text-align:left;"><strong>Setting</strong></th>
+	<th style="text-align:left;"><strong>设置</strong></th>
 	<th style="text-align:left;"><strong>功能</strong></th>
 </tr>
 </thead>
@@ -296,47 +311,47 @@
 <tbody>
 <tr>
 	<td style="text-align:left;"><strong>Portrait</strong></td>
-	<td style="text-align:left;">Home button appears at the bottom.</td>
+	<td style="text-align:left;">主屏幕按钮显示在底部。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Portrait Upside Down</strong></td>
-	<td style="text-align:left;">Home button appears at the top.</td>
+	<td style="text-align:left;">主屏幕按钮显示在顶部。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Landscape Left</strong></td>
-	<td style="text-align:left;">Home button appears on the right side.</td>
+	<td style="text-align:left;">主屏幕按钮显示在右侧。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Landscape Right</strong></td>
-	<td style="text-align:left;">Home button appears on the left side.</td>
+	<td style="text-align:left;">主屏幕按钮显示在左侧。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Auto Rotation</strong></td>
-	<td style="text-align:left;">Screen orientation changes with device orientation. This is the default.</td>
+	<td style="text-align:left;">屏幕方向随设备方向而变化。此为默认值。</td>
 </tr>
 </tbody>
 </table>
 
-<p><strong>Note:</strong> This setting is shared between iOS and Android devices.</p>
+<p><strong>注意</strong>：iOS 和 Android 设备共享此设置。</p>
 
-<p>When you set the orientation to <strong>Auto Rotation</strong>, the <strong>Allowed Orientations for Auto Rotation</strong> section appears.</p>
+<p>将方向设置为 <strong>Auto Rotation</strong> 时，将显示 <strong>Allowed Orientations for Auto Rotation</strong> 部分。</p>
 
-<p>Enable the <strong>Use Animated Autorotation</strong> setting if you want orientation changes to animate the screen rotation rather than just switch. This is only visible when <strong>Default Orientation</strong> is set to <strong>Auto Rotation</strong>.</p>
+<p>如果您希望改变方向以动画化屏幕旋转，而不是仅仅切换，请启用 <strong>Use Animated Autorotation</strong> 设置。仅当 <strong>Default Orientation</strong> 设置为 <strong>Auto Rotation</strong> 时才会显示此选项。</p>
 
 <p><a name="supportedOris"></a></p>
 
 <h3>Allowed Orientations for Auto Rotation</h3>
 
-<p>This section is only visible when <strong>Default Orientation</strong> is set to <strong>Auto Rotation</strong>. </p>
+<p>仅当 <strong>Default Orientation</strong> 设置为 <strong>Auto Rotation</strong> 时才会显示此部分。</p>
 
 <figure>
-<img src="../uploads/Main/PlayerSetiOSResPresOriSupp.png" alt="Allowed Orientations for Auto Rotation player settings for the iOS platform">
-<figcaption>Allowed Orientations for Auto Rotation player settings for the iOS platform</figcaption>
+<img src="../uploads/Main/PlayerSetiOSResPresOriSupp.png" alt="iOS平台的 Allowed Orientations for Auto Rotation 播放器设置">
+<figcaption>iOS平台的 Allowed Orientations for Auto Rotation 播放器设置</figcaption>
 </figure>
 
-<p>Because <strong>Auto Rotation</strong> changes screen orientation to match the device, you may want to limit the screen orientations allowed (for example, locking a device to landscape). </p>
+<p>由于 <strong>Auto Rotation</strong> 会更改屏幕方向以匹配设备，您可能希望限制允许的屏幕方向（例如，将设备锁定为横向）。</p>
 
-<p>Enable each orientation you want to allow by checking its box in this section:</p>
+<p>通过选中本部分中的复选框，启用要允许的每个方向：</p>
 
 <table>
 <colgroup>
@@ -346,7 +361,7 @@
 
 <thead>
 <tr>
-	<th style="text-align:left;"><strong>Setting</strong></th>
+	<th style="text-align:left;"><strong>设置</strong></th>
 	<th style="text-align:left;"><strong>功能</strong></th>
 </tr>
 </thead>
@@ -354,19 +369,19 @@
 <tbody>
 <tr>
 	<td style="text-align:left;"><strong>Portrait</strong></td>
-	<td style="text-align:left;">Allow portrait orientation.</td>
+	<td style="text-align:left;">允许纵向方向。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Portrait Upside Down</strong></td>
-	<td style="text-align:left;">Allow portrait upside-down orientation.</td>
+	<td style="text-align:left;">允许纵向上下翻转方向。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Landscape Right</strong></td>
-	<td style="text-align:left;">Allow landscape right orientation (home button on the <strong>left</strong> side).</td>
+	<td style="text-align:left;">允许横向右侧方向（主屏幕按钮位于<strong>左侧</strong>）。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Landscape Left</strong></td>
-	<td style="text-align:left;">Allow landscape left orientation (home button is on the <strong>right</strong> side).</td>
+	<td style="text-align:left;">允许横向左侧方向（主屏幕按钮位于<strong>右侧</strong>）。</td>
 </tr>
 </tbody>
 </table>
@@ -376,19 +391,19 @@
 <h3>Multitasking Support</h3>
 
 <figure>
-<img src="../uploads/Main/PlayerSetiOSResPresMulti.png" alt="Multitasking Support player settings for the iOS platform">
-<figcaption>Multitasking Support player settings for the iOS platform</figcaption>
+<img src="../uploads/Main/PlayerSetiOSResPresMulti.png" alt="iOS 平台的 Multitasking Support 播放器设置">
+<figcaption>iOS 平台的 Multitasking Support 播放器设置</figcaption>
 </figure>
 
-<p>Enable the <strong>Requires Fullscreen</strong> option if your game needs to run in Fullscreen mode.</p>
+<p>如果游戏需要在全屏模式下运行，请启用 <strong>Requires Fullscreen</strong> 选项。</p>
 
 <p><a name="Status"></a></p>
 
 <h3>Status Bar</h3>
 
 <figure>
-<img src="../uploads/Main/PlayerSetiOSResPresStatus.png" alt="Status Bar player settings for the iOS platform">
-<figcaption>Status Bar player settings for the iOS platform</figcaption>
+<img src="../uploads/Main/PlayerSetiOSResPresStatus.png" alt="iOS 平台的 Status Bar 播放器设置">
+<figcaption>iOS 平台的 Status Bar 播放器设置</figcaption>
 </figure>
 
 <table>
@@ -399,7 +414,7 @@
 
 <thead>
 <tr>
-	<th style="text-align:left;"><strong>Setting</strong></th>
+	<th style="text-align:left;"><strong>设置</strong></th>
 	<th style="text-align:left;"><strong>功能</strong></th>
 </tr>
 </thead>
@@ -407,19 +422,19 @@
 <tbody>
 <tr>
 	<td style="text-align:left;"><strong>Status Bar Hidden</strong></td>
-	<td style="text-align:left;">Enable this option to hide the the status bar when the application launches.</td>
+	<td style="text-align:left;">Enable this option to hide the status bar when the application launches.</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Status Bar Style</strong></td>
-	<td style="text-align:left;">Define the style of the status bar when the application launches. The options are <strong>Default</strong>, <strong>Black Translucent</strong> and <strong>Black Opaque</strong>.</td>
+	<td style="text-align:left;">定义应用程序启动时状态栏的样式。选项为 <strong>Default</strong>、<strong>Black Translucent</strong> 和 <strong>Black Opaque</strong>。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Disable Depth and Stencil</strong></td>
-	<td style="text-align:left;">Enable this option to disable the depth and stencil buffers.</td>
+	<td style="text-align:left;">启用此选项可禁用深度和模板缓冲区。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Show Loading Indicator</strong></td>
-	<td style="text-align:left;">Select how the loading indicator should appear. The options are <strong>Don’t Show</strong>, <strong>White Large</strong>, <strong>White</strong>, and <strong>Gray</strong>.</td>
+	<td style="text-align:left;">选择应如何显示加载指示符。选项为 <strong>Don’t Show</strong>、<strong>White Large</strong>、<strong>White</strong> 和 <strong>Gray</strong>。</td>
 </tr>
 </tbody>
 </table>
@@ -428,43 +443,43 @@
 
 <h2>Splash Image</h2>
 
-<p>Above the <a href="class-PlayerSettingsSplashScreen.html">common Splash Screen</a> settings, the <strong>Player</strong> settings allow you to specify splash images for the iOS platform.</p>
+<p>在<a href="class-PlayerSettingsSplashScreen.html">通用 Splash Screen</a> 设置上方，<strong>Player</strong> 设置允许您为 iOS 平台指定启动画面。</p>
 
 <figure>
-<img src="../uploads/Main/PlayerSetiOSSplash.png" alt="Splash Settings for the iOS platform">
-<figcaption>Splash Settings for the iOS platform</figcaption>
+<img src="../uploads/Main/PlayerSetiOSSplash.png" alt="iOS 平台的启动画面设置">
+<figcaption>iOS 平台的启动画面设置</figcaption>
 </figure>
 
-<p>Use the <strong>Virtual Reality Splash Image</strong> property to select a custom splash image to be displayed in <a href="XR.html">Virtual Reality</a> displays.</p>
+<p>使用 <strong>Virtual Reality Splash Image</strong> 属性可选择要在<a href="XR.html">虚拟现实</a>显示中显示的自定义启动画面。</p>
 
-<p>Below the common Splash Screen settings, you can enable the <strong>Use Storyboard for Launch</strong> to show the <strong>Custom Storyboard</strong> button. </p>
+<p>在通用 Splash Screen 设置下面，可以启用 <strong>Use Storyboard for Launch</strong> 以显示 <strong>Custom Storyboard</strong> 按钮。</p>
 
 <figure>
-<img src="../uploads/Main/PlayerSetiOSSplashStory.png" alt="Use Storyboard for Launch Screen on the iOS Player platform">
-<figcaption>Use Storyboard for Launch Screen on the iOS Player platform</figcaption>
+<img src="../uploads/Main/PlayerSetiOSSplashStory.png" alt="iOS Player 平台上的 Use Storyboard for Launch Screen 选项">
+<figcaption>iOS Player 平台上的 Use Storyboard for Launch Screen 选项</figcaption>
 </figure>
 
-<p>Click the button to select a storyboard to show when your game starts up on the device. For your storyboard to appear here, you first need to create the storyboard in Xcode and copy it to your Project.</p>
+<p>单击该按钮可选择一个故事板，以便在游戏在设备上启动时显示。要让故事板出现在这里，您首先需要在 Xcode 中创建故事板并将其复制到您的项目中。</p>
 
-<p>Alternatively, you can leave the <strong>Use Storyboard for Launch</strong> option disabled and implement splash images with one of these methods: <a href="#LaunchScreens">Launch Screens</a> or <a href="#LaunchImages">Legacy Launch Images</a>.</p>
+<p>或者，也可以禁用 <strong>Use Storyboard for Launch</strong> 选项并采用下列方法之一来实现启动画面：<a href="#LaunchScreens">Launch Screens</a> 或 <a href="#LaunchImages">Legacy Launch Images</a>。</p>
 
 <figure>
-<img src="../uploads/Main/PlayerSetiOSSplashLaunch.png" alt="Specify Launch Screen or Legacy Launch Images on the iOS Player platform">
-<figcaption>Specify Launch Screen or Legacy Launch Images on the iOS Player platform</figcaption>
+<img src="../uploads/Main/PlayerSetiOSSplashLaunch.png" alt="在 iOS Player 平台上指定 Launch Screen 或 Legacy Launch Images">
+<figcaption>在 iOS Player 平台上指定 Launch Screen 或 Legacy Launch Images</figcaption>
 </figure>
 
 <p><a name="LaunchScreens"></a></p>
 
 <h3>Launch Screens</h3>
 
-<p>A <strong>Launch Screen</strong> is an XIB file from which iOS creates a splash screen dynamically on the device. However, there are some limitations:</p>
+<p><strong>Launch Screen</strong> 是一个 XIB 文件，iOS 通过该文件动态地在设备上创建一个启动画面。但是，有一些限制：</p>
 
 <ul>
-<li><p>You can’t display different content depending on iPad device orientation. </p></li>
-<li><p>All iPhones support landscape <strong>Launch Screens</strong>; however, due to a bug in iOS, <strong>Landscape Left</strong> is shown instead of <strong>Landscape Right</strong> on certain iOS versions. </p></li>
+<li><p>无法根据 iPad 设备的方向来显示不同的内容。</p></li>
+<li><p>所有的 iPhone 都支持横向 <strong>Launch Screens__；但是，由于 iOS 中的一个缺陷，在某些 iOS 版本中显示 </strong>Landscape Left__，而不是 <strong>Landscape Right</strong>。</p></li>
 </ul>
 
-<p>Each the <strong>iPhone Launch Screen</strong> and <strong>iPad Launch Screen</strong> sections allow you to select the launch screen type from the <strong>Launch Screen type</strong> drop-down menu:</p>
+<p><strong>iPhone Launch Screen</strong> 和 <strong>iPad Launch Screen</strong> 部分允许您从 <strong>Launch Screen type</strong> 下拉菜单中选择 Launch Screen 类型：</p>
 
 <table>
 <colgroup>
@@ -482,34 +497,34 @@
 <tbody>
 <tr>
 	<td style="text-align:left;"><strong>Default</strong></td>
-	<td style="text-align:left;">A launch screen that is very much like a launch image. One image is selected for portrait and landscape. The selection order: iPhone 6+ launch images, shared mobile launch image, default Unity launch image for iPhone 6+. The images are displayed using aspect-fill mode.</td>
+	<td style="text-align:left;">一个与启动图像 (Launch Image) 非常相似的启动屏幕 (Launch Screen)。选择一张图像用于纵向和横向。选择顺序：iPhone 6+ 启动图像、共享移动端启动图像、iPhone 6+ 默认 Unity 启动图像。系统将使用宽高填充模式来显示图像。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>None</strong></td>
-	<td style="text-align:left;">The behavior is as if only launch images are used.</td>
+	<td style="text-align:left;">这种行为就好像只使用了启动图像一样。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Image and background (relative size)</strong></td>
-	<td style="text-align:left;">Displays a center-aligned image, with the rest of area filled with solid color. The image size is user-specified percentage of the screen size, computed in the smaller dimension (vertical on landscape, horizontal in portrait orientations). User also specifies background color and images for portrait and landscape orientations. Image selection order: the user-specified image, shared mobile launch image, default Unity launch image for iPhone 6+. The images are displayed using aspect-fill mode.</td>
+	<td style="text-align:left;">显示中心对齐的图像，其余区域填充纯色。图像大小是用户指定的屏幕大小百分比，以较小的尺寸来计算（横向时垂直，纵向时水平）。用户还指定纵向和横向的背景颜色和图像。图像选择顺序：用户指定的图像、共享的移动端启动图像、iPhone 6+ 默认 Unity 启动图像。系统将使用宽高填充模式来显示图像。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Image and background (constant size)</strong></td>
-	<td style="text-align:left;">Same as relative size option except that the size of the image is defined by user-specified number of points.</td>
+	<td style="text-align:left;">与 relative size 选项相同，但图像的大小是由用户指定的点数来定义的。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Custom XIB</strong></td>
-	<td style="text-align:left;">A user-specified XIB file from any location.</td>
+	<td style="text-align:left;">来自任何位置的由用户指定的 XIB 文件。</td>
 </tr>
 </tbody>
 </table>
 
-<p><strong>Note:</strong> With a Unity Personal subscription the <a href="class-PlayerSettingsSplashScreen.html">Unity Splash Screen</a> displays as soon as engine initializes, in addition to your chosen splash screen.</p>
+<p><strong>注意：</strong>如果使用的是 Unity Personal 订阅，<a href="class-PlayerSettingsSplashScreen.html">Unity 启动画面</a>将在引擎初始化后立即显示，此外还会显示您选择的启动画面。</p>
 
 <p><a name="LaunchImages"></a></p>
 
 <h3>Legacy Launch Images</h3>
 
-<p><strong>Launch Images</strong> are static splash screen images that occupy the entire screen. You can define them in an Asset catalog (<code>Images.xcassets/LaunchImage</code>). Always add a <strong>Launch Screen</strong> for each supported size and orientation combination:</p>
+<p><strong>启动图像__是静态启动画面图像，将占据整个屏幕。您可以在资源目录 (<code>Images.xcassets/LaunchImage</code>) 中定义启动图像。请务必为每种受支持的大小和方向组合添加一个__启动屏幕 (Launch Screen)</strong>：</p>
 
 <table>
 <colgroup>
@@ -519,7 +534,7 @@
 
 <thead>
 <tr>
-	<th style="text-align:left;"><strong>Setting</strong></th>
+	<th style="text-align:left;"><strong>设置</strong></th>
 	<th style="text-align:left;"><strong>功能</strong></th>
 </tr>
 </thead>
@@ -527,73 +542,73 @@
 <tbody>
 <tr>
 	<td style="text-align:left;"><strong>Mobile Splash Screen</strong></td>
-	<td style="text-align:left;">Specifies texture which should be used for iOS Splash Screen. Standard Splash Screen size is 320x480.(This is shared between Android and iOS.)</td>
+	<td style="text-align:left;">指定要用于 iOS 启动画面的纹理。标准启动画面大小为 320x480。（iOS 和 Android 之间共享此设置。）</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>iPhone 3.5"/Retina</strong></td>
-	<td style="text-align:left;">Specifies texture which should be used for iOS 3.5" Retina Splash Screen. Splash Screen size is 640x960.</td>
+	<td style="text-align:left;">指定要用于 iOS 3.5" Retina 启动画面的纹理。启动画面大小为 640x960。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>iPhone 4"/Retina</strong></td>
-	<td style="text-align:left;">Specifies texture which should be used for iOS 4" Retina Splash Screen. Splash Screen size is 640x1136.</td>
+	<td style="text-align:left;">指定要用于 iOS 4" Retina 启动画面的纹理。启动画面大小为 640x1136。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>iPhone 4.7"/Retina</strong></td>
-	<td style="text-align:left;">Specifies texture which should be used for iOS 4.7" Retina Splash Screen. Splash Screen size is 750x1334.</td>
+	<td style="text-align:left;">指定要用于 iOS 4.7" Retina 启动画面的纹理。启动画面大小为 750x1334。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>iPhone 5.5"/Retina</strong></td>
-	<td style="text-align:left;">Specifies texture which should be used for iOS 5.5" Retina Splash Screen. Splash Screen size is 1242x2208.</td>
+	<td style="text-align:left;">指定要用于 iOS 5.5" Retina 启动画面的纹理。启动画面大小为 1242x2208。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>iPhone 5.5" Landscape/Retina</strong></td>
-	<td style="text-align:left;">Specifies texture which should be used for iOS 5.5" Landscape/Retina Splash Screen. Splash Screen size is 2208x1242.</td>
+	<td style="text-align:left;">指定要用于 iOS 5.5" 横向/Retina 启动画面的纹理。启动画面大小为 2208x1242。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>iPhone X\Retina</strong></td>
-	<td style="text-align:left;">Specifies texture which should be used for iPhone X Retina Splash Screen. Splash Screen size is 1125x2436.</td>
+	<td style="text-align:left;">指定要用于 iPhone X Retina 启动画面的纹理。启动画面大小为 1125x2436。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>iPhone X Landscape\Retina</strong></td>
-	<td style="text-align:left;">Specifies texture which should be used for iPhone X Landscape/Retina Splash Screen. Splash Screen size is 2436x1125.</td>
+	<td style="text-align:left;">指定要用于 iPhone X 横向/Retina 启动画面的纹理。启动画面大小为 2436x1125。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>iPad Portrait</strong></td>
-	<td style="text-align:left;">Specifies texture which should be used as iPad Portrait orientation Splash Screen. Standard Splash Screen size is 768x1024.</td>
+	<td style="text-align:left;">指定要用作 iPad 纵向启动画面的纹理。标准启动画面大小为 768x1024。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>iPad Landscape</strong></td>
-	<td style="text-align:left;">Specifies texture which should be used as iPad Landscape orientation Splash Screen. Standard Splash Screen size is 1024x768.</td>
+	<td style="text-align:left;">指定要用作 iPad 横向启动画面的纹理。标准启动画面大小为 1024x768。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>iPad Portrait/Retina</strong></td>
-	<td style="text-align:left;">Specifies texture which should be used as the iPad Retina Portrait orientation Splash Screen. Standard Splash Screen size is 1536x2048.</td>
+	<td style="text-align:left;">指定要用作 iPad Retina 纵向启动画面的纹理。标准启动画面大小为 1536x2048。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>iPad Landscape/Retina</strong></td>
-	<td style="text-align:left;">Specifies texture which should be used as the iPad Retina Landscape orientation Splash Screen. Standard Splash Screen size is 2048x1536.</td>
+	<td style="text-align:left;">指定要用作 iPad Retina 横向启动画面的纹理。标准启动画面大小为 2048x1536。</td>
 </tr>
 </tbody>
 </table>
 
-<p>Only iPhone 6+ supports landscape orientation; other iPhones can only use portrait. </p>
+<p>只有 iPhone 6+ 支持横向；其他 iPhone 只能使用纵向。</p>
 
-<p>Launch Images are selected in the following order:</p>
+<p>启动图像按以下顺序选择：</p>
 
 <ul>
-<li>The specific <strong>Launch Image</strong> override, if the texture is set</li>
-<li>Default Unity splash screen launch image, which is a solid blue-black color</li>
+<li>如果设置了纹理，则特定__启动图像__优先</li>
+<li>默认的 Unity 启动画面启动图像，也就是纯蓝黑色</li>
 </ul>
 
-<p>You need to set all <strong>Launch Images</strong> for your build.</p>
+<p>您需要为自己的构建版本设置所有__启动图像__。</p>
 
 <p><a name="Debugging"></a></p>
 
 <h2>Debugging and crash reporting</h2>
 
 <figure>
-<img src="../uploads/Main/PlayerSetiOSDebugCrash.png" alt="Debugging and crash reporting on the iOS platform">
-<figcaption>Debugging and crash reporting on the iOS platform</figcaption>
+<img src="../uploads/Main/PlayerSetiOSDebugCrash.png" alt="iOS 平台上的 Debugging and crash reporting 部分">
+<figcaption>iOS 平台上的 Debugging and crash reporting 部分</figcaption>
 </figure>
 
 <table>
@@ -604,7 +619,7 @@
 
 <thead>
 <tr>
-	<th style="text-align:left;"><strong>Setting</strong></th>
+	<th style="text-align:left;"><strong>设置</strong></th>
 	<th style="text-align:left;"><strong>功能</strong></th>
 </tr>
 </thead>
@@ -612,19 +627,19 @@
 <tbody>
 <tr>
 	<td style="text-align:left;"><strong>Enable Internal Profiler (Deprecated)</strong></td>
-	<td style="text-align:left;">Enables an internal profiler which collects performance data of the application and prints a report to the console. The report contains the number of milliseconds that it took for each Unity subsystem to execute on each frame. The data is averaged across 30 frames.</td>
+	<td style="text-align:left;">启用内部性能分析器，它可收集应用程序的性能数据并将报告输出至控制台。报告包含每个 Unity 子系统在每帧上执行时所用的毫秒数。数据是针对 30 帧所求的平均值。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>On .Net UnhandledException</strong></td>
-	<td style="text-align:left;">The action taken on .NET unhandled exception. The options are <strong>Crash</strong> (the application crashes hardly and forces iOS to generate a crash report that can be submitted to iTunes by app users and inspected by developers), <strong>Silent Exit</strong> (the application exits gracefully).</td>
+	<td style="text-align:left;">对 .NET 未处理异常所采取的操作。提供的选项为 <strong>Crash__（应用程序几乎崩溃并且强制 iOS 生成可通过应用程序用户提交到 iTunes 并由开发人员检查的崩溃报告）和 </strong>Silent Exit__（应用程序成功退出）。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Log Obj-C Uncaught Exceptions</strong></td>
-	<td style="text-align:left;">Enables a custom Objective-C Uncaught Exception handler, which prints exception information to console.</td>
+	<td style="text-align:left;">启用一个自定义 Objective-C 未捕获异常处理程序，此处理程序会将异常信息输出至控制台。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Enable Crash Report API</strong></td>
-	<td style="text-align:left;">Enables a custom crash reporter to capture crashes. Crash logs are available to scripts via CrashReport API.</td>
+	<td style="text-align:left;">启用自定义崩溃报告程序以捕获崩溃。脚本可通过 CrashReport API 使用崩溃日志。</td>
 </tr>
 </tbody>
 </table>
@@ -633,7 +648,7 @@
 
 <h2>Other Settings</h2>
 
-<p>This section allows you to customize a range of options organized into the following groups:</p>
+<p>此部分可以自定义一系列选项，这些选项分为以下几组：</p>
 
 <ul>
 <li><a href="#Rendering">Rendering</a></li>
@@ -648,11 +663,11 @@
 
 <h3>Rendering</h3>
 
-<p>Use these settings to customize how Unity renders your game for the iOS platform.</p>
+<p>使用这些设置可自定义 Unity 针对 iOS 平台渲染游戏的方式。</p>
 
 <figure>
-<img src="../uploads/Main/PlayerSetiOSOther-Rendering.png" alt="Rendering Player settings for iOS platforms">
-<figcaption>Rendering Player settings for iOS platforms</figcaption>
+<img src="../uploads/Main/PlayerSetiOSOther-Rendering.png" alt="iOS 平台的 Rendering Player 设置">
+<figcaption>iOS 平台的 Rendering Player 设置</figcaption>
 </figure>
 
 <table>
@@ -664,7 +679,7 @@
 
 <thead>
 <tr>
-	<th style="text-align:left;" colspan="2"><strong>Setting</strong></th>
+	<th style="text-align:left;" colspan="2"><strong>设置</strong></th>
 	<th style="text-align:left;"><strong>功能</strong></th>
 </tr>
 </thead>
@@ -672,23 +687,23 @@
 <tbody>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Color Space</strong></td>
-	<td style="text-align:left;">Choose which color space should be used for rendering: <em>Gamma</em> or <em>Linear</em>. <br>See the <a href="LinearLighting.html">Linear rendering overview</a> for an explanation of the difference between the two.</td>
+	<td style="text-align:left;">选择应该用于渲染的颜色空间，选项为：_Gamma_ 或 <em>Linear</em>。<br>请参阅<a href="LinearLighting.html">线性渲染概述</a>以了解这两者之间的区别。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Auto Graphics API</strong></td>
-	<td style="text-align:left;">Disable this option to manually pick and reorder the graphics APIs. By default this option is enabled, and Unity includes Metal, and GLES2 as a fallback for devices where Metal is not supported.</td>
+	<td style="text-align:left;">禁用此选项可手动选择和重新排序图形 API。默认情况下，此选项是启用的，并且 Unity 包含 Metal，对于不支持 Metal 的设备，以 GLES2 作为后备选项。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Color Gamut</strong></td>
-	<td style="text-align:left;">You can add or remove <a href="https://color.viewsonic.com/zh-cn/explore/content/Color-gamut_6.html">color gamuts</a> for the iOS platform to use for rendering. Click the plus (+) icon to see a list of available gamuts. A color gamut defines a possible range of colors available for a given device (such as a monitor or screen). The sRGB gamut is the default (and required) gamut.<br>When targeting recent iOS devices with wide color gamut displays, use <strong>DisplayP3</strong> to utilize full display capabilities. Use <strong>Metal Editor Support</strong> as a fallback for older devices.</td>
+	<td style="text-align:left;">可以为 iOS 平台添加或删除<a href="https://color.viewsonic.com/zh-cn/explore/content/Color-gamut_6.html">色域</a>以用于渲染。单击加号 (+) 图标查看可用色域的列表。色域定义了给定设备（如监视器或屏幕）可以使用的所有颜色范围。sRGB 色域是默认色域（也是必需色域）。<br>如果目标设备是具备宽色域显示屏的新款 iOS 设备，请使用 <strong>DisplayP3</strong> 充分利用显示能力。对于旧设备，使用 <strong>Metal Editor Support</strong> 作为后备选项。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Metal Editor Support</strong></td>
-	<td style="text-align:left;">Enable this option to use the Metal API in the Unity Editor and unlock faster Shader iteration for targeting the Metal API.</td>
+	<td style="text-align:left;">启用此选项可在 Unity Editor 中使用 Metal API，并释放更快速的着色器迭代以定位 Metal API。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Metal API Validation</strong></td>
-	<td style="text-align:left;">Enable this option when you need to debug Shader issues.<br><strong>Note:</strong> Validation increases CPU usage, so use it only for debugging.</td>
+	<td style="text-align:left;">如果需要调试着色器问题，请启用此选项。<br><strong>注意：</strong>验证会提高 CPU 使用率，因此仅在进行调试时使用。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Metal Write-Only Backbuffer</strong></td>
@@ -696,58 +711,62 @@
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Force hard shadows on Metal</strong></td>
-	<td style="text-align:left;">Enable this option to force Unity to use point sampling for shadows on Metal. This reduces shadow quality, which should give better performance.</td>
+	<td style="text-align:left;">启用此选项可强制 Unity 在 Metal 中对阴影使用点采样。这样会降低阴影质量，但应该能提供更好的性能。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Memoryless Depth</strong></td>
-	<td style="text-align:left;">Choose when to use <a href="../ScriptReference/RenderTextureMemoryless.Depth.html">memoryless render textures</a>. Memoryless render textures are temporarily stored in the on-tile memory when rendered, not in CPU or GPU memory. This reduces memory usage of your app but you cannot read or write to these render textures.<br><strong>Note:</strong> Memoryless render textures are only supported on iOS, tvOS 10.0+ Metal and Vulkan. Render textures are read/write protected and stored in CPU or GPU memory on other platforms.</td>
+	<td style="text-align:left;">选择何时使用<a href="../ScriptReference/RenderTextureMemoryless.Depth.html">无记忆渲染纹理</a>。无记忆渲染纹理在渲染时临时存储在区块内存中，而不是存储在 CPU 或 GPU 内存中。这可减少应用的内存使用量，但您无法读取或写入这些渲染纹理。<br><strong>注意：</strong>只有 iOS、tvOS 10.0+ Metal 和 Vulkan 上支持无记忆渲染纹理。在其他平台上，渲染纹理受读/写保护并存储在 CPU 或 GPU 内存中。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
-	<td style="text-align:left;"><strong>Unused</strong></td>
-	<td style="text-align:left;">Never use memoryless framebuffer depth.</td>
+	<td style="text-align:left;"><em>Unused</em></td>
+	<td style="text-align:left;">从不使用无记忆帧缓冲区深度。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
-	<td style="text-align:left;"><strong>Forced</strong></td>
-	<td style="text-align:left;">Always use memoryless framebuffer depth.</td>
+	<td style="text-align:left;"><em>Forced</em></td>
+	<td style="text-align:left;">始终使用无记忆帧缓冲区深度。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
-	<td style="text-align:left;"><strong>Automatic</strong></td>
-	<td style="text-align:left;">Let Unity decide when to use memoryless framebuffer depth.</td>
+	<td style="text-align:left;"><em>Automatic</em></td>
+	<td style="text-align:left;">让 Unity 决定何时使用无记忆帧缓冲区深度。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Multithreaded Rendering</strong></td>
-	<td style="text-align:left;">Enable this option to use multithreaded rendering. This is only supported on Metal.</td>
+	<td style="text-align:left;">启用此选项可使用多线程渲染。仅 Metal 支持此功能。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Static Batching</strong></td>
-	<td style="text-align:left;">Enable this option to use <a href="DrawCallBatching.html">Static batching</a>.</td>
+	<td style="text-align:left;">启用此选项可使用<a href="DrawCallBatching.html">静态批处理</a>。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Dynamic Batching</strong></td>
-	<td style="text-align:left;">Enable this option to use <a href="DrawCallBatching.html">Dynamic Batching</a> on your build (enabled by default).<br><strong>Note:</strong> Dynamic batching has no effect when a <a href="ScriptableRenderPipeline.html">Scriptable Render Pipeline</a> is active, so this setting is only visible when nothing is set in the <strong>Scriptable Render Pipeline Asset</strong> <a href="class-GraphicsSettings.html#SRLoop">Graphics</a> setting.</td>
+	<td style="text-align:left;">启用此选项可在构建中使用<a href="DrawCallBatching.html">动态批处理</a>（默认情况下启用）。<br><strong>注意：</strong>当<a href="ScriptableRenderPipeline.html">可编程渲染管线</a>激活时，动态批处理无效，所以仅当 <strong>Scriptable Render Pipeline Asset</strong> <a href="class-GraphicsSettings.html#SRLoop">Graphics</a> 设置中未设置任何内容时，此设置才可见。</td>
 </tr>
 <tr>
-	<td style="text-align:left;" colspan="2"><strong>GPU Skinning</strong></td>
-	<td style="text-align:left;">Enable this option to use DX11/ES3 GPU skinning. To learn more about GPU skinning, see the <a href="https://en.wikipedia.org/wiki/Skeletal_animation">Wikipedia page on skeletal animation</a>.</td>
+	<td style="text-align:left;" colspan="2"><strong>Compute Skinning</strong></td>
+	<td style="text-align:left;">Enable this option to use DX11/ES3 GPU compute skinning, which frees up CPU resources. To learn more about GPU compute skinning, see the <a href="https://en.wikipedia.org/wiki/Skeletal_animation">Wikipedia page on skeletal animation</a>.</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Graphics Jobs (Experimental)</strong></td>
-	<td style="text-align:left;">Enable this option to instruct Unity to offload graphics tasks (render loops) to worker threads running on other CPU cores. This is intended to reduce the time spent in <code>Camera.Render</code> on the main thread, which is often a bottleneck. <br><strong>Note:</strong> This feature is experimental. It may not deliver a performance improvement for your project, and may introduce instability.<br>Unity currently only supports Graphics Jobs when using <a href="https://www.khronos.org/vulkan/">Vulkan</a> and this setting has no effect when using <a href="https://developer.android.com/guide/topics/graphics/opengl.html">OpenGL</a> ES.</td>
+	<td style="text-align:left;">启用此选项可指示 Unity 将图形任务（渲染循环）卸载到在其他 CPU 核心上运行的工作线程。此功能旨在减少主线程上 <code>Camera.Render</code> 所花费的时间，该时间通常成为瓶颈。<br><strong>注意：</strong>此功能是实验性的。可能无法为您的项目带来性能提升，并可能导致不稳定。<br>Unity 目前仅在使用 <a href="https://www.khronos.org/vulkan/">Vulkan</a> 时支持图形作业 (Graphics Jobs)，使用 <a href="https://developer.android.com/guide/topics/graphics/opengl.html">OpenGL</a> ES 时此设置无效。</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Lightmap Encoding</strong></td>
+	<td style="text-align:left;">选择 <em>Normal Quality</em> 或 <em>High Quality</em> 来设置光照贴图编码。此设置影响光照贴图的编码方案和压缩格式。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Lightmap Streaming Enabled</strong></td>
-	<td style="text-align:left;">Enable this option to load only the lightmap mip maps as needed to render the current game Cameras. This value applies to the lightmap textures as they are generated.<br><strong>Note:</strong> To use this setting, you must enable the <a href="class-QualitySettings.html#texStream">Texture Streaming Quality</a> setting.</td>
+	<td style="text-align:left;">Enable this option to load only the lightmap mipmaps as needed to render the current game Cameras. This value applies to the lightmap textures as they are generated.<br><strong>Note:</strong> To use this setting, you must enable the <a href="class-QualitySettings.html#texStream">Texture Streaming Quality</a> setting.</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Streaming Priority</strong></td>
-	<td style="text-align:left;">Set the lightmap mip map streaming priority to resolve resource conflicts. These values are applied to the light map textures as they are generated.<br>Positive numbers give higher priority. Valid values range from –128 to 127.</td>
+	<td style="text-align:left;">Set the lightmap mipmap streaming priority to resolve resource conflicts. As these values generate, Unity applies them to the light map textures.<br>Positive numbers give higher priority. Valid values range from –128 to 127.</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Enable Frame Timing Stats</strong></td>
-	<td style="text-align:left;">Enable this option to gather CPU/GPU frame timing statistics.</td>
+	<td style="text-align:left;">启用此选项可收集 CPU/GPU 帧时序统计信息。</td>
 </tr>
 </tbody>
 </table>
@@ -757,8 +776,8 @@
 <h3>Identification</h3>
 
 <figure>
-<img src="../uploads/Main/PlayerSetiOSOther-Identification.png" alt="Identification settings for iOS platforms">
-<figcaption>Identification settings for iOS platforms</figcaption>
+<img src="../uploads/Main/PlayerSetiOSOther-Identification.png" alt="iOS 平台的 Identification 设置">
+<figcaption>iOS 平台的 Identification 设置</figcaption>
 </figure>
 
 <table>
@@ -769,7 +788,7 @@
 
 <thead>
 <tr>
-	<th style="text-align:left;"><strong>Setting</strong></th>
+	<th style="text-align:left;"><strong>设置</strong></th>
 	<th style="text-align:left;"><strong>功能</strong></th>
 </tr>
 </thead>
@@ -777,23 +796,23 @@
 <tbody>
 <tr>
 	<td style="text-align:left;"><strong>Bundle Identifier</strong></td>
-	<td style="text-align:left;">Enter the provisioning profile of the game or product you are building. The basic structure of the identifier is <strong>com.CompanyName.ProductName</strong>. This structure may vary internationally based on where you live, so always default to the string provided to you by Apple for your Developer Account. Your ProductName is set up in your provisioning certificates.<br>This value appears as <code>CFBundleIdentifier</code> in the associated <em>info.plist</em> file. See the Apple developer documentation on <a href="https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#/apple_ref/doc/uid/20001431-102070">CFBundleIdentifier</a> to learn more. <br><strong>Note:</strong> This is shared between iOS, tvOS and Android.</td>
+	<td style="text-align:left;">输入您正在构建的游戏或产品的资源调配配置文件。标识符的基本结构是 <strong>com.CompanyName.ProductName</strong>。此结构可能会根据您居住的地方而有所不同，因此始终默认为 Apple 为您的开发者帐户提供的字符串。您的 ProductName 已在您的资源调配证书中设置。<br>此值在关联的 <em>info.plist</em> 文件中显示为 <code>CFBundleIdentifier</code>。请参阅 Apple 开发者文档的 <a href="https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#/apple_ref/doc/uid/20001431-102070">CFBundleIdentifier</a> 部分以了解更多信息。<br><strong>注意</strong>：iOS、tvOS 和 Android 共享此设置。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Version</strong></td>
-	<td style="text-align:left;">Enter the release-version-number string for the bundle (for example, 4.3.6). This appears as <code>CFBundleShortVersionString</code> in the associated <em>info.plist</em> file.<br>See the Apple developer documentation on <a href="https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364">CFBundleShortVersionString</a> to learn more.</td>
+	<td style="text-align:left;">输入捆绑包的 release-version-number 字符串（例如，4.3.6）。此信息在关联的 <em>info.plist</em> 文件中显示为 <code>CFBundleShortVersionString</code>。<br>请参阅 Apple 开发者文档的 <a href="https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364">CFBundleShortVersionString</a> 部分以了解更多信息。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Build</strong></td>
-	<td style="text-align:left;">Enter the build number for this version of your app. This appears as <code>CFBundleVersion</code> in the associated <em>info.plist</em> file.<br> See the Apple developer documentation on <a href="https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364">CFBundleVersion</a> to learn more.</td>
+	<td style="text-align:left;">输入此应用版本的内部版本号。此信息在关联的 <em>info.plist</em> 文件中显示为 <code>CFBundleVersion</code>。<br>请参阅 Apple 开发者文档的 <a href="https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102364">CFBundleVersion</a> 部分以了解更多信息。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Signing Team ID</strong></td>
-	<td style="text-align:left;">Enter your Apple Developer Team ID. You can find this on the Apple Developer website under <a href="https://help.apple.com/xcode/mac/current/#/devaf282080a?sub=dev8877b4398">Xcode Help</a>. This sets the Team ID for the generated Xcode project, allowing developers to use the Build and Run functionality. An Apple Developer Team ID must be set here for automatic signing of your app. For more information, see <a href="https://help.apple.com/xcode/mac/current/#/dev60b6fbbc7">Creating Your Team Provisioning Profile</a>.</td>
+	<td style="text-align:left;">输入您的 Apple Developer Team ID。您可以在 Apple 开发者网站上的 <a href="https://help.apple.com/xcode/mac/current/#/devaf282080a?sub=dev8877b4398">Xcode Help</a> 下找到此信息。这将为生成的 Xcode 项目设置 Team ID，从而允许开发者使用 Build and Run 功能。必须在此处设置 Apple Developer Team ID 才能为应用程序自动签名。有关更多信息，请参阅<a href="https://help.apple.com/xcode/mac/current/#/dev60b6fbbc7">创建团队资源调配配置文件 (Creating Your Team Provisioning Profile)</a>。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Automatically Sign</strong></td>
-	<td style="text-align:left;">Enable this option to allow Xcode to automatically sign your build.</td>
+	<td style="text-align:left;">启用此选项可允许 Xcode 自动为您的构建版本签名。</td>
 </tr>
 </tbody>
 </table>
@@ -803,27 +822,27 @@
 <h3>配置</h3>
 
 <figure>
-<img src="../uploads/Main/PlayerSetiOSOther-Configuration.png" alt="Configuration settings for iOS platforms">
-<figcaption>Configuration settings for iOS platforms</figcaption>
+<img src="../uploads/Main/PlayerSetiOSOther-Configuration.png" alt="iOS 平台的 Configuration 设置">
+<figcaption>iOS 平台的 Configuration 设置</figcaption>
 </figure>
 
-<p><img src="../uploads/Main/LetterCircle_A.png" alt="A"> <a href="#Config-API">API configuration settings</a></p>
+<p><img src="../uploads/Main/LetterCircle_A.png" alt="A"> <a href="#Config-API">API 配置设置</a></p>
 
-<p><img src="../uploads/Main/LetterCircle_B.png" alt="B"> <a href="#Config-Apple">Apple-specific information</a></p>
+<p><img src="../uploads/Main/LetterCircle_B.png" alt="B"> <a href="#Config-Apple">Apple 特定信息</a></p>
 
-<p><img src="../uploads/Main/LetterCircle_C.png" alt="C"> <a href="#Config-Device">Device information</a></p>
+<p><img src="../uploads/Main/LetterCircle_C.png" alt="C"> <a href="#Config-Device">设备信息</a></p>
 
 <p><img src="../uploads/Main/LetterCircle_D.png" alt="D"> <a href="#Config-Variant">Variant map for app slicing</a></p>
 
-<p><img src="../uploads/Main/LetterCircle_E.png" alt="E"> <a href="#Config-Other">Other configuration settings</a></p>
+<p><img src="../uploads/Main/LetterCircle_E.png" alt="E"> <a href="#Config-Other">其他配置设置</a></p>
 
 <p><a name="Config-API"></a></p>
 
-<h4>API configuration settings</h4>
+<h4>API 配置设置</h4>
 
 <figure>
-<img src="../uploads/Main/PlayerSetiOSOther-Config-API.png" alt="API configuration settings for iOS platform">
-<figcaption>API configuration settings for iOS platform</figcaption>
+<img src="../uploads/Main/PlayerSetiOSOther-Config-API.png" alt="iOS 平台的 API 配置设置">
+<figcaption>iOS 平台的 API 配置设置</figcaption>
 </figure>
 
 <table>
@@ -835,7 +854,7 @@
 
 <thead>
 <tr>
-	<th style="text-align:left;" colspan="2"><strong>Setting</strong></th>
+	<th style="text-align:left;" colspan="2"><strong>设置</strong></th>
 	<th style="text-align:left;"><strong>功能</strong></th>
 </tr>
 </thead>
@@ -848,56 +867,56 @@
 <tr>
 	<td style="text-align:left;"></td>
 	<td style="text-align:left;"><em>.NET 3.5 Equivalent (Deprecated)</em></td>
-	<td style="text-align:left;">A .NET runtime which implements the .NET 3.5 API. This functionality is deprecated, and should no longer be used. Please use .NET 4.</td>
+	<td style="text-align:left;">一个实现 .NET 3.5 API 的 .NET 运行时。此功能已弃用，不应再使用。请使用 .NET 4。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
 	<td style="text-align:left;"><em>.NET 4.x Equivalent</em></td>
-	<td style="text-align:left;">A .NET runtime which implements the .NET 4 API. This API is newer than .NET 3.5, and as such, it offers access to more APIs, is compatible with more external libraries, and supports C# 6. This is the default scripting runtime.</td>
+	<td style="text-align:left;">一个实现 .NET 4 API 的 .NET 运行时。此 API 比 .NET 3.5 更新，因此提供对更多 API 的访问、与更多外部库兼容并支持 C# 6。这是默认脚本运行时。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2">
 <a name="backend"></a><strong>Scripting Backend</strong>
 </td>
-	<td style="text-align:left;">The scripting backend determines how Unity compiles and executes C# code in your Project. This setting is not enabled for iOS.</td>
+	<td style="text-align:left;">脚本后端确定 Unity 如何在项目中编译和执行 C# 代码。iOS 未启用此设置。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
 	<td style="text-align:left;"><em>Mono</em></td>
-	<td style="text-align:left;">To use incremental builds, choose the <strong>Append</strong> option after selecting <strong>Build</strong> from the <strong>Build Settings</strong> dialog. The <strong>Replace</strong> option will perform a clean build.Compiles C# code into .NET Common Intermediate Language (CIL) and executes that CIL using a Common Language Runtime. <br><strong>Warning:</strong> Mono builds are no longer accepted in the Apple App store and Mono is not supported by iOS 11 and above. Mono can only be selected when using the deprecated .NET 3.5 runtime.</td>
+	<td style="text-align:left;">要使用增量构建，请从 <strong>Build Settings</strong> 对话框中选择 <strong>Build</strong> 后选择 <strong>Append</strong> 选项。<strong>Replace</strong> 选项将执行干净的构建。将 C# 代码编译为 .NET 公共中间语言 (CIL) 并使用公共语言运行时执行该 CIL。<br><strong>警告：</strong>Apple App Store 不再接受 Mono 构建，且 iOS 11 及更高版本不支持 Mono。仅当使用了已弃用的 .NET 3.5 运行时的时候才能选择 Mono。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
 	<td style="text-align:left;"><em>IL2CPP</em></td>
-	<td style="text-align:left;">Compiles C# code into CIL, converts the CIL to C++ and then compiles that C++ into native machine code, which executes directly at run time. See <a href="IL2CPP.html">IL2CPP</a> for more information.<br><strong>Tip:</strong> The C++ code generated by the IL2CPP scripting backend can be updated incrementally, allowing incremental C++ build systems to compile only the changes source files. This can significantly lower iteration times.</td>
+	<td style="text-align:left;">将 C# 代码编译为 CIL，将 CIL 转换为 C++，然后将该 C++ 编译为本机机器代码，该代码在运行时直接执行。有关更多信息，请参阅 <a href="IL2CPP.html">IL2CPP</a>。<br><strong>提示：</strong>由 IL2CPP 脚本后端生成的 C++ 代码可以逐步更新，从而允许增量式 C++ 构建系统仅编译更改的源文件。这种方式可以显著降低迭代次数。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>API Compatibility Level</strong></td>
-	<td style="text-align:left;">The compatibility level determines which .NET APIs you can use in your Project. This setting can affect compatibility with 3rd-party libraries.<br><strong>Tip:</strong> If you are having problems with a third-party assembly, you can try the suggestion in the <a href="#apiComp">API Compatibility Level</a> section below.</td>
+	<td style="text-align:left;">兼容性级别确定您可以在项目中使用哪些 .NET API。此设置可能会影响与第三方库的兼容性。<br><strong>提示：</strong>如果您遇到第三方程序集的问题，可以尝试下文的 <a href="#apiComp">API Compatibility Level</a> 部分中的建议。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
 	<td style="text-align:left;"><em>.Net 2.0</em></td>
-	<td style="text-align:left;">Maximum .net compatibility, biggest file sizes. Part of the deprecated .NET 3.5 runtime.</td>
+	<td style="text-align:left;">最高的 .net 兼容性，最大的文件大小。属于已弃用的 .NET 3.5 运行时。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
 	<td style="text-align:left;"><em>.Net 2.0 Subset</em></td>
-	<td style="text-align:left;">Subset of full .net compatibility, smaller file sizes. Part of the deprecated .NET 3.5 runtime.</td>
+	<td style="text-align:left;">完整 .net 兼容性的子集，最小的文件大小。属于已弃用的 .NET 3.5 运行时。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
 	<td style="text-align:left;"><em>.Net Standard 2.0</em></td>
-	<td style="text-align:left;">Compatible with <a href="https://docs.microsoft.com/en-us/dotnet/standard/net-standard">.NET Standard 2.0</a>. Produces smaller builds and has full cross-platform support.</td>
+	<td style="text-align:left;">兼容 <a href="https://docs.microsoft.com/en-us/dotnet/standard/net-standard">.NET Standard 2.0</a>。生成较小的构建并具有完整的跨平台支持。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
 	<td style="text-align:left;"><em>.Net 4.x</em></td>
-	<td style="text-align:left;">Choose this option when using libraries that access APIs not included in .NET Standard 2.0. Compatible with the .NET Framework 4 (which includes everything in the .NET Standard 2.0 profile as well as additional APIs). <br>Produces larger builds and any additional APIs available are not necessarily supported on all platforms. See <a href="dotnetProfileAssemblies.html">Referencing additional class library assemblies</a> for more information.</td>
+	<td style="text-align:left;">如果使用的库需要访问 .NET Standard 2.0 中未包含的 API，请选择此选项。兼容 .NET Framework 4（包括 .NET Standard 2.0 配置文件中的所有内容以及其他 API）。<br>生成更大的构建，并且任何可用的其他 API 不一定在所有平台上都受支持。有关更多信息，请参阅<a href="dotnetProfileAssemblies.html">引用其他类库程序集</a>。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>C++ Compiler Configuration</strong></td>
-	<td style="text-align:left;">Choose the C++ compiler configuration used when compiling IL2CPP generated code. This setting is not enabled for iOS.</td>
+	<td style="text-align:left;">选择在编译 IL2CPP 生成的代码时使用的 C++ 编译器配置。iOS 未启用此设置。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Use incremental GC</strong></td>
@@ -910,23 +929,21 @@
 
 <h5>API Compatibility Level</h5>
 
-<p>You can choose your mono API compatibility level for all targets. Sometimes a 3rd-party .NET library uses functionality that is outside of your .NET compatibility level. In order to understand what is going on in such cases, and how to best fix it, try following these suggestions: </p>
+<p>可为所有目标选择 mono API 兼容性级别。有时，第三方 .NET 库会使用 .NET 兼容性级别之外的功能。为了解在这种情况下可能发生的问题以及如何以最佳方案修复问题，请尝试以下解决方案：</p>
 
-<ol>
-<li>Install <a href="http://www.airsquirrels.com/reflector/">Reflector</a> for Windows.</li>
-<li>Drag the .NET assemblies for the API compatilibity level you are having issues with into Reflector. You can find these under <code>Frameworks/Mono/lib/mono/YOURSUBSET/</code>.</li>
-<li>Drag in your 3rd-party assembly.</li>
-<li>Right-click your 3rd-party assembly and select <strong>Analyze</strong>.</li>
-<li>In the analysis report, inspect the <strong>Depends on</strong> section. The report highlights anything that the 3rd-party assembly depends on, but that is not available in the .NET compatibility level of your choice in red.</li>
-</ol>
+<p>1.安装适用于 Windows 的 <a href="http://www.airsquirrels.com/reflector/">Reflector</a>。
+2. Drag the .NET assemblies for the API compatibility level you are having issues with into Reflector. You can find these under <code>Frameworks/Mono/lib/mono/YOURSUBSET/</code>.
+3.拖入第三方程序集。
+4.右键单击第三方程序集并选择 <strong>Analyze</strong>。
+5.在分析报告中，检查 <strong>Depends on</strong> 部分。此报告以红色突出显示第三方程序集所依赖的但在您选择的 .NET 兼容性级别中不可用的任何内容。</p>
 
 <p><a name="Config-Apple"></a></p>
 
-<h4>Apple-specific information</h4>
+<h4>Apple 特定信息</h4>
 
 <figure>
-<img src="../uploads/Main/PlayerSetiOSOther-Config-Apple.png" alt="Apple-specific configuration settings for iOS platform">
-<figcaption>Apple-specific configuration settings for iOS platform</figcaption>
+<img src="../uploads/Main/PlayerSetiOSOther-Config-Apple.png" alt="iOS 平台的 Apple 特定配置设置">
+<figcaption>iOS 平台的 Apple 特定配置设置</figcaption>
 </figure>
 
 <table>
@@ -937,7 +954,7 @@
 
 <thead>
 <tr>
-	<th style="text-align:left;"><strong>Setting</strong></th>
+	<th style="text-align:left;"><strong>设置</strong></th>
 	<th style="text-align:left;"><strong>功能</strong></th>
 </tr>
 </thead>
@@ -947,60 +964,61 @@
 	<td style="text-align:left;">
 <a name="on-demand"></a><strong>Use on Demand Resource</strong>
 </td>
-	<td style="text-align:left;">Enable this option to use on-demand resources.<br>When enabled, the <a href="#Config-Variant">Variant map for app slicing</a> section appears.</td>
+	<td style="text-align:left;">启用此选项可使用按需资源。<br>启用后，将显示 <a href="#Config-Variant">Variant map for app slicing</a> 部分。</td>
 </tr>
 <tr>
 	<td style="text-align:left;">
 <a name="Accelerometer"></a><strong>Accelerometer Frequency</strong>
 </td>
-	<td style="text-align:left;">Define how often to sample the accelerometer. If you choose <em>Disabled</em>, then no samples are taken. Otherwise, you can choose from <em>15Hz</em>, <em>30Hz</em>, <em>60Hz</em> and <em>100Hz</em> frequencies.</td>
+	<td style="text-align:left;">定义加速度计采样的频率。如果选择 <em>Disabled_，则不会进行采样。否则，可以选择 </em>15Hz<em>、</em>30Hz<em>、60Hz</em> 和 <em>100Hz</em> 频率。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Camera Usage Description</strong></td>
-	<td style="text-align:left;">Enter the reason for accessing the camera on the iOS device.</td>
+	<td style="text-align:left;">输入在 iOS 设备上访问摄像头的原因。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Location Usage Description</strong></td>
-	<td style="text-align:left;">Enter the reason for accessing the location of the iOS device.</td>
+	<td style="text-align:left;">输入访问 iOS 设备位置的原因。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Microphone Usage Description</strong></td>
-	<td style="text-align:left;">Enter the reason for accessing the microphone on the iOS device.</td>
+	<td style="text-align:left;">输入在 iOS 设备上访问麦克风的原因。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Mute Other Audio Sources</strong></td>
-	<td style="text-align:left;">Enable this option if you want your Unity application to stop Audio from applications running in the background. Otherise, Audio from background applications continues to play alongside your Unity application.</td>
+	<td style="text-align:left;">如果希望 Unity 应用程序从后台运行的应用程序中停止音频，请启用此选项。否则，来自后台应用程序的音频继续与 Unity 应用程序一起播放。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Prepare iOS for Recording</strong></td>
-	<td style="text-align:left;">Enable this option to initialize the microphone recording APIs. This makes recording latency lower, though on iPhones it re-routes audio output via earphones only.</td>
+	<td style="text-align:left;">启用此选项可初始化麦克风录音 API。这会使录音延迟降低，但在 iPhone 上，仅通过耳机重新传送音频输出。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Force iOS Speakers when Recording</strong></td>
-	<td style="text-align:left;">Enable this option to send the phone output through the internal speakers, even when headphones are plugged in and recording.</td>
+	<td style="text-align:left;">启用此选项可通过内置扬声器发送手机输出，即使插入耳机和录音也是如此。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Requires Persistent WiFi</strong></td>
-	<td style="text-align:left;">Enable this option to require a Wi-Fi connection. iOS maintains the active Wi-Fi connection while the application is running.</td>
+	<td style="text-align:left;">启用此选项可要求 Wi-Fi 连接。iOS 在应用程序运行时保持有效的 Wi-Fi 连接。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Allow downloads over HTTP (nonsecure)</strong></td>
-	<td style="text-align:left;">Enable this option to allow downloading content over HTTP. Default and recommended is HTTPS.</td>
+	<td style="text-align:left;">启用此选项可允许通过 HTTP 下载内容。推荐使用 HTTPS，这也是默认设置。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Supported URL schemes</strong></td>
-	<td style="text-align:left;">A list of <a href="https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Inter-AppCommunication/Inter-AppCommunication.html#/apple_ref/doc/uid/TP40007072-CH6-SW1">supported URL schemes</a>.<br>To add new schemes, increase the value of the <strong>Size</strong> property and then set a reference to the Asset to load in the new <strong>Element</strong> box that appears.</td>
+	<td style="text-align:left;">
+<a href="https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Inter-AppCommunication/Inter-AppCommunication.html#/apple_ref/doc/uid/TP40007072-CH6-SW1">支持的 URL 方案</a>列表。<br>要添加新方案，请增大 <strong>Size</strong> 属性的值，然后在出现的新 <strong>Element</strong> 框中设置对要加载的资源的引用。</td>
 </tr>
 </tbody>
 </table>
 
 <p><a name="Config-Device"></a></p>
 
-<h4>Device information</h4>
+<h4>设备信息</h4>
 
 <figure>
-<img src="../uploads/Main/PlayerSetiOSOther-Config-Device.png" alt="Device configuration settings for iOS platform">
-<figcaption>Device configuration settings for iOS platform</figcaption>
+<img src="../uploads/Main/PlayerSetiOSOther-Config-Device.png" alt="iOS 平台的设备配置设置">
+<figcaption>iOS 平台的设备配置设置</figcaption>
 </figure>
 
 <table>
@@ -1012,7 +1030,7 @@
 
 <thead>
 <tr>
-	<th style="text-align:left;" colspan="2"><strong>Setting</strong></th>
+	<th style="text-align:left;" colspan="2"><strong>设置</strong></th>
 	<th style="text-align:left;"><strong>功能</strong></th>
 </tr>
 </thead>
@@ -1020,77 +1038,77 @@
 <tbody>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Disable HW Statistics</strong></td>
-	<td style="text-align:left;">Enable this option to instruct the application not to send information about the hardware to Unity. For more details, see <a href="http://hwstats.unity3d.com/">Unity Hardware Statistics</a>.</td>
+	<td style="text-align:left;">启用此选项可指示应用程序不要将有关硬件的信息发送到 Unity。有关更多详细信息，请参阅 <a href="http://hwstats.unity3d.com/">Unity 硬件统计信息</a>。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Target Device</strong></td>
-	<td style="text-align:left;">Select which devices the game targets. The choices are <em>iPhone Only</em>, <em>iPad Only</em>, and <em>iPhone + iPad</em>.</td>
+	<td style="text-align:left;">选择游戏的目标设备。选项包括 <em>iPhone Only</em>、<em>iPad Only</em> 和 <em>iPhone + iPad</em>。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Target SDK</strong></td>
-	<td style="text-align:left;">Select which SDK the game targets. The choices are <em>Device SDK</em> and <em>Simulator SDK</em>.<br><strong>Note:</strong> Be sure to select the correct SDK. For example, if you select the Device SDK but then target the Simulator in Xcode then the build will fail with a lot of error messages.</td>
+	<td style="text-align:left;">选择游戏所针对的 SDK。选项包括 <em>Device SDK</em> 和 <em>Simulator SDK</em>。<br><strong>注意：</strong>请务必选择正确的 SDK。例如，如果选择 Device SDK 但是之后在 Xcode 中以 Simulator 为目标，那么构建将失败，并显示大量错误消息。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Target minimum iOS Version</strong></td>
-	<td style="text-align:left;">Defines the minimum version of iOS that the game works on.</td>
+	<td style="text-align:left;">定义运行游戏所需要的最低 iOS 版本。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Enable ProMotion Support</strong></td>
-	<td style="text-align:left;">Enable this option to allow high frequency refresh rates (120 Hz) on ProMotion displays. Enabling this setting might affect battery life.</td>
+	<td style="text-align:left;">启用此选项可在 ProMotion 显示屏上允许高频刷新率 (120 Hz)。启用此设置可能会影响电池续航时间。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Requires ARKit support</strong></td>
-	<td style="text-align:left;">Enable this option to restrict the app to iPhone 6s/iOS 11 or newer devices when publishing to the App Store.</td>
+	<td style="text-align:left;">启用此选项可在发布到 App Store 时将应用程序限制为 iPhone 6s/iOS 11 或更新款的设备。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Defer system gestures on edges</strong></td>
-	<td style="text-align:left;">Enable which edges that users must swipe twice to enact system gestures: <em>Top Edge</em>, <em>Left Edge</em>, <em>Bottom Edge</em>, and <em>Right Edge</em>
+	<td style="text-align:left;">用户必须轻扫哪个边缘两次才能作为系统手势：_Top Edge<em>、</em>Left Edge<em>、</em>Bottom Edge_ 和 <em>Right Edge</em>
 </td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Hide home button on iPhone X</strong></td>
-	<td style="text-align:left;">Enable this option to hide the home button on iPhone X devices when the app is running.</td>
+	<td style="text-align:left;">启用此选项可在应用程序运行时隐藏 iPhone X 设备上的主屏幕按钮。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Render Extra Frame on Pause</strong></td>
-	<td style="text-align:left;">Enable this option to issue an additional frame after the frame when the app is paused. This allows your app to show graphics that indicate the paused state when the app is going into the background.</td>
+	<td style="text-align:left;">启用此选项可在应用程序暂停时逐一发出其他帧。这允许您的应用程序显示图形，用于指示应用程序进入后台时的暂停状态。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Behavior in Background</strong></td>
-	<td style="text-align:left;">Choose what the application should do when the user presses the home button.</td>
+	<td style="text-align:left;">选择用户按下主屏幕按钮时应用程序应执行的操作。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
 	<td style="text-align:left;"><em>Custom</em></td>
-	<td style="text-align:left;">You can implement your own behaviour with background processing. For an example, see the <a href="https://bitbucket.org/Unity-Technologies/iosnativecodesamples/src/ae6a0a2c02363d35f954d244a6eec91c0e0bf194/NativeIntegration/BackgroundTasks/BackgroundFetch/?at=5.0-dev">BackgroundFetch</a> Bitbucket project.</td>
+	<td style="text-align:left;">您可以使用后台处理来实现您自己的行为。有关示例，请参阅 <a href="https://bitbucket.org/Unity-Technologies/iosnativecodesamples/src/ae6a0a2c02363d35f954d244a6eec91c0e0bf194/NativeIntegration/BackgroundTasks/BackgroundFetch/?at=5.0-dev">BackgroundFetch</a> Bitbucket 项目。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
 	<td style="text-align:left;"><em>Suspend</em></td>
-	<td style="text-align:left;">Suspend the app but don’t quit. This is the default behavior.</td>
+	<td style="text-align:left;">暂停应用程序，但不退出。这是默认行为。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
 	<td style="text-align:left;"><em>Exit</em></td>
-	<td style="text-align:left;">Instead of suspending, let the app quit when the user presses the home button.</td>
+	<td style="text-align:left;">当用户按下主屏幕按钮时，让应用程序退出而不是暂停。</td>
 </tr>
 </tbody>
 </table>
 
 <p><a name="Config-Variant"></a></p>
 
-<h4>Variant map for app slicing section</h4>
+<h4>Variant map for app slicing 部分</h4>
 
-<p>Expand the <strong>Variant map for app slicing</strong> section to see the list of variant names configured in scripting. For more information on variants, see <a href="AppThinning.html#AppSlicing">App slicing</a>. </p>
+<p>展开 <strong>Variant map for app slicing</strong> 部分可查看脚本中配置的变体名称列表。有关变体的更多信息，请参阅<a href="AppThinning.html#AppSlicing">应用程序切片</a>。</p>
 
 <figure>
-<img src="../uploads/Main/PlayerSetiOSOther-Config-Variant.png" alt="Variant configuration settings for iOS platform">
-<figcaption>Variant configuration settings for iOS platform</figcaption>
+<img src="../uploads/Main/PlayerSetiOSOther-Config-Variant.png" alt="iOS 平台的变体配置设置">
+<figcaption>iOS 平台的变体配置设置</figcaption>
 </figure>
 
-<p><strong>Note:</strong> If you don’t see the section, make sure the <a href="#on-demand">Use on Demand Resource</a> property is enabled.</p>
+<p><strong>注意：</strong>如果未显示该部分，请确保已启用 <a href="#on-demand">Use on Demand Resource</a> 属性。</p>
 
-<p>You can add and remove new variants with the plus (+) and minus (-) icons. You can also select a variant from the list and see or modify its settings under <strong>Variant settings</strong>:</p>
+<p>可以使用加号 (+) 和减号 (-) 图标添加和删除新变体。还可以从列表中选择变体，并在 <strong>Variant settings</strong> 下查看或修改其设置：</p>
 
 <table>
 <colgroup>
@@ -1100,7 +1118,7 @@
 
 <thead>
 <tr>
-	<th style="text-align:left;"><strong>Setting</strong></th>
+	<th style="text-align:left;"><strong>设置</strong></th>
 	<th style="text-align:left;"><strong>功能</strong></th>
 </tr>
 </thead>
@@ -1108,36 +1126,33 @@
 <tbody>
 <tr>
 	<td style="text-align:left;"><strong>Variant name</strong></td>
-	<td style="text-align:left;">Displays the name of the variant from the loading script. For any of these settings, if you choose <em>Custom value</em>, an additional property appears underneath where you can enter your own value to use.</td>
-</tr>
-<tr>
-	<td style="text-align:left;"><strong>设备</strong></td>
-	<td style="text-align:left;">Choose which device this variant targets. Options include <em>Any</em> (the default), <em>iPhone</em>, <em>iPad</em>, <em>iWatch</em>, and <em>Custom value</em>.</td>
+	<td style="text-align:left;">显示加载脚本中变体的名称。对于任何的这些设置，如果选择 <em>Custom value_，则会在其下方显示一个附加属性，然后可在其中输入要使用的值。 |
+|<strong>设备</strong>|选择此变体所针对的设备。选项包括 </em>Any_（默认值）、<em>iPhone</em>、<em>iPad</em>、<em>iWatch</em> 和 <em>Custom value</em>。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Memory</strong></td>
-	<td style="text-align:left;">Choose the minimum memory required for this variant. Options include <em>Any</em> (the default), <em>1GB</em>, <em>2GB</em>, <em>3GB</em>, <em>4GB</em>, and <em>Custom value</em>.</td>
+	<td style="text-align:left;">选择此变体所需的最小内存。选项包括 <em>Any_（默认值）、</em>1GB<em>、</em>2GB<em>、</em>3GB<em>、</em>4GB_ 和 <em>Custom value</em>。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Graphics</strong></td>
-	<td style="text-align:left;">Choose the <a href="https://developer.apple.com/documentation/metal">Metal framework</a> to use. Options include <em>Any</em> (the default), <em>Metal1v2</em>, <em>Metal2v2</em>, <em>Metal2v3</em>, <em>Metal3v1</em>, <em>Metal3v2</em>, <em>Metal4v1</em>, and <em>Custom value</em>.</td>
+	<td style="text-align:left;">选择要使用的 <a href="https://developer.apple.com/documentation/metal">Metal 框架</a>。选项包括 <em>Any_（默认值）、</em>Metal1v2<em>、</em>Metal2v2<em>、</em>Metal2v3<em>、</em>Metal3v1<em>、</em>Metal3v2<em>、</em>Metal4v1_ 和 <em>Custom value</em>。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Display color space</strong></td>
-	<td style="text-align:left;">Choose the color gamut to use. Options include <em>Any</em> (the default), <em>sRGB</em>, <em>DisplayP3</em>, and <em>Custom value</em>.</td>
+	<td style="text-align:left;">选择要使用的色域。选项包括 <em>Any_（默认值）、</em>sRGB<em>、</em>DisplayP3_ 和 <em>Custom value</em>。</td>
 </tr>
 </tbody>
 </table>
 
-<p>You can also add your own setting. Click the <strong>Add custom entry</strong> button and a new pair of text boxes appear. Enter the name of the setting in the box displaying &lt;<em>key&gt;</em> and the value you want to use in the box displaying <em>&lt;value&gt;</em>. </p>
+<p>也可以添加自己的设置。单击 <strong>Add custom entry</strong> 按钮，然后将出现一对新文本框。在显示 &lt;<em>key&gt;</em> 的框中输入设置的名称，并在显示 <em>&lt;value&gt;</em> 的框中输入要使用的值。</p>
 
 <p><a name="Config-Other"></a></p>
 
-<h4>Other configuration settings</h4>
+<h4>其他配置设置</h4>
 
 <figure>
-<img src="../uploads/Main/PlayerSetiOSOther-Config-Other.png" alt="Other configuration settings for iOS platform">
-<figcaption>Other configuration settings for iOS platform</figcaption>
+<img src="../uploads/Main/PlayerSetiOSOther-Config-Other.png" alt="iOS 平台的其他配置设置">
+<figcaption>iOS 平台的其他配置设置</figcaption>
 </figure>
 
 <table>
@@ -1149,7 +1164,7 @@
 
 <thead>
 <tr>
-	<th style="text-align:left;" colspan="2"><strong>Setting</strong></th>
+	<th style="text-align:left;" colspan="2"><strong>设置</strong></th>
 	<th style="text-align:left;"><strong>功能</strong></th>
 </tr>
 </thead>
@@ -1157,54 +1172,34 @@
 <tbody>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Architecture</strong></td>
-	<td style="text-align:left;">Choose which architecture to target.</td>
+	<td style="text-align:left;">选择目标架构。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
-	<td style="text-align:left;"><strong>Universal</strong></td>
-	<td style="text-align:left;">Support all architectures. This is the recommended option.</td>
+	<td style="text-align:left;"><em>Universal</em></td>
+	<td style="text-align:left;">支持所有架构。这是建议的选项。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
-	<td style="text-align:left;"><strong>Armv7</strong></td>
-	<td style="text-align:left;">Support only the older 32-bit ARM architecture.</td>
+	<td style="text-align:left;"><em>Armv7</em></td>
+	<td style="text-align:left;">仅支持较旧的 32 位 ARM 架构。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
-	<td style="text-align:left;"><strong>Arm64</strong></td>
-	<td style="text-align:left;">Support only the newer 64-bit ARM architecture. You might want to consider selecting this option if your app is only for high-end devices.</td>
+	<td style="text-align:left;"><em>Arm64</em></td>
+	<td style="text-align:left;">仅支持较新的 64 位 ARM 架构。如果您的应用程序仅适用于高端设备，则可能需要考虑选择此选项。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
 	<td style="text-align:left;"><strong>x86_64</strong></td>
-	<td style="text-align:left;">Support the x86_64 Intel architecture. This is the only architecture available for <strong>Simulator SDK</strong>.</td>
-</tr>
-<tr>
-	<td style="text-align:left;" colspan="2"><strong>Scripting Define Symbols</strong></td>
-	<td style="text-align:left;">Set custom compilation flags. For more details, see <a href="PlatformDependentCompilation.html">Platform dependent compilation</a>.</td>
-</tr>
-<tr>
-	<td style="text-align:left;" colspan="2"><strong>Allow ‘unsafe’ Code</strong></td>
-	<td style="text-align:left;">Enable support for compiling <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/unsafe">‘unsafe’ C# code</a> in a pre-defined assembly (for example, <code>Assembly-CSharp.dll</code>). <br>For Assembly Definition Files (<code>.asmdef</code>), click on one of your <code>.asmdef</code> files and enable the option in the Inspector window that appears.</td>
-</tr>
-<tr>
-	<td style="text-align:left;" colspan="2"><strong>Active Input Handling</strong></td>
-	<td style="text-align:left;">Choose how you want to handle input from users.</td>
-</tr>
-<tr>
-	<td style="text-align:left;"></td>
-	<td style="text-align:left;"><strong>Input Manager</strong></td>
-	<td style="text-align:left;">Use the traditional <a href="class-InputManager.html">Input</a> settings.</td>
-</tr>
-<tr>
-	<td style="text-align:left;"></td>
-	<td style="text-align:left;"><strong>Input System (Preview)</strong></td>
-	<td style="text-align:left;">Use the <a href="../ScriptReference/Input.html">Input</a> system. The Input System is provided as a preview package for this release. To try a preview of the Input System, install the <a href="https://github.com/Unity-Technologies/InputSystem">InputSystem package</a>.</td>
-</tr>
-<tr>
-	<td style="text-align:left;"></td>
-	<td style="text-align:left;"><strong>Both</strong></td>
-	<td style="text-align:left;">Use both systems side by side.</td>
+	<td style="text-align:left;">支持 x86_64 Intel 架构。对于 <strong>Simulator SDK__，这是唯一可用的架构。 |
+|</strong>Scripting Define Symbols<strong>||设置自定义编译标志。有关更多详细信息，请参阅<a href="PlatformDependentCompilation.html">平台相关的编译</a>。|
+|</strong>Allow ‘unsafe’ Code<strong>|| Enable support for compiling <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/unsafe">‘unsafe’ C# code</a> in a pre-defined assembly (for example, <code>Assembly-CSharp.dll</code>). <br>For Assembly Definition Files (<code>.asmdef</code>), click on one of your <code>.asmdef</code> files and enable the option in the Inspector window that appears. |
+|</strong>Active Input Handling_<em>|| 选择您希望如何处理来自用户的输入。 |
+||</em>Input Manager<em>| Use the traditional <a href="class-InputManager.html">Input</a> settings. |
+||</em>Input System (Preview)<em>| Use the <a href="../ScriptReference/Input.html">Input</a> system. The Input System is provided as a preview package for this release. To try a preview of the Input System, install the <a href="https://github.com/Unity-Technologies/InputSystem">InputSystem package</a>. |
+||</em>Both_</td>
+	<td style="text-align:left;">并排使用两个系统。</td>
 </tr>
 </tbody>
 </table>
@@ -1214,8 +1209,8 @@
 <h3>Optimization</h3>
 
 <figure>
-<img src="../uploads/Main/PlayerSetiOSOther-Optimization.png" alt="Optimization settings for iOS platforms">
-<figcaption>Optimization settings for iOS platforms</figcaption>
+<img src="../uploads/Main/PlayerSetiOSOther-Optimization.png" alt="iOS 平台的 Optimization 设置">
+<figcaption>iOS 平台的 Optimization 设置</figcaption>
 </figure>
 
 <table>
@@ -1227,7 +1222,7 @@
 
 <thead>
 <tr>
-	<th style="text-align:left;" colspan="2"><strong>Setting</strong></th>
+	<th style="text-align:left;" colspan="2"><strong>设置</strong></th>
 	<th style="text-align:left;"><strong>功能</strong></th>
 </tr>
 </thead>
@@ -1235,61 +1230,61 @@
 <tbody>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Prebake Collision Meshes</strong></td>
-	<td style="text-align:left;">Enable this option to add collision data to Meshes at build time.</td>
+	<td style="text-align:left;">启用此选项可在构建时将碰撞数据添加到网格。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Keep Loaded Shaders Alive</strong></td>
-	<td style="text-align:left;">Enable this option to prevent shaders from being unloaded.</td>
+	<td style="text-align:left;">启用此选项可防止卸载着色器。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Preloaded Assets</strong></td>
-	<td style="text-align:left;">Set an array of Assets for the player to load on startup. <br>To add new Assets, increase the value of the <strong>Size</strong> property and then set a reference to the Asset to load in the new <strong>Element</strong> box that appears.</td>
+	<td style="text-align:left;">设置一个资源数组，供播放器在启动时加载。<br>要添加新资源，请增大 <strong>Size</strong> 属性的值，然后在出现的新 <strong>Element</strong> 框中设置对要加载的资源的引用。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>AOT compilation options</strong></td>
-	<td style="text-align:left;">Additional options for Ahead of Time (AOT) compilation. This helps <a href="iphone-playerSizeOptimization.html">optimize the size of the built iOS player</a>.</td>
+	<td style="text-align:left;">提前 (AOT) 编译的附加选项。这有助于<a href="iphone-playerSizeOptimization.html">优化构建的 iOS 播放器的大小</a>。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Strip Engine Code</strong></td>
-	<td style="text-align:left;">Enable this tool if you want the Unity Linker tool to remove code for Unity Engine features that your Project does not use. This setting is only available with the <em>IL2CPP</em> <a href="#backend">Scripting Backend</a>. <br>Most games don’t use all necessary DLLs. With the <strong>Strip Engine Code</strong> option enabled, you can strip out unused parts to reduce the size of the built player on iOS devices. If your game is using classes that would normally be stripped out by the option you currently have selected, you’ll be presented with a Debug message when you make a build.</td>
+	<td style="text-align:left;">如果希望 Unity Linker 工具删除您的项目不使用的 Unity 引擎功能的代码，请启用此工具。此设置仅适用于 <em>IL2CPP</em> <a href="#backend">脚本后端</a>。<br>大多数游戏都不会使用所有必需的 DLL。启用 <strong>Strip Engine Code</strong> 选项后，可以剥离掉未使用的部分以减小 iOS 设备上构建的播放器的大小。如果您的游戏使用的类通常会被您当前选择的选项删除，那么在进行构建时，将看到一条调试消息。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Managed Stripping Level</strong></td>
-	<td style="text-align:left;">Choose how aggressively Unity strips unused managed (C#) code.<br>When Unity builds your game or application, the Unity Linker process can strip unused code from the managed dynamically linked libraries used in the Project. Stripping code can make the resulting executable significantly smaller, but can sometimes mistakenly remove code that is actually used. This setting allows you to choose how aggressively Unity should remove unused code.</td>
+	<td style="text-align:left;">选择 Unity 剥离未使用的托管 (C#) 代码时的激进程度。<br>当 Unity 构建游戏或应用程序时，Unity Linker 进程可以从项目中使用的托管动态链接库中剥离未使用的代码。剥离代码可以使生成的可执行文件显著减小，但有时可能会错误地删除实际在使用的代码。此设置允许您选择 Unity 删除未使用代码时应采取的激进程度。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
 	<td style="text-align:left;"><em>Normal</em></td>
-	<td style="text-align:left;">Remove unreachable managed code to reduce build size and .NET/IL2CPP build times.</td>
+	<td style="text-align:left;">删除无法访问的托管代码以减少构建大小和 .NET/IL2CPP 构建时间。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
 	<td style="text-align:left;"><em>Aggressive</em></td>
-	<td style="text-align:left;">Remove code more aggressively than under the normal option. Code size is further reduced, but this additional reduction may have side effects. For example, some methods may no longer be visible in the debugger and code accessed through reflection can be stripped. You can create a custom <code>link.xml</code> file to preserve specific classes and methods. See <a href="IL2CPP-BytecodeStripping.html">Managed bytecode stripping with IL2CPP</a> for more information.</td>
+	<td style="text-align:left;">比 Normal 选项更激进地删除代码。代码大小进一步降低，但这种额外降低可能会产生副作用。例如，某些方法可能在调试器中不再可见，并且可以剥离通过反射访问的代码。您可以创建自定义 <code>link.xml</code> 文件以保留特定的类和方法。有关更多信息，请参阅<a href="IL2CPP-BytecodeStripping.html">使用 IL2CPP 进行托管字节码剥离</a>。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2">
 <a name="scriptCallOpt"></a><strong>Script Call Optimization</strong>
 </td>
-	<td style="text-align:left;">Choose how to optionally disable exception handling for a speed boost at runtime. See <a href="iphone-iOS-Optimization.html">iOS Optimization</a> for details.</td>
+	<td style="text-align:left;">选择如何在运行时选择性地禁用异常处理以提高速度。有关详细信息，请参阅 <a href="iphone-iOS-Optimization.html">iOS 优化</a>。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
 	<td style="text-align:left;"><em>Slow and Safe</em></td>
-	<td style="text-align:left;">Use full exception handling (with some performance impact on the device when using the Mono scripting backend).</td>
+	<td style="text-align:left;">使用完整的异常处理（使用 Mono 脚本后端时会对设备的性能有一些影响）。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
 	<td style="text-align:left;"><em>Fast but no Exceptions</em></td>
-	<td style="text-align:left;">No data provided for exceptions on the device (the game runs faster when using the Mono scripting backend).<br><strong>Note</strong>: Using this option with the <em>IL2CPP</em> <a href="#backend">Scripting Backend</a> does not impact performance; however, using it can avoid undefined behavior on release builds.</td>
+	<td style="text-align:left;">不为设备上的异常提供数据（使用 Mono 脚本后端时游戏运行速度更快）。<br><strong>注意</strong>：将此选项与 <em>IL2CPP</em> <a href="#backend">脚本后端</a> 一起使用不会影响性能；但是，使用此选项可以避免发布版本中出现未定义的行为。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Vertex Compression</strong></td>
-	<td style="text-align:left;">Set vertex compression per channel. For example, you can enable compression for everything except positions and lightmap UVs. Whole Mesh compression set per imported object overrides where vertex compression is set on objects. Everything else obeys these vertex compression settings.</td>
+	<td style="text-align:left;">设置每个通道的顶点压缩。例如，可以为除位置和光照贴图 UV 之外的所有内容启用压缩。为每个导入对象设置的整个网格压缩将覆盖在对象上设置顶点压缩。所有其他内容都遵循这些顶点压缩设置。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Optimize Mesh Data</strong></td>
-	<td style="text-align:left;">Enable this option to remove any data from Meshes that is not required by the Material applied to them (such as tangents, normals, colors, and UVs).</td>
+	<td style="text-align:left;">启用此选项可从网格中删除应用于网格的材质不需要的所有数据（例如切线、法线、颜色和 UV）。</td>
 </tr>
 </tbody>
 </table>
@@ -1298,24 +1293,24 @@
 
 <h3>Logging</h3>
 
-<p>Select what type of logging to allow in specific contexts.</p>
+<p>选择在特定上下文中允许的日志记录类型。</p>
 
 <figure>
-<img src="../uploads/Main/PlayerSetPCOther-Logging.png" alt="Logging settings for iOS platforms">
-<figcaption>Logging settings for iOS platforms</figcaption>
+<img src="../uploads/Main/PlayerSetPCOther-Logging.png" alt="iOS 平台的 Logging 设置">
+<figcaption>iOS 平台的 Logging 设置</figcaption>
 </figure>
 
-<p>Check one box that corresponds to each Log Type (<strong>Error</strong>, <strong>Assert</strong>, <strong>Warning</strong>, <strong>Log</strong>, and <strong>Exception</strong>) when running scripts (<strong>ScriptOnly</strong>) , all the time (<strong>Full</strong>), or never (<strong>None</strong>).</p>
+<p>选中运行脚本时 (<strong>ScriptOnly</strong>)、始终 (<strong>Full</strong>) 或从不 (<strong>None</strong>) 条件下对应于每个 Log Type（__Error<strong>、</strong>Assert<strong>、</strong>Warning<strong>、</strong>Log__ 和 __Exception__）的复选框。</p>
 
 <p><a name="Legacy"></a> </p>
 
 <h3>Legacy</h3>
 
-<p>Enable the <strong>Clamp BlendShapes (Deprecated)</strong> option to clamp the range of Blend Shape weights in <a href="class-SkinnedMeshRenderer.html">SkinnedMeshRenderers</a>.</p>
+<p>Enable the <strong>Clamp BlendShapes (Deprecated)</strong> option to clamp the range of blend shape weights in <a href="class-SkinnedMeshRenderer.html">SkinnedMeshRenderers</a>.</p>
 
 <figure>
-<img src="../uploads/Main/PlayerSetPCOther-Legacy.png" alt="Legacy settings for iOS platforms">
-<figcaption>Legacy settings for iOS platforms</figcaption>
+<img src="../uploads/Main/PlayerSetPCOther-Legacy.png" alt="iOS 平台的 Legacy 设置">
+<figcaption>iOS 平台的 Legacy 设置</figcaption>
 </figure>
 
 <p><a name="XR"></a></p>
@@ -1323,8 +1318,8 @@
 <h2>XR Settings</h2>
 
 <figure>
-<img src="../uploads/Main/PlayerSetiOSXR.png" alt="XR Settings for the Standalone Player">
-<figcaption>XR Settings for the Standalone Player</figcaption>
+<img src="../uploads/Main/PlayerSetiOSXR.png" alt="独立平台播放器的 XR Settings">
+<figcaption>独立平台播放器的 XR Settings</figcaption>
 </figure>
 
 <table>
@@ -1336,7 +1331,7 @@
 
 <thead>
 <tr>
-	<th style="text-align:left;" colspan="2"><strong>Setting</strong></th>
+	<th style="text-align:left;" colspan="2"><strong>设置</strong></th>
 	<th style="text-align:left;"><strong>功能</strong></th>
 </tr>
 </thead>
@@ -1346,29 +1341,29 @@
 	<td style="text-align:left;" colspan="2">
 <a name="VRsupport"></a><strong>Virtual Reality Supported</strong>
 </td>
-	<td style="text-align:left;">Enable this if your application is a virtual reality application, then add the required VR SDKs to the list.</td>
+	<td style="text-align:left;">如果您的应用程序是虚拟现实应用程序，请启用此选项，然后将所需的 VR SDK 添加到列表中。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Virtual Reality SDKs</strong></td>
-	<td style="text-align:left;">Add and remove Virtual Reality SDKs from the list. This list is only available available when the <strong>Virtual Reality Supported</strong> is enabled.<br>To add an SDK to the list, click the plus (+) button.<br>To remove an SDK from the list, select it and then click the minus (-) button. <br>Some of the SDKs provide extra settings that appear here. For details, see <a href="XR-SDK_overviews.html">XR SDKs</a>.</td>
+	<td style="text-align:left;">Add and remove Virtual Reality SDKs from the list. This list is only available when the <strong>Virtual Reality Supported</strong> is enabled.<br>To add an SDK to the list, click the plus (+) button.<br>To remove an SDK from the list, select it and then click the minus (-) button. <br>Some of the SDKs provide extra settings that appear here. For details, see <a href="XR-SDK_overviews.html">XR SDKs</a>.</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Stereo Rendering Mode</strong></td>
-	<td style="text-align:left;">Choose how you want to render for a virtual reality device.</td>
+	<td style="text-align:left;">选择要为虚拟现实设备渲染的方式。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
-	<td style="text-align:left;"><strong>Multi Pass</strong></td>
-	<td style="text-align:left;">This is the normal rendering mode. Unity renders the Scene twice: first to render the left-eye image; and then again for the right-eye image.</td>
+	<td style="text-align:left;"><em>Multi Pass</em></td>
+	<td style="text-align:left;">这是正常的渲染模式。Unity 渲染场景两次：首先渲染左眼图像；然后再次为右眼图像。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
-	<td style="text-align:left;"><strong>Single Pass</strong></td>
-	<td style="text-align:left;">Render both eye images at the same time into one packed Render Texture. This means that the whole Scene is only rendered once, which significantly reduces CPU processing time.</td>
+	<td style="text-align:left;"><em>Single Pass</em></td>
+	<td style="text-align:left;">将两个眼睛图像同时渲染到一个打包的渲染纹理中。这意味着整个场景只渲染一次，这大大减少了 CPU 处理时间。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Vuforia Augmented Reality Supported</strong></td>
-	<td style="text-align:left;">Enable this option to use Vuforia Augmented Reality SDK, which is required when using the Vuforia <strong>Virtual Reality SDK</strong>.</td>
+	<td style="text-align:left;">启用此选项可以使用 Vuforia 增强现实 SDK，使用 Vuforia <strong>Virtual Reality SDK</strong> 时这是必需的。</td>
 </tr>
 </tbody>
 </table>
@@ -1376,41 +1371,42 @@
 <h3>XR Support Installers</h3>
 
 <figure>
-<img src="../uploads/Main/PlayerSetPCXR-Vuforia.png" alt="XR Settings for the Standalone Player">
-<figcaption>XR Settings for the Standalone Player</figcaption>
+<img src="../uploads/Main/PlayerSetPCXR-Vuforia.png" alt="独立平台播放器的 XR Settings">
+<figcaption>独立平台播放器的 XR Settings</figcaption>
 </figure>
 
-<p>You can click the <strong>Vuforia Augmented Reality</strong> link to enable the <a href="vuforia-sdk-overview.html">Vuforia Software Development Kit</a>. You must have a Vuforia Software License and agree to the terms of that license before the <strong>Vuforia Augmented Reality Supported</strong> property is enabled.</p>
+<p>可以单击 <strong>Vuforia Augmented Reality</strong> 链接来启用 <a href="vuforia-sdk-overview.html">Vuforia 软件开发包</a>。必须拥有 Vuforia 软件许可证，并在启用 <strong>Vuforia Augmented Reality Supported</strong> 属性之前同意该许可证的条款。</p>
 
 <p><br> </p>
 
 <hr>
 
 <ul>
-<li><p><span class="page-edit">2018–11–29 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><p><span class="page-edit">2018–11–29 页面已修订并进行了<a href="DocumentationEditorialReview.html">编辑审查</a>
 </span></p></li>
-<li><p><span class="page-history">Mute Other Audio Sources added in 5.5</span></p></li>
-<li><p><span class="page-history">iOS Player Settings documentation updated in Unity 2018.1</span></p></li>
-<li><p><span class="page-history">Allow ‘unsafe’ Code checkbox added in Unity 2018.1</span></p></li>
+<li><p><span class="page-history">在 5.5 版中添加了 Mute Other Audio Sources 选项</span></p></li>
+<li><p><span class="page-history">在 Unity 2018.1 中更新了 iOS Player Settings 文档</span></p></li>
+<li><p><span class="page-history">在 Unity 2018.1 中添加了 Allow ‘unsafe’ Code 复选框</span></p></li>
 <li><p><span class="page-history">在 2018.1 版中添加了 .NET 4.x 运行时</span></p></li>
-<li><p><span class="page-history">.Net 3.5 scripting runtime deprecated in Unity <a href="../Manual/30_search.html?q=newin20183">2018.3</a> <span class="search-words">NewIn20183</span></span></p></li>
-<li><p><span class="page-history">Minimum iOS version increased to 9 in Unity <a href="../Manual/30_search.html?q=newin20183">2018.3</a> <span class="search-words">NewIn20183</span></span></p></li>
+<li><p><span class="page-history">在 Unity <a href="../Manual/30_search.html?q=newin20183">2018.3</a> 中已弃用 .Net 3.5 脚本运行时 <span class="search-words">NewIn20183</span></span></p></li>
+<li><p><span class="page-history">在 Unity <a href="../Manual/30_search.html?q=newin20183">2018.3</a> 中将 iOS 最低版本增加到 9 <span class="search-words">NewIn20183</span></span></p></li>
 <li><p><span class="page-history">Input System preview added in Unity <a href="../Manual/30_search.html?q=newin20191">2019.1</a> <span class="search-words">NewIn20191</span></span></p></li>
+<li><p><span class="page-history">GPU Skinning renamed to Compute Skinning in Unity <a href="../Manual/30_search.html?q=newin20193">2019.3</a><span class="search-words">NewIn20193</span></span></p></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="iphone-Hardware.html"></a></span><div class="tip">iOS Hardware Guide</div>
+<span class="prev"><a href="iphone-Hardware.html"></a></span><div class="tip">iOS 硬件指南</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="class-TextureImporterIos.html"></a></span><div class="tip">iOS 2D Texture Overrides</div>
+<span class="next"><a href="class-TextureImporterIos.html"></a></span><div class="tip">iOS 2D 纹理覆盖</div>
 </div>
 </div>
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2019.1</div>
 <div class="menu">
-<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>
 </div>
 <div></div>

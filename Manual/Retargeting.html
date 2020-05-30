@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="no-js">
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,11 +10,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="重定向人形动画 - Unity Manual">
-<title>重定向人形动画 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2019.1/uploads/Main/MecanimRetargetingTopLevel.png">
-<meta name="description" content="Mecanim 的最强大功能之一是重定向人形动画。这意味着您可以相对轻松地将同一组动画应用于各种角色模型。重定向只适用于已配置了 Avatar 的人形模型，因为这可以让我们在模型的骨骼结构之间建立对应关系。">
-<meta property="og:description" content="Mecanim 的最强大功能之一是重定向人形动画。这意味着您可以相对轻松地将同一组动画应用于各种角色模型。重定向只适用于已配置了 Avatar 的人形模型，因为这可以让我们在模型的骨骼结构之间建立对应关系。">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="重定向人形动画 - Unity 手册">
+<title>重定向人形动画 - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2019.1/uploads/Main/MecanimRetargetingTopLevel.png">
+<meta name="description" content="One of the most powerful features of Mecanim is retargeting of humanoid animations. This means that with relative ease, you can apply the same set of animations to various character models. Retargeting is only possible for humanoid models, where an Avatar has been configured, because this gives us a correspondence between the models&amp;#8217; bone structure.">
+<meta property="og:description" content="One of the most powerful features of Mecanim is retargeting of humanoid animations. This means that with relative ease, you can apply the same set of animations to various character models. Retargeting is only possible for humanoid models, where an Avatar has been configured, because this gives us a correspondence between the models&amp;#8217; bone structure.">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -28,13 +29,20 @@
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
 <script>
       var docs_type = 'Manual';
-      var lang = 'zh_CN';
+      var lang = 'cn';
       var page = 'Retargeting';
       if(!page) page = 'index';
       var version = '2019.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2020.1',version_string: '2020.1'},{version: '2019.3',version_string: '2019.3'},{version: '2019.2',version_string: '2019.2'},{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.1/Manual/Retargeting.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.1/Manual/Retargeting.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.1/Manual/Retargeting.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.1/Manual/Retargeting.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.1/Manual/Retargeting.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.1/Manual/Retargeting.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.1/Documentation/Manual/Retargeting.html" hreflang="x-default">
 </head>
 <body>
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -44,11 +52,11 @@
 <div id="nav-open" for="nav-input"><span></span></div>
 <div class="logo"><a href="https://docs.unity3d.com"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
-<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
 <ul class="menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 </div></div>
 <div class="more">
@@ -68,25 +76,28 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Retargeting.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Retargeting.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Retargeting.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Retargeting.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Retargeting.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Retargeting.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Retargeting.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Retargeting.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Retargeting.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Retargeting.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/Retargeting.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/Retargeting.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/Retargeting.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/Retargeting.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/Retargeting.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/Retargeting.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/Retargeting.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/Retargeting.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/Retargeting.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/Retargeting.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/Retargeting.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/Retargeting.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/Retargeting.html">5.6</a></li>
 </ul></div>
 </div>
 <ul class="nav-menu-items">
-<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
-<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
 </ul>
 <div class="lang-switcher">
 <div class="current toggle" data-target=".lang-list">
-<div class="lbl">Language:
+<div class="lbl">语言:
         <span class="b">中文</span>
 </div>
 <div class="arrow"></div>
@@ -96,13 +107,14 @@
 <li><a data-lang="ja" href="/ja/2019.1/Manual/Retargeting.html">日本語</a></li>
 <li><a data-lang="es" href="/es/2019.1/Manual/Retargeting.html">Español</a></li>
 <li><a data-lang="kr" href="/kr/2019.1/Manual/Retargeting.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.1/Manual/Retargeting.html">Русский</a></li>
 </ul></div>
 </div>
 </div></div>
 </div>
 <div id="master-wrapper" class="master-wrapper clear">
 <div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
-<h2>Manual</h2>
+<h2>手册</h2>
 <div class="version-switcher">
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
@@ -112,16 +124,19 @@
 <div class="d-inline-block arrow"></div>
 </div></div>
 <div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/Retargeting.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/Retargeting.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/Retargeting.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/Retargeting.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/Retargeting.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/Retargeting.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/Retargeting.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/Retargeting.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/Retargeting.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/Retargeting.html">5.6</a></li>
+<li><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/Retargeting.html">2020.1</a></li>
+<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/Retargeting.html">2019.3</a></li>
+<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/Retargeting.html">2019.2</a></li>
+<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/Retargeting.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/Retargeting.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/Retargeting.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/Retargeting.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/Retargeting.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/Retargeting.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/Retargeting.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/Retargeting.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/Retargeting.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/cn/560/Manual/Retargeting.html">5.6</a></li>
 </ul></div>
 </div>
 <div class="clear"></div>
@@ -141,32 +156,32 @@
 <span class="next"><a href="MecanimPeformanceandOptimization.html"></a></span><div class="tip">性能和优化</div>
 </div>
 </div></div>
-<h1>重定向人形动画</h1>
+<h1>Retargeting of Humanoid animations</h1>
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>Mecanim 的最强大功能之一是重定向人形动画。这意味着您可以相对轻松地将同一组动画应用于各种角色模型。重定向只适用于已配置了 Avatar 的人形模型，因为这可以让我们在模型的骨骼结构之间建立对应关系。</p>
+<p>One of the most powerful features of Mecanim is retargeting of humanoid animations. This means that with relative ease, you can apply the same set of animations to various character models. Retargeting is only possible for humanoid models, where an Avatar has been configured, because this gives us a correspondence between the models’ bone structure. </p>
 
-<h2>建议的层级视图结构</h2>
+<h2>Recommended Hierarchy structure</h2>
 
-<p>使用 Mecanim 动画时，您可以期望场景包含以下元素：</p>
+<p>When working with Mecanim animations, you can expect your scene to contain the following elements:-</p>
 
 <ul>
-<li>已导入的具有 Avatar 的角色模型。</li>
-<li>引用 Animator Controller 资源的 Animator 组件。</li>
-<li>从 Animator Controller 引用的一组动画剪辑。</li>
-<li>角色的脚本。</li>
-<li>角色相关组件，例如角色控制器。</li>
+<li>The Imported character model, which has an Avatar on it.</li>
+<li>The Animator Component, referencing an Animator Controller asset.</li>
+<li>A set of animation clips, referenced from the Animator Controller.</li>
+<li>Scripts for the character.</li>
+<li>Character-related components, such as the Character Controller.</li>
 </ul>
 
-<p>项目还应包含具备有效 Avatar 的另一个角色模型。</p>
+<p>Your project should also contain another character model with a valid Avatar.</p>
 
-<p>如果对术语有疑问，请参考<a href="AnimationGlossary.html">动画术语表</a></p>
+<p>If in doubt about the terminology, consult the <a href="AnimationGlossary.html">Animation Glossary</a></p>
 
-<p>建议的设置是：</p>
+<p>The recommended setup is to:</p>
 
 <ul>
-<li>在层级视图中，创建包含角色相关组件的游戏对象</li>
+<li>Create a GameObject in the Hierarchy that contains Character-related components</li>
 </ul>
 
 <figure>
@@ -174,7 +189,7 @@
 </figure>
 
 <ul>
-<li>将模型作为游戏对象的子代与 Animator 组件放在一起</li>
+<li>Put the model as a child of the GameObject, together with the Animator component</li>
 </ul>
 
 <figure>
@@ -182,18 +197,18 @@
 </figure>
 
 <ul>
-<li>确保引用 Animator 的脚本正在寻找子代（而不是根）中的 Animator；使用 GetComponentInChildren&lt;Animator&gt;() 而不是 GetComponent&lt;Animator&gt;()。</li>
+<li>Make sure scripts referencing the Animator are looking for the animator in the children instead of the root; use GetComponentInChildren&lt;Animator&gt;() instead of GetComponent&lt;Animator&gt;().</li>
 </ul>
 
 <figure>
 <img src="../uploads/Main/MecanimRetargetingKyle.jpg" alt="">
 </figure>
 
-<p>然后，为了在另一个模型上复用相同动画，您需要：</p>
+<p>Then in order to reuse the same animations on another model, you need to:</p>
 
 <ul>
-<li>禁用原始模型</li>
-<li>将所需模型作为游戏对象的另一子代拖入</li>
+<li>Disable the original model</li>
+<li>Drop in the desired model as another child of GameObject</li>
 </ul>
 
 <figure>
@@ -201,7 +216,7 @@
 </figure>
 
 <ul>
-<li>确保新模型的 Animator Controller 属性正在引用同一控制器资源</li>
+<li>Make sure the Animator Controller property for the new model is referencing the same controller asset</li>
 </ul>
 
 <figure>
@@ -209,8 +224,8 @@
 </figure>
 
 <ul>
-<li>调整顶级游戏对象上的角色控制器、变换和其他属性以确保动画与新模型顺利融合。</li>
-<li>任务完成！</li>
+<li>Tweak the character controller, the transform, and other properties on the top-level GameObject, to make sure that the animations work smoothly with the new model.</li>
+<li>You’re done!</li>
 </ul>
 
 <figure>
@@ -227,9 +242,9 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2019 Unity Technologies. Publication 2019.1</div>
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2019.1</div>
 <div class="menu">
-<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>
 </div>
 <div></div>

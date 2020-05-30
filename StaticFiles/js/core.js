@@ -34,7 +34,7 @@ jQuery.cookie=function(a,b,c){if(arguments.length>1&&String(b)!=="[object Object
   ==== 2. GLOBAL VARIABLES
 ****************************************/
 
-  var offline = (location.href.indexOf('docs.unity3d.com') == -1 && location.href.indexOf('docs.hq.unity3d.com') == -1) ? true : false;
+  var offline = !location.host || location.host.indexOf('unity3d.com') === -1;
   if(!offline){
     $('<link>').appendTo('head').attr({type : 'text/css', rel : 'stylesheet'}).attr('href', '../StaticFilesManual/css/font.css');
   }
